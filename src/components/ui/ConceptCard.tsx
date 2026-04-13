@@ -15,7 +15,7 @@ const accentColors = {
 export default function ConceptCard({ title, description, accent = 'accent' }: ConceptCardProps) {
   return (
     <div className="concept-card" data-accent={accent}>
-      <h3 className="font-display font-bold text-lg mb-1.5" style={{ color: accentColors[accent] }}>{title}</h3>
+      <h3 className="font-display font-bold text-xl mb-1.5 leading-tight" style={{ color: accentColors[accent] }}>{title}</h3>
       <p className="text-text-muted text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: description }} />
     </div>
   );

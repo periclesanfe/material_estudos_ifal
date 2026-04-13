@@ -36,14 +36,14 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
 
   if (!hasApiKey()) {
     return (
-      <div className="study-surface p-6 text-center">
-        <h3 className="font-display font-bold text-2xl text-text mb-1">Configure sua API Key</h3>
-        <p className="text-text-muted text-sm mb-4">
+      <div className="study-surface p-6 md:p-8 text-center">
+        <h3 className="font-display font-bold text-3xl md:text-4xl text-text mb-2 leading-tight">Configure sua API Key</h3>
+        <p className="text-text-muted text-sm md:text-base mb-5">
           Para usar o Quiz com IA, configure sua API Key do Google Gemini nas Configurações.
         </p>
         <a
           href="/configuracoes"
-          className="inline-flex px-4 py-2 bg-accent text-white rounded-lg font-semibold text-sm hover:-translate-y-0.5 transition-all duration-200"
+          className="btn-primary inline-flex px-5 py-2.5 text-sm"
         >
           Ir para Configurações
         </a>
@@ -54,13 +54,13 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
   return (
     <div className="space-y-4">
       {/* Controls */}
-      <div className="flex gap-3 flex-wrap items-end">
+      <div className="study-surface p-4 md:p-5 flex gap-3 flex-wrap items-end">
         <div className="flex-1 min-w-[180px]">
-          <label className="block text-xs font-semibold text-text-muted uppercase tracking-wider mb-1">Tema</label>
+          <label className="block text-[11px] font-semibold text-text-muted uppercase tracking-wider mb-1">Tema</label>
           <select
             value={selectedTopic}
             onChange={e => setSelectedTopic(e.target.value)}
-            className="w-full bg-card text-text border border-border rounded-lg px-3 py-2.5 text-sm cursor-pointer focus:outline-none focus:border-accent"
+            className="w-full bg-bg text-text border border-border rounded-lg px-3 py-2.5 text-sm cursor-pointer focus:outline-none focus:border-accent"
           >
             <option value="aleatorio">Aleatório</option>
             {topics.map(t => (
@@ -69,11 +69,11 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
           </select>
         </div>
         <div className="flex-1 min-w-[180px]">
-          <label className="block text-xs font-semibold text-text-muted uppercase tracking-wider mb-1">Dificuldade</label>
+          <label className="block text-[11px] font-semibold text-text-muted uppercase tracking-wider mb-1">Dificuldade</label>
           <select
             value={selectedDifficulty}
             onChange={e => setSelectedDifficulty(e.target.value)}
-            className="w-full bg-card text-text border border-border rounded-lg px-3 py-2.5 text-sm cursor-pointer focus:outline-none focus:border-accent"
+            className="w-full bg-bg text-text border border-border rounded-lg px-3 py-2.5 text-sm cursor-pointer focus:outline-none focus:border-accent"
           >
             <option value="mista">Mista</option>
             <option value="facil">Fácil</option>
@@ -84,25 +84,25 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
         <button
           onClick={handleGenerate}
           disabled={loading}
-          className="px-5 py-2.5 rounded-lg font-semibold text-sm text-white bg-accent transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/25 disabled:opacity-50"
+          className="btn-primary px-5 py-2.5 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? 'Gerando...' : 'Gerar Pergunta'}
         </button>
       </div>
 
       {/* Score */}
-      <div className="study-surface flex gap-5 items-center px-5 py-4 text-sm">
+      <div className="study-surface flex gap-5 items-center px-4 py-3.5 text-sm">
         <div className="text-center">
           <div className="font-bold text-accent5">{score.correct}</div>
-          <div className="text-[10px] text-text-muted uppercase tracking-wider">Acertos</div>
+          <div className="text-[11px] text-text-muted uppercase tracking-wider">Acertos</div>
         </div>
         <div className="text-center">
           <div className="font-bold text-accent2">{score.wrong}</div>
-          <div className="text-[10px] text-text-muted uppercase tracking-wider">Erros</div>
+          <div className="text-[11px] text-text-muted uppercase tracking-wider">Erros</div>
         </div>
         <div className="text-center">
           <div className="font-bold text-text-muted">{score.total}</div>
-          <div className="text-[10px] text-text-muted uppercase tracking-wider">Total</div>
+          <div className="text-[11px] text-text-muted uppercase tracking-wider">Total</div>
         </div>
         <div className="flex-1">
           <div className="w-full h-1 bg-border rounded-full overflow-hidden">
@@ -112,7 +112,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
             />
           </div>
         </div>
-        <button onClick={resetScore} className="text-text-muted hover:text-text text-xs font-semibold transition-colors">
+        <button onClick={resetScore} className="text-text-muted hover:text-text text-sm font-semibold transition-colors">
           Resetar
         </button>
       </div>
@@ -134,7 +134,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
 
       {/* Question */}
       {question && !loading && (
-        <div className="study-surface p-5 animate-fade-in">
+        <div className="study-surface p-5 md:p-6 animate-fade-in">
           <div className="flex justify-between items-center mb-3">
             <span className="text-xs font-semibold px-2.5 py-1 rounded bg-accent/10 text-accent uppercase tracking-wider">
               {question.tema}
@@ -144,11 +144,11 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
             </span>
           </div>
 
-          <h4 className="text-base font-semibold text-text mb-4 leading-relaxed">{question.pergunta}</h4>
+          <h4 className="text-sm md:text-base font-semibold text-text mb-4 leading-relaxed">{question.pergunta}</h4>
 
           <div className="flex flex-col gap-1.5">
             {question.alternativas.map((alt, i) => {
-              let classes = 'w-full text-left quiz-option-base px-3.5 py-2.5 text-sm transition-all duration-200';
+              let classes = 'w-full text-left quiz-option-base px-4 py-3 text-sm md:text-base transition-all duration-200';
 
               if (answered) {
                 if (i === question.respostaCorreta) {
@@ -159,7 +159,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
                   classes += ' border-border text-text-muted/30';
                 }
               } else {
-                  classes += ' text-text cursor-pointer';
+                classes += ' text-text cursor-pointer';
               }
 
               return (
@@ -172,7 +172,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
 
           {answered && (
             <>
-              <div className={`mt-3 p-3 rounded-lg text-sm leading-relaxed ${
+              <div className={`mt-4 p-4 rounded-lg text-sm leading-relaxed ${
                 selectedAnswer === question.respostaCorreta
                   ? 'bg-accent5/5 border border-accent5/20 text-accent5'
                   : 'bg-accent2/5 border border-accent2/20 text-accent2'
@@ -182,7 +182,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
               <div className="text-center mt-4">
                 <button
                   onClick={handleGenerate}
-                  className="px-5 py-2.5 rounded-lg font-semibold text-sm text-white bg-accent transition-all duration-200 hover:-translate-y-0.5"
+                  className="btn-primary px-5 py-2.5 text-sm"
                 >
                   Próxima Pergunta
                 </button>

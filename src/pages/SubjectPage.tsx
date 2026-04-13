@@ -12,11 +12,11 @@ export default function SubjectPage() {
 
   if (!subject) {
     return (
-      <div className="flex-1 flex items-center justify-center p-8">
-        <div className="text-center animate-fade-in">
-          <h1 className="font-display font-bold text-2xl text-text mb-2">Matéria não encontrada</h1>
-          <p className="text-text-muted text-sm mb-6">O conteúdo que você procura não existe ou foi movido.</p>
-          <NavLink to="/" className="px-4 py-2 bg-accent text-white rounded-lg font-semibold text-xs hover:-translate-y-0.5 transition-all">
+      <div className="page-wrap py-16 md:py-20 animate-fade-in">
+        <div className="study-surface px-6 py-12 md:px-10 md:py-14 text-center">
+          <h1 className="font-display font-bold text-4xl text-text mb-3">Matéria não encontrada</h1>
+          <p className="text-text-muted text-sm md:text-base mb-7">O conteúdo que você procura não existe ou foi movido.</p>
+          <NavLink to="/" className="btn-primary px-5 py-2.5 text-sm inline-flex">
             Voltar ao início
           </NavLink>
         </div>
@@ -28,26 +28,28 @@ export default function SubjectPage() {
 
   if (!ContentComponent || !subject.hasContent) {
     return (
-      <div className="flex-1 animate-fade-in">
-        <div className="relative min-h-[60vh] flex flex-col items-center justify-center text-center px-6 py-16 overflow-hidden">
-          <div className="absolute inset-0 pointer-events-none opacity-20">
-            <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] animate-bg-float"
-              style={{ background: 'radial-gradient(circle at 50% 50%, rgba(108,99,255,0.15) 0%, transparent 50%)' }}
+      <div className="page-wrap py-10 md:py-12 animate-fade-in content-stack">
+        <section className="study-surface relative overflow-hidden px-6 py-12 md:px-10 md:py-14 text-center">
+          <div className="absolute inset-0 pointer-events-none opacity-45">
+            <div
+              className="absolute inset-0"
+              style={{ background: 'radial-gradient(circle at 50% 35%, rgba(108,99,255,0.18) 0%, transparent 50%)' }}
             />
           </div>
-          <p className="text-text-muted text-xs font-semibold tracking-widest uppercase relative z-10 mb-3">
+
+          <p className="text-text-muted text-[11px] font-semibold tracking-[0.18em] uppercase relative z-10 mb-4">
             {subject.period === 'optativa' ? 'Optativa' : `${subject.period}º Período`} · {subject.hours}h · {subject.code}
           </p>
-          <h1 className="font-display font-bold text-3xl text-text relative z-10 mb-2 tracking-tight">{subject.name}</h1>
-          <p className="text-text-muted text-sm relative z-10 max-w-sm mb-6">
+          <h1 className="font-display font-bold text-4xl md:text-5xl text-text relative z-10 mb-3 tracking-tight">{subject.name}</h1>
+          <p className="text-text-muted text-sm md:text-base relative z-10 max-w-xl mx-auto mb-7">
             Esta matéria ainda não tem conteúdo disponível. Quer ser o primeiro a contribuir?
           </p>
-          <div className="flex gap-2 relative z-10">
+          <div className="flex gap-2 flex-wrap justify-center relative z-10">
             <a
               href="https://github.com/periclesanfe/material_estudos_ifal/issues/new"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-accent text-white rounded-lg font-semibold text-xs hover:-translate-y-0.5 transition-all hover:shadow-lg hover:shadow-accent/20"
+              className="btn-primary px-5 py-2.5 text-xs md:text-sm"
             >
               Abrir Issue
             </a>
@@ -55,31 +57,29 @@ export default function SubjectPage() {
               href="https://github.com/periclesanfe/material_estudos_ifal/blob/main/.github/CONTRIBUTING.md"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 border border-border text-text-muted rounded-lg font-semibold text-xs hover:-translate-y-0.5 transition-all hover:text-text"
+              className="btn-secondary px-5 py-2.5 text-xs md:text-sm"
             >
               Como contribuir
             </a>
           </div>
-        </div>
+        </section>
 
-        <div className="max-w-2xl mx-auto px-6 py-8">
-          <div className="study-surface p-5">
-            <h2 className="font-semibold text-xs text-text-muted uppercase tracking-wider mb-4">Informações da Matéria</h2>
-            <div className="grid grid-cols-4 gap-4">
-              {[
-                { label: 'Código', value: subject.code },
-                { label: 'Carga Horária', value: `${subject.hours}h` },
-                { label: 'Período', value: subject.period === 'optativa' ? 'Optativa' : `${subject.period}º` },
-                { label: 'Eixo', value: subject.axis },
-              ].map(info => (
-                <div key={info.label} className="text-center">
-                  <span className="text-text-muted text-[10px] font-semibold block mb-0.5 uppercase tracking-wider">{info.label}</span>
-                  <span className="font-semibold text-sm text-text">{info.value}</span>
-                </div>
-              ))}
-            </div>
+        <section className="study-surface p-6 md:p-7">
+          <h2 className="font-semibold text-[11px] text-text-muted uppercase tracking-[0.16em] mb-4">Informações da Matéria</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { label: 'Código', value: subject.code },
+              { label: 'Carga Horária', value: `${subject.hours}h` },
+              { label: 'Período', value: subject.period === 'optativa' ? 'Optativa' : `${subject.period}º` },
+              { label: 'Eixo', value: subject.axis },
+            ].map(info => (
+              <div key={info.label} className="text-center study-surface py-3 px-2">
+                <span className="text-text-muted text-[11px] font-semibold block mb-0.5 uppercase tracking-[0.14em]">{info.label}</span>
+                <span className="font-semibold text-sm md:text-base text-text">{info.value}</span>
+              </div>
+            ))}
           </div>
-        </div>
+        </section>
       </div>
     );
   }

@@ -8,7 +8,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Sidebar />
-      <main className="flex-1 overflow-y-auto min-h-screen">
+      <main className="main-surface flex-1 overflow-y-auto min-h-screen pt-14 lg:pt-0">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/materia/:slug" element={<SubjectPage />} />
