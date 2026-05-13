@@ -790,7 +790,7 @@ function AiQuizSection() {
       <SectionHeader title="Quiz com IA" subtitle="Perguntas inéditas geradas a partir do guia da disciplina" colorClass="text-accent3" />
       <HighlightBox title="Como funciona?">
         <p>
-          A IA usa o resumo estruturado de Comportamento Organizacional e os temas do módulo para gerar uma pergunta inédita com alternativas, resposta correta e explicação.
+          A IA usa o resumo estruturado de Comportamento Organizacional e os temas do módulo para gerar lotes de 1, 5 ou 10 perguntas inéditas com alternativas, resposta correta e explicação.
         </p>
       </HighlightBox>
       <AIQuizGenerator guideContext={COMPORTAMENTO_ORGANIZACIONAL_GUIDE_CONTEXT} topics={COMPORTAMENTO_ORGANIZACIONAL_TOPICS} />

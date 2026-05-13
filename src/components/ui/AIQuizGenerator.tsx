@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { useGeminiQuiz } from '../../hooks/useGeminiQuiz';
+import { Link } from 'react-router-dom';
+import { QUESTION_COUNT_OPTIONS, type QuestionCount, useGeminiQuiz } from '../../hooks/useGeminiQuiz';
 import { useApiKey } from '../../hooks/useApiKey';
 
 interface AIQuizGeneratorProps {
@@ -9,10 +10,19 @@ interface AIQuizGeneratorProps {
 
 export default function AIQuizGenerator({ guideContext, topics }: AIQuizGeneratorProps) {
   const { hasApiKey } = useApiKey();
-  const { question, loading, error, score, answered, generateQuestion, answerQuestion, resetScore } = useGeminiQuiz(guideContext);
+  const {
+    questions,
+    loading,
+    error,
+    score,
+    selectedAnswers,
+    generateQuestion,
+    answerQuestion,
+    resetScore,
+  } = useGeminiQuiz(guideContext);
   const [selectedTopic, setSelectedTopic] = useState('aleatorio');
   const [selectedDifficulty, setSelectedDifficulty] = useState('mista');
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
+  const [selectedCount, setSelectedCount] = useState<QuestionCount>(1);
 
   const difficultyLabels: Record<string, string> = {
     facil: 'Fácil',
@@ -22,17 +32,19 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
   };
 
   const handleGenerate = () => {
-    setSelectedAnswer(null);
-    generateQuestion(selectedTopic, selectedDifficulty);
+    generateQuestion(selectedTopic, selectedDifficulty, selectedCount);
   };
 
-  const handleAnswer = (index: number) => {
-    if (answered) return;
-    setSelectedAnswer(index);
-    answerQuestion(index);
+  const handleAnswer = (questionIndex: number, optionIndex: number) => {
+    answerQuestion(questionIndex, optionIndex);
   };
 
   const progressPct = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0;
+  const generateLabel = loading
+    ? `Gerando ${selectedCount}...`
+    : selectedCount === 1
+      ? 'Gerar pergunta'
+      : `Gerar ${selectedCount} perguntas`;
 
   if (!hasApiKey()) {
     return (
@@ -41,21 +53,20 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
         <p className="text-text-muted text-sm md:text-base mb-5">
           Para usar o Quiz com IA, configure sua API Key do Google Gemini nas Configurações.
         </p>
-        <a
-          href="/configuracoes"
+        <Link
+          to="/configuracoes"
           className="btn-primary inline-flex px-5 py-2.5 text-sm"
         >
           Ir para Configurações
-        </a>
+        </Link>
       </div>
     );
   }
 
   return (
     <div className="space-y-4">
-      {/* Controls */}
       <div className="study-surface p-4 md:p-5 flex gap-3 flex-wrap items-end">
-        <div className="flex-1 min-w-[180px]">
+        <div className="flex-1 min-w-[170px]">
           <label className="block text-[11px] font-semibold text-text-muted uppercase tracking-wider mb-1">Tema</label>
           <select
             value={selectedTopic}
@@ -68,7 +79,8 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
             ))}
           </select>
         </div>
-        <div className="flex-1 min-w-[180px]">
+
+        <div className="flex-1 min-w-[170px]">
           <label className="block text-[11px] font-semibold text-text-muted uppercase tracking-wider mb-1">Dificuldade</label>
           <select
             value={selectedDifficulty}
@@ -81,16 +93,31 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
             <option value="dificil">Difícil</option>
           </select>
         </div>
+
+        <div className="flex-1 min-w-[150px]">
+          <label className="block text-[11px] font-semibold text-text-muted uppercase tracking-wider mb-1">Quantidade</label>
+          <select
+            value={selectedCount}
+            onChange={e => setSelectedCount(Number(e.target.value) as QuestionCount)}
+            className="w-full bg-bg text-text border border-border rounded-lg px-3 py-2.5 text-sm cursor-pointer focus:outline-none focus:border-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+          >
+            {QUESTION_COUNT_OPTIONS.map(count => (
+              <option key={count} value={count}>
+                {count === 1 ? '1 pergunta' : `${count} perguntas`}
+              </option>
+            ))}
+          </select>
+        </div>
+
         <button
           onClick={handleGenerate}
           disabled={loading}
           className="btn-primary px-5 py-2.5 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {loading ? 'Gerando…' : 'Gerar Pergunta'}
+          {generateLabel}
         </button>
       </div>
 
-      {/* Score */}
       <div className="study-surface flex gap-5 items-center px-4 py-3.5 text-sm">
         <div className="text-center">
           <div className="font-bold text-accent5">{score.correct}</div>
@@ -107,7 +134,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
         <div className="flex-1">
           <div className="w-full h-1 bg-border rounded-full overflow-hidden">
             <div
-            className="h-full rounded-full transition-[width] duration-500"
+              className="h-full rounded-full transition-[width] duration-500"
               style={{ width: `${progressPct}%`, background: 'var(--color-accent5)' }}
             />
           </div>
@@ -117,78 +144,93 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
         </button>
       </div>
 
-      {/* Loading */}
       {loading && (
         <div className="text-center py-10">
           <div className="w-8 h-8 border-2 border-border border-t-accent rounded-full animate-spin mx-auto" />
-          <p className="text-text-muted mt-3 text-sm">Consultando a IA…</p>
+          <p className="text-text-muted mt-3 text-sm">Consultando a IA...</p>
         </div>
       )}
 
-      {/* Error */}
       {error && (
-        <div className="bg-accent2/10 border border-accent2/20 rounded-lg p-3 text-accent2 text-sm">
+        <div className="bg-accent2/10 border border-accent2/20 rounded-lg p-3 text-accent2 text-sm leading-relaxed">
           {error}
         </div>
       )}
 
-      {/* Question */}
-      {question && !loading && (
-        <div className="study-surface p-5 md:p-6 animate-fade-in">
-          <div className="flex justify-between items-center mb-3">
-            <span className="text-xs font-semibold px-2.5 py-1 rounded bg-accent/10 text-accent uppercase tracking-wider">
-              {question.tema}
-            </span>
-            <span className="text-xs font-semibold text-text-muted">
-              {difficultyLabels[question.dificuldade] || question.dificuldade}
-            </span>
-          </div>
+      {questions.length > 0 && !loading && (
+        <div className="space-y-4 animate-fade-in">
+          {questions.map((question, questionIndex) => {
+            const selectedAnswer = selectedAnswers[questionIndex];
+            const answered = selectedAnswer !== undefined;
 
-          <h4 className="text-sm md:text-base font-semibold text-text mb-4 leading-relaxed">{question.pergunta}</h4>
+            return (
+              <div key={`${question.pergunta}-${questionIndex}`} className="study-surface p-5 md:p-6">
+                <div className="flex justify-between items-center gap-3 mb-3">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-semibold px-2.5 py-1 rounded bg-accent/10 text-accent uppercase tracking-wider">
+                      Pergunta {questionIndex + 1} de {questions.length}
+                    </span>
+                    <span className="text-xs font-semibold px-2.5 py-1 rounded bg-accent3/10 text-accent3 uppercase tracking-wider">
+                      {question.tema}
+                    </span>
+                  </div>
+                  <span className="text-xs font-semibold text-text-muted">
+                    {difficultyLabels[question.dificuldade] || question.dificuldade}
+                  </span>
+                </div>
 
-          <div className="flex flex-col gap-1.5">
-            {question.alternativas.map((alt, i) => {
-              let classes = 'w-full text-left quiz-option-base px-4 py-3 text-sm md:text-base transition-colors duration-200';
+                <h4 className="text-sm md:text-base font-semibold text-text mb-4 leading-relaxed">{question.pergunta}</h4>
 
-              if (answered) {
-                if (i === question.respostaCorreta) {
-                  classes += ' border-accent5 bg-accent5/10 text-accent5';
-                } else if (i === selectedAnswer) {
-                  classes += ' border-accent2 bg-accent2/10 text-accent2';
-                } else {
-                  classes += ' border-border text-text-muted/30';
-                }
-              } else {
-                classes += ' text-text cursor-pointer';
-              }
+                <div className="flex flex-col gap-1.5">
+                  {question.alternativas.map((alt, optionIndex) => {
+                    let classes = 'w-full text-left quiz-option-base px-4 py-3 text-sm md:text-base transition-colors duration-200';
 
-              return (
-                <button key={i} onClick={() => handleAnswer(i)} className={classes} disabled={answered}>
-                  {alt}
-                </button>
-              );
-            })}
-          </div>
+                    if (answered) {
+                      if (optionIndex === question.respostaCorreta) {
+                        classes += ' border-accent5 bg-accent5/10 text-accent5';
+                      } else if (optionIndex === selectedAnswer) {
+                        classes += ' border-accent2 bg-accent2/10 text-accent2';
+                      } else {
+                        classes += ' border-border text-text-muted/30';
+                      }
+                    } else {
+                      classes += ' text-text cursor-pointer';
+                    }
 
-          {answered && (
-            <>
-              <div className={`mt-4 p-4 rounded-lg text-sm leading-relaxed ${
-                selectedAnswer === question.respostaCorreta
-                  ? 'bg-accent5/5 border border-accent5/20 text-accent5'
-                  : 'bg-accent2/5 border border-accent2/20 text-accent2'
-              }`}>
-                {question.explicacao}
+                    return (
+                      <button
+                        key={optionIndex}
+                        onClick={() => handleAnswer(questionIndex, optionIndex)}
+                        className={classes}
+                        disabled={answered}
+                      >
+                        {alt}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {answered && (
+                  <div className={`mt-4 p-4 rounded-lg text-sm leading-relaxed ${
+                    selectedAnswer === question.respostaCorreta
+                      ? 'bg-accent5/5 border border-accent5/20 text-accent5'
+                      : 'bg-accent2/5 border border-accent2/20 text-accent2'
+                  }`}>
+                    {question.explicacao}
+                  </div>
+                )}
               </div>
-              <div className="text-center mt-4">
-                <button
-                  onClick={handleGenerate}
-                  className="btn-primary px-5 py-2.5 text-sm"
-                >
-                  Próxima Pergunta
-                </button>
-              </div>
-            </>
-          )}
+            );
+          })}
+
+          <div className="text-center">
+            <button
+              onClick={handleGenerate}
+              className="btn-primary px-5 py-2.5 text-sm"
+            >
+              {selectedCount === 1 ? 'Nova pergunta' : 'Novo lote'}
+            </button>
+          </div>
         </div>
       )}
     </div>

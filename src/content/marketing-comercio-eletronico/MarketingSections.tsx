@@ -350,7 +350,7 @@ function AiQuizSection() {
     <section className="animate-fade-in space-y-6">
       <SectionHeader title="Quiz com IA" subtitle="Perguntas inéditas geradas pelo Google Gemini" colorClass="text-accent3" />
       <HighlightBox title="Como funciona?">
-        <p>A IA analisa todo o conteúdo deste guia e gera uma pergunta inédita com 4 alternativas, resposta correta e explicação detalhada.</p>
+        <p>A IA analisa todo o conteúdo deste guia e gera lotes de 1, 5 ou 10 perguntas inéditas com 4 alternativas, resposta correta e explicação detalhada.</p>
       </HighlightBox>
       <AIQuizGenerator guideContext={MARKETING_GUIDE_CONTEXT} topics={MARKETING_TOPICS} />
     </section>

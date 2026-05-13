@@ -1,7 +1,8 @@
-import { useParams, NavLink } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getSubjectBySlug } from '../data/curriculum';
 import ComportamentoOrganizacionalContent from '../content/comportamento-organizacional/ComportamentoOrganizacionalContent';
 import MarketingContent from '../content/marketing-comercio-eletronico/MarketingContent';
+import NotFoundPage from './NotFoundPage';
 
 const contentRegistry: Record<string, React.ComponentType> = {
   'comportamento-organizacional': ComportamentoOrganizacionalContent,
@@ -13,17 +14,7 @@ export default function SubjectPage() {
   const subject = slug ? getSubjectBySlug(slug) : undefined;
 
   if (!subject) {
-    return (
-      <div className="page-wrap py-16 md:py-20 animate-fade-in">
-        <div className="study-surface px-6 py-12 md:px-10 md:py-14 text-center">
-          <h1 className="font-display font-bold text-4xl text-text mb-3">Matéria não encontrada</h1>
-          <p className="text-text-muted text-sm md:text-base mb-7">O conteúdo que você procura não existe ou foi movido.</p>
-          <NavLink to="/" className="btn-primary px-5 py-2.5 text-sm inline-flex">
-            Voltar ao início
-          </NavLink>
-        </div>
-      </div>
-    );
+    return <NotFoundPage />;
   }
 
   const ContentComponent = contentRegistry[subject.slug];
