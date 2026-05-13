@@ -25,7 +25,7 @@ export default function ComportamentoOrganizacionalContent() {
           Comportamento<br /><span className="gradient-text">Organizacional</span>
         </h1>
         <p className="text-text-muted text-sm md:text-base relative z-10 max-w-2xl">
-          Indivíduos · Diversidade · Valores e Atitudes · Motivação · Grupos · Comunicação
+          Indivíduos · Motivação · Grupos · Comunicação · Liderança · Conflito e Negociação
         </p>
       </div>
 

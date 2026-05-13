@@ -15,11 +15,334 @@ interface SectionHeaderProps {
   colorClass: string;
 }
 
+type Accent = 'accent' | 'accent2' | 'accent3' | 'accent4' | 'accent5';
+
+interface ConceptItem {
+  title: string;
+  description: string;
+  accent: Accent;
+}
+
+interface PanelItem {
+  title: string;
+  description: string;
+}
+
 function SectionHeader({ title, subtitle, colorClass }: SectionHeaderProps) {
   return (
     <div className="space-y-2">
       <h2 className={`section-title ${colorClass}`}>{title}</h2>
       <p className="section-subtitle max-w-3xl">{subtitle}</p>
+    </div>
+  );
+}
+
+const marketingApplications: ConceptItem[] = [
+  {
+    title: 'Bens',
+    description: 'Produtos físicos e tangíveis, como alimentos, computadores, roupas e veículos. O marketing trabalha atributos, embalagem, marca, preço e distribuição para tornar o bem desejável.',
+    accent: 'accent',
+  },
+  {
+    title: 'Serviços',
+    description: 'Atividades intangíveis, como consultoria, educação, transporte, saúde e suporte técnico. Como não podem ser estocados, dependem muito da qualidade do atendimento e da experiência entregue.',
+    accent: 'accent2',
+  },
+  {
+    title: 'Eventos',
+    description: 'Congressos, shows, feiras, campeonatos e lançamentos. O marketing define público, proposta de valor, divulgação, venda de ingressos e experiência antes, durante e depois do evento.',
+    accent: 'accent3',
+  },
+  {
+    title: 'Experiências',
+    description: 'Vivências planejadas para gerar memória e emoção, como parques, turismo, degustações e ações imersivas. O foco não é só o produto, mas a sensação associada à marca.',
+    accent: 'accent4',
+  },
+  {
+    title: 'Pessoas',
+    description: 'Imagem pública de profissionais, artistas, candidatos, influenciadores e especialistas. O marketing ajuda a posicionar reputação, credibilidade e diferenciais percebidos.',
+    accent: 'accent5',
+  },
+  {
+    title: 'Lugares',
+    description: 'Cidades, regiões, destinos turísticos e espaços comerciais. O objetivo é atrair visitantes, moradores, investidores ou consumidores por meio de identidade e benefícios claros.',
+    accent: 'accent',
+  },
+  {
+    title: 'Propriedades',
+    description: 'Bens com direito de posse ou uso, como imóveis, ações, franquias e licenças. O marketing comunica valor, segurança, rentabilidade e diferenciais da oportunidade.',
+    accent: 'accent2',
+  },
+  {
+    title: 'Organizações',
+    description: 'Empresas, instituições públicas, ONGs e escolas também precisam construir imagem. A comunicação reforça confiança, missão, cultura e relevância social.',
+    accent: 'accent3',
+  },
+  {
+    title: 'Informações',
+    description: 'Cursos, relatórios, notícias, bases de dados e conteúdos especializados. O valor está na utilidade, confiabilidade, atualização e facilidade de acesso.',
+    accent: 'accent4',
+  },
+  {
+    title: 'Ideias',
+    description: 'Causas, comportamentos e propostas, como vacinação, sustentabilidade, segurança no trânsito ou inclusão. O marketing busca adesão, mudança de atitude e mobilização.',
+    accent: 'accent5',
+  },
+];
+
+const maslowDetails: PanelItem[] = [
+  {
+    title: '1. Fisiológicas',
+    description: 'São necessidades básicas de sobrevivência, como alimentação, água, sono e descanso. Em marketing, aparecem em produtos ligados a conforto físico, saúde, alimentação e bem-estar imediato.',
+  },
+  {
+    title: '2. Segurança',
+    description: 'Envolvem proteção, estabilidade, previsibilidade e redução de riscos. Seguros, planos de saúde, garantias, estabilidade financeira e sistemas de proteção costumam explorar esse nível.',
+  },
+  {
+    title: '3. Sociais',
+    description: 'Ligam-se a pertencimento, amizade, afeto e aceitação em grupos. Marcas podem trabalhar comunidade, relacionamento, identificação e experiências compartilhadas.',
+  },
+  {
+    title: '4. Estima',
+    description: 'Relacionam-se a reconhecimento, status, prestígio, autoestima e respeito. Produtos premium, certificações, cargos, marcas aspiracionais e símbolos de conquista atuam nesse nível.',
+  },
+  {
+    title: '5. Autorrealização',
+    description: 'Representa desenvolvimento pessoal, propósito, criatividade e realização do potencial. Cursos, experiências transformadoras, projetos autorais e causas pessoais dialogam com esse estágio.',
+  },
+];
+
+const eightPsItems: ConceptItem[] = [
+  {
+    title: '1. Produto',
+    description: 'É a solução oferecida ao cliente. Inclui características, qualidade, design, embalagem, marca, garantia e tudo que compõe a entrega de valor.',
+    accent: 'accent',
+  },
+  {
+    title: '2. Preço',
+    description: 'É o valor cobrado e também um sinal de posicionamento. Deve considerar custos, concorrência, percepção de valor, margem e capacidade de pagamento do público.',
+    accent: 'accent2',
+  },
+  {
+    title: '3. Praça',
+    description: 'Define onde e como o cliente acessa o produto: canais, logística, estoque, cobertura geográfica, entrega e conveniência de compra.',
+    accent: 'accent3',
+  },
+  {
+    title: '4. Promoção',
+    description: 'Reúne ações de comunicação para tornar a oferta conhecida e desejada, como publicidade, vendas, redes sociais, promoções e relações públicas.',
+    accent: 'accent4',
+  },
+  {
+    title: '5. Pessoas',
+    description: 'Inclui colaboradores, vendedores, atendimento, parceiros e clientes envolvidos na experiência. Em serviços, a postura das pessoas pode definir a qualidade percebida.',
+    accent: 'accent5',
+  },
+  {
+    title: '6. Processos',
+    description: 'São os fluxos e rotinas que sustentam a entrega: pedido, pagamento, atendimento, suporte, troca e pós-venda. Bons processos reduzem atrito e aumentam confiança.',
+    accent: 'accent',
+  },
+  {
+    title: '7. Posicionamento',
+    description: 'É o lugar que a marca ocupa na mente do cliente. Depende de diferenciais claros, coerência na comunicação e comparação com concorrentes.',
+    accent: 'accent2',
+  },
+  {
+    title: '8. Performance',
+    description: 'É o acompanhamento de resultados por métricas, como vendas, retenção, satisfação, conversão, lucratividade e retorno das campanhas.',
+    accent: 'accent3',
+  },
+];
+
+const relationshipCharacteristics: PanelItem[] = [
+  {
+    title: 'Aplicar informações',
+    description: 'Usar dados de atendimento, compras, preferências e reclamações para tomar decisões melhores, personalizar ofertas e antecipar necessidades.',
+  },
+  {
+    title: 'Identificar o cliente',
+    description: 'Saber quem compra, com que frequência, por quais canais e com quais expectativas. Sem identificação, a empresa trata todos de forma genérica.',
+  },
+  {
+    title: 'Identificar necessidades',
+    description: 'Entender o problema real do cliente, inclusive o que ele não declara diretamente, para entregar soluções mais adequadas.',
+  },
+  {
+    title: 'Criar conversas',
+    description: 'Manter canais de diálogo ativos, ouvir feedbacks e responder com rapidez. Relacionamento depende de troca, não apenas de propaganda.',
+  },
+  {
+    title: 'Criar proximidade',
+    description: 'Fazer o cliente sentir que a marca reconhece seu histórico e valor. Atendimento personalizado e comunicação útil fortalecem essa aproximação.',
+  },
+  {
+    title: 'Aprimorar processos',
+    description: 'Usar o relacionamento para perceber falhas recorrentes e melhorar compra, entrega, suporte, troca, cobrança e pós-venda.',
+  },
+  {
+    title: 'Criar valor',
+    description: 'Oferecer benefícios percebidos como superiores ao custo, como conveniência, confiança, qualidade, orientação e economia de tempo.',
+  },
+  {
+    title: 'Gerar confiança',
+    description: 'Cumprir promessas, manter transparência e resolver problemas com consistência. Confiança reduz a chance de troca por concorrentes.',
+  },
+  {
+    title: 'Aumentar ganhos',
+    description: 'Clientes fiéis tendem a recomprar, comprar mais itens e custar menos para manter do que novos clientes custam para conquistar.',
+  },
+  {
+    title: 'Conquistar novos clientes',
+    description: 'Relacionamentos positivos geram indicações e prova social. O cliente satisfeito passa a ajudar na divulgação espontânea da marca.',
+  },
+  {
+    title: 'Branding',
+    description: 'Fortalecer a imagem e os significados associados à marca. Uma boa relação torna a marca mais lembrada, confiável e diferenciada.',
+  },
+  {
+    title: 'Aumentar faturamento',
+    description: 'Relacionamento bem conduzido favorece recorrência, venda adicional, planos superiores e maior valor ao longo do ciclo de vida do cliente.',
+  },
+  {
+    title: 'Fortalecer a cultura',
+    description: 'Quando a empresa prioriza relacionamento, atendimento e escuta passam a fazer parte da cultura, não apenas de campanhas isoladas.',
+  },
+  {
+    title: 'Reinventar processos',
+    description: 'A análise da jornada do cliente pode levar a novos canais, novas formas de entrega, automações e modelos de atendimento.',
+  },
+  {
+    title: 'Sustentabilidade',
+    description: 'Relações duradouras reduzem desperdício comercial e favorecem crescimento mais estável, com menos dependência de ações agressivas de curto prazo.',
+  },
+];
+
+const researchSteps: PanelItem[] = [
+  {
+    title: '1. Definição do problema',
+    description: 'Transforma uma dúvida ampla em uma pergunta investigável. Ex.: “por que as vendas caíram?” pode virar “quais fatores reduziram a recompra no último trimestre?”.',
+  },
+  {
+    title: '2. Desenvolvimento do plano',
+    description: 'Define objetivos, fontes de dados, método, público pesquisado, instrumento, prazo e orçamento. É a etapa que evita coletar informações irrelevantes.',
+  },
+  {
+    title: '3. Coleta de informações',
+    description: 'Aplica questionários, entrevistas, observações ou busca dados secundários. Costuma ser a fase mais cara e sujeita a erros de execução.',
+  },
+  {
+    title: '4. Análise das informações',
+    description: 'Organiza, compara e interpreta os dados para encontrar padrões, relações e possíveis causas. A análise transforma dados brutos em conhecimento útil.',
+  },
+  {
+    title: '5. Apresentação dos resultados',
+    description: 'Comunica achados de forma objetiva, com gráficos, sínteses e recomendações. A apresentação deve responder ao problema inicial, não apenas mostrar números.',
+  },
+  {
+    title: '6. Tomada de decisão',
+    description: 'Usa os resultados para escolher ações de marketing, como ajustar preço, mudar comunicação, reposicionar produto ou investigar mais.',
+  },
+];
+
+const researchDataTypes: ConceptItem[] = [
+  {
+    title: 'Dados primários',
+    description: 'São coletados pela primeira vez para o problema atual. Exigem mais tempo e custo, mas podem ser desenhados exatamente para a pergunta da pesquisa.',
+    accent: 'accent3',
+  },
+  {
+    title: 'Dados secundários',
+    description: 'Já existiam antes da pesquisa, como IBGE, relatórios internos, estudos de mercado e bases públicas. São mais rápidos, mas podem não responder tudo.',
+    accent: 'accent5',
+  },
+];
+
+const researchInstruments: PanelItem[] = [
+  {
+    title: 'Questionários',
+    description: 'Instrumento mais usado para dados primários. Permite comparar respostas de muitas pessoas, desde que as perguntas sejam claras e bem estruturadas.',
+  },
+  {
+    title: 'Pesquisa qualitativa',
+    description: 'Explora percepções, sentimentos e motivações. É útil para entender o “porquê” por trás de comportamentos, especialmente por entrevistas e grupos focais.',
+  },
+  {
+    title: 'Instrumentos mecânicos',
+    description: 'Recursos que registram comportamento ou reação, como medidores de audiência, rastreamento de navegação, mapas de calor e sensores em loja.',
+  },
+];
+
+const segmentationLevels: PanelItem[] = [
+  {
+    title: 'Marketing de massa',
+    description: 'Trata o mercado como um grande público único. Ganha escala, mas tende a ignorar diferenças importantes entre consumidores.',
+  },
+  {
+    title: 'Marketing segmentado',
+    description: 'Escolhe grupos amplos com necessidades parecidas e adapta ofertas e mensagens para cada segmento.',
+  },
+  {
+    title: 'Marketing de nicho',
+    description: 'Foca um grupo menor e mais específico. É útil quando a empresa tem recursos limitados ou quer atender muito bem um público particular.',
+  },
+  {
+    title: 'Marketing local',
+    description: 'Adapta produtos, preço, canais e comunicação a uma cidade, bairro, região ou comunidade específica.',
+  },
+  {
+    title: 'Marketing individual',
+    description: 'Personaliza a oferta para cada cliente, usando histórico, preferências e dados de comportamento.',
+  },
+];
+
+const segmentationCriteria: PanelItem[] = [
+  {
+    title: 'Identificável',
+    description: 'A empresa precisa conseguir reconhecer quem pertence ao segmento, quais características o definem e onde essas pessoas estão.',
+  },
+  {
+    title: 'Mensurável',
+    description: 'O segmento deve permitir estimar tamanho, renda, frequência de compra, demanda ou outro indicador relevante.',
+  },
+  {
+    title: 'Substancial',
+    description: 'Precisa ser grande e rentável o suficiente para justificar uma estratégia própria de marketing.',
+  },
+  {
+    title: 'Acessível',
+    description: 'A empresa deve conseguir alcançar o segmento por canais de venda, distribuição e comunicação viáveis.',
+  },
+  {
+    title: 'Diferenciável',
+    description: 'O segmento precisa responder de forma diferente dos demais; caso contrário, não há motivo para tratá-lo separadamente.',
+  },
+  {
+    title: 'Acionável',
+    description: 'A organização deve ter condições reais de criar ações, ofertas e campanhas adequadas para aquele grupo.',
+  },
+];
+
+function ConceptGrid({ items, columns = 'md:grid-cols-2' }: { items: ConceptItem[]; columns?: string }) {
+  return (
+    <div className={`grid grid-cols-1 ${columns} gap-4`}>
+      {items.map(item => (
+        <ConceptCard key={item.title} title={item.title} description={item.description} accent={item.accent} />
+      ))}
+    </div>
+  );
+}
+
+function PanelList({ items, columns }: { items: PanelItem[]; columns?: string }) {
+  return (
+    <div className={columns ? `grid grid-cols-1 ${columns} gap-3` : 'space-y-3'}>
+      {items.map(item => (
+        <div key={item.title} className="bg-card border border-border rounded-xl px-5 py-4">
+          <h3 className="font-semibold text-sm md:text-base text-text mb-0.5">{item.title}</h3>
+          <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
+        </div>
+      ))}
     </div>
   );
 }
@@ -96,13 +419,7 @@ function AplicacaoSection() {
   return (
     <section className="animate-fade-in space-y-6">
       <SectionHeader title="A que se aplica o Marketing?" subtitle="O marketing vai muito além de produtos físicos" colorClass="text-accent3" />
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-        {['Bens', 'Serviços', 'Eventos', 'Experiências', 'Pessoas', 'Lugares', 'Propriedades', 'Organizações', 'Informações', 'Ideias'].map(item => (
-          <div key={item} className="bg-card border border-border rounded-xl p-3 text-center card-hover">
-            <span className="text-sm font-semibold text-text">{item}</span>
-          </div>
-        ))}
-      </div>
+      <ConceptGrid items={marketingApplications} columns="md:grid-cols-2 lg:grid-cols-3" />
     </section>
   );
 }
@@ -156,6 +473,7 @@ function MaslowSection() {
           </div>
         ))}
       </div>
+      <PanelList items={maslowDetails} />
       <HighlightBox title="Por que isso importa para o Marketing?">
         <p>Entender em que nível da pirâmide o consumidor está ajuda a <strong>posicionar produtos e mensagens</strong> de forma eficaz.</p>
       </HighlightBox>
@@ -188,23 +506,7 @@ function EightPsSection() {
   return (
     <section className="animate-fade-in space-y-6">
       <SectionHeader title="A Evolução: 8 Ps" subtitle="Os 4 Ps já não representam todo o cenário do marketing moderno" colorClass="text-accent2" />
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5">
-        {[
-          { num: 1, name: 'Produto', isNew: false },
-          { num: 2, name: 'Preço', isNew: false },
-          { num: 3, name: 'Praça', isNew: false },
-          { num: 4, name: 'Promoção', isNew: false },
-          { num: 5, name: 'Pessoas', isNew: true },
-          { num: 6, name: 'Processos', isNew: true },
-          { num: 7, name: 'Posicionamento', isNew: true },
-          { num: 8, name: 'Performance', isNew: true },
-        ].map(p => (
-          <div key={p.num} className={`bg-card rounded-lg p-3 text-center border ${p.isNew ? 'border-accent2/40' : 'border-border'}`}>
-            <span className={`font-display text-lg font-black block ${p.isNew ? 'text-accent2' : 'text-accent'}`}>{p.num}</span>
-            <span className="font-semibold text-sm text-text">{p.name}</span>
-          </div>
-        ))}
-      </div>
+      <ConceptGrid items={eightPsItems} columns="md:grid-cols-2 lg:grid-cols-4" />
     </section>
   );
 }
@@ -265,20 +567,7 @@ function CharacteristicsSection() {
   return (
     <section className="animate-fade-in space-y-6">
       <SectionHeader title="15 Características" subtitle="O que define um bom Marketing de Relacionamento" colorClass="text-accent4" />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5">
-        {[
-          'Aplicar informações', 'Identificar o cliente', 'Identificar necessidades',
-          'Criar conversas', 'Criar proximidade', 'Aprimorar processos',
-          'Criar valor', 'Gerar confiança', 'Aumentar ganhos',
-          'Conquistar novos clientes', 'Branding', 'Aumentar faturamento',
-          'Fortalecer a cultura', 'Reinventar processos', 'Sustentabilidade',
-        ].map((char, i) => (
-          <div key={i} className="bg-card rounded-xl px-4 py-3 border border-border flex items-center gap-3">
-            <span className="text-accent text-xs font-bold tabular-nums w-5 flex-shrink-0">{String(i + 1).padStart(2, '0')}</span>
-            <span className="text-sm text-text">{char}</span>
-          </div>
-        ))}
-      </div>
+      <PanelList items={relationshipCharacteristics} columns="md:grid-cols-2 lg:grid-cols-3" />
     </section>
   );
 }
@@ -313,6 +602,18 @@ function PesquisaSection() {
         <p>Atividades sistemáticas de <strong>concepção, coleta, análise e edição</strong> de relatórios e conclusões relevantes sobre situações de marketing.</p>
       </HighlightBox>
       <FlowDiagram items={['Definição', 'Plano', 'Coleta', 'Análise', 'Resultados', 'Decisão']} />
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent mb-3">Etapas da pesquisa</h3>
+        <PanelList items={researchSteps} />
+      </div>
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent4 mb-3">Tipos de dados</h3>
+        <ConceptGrid items={researchDataTypes} />
+      </div>
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent5 mb-3">Instrumentos de coleta</h3>
+        <PanelList items={researchInstruments} />
+      </div>
     </section>
   );
 }
@@ -329,6 +630,14 @@ function SegmentacaoSection() {
         <ConceptCard title="Demográfica" description="Por <strong>características mensuráveis</strong>: idade, sexo, renda." accent="accent2" />
         <ConceptCard title="Psicográfica" description="Por <strong>personalidade</strong>: estilo de vida, valores, atitudes." accent="accent3" />
         <ConceptCard title="Comportamental" description="Por <strong>conhecimento, atitude, uso ou reação</strong> a um produto." accent="accent4" />
+      </div>
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent3 mb-3">Níveis de segmentação</h3>
+        <PanelList items={segmentationLevels} />
+      </div>
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent5 mb-3">Critérios para uma boa segmentação</h3>
+        <PanelList items={segmentationCriteria} columns="md:grid-cols-2" />
       </div>
     </section>
   );

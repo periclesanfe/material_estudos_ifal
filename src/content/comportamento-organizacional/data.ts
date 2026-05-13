@@ -16,6 +16,10 @@ GUIA COMPLETO DE COMPORTAMENTO ORGANIZACIONAL — Resumo:
 6. APLICAÇÕES NO TRABALHO: O Modelo de Características do Trabalho usa variedade de habilidades, identidade da tarefa, significância, autonomia e feedback. Redesenho: rodízio, enriquecimento, compartilhamento, remoto e horário flexível. Envolvimento: gestão participativa e participação representativa. Recompensas: variável, produção, mérito, bônus, habilidades, lucros/resultados, benefícios flexíveis e reconhecimento.
 
 7. GRUPOS E COMUNICAÇÃO: Pessoas entram em grupos por segurança, status, autoestima, afiliação, poder e metas. Propriedades: papéis, normas, status, tamanho, coesividade e diversidade. Comunicação exige propósito, mensagem, canal, emissor e receptor; feedback confirma compreensão e ruído distorce. Direções: descendente, ascendente e lateral. Formas: oral, escrita e não verbal. Redes: cadeia, roda e todos os canais. Barreiras: filtragem, percepção seletiva, sobrecarga, emoções, linguagem e silêncio.
+
+8. LIDERANÇA: Liderança é a capacidade de influenciar um grupo para realizar uma visão ou conjunto de metas; pode emergir informalmente ou por indicação formal. Teorias dos traços buscam qualidades pessoais e conectam liderança ao Big Five e à inteligência emocional, especialmente empatia. Teorias comportamentais distinguem comportamentos orientados à tarefa e às pessoas. Teorias contingenciais incluem Fiedler, liderança situacional, caminho-meta e participação do líder. Liderança carismática envolve visão, risco, sensibilidade ao ambiente e indução emocional. Liderança transformacional inspira inovação e mudança. Liderança autêntica combina ética, valores abertos, confiança e uso responsável do poder.
+
+9. CONFLITO E NEGOCIAÇÃO: Conflito começa quando uma parte percebe que outra afeta ou pode afetar negativamente algo importante. Pode surgir por objetivos incompatíveis, interpretações diferentes e expectativas comportamentais. Visões sobre conflito: tradicional, interacionista e gerenciada. Tipos: tarefa, relacionamento e processo. Processo de conflito: oposição potencial, cognição/personalização, intenções, comportamento e resultados. Estilos: competição, colaboração, evitação, acomodação e compromisso, equilibrando assertividade e cooperação. Negociação é um processo comunicativo para alocar recursos escassos e buscar acordo. Pode ser distributiva (ganha-perde, valor fixo) ou integrativa (ganhos mútuos, criação de valor). Processo: preparação, regras, esclarecimento, barganha e encerramento.
 `;
 
 export const COMPORTAMENTO_ORGANIZACIONAL_TOPICS = [
@@ -27,6 +31,8 @@ export const COMPORTAMENTO_ORGANIZACIONAL_TOPICS = [
   { value: 'trabalho', label: 'Aplicações no Trabalho' },
   { value: 'grupos', label: 'Comportamento de Grupo' },
   { value: 'comunicacao', label: 'Comunicação Organizacional' },
+  { value: 'lideranca', label: 'Liderança' },
+  { value: 'conflito-negociacao', label: 'Conflito e Negociação' },
 ];
 
 export const COMPORTAMENTO_ORGANIZACIONAL_SECTIONS = [
@@ -41,6 +47,8 @@ export const COMPORTAMENTO_ORGANIZACIONAL_SECTIONS = [
   { id: 'aplicacoes', title: 'Aplicações Organizacionais', shortTitle: 'Aplicações' },
   { id: 'grupos', title: 'Comportamento de Grupo', shortTitle: 'Grupos' },
   { id: 'comunicacao', title: 'Comunicação', shortTitle: 'Comunicação' },
+  { id: 'lideranca', title: 'Liderança', shortTitle: 'Liderança' },
+  { id: 'conflito', title: 'Conflito e Negociação', shortTitle: 'Conflitos' },
   { id: 'quiz', title: 'Quiz de Revisão', shortTitle: 'Quiz' },
   { id: 'iaquiz', title: 'Quiz com IA', shortTitle: 'Quiz IA' },
 ];

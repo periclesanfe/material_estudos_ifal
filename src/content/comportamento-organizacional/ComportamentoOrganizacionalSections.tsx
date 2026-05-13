@@ -146,12 +146,27 @@ const dissatisfactionResponses: PanelItem[] = [
   { title: 'Negligência', description: 'Deixar a situação piorar: atrasos, faltas, menor empenho e mais erros.' },
 ];
 
-const satisfactionLevers: string[] = [
-  'Trabalho intelectualmente desafiante',
-  'Recompensas justas',
-  'Condições de apoio no trabalho',
-  'Colegas colaboradores',
-  'Sentido que vai além do dinheiro',
+const satisfactionLevers: PanelItem[] = [
+  {
+    title: 'Trabalho intelectualmente desafiante',
+    description: 'Tarefas que exigem raciocínio, variedade e aprendizagem tendem a aumentar interesse. O desafio precisa ser alcançável; desafio excessivo vira frustração.',
+  },
+  {
+    title: 'Recompensas justas',
+    description: 'Salário, benefícios, promoções e reconhecimento precisam ser percebidos como proporcionais ao esforço, às responsabilidades e ao mercado.',
+  },
+  {
+    title: 'Condições de apoio no trabalho',
+    description: 'Recursos, ferramentas, ambiente físico, clareza de processos e suporte gerencial reduzem obstáculos e permitem que a pessoa desempenhe bem.',
+  },
+  {
+    title: 'Colegas colaboradores',
+    description: 'Relações respeitosas e cooperativas tornam o trabalho mais previsível, reduzem conflitos desnecessários e fortalecem pertencimento.',
+  },
+  {
+    title: 'Sentido que vai além do dinheiro',
+    description: 'Pessoas tendem a se satisfazer mais quando entendem a utilidade do trabalho, seu impacto e sua conexão com valores pessoais.',
+  },
 ];
 
 const perceptionFactors: ConceptItem[] = [
@@ -258,12 +273,27 @@ const motivationClassics: ConceptItem[] = [
   },
 ];
 
-const engagementActions: string[] = [
-  'Investir no aprimoramento contínuo de líderes',
-  'Dar autonomia de trabalho às equipes',
-  'Medir o engajamento regularmente',
-  'Tratar engajamento como foco permanente',
-  'Ouvir a equipe nos termos dela',
+const engagementActions: PanelItem[] = [
+  {
+    title: 'Investir no aprimoramento contínuo de líderes',
+    description: 'Líderes influenciam clima, confiança, feedback e prioridades. Treinamento contínuo melhora a qualidade das relações e reduz práticas que desmotivam.',
+  },
+  {
+    title: 'Dar autonomia de trabalho às equipes',
+    description: 'Autonomia aumenta senso de responsabilidade e controle. A equipe precisa ter liberdade real para decidir como executar parte do trabalho.',
+  },
+  {
+    title: 'Medir o engajamento regularmente',
+    description: 'Pesquisas, conversas e indicadores ajudam a detectar queda de energia antes que ela apareça como rotatividade, absenteísmo ou baixa produtividade.',
+  },
+  {
+    title: 'Tratar engajamento como foco permanente',
+    description: 'Engajamento não se resolve com campanha pontual. Exige rotina de gestão, coerência entre discurso e prática e acompanhamento dos problemas levantados.',
+  },
+  {
+    title: 'Ouvir a equipe nos termos dela',
+    description: 'A escuta precisa considerar a linguagem, os canais e as preocupações reais dos trabalhadores, não apenas os temas que a gestão quer ouvir.',
+  },
 ];
 
 const advancedTheories: ConceptItem[] = [
@@ -304,24 +334,66 @@ const jobCharacteristics: PanelItem[] = [
   { title: 'Feedback', description: 'Informações diretas e claras sobre a eficácia do desempenho.' },
 ];
 
-const workRedesign: string[] = [
-  'Rodízio de trabalho',
-  'Enriquecimento do trabalho',
-  'Compartilhamento de trabalho',
-  'Trabalho remoto',
-  'Horário flexível',
+const workRedesign: PanelItem[] = [
+  {
+    title: 'Rodízio de trabalho',
+    description: 'Move pessoas entre tarefas ou funções para reduzir monotonia, ampliar habilidades e aumentar compreensão do processo como um todo.',
+  },
+  {
+    title: 'Enriquecimento do trabalho',
+    description: 'Aumenta autonomia, responsabilidade, variedade e feedback. Em vez de apenas trocar tarefas, torna o cargo mais significativo.',
+  },
+  {
+    title: 'Compartilhamento de trabalho',
+    description: 'Duas ou mais pessoas dividem uma mesma função ou carga horária. Pode ampliar flexibilidade, mas exige boa coordenação.',
+  },
+  {
+    title: 'Trabalho remoto',
+    description: 'Permite realizar atividades fora do local físico da organização. Funciona melhor com metas claras, comunicação confiável e autonomia.',
+  },
+  {
+    title: 'Horário flexível',
+    description: 'Dá margem para ajustar horários de entrada, saída ou blocos de trabalho. Ajuda na conciliação entre vida pessoal e demandas profissionais.',
+  },
 ];
 
-const rewards: string[] = [
-  'Remuneração variável',
-  'Pagamento por produção',
-  'Pagamento por mérito',
-  'Bônus',
-  'Remuneração por habilidades',
-  'Participação nos lucros',
-  'Participação nos resultados',
-  'Benefícios flexíveis',
-  'Reconhecimento',
+const rewards: PanelItem[] = [
+  {
+    title: 'Remuneração variável',
+    description: 'Parte da remuneração muda conforme metas, desempenho ou resultados. Aproxima recompensa e contribuição, mas precisa de critérios transparentes.',
+  },
+  {
+    title: 'Pagamento por produção',
+    description: 'Recompensa a quantidade produzida ou entregue. É útil em atividades mensuráveis, mas pode prejudicar qualidade se for mal desenhado.',
+  },
+  {
+    title: 'Pagamento por mérito',
+    description: 'Aumentos ou recompensas ligados à avaliação de desempenho individual. Depende de avaliação justa, critérios claros e feedback consistente.',
+  },
+  {
+    title: 'Bônus',
+    description: 'Pagamento adicional por alcance de metas, projetos ou resultados excepcionais. Pode ser individual, coletivo ou organizacional.',
+  },
+  {
+    title: 'Remuneração por habilidades',
+    description: 'Valoriza conhecimentos e competências adquiridas, não apenas cargo ocupado. Estimula aprendizagem e versatilidade.',
+  },
+  {
+    title: 'Participação nos lucros',
+    description: 'Distribui parte do lucro da organização. Ajuda a conectar trabalhadores ao desempenho financeiro geral.',
+  },
+  {
+    title: 'Participação nos resultados',
+    description: 'Recompensa metas operacionais ou estratégicas mesmo quando o indicador principal não é lucro, como qualidade, produtividade ou satisfação.',
+  },
+  {
+    title: 'Benefícios flexíveis',
+    description: 'Permitem escolher benefícios mais adequados à realidade de cada pessoa, como alimentação, saúde, educação ou mobilidade.',
+  },
+  {
+    title: 'Reconhecimento',
+    description: 'Valoriza contribuições por elogios, visibilidade, oportunidades ou prêmios simbólicos. Pode motivar muito quando é específico e sincero.',
+  },
 ];
 
 const groupReasons: ConceptItem[] = [
@@ -373,15 +445,365 @@ const communicationNetworks = [
   { criterion: 'Satisfação dos membros', chain: 'Moderada', wheel: 'Baixa', all: 'Alta' },
 ];
 
-const barriers: string[] = [
-  'Filtragem',
-  'Percepção seletiva',
-  'Sobrecarga de informação',
-  'Emoções',
-  'Linguagem',
-  'Silêncio',
-  'Apreensão da comunicação',
-  'Mentira',
+const barriers: PanelItem[] = [
+  {
+    title: 'Filtragem',
+    description: 'Ocorre quando a informação é ajustada ou suavizada antes de chegar ao receptor, geralmente para agradar superiores ou evitar conflito.',
+  },
+  {
+    title: 'Percepção seletiva',
+    description: 'As pessoas tendem a ouvir e interpretar mensagens conforme interesses, experiências e expectativas anteriores.',
+  },
+  {
+    title: 'Sobrecarga de informação',
+    description: 'Quando há mais dados do que a pessoa consegue processar, mensagens importantes podem ser ignoradas, esquecidas ou mal interpretadas.',
+  },
+  {
+    title: 'Emoções',
+    description: 'Raiva, medo, ansiedade ou entusiasmo excessivo mudam a forma como a mensagem é codificada, recebida e interpretada.',
+  },
+  {
+    title: 'Linguagem',
+    description: 'Jargões, termos técnicos, regionalismos e palavras ambíguas podem gerar sentidos diferentes para emissor e receptor.',
+  },
+  {
+    title: 'Silêncio',
+    description: 'A ausência de fala também comunica. Pode indicar medo, falta de confiança, discordância não expressa ou falta de canais seguros.',
+  },
+  {
+    title: 'Apreensão da comunicação',
+    description: 'Algumas pessoas sentem tensão ou medo ao falar, escrever ou se expor, o que reduz participação e clareza da mensagem.',
+  },
+  {
+    title: 'Mentira',
+    description: 'Informação deliberadamente falsa destrói confiança e dificulta decisões. Mesmo pequenas distorções repetidas prejudicam relações de trabalho.',
+  },
+];
+
+const leadershipFoundations: ConceptItem[] = [
+  {
+    title: 'Influenciar uma visão',
+    description: 'Liderança é a capacidade de influenciar um grupo para realizar uma visão ou um conjunto de metas. O foco não é apenas mandar, mas mobilizar pessoas em torno de direção comum.',
+    accent: 'accent',
+  },
+  {
+    title: 'Pode surgir informalmente',
+    description: 'Líderes podem emergir espontaneamente dentro de um grupo, quando ganham confiança e referência, mesmo sem ocupar cargo formal.',
+    accent: 'accent3',
+  },
+  {
+    title: 'Pode vir da estrutura',
+    description: 'A liderança também pode ser atribuída por indicação formal da hierarquia, como quando alguém assume coordenação, chefia ou gerência.',
+    accent: 'accent5',
+  },
+];
+
+const leadershipTraitTheory: ConceptItem[] = [
+  {
+    title: 'Teoria dos traços',
+    description: 'Procura identificar qualidades pessoais associadas à liderança. Os estudos chegaram a muitos traços, mas a convergência mais consistente se aproxima dos cinco grandes fatores da personalidade.',
+    accent: 'accent',
+  },
+  {
+    title: 'Big Five',
+    description: 'Traços como abertura, socialização, consciência, extroversão e estabilidade emocional ajudam a compreender tendências de liderança, mas não garantem sucesso isoladamente.',
+    accent: 'accent2',
+  },
+  {
+    title: 'Inteligência emocional',
+    description: 'Formação, análise e visão não bastam se o líder não entende emoções próprias e alheias. A empatia é destacada como componente central da liderança eficaz.',
+    accent: 'accent3',
+  },
+];
+
+const behavioralLeadership: PanelItem[] = [
+  {
+    title: 'Comportamento orientado à tarefa',
+    description: 'O líder distribui tarefas, organiza o trabalho, acompanha desempenho, cobra prazos e direciona o grupo para a realização das atividades.',
+  },
+  {
+    title: 'Comportamento orientado às pessoas',
+    description: 'O líder demonstra interesse pelas necessidades dos funcionários, aceita diferenças, ajuda em problemas pessoais, é amigável e acessível.',
+  },
+  {
+    title: 'Comportamentos podem ser aprendidos',
+    description: 'Diferente da visão puramente baseada em traços, as teorias comportamentais sugerem que práticas de liderança podem ser desenvolvidas por treinamento e experiência.',
+  },
+];
+
+const contingencyLeadership: PanelItem[] = [
+  {
+    title: 'Modelo de Fiedler',
+    description: 'A eficácia depende do encaixe entre o estilo básico do líder e o grau de controle que a situação oferece. Nem todo estilo funciona igualmente bem em toda situação.',
+  },
+  {
+    title: 'Teoria da liderança situacional',
+    description: 'O líder eficaz adapta seu comportamento ao nível de maturidade, preparo ou sofisticação dos subordinados. A situação define o tipo de direção e apoio necessários.',
+  },
+  {
+    title: 'Teoria caminho-meta',
+    description: 'Robert House defende que o líder deve esclarecer o caminho até os objetivos, reduzir obstáculos e aumentar a motivação para metas individuais e organizacionais.',
+  },
+  {
+    title: 'Modelo de participação do líder',
+    description: 'Vroom e Yetton relacionam liderança e participação no processo decisório, indicando quanta participação deve existir conforme a situação.',
+  },
+];
+
+const fiedlerDimensions: PanelItem[] = [
+  {
+    title: 'Relação líder-membro',
+    description: 'Grau de segurança, confiança e respeito que os membros têm pelo líder.',
+  },
+  {
+    title: 'Estrutura da tarefa',
+    description: 'Grau em que as atribuições de trabalho são claras, estruturadas e previsíveis.',
+  },
+  {
+    title: 'Poder de posição',
+    description: 'Grau de influência formal do líder sobre contratações, demissões, disciplina, recompensas e decisões organizacionais.',
+  },
+];
+
+const pathGoalBehaviors: ConceptItem[] = [
+  {
+    title: 'Apoiador',
+    description: 'É amigável, acessível e atento às necessidades dos subordinados, reduzindo tensão e melhorando o clima de trabalho.',
+    accent: 'accent',
+  },
+  {
+    title: 'Diretivo',
+    description: 'Organiza o trabalho, define direção e fornece instruções sobre como executar as tarefas.',
+    accent: 'accent2',
+  },
+  {
+    title: 'Participativo',
+    description: 'Usa sugestões dos subordinados nas decisões, aumentando envolvimento e qualidade das escolhas.',
+    accent: 'accent3',
+  },
+  {
+    title: 'Orientado para realizações',
+    description: 'Apresenta metas desafiadoras e estimula o melhor desempenho possível.',
+    accent: 'accent5',
+  },
+];
+
+const contemporaryLeadership: PanelItem[] = [
+  {
+    title: 'Liderança carismática',
+    description: 'Os seguidores atribuem ao líder capacidades heroicas ou extraordinárias quando observam visão, disposição para correr riscos, sensibilidade ao ambiente e atenção às necessidades dos liderados.',
+  },
+  {
+    title: 'Como o carisma influencia seguidores',
+    description: 'O líder tem uma visão, declara essa visão, transmite valores a serem imitados e demonstra coragem e convicção por comportamentos que despertam emoção.',
+  },
+  {
+    title: 'Liderança transformacional',
+    description: 'Incentiva, inspira e motiva pessoas a inovar e criar mudanças que ajudam a organização a crescer e moldar seu futuro.',
+  },
+  {
+    title: 'Liderança autêntica',
+    description: 'Líderes autênticos sabem quem são, conhecem seus valores e agem de modo aberto e franco. A principal consequência é a confiança dos seguidores.',
+  },
+];
+
+const leadershipEthics: PanelItem[] = [
+  {
+    title: 'Ética e liderança',
+    description: 'Fazer as coisas de maneira ética, usar o poder para servir aos outros, falar de forma honesta e dar um tom moral elevado à organização.',
+  },
+  {
+    title: 'Confiança e liderança',
+    description: 'A confiança encoraja riscos, facilita compartilhamento de informações, aumenta eficácia dos grupos e contribui para a produtividade.',
+  },
+];
+
+const conflictSources: ConceptItem[] = [
+  {
+    title: 'Objetivos incompatíveis',
+    description: 'Áreas, pessoas ou equipes podem buscar metas que competem entre si, como reduzir custos enquanto outra parte precisa elevar qualidade ou prazo.',
+    accent: 'accent',
+  },
+  {
+    title: 'Interpretações diferentes',
+    description: 'As partes podem discordar porque leem os mesmos fatos de formas distintas, influenciadas por experiência, informação incompleta ou interesses diferentes.',
+    accent: 'accent3',
+  },
+  {
+    title: 'Expectativas comportamentais',
+    description: 'Conflitos também surgem quando uma pessoa espera determinada postura, ritmo, transparência ou responsabilidade e a outra age de modo diferente.',
+    accent: 'accent5',
+  },
+];
+
+const conflictViews: PanelItem[] = [
+  {
+    title: 'Visão tradicional',
+    description: 'Enxerga o conflito como negativo, algo a ser evitado, geralmente associado a má comunicação, falta de transparência, pouca confiança e falhas gerenciais.',
+  },
+  {
+    title: 'Visão interacionista',
+    description: 'Defende que algum nível de conflito pode ser positivo, pois grupos excessivamente harmoniosos podem se tornar apáticos. Diferencia conflito funcional e disfuncional.',
+  },
+  {
+    title: 'Visão centrada na resolução',
+    description: 'Reconhece que o conflito é inevitável, mas alerta que ele pode roubar tempo, gerar mágoas e transformar divergências de tarefa em conflitos de relacionamento.',
+  },
+];
+
+const conflictTypes: ConceptItem[] = [
+  {
+    title: 'Conflito de tarefa',
+    description: 'Diz respeito ao conteúdo e aos objetivos do trabalho. Pode ser produtivo quando melhora análise, decisões e criatividade.',
+    accent: 'accent',
+  },
+  {
+    title: 'Conflito de relacionamento',
+    description: 'Envolve relações interpessoais, atritos pessoais, emoções negativas e desconfiança. Costuma prejudicar desempenho e clima.',
+    accent: 'accent2',
+  },
+  {
+    title: 'Conflito de processo',
+    description: 'Refere-se a como o trabalho será feito, quem faz o quê, quais métodos serão usados e como recursos serão distribuídos.',
+    accent: 'accent3',
+  },
+];
+
+const conflictProcess: PanelItem[] = [
+  {
+    title: '1. Oposição potencial',
+    description: 'Condições antecedentes criam possibilidade de conflito: comunicação ruim, estrutura do grupo, especialização, estilos de liderança, recompensas e variáveis pessoais.',
+  },
+  {
+    title: '2. Cognição e personalização',
+    description: 'O conflito pode ser percebido racionalmente ou sentido emocionalmente, quando já afeta as partes de forma consciente.',
+  },
+  {
+    title: '3. Intenções',
+    description: 'As partes escolhem uma postura: competir, colaborar, evitar, acomodar ou buscar compromisso.',
+  },
+  {
+    title: '4. Comportamento',
+    description: 'Aparecem declarações, ações e reações, desde mal-entendidos leves até ataques verbais, ameaças ou agressões.',
+  },
+  {
+    title: '5. Resultados',
+    description: 'O conflito pode gerar resultados funcionais, como melhores decisões e inovação, ou disfuncionais, como descontentamento e destruição de laços da equipe.',
+  },
+];
+
+const conflictStyles: ConceptItem[] = [
+  {
+    title: 'Competição',
+    description: 'Alta assertividade e baixa cooperação. Útil quando é necessária ação rápida e decisiva, mas pode gerar ressentimento se usada em excesso.',
+    accent: 'accent2',
+  },
+  {
+    title: 'Colaboração',
+    description: 'Alta assertividade e alta cooperação. Busca solução integrativa, mescla ideias e tenta satisfazer necessidades importantes de todas as partes.',
+    accent: 'accent3',
+  },
+  {
+    title: 'Evitação',
+    description: 'Baixa assertividade e baixa cooperação. Pode ser adequada quando o problema é trivial ou há questões mais urgentes, mas não resolve conflitos importantes.',
+    accent: 'accent4',
+  },
+  {
+    title: 'Acomodação',
+    description: 'Baixa assertividade e alta cooperação. Serve quando a pessoa percebe que está errada, quer aprender ou deseja preservar o relacionamento.',
+    accent: 'accent5',
+  },
+  {
+    title: 'Compromisso',
+    description: 'Combina assertividade e cooperação em nível intermediário. Busca uma solução aceitável quando as metas importam, mas não justificam ruptura.',
+    accent: 'accent',
+  },
+];
+
+const pmbokConflictTechniques: PanelItem[] = [
+  {
+    title: 'Retirar ou evitar',
+    description: 'Recuar, postergar a entrada no conflito ou deixar a resolução para outro momento ou outra pessoa.',
+  },
+  {
+    title: 'Suavizar ou acomodar',
+    description: 'Enfatizar áreas de acordo e reduzir destaque das diferenças, preservando relação no curto prazo.',
+  },
+  {
+    title: 'Ceder ou conciliar',
+    description: 'Encontrar uma solução que traga alguma satisfação para os envolvidos, ainda que ninguém obtenha tudo o que queria.',
+  },
+  {
+    title: 'Forçar ou direcionar',
+    description: 'Impor um ponto de vista em detrimento dos outros. É uma abordagem ganha-perde.',
+  },
+  {
+    title: 'Colaborar ou resolver o problema',
+    description: 'Incorporar diversos pontos de vista por troca e diálogo, buscando consenso, compromisso e resultado ganha-ganha.',
+  },
+];
+
+const negotiationTypes: ConceptItem[] = [
+  {
+    title: 'Negociação distributiva',
+    description: 'As partes competem pela distribuição de um valor fixo. A lógica é ganha-perde: um lado obtém mais vantagem à custa do outro.',
+    accent: 'accent2',
+  },
+  {
+    title: 'Negociação integrativa',
+    description: 'As partes cooperam para criar valor e buscar ganhos mútuos. O foco é satisfazer interesses dos dois lados e preservar relações duradouras.',
+    accent: 'accent3',
+  },
+];
+
+const negotiationComparison = [
+  { criterion: 'Meta', distributive: 'Obter a maior fatia possível', integrative: 'Expandir o bolo para satisfazer ambas as partes' },
+  { criterion: 'Motivação', distributive: 'Ganhar-perder', integrative: 'Ganhos mútuos' },
+  { criterion: 'Foco', distributive: 'Posições e limites fixos', integrative: 'Interesses e razões por trás das posições' },
+  { criterion: 'Informações', distributive: 'Baixo compartilhamento', integrative: 'Alto compartilhamento para encontrar soluções' },
+  { criterion: 'Relacionamento', distributive: 'Curto prazo', integrative: 'Longo prazo' },
+];
+
+const negotiationProcess: PanelItem[] = [
+  {
+    title: '1. Preparação e planejamento',
+    description: 'Entender a natureza do conflito, histórico, envolvidos, percepções, interesses, limites e objetivos antes da conversa.',
+  },
+  {
+    title: '2. Definição de regras básicas',
+    description: 'Definir quem negocia, onde, com quais restrições de tempo e quais limites ou procedimentos serão respeitados.',
+  },
+  {
+    title: '3. Esclarecimento e justificativa',
+    description: 'As partes explicam, ampliam, reforçam e justificam suas demandas iniciais, tornando interesses e argumentos mais claros.',
+  },
+  {
+    title: '4. Barganha e resolução de problemas',
+    description: 'Momento de dar e receber, propor alternativas e ajustar posições na tentativa de construir acordo.',
+  },
+  {
+    title: '5. Encerramento e implementação',
+    description: 'Formaliza o acordo e define procedimentos para executar o que foi combinado.',
+  },
+];
+
+const negotiationIndividualDifferences: PanelItem[] = [
+  {
+    title: 'Traços de personalidade',
+    description: 'Pessoas mais agradáveis tendem a se aproximar da negociação integrativa, enquanto perfis mais duros podem favorecer táticas distributivas.',
+  },
+  {
+    title: 'Humor e emoções',
+    description: 'Na distributiva, raiva pode aumentar dureza. Na integrativa, emoções positivas tendem a melhorar cooperação e resultados.',
+  },
+  {
+    title: 'Cultura',
+    description: 'Há diferenças culturais nos estilos, mas algumas táticas de negociação produzem bons resultados em vários contextos.',
+  },
+  {
+    title: 'Gênero',
+    description: 'Expectativas sociais podem penalizar comportamentos percebidos como fora do padrão, especialmente quando mulheres negociam de forma mais assertiva.',
+  },
 ];
 
 function SectionHeader({ title, subtitle, colorClass }: SectionHeaderProps) {
@@ -410,19 +832,6 @@ function PanelList({ items }: { items: PanelItem[] }) {
         <div key={item.title} className="bg-card border border-border rounded-xl px-5 py-4">
           <h3 className="font-semibold text-sm md:text-base text-text mb-0.5">{item.title}</h3>
           <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function PillGrid({ items }: { items: string[] }) {
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-      {items.map((item, index) => (
-        <div key={item} className="bg-card border border-border rounded-xl px-5 py-3.5 flex items-center gap-3">
-          <span className="text-accent text-xs font-bold tabular-nums w-6 flex-shrink-0">{String(index + 1).padStart(2, '0')}</span>
-          <span className="text-sm text-text">{item}</span>
         </div>
       ))}
     </div>
@@ -547,7 +956,7 @@ function AttitudesSection() {
 
       <div>
         <h3 className="font-display font-bold text-xl text-accent5 mb-3">Como manter pessoas satisfeitas</h3>
-        <PillGrid items={satisfactionLevers} />
+        <PanelList items={satisfactionLevers} />
       </div>
     </section>
   );
@@ -627,7 +1036,7 @@ function MotivationSection() {
         <p className="text-text-muted text-sm md:text-base mb-3 max-w-3xl">
           Engajamento é o investimento de energias física, cognitiva e emocional no desempenho. Pessoas engajadas sentem propósito e vão além do esperado.
         </p>
-        <PillGrid items={engagementActions} />
+        <PanelList items={engagementActions} />
       </div>
     </section>
   );
@@ -679,12 +1088,12 @@ function ApplicationsSection() {
 
       <div>
         <h3 className="font-display font-bold text-xl text-accent4 mb-3">Como redesenhar trabalhos</h3>
-        <PillGrid items={workRedesign} />
+        <PanelList items={workRedesign} />
       </div>
 
       <div>
         <h3 className="font-display font-bold text-xl text-accent5 mb-3">Recompensas e benefícios</h3>
-        <PillGrid items={rewards} />
+        <PanelList items={rewards} />
       </div>
     </section>
   );
@@ -767,8 +1176,167 @@ function CommunicationSection() {
 
       <div>
         <h3 className="font-display font-bold text-xl text-accent4 mb-3">Barreiras à comunicação eficaz</h3>
-        <PillGrid items={barriers} />
+        <PanelList items={barriers} />
       </div>
+    </section>
+  );
+}
+
+function LeadershipSection() {
+  return (
+    <section className="animate-fade-in space-y-6">
+      <SectionHeader title="Liderança" subtitle="Influenciar pessoas, adaptar comportamentos e construir confiança para alcançar metas coletivas" colorClass="text-accent" />
+      <HighlightBox title="O que é liderança?">
+        <p>
+          Liderança é a capacidade de <strong>influenciar um grupo</strong> para a realização de uma visão ou conjunto de metas. Ela pode surgir de modo informal dentro do grupo ou por indicação formal na estrutura hierárquica.
+        </p>
+      </HighlightBox>
+
+      <ConceptGrid items={leadershipFoundations} columns="md:grid-cols-3" />
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent2 mb-3">Teoria dos traços</h3>
+        <ConceptGrid items={leadershipTraitTheory} columns="md:grid-cols-3" />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent3 mb-3">Teorias comportamentais</h3>
+        <p className="text-text-muted text-sm md:text-base mb-3 max-w-3xl">
+          Em vez de perguntar apenas quais traços o líder possui, essas teorias perguntam o que a pessoa faz quando lidera.
+        </p>
+        <PanelList items={behavioralLeadership} />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent5 mb-3">Teorias das contingências</h3>
+        <PanelList items={contingencyLeadership} />
+      </div>
+
+      <div className="study-surface p-5 md:p-6">
+        <h3 className="font-display font-bold text-2xl text-accent mb-3">Modelo de Fiedler</h3>
+        <p className="text-text-muted text-sm md:text-base mb-4 leading-relaxed">
+          O desempenho eficaz do grupo depende da correspondência entre o estilo básico do líder e o controle que a situação oferece.
+        </p>
+        <PanelList items={fiedlerDimensions} />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent4 mb-3">Teoria caminho-meta</h3>
+        <p className="text-text-muted text-sm md:text-base mb-3 max-w-3xl">
+          O líder ajuda o grupo a enxergar o caminho até os objetivos, remove barreiras e ajusta seu comportamento ao que a situação exige.
+        </p>
+        <ConceptGrid items={pathGoalBehaviors} columns="md:grid-cols-2 lg:grid-cols-4" />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent2 mb-3">Liderança carismática, transformacional e autêntica</h3>
+        <PanelList items={contemporaryLeadership} />
+      </div>
+
+      <HighlightBox title="Ética, confiança e liderança servil" accent="var(--color-accent5)">
+        <p>
+          O material reforça que liderança também envolve responsabilidade moral: agir de forma ética, usar o poder para servir, falar com honestidade e produzir confiança.
+        </p>
+      </HighlightBox>
+
+      <PanelList items={leadershipEthics} />
+    </section>
+  );
+}
+
+function ConflictNegotiationSection() {
+  return (
+    <section className="animate-fade-in space-y-6">
+      <SectionHeader title="Conflito e Negociação" subtitle="Como conflitos surgem, evoluem e podem ser tratados por gestão e negociação" colorClass="text-accent2" />
+      <HighlightBox title="O que é conflito?">
+        <p>
+          Conflito é um processo que começa quando uma parte percebe que outra parte tem ou está prestes a afetar negativamente algo que interessa à primeira.
+        </p>
+        <p>
+          O conflito é parte inerente da vida organizacional. Algum nível de conflito pode ser necessário para evitar apatia e melhorar decisões, desde que seja gerenciado.
+        </p>
+      </HighlightBox>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent mb-3">O que gera conflitos?</h3>
+        <ConceptGrid items={conflictSources} columns="md:grid-cols-3" />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent3 mb-3">Transições na noção de conflito</h3>
+        <PanelList items={conflictViews} />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent5 mb-3">Tipos de conflito</h3>
+        <ConceptGrid items={conflictTypes} columns="md:grid-cols-3" />
+      </div>
+
+      <div className="study-surface p-5 md:p-6">
+        <h3 className="font-display font-bold text-2xl text-accent4 mb-3">Processo de conflito</h3>
+        <FlowDiagram items={['Oposição', 'Percepção', 'Intenções', 'Comportamento', 'Resultados']} />
+        <div className="mt-4">
+          <PanelList items={conflictProcess} />
+        </div>
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent2 mb-3">Cinco estilos de gestão de conflitos</h3>
+        <p className="text-text-muted text-sm md:text-base mb-3 max-w-3xl">
+          Os estilos combinam dois eixos: assertividade, que é o quanto a parte busca satisfazer seus próprios interesses, e cooperação, que é o quanto considera os interesses da outra parte.
+        </p>
+        <ConceptGrid items={conflictStyles} columns="md:grid-cols-2 lg:grid-cols-3" />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent4 mb-3">Técnicas de gerenciamento citadas no PMBOK</h3>
+        <PanelList items={pmbokConflictTechniques} />
+      </div>
+
+      <HighlightBox title="O que é negociação?" accent="var(--color-accent3)">
+        <p>
+          Negociação é um processo de comunicação interativo em que duas ou mais partes buscam acordo para alocar recursos escassos e atender a seus interesses.
+        </p>
+      </HighlightBox>
+
+      <ConceptGrid items={negotiationTypes} />
+
+      <div className="overflow-x-auto study-surface">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="text-left py-3 px-4 font-semibold text-text-muted uppercase tracking-wider text-xs">Característica</th>
+              <th className="text-left py-3 px-4 font-semibold text-text-muted uppercase tracking-wider text-xs">Distributiva</th>
+              <th className="text-left py-3 px-4 font-semibold text-text-muted uppercase tracking-wider text-xs">Integrativa</th>
+            </tr>
+          </thead>
+          <tbody>
+            {negotiationComparison.map(row => (
+              <tr key={row.criterion} className="border-b border-border/50">
+                <td className="py-3 px-4 font-semibold text-text">{row.criterion}</td>
+                <td className="py-3 px-4 text-text-muted">{row.distributive}</td>
+                <td className="py-3 px-4 text-text-muted">{row.integrative}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent5 mb-3">Processo de negociação</h3>
+        <PanelList items={negotiationProcess} />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent mb-3">Diferenças individuais na eficácia da negociação</h3>
+        <PanelList items={negotiationIndividualDifferences} />
+      </div>
+
+      <HighlightBox title="Orientação prática aos gestores">
+        <p>
+          Use competitividade em emergências, colaboração para soluções integrativas, evitação em problemas triviais, acomodação quando for preciso aprender ou preservar relações e compromisso quando as metas importam, mas não justificam ruptura.
+        </p>
+      </HighlightBox>
     </section>
   );
 }
@@ -822,6 +1390,10 @@ export default function ComportamentoOrganizacionalSections({ activeSection }: C
       return <GroupsSection />;
     case 'comunicacao':
       return <CommunicationSection />;
+    case 'lideranca':
+      return <LeadershipSection />;
+    case 'conflito':
+      return <ConflictNegotiationSection />;
     case 'quiz':
       return <QuizSection />;
     case 'iaquiz':
