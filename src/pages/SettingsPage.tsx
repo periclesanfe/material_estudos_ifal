@@ -51,8 +51,11 @@ export default function SettingsPage() {
                   type={showKey ? 'text' : 'password'}
                   value={keyValue}
                   onChange={(e) => setKeyValue(e.target.value)}
-                  placeholder="Cole aqui seu token"
-                  className="w-full bg-bg border border-border rounded-lg px-3 py-2.5 text-text placeholder-text-muted/40 focus:outline-none focus:border-accent transition-colors font-mono text-sm"
+                  name="gemini-api-key"
+                  autoComplete="off"
+                  spellCheck={false}
+                  placeholder="Cole aqui seu token…"
+                  className="w-full bg-bg border border-border rounded-lg px-3 py-2.5 text-text placeholder-text-muted/40 focus:outline-none focus:border-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg transition-colors font-mono text-sm"
                 />
                 <button
                   onClick={() => setShowKey(!showKey)}
@@ -75,7 +78,7 @@ export default function SettingsPage() {
               {hasApiKey() && (
                 <button
                   onClick={handleRemove}
-                  className="px-5 py-2.5 border border-accent2/40 text-accent2 rounded-lg font-semibold text-sm hover:-translate-y-0.5 transition-all duration-200"
+                  className="px-5 py-2.5 border border-accent2/40 text-accent2 rounded-lg font-semibold text-sm hover:-translate-y-0.5 transition-transform duration-200"
                 >
                   Remover
                 </button>
@@ -93,8 +96,8 @@ export default function SettingsPage() {
 
           <div className="mt-6 pt-5 border-t border-border">
             <p className="text-text-muted text-sm leading-relaxed">
-              <strong className="text-text">Privacidade:</strong> seu token é armazenado exclusivamente no seu navegador (localStorage)
-              e nunca é enviado para servidores do projeto.
+              <strong className="text-text">Privacidade:</strong> seu token fica apenas nesta sessão do navegador
+              e nunca é enviado para servidores do projeto. Ao fechar a aba ou o navegador, informe a chave novamente.
             </p>
           </div>
         </section>

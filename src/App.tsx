@@ -6,7 +6,7 @@ import SettingsPage from './pages/SettingsPage';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Sidebar />
       <main className="main-surface flex-1 overflow-y-auto min-h-screen pt-14 lg:pt-0">
         <Routes>

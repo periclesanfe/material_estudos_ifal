@@ -40,7 +40,7 @@ export default function HomePage() {
         </div>
         <div className="w-full h-1.5 bg-border rounded-full overflow-hidden">
           <div
-            className="h-full rounded-full transition-all duration-700 ease-out"
+            className="h-full rounded-full transition-[width] duration-700 ease-out"
             style={{
               width: `${Math.max(progressPercent, 2)}%`,
               background: 'linear-gradient(90deg, var(--color-accent), var(--color-accent3))',

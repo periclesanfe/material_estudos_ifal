@@ -34,6 +34,17 @@ npm run dev
 
 A aplicação estará disponível em `http://localhost:5173`
 
+## Deploy no GitHub Pages
+
+O projeto já está configurado para GitHub Pages via GitHub Actions.
+
+1. No GitHub, acesse **Settings → Pages**
+2. Em **Build and deployment**, selecione **GitHub Actions**
+3. Faça merge de um Pull Request na branch `main` ou execute o workflow manualmente
+4. O workflow **Deploy to GitHub Pages** irá gerar o `dist/` e publicar o site
+
+Como este repositório é publicado em `https://periclesanfe.github.io/material_estudos_ifal/`, o Vite usa `base: '/material_estudos_ifal/'` em produção. O projeto também inclui fallback de SPA para rotas como `/materia/comportamento-organizacional` funcionarem ao abrir ou recarregar diretamente.
+
 ## Quiz com IA
 
 O quiz com IA utiliza a API do **Google Gemini**. Para usar:
@@ -42,7 +53,7 @@ O quiz com IA utiliza a API do **Google Gemini**. Para usar:
 2. Na aplicação, vá em **Configurações**
 3. Cole sua API key e clique em **Salvar**
 
-> Sua chave é armazenada **apenas no seu navegador** (localStorage). Nunca é enviada para nossos servidores.
+> Privacidade: a chave fica somente na **sessão da aba do navegador** (`sessionStorage`). Ela não é salva no GitHub Pages, não é enviada a servidores do projeto e é repassada diretamente do navegador do usuário para a API do Gemini via header `x-goog-api-key`.
 
 ## Estrutura do Projeto
 

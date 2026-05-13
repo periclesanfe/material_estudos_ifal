@@ -7,7 +7,7 @@ export default function MarketingContent() {
 
   return (
     <div>
-      <div className="relative min-h-[52vh] flex flex-col items-center justify-center text-center px-6 py-14 md:py-16 overflow-hidden">
+      <div className="relative min-h-[38vh] md:min-h-[42vh] flex flex-col items-center justify-center text-center px-6 py-12 md:py-14 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none opacity-50">
           <div
             className="absolute inset-0"
@@ -19,7 +19,7 @@ export default function MarketingContent() {
         </div>
 
         <p className="text-text-muted text-[11px] font-semibold tracking-[0.2em] uppercase relative z-10 mb-4">Optativa · Gestão de TI · 80h</p>
-        <h1 className="font-display font-black text-4xl md:text-6xl text-text relative z-10 mb-3 leading-[1.06] tracking-tight">
+        <h1 className="font-display font-black text-4xl md:text-5xl lg:text-6xl text-text relative z-10 mb-3 leading-[1.06] tracking-tight">
           Marketing &<br /><span className="gradient-text">Comércio Eletrônico</span>
         </h1>
         <p className="text-text-muted text-sm md:text-base relative z-10 max-w-2xl">
@@ -28,7 +28,7 @@ export default function MarketingContent() {
       </div>
 
       <div className="page-wrap">
-        <nav className="sticky top-2 z-40 glass border border-border rounded-xl px-3 py-2.5 flex gap-1.5 overflow-x-auto whitespace-nowrap">
+        <nav className="sticky top-2 z-40 glass border border-border rounded-xl px-3 py-3 flex gap-2 overflow-x-auto whitespace-nowrap">
           {MARKETING_SECTIONS.map(section => (
             <button
               key={section.id}
@@ -41,7 +41,7 @@ export default function MarketingContent() {
         </nav>
       </div>
 
-      <div className="page-wrap pt-8 md:pt-10 pb-20">
+      <div className="page-wrap pt-10 md:pt-12 pb-20">
         <MarketingSections activeSection={activeSection} />
       </div>
     </div>

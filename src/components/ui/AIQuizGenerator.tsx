@@ -60,7 +60,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
           <select
             value={selectedTopic}
             onChange={e => setSelectedTopic(e.target.value)}
-            className="w-full bg-bg text-text border border-border rounded-lg px-3 py-2.5 text-sm cursor-pointer focus:outline-none focus:border-accent"
+            className="w-full bg-bg text-text border border-border rounded-lg px-3 py-2.5 text-sm cursor-pointer focus:outline-none focus:border-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
           >
             <option value="aleatorio">Aleatório</option>
             {topics.map(t => (
@@ -73,7 +73,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
           <select
             value={selectedDifficulty}
             onChange={e => setSelectedDifficulty(e.target.value)}
-            className="w-full bg-bg text-text border border-border rounded-lg px-3 py-2.5 text-sm cursor-pointer focus:outline-none focus:border-accent"
+            className="w-full bg-bg text-text border border-border rounded-lg px-3 py-2.5 text-sm cursor-pointer focus:outline-none focus:border-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
           >
             <option value="mista">Mista</option>
             <option value="facil">Fácil</option>
@@ -86,7 +86,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
           disabled={loading}
           className="btn-primary px-5 py-2.5 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {loading ? 'Gerando...' : 'Gerar Pergunta'}
+          {loading ? 'Gerando…' : 'Gerar Pergunta'}
         </button>
       </div>
 
@@ -107,7 +107,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
         <div className="flex-1">
           <div className="w-full h-1 bg-border rounded-full overflow-hidden">
             <div
-              className="h-full rounded-full transition-all duration-500"
+            className="h-full rounded-full transition-[width] duration-500"
               style={{ width: `${progressPct}%`, background: 'var(--color-accent5)' }}
             />
           </div>
@@ -121,7 +121,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
       {loading && (
         <div className="text-center py-10">
           <div className="w-8 h-8 border-2 border-border border-t-accent rounded-full animate-spin mx-auto" />
-          <p className="text-text-muted mt-3 text-sm">Consultando a IA...</p>
+          <p className="text-text-muted mt-3 text-sm">Consultando a IA…</p>
         </div>
       )}
 
@@ -148,7 +148,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
 
           <div className="flex flex-col gap-1.5">
             {question.alternativas.map((alt, i) => {
-              let classes = 'w-full text-left quiz-option-base px-4 py-3 text-sm md:text-base transition-all duration-200';
+              let classes = 'w-full text-left quiz-option-base px-4 py-3 text-sm md:text-base transition-colors duration-200';
 
               if (answered) {
                 if (i === question.respostaCorreta) {

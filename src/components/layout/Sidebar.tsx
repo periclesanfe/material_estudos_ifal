@@ -1,17 +1,43 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { getPeriods } from '../../data/curriculum';
 import SidebarOptativesSection from './sidebar/SidebarOptativesSection';
 import SidebarPeriodsSection from './sidebar/SidebarPeriodsSection';
+
+const THEME_STORAGE_KEY = 'ifal_bsi_theme';
+
+type Theme = 'dark' | 'light';
+
+function getInitialTheme(): Theme {
+  try {
+    const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    if (storedTheme === 'dark' || storedTheme === 'light') return storedTheme;
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  } catch {
+    return 'dark';
+  }
+}
 
 export default function Sidebar() {
   const [collapsed, setCollapsed] = useState(false);
   const [expandedPeriods, setExpandedPeriods] = useState<Set<string>>(new Set());
   const [expandedOptCategories, setExpandedOptCategories] = useState<Set<string>>(new Set());
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
   const location = useLocation();
   const periods = getPeriods();
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch {
+      // A preferência visual é opcional; se o navegador bloquear, o app segue funcionando.
+    }
+  }, [theme]);
 
   const togglePeriod = (key: string) => {
     setExpandedPeriods(prev => {
@@ -38,12 +64,13 @@ export default function Sidebar() {
   };
 
   const handleNavigate = () => setMobileOpen(false);
+  const nextTheme = theme === 'dark' ? 'light' : 'dark';
 
   const mainNavItem = ({ isActive }: { isActive: boolean }) =>
-    `flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+    `flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
       isActive
         ? 'bg-accent/20 text-text border border-accent/30 shadow-[0_6px_16px_rgba(108,99,255,0.2)]'
-        : 'text-text-muted hover:text-text hover:bg-white/[0.04]'
+        : 'text-text-muted hover:text-text hover:bg-card-hover'
     }`;
 
   const sidebarContent = (
@@ -51,7 +78,7 @@ export default function Sidebar() {
       <NavLink
         to="/"
         onClick={handleNavigate}
-        className="block px-4 pt-5 pb-4 border-b border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0)_100%)]"
+        className="sidebar-brand block px-4 pt-5 pb-4 border-b border-border"
       >
         <p className="text-[10px] text-text-muted tracking-[0.22em] uppercase">IFAL BSI</p>
         <h1 className="font-display font-bold text-[1.95rem] text-text leading-[1.02] tracking-tight mt-1.5">
@@ -85,7 +112,18 @@ export default function Sidebar() {
         />
       </nav>
 
-      <div className="border-t border-white/10 p-3">
+      <div className="border-t border-border p-3 space-y-2">
+        <button
+          type="button"
+          onClick={() => setTheme(nextTheme)}
+          aria-pressed={theme === 'light'}
+          className="w-full flex items-center justify-between rounded-lg border border-border bg-card px-3 py-2 text-sm font-semibold text-text-muted hover:bg-card-hover hover:text-text transition-colors duration-200"
+        >
+          <span>Tema</span>
+          <span className="text-[11px] uppercase tracking-[0.14em] text-accent">
+            {theme === 'dark' ? 'Escuro' : 'Claro'}
+          </span>
+        </button>
         <NavLink to="/configuracoes" onClick={handleNavigate} className={mainNavItem}>
           Configurações
         </NavLink>
@@ -97,22 +135,22 @@ export default function Sidebar() {
     <>
       <button
         onClick={() => setMobileOpen(!mobileOpen)}
-        className="lg:hidden fixed top-4 left-4 z-50 bg-card/90 border border-white/10 rounded-xl p-2.5 shadow-lg backdrop-blur transition-all duration-200 hover:bg-card"
+        className="lg:hidden fixed top-4 left-4 z-50 bg-card/90 border border-border rounded-xl p-2.5 shadow-lg backdrop-blur transition-colors duration-200 hover:bg-card-hover"
         aria-label="Menu"
       >
         <div className="w-5 h-5 flex flex-col justify-center gap-1">
-          <span className={`block h-0.5 bg-text rounded transition-all duration-200 ${mobileOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
-          <span className={`block h-0.5 bg-text rounded transition-all duration-200 ${mobileOpen ? 'opacity-0' : ''}`} />
-          <span className={`block h-0.5 bg-text rounded transition-all duration-200 ${mobileOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+          <span className={`block h-0.5 bg-text rounded transition-transform duration-200 ${mobileOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
+          <span className={`block h-0.5 bg-text rounded transition-opacity duration-200 ${mobileOpen ? 'opacity-0' : ''}`} />
+          <span className={`block h-0.5 bg-text rounded transition-transform duration-200 ${mobileOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
         </div>
       </button>
 
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 bg-black/70 z-40 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
+        <div className="lg:hidden fixed inset-0 bg-black/60 z-40 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
       )}
 
       <aside
-        className={`sidebar-surface hidden lg:flex flex-col border-r border-white/10 ${collapsed ? 'w-[4.5rem]' : 'w-[17rem]'} transition-all duration-300 flex-shrink-0`}
+        className={`sidebar-surface hidden lg:flex flex-col border-r border-border ${collapsed ? 'w-[4.5rem]' : 'w-[18rem]'} transition-[width] duration-300 flex-shrink-0`}
       >
         {!collapsed && sidebarContent}
         {collapsed && (
@@ -123,7 +161,7 @@ export default function Sidebar() {
         )}
         <button
           onClick={() => setCollapsed(!collapsed)}
-          className="hidden lg:flex items-center justify-center h-10 text-text-muted hover:text-text border-t border-white/10 transition-colors"
+          className="hidden lg:flex items-center justify-center h-10 text-text-muted hover:text-text border-t border-border transition-colors"
           aria-label={collapsed ? 'Expandir' : 'Colapsar'}
         >
           <svg className={`w-4 h-4 transition-transform duration-200 ${collapsed ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -133,7 +171,7 @@ export default function Sidebar() {
       </aside>
 
       <aside
-        className={`sidebar-surface-mobile lg:hidden fixed top-0 left-0 h-full w-[17rem] border-r border-white/10 z-50 transition-transform duration-300 ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        className={`sidebar-surface-mobile lg:hidden fixed top-0 left-0 h-full w-[18rem] border-r border-border z-50 transition-transform duration-300 ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
         {sidebarContent}
       </aside>

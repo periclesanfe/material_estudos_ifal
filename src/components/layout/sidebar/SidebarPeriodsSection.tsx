@@ -29,10 +29,10 @@ export default function SidebarPeriodsSection({
             <div key={key}>
               <button
                 onClick={() => onTogglePeriod(key)}
-                className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
                   hasActiveChild
                     ? 'text-text bg-accent/15 border border-accent/20'
-                    : 'text-text-muted hover:text-text hover:bg-white/[0.04]'
+                    : 'text-text-muted hover:text-text hover:bg-card-hover'
                 }`}
               >
                 <span>{period.label}</span>
@@ -51,7 +51,7 @@ export default function SidebarPeriodsSection({
               </button>
 
               {isExpanded && (
-                <div className="ml-3 pl-3 border-l border-white/10 space-y-0.5 mt-1.5 animate-fade-in">
+                <div className="ml-3 pl-3 border-l border-border space-y-0.5 mt-1.5 animate-fade-in">
                   {period.subjects.map(subject => (
                     <SidebarSubjectLink key={subject.id} subject={subject} onNavigate={onNavigate} />
                   ))}

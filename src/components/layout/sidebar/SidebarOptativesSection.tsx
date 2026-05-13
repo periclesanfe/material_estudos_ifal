@@ -22,10 +22,10 @@ export default function SidebarOptativesSection({
 
       <button
         onClick={() => onTogglePeriod('opt')}
-        className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+        className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
           expandedPeriods.has('opt')
             ? 'text-text bg-accent/15 border border-accent/20'
-            : 'text-text-muted hover:text-text hover:bg-white/[0.04]'
+            : 'text-text-muted hover:text-text hover:bg-card-hover'
         }`}
       >
         <span>Categorias</span>
@@ -41,7 +41,7 @@ export default function SidebarOptativesSection({
       </button>
 
       {expandedPeriods.has('opt') && (
-        <div className="ml-3 pl-3 border-l border-white/10 space-y-1 mt-1.5 animate-fade-in">
+        <div className="ml-3 pl-3 border-l border-border space-y-1 mt-1.5 animate-fade-in">
           {(Object.keys(optativeCategories) as Array<keyof typeof optativeCategories>).map(catKey => {
             const isCatExpanded = expandedOptCategories.has(catKey);
             const subjects = getOptativesByCategory(catKey);
@@ -51,10 +51,10 @@ export default function SidebarOptativesSection({
               <div key={catKey}>
                 <button
                   onClick={() => onToggleOptCategory(catKey)}
-                  className={`w-full flex items-center justify-between px-3 py-1.5 rounded-lg text-[11px] font-semibold uppercase tracking-wider transition-all duration-200 ${
+                  className={`w-full flex items-center justify-between px-3 py-1.5 rounded-lg text-[11px] font-semibold uppercase tracking-wider transition-colors duration-200 ${
                     isCatExpanded
-                      ? 'text-text bg-white/[0.04]'
-                      : 'text-text-muted hover:text-text hover:bg-white/[0.03]'
+                      ? 'text-text bg-card-hover'
+                      : 'text-text-muted hover:text-text hover:bg-card-hover'
                   }`}
                 >
                   <span>{cat.label}</span>
@@ -70,7 +70,7 @@ export default function SidebarOptativesSection({
                 </button>
 
                 {isCatExpanded && (
-                  <div className="ml-3 pl-3 border-l border-white/10 space-y-0.5 mt-1 animate-fade-in">
+                  <div className="ml-3 pl-3 border-l border-border space-y-0.5 mt-1 animate-fade-in">
                     {subjects.map(subject => (
                       <SidebarSubjectLink key={subject.id} subject={subject} onNavigate={onNavigate} />
                     ))}

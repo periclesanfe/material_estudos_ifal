@@ -28,7 +28,7 @@ export default function QuizCard({ data }: QuizCardProps) {
       <h4 className="font-display text-xl font-bold text-accent3 mb-4 leading-tight">{data.question}</h4>
       <div className="flex flex-col gap-1.5">
         {data.options.map((option, i) => {
-          let classes = 'w-full text-left quiz-option-base px-4 py-3 text-sm transition-all duration-200';
+          let classes = 'w-full text-left quiz-option-base px-4 py-3 text-sm transition-colors duration-200';
 
           if (answered) {
             if (i === data.correctIndex) {

@@ -1,16 +1,16 @@
-const STORAGE_KEY = 'gemini_api_key';
+const SESSION_STORAGE_KEY = 'ifal_bsi_gemini_api_key';
 
 export function useApiKey() {
   const getApiKey = (): string | null => {
-    return localStorage.getItem(STORAGE_KEY);
+    return sessionStorage.getItem(SESSION_STORAGE_KEY);
   };
 
   const setApiKey = (key: string): void => {
-    localStorage.setItem(STORAGE_KEY, key);
+    sessionStorage.setItem(SESSION_STORAGE_KEY, key);
   };
 
   const removeApiKey = (): void => {
-    localStorage.removeItem(STORAGE_KEY);
+    sessionStorage.removeItem(SESSION_STORAGE_KEY);
   };
 
   const hasApiKey = (): boolean => {

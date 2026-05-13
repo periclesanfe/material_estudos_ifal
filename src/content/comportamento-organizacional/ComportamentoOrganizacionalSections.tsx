@@ -405,9 +405,9 @@ function ConceptGrid({ items, columns = 'md:grid-cols-2' }: { items: ConceptItem
 
 function PanelList({ items }: { items: PanelItem[] }) {
   return (
-    <div className="space-y-2.5">
+    <div className="space-y-3">
       {items.map(item => (
-        <div key={item.title} className="bg-card border border-border rounded-xl px-4 py-3.5">
+        <div key={item.title} className="bg-card border border-border rounded-xl px-5 py-4">
           <h3 className="font-semibold text-sm md:text-base text-text mb-0.5">{item.title}</h3>
           <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
         </div>
@@ -418,9 +418,9 @@ function PanelList({ items }: { items: PanelItem[] }) {
 
 function PillGrid({ items }: { items: string[] }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {items.map((item, index) => (
-        <div key={item} className="bg-card border border-border rounded-xl px-4 py-3 flex items-center gap-3">
+        <div key={item} className="bg-card border border-border rounded-xl px-5 py-3.5 flex items-center gap-3">
           <span className="text-accent text-xs font-bold tabular-nums w-6 flex-shrink-0">{String(index + 1).padStart(2, '0')}</span>
           <span className="text-sm text-text">{item}</span>
         </div>
@@ -433,7 +433,7 @@ function StatStrip({ items }: { items: StatItem[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
       {items.map(item => (
-        <div key={item.label} className="bg-card border border-border rounded-xl px-5 py-4 text-center">
+        <div key={item.label} className="bg-card border border-border rounded-xl px-5 py-5 text-center">
           <p className={`font-display font-black text-2xl ${item.accent}`}>{item.label}</p>
           <p className="text-text-muted text-sm">{item.value}</p>
         </div>
