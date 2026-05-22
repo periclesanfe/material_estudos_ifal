@@ -8,6 +8,23 @@ const THEME_STORAGE_KEY = 'ifal_bsi_theme';
 
 type Theme = 'dark' | 'light';
 
+function SunIcon() {
+  return (
+    <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} aria-hidden="true">
+      <circle cx="12" cy="12" r="4" />
+      <path strokeLinecap="round" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+    </svg>
+  );
+}
+
+function MoonIcon() {
+  return (
+    <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21 14.7A8.5 8.5 0 0 1 9.3 3a7 7 0 1 0 11.7 11.7Z" />
+    </svg>
+  );
+}
+
 function getInitialTheme(): Theme {
   try {
     const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
@@ -73,6 +90,32 @@ export default function Sidebar() {
         : 'text-text-muted hover:text-text hover:bg-card-hover'
     }`;
 
+  const themeToggle = (
+    <button
+      type="button"
+      onClick={() => setTheme(nextTheme)}
+      aria-label={theme === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'}
+      aria-pressed={theme === 'light'}
+      className="group relative flex h-10 w-[4.75rem] shrink-0 items-center rounded-full border border-border bg-card px-1.5 transition-colors duration-300 hover:border-border-hover hover:bg-card-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+    >
+      <span className="absolute left-2 text-accent4 transition-opacity duration-300 group-aria-pressed:opacity-100 opacity-35">
+        <SunIcon />
+      </span>
+      <span className="absolute right-2 text-accent transition-opacity duration-300 group-aria-pressed:opacity-35 opacity-100">
+        <MoonIcon />
+      </span>
+      <span
+        className={`relative z-10 flex h-7 w-7 items-center justify-center rounded-full text-white shadow-[0_6px_16px_rgba(0,0,0,0.26)] transition-transform duration-300 ease-out ${
+          theme === 'light'
+            ? 'translate-x-[2rem] bg-accent4'
+            : 'translate-x-0 bg-accent'
+        }`}
+      >
+        {theme === 'light' ? <SunIcon /> : <MoonIcon />}
+      </span>
+    </button>
+  );
+
   const sidebarContent = (
     <div className="flex flex-col h-full">
       <NavLink
@@ -112,21 +155,13 @@ export default function Sidebar() {
         />
       </nav>
 
-      <div className="border-t border-border p-3 space-y-2">
-        <button
-          type="button"
-          onClick={() => setTheme(nextTheme)}
-          aria-pressed={theme === 'light'}
-          className="w-full flex items-center justify-between rounded-lg border border-border bg-card px-3 py-2 text-sm font-semibold text-text-muted hover:bg-card-hover hover:text-text transition-colors duration-200"
-        >
-          <span>Tema</span>
-          <span className="text-[11px] uppercase tracking-[0.14em] text-accent">
-            {theme === 'dark' ? 'Escuro' : 'Claro'}
-          </span>
-        </button>
-        <NavLink to="/configuracoes" onClick={handleNavigate} className={mainNavItem}>
+      <div className="border-t border-border p-3">
+        <div className="flex items-center gap-2">
+          <NavLink to="/configuracoes" onClick={handleNavigate} className={({ isActive }) => `${mainNavItem({ isActive })} flex-1`}>
           Configurações
-        </NavLink>
+          </NavLink>
+          {themeToggle}
+        </div>
       </div>
     </div>
   );
@@ -150,24 +185,28 @@ export default function Sidebar() {
       )}
 
       <aside
-        className={`sidebar-surface hidden lg:flex flex-col border-r border-border ${collapsed ? 'w-[4.5rem]' : 'w-[18rem]'} transition-[width] duration-300 flex-shrink-0`}
+        className={`sidebar-surface hidden lg:sticky lg:top-0 lg:flex h-screen self-start flex-col border-r border-border ${collapsed ? 'w-[4.5rem]' : 'w-[18rem]'} transition-[width] duration-300 flex-shrink-0`}
       >
-        {!collapsed && sidebarContent}
-        {collapsed && (
-          <div className="flex flex-col items-center pt-7 gap-3">
-            <span className="w-8 h-8 rounded-full bg-accent/20 border border-accent/30" />
-            <span className="font-display font-bold text-sm text-text-muted">BSI</span>
-          </div>
-        )}
-        <button
-          onClick={() => setCollapsed(!collapsed)}
-          className="hidden lg:flex items-center justify-center h-10 text-text-muted hover:text-text border-t border-border transition-colors"
-          aria-label={collapsed ? 'Expandir' : 'Colapsar'}
-        >
-          <svg className={`w-4 h-4 transition-transform duration-200 ${collapsed ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
+        <div className="min-h-0 flex-1">
+          {!collapsed && sidebarContent}
+          {collapsed && (
+            <div className="flex h-full flex-col items-center pt-7 gap-3">
+              <span className="w-8 h-8 rounded-full bg-accent/20 border border-accent/30" />
+              <span className="font-display font-bold text-sm text-text-muted">BSI</span>
+            </div>
+          )}
+        </div>
+        <div className="relative h-11 border-t border-border">
+          <button
+            onClick={() => setCollapsed(!collapsed)}
+            className="absolute left-1/2 top-0 hidden h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card text-text-muted shadow-[0_8px_22px_rgba(0,0,0,0.28)] transition-colors duration-200 hover:border-border-hover hover:bg-card-hover hover:text-text lg:flex"
+            aria-label={collapsed ? 'Expandir sidebar' : 'Minimizar sidebar'}
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.4} aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d={collapsed ? 'M9 5l7 7-7 7' : 'M15 5l-7 7 7 7'} />
+            </svg>
+          </button>
+        </div>
       </aside>
 
       <aside
