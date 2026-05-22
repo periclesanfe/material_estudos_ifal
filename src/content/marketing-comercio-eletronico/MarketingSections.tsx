@@ -1,10 +1,9 @@
 import AIQuizGenerator from '../../components/ui/AIQuizGenerator';
 import AIKahootQuiz from '../../components/ui/AIKahootQuiz';
 import ConceptCard from '../../components/ui/ConceptCard';
+import ExamQuizSelector from '../../components/ui/ExamQuizSelector';
 import FlowDiagram from '../../components/ui/FlowDiagram';
 import HighlightBox from '../../components/ui/HighlightBox';
-import KahootQuiz from '../../components/ui/KahootQuiz';
-import QuizCard from '../../components/ui/QuizCard';
 import QuizTabs from '../../components/ui/QuizTabs';
 import { MARKETING_GUIDE_CONTEXT, MARKETING_TOPICS, QUIZ_DATA } from './data';
 
@@ -327,6 +326,165 @@ const segmentationCriteria: PanelItem[] = [
   },
 ];
 
+const marketing40Shifts: ConceptItem[] = [
+  {
+    title: 'Do exclusivo ao inclusivo',
+    description: 'Marcas precisam dialogar com públicos diversos e reduzir barreiras de acesso. No digital, comunidades antes pequenas ganham voz e visibilidade.',
+    accent: 'accent',
+  },
+  {
+    title: 'Do vertical ao horizontal',
+    description: 'A comunicação deixa de ser apenas empresa para consumidor. Reviews, fóruns, influenciadores e avaliações tornam a confiança mais distribuída.',
+    accent: 'accent3',
+  },
+  {
+    title: 'Do individual ao social',
+    description: 'A decisão de compra passa a ser moldada por grupos, recomendações, comentários, prova social e experiências compartilhadas.',
+    accent: 'accent5',
+  },
+];
+
+const digitalInfluenceItems: PanelItem[] = [
+  {
+    title: 'Consumidor conectado',
+    description: 'Pesquisa em buscadores, compara preços, assiste reviews, conversa com outras pessoas e avalia reputação antes de comprar.',
+  },
+  {
+    title: 'Prova social',
+    description: 'Comentários, estrelas, vídeos, unboxings, depoimentos e reclamações públicas reduzem ou aumentam a confiança na marca.',
+  },
+  {
+    title: 'Subculturas digitais',
+    description: 'Jovens, mulheres e netizens podem impulsionar tendências, defender marcas, produzir conteúdo e pressionar empresas por coerência.',
+  },
+  {
+    title: 'Marcas humanas',
+    description: 'Na economia digital, marcas fortes parecem menos distantes: são autênticas, transparentes, empáticas e consistentes no atendimento.',
+  },
+];
+
+const fiveAPath: PanelItem[] = [
+  {
+    title: '1. Assimilação',
+    description: 'O consumidor toma conhecimento da marca por anúncio, busca, indicação, rede social, vitrine, marketplace ou conteúdo.',
+  },
+  {
+    title: '2. Atração',
+    description: 'A marca entra no conjunto de opções interessantes. Design, proposta de valor, reputação e identificação ajudam nessa etapa.',
+  },
+  {
+    title: '3. Arguição',
+    description: 'O consumidor pergunta, pesquisa, compara e valida. No e-commerce, essa etapa envolve preço, frete, prazo, reviews, troca e confiança.',
+  },
+  {
+    title: '4. Ação',
+    description: 'A pessoa compra, assina, baixa, agenda ou usa. Checkout simples, meios de pagamento e entrega clara reduzem abandono.',
+  },
+  {
+    title: '5. Apologia',
+    description: 'Depois da experiência, o cliente recomenda, avalia positivamente, defende a marca ou volta a comprar.',
+  },
+];
+
+const marketing50Components: ConceptItem[] = [
+  {
+    title: 'Direcionado por dados',
+    description: 'Coleta e integra dados internos e externos para orientar decisões. Sem ecossistema de dados, a personalização vira chute.',
+    accent: 'accent',
+  },
+  {
+    title: 'Preditivo',
+    description: 'Usa modelos para antecipar demanda, abandono, resposta a campanhas, vendas e potencial de novos produtos.',
+    accent: 'accent2',
+  },
+  {
+    title: 'Contextual',
+    description: 'Entrega interações personalizadas conforme momento, canal, localização, comportamento e situação do cliente.',
+    accent: 'accent3',
+  },
+  {
+    title: 'Aumentado',
+    description: 'Usa tecnologia para elevar a produtividade do atendimento e das vendas, combinando automação com empatia humana.',
+    accent: 'accent4',
+  },
+  {
+    title: 'Ágil',
+    description: 'Executa testes rápidos, MVPs, experimentos e ajustes contínuos por equipes multidisciplinares.',
+    accent: 'accent5',
+  },
+];
+
+const marketing50Challenges: PanelItem[] = [
+  {
+    title: 'Abismo entre gerações',
+    description: 'Baby boomers, X, Y, Z e Alfa têm hábitos, linguagem, canais e expectativas diferentes. A marca precisa equilibrar presente e futuro.',
+  },
+  {
+    title: 'Polarização da prosperidade',
+    description: 'Mercados premium e de baixo custo crescem, enquanto o meio pode encolher. Posicionamento e proposta de valor ficam mais críticos.',
+  },
+  {
+    title: 'Fosso digital',
+    description: 'Acesso, confiança e habilidade tecnológica variam. Inclusão digital e transparência ajudam a reduzir resistência.',
+  },
+];
+
+const dataCommerceItems: PanelItem[] = [
+  {
+    title: 'Ecossistema de dados',
+    description: 'Integra navegação, compras, carrinho abandonado, CRM, atendimento, redes sociais, transações, campanhas e pós-venda.',
+  },
+  {
+    title: 'Identidade única do cliente',
+    description: 'Conectar interações de uma mesma pessoa permite personalizar sem tratar cada canal como se fosse um cliente diferente.',
+  },
+  {
+    title: 'Segmentos de um',
+    description: 'Com dados suficientes, a empresa se aproxima da personalização individual, ajustando ofertas e mensagens a cada perfil.',
+  },
+  {
+    title: 'Privacidade e confiança',
+    description: 'Dados úteis não autorizam abuso. Consentimento, segurança e transparência sustentam relacionamento de longo prazo.',
+  },
+];
+
+const ecommerceMechanics: ConceptItem[] = [
+  {
+    title: 'Recomendação',
+    description: 'Motores de recomendação usam padrões de navegação, compra e similaridade para sugerir produtos ou conteúdos relevantes.',
+    accent: 'accent3',
+  },
+  {
+    title: 'Up-selling',
+    description: 'Estimula a compra de uma versão superior, mais completa ou mais cara do produto inicialmente considerado.',
+    accent: 'accent4',
+  },
+  {
+    title: 'Cross-selling',
+    description: 'Sugere itens complementares à compra principal, como acessórios, serviços, garantia ou produtos relacionados.',
+    accent: 'accent5',
+  },
+];
+
+const cxAutomationItems: PanelItem[] = [
+  {
+    title: 'Mapeamento da jornada',
+    description: 'Publicidade, busca, conteúdo, página de produto, checkout, entrega, suporte e recompra precisam formar uma experiência coerente.',
+  },
+  {
+    title: 'Chatbots e assistentes virtuais',
+    description: 'Resolvem dúvidas simples, status de pedido e triagem. Casos complexos exigem passagem clara para atendimento humano.',
+  },
+  {
+    title: 'Atendimento em camadas',
+    description: 'FAQ, bot, comunidade, atendente e especialista reduzem espera e mantêm o humano onde empatia e julgamento importam mais.',
+  },
+  {
+    title: 'Experimentação rápida',
+    description: 'Testes A/B em anúncios, páginas, ofertas e checkout ajudam a aprender com dados reais antes de escalar a campanha.',
+  },
+];
+
 function ConceptGrid({ items, columns = 'md:grid-cols-2' }: { items: ConceptItem[]; columns?: string }) {
   return (
     <div className={`grid grid-cols-1 ${columns} gap-4`}>
@@ -646,17 +804,119 @@ function SegmentacaoSection() {
   );
 }
 
+function Marketing40Section() {
+  return (
+    <section className="animate-fade-in space-y-6">
+      <SectionHeader title="Marketing 4.0" subtitle="A passagem do tradicional ao digital em um mercado guiado por conectividade, comunidades e prova social" colorClass="text-accent2" />
+      <HighlightBox title="Ideia central">
+        <p>
+          Marketing 4.0 não significa abandonar o marketing tradicional. A proposta é integrar presença física e digital, comunicação de marca, relacionamento e dados para acompanhar uma jornada de compra cada vez mais conectada.
+        </p>
+      </HighlightBox>
+
+      <ConceptGrid items={marketing40Shifts} columns="md:grid-cols-3" />
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent3 mb-3">O novo poder do consumidor</h3>
+        <PanelList items={digitalInfluenceItems} columns="md:grid-cols-2" />
+      </div>
+
+      <HighlightBox title="Aplicação ao comércio eletrônico" accent="var(--color-accent5)">
+        <p>
+          Uma loja virtual não compete apenas por anúncio e preço. Ela compete pela soma de reputação, avaliações, atendimento, prazo, política de troca, conteúdo, experiência mobile e confiança gerada em cada ponto de contato.
+        </p>
+      </HighlightBox>
+    </section>
+  );
+}
+
+function Jornada5ASection() {
+  return (
+    <section className="animate-fade-in space-y-6">
+      <SectionHeader title="Jornada Digital dos 5 As" subtitle="Do primeiro contato à recomendação espontânea" colorClass="text-accent3" />
+      <FlowDiagram items={['Assimilação', 'Atração', 'Arguição', 'Ação', 'Apologia']} />
+
+      <PanelList items={fiveAPath} />
+
+      <div className="study-surface p-5 md:p-6">
+        <h3 className="font-display font-bold text-2xl text-accent mb-3">Por que a Arguição pesa tanto no e-commerce?</h3>
+        <p className="text-text-muted text-sm md:text-base leading-relaxed">
+          Antes de comprar, o cliente compara preço, frete, prazo, reputação, comentários, vídeos, fotos reais, política de troca e meios de pagamento. Quanto mais risco percebido, maior a necessidade de prova e confiança.
+        </p>
+      </div>
+
+      <HighlightBox title="Métrica por etapa" accent="var(--color-accent4)">
+        <p>
+          A jornada ajuda a interpretar problemas: muito alcance e pouca ação indicam falha de conversão; muitas compras e pouca apologia indicam experiência ou pós-venda fracos.
+        </p>
+      </HighlightBox>
+    </section>
+  );
+}
+
+function Marketing50Section() {
+  return (
+    <section className="animate-fade-in space-y-6">
+      <SectionHeader title="Marketing 5.0 e Martech" subtitle="Tecnologia a serviço da humanidade, da estratégia e da jornada do cliente" colorClass="text-accent4" />
+      <HighlightBox title="Definição prática">
+        <p>
+          Marketing 5.0 aplica tecnologias que simulam capacidades humanas para criar, comunicar, entregar e aumentar valor ao longo da experiência do cliente. O ponto-chave é equilibrar inteligência de máquina com sensibilidade humana.
+        </p>
+      </HighlightBox>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent mb-3">Cinco componentes</h3>
+        <ConceptGrid items={marketing50Components} columns="md:grid-cols-2 lg:grid-cols-3" />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent5 mb-3">Três desafios para implementar</h3>
+        <PanelList items={marketing50Challenges} />
+      </div>
+
+      <HighlightBox title="Tecnologia não substitui estratégia" accent="var(--color-accent3)">
+        <p>
+          IA, sensores, IoT, realidade aumentada, blockchain, chatbots e automação só geram valor quando resolvem um problema real da jornada. A ferramenta vem depois do objetivo.
+        </p>
+      </HighlightBox>
+    </section>
+  );
+}
+
+function DadosCxSection() {
+  return (
+    <section className="animate-fade-in space-y-6">
+      <SectionHeader title="Dados, CX e Comércio Eletrônico" subtitle="Como dados, automação e experiência se conectam nas operações digitais" colorClass="text-accent5" />
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent mb-3">Base: dados úteis e integrados</h3>
+        <PanelList items={dataCommerceItems} />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent3 mb-3">Recomendação e venda orientada por comportamento</h3>
+        <ConceptGrid items={ecommerceMechanics} columns="md:grid-cols-3" />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent4 mb-3">Experiência, atendimento e agilidade</h3>
+        <PanelList items={cxAutomationItems} columns="md:grid-cols-2" />
+      </div>
+
+      <HighlightBox title="Indicadores de revisão" accent="var(--color-accent2)">
+        <p>
+          Para estudar, conecte cada ação a uma métrica: conversão, abandono de carrinho, retenção, recompra, valor do cliente, satisfação, tempo de resposta e defesa da marca.
+        </p>
+      </HighlightBox>
+    </section>
+  );
+}
+
 function QuizSection() {
   return (
     <section className="animate-fade-in">
       <QuizTabs
-        normal={(
-          <div>
-            {QUIZ_DATA.map(q => (
-              <QuizCard key={q.id} data={q} />
-            ))}
-          </div>
-        )}
+        normal={<ExamQuizSelector questions={QUIZ_DATA} mode="quiz" />}
         ai={(
           <div className="space-y-4">
             <HighlightBox title="Como funciona?">
@@ -665,7 +925,7 @@ function QuizSection() {
             <AIQuizGenerator guideContext={MARKETING_GUIDE_CONTEXT} topics={MARKETING_TOPICS} />
           </div>
         )}
-        kahoot={<KahootQuiz questions={QUIZ_DATA} />}
+        kahoot={<ExamQuizSelector questions={QUIZ_DATA} mode="kahoot" />}
         aiKahoot={<AIKahootQuiz guideContext={MARKETING_GUIDE_CONTEXT} topics={MARKETING_TOPICS} />}
       />
     </section>
@@ -700,6 +960,14 @@ export default function MarketingSections({ activeSection }: MarketingSectionsPr
       return <PesquisaSection />;
     case 'segmentacao':
       return <SegmentacaoSection />;
+    case 'mkt40':
+      return <Marketing40Section />;
+    case 'jornada5a':
+      return <Jornada5ASection />;
+    case 'mkt50':
+      return <Marketing50Section />;
+    case 'cx-dados':
+      return <DadosCxSection />;
     case 'quiz':
       return <QuizSection />;
     case 'iaquiz':

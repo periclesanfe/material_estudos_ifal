@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { QUESTION_COUNT_OPTIONS, type QuestionCount, useGeminiQuiz } from '../../hooks/useGeminiQuiz';
 import { useApiKey } from '../../hooks/useApiKey';
+import type { QuizTopicOption } from './QuizCard';
 
 interface AIQuizGeneratorProps {
   guideContext: string;
-  topics: { value: string; label: string }[];
+  topics: QuizTopicOption[];
 }
 
 export default function AIQuizGenerator({ guideContext, topics }: AIQuizGeneratorProps) {
@@ -38,7 +39,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
       ? ['aleatorio']
       : topics
         .filter(topic => selectedTopicValues.includes(topic.value))
-        .map(topic => topic.label);
+        .map(topic => topic.prompt || topic.label);
 
     generateQuestion(selectedTopics, selectedDifficulty, selectedCount);
   };

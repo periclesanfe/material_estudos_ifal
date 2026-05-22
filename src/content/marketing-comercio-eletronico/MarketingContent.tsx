@@ -35,8 +35,11 @@ export default function MarketingContent() {
             <button
               key={section.id}
               onClick={() => setActiveSection(section.id)}
-              className={`study-pill px-3 py-1.5 ${activeSection === section.id ? 'active' : ''}`}
+              className={`study-pill px-3 py-1.5 inline-flex items-center gap-1.5 ${activeSection === section.id ? 'active' : ''}`}
             >
+              {'exam' in section && section.exam && (
+                <span className="text-[10px] font-black opacity-75">{section.exam}</span>
+              )}
               {section.shortTitle}
             </button>
           ))}

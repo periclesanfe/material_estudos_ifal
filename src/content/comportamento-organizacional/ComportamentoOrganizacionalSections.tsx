@@ -1,10 +1,9 @@
 import AIQuizGenerator from '../../components/ui/AIQuizGenerator';
 import AIKahootQuiz from '../../components/ui/AIKahootQuiz';
 import ConceptCard from '../../components/ui/ConceptCard';
+import ExamQuizSelector from '../../components/ui/ExamQuizSelector';
 import FlowDiagram from '../../components/ui/FlowDiagram';
 import HighlightBox from '../../components/ui/HighlightBox';
-import KahootQuiz from '../../components/ui/KahootQuiz';
-import QuizCard from '../../components/ui/QuizCard';
 import QuizTabs from '../../components/ui/QuizTabs';
 import {
   COMPORTAMENTO_ORGANIZACIONAL_GUIDE_CONTEXT,
@@ -1348,13 +1347,7 @@ function QuizSection() {
   return (
     <section className="animate-fade-in">
       <QuizTabs
-        normal={(
-          <div>
-            {QUIZ_DATA.map(question => (
-              <QuizCard key={question.id} data={question} />
-            ))}
-          </div>
-        )}
+        normal={<ExamQuizSelector questions={QUIZ_DATA} mode="quiz" />}
         ai={(
           <div className="space-y-4">
             <HighlightBox title="Como funciona?">
@@ -1365,7 +1358,7 @@ function QuizSection() {
             <AIQuizGenerator guideContext={COMPORTAMENTO_ORGANIZACIONAL_GUIDE_CONTEXT} topics={COMPORTAMENTO_ORGANIZACIONAL_TOPICS} />
           </div>
         )}
-        kahoot={<KahootQuiz questions={QUIZ_DATA} />}
+        kahoot={<ExamQuizSelector questions={QUIZ_DATA} mode="kahoot" />}
         aiKahoot={<AIKahootQuiz guideContext={COMPORTAMENTO_ORGANIZACIONAL_GUIDE_CONTEXT} topics={COMPORTAMENTO_ORGANIZACIONAL_TOPICS} />}
       />
     </section>

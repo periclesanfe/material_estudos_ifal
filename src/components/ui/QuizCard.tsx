@@ -1,7 +1,16 @@
 import { useState } from 'react';
 
+export type QuizExam = 'prova1' | 'prova2';
+
+export interface QuizTopicOption {
+  value: string;
+  label: string;
+  prompt?: string;
+}
+
 export interface QuizQuestionData {
   id: string;
+  exam?: QuizExam;
   question: string;
   options: string[];
   correctIndex: number;

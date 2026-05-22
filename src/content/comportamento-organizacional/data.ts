@@ -1,4 +1,4 @@
-import type { QuizQuestionData } from '../../components/ui/QuizCard';
+import type { QuizQuestionData, QuizTopicOption } from '../../components/ui/QuizCard';
 
 export const COMPORTAMENTO_ORGANIZACIONAL_GUIDE_CONTEXT = `
 GUIA COMPLETO DE COMPORTAMENTO ORGANIZACIONAL — Resumo:
@@ -20,9 +20,23 @@ GUIA COMPLETO DE COMPORTAMENTO ORGANIZACIONAL — Resumo:
 8. LIDERANÇA: Liderança é a capacidade de influenciar um grupo para realizar uma visão ou conjunto de metas; pode emergir informalmente ou por indicação formal. Teorias dos traços buscam qualidades pessoais e conectam liderança ao Big Five e à inteligência emocional, especialmente empatia. Teorias comportamentais distinguem comportamentos orientados à tarefa e às pessoas. Teorias contingenciais incluem Fiedler, liderança situacional, caminho-meta e participação do líder. Liderança carismática envolve visão, risco, sensibilidade ao ambiente e indução emocional. Liderança transformacional inspira inovação e mudança. Liderança autêntica combina ética, valores abertos, confiança e uso responsável do poder.
 
 9. CONFLITO E NEGOCIAÇÃO: Conflito começa quando uma parte percebe que outra afeta ou pode afetar negativamente algo importante. Pode surgir por objetivos incompatíveis, interpretações diferentes e expectativas comportamentais. Visões sobre conflito: tradicional, interacionista e gerenciada. Tipos: tarefa, relacionamento e processo. Processo de conflito: oposição potencial, cognição/personalização, intenções, comportamento e resultados. Estilos: competição, colaboração, evitação, acomodação e compromisso, equilibrando assertividade e cooperação. Negociação é um processo comunicativo para alocar recursos escassos e buscar acordo. Pode ser distributiva (ganha-perde, valor fixo) ou integrativa (ganhos mútuos, criação de valor). Processo: preparação, regras, esclarecimento, barganha e encerramento.
+
+DIVISÃO POR AVALIAÇÕES:
+- PROVA 1: Fundamentos, diversidade, valores, atitudes, satisfação, percepção, diferenças individuais e motivação.
+- PROVA 2: Teorias motivacionais aplicadas, aplicações no trabalho, grupos, comunicação, liderança, conflito e negociação.
 `;
 
-export const COMPORTAMENTO_ORGANIZACIONAL_TOPICS = [
+export const COMPORTAMENTO_ORGANIZACIONAL_TOPICS: QuizTopicOption[] = [
+  {
+    value: 'prova1',
+    label: 'Prova 1: Indivíduos e Motivação',
+    prompt: 'Conteúdo da Prova 1: fundamentos do comportamento organizacional, indivíduos, grupos e estrutura como determinantes, gestão baseada em evidências, diversidade aparente e profunda, discriminação, capacidades, valores, atitudes, satisfação, insatisfação, percepção, teoria da atribuição, atalhos de julgamento, Big Five, motivação, Maslow, McGregor X/Y, Herzberg, autodeterminação e engajamento.',
+  },
+  {
+    value: 'prova2',
+    label: 'Prova 2: Grupos e Gestão',
+    prompt: 'Conteúdo da Prova 2: teorias motivacionais aplicadas, definição de metas, autoeficácia, justiça organizacional, expectativa, modelo de características do trabalho, redesenho do trabalho, recompensas, comportamento de grupo, comunicação organizacional, liderança, teorias dos traços, teorias comportamentais, contingenciais, liderança carismática, transformacional e autêntica, conflito e negociação.',
+  },
   { value: 'fundamentos', label: 'Fundamentos do CO' },
   { value: 'diversidade', label: 'Diversidade nas Organizações' },
   { value: 'valores-atitudes', label: 'Valores, Atitudes e Satisfação' },
@@ -36,23 +50,23 @@ export const COMPORTAMENTO_ORGANIZACIONAL_TOPICS = [
 ];
 
 export const COMPORTAMENTO_ORGANIZACIONAL_SECTIONS = [
-  { id: 'intro', title: 'Introdução ao CO', shortTitle: 'Introdução' },
-  { id: 'diversidade', title: 'Diversidade nas Organizações', shortTitle: 'Diversidade' },
-  { id: 'valores', title: 'Valores', shortTitle: 'Valores' },
-  { id: 'atitudes', title: 'Atitudes e Satisfação', shortTitle: 'Atitudes' },
-  { id: 'percepcao', title: 'Percepção', shortTitle: 'Percepção' },
-  { id: 'personalidade', title: 'Diferenças Individuais', shortTitle: 'Personalidade' },
-  { id: 'motivacao', title: 'Motivação', shortTitle: 'Motivação' },
-  { id: 'teorias', title: 'Teorias Motivacionais', shortTitle: 'Teorias' },
-  { id: 'aplicacoes', title: 'Aplicações Organizacionais', shortTitle: 'Aplicações' },
-  { id: 'grupos', title: 'Comportamento de Grupo', shortTitle: 'Grupos' },
-  { id: 'comunicacao', title: 'Comunicação', shortTitle: 'Comunicação' },
-  { id: 'lideranca', title: 'Liderança', shortTitle: 'Liderança' },
-  { id: 'conflito', title: 'Conflito e Negociação', shortTitle: 'Conflitos' },
+  { id: 'intro', title: 'Introdução ao CO', shortTitle: 'Introdução', exam: 'P1' },
+  { id: 'diversidade', title: 'Diversidade nas Organizações', shortTitle: 'Diversidade', exam: 'P1' },
+  { id: 'valores', title: 'Valores', shortTitle: 'Valores', exam: 'P1' },
+  { id: 'atitudes', title: 'Atitudes e Satisfação', shortTitle: 'Atitudes', exam: 'P1' },
+  { id: 'percepcao', title: 'Percepção', shortTitle: 'Percepção', exam: 'P1' },
+  { id: 'personalidade', title: 'Diferenças Individuais', shortTitle: 'Personalidade', exam: 'P1' },
+  { id: 'motivacao', title: 'Motivação', shortTitle: 'Motivação', exam: 'P1' },
+  { id: 'teorias', title: 'Teorias Motivacionais', shortTitle: 'Teorias', exam: 'P2' },
+  { id: 'aplicacoes', title: 'Aplicações Organizacionais', shortTitle: 'Aplicações', exam: 'P2' },
+  { id: 'grupos', title: 'Comportamento de Grupo', shortTitle: 'Grupos', exam: 'P2' },
+  { id: 'comunicacao', title: 'Comunicação', shortTitle: 'Comunicação', exam: 'P2' },
+  { id: 'lideranca', title: 'Liderança', shortTitle: 'Liderança', exam: 'P2' },
+  { id: 'conflito', title: 'Conflito e Negociação', shortTitle: 'Conflitos', exam: 'P2' },
   { id: 'quiz', title: 'Quiz de Revisão', shortTitle: 'Quiz' },
 ];
 
-export const QUIZ_DATA: QuizQuestionData[] = [
+const QUIZ_DATA_BASE: QuizQuestionData[] = [
   {
     id: 'q1',
     question: '1. O que o Comportamento Organizacional estuda?',
@@ -424,3 +438,8 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     feedbackWrong: 'Comunicação descendente flui de um nível mais alto para um nível inferior.',
   },
 ];
+
+export const QUIZ_DATA: QuizQuestionData[] = QUIZ_DATA_BASE.map((question, index) => ({
+  ...question,
+  exam: index < 21 ? 'prova1' as const : 'prova2' as const,
+}));

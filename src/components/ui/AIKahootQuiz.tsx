@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { QUESTION_COUNT_OPTIONS, type AIQuizQuestion, type QuestionCount, useGeminiQuiz } from '../../hooks/useGeminiQuiz';
 import { useApiKey } from '../../hooks/useApiKey';
 import KahootQuiz from './KahootQuiz';
-import type { QuizQuestionData } from './QuizCard';
+import type { QuizQuestionData, QuizTopicOption } from './QuizCard';
 
 interface AIKahootQuizProps {
   guideContext: string;
-  topics: { value: string; label: string }[];
+  topics: QuizTopicOption[];
 }
 
 function toKahootQuestions(questions: AIQuizQuestion[]): QuizQuestionData[] {
@@ -49,7 +49,7 @@ export default function AIKahootQuiz({ guideContext, topics }: AIKahootQuizProps
       ? ['aleatorio']
       : topics
         .filter(topic => selectedTopicValues.includes(topic.value))
-        .map(topic => topic.label);
+        .map(topic => topic.prompt || topic.label);
 
     resetScore();
     generateQuestion(selectedTopics, selectedDifficulty, selectedCount);
