@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { SITE_LAST_UPDATED_LABEL } from '../../data/siteMetadata';
 import MarketingSections from './MarketingSections';
 import { MARKETING_SECTIONS } from './data';
 
@@ -25,6 +26,9 @@ export default function MarketingContent() {
           </h1>
           <p className="text-text-muted text-sm md:text-base relative z-10 max-w-2xl">
             Conceitos Iniciais · Mix de Marketing · Marketing de Relacionamento · Pesquisa · Segmentação
+          </p>
+          <p className="text-text-muted/80 text-xs relative z-10 mt-4">
+            Atualizado em {SITE_LAST_UPDATED_LABEL}
           </p>
         </div>
       )}

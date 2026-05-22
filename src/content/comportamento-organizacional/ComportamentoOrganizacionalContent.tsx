@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { SITE_LAST_UPDATED_LABEL } from '../../data/siteMetadata';
 import ComportamentoOrganizacionalSections from './ComportamentoOrganizacionalSections';
 import { COMPORTAMENTO_ORGANIZACIONAL_SECTIONS } from './data';
 
@@ -27,6 +28,9 @@ export default function ComportamentoOrganizacionalContent() {
           </h1>
           <p className="text-text-muted text-sm md:text-base relative z-10 max-w-2xl">
             Indivíduos · Motivação · Grupos · Comunicação · Liderança · Conflito e Negociação
+          </p>
+          <p className="text-text-muted/80 text-xs relative z-10 mt-4">
+            Atualizado em {SITE_LAST_UPDATED_LABEL}
           </p>
         </div>
       )}

@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { getSubjectsWithContent, getTotalSubjects, getSubjectsWithContentCount } from '../data/curriculum';
+import { SITE_LAST_UPDATED_LABEL } from '../data/siteMetadata';
 
 export default function HomePage() {
   const subjectsWithContent = getSubjectsWithContent();
@@ -28,6 +29,9 @@ export default function HomePage() {
         </h1>
         <p className="text-text-muted text-sm md:text-base relative z-10 max-w-2xl mx-auto leading-relaxed">
           Conteúdos organizados por matéria, quizzes interativos e geração de perguntas por IA.
+        </p>
+        <p className="text-text-muted/80 text-xs relative z-10 mt-4">
+          Atualizado em {SITE_LAST_UPDATED_LABEL}
         </p>
       </section>
 
