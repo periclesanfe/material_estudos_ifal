@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
-import { getSubjectsWithContent, getTotalSubjects, getSubjectsWithContentCount } from '../data/curriculum';
+import SubjectCatalog from '../components/ui/SubjectCatalog';
+import subjects, { getTotalSubjects, getSubjectsWithContentCount } from '../data/curriculum';
 
 export default function HomePage() {
-  const subjectsWithContent = getSubjectsWithContent();
   const totalSubjects = getTotalSubjects();
   const contentCount = getSubjectsWithContentCount();
   const progressPercent = Math.round((contentCount / totalSubjects) * 100);
@@ -49,32 +49,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {subjectsWithContent.length > 0 && (
-        <section className="space-y-4">
-          <h2 className="section-title text-accent">Matérias Disponíveis</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-            {subjectsWithContent.map(subject => (
-              <NavLink
-                key={subject.id}
-                to={`/materia/${subject.slug}`}
-                className="study-surface study-surface-hover px-4 py-3.5 group flex items-center justify-between min-h-[78px]"
-              >
-                <div>
-                  <h3 className="font-semibold text-sm md:text-base text-text group-hover:text-accent transition-colors">
-                    {subject.name}
-                  </h3>
-                  <p className="text-text-muted text-xs md:text-sm mt-0.5">
-                    {subject.period === 'optativa' ? 'Optativa' : `${subject.period}º Período`} · {subject.hours}h · {subject.code}
-                  </p>
-                </div>
-                <svg className="w-4 h-4 text-text-muted group-hover:text-accent transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </NavLink>
-            ))}
-          </div>
-        </section>
-      )}
+      <SubjectCatalog subjects={subjects} />
 
       <section className="grid grid-cols-2 md:grid-cols-4 gap-3.5">
         {[
