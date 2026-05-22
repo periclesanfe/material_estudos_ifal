@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import ExportSubjectActions from '../../components/ui/ExportSubjectActions';
 import MarketingSections from './MarketingSections';
-import { MARKETING_SECTIONS } from './data';
+import { MARKETING_GUIDE_CONTEXT, MARKETING_SECTIONS, QUIZ_DATA } from './data';
 
 export default function MarketingContent() {
   const [activeSection, setActiveSection] = useState('intro');
@@ -26,6 +27,12 @@ export default function MarketingContent() {
           <p className="text-text-muted text-sm md:text-base relative z-10 max-w-2xl">
             Conceitos Iniciais · Mix de Marketing · Marketing de Relacionamento · Pesquisa · Segmentação
           </p>
+          <ExportSubjectActions
+            title="Marketing e Comércio Eletrônico"
+            fileName="marketing-comercio-eletronico"
+            guideContext={MARKETING_GUIDE_CONTEXT}
+            quizData={QUIZ_DATA}
+          />
         </div>
       )}
 

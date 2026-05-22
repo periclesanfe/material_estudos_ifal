@@ -1,6 +1,11 @@
 import { useState } from 'react';
+import ExportSubjectActions from '../../components/ui/ExportSubjectActions';
 import ComportamentoOrganizacionalSections from './ComportamentoOrganizacionalSections';
-import { COMPORTAMENTO_ORGANIZACIONAL_SECTIONS } from './data';
+import {
+  COMPORTAMENTO_ORGANIZACIONAL_GUIDE_CONTEXT,
+  COMPORTAMENTO_ORGANIZACIONAL_SECTIONS,
+  QUIZ_DATA,
+} from './data';
 
 export default function ComportamentoOrganizacionalContent() {
   const [activeSection, setActiveSection] = useState('intro');
@@ -28,6 +33,12 @@ export default function ComportamentoOrganizacionalContent() {
           <p className="text-text-muted text-sm md:text-base relative z-10 max-w-2xl">
             Indivíduos · Motivação · Grupos · Comunicação · Liderança · Conflito e Negociação
           </p>
+          <ExportSubjectActions
+            title="Comportamento Organizacional"
+            fileName="comportamento-organizacional"
+            guideContext={COMPORTAMENTO_ORGANIZACIONAL_GUIDE_CONTEXT}
+            quizData={QUIZ_DATA}
+          />
         </div>
       )}
 
