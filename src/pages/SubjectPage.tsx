@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { getSubjectBySlug } from '../data/curriculum';
-import AdministracaoProjetoBancoDadosContent from "../content/administracao-projeto-banco-dados/ AdministracaoProjetoBancoDadosContent.tsx";
+import AdministracaoProjetoBancoDadosContent from '../content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosContent.tsx';
 import ComportamentoOrganizacionalContent from '../content/comportamento-organizacional/ComportamentoOrganizacionalContent';
 import MarketingContent from '../content/marketing-comercio-eletronico/MarketingContent';
 import NotFoundPage from './NotFoundPage';
