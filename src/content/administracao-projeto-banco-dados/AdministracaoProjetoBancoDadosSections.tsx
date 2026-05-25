@@ -168,6 +168,52 @@ const objetoItems: PanelItem[] = [
   },
 ];
 
+const armazenamentoHierarquiaItems: PanelItem[] = [
+  {
+    title: 'Oracle Data Block',
+    description: 'Menor unidade que o Oracle gerencia. Leituras e gravações acontecem em múltiplos de blocos, não em bytes isolados.',
+  },
+  {
+    title: 'Extent',
+    description: 'Conjunto contíguo de blocos alocado quando um objeto precisa crescer. Reduz alocações pequenas e ajuda a controlar fragmentação.',
+  },
+  {
+    title: 'Segmento',
+    description: 'Conjunto de extents de um objeto, como tabela, índice, segmento temporário ou segmento de UNDO.',
+  },
+  {
+    title: 'Tablespace',
+    description: 'Coleção nomeada de segmentos. Organiza objetos, apoia controle de espaço, manutenção e planejamento de desempenho.',
+  },
+  {
+    title: 'Datafile',
+    description: 'Arquivo físico do sistema operacional onde os blocos são gravados. Um tablespace pode ter um ou mais datafiles.',
+  },
+  {
+    title: 'Database',
+    description: 'Contêiner maior: reúne tablespaces e permite que a aplicação trabalhe com objetos sem lidar diretamente com arquivos físicos.',
+  },
+];
+
+const segmentoItems: PanelItem[] = [
+  {
+    title: 'Segmentos de dados',
+    description: 'Guardam os dados das tabelas. Cada tabela cresce com seus próprios extents conforme recebe mais linhas.',
+  },
+  {
+    title: 'Segmentos de índice',
+    description: 'Armazenam estruturas de índice. Eles também ocupam espaço e devem ser planejados como parte do armazenamento.',
+  },
+  {
+    title: 'Segmentos temporários',
+    description: 'Aparecem em operações como ORDER BY, GROUP BY e joins que precisam de área temporária para processar resultados.',
+  },
+  {
+    title: 'Segmentos de UNDO',
+    description: 'Guardam versões anteriores dos dados para rollback de transações e leitura consistente.',
+  },
+];
+
 function IntroSection() {
   return (
     <section className="animate-fade-in space-y-6">
@@ -418,6 +464,184 @@ CACHE 20;`}</CodeBlock>
   );
 }
 
+function ArmazenamentoSection() {
+  return (
+    <section className="animate-fade-in space-y-6">
+      <SectionHeader
+        title="Armazenamento Oracle"
+        subtitle="Como o Oracle separa a organização lógica dos dados da ocupação física em disco."
+        colorClass="text-accent5"
+      />
+
+      <HighlightBox title="Ideia central" accent="var(--color-accent5)">
+        <p>
+          No Oracle, os dados existem em dois níveis ao mesmo tempo. O nível lógico mostra como o banco organiza
+          tablespaces, segmentos, extents e blocos. O nível físico mostra onde esses dados são gravados de verdade:
+          em datafiles do sistema operacional.
+        </p>
+      </HighlightBox>
+
+      <TheoryBlock title="Por que separar lógico e físico?">
+        <p>
+          A separação entre armazenamento lógico e físico dá flexibilidade para administração. Um desenvolvedor ou
+          usuário pensa em tabelas, índices e tablespaces; o DBA consegue lidar com arquivos, discos e distribuição
+          física sem obrigar a aplicação a mudar sua forma de acesso.
+        </p>
+        <p>
+          Em um sistema de frota, por exemplo, a aplicação pode consultar `TAB_VEICULO`, `TAB_MOTORISTA` e
+          `TAB_TRAJETO` como objetos normais. Por trás disso, cada tabela pode ser um segmento diferente, ocupando
+          extents distintos dentro de um tablespace. O tablespace, por sua vez, pode estar apoiado em mais de um
+          datafile físico, como `ARQUIVO_01.dbf` e `ARQUIVO_02.dbf`.
+        </p>
+      </TheoryBlock>
+
+      <div className="study-surface p-5 md:p-6 space-y-4">
+        <h3 className="font-display font-bold text-2xl text-accent5">Hierarquia de armazenamento</h3>
+        <FlowDiagram items={['Database', 'Tablespace', 'Segmento', 'Extent', 'Bloco']} />
+        <PanelList items={armazenamentoHierarquiaItems} />
+      </div>
+
+      <TheoryBlock title="Bloco de dados: a menor unidade gerenciada">
+        <p>
+          O Oracle Data Block é a unidade mínima que o Oracle lê e grava. O banco não trabalha gravando um byte solto
+          de uma linha; ele movimenta blocos. O tamanho padrão é definido na criação do banco pelo parâmetro
+          `DB_BLOCK_SIZE`, com valores comuns como 4KB, 8KB ou 16KB.
+        </p>
+        <p>
+          Dentro de um bloco existem três áreas importantes. O cabeçalho guarda metadados, como endereço do bloco,
+          tipo de segmento e informações sobre transações ativas. A área de dados guarda linhas de tabela ou entradas
+          de índice. O espaço livre é a reserva usada para acomodar mudanças futuras nas linhas.
+        </p>
+      </TheoryBlock>
+
+      <ConceptGrid
+        items={[
+          {
+            title: 'Cabeçalho do bloco',
+            description: 'Mantém metadados e informações transacionais. O tamanho pode variar conforme INITRANS.',
+            accent: 'accent',
+          },
+          {
+            title: 'Área de dados',
+            description: 'Guarda o conteúdo útil: linhas de tabela ou entradas de índice.',
+            accent: 'accent3',
+          },
+          {
+            title: 'Espaço livre',
+            description: 'Reserva interna do bloco controlada por PCTFREE e PCTUSED.',
+            accent: 'accent4',
+          },
+          {
+            title: 'DB_BLOCK_SIZE',
+            description: 'Parâmetro definido na criação do banco que influencia o tamanho padrão dos blocos.',
+            accent: 'accent5',
+          },
+        ]}
+      />
+
+      <TheoryBlock title="PCTFREE e PCTUSED na prática">
+        <p>
+          `PCTFREE` define quanto do bloco deve permanecer livre para updates que aumentem o tamanho das linhas já
+          existentes. Se `PCTFREE = 20`, o Oracle insere novas linhas até o bloco ficar aproximadamente 80% cheio.
+          A partir daí, ele preserva os 20% restantes para crescimento de linhas que já estão ali.
+        </p>
+        <p>
+          `PCTUSED` define o ponto em que um bloco volta a aceitar inserções depois de perder dados por deleções. Se
+          `PCTUSED = 40`, um bloco que estava cheio só volta para a lista de blocos disponíveis quando sua ocupação
+          cair abaixo de 40%. Isso evita que o banco fique alternando o mesmo bloco entre disponível e indisponível a
+          cada pequena mudança.
+        </p>
+      </TheoryBlock>
+
+      <div className="space-y-3">
+        <h3 className="font-display font-bold text-2xl text-accent4">Exemplo mental de ocupação do bloco</h3>
+        <CodeBlock>{`Bloco com PCTFREE = 20 e PCTUSED = 40
+
+1. Inserts ocupam o bloco ate cerca de 80%.
+2. O Oracle para de inserir novas linhas nesse bloco.
+3. Updates ainda podem usar a reserva de 20%.
+4. Deletes reduzem a ocupacao do bloco.
+5. Se o uso cair abaixo de 40%, o bloco volta a aceitar inserts.`}</CodeBlock>
+      </div>
+
+      <TheoryBlock title="Extents e segmentos: como os objetos crescem">
+        <p>
+          Quando uma tabela precisa de mais espaço, o Oracle não aloca um bloco isolado por vez. Ele aloca um extent,
+          isto é, um conjunto contíguo de blocos. Quando esse extent enche, outro extent pode ser alocado para o
+          mesmo objeto. Os extents de um objeto não precisam ficar todos lado a lado no disco.
+        </p>
+        <p>
+          O segmento é o conjunto desses extents para um objeto específico. Se `TAB_VEICULO`, `TAB_MOTORISTA` e
+          `TAB_TRAJETO` estão no mesmo tablespace, elas ainda são segmentos diferentes. Cada uma cresce de forma
+          própria, de acordo com o volume de dados que recebe.
+        </p>
+      </TheoryBlock>
+
+      <PanelList items={segmentoItems} />
+
+      <TheoryBlock title="Tablespace e datafile: a ponte entre os mundos">
+        <p>
+          O tablespace é lógico: ele agrupa segmentos e dá ao DBA uma forma de organizar o banco por finalidade. Em
+          uma aplicação de frota, uma escolha comum seria separar dados e índices, por exemplo `TBS_FROTA_DD` para
+          tabelas e `TBS_FROTA_IX` para índices.
+        </p>
+        <p>
+          O datafile é físico: é o arquivo real gravado no sistema operacional. Um tablespace pode usar um ou mais
+          datafiles. Isso permite distribuir armazenamento, controlar crescimento e fazer manutenção sem que a
+          aplicação precise saber em qual arquivo uma linha ficou armazenada.
+        </p>
+      </TheoryBlock>
+
+      <div className="space-y-3">
+        <h3 className="font-display font-bold text-2xl text-accent3">Mapa lógico e físico</h3>
+        <CodeBlock>{`DATABASE
+  TABLESPACE FROTA
+    DATAFILE ARQUIVO_01.dbf
+    DATAFILE ARQUIVO_02.dbf
+
+    SEGMENTO TAB_VEICULO
+      EXTENT 1 -> blocos de dados
+      EXTENT 2 -> blocos de dados
+
+    SEGMENTO TAB_MOTORISTA
+      EXTENT 1 -> blocos de dados
+
+    SEGMENTO IDX_VEICULO_PLACA
+      EXTENT 1 -> blocos de indice`}</CodeBlock>
+      </div>
+
+      <ConceptGrid
+        columns="md:grid-cols-3"
+        items={[
+          {
+            title: 'Performance',
+            description: 'Separar dados e índices em tablespaces diferentes pode ajudar a distribuir carga de I/O quando a infraestrutura permite.',
+            accent: 'accent',
+          },
+          {
+            title: 'Manutenção',
+            description: 'Um tablespace pode ser administrado de forma independente, inclusive com operações como modo read-only ou offline.',
+            accent: 'accent3',
+          },
+          {
+            title: 'Controle de espaço',
+            description: 'O DBA acompanha crescimento e quotas por tablespace, em vez de depender apenas da visão objeto por objeto.',
+            accent: 'accent5',
+          },
+        ]}
+      />
+
+      <HighlightBox title="Resumo para prova" accent="var(--color-accent4)">
+        <p>
+          A hierarquia essencial é: database contém tablespaces; tablespaces contêm segmentos; segmentos são formados
+          por extents; extents são conjuntos de blocos; blocos são a menor unidade gerenciada. Fisicamente, o
+          tablespace é sustentado por datafiles.
+        </p>
+      </HighlightBox>
+    </section>
+  );
+}
+
 function DesempenhoSection() {
   return (
     <section className="animate-fade-in space-y-6">
@@ -518,7 +742,7 @@ function StaticQuizSection() {
     <section className="animate-fade-in space-y-5">
       <SectionHeader
         title="Quiz de Revisão"
-        subtitle="Perguntas fixas baseadas somente nas fontes disponíveis: introdução e modelagem de dados."
+        subtitle="Perguntas fixas baseadas somente nas fontes disponíveis: introdução, modelagem e armazenamento."
       />
       <div>
         {ADMINISTRACAO_PROJETO_BANCO_DADOS_QUIZ_DATA.map(question => (
@@ -543,8 +767,8 @@ function AIQuizSection() {
       />
       <HighlightBox title="Escopo atual">
         <p>
-          A IA foi limitada aos conteúdos presentes em .docs/apdb: introdução da disciplina e modelagem de dados.
-          Novos tópicos devem ser adicionados ao contexto quando houver fonte correspondente.
+          A IA foi limitada aos conteúdos presentes em .docs/apdb: introdução da disciplina, modelagem de dados e
+          armazenamento lógico/físico no Oracle.
         </p>
       </HighlightBox>
       <AIQuizGenerator
@@ -568,6 +792,8 @@ export default function AdministracaoProjetoBancoDadosSections({ activeSection }
       return <IntroSection />;
     case 'modelagem':
       return <ModelagemSection />;
+    case 'armazenamento':
+      return <ArmazenamentoSection />;
     case 'objetos':
       return <ObjetosSection />;
     case 'desempenho':

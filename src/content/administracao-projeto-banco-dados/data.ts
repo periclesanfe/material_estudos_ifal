@@ -13,7 +13,9 @@ GUIA DE ADMINISTRACAO E PROJETO DE BANCO DE DADOS - Topicos disponiveis:
 
 5. OBJETOS SQL: Tabelas devem ser criadas com colunas, chave primaria, restricoes unicas, chaves estrangeiras, obrigatoriedade e validacoes para preservar integridade. A tabela e ponto de defesa dos dados: regras no banco continuam valendo mesmo se outro sistema ou script acessar os dados. ALTER TABLE usa ADD, MODIFY e DROP COLUMN para evoluir a estrutura conforme novas regras de negocio. Comentarios documentam tabelas e colunas dentro do banco. Visoes sao consultas salvas para filtrar, simplificar, proteger ou reorganizar acesso aos dados; mudancas costumam usar CREATE OR REPLACE. Sequences geram identificadores automaticamente e reduzem preenchimento manual de chaves.
 
-6. INDICES E PARTICIONAMENTO: Indices aceleram consultas ao oferecer caminhos de acesso alternativos, mas ocupam espaco e geram custo de manutencao em escritas. B-tree e comum em buscas seletivas e ambientes transacionais; bitmap e melhor para baixa cardinalidade e analise com muitos filtros, mas e menos adequado a muitas atualizacoes. Indices podem ser compostos, baseados em expressao, reconstruidos e monitorados para verificar se ainda trazem ganho real. Particionamento divide tabelas grandes por faixa, lista ou hash; a aplicacao continua vendo uma tabela unica, enquanto o banco administra partes menores. Indices tambem podem ser particionados para equilibrar desempenho e manutencao.
+6. ARMAZENAMENTO LOGICO E FISICO NO ORACLE: O Oracle separa a organizacao logica dos dados da ocupacao fisica em disco. Essa separacao permite ao DBA reorganizar arquivos fisicos sem mudar a forma como usuarios e aplicacoes enxergam os objetos. A hierarquia logica vai de DATABASE para TABLESPACE, SEGMENTO, EXTENT e ORACLE DATA BLOCK. O bloco e a menor unidade gerenciada pelo Oracle; leituras e gravacoes acontecem em multiplos de blocos definidos por DB_BLOCK_SIZE. O bloco possui cabecalho com metadados e informacoes transacionais, area de dados e espaco livre controlado por PCTFREE e PCTUSED. PCTFREE reserva espaco para updates que aumentam linhas; PCTUSED define quando um bloco volta a aceitar inserts apos delecoes. Extent e um conjunto contiguo de blocos alocado quando um objeto precisa crescer. Segmento e o conjunto de extents de um objeto, como tabela, indice, temporario ou UNDO. Tablespace agrupa segmentos e ajuda organizacao, desempenho, manutencao e controle de espaco. Fisicamente, cada tablespace e composto por um ou mais datafiles, arquivos reais do sistema operacional onde os blocos sao gravados. A aplicacao enxerga objetos e tablespaces; o sistema operacional enxerga datafiles.
+
+7. INDICES E PARTICIONAMENTO: Indices aceleram consultas ao oferecer caminhos de acesso alternativos, mas ocupam espaco e geram custo de manutencao em escritas. B-tree e comum em buscas seletivas e ambientes transacionais; bitmap e melhor para baixa cardinalidade e analise com muitos filtros, mas e menos adequado a muitas atualizacoes. Indices podem ser compostos, baseados em expressao, reconstruidos e monitorados para verificar se ainda trazem ganho real. Particionamento divide tabelas grandes por faixa, lista ou hash; a aplicacao continua vendo uma tabela unica, enquanto o banco administra partes menores. Indices tambem podem ser particionados para equilibrar desempenho e manutencao.
 `;
 
 export const ADMINISTRACAO_PROJETO_BANCO_DADOS_TOPICS: QuizTopicOption[] = [
@@ -38,6 +40,11 @@ export const ADMINISTRACAO_PROJETO_BANCO_DADOS_TOPICS: QuizTopicOption[] = [
     prompt: 'Criação e alteração de tabelas, constraints, comentários, visões, sequences e uso de NEXTVAL/CURRVAL.',
   },
   {
+    value: 'armazenamento',
+    label: 'Armazenamento Oracle',
+    prompt: 'Estrutura lógica e física do Oracle: blocos, PCTFREE, PCTUSED, extents, segmentos, tablespaces e datafiles.',
+  },
+  {
     value: 'desempenho',
     label: 'Índices e particionamento',
     prompt: 'Índices B-tree, bitmap, índices por expressão, monitoramento, reconstrução, particionamento por faixa, lista e hash.',
@@ -47,6 +54,7 @@ export const ADMINISTRACAO_PROJETO_BANCO_DADOS_TOPICS: QuizTopicOption[] = [
 export const ADMINISTRACAO_PROJETO_BANCO_DADOS_SECTIONS = [
   { id: 'intro', title: 'Introdução à Disciplina', shortTitle: 'Introdução', exam: 'P1' },
   { id: 'modelagem', title: 'Modelagem de Dados', shortTitle: 'Modelagem', exam: 'P1' },
+  { id: 'armazenamento', title: 'Armazenamento Oracle', shortTitle: 'Armazenamento', exam: 'P1' },
   { id: 'objetos', title: 'Objetos SQL', shortTitle: 'Objetos SQL', exam: 'P1' },
   { id: 'desempenho', title: 'Desempenho e Particionamento', shortTitle: 'Desempenho', exam: 'P1' },
   { id: 'quiz', title: 'Quiz de Revisão', shortTitle: 'Quiz' },
@@ -211,5 +219,84 @@ export const ADMINISTRACAO_PROJETO_BANCO_DADOS_QUIZ_DATA: QuizQuestionData[] = [
     correctIndex: 0,
     feedbackCorrect: 'Correto. A aplicação continua vendo uma tabela única, mas o banco administra partes menores.',
     feedbackWrong: 'Particionamento divide dados em partes menores, ajudando consultas, cargas e manutenção.',
+  },
+  {
+    id: 'apbd-q13',
+    exam: 'prova1',
+    question: '13. Qual é a principal diferença entre armazenamento lógico e físico no Oracle?',
+    options: [
+      'O lógico organiza objetos como tablespaces, segmentos, extents e blocos; o físico corresponde aos datafiles no sistema operacional',
+      'O lógico existe apenas em planilhas; o físico existe apenas no SQL Developer',
+      'O lógico guarda somente backups; o físico guarda somente comentários de tabelas',
+      'O lógico é usado apenas por usuários finais; o físico é usado apenas por visões',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. O Oracle separa a forma lógica de organização da gravação física em arquivos de dados.',
+    feedbackWrong: 'A diferença central é que a organização lógica envolve tablespaces, segmentos, extents e blocos, enquanto a física envolve datafiles.',
+  },
+  {
+    id: 'apbd-q14',
+    exam: 'prova1',
+    question: '14. Na hierarquia lógica do Oracle, qual é a menor unidade de armazenamento gerenciada pelo banco?',
+    options: ['Tablespace', 'Segmento', 'Extent', 'Oracle Data Block'],
+    correctIndex: 3,
+    feedbackCorrect: 'Correto. O Oracle lê e grava dados em múltiplos de blocos de dados.',
+    feedbackWrong: 'A menor unidade gerenciada pelo Oracle é o Oracle Data Block, definido por parâmetros como DB_BLOCK_SIZE.',
+  },
+  {
+    id: 'apbd-q15',
+    exam: 'prova1',
+    question: '15. Para que serve o parâmetro PCTFREE em um bloco de dados?',
+    options: [
+      'Reservar uma porcentagem do bloco para futuros updates que aumentem o tamanho das linhas',
+      'Definir quantos datafiles um tablespace pode ter',
+      'Determinar o nome físico de uma tabela',
+      'Criar automaticamente segmentos temporários para ORDER BY',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. PCTFREE evita que o bloco fique totalmente ocupado por inserts e falte espaço para crescimento de linhas.',
+    feedbackWrong: 'PCTFREE mantém uma reserva de espaço livre no bloco para updates que aumentem as linhas existentes.',
+  },
+  {
+    id: 'apbd-q16',
+    exam: 'prova1',
+    question: '16. Em um bloco com PCTFREE = 20, quando o Oracle deixa de inserir novas linhas nesse bloco?',
+    options: [
+      'Quando o bloco chega a aproximadamente 80% de ocupação, preservando 20% livre',
+      'Quando o bloco chega a exatamente 20% de ocupação total',
+      'Somente quando o tablespace fica offline',
+      'Apenas depois que todos os datafiles são removidos',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. Com PCTFREE = 20, o bloco deixa de receber novos inserts quando a reserva livre chega ao limite de 20%.',
+    feedbackWrong: 'Com PCTFREE = 20, o Oracle preserva 20% do bloco para updates; novas inserções param por volta de 80% de uso.',
+  },
+  {
+    id: 'apbd-q17',
+    exam: 'prova1',
+    question: '17. O que é um extent no armazenamento Oracle?',
+    options: [
+      'Um conjunto contíguo de blocos alocado para um objeto quando ele precisa de mais espaço',
+      'Um arquivo físico que substitui todos os datafiles',
+      'Uma consulta salva usada para esconder colunas sensíveis',
+      'Uma restrição de integridade criada com CHECK',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. O Oracle aloca espaço em extents, não bloco por bloco de forma isolada.',
+    feedbackWrong: 'Extent é um conjunto contíguo de blocos; segmentos crescem pela alocação de novos extents.',
+  },
+  {
+    id: 'apbd-q18',
+    exam: 'prova1',
+    question: '18. Por que separar tablespaces de dados e índices pode ser útil em um projeto Oracle?',
+    options: [
+      'Porque permite organizar segmentos, distribuir carga de I/O, facilitar manutenção e controlar espaço',
+      'Porque elimina a necessidade de chaves primárias e estrangeiras',
+      'Porque transforma todos os índices em visões materializadas',
+      'Porque impede que o DBA gerencie datafiles',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. Tablespaces ajudam organização lógica e podem apoiar desempenho, manutenção e controle de espaço.',
+    feedbackWrong: 'Separar tablespaces ajuda a organizar segmentos, administrar espaço e, quando bem planejado, distribuir carga física.',
   },
 ];
