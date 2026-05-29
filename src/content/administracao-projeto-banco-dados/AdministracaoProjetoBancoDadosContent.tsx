@@ -26,7 +26,7 @@ export default function AdministracaoProjetoBancoDadosContent() {
             Administração e<br /><span className="gradient-text">Projeto de Banco de Dados</span>
           </h1>
           <p className="text-text-muted text-sm md:text-base relative z-10 max-w-2xl">
-            Introdução · Modelagem de Dados · Armazenamento · Segurança · Gerenciamento· Arquitetura
+            Introdução · Modelagem de Dados · Armazenamento · Segurança · Gerenciamento · Arquitetura
           </p>
         </div>
       )}

@@ -16,6 +16,28 @@ GUIA DE ADMINISTRACAO E PROJETO DE BANCO DE DADOS - Topicos disponiveis:
 6. ARMAZENAMENTO LOGICO E FISICO NO ORACLE: O Oracle separa a organizacao logica dos dados da ocupacao fisica em disco. Essa separacao permite ao DBA reorganizar arquivos fisicos sem mudar a forma como usuarios e aplicacoes enxergam os objetos. A hierarquia logica vai de DATABASE para TABLESPACE, SEGMENTO, EXTENT e ORACLE DATA BLOCK. O bloco e a menor unidade gerenciada pelo Oracle; leituras e gravacoes acontecem em multiplos de blocos definidos por DB_BLOCK_SIZE. O bloco possui cabecalho com metadados e informacoes transacionais, area de dados e espaco livre controlado por PCTFREE e PCTUSED. PCTFREE reserva espaco para updates que aumentam linhas; PCTUSED define quando um bloco volta a aceitar inserts apos delecoes. Extent e um conjunto contiguo de blocos alocado quando um objeto precisa crescer. Segmento e o conjunto de extents de um objeto, como tabela, indice, temporario ou UNDO. Tablespace agrupa segmentos e ajuda organizacao, desempenho, manutencao e controle de espaco. Fisicamente, cada tablespace e composto por um ou mais datafiles, arquivos reais do sistema operacional onde os blocos sao gravados. A aplicacao enxerga objetos e tablespaces; o sistema operacional enxerga datafiles.
 
 7. INDICES E PARTICIONAMENTO: Indices aceleram consultas ao oferecer caminhos de acesso alternativos, mas ocupam espaco e geram custo de manutencao em escritas. B-tree e comum em buscas seletivas e ambientes transacionais; bitmap e melhor para baixa cardinalidade e analise com muitos filtros, mas e menos adequado a muitas atualizacoes. Indices podem ser compostos, baseados em expressao, reconstruidos e monitorados para verificar se ainda trazem ganho real. Particionamento divide tabelas grandes por faixa, lista ou hash; a aplicacao continua vendo uma tabela unica, enquanto o banco administra partes menores. Indices tambem podem ser particionados para equilibrar desempenho e manutencao.
+
+8. SEGURANCA, PERFIS E SENHAS: No Oracle, seguranca envolve identidade, privilegios, limites, auditoria, backup e recuperacao. PROFILE agrupa politicas de senha e limites de recurso, podendo ser atribuido no CREATE USER ou ALTER USER. O perfil DEFAULT sempre existe e serve como politica base. Role concede privilegio; profile impoe limite. Regras comuns de senha incluem FAILED_LOGIN_ATTEMPTS, PASSWORD_LOCK_TIME, PASSWORD_LIFE_TIME, PASSWORD_GRACE_TIME, PASSWORD_REUSE_TIME, PASSWORD_REUSE_MAX e PASSWORD_VERIFY_FUNCTION.
+
+9. LIMITES, LOGMINER E FLASHBACK: Perfis tambem controlam recursos por sessao ou por chamada, como SESSIONS_PER_USER, CONNECT_TIME, IDLE_TIME, CPU_PER_SESSION, CPU_PER_CALL, LOGICAL_READS_PER_SESSION e LOGICAL_READS_PER_CALL; RESOURCE_LIMIT precisa estar ativo para enforcement. LogMiner analisa redo logs, usa supplemental logging e consulta V$LOGMNR_CONTENTS para reconstruir SQL_REDO e SQL_UNDO. Flashback corrige falhas logicas: Flashback Query consulta dados antigos por SCN/timestamp, Flashback Table volta uma tabela no tempo, Flashback Drop recupera objetos do recycle bin, Flashback Data Archive guarda historico longo e Flashback Transaction pode desfazer transacoes.
+
+10. BACKUP, RECOVERY E DESASTRES: Data Pump faz backup logico com expdp/impdp para schemas, tabelas, tablespaces ou banco completo, usando DIRECTORY, DUMPFILE, LOGFILE, SCHEMAS, TABLES, REMAP_SCHEMA, QUERY e EXCLUDE. RMAN faz backup fisico de datafiles, archived redo logs, control file, SPFILE e FRA, com politicas de retencao, backup full e incremental. RESTORE recupera arquivos; RECOVER aplica logs para consistencia. DRP define continuidade por RTO e RPO, combinando RMAN, Flashback, Data Guard, Active Data Guard, RAC, TDE, LogMiner e site alternativo conforme o tipo de falha.
+
+11. PLANO DE RECUPERACAO DE DESASTRES: O DRP organiza respostas para indisponibilidade relevante, falha de infraestrutura, perda de midia e desastre no data center. RTO mede o tempo maximo aceitavel para voltar a operar; RPO mede a perda maxima aceitavel de dados. Continuidade se relaciona aos pilares CIA: confidencialidade, integridade e disponibilidade. Falha de instancia pode ser tratada por recuperacao automatica, perda de midia por restore/recover, e catastrofe por site alternativo, redundancia e replicacao remota. Solucoes Oracle citadas incluem SMON, Active Data Guard, Oracle RAC, RMAN, Data Guard, TDE, Flashback e LogMiner.
+
+12. RELACAO ENTRE RECURSOS E INCIDENTES: Perfis e limites reduzem abuso e mau uso; Flashback resolve erros logicos recentes; LogMiner apoia auditoria e reconstrucao de alteracoes; Data Pump atende migracoes e copias logicas; RMAN cobre falhas fisicas; Data Guard e RAC apoiam continuidade; DRP combina essas camadas em um plano operacional. As ferramentas nao competem, elas se complementam conforme impacto, granularidade e tempo de recuperacao.
+
+13. ESTUDO POR CENARIO: Para fixar o conteudo, associe incidente a ferramenta. Atualizacao errada aponta para Flashback Query, Flashback Table ou LogMiner. Usuario sobrecarregando o banco aponta para PROFILE e Resource Manager. Migrar um schema aponta para Data Pump. Perda de arquivo fisico aponta para RMAN. Perda do site inteiro aponta para DRP com Data Guard, RAC e site remoto. Essa leitura por cenario evita decorar siglas isoladas.
+
+14. ARQUITETURA ORACLE: A instancia Oracle e formada por estruturas de memoria e processos em execucao; o banco de dados e o conjunto de arquivos fisicos em disco. User Process fica no lado cliente; Server Process atende a requisicao no servidor e usa uma PGA privada. A SGA e memoria compartilhada da instancia e inclui Shared Pool, Database Buffer Cache e Redo Log Buffer. Shared Pool guarda SQL/PLSQL interpretado e metadados; Buffer Cache guarda blocos lidos do disco e blocos sujos; Redo Log Buffer registra alteracoes antes do LGWR gravar nos redo logs. Em leituras repetidas, SQL e blocos podem ser reaproveitados em memoria, reduzindo parse e I/O fisico. Estados praticos como clean, dirty e pinned ajudam a entender por que o Oracle posterga gravacoes de dados, mas nao posterga a persistencia do redo necessario ao COMMIT.
+
+15. PROCESSOS E ARQUIVOS: Background processes mantem a instancia. SMON recupera a instancia apos falha; PMON limpa sessoes quebradas; DBWn grava blocos sujos nos datafiles; LGWR grava redo log buffer nos online redo logs em commit, a cada 3 segundos, com buffer cheio ou antes de checkpoint; CKPT atualiza cabecalhos de datafiles e control file; ARCn arquiva redo logs em ARCHIVELOG; MMAN gerencia memoria; RVWR apoia Flashback Database. Arquivos principais incluem control files, datafiles e redo log files; associados incluem PFILE, SPFILE, password file, archived redo logs, trace files e alert log.
+
+16. MULTITENANT, DICIONARIO E MONITORAMENTO: No Oracle 12c+, um CDB contem CDB$ROOT, PDB$SEED e PDBs de usuario; SHOW CON_NAME e V$PDBS ajudam a confirmar o container antes de criar objetos. O dicionario de dados e mantido pelo Oracle, pertence ao SYS e fica na SYSTEM; DBA_xxx mostra todos os objetos, ALL_xxx mostra objetos acessiveis e USER_xxx mostra objetos do usuario atual. Visoes V$ mostram estado dinamico da instancia, como V$INSTANCE, V$DATABASE, V$SESSION, V$TABLESPACE, V$SPPARAMETER, V$VERSION e V$DIAG_INFO. Monitoramento combina dicionario, V$, estatisticas, DBMS_STATS, objetos INVALID, indices UNUSABLE, bloqueios, eventos de espera, operacoes longas em V$SESSION_LONGOPS e, em ultimo caso, encerramento controlado de sessoes.
+
+17. AWR, ADDM E ADVISORS: AWR armazena snapshots de estatisticas em tabelas fisicas, com MMON e MMNL coletando metricas; STATISTICS_LEVEL e CONTROL_MANAGEMENT_PACK_ACCESS controlam disponibilidade. ADDM analisa snapshots do AWR, identifica gargalos e recomenda acoes para reduzir DB Time. Advisors especializados incluem SQL Tuning Advisor, SQL Access Advisor, MTTR Advisor, Segment Advisor, Memory Advisor e Undo Management Advisor; resultados aparecem em DBA_ADVISOR_TASKS, DBA_ADVISOR_FINDINGS, DBA_ADVISOR_RECOMMENDATIONS, DBA_ADVISOR_ACTIONS e DBA_ADVISOR_RATIONALE.
+
+18. GERENCIAMENTO DA INSTANCIA: Oracle Net Services conecta cliente e servidor. Listener escuta conexoes na porta 1521 e e gerenciado por lsnrctl; nomes podem ser resolvidos por tnsnames.ora, EZCONNECT e sqlnet.ora. Diagnostico de conexao segue ordem logica: testar instancia e listener no servidor, depois ping, tnsping, rota de rede e TNS_ADMIN no cliente. STARTUP passa por NOMOUNT, MOUNT e OPEN: NOMOUNT le parametros e cria SGA/processos; MOUNT abre control files; OPEN abre datafiles e redo logs. Variantes como STARTUP FORCE, STARTUP OPEN READ ONLY, STARTUP RESTRICT e STARTUP PFILE atendem cenarios administrativos especificos. SHUTDOWN NORMAL espera usuarios sairem, TRANSACTIONAL espera transacoes terminarem, IMMEDIATE faz rollback e encerra limpo, ABORT derruba abruptamente e exige crash recovery pelo SMON. Alert log e trace files sao referencia central para erros criticos e eventos administrativos. Em multitenant, STARTUP abre o CDB e PDBs podem precisar de ALTER PLUGGABLE DATABASE ... OPEN ou SAVE STATE.
 `;
 
 export const ADMINISTRACAO_PROJETO_BANCO_DADOS_TOPICS: QuizTopicOption[] = [
@@ -49,6 +71,16 @@ export const ADMINISTRACAO_PROJETO_BANCO_DADOS_TOPICS: QuizTopicOption[] = [
     label: 'Índices e particionamento',
     prompt: 'Índices B-tree, bitmap, índices por expressão, monitoramento, reconstrução, particionamento por faixa, lista e hash.',
   },
+  {
+    value: 'seguranca',
+    label: 'Segurança e recuperação',
+    prompt: 'Perfis, políticas de senha, limites de recursos, LogMiner, Flashback, Data Pump, RMAN, RTO, RPO e recuperação de desastres.',
+  },
+  {
+    value: 'arquitetura',
+    label: 'Arquitetura Oracle',
+    prompt: 'Instância, SGA, PGA, background processes, arquivos físicos, Multitenant, dicionário de dados, V$, AWR, ADDM, Oracle Net, startup e shutdown.',
+  },
 ];
 
 export const ADMINISTRACAO_PROJETO_BANCO_DADOS_SECTIONS = [
@@ -57,6 +89,8 @@ export const ADMINISTRACAO_PROJETO_BANCO_DADOS_SECTIONS = [
   { id: 'armazenamento', title: 'Armazenamento Oracle', shortTitle: 'Armazenamento', exam: 'P1' },
   { id: 'objetos', title: 'Objetos SQL', shortTitle: 'Objetos SQL', exam: 'P1' },
   { id: 'desempenho', title: 'Desempenho e Particionamento', shortTitle: 'Desempenho', exam: 'P1' },
+  { id: 'seguranca', title: 'Segurança e Recuperação', shortTitle: 'Segurança', exam: 'P2' },
+  { id: 'arquitetura', title: 'Arquitetura e Administração Oracle', shortTitle: 'Arquitetura', exam: 'P2' },
   { id: 'quiz', title: 'Quiz de Revisão', shortTitle: 'Quiz' },
   { id: 'iaquiz', title: 'Quiz com IA', shortTitle: 'Quiz IA' },
 ];
@@ -298,5 +332,327 @@ export const ADMINISTRACAO_PROJETO_BANCO_DADOS_QUIZ_DATA: QuizQuestionData[] = [
     correctIndex: 0,
     feedbackCorrect: 'Correto. Tablespaces ajudam organização lógica e podem apoiar desempenho, manutenção e controle de espaço.',
     feedbackWrong: 'Separar tablespaces ajuda a organizar segmentos, administrar espaço e, quando bem planejado, distribuir carga física.',
+  },
+  {
+    id: 'apbd-q19',
+    exam: 'prova2',
+    question: '19. No Oracle, qual é o papel principal de um PROFILE?',
+    options: [
+      'Agrupar políticas de senha e limites de consumo de recursos para usuários',
+      'Substituir uma role e conceder privilégios de objeto automaticamente',
+      'Executar restore físico de datafiles corrompidos',
+      'Criar uma visão para esconder colunas sensíveis',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. PROFILE é um pacote de política: controla senha e limites, mas não concede privilégios como uma role.',
+    feedbackWrong: 'PROFILE não é role. Ele impõe regras de senha e recursos; privilégios são concedidos por grants e roles.',
+  },
+  {
+    id: 'apbd-q20',
+    exam: 'prova2',
+    question: '20. O que acontece quando um usuário é criado sem profile explícito?',
+    options: [
+      'A conta fica sem qualquer política de senha',
+      'O Oracle aplica automaticamente o profile DEFAULT',
+      'O usuário recebe privilégios de DBA',
+      'A conta só pode conectar pelo RMAN',
+    ],
+    correctIndex: 1,
+    feedbackCorrect: 'Correto. DEFAULT sempre existe, não pode ser eliminado e funciona como política base.',
+    feedbackWrong: 'Usuários sem profile explícito recebem o DEFAULT, que pode ser ajustado pelo DBA.',
+  },
+  {
+    id: 'apbd-q21',
+    exam: 'prova2',
+    question: '21. Qual combinação trata excesso de tentativas de login no profile?',
+    options: [
+      'FAILED_LOGIN_ATTEMPTS e PASSWORD_LOCK_TIME',
+      'PCTFREE e PCTUSED',
+      'RESTORE e RECOVER',
+      'SCHEMAS e TABLES',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. Um define a quantidade de falhas; o outro define o tempo de bloqueio da conta.',
+    feedbackWrong: 'Bloqueio por tentativas usa FAILED_LOGIN_ATTEMPTS junto de PASSWORD_LOCK_TIME.',
+  },
+  {
+    id: 'apbd-q22',
+    exam: 'prova2',
+    question: '22. Por que PASSWORD_VERIFY_FUNCTION é útil?',
+    options: [
+      'Porque valida regras de complexidade antes de aceitar a troca de senha',
+      'Porque recupera uma tabela apagada do recycle bin',
+      'Porque gera dump físico dos datafiles',
+      'Porque ativa automaticamente Data Guard',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. A função PL/SQL pode exigir tamanho mínimo, tipos de caracteres e diferença em relação à senha antiga.',
+    feedbackWrong: 'PASSWORD_VERIFY_FUNCTION valida a senha antes da alteração; não é mecanismo de backup ou replicação.',
+  },
+  {
+    id: 'apbd-q23',
+    exam: 'prova2',
+    question: '23. Qual parâmetro global precisa estar ativo para que limites de recursos do profile sejam aplicados?',
+    options: ['RESOURCE_LIMIT', 'DB_BLOCK_SIZE', 'OPEN_RESETLOGS', 'NEXTVAL'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. Definir limites no profile não basta se o enforcement global de recursos estiver desligado.',
+    feedbackWrong: 'Os limites de recursos dependem de RESOURCE_LIMIT ativo no banco.',
+  },
+  {
+    id: 'apbd-q24',
+    exam: 'prova2',
+    question: '24. Em que situação o LogMiner é especialmente adequado?',
+    options: [
+      'Investigar redo logs para descobrir SQL executado e possível SQL de desfazer',
+      'Criar índices bitmap em colunas de baixa cardinalidade',
+      'Trocar a senha expirada de todos os usuários',
+      'Separar tablespaces de dados e índices',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. LogMiner reconstrói a história de alterações a partir dos redo logs.',
+    feedbackWrong: 'LogMiner é usado para analisar redo logs, consultar V$LOGMNR_CONTENTS e obter SQL_REDO/SQL_UNDO.',
+  },
+  {
+    id: 'apbd-q25',
+    exam: 'prova2',
+    question: '25. Qual recurso permite consultar uma tabela como ela estava em um timestamp ou SCN anterior?',
+    options: ['Flashback Query', 'Data Pump', 'Oracle RAC', 'CREATE DIRECTORY'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. Flashback Query permite comparar o estado atual com um ponto anterior sem restore completo.',
+    feedbackWrong: 'Consultar dados antigos por timestamp ou SCN é função do Flashback Query.',
+  },
+  {
+    id: 'apbd-q26',
+    exam: 'prova2',
+    question: '26. Quando Flashback Table costuma ser uma boa escolha?',
+    options: [
+      'Quando uma tabela sofreu UPDATE ou DELETE indevido e precisa voltar a um ponto anterior',
+      'Quando o data center inteiro ficou indisponível',
+      'Quando é preciso criar uma sequence para chave artificial',
+      'Quando se deseja conceder privilégios a uma role',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. Flashback Table é uma recuperação lógica mais cirúrgica para uma tabela afetada.',
+    feedbackWrong: 'Flashback Table volta uma tabela a um ponto anterior, normalmente exigindo ROW MOVEMENT habilitado.',
+  },
+  {
+    id: 'apbd-q27',
+    exam: 'prova2',
+    question: '27. Qual afirmação diferencia Data Pump de RMAN?',
+    options: [
+      'Data Pump trabalha no nível lógico de objetos; RMAN trabalha no nível físico de arquivos e recuperação',
+      'Data Pump aplica archived redo logs; RMAN só exporta linhas em CSV',
+      'Data Pump substitui roles; RMAN substitui profiles',
+      'Data Pump só recupera senhas; RMAN só cria visões',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. Data Pump exporta/importa objetos; RMAN cobre backup físico, restore e recover.',
+    feedbackWrong: 'Data Pump é backup/migração lógica com expdp/impdp; RMAN é backup e recovery físico.',
+  },
+  {
+    id: 'apbd-q28',
+    exam: 'prova2',
+    question: '28. Qual é a diferença entre RESTORE e RECOVER no RMAN?',
+    options: [
+      'RESTORE traz arquivos do backup; RECOVER aplica logs para reconstruir consistência',
+      'RESTORE cria usuários; RECOVER cria profiles',
+      'RESTORE consulta redo logs; RECOVER exporta schemas',
+      'RESTORE habilita ROW MOVEMENT; RECOVER cria recycle bin',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. Restore recupera arquivos; recover avança esses arquivos com logs até o ponto necessário.',
+    feedbackWrong: 'No RMAN, RESTORE e RECOVER são etapas diferentes: arquivo primeiro, consistência depois.',
+  },
+  {
+    id: 'apbd-q29',
+    exam: 'prova2',
+    question: '29. Em um plano de recuperação de desastres, o que RTO mede?',
+    options: [
+      'O tempo máximo aceitável para voltar a operar',
+      'A quantidade máxima de dados que pode ser perdida',
+      'O número de sessões simultâneas por usuário',
+      'A porcentagem livre reservada no bloco',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. RTO orienta quanto tempo o negócio aceita ficar indisponível.',
+    feedbackWrong: 'RTO mede tempo de recuperação. A perda máxima aceitável de dados é RPO.',
+  },
+  {
+    id: 'apbd-q30',
+    exam: 'prova2',
+    question: '30. Se a prioridade é reduzir a perda máxima de dados em um desastre, qual métrica está em foco?',
+    options: ['RPO', 'PCTFREE', 'PASSWORD_GRACE_TIME', 'COMPOSITE_LIMIT'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. RPO define a perda máxima de dados aceitável e influencia frequência de backup, archivelog e replicação.',
+    feedbackWrong: 'A métrica de perda máxima aceitável de dados é RPO; RTO trata do tempo para voltar a operar.',
+  },
+  {
+    id: 'apbd-q31',
+    exam: 'prova2',
+    question: '31. Qual alternativa diferencia corretamente instância Oracle e banco de dados?',
+    options: [
+      'Instância é memória e processos; banco de dados é o conjunto de arquivos físicos em disco',
+      'Instância é apenas um datafile; banco de dados é apenas uma sessão de usuário',
+      'Instância contém somente tabelas; banco de dados contém apenas processos de background',
+      'Instância é o arquivo tnsnames.ora; banco de dados é o listener',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. A instância coordena operações em memória; o banco persiste dados em arquivos.',
+    feedbackWrong: 'No Oracle, instância é SGA mais processos; banco de dados é o conjunto de control files, datafiles, redo logs e arquivos associados.',
+  },
+  {
+    id: 'apbd-q32',
+    exam: 'prova2',
+    question: '32. Qual componente da SGA armazena blocos de dados lidos do disco e pode conter dirty blocks?',
+    options: ['Database Buffer Cache', 'Shared Pool', 'Redo Log Buffer', 'PFILE'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. O Database Buffer Cache mantém blocos em memória; blocos alterados e ainda não gravados são dirty blocks.',
+    feedbackWrong: 'Blocos de dados ficam no Database Buffer Cache. Shared Pool guarda SQL/metadados; Redo Log Buffer guarda registros de alteração.',
+  },
+  {
+    id: 'apbd-q33',
+    exam: 'prova2',
+    question: '33. Por que o LGWR é crítico para a durabilidade das transações?',
+    options: [
+      'Porque grava entradas do Redo Log Buffer nos redo logs antes de confirmar o COMMIT ao cliente',
+      'Porque cria novos PDBs automaticamente',
+      'Porque armazena o dicionário de dados na tablespace SYSTEM',
+      'Porque resolve aliases do tnsnames.ora',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. O COMMIT só é confirmado depois que o redo necessário foi gravado pelo LGWR.',
+    feedbackWrong: 'LGWR garante durabilidade gravando redo em disco; criação de PDB, dicionário e aliases são outras camadas.',
+  },
+  {
+    id: 'apbd-q34',
+    exam: 'prova2',
+    question: '34. Qual processo limpa recursos quando uma sessão cai abruptamente?',
+    options: ['PMON', 'DBWn', 'ARCn', 'CKPT'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. PMON limpa recursos, libera locks e trata sessões quebradas.',
+    feedbackWrong: 'PMON é o processo associado à limpeza de sessões problemáticas; DBWn grava blocos, ARCn arquiva redo e CKPT registra checkpoints.',
+  },
+  {
+    id: 'apbd-q35',
+    exam: 'prova2',
+    question: '35. Qual arquivo é indispensável para a instância saber a estrutura física do banco?',
+    options: ['Control file', 'Trace file', 'tnsnames.ora', 'Alert log'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. O control file guarda a localização dos datafiles e redo logs e é essencial para montar o banco.',
+    feedbackWrong: 'O arquivo crítico para estrutura física é o control file; por isso ele deve ser multiplexado.',
+  },
+  {
+    id: 'apbd-q36',
+    exam: 'prova2',
+    question: '36. Em arquitetura Multitenant, qual é o papel do PDB$SEED?',
+    options: [
+      'Servir como template somente leitura para criação de novos PDBs',
+      'Guardar apenas redo logs online',
+      'Executar o Listener na porta 1521',
+      'Substituir o CDB$ROOT como container principal',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. O PDB$SEED é um modelo usado para provisionar novos pluggable databases.',
+    feedbackWrong: 'PDB$SEED é o template somente leitura. O CDB$ROOT guarda metadados comuns e PDBs de usuário abrigam aplicações.',
+  },
+  {
+    id: 'apbd-q37',
+    exam: 'prova2',
+    question: '37. Qual família de visões do dicionário mostra apenas objetos pertencentes ao usuário atual?',
+    options: ['USER_xxx', 'ALL_xxx', 'DBA_xxx', 'V$xxx'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. USER_xxx limita o escopo aos objetos do próprio usuário.',
+    feedbackWrong: 'USER_xxx mostra objetos do usuário atual; ALL_xxx mostra objetos acessíveis; DBA_xxx mostra tudo com privilégio adequado.',
+  },
+  {
+    id: 'apbd-q38',
+    exam: 'prova2',
+    question: '38. Qual visão é adequada para identificar sessões bloqueadas por outras sessões?',
+    options: ['V$SESSION', 'DBA_TABLES', 'USER_OBJECTS', 'V$VERSION'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. V$SESSION expõe sessões, estado, espera e coluna blocking_session.',
+    feedbackWrong: 'Sessões e bloqueios são observados em V$SESSION, não em visões de metadados de tabelas.',
+  },
+  {
+    id: 'apbd-q39',
+    exam: 'prova2',
+    question: '39. Qual ferramenta analisa snapshots do AWR e gera recomendações para reduzir DB Time?',
+    options: ['ADDM', 'Data Pump', 'SQL*Plus DESCRIBE', 'Listener'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. ADDM usa snapshots do AWR para apontar gargalos e recomendações priorizadas.',
+    feedbackWrong: 'ADDM é o monitor diagnóstico baseado em AWR; Data Pump move dados, Listener recebe conexões e DESCRIBE mostra estrutura.',
+  },
+  {
+    id: 'apbd-q40',
+    exam: 'prova2',
+    question: '40. No STARTUP Oracle, em qual estágio os control files são abertos, mas datafiles e redo logs ainda não?',
+    options: ['MOUNT', 'NOMOUNT', 'OPEN', 'ABORT'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. Em MOUNT, a instância se associa ao banco lendo os control files.',
+    feedbackWrong: 'NOMOUNT lê parâmetros e cria SGA/processos; MOUNT abre control files; OPEN abre datafiles e redo logs.',
+  },
+  {
+    id: 'apbd-q41',
+    exam: 'prova2',
+    question: '41. Qual modo de shutdown faz rollback das transações abertas e encerra de forma limpa?',
+    options: ['SHUTDOWN IMMEDIATE', 'SHUTDOWN ABORT', 'STARTUP NOMOUNT', 'ALTER DATABASE MOUNT'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. SHUTDOWN IMMEDIATE é muito usado porque encerra limpo após rollback das transações abertas.',
+    feedbackWrong: 'SHUTDOWN IMMEDIATE faz rollback e não exige recovery; ABORT derruba abruptamente e exigirá crash recovery pelo SMON.',
+  },
+  {
+    id: 'apbd-q42',
+    exam: 'prova2',
+    question: '42. Qual componente permite conexões remotas ao banco escutando, por padrão, na porta 1521?',
+    options: ['Listener', 'PGA', 'DBWn', 'PDB$SEED'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. O Listener recebe conexões remotas e é administrado com lsnrctl.',
+    feedbackWrong: 'Conexões remotas chegam pelo Listener. PGA é memória privada, DBWn grava blocos e PDB$SEED é template de PDB.',
+  },
+  {
+    id: 'apbd-q43',
+    exam: 'prova2',
+    question: '43. Qual visão é mais adequada para acompanhar o progresso de operações longas como backups e rebuilds?',
+    options: ['V$SESSION_LONGOPS', 'DBA_TABLESPACES', 'USER_CONSTRAINTS', 'V$LOGFILE'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. V$SESSION_LONGOPS mostra progresso, trabalho total e tempo restante estimado de operações extensas.',
+    feedbackWrong: 'Operações demoradas são acompanhadas em V$SESSION_LONGOPS, não em visões estáticas de metadados.',
+  },
+  {
+    id: 'apbd-q44',
+    exam: 'prova2',
+    question: '44. Qual consulta ajuda a localizar o diretório de diagnóstico usado pelo alert log e pelos trace files?',
+    options: ['SELECT * FROM v$diag_info', 'SELECT * FROM dba_tables', 'SELECT * FROM user_users', 'SELECT * FROM v$tablespace'],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. V$DIAG_INFO expõe caminhos de diagnóstico, incluindo trilhas ligadas ao alert log e traces.',
+    feedbackWrong: 'Para localizar diretórios de diagnóstico do Oracle, a visão mais indicada é V$DIAG_INFO.',
+  },
+  {
+    id: 'apbd-q45',
+    exam: 'prova2',
+    question: '45. Após executar STARTUP em um ambiente Multitenant, o que normalmente acontece com os PDBs de usuário?',
+    options: [
+      'Podem permanecer em MOUNTED até serem abertos explicitamente ou terem SAVE STATE configurado',
+      'São sempre removidos e recriados a partir do PDB$SEED',
+      'Viraram automaticamente control files de backup',
+      'Passam a substituir o CDB$ROOT como container principal',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. O CDB sobe, mas PDBs de usuário podem exigir ALTER PLUGGABLE DATABASE ... OPEN ou SAVE STATE.',
+    feedbackWrong: 'Em Multitenant, STARTUP não garante que todos os PDBs de usuário fiquem abertos; isso depende da abertura explícita ou do estado salvo.',
+  },
+  {
+    id: 'apbd-q46',
+    exam: 'prova2',
+    question: '46. Por que o Oracle pode confirmar um COMMIT antes de o bloco alterado chegar ao datafile?',
+    options: [
+      'Porque a durabilidade imediata é garantida pelo redo gravado pelo LGWR, enquanto o DBWn pode gravar o bloco depois',
+      'Porque o Oracle ignora redo logs quando a sessão usa PGA grande',
+      'Porque o Shared Pool substitui permanentemente os datafiles após o COMMIT',
+      'Porque o CKPT grava o bloco diretamente no cliente antes do LGWR',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. O ponto crítico do COMMIT é a gravação do redo; os dirty blocks podem ser persistidos mais tarde sem perder a consistência.',
+    feedbackWrong: 'O COMMIT depende da persistência do redo pelo LGWR. O bloco de dados pode continuar apenas em memória até o DBWn gravá-lo.',
   },
 ];
