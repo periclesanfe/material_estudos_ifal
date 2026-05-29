@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { ReactNode } from 'react';
 import AIQuizGenerator from '../../components/ui/AIQuizGenerator';
 import AIKahootQuiz from '../../components/ui/AIKahootQuiz';
@@ -33,6 +34,112 @@ interface ConceptItem {
 interface PanelItem {
   title: string;
   description: string;
+}
+
+interface CodeToken {
+  text: string;
+  className: string;
+}
+
+const INLINE_CODE_REGEX = /`([^`]+)`/g;
+
+const CODE_KEYWORDS = new Set([
+  'ADD', 'ALL', 'ALTER', 'AND', 'AS', 'BEGIN', 'BEFORE', 'BODY', 'BY', 'CASE', 'CLOSE', 'COMMIT',
+  'CONSTANT', 'CREATE', 'CURSOR', 'DECLARE', 'DEFAULT', 'DELETE', 'DUAL', 'ELSE', 'ELSIF', 'END',
+  'EXCEPTION', 'EXECUTE', 'EXIT', 'FETCH', 'FOR', 'FOUND', 'FROM', 'FUNCTION', 'IF', 'IMMEDIATE',
+  'IN', 'INDEX', 'INSERT', 'INTO', 'IS', 'LOOP', 'NOT', 'NOTFOUND', 'NOWAIT', 'NULL', 'OF', 'ON',
+  'OPEN', 'OR', 'OTHERS', 'OUT', 'PACKAGE', 'PRAGMA', 'PROCEDURE', 'RAISE', 'RETURN', 'REVERSE',
+  'ROLLBACK', 'ROW', 'ROWTYPE', 'SAVEPOINT', 'SELECT', 'SET', 'TABLE', 'THEN', 'TO', 'TRIGGER',
+  'TYPE', 'UPDATE', 'VALUES', 'VARCHAR2', 'VIEW', 'WHEN', 'WHERE', 'WHILE',
+]);
+
+const CODE_TOKEN_REGEX = /(--.*$|'[^']*'|"[^"]*"|:\w+|%\w+|\b\d+(?:\.\d+)?\b|\b[A-Za-z_][A-Za-z0-9_$#]*\b)/g;
+
+function getTokenClass(token: string) {
+  if (token.startsWith('--')) {
+    return 'text-text-muted/70 italic';
+  }
+
+  if (token.startsWith("'") || token.startsWith('"')) {
+    return 'text-accent5';
+  }
+
+  if (token.startsWith(':')) {
+    return 'text-accent4 font-semibold';
+  }
+
+  if (token.startsWith('%')) {
+    return 'text-accent3 font-semibold';
+  }
+
+  if (/^\d+(?:\.\d+)?$/.test(token)) {
+    return 'text-accent4';
+  }
+
+  if (CODE_KEYWORDS.has(token.toUpperCase())) {
+    return 'text-accent font-semibold';
+  }
+
+  if (/^(DBMS_OUTPUT|SQLCODE|SQLERRM|SYSTIMESTAMP|SYSDATE|NEXTVAL|CURRVAL)$/i.test(token)) {
+    return 'text-accent2 font-semibold';
+  }
+
+  return 'text-text';
+}
+
+function highlightCodeLine(line: string) {
+  const tokens: CodeToken[] = [];
+  let lastIndex = 0;
+
+  line.replace(CODE_TOKEN_REGEX, (match, _group, offset: number) => {
+    if (offset > lastIndex) {
+      tokens.push({ text: line.slice(lastIndex, offset), className: 'text-text' });
+    }
+
+    tokens.push({ text: match, className: getTokenClass(match) });
+    lastIndex = offset + match.length;
+
+    return match;
+  });
+
+  if (lastIndex < line.length) {
+    tokens.push({ text: line.slice(lastIndex), className: 'text-text' });
+  }
+
+  if (tokens.length === 0) {
+    tokens.push({ text: ' ', className: 'text-text' });
+  }
+
+  return tokens;
+}
+
+function InlineCode({ children }: { children: ReactNode }) {
+  return (
+    <code className="rounded-md border border-accent/20 bg-accent/10 px-1.5 py-0.5 font-mono text-[0.92em] font-semibold text-accent">
+      {children}
+    </code>
+  );
+}
+
+function renderInlineCodeText(text: string) {
+  const parts: ReactNode[] = [];
+  let lastIndex = 0;
+
+  text.replace(INLINE_CODE_REGEX, (match, code, offset: number) => {
+    if (offset > lastIndex) {
+      parts.push(text.slice(lastIndex, offset));
+    }
+
+    parts.push(<InlineCode key={`${offset}-${code}`}>{code}</InlineCode>);
+    lastIndex = offset + match.length;
+    return match;
+  });
+
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
 }
 
 function SectionHeader({ title, subtitle, colorClass = 'text-accent' }: SectionHeaderProps) {
@@ -92,11 +199,62 @@ function ColoredPanelList({ items }: { items: PanelItem[] }) {
   );
 }
 
-function CodeBlock({ children }: { children: string }) {
+function CodeBlock({ children, language = 'sql' }: { children: string; language?: string }) {
+  const [copied, setCopied] = useState(false);
+  const lines = children.replace(/\n$/, '').split('\n');
+
+  async function handleCopy() {
+    try {
+      await navigator.clipboard.writeText(children);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1600);
+    } catch {
+      setCopied(false);
+    }
+  }
+
   return (
-    <pre className="study-surface overflow-x-auto p-4 text-xs md:text-sm leading-relaxed text-text-muted">
-      <code>{children}</code>
-    </pre>
+    <div className="study-surface overflow-hidden">
+      <div className="flex items-center justify-between border-b border-border bg-bg/60 px-4 py-2.5">
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5">
+            <span className="h-2.5 w-2.5 rounded-full bg-accent2/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-accent4/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-accent5/80" />
+          </div>
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-text-muted">
+            {language}
+          </span>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => { void handleCopy(); }}
+          className="rounded-lg border border-border bg-card px-3 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-text-muted transition-all duration-200 hover:-translate-y-0.5 hover:text-text focus:outline-none focus:border-accent"
+        >
+          {copied ? 'Copiado' : 'Copiar'}
+        </button>
+      </div>
+
+      <pre className="overflow-x-auto bg-[#0b1020] px-0 py-0 text-xs md:text-sm leading-6">
+        <code className="block min-w-full font-mono">
+          {lines.map((line, lineIndex) => (
+            <div key={`${lineIndex}-${line}`} className="grid grid-cols-[auto_1fr]">
+              <span className="select-none border-r border-white/5 bg-black/10 px-3 py-0.5 text-right text-[11px] text-text-muted/55">
+                {lineIndex + 1}
+              </span>
+              <span className="px-4 py-0.5 whitespace-pre">
+                {highlightCodeLine(line).map((token, tokenIndex) => (
+                  <span key={`${lineIndex}-${tokenIndex}-${token.text}`} className={token.className}>
+                    {token.text}
+                  </span>
+                ))}
+              </span>
+            </div>
+          ))}
+        </code>
+      </pre>
+    </div>
   );
 }
 
@@ -108,6 +266,22 @@ function TheoryBlock({ title, children }: { title: string; children: ReactNode }
         {children}
       </div>
     </div>
+  );
+}
+
+function ExampleBox({
+  title,
+  children,
+  accent = 'var(--color-accent4)',
+}: {
+  title: string;
+  children: ReactNode;
+  accent?: string;
+}) {
+  return (
+    <HighlightBox title={title} accent={accent}>
+      {children}
+    </HighlightBox>
   );
 }
 
@@ -486,6 +660,137 @@ const arquiteturaMemoriaItems: PanelItem[] = [
   {
     title: 'PGA',
     description: 'Memória privada de cada Server Process, usada para informações da sessão, binds e áreas de ordenação.',
+  },
+];
+
+const plsqlFundamentosItems: ConceptItem[] = [
+  {
+    title: 'Bloco PL/SQL',
+    description: 'A unidade básica tem DECLARE, BEGIN, EXCEPTION e END; o miolo executável é obrigatório e as outras partes são opcionais.',
+    accent: 'accent',
+  },
+  {
+    title: 'Servidor como ponto de regra',
+    description: 'PL/SQL centraliza lógica de negócio, auditoria e validação no banco, independentemente da aplicação cliente.',
+    accent: 'accent3',
+  },
+  {
+    title: '%TYPE e %ROWTYPE',
+    description: 'Reaproveitam tipos e estruturas do próprio banco, reduzindo divergência entre código e modelo físico.',
+    accent: 'accent4',
+  },
+  {
+    title: 'Controle procedural',
+    description: 'IF, CASE, LOOP, FOR e WHILE permitem decidir e repetir ações ao redor de comandos SQL.',
+    accent: 'accent5',
+  },
+];
+
+const plsqlCursorItems: PanelItem[] = [
+  {
+    title: 'SELECT INTO',
+    description: 'Serve para consulta de linha única. Se não houver linha, ocorre NO_DATA_FOUND; se houver mais de uma, TOO_MANY_ROWS.',
+  },
+  {
+    title: 'Cursores implícitos',
+    description: 'O Oracle os cria automaticamente para DML e SELECT INTO. Seus atributos SQL%ROWCOUNT, SQL%FOUND e SQL%NOTFOUND ajudam no pós-processamento.',
+  },
+  {
+    title: 'Cursores explícitos',
+    description: 'São declarados pelo programador quando a consulta pode devolver várias linhas e exigem OPEN, FETCH e CLOSE.',
+  },
+  {
+    title: 'Cursor FOR loop',
+    description: 'Forma mais enxuta de percorrer resultados, porque o Oracle abre, busca e fecha o cursor automaticamente.',
+  },
+  {
+    title: 'FOR UPDATE',
+    description: 'Bloqueia as linhas lidas para atualização coordenada, normalmente combinado com WHERE CURRENT OF.',
+  },
+  {
+    title: 'Records e arrays associativos',
+    description: 'Permitem tratar linhas completas e coleções em memória, úteis para processamento intermediário antes de gravar no banco.',
+  },
+];
+
+const plsqlExceptionItems: PanelItem[] = [
+  {
+    title: 'Predefinidas',
+    description: 'NO_DATA_FOUND, TOO_MANY_ROWS, ZERO_DIVIDE e DUP_VAL_ON_INDEX são exemplos já nomeados pelo Oracle.',
+  },
+  {
+    title: 'Nomeadas com pragma',
+    description: 'PRAGMA EXCEPTION_INIT associa um nome legível a um código Oracle específico, como ORA-02291.',
+  },
+  {
+    title: 'Definidas pelo usuário',
+    description: 'Você cria a exceção e a dispara com RAISE quando a regra de negócio detecta uma situação inválida.',
+  },
+  {
+    title: 'Diagnóstico',
+    description: 'SQLCODE e SQLERRM ajudam a registrar o código e a mensagem reais quando um handler genérico é necessário.',
+  },
+  {
+    title: 'RAISE_APPLICATION_ERROR',
+    description: 'Expõe erro de aplicação para o cliente com código na faixa -20000 a -20999 e mensagem controlada.',
+  },
+  {
+    title: 'Propagação',
+    description: 'Se um bloco não tratar a exceção, a falha sobe para o chamador; depois do handler, o fluxo não volta ao ponto do erro.',
+  },
+];
+
+const plsqlStoredProgramItems: PanelItem[] = [
+  {
+    title: 'Procedure',
+    description: 'Executa uma ação. Pode receber parâmetros IN, OUT e IN OUT, mas não retorna valor obrigatório pelo cabeçalho.',
+  },
+  {
+    title: 'Function',
+    description: 'Sempre retorna um valor com RETURN e pode ser chamada dentro de uma expressão SQL, conforme a regra do caso.',
+  },
+  {
+    title: 'Package',
+    description: 'Agrupa interface pública e implementação privada, melhorando organização, reuso e desempenho de carregamento.',
+  },
+  {
+    title: 'Transação autônoma',
+    description: 'Isola uma rotina do contexto transacional chamador, muito útil para tabelas de log e trilhas de auditoria.',
+  },
+  {
+    title: 'Overloading',
+    description: 'No package, procedures e functions podem compartilhar nome se a assinatura realmente mudar em quantidade ou tipo de parâmetros.',
+  },
+  {
+    title: 'Compilação com erros',
+    description: 'O objeto pode ser criado inválido; SHOW ERRORS, ALL_ERRORS e USER_SOURCE ajudam a localizar o problema.',
+  },
+];
+
+const triggerItems: PanelItem[] = [
+  {
+    title: 'Disparo automático',
+    description: 'A trigger executa quando o evento acontece; ela não é chamada manualmente pelo usuário como uma procedure comum.',
+  },
+  {
+    title: 'Eventos típicos',
+    description: 'INSERT, UPDATE, DELETE e eventos DDL são gatilhos frequentes para auditoria, validação e automatização.',
+  },
+  {
+    title: 'Granularidade',
+    description: 'Uma trigger pode agir por instrução inteira ou por linha afetada, dependendo do comportamento desejado.',
+  },
+  {
+    title: ':OLD e :NEW',
+    description: 'Em triggers DML por linha, esses pseudorregistros representam o estado anterior e o novo estado do registro.',
+  },
+  {
+    title: 'Uso com cautela',
+    description: 'Triggers escondem lógica de execução automática; por isso, devem ser enxutas, previsíveis e bem justificadas.',
+  },
+  {
+    title: 'Exemplo clássico',
+    description: 'Auditar alterações salariais, impedir operações inválidas ou preencher colunas derivadas antes do commit.',
   },
 ];
 
@@ -911,8 +1216,7 @@ function ObjetosSection() {
         </p>
       </TheoryBlock>
 
-      <div className="space-y-3">
-        <h3 className="font-display font-bold text-2xl text-accent4">Exemplo de tabela com constraints</h3>
+      <ExampleBox title="Exemplo de tabela com constraints" accent="var(--color-accent4)">
         <CodeBlock>{`CREATE TABLE tab_departamento (
   num_departamento NUMBER(10) CONSTRAINT nn_depto_numdepto NOT NULL,
   nom_departamento VARCHAR2(100) CONSTRAINT nn_depto_nomdepto NOT NULL,
@@ -924,7 +1228,7 @@ function ObjetosSection() {
   CONSTRAINT depto_empregado_fk FOREIGN KEY (num_nss_gerente)
     REFERENCES tab_empregado (num_nss)
 );`}</CodeBlock>
-      </div>
+      </ExampleBox>
 
       <ConceptGrid
         columns="md:grid-cols-3"
@@ -948,11 +1252,7 @@ function ObjetosSection() {
       />
 
       <TheoryBlock title="Evolução do modelo com ALTER TABLE">
-        <p>
-          Modelos de dados mudam porque o negócio muda. Novas informações passam a ser necessárias, regras antigas
-          deixam de fazer sentido e algumas estruturas precisam ser refinadas. O `ALTER TABLE` representa esse ciclo
-          de evolução no banco físico.
-        </p>
+        <p>{renderInlineCodeText(`Modelos de dados mudam porque o negócio muda. Novas informações passam a ser necessárias, regras antigas deixam de fazer sentido e algumas estruturas precisam ser refinadas. O \`ALTER TABLE\` representa esse ciclo de evolução no banco físico.`)}</p>
         <p>
           A decisão importante é não tratar alterações como remendos soltos. Adicionar, modificar ou remover colunas
           deve preservar a coerência do modelo, a documentação e as constraints. Assim, o banco continua legível mesmo
@@ -980,11 +1280,7 @@ CACHE 20;`}</CodeBlock>
           parte dos dados ou oferecer uma forma mais segura de leitura para usuários e sistemas. Como representam uma
           consulta salva, não substituem a tabela, mas organizam o acesso a ela.
         </p>
-        <p>
-          Sequences resolvem o problema de gerar identificadores sem depender de digitação manual. Em vez de cada
-          inserção inventar um número, o banco fornece o próximo valor disponível. Isso é especialmente útil para
-          chaves artificiais, desde que o uso de `NEXTVAL` e `CURRVAL` respeite os contextos permitidos pelo Oracle.
-        </p>
+        <p>{renderInlineCodeText(`Sequences resolvem o problema de gerar identificadores sem depender de digitação manual. Em vez de cada inserção inventar um número, o banco fornece o próximo valor disponível. Isso é especialmente útil para chaves artificiais, desde que o uso de \`NEXTVAL\` e \`CURRVAL\` respeite os contextos permitidos pelo Oracle.`)}</p>
       </TheoryBlock>
     </section>
   );
@@ -1013,12 +1309,7 @@ function ArmazenamentoSection() {
           usuário pensa em tabelas, índices e tablespaces; o DBA consegue lidar com arquivos, discos e distribuição
           física sem obrigar a aplicação a mudar sua forma de acesso.
         </p>
-        <p>
-          Em um sistema de frota, por exemplo, a aplicação pode consultar `TAB_VEICULO`, `TAB_MOTORISTA` e
-          `TAB_TRAJETO` como objetos normais. Por trás disso, cada tabela pode ser um segmento diferente, ocupando
-          extents distintos dentro de um tablespace. O tablespace, por sua vez, pode estar apoiado em mais de um
-          datafile físico, como `ARQUIVO_01.dbf` e `ARQUIVO_02.dbf`.
-        </p>
+        <p>{renderInlineCodeText(`Em um sistema de frota, por exemplo, a aplicação pode consultar \`TAB_VEICULO\`, \`TAB_MOTORISTA\` e \`TAB_TRAJETO\` como objetos normais. Por trás disso, cada tabela pode ser um segmento diferente, ocupando extents distintos dentro de um tablespace. O tablespace, por sua vez, pode estar apoiado em mais de um datafile físico, como \`ARQUIVO_01.dbf\` e \`ARQUIVO_02.dbf\`.`)}</p>
       </TheoryBlock>
 
       <div className="study-surface p-5 md:p-6 space-y-4">
@@ -1028,11 +1319,7 @@ function ArmazenamentoSection() {
       </div>
 
       <TheoryBlock title="Bloco de dados: a menor unidade gerenciada">
-        <p>
-          O Oracle Data Block é a unidade mínima que o Oracle lê e grava. O banco não trabalha gravando um byte solto
-          de uma linha; ele movimenta blocos. O tamanho padrão é definido na criação do banco pelo parâmetro
-          `DB_BLOCK_SIZE`, com valores comuns como 4KB, 8KB ou 16KB.
-        </p>
+        <p>{renderInlineCodeText(`O Oracle Data Block é a unidade mínima que o Oracle lê e grava. O banco não trabalha gravando um byte solto de uma linha; ele movimenta blocos. O tamanho padrão é definido na criação do banco pelo parâmetro \`DB_BLOCK_SIZE\`, com valores comuns como 4KB, 8KB ou 16KB.`)}</p>
         <p>
           Dentro de um bloco existem três áreas importantes. O cabeçalho guarda metadados, como endereço do bloco,
           tipo de segmento e informações sobre transações ativas. A área de dados guarda linhas de tabela ou entradas
@@ -1066,21 +1353,11 @@ function ArmazenamentoSection() {
       />
 
       <TheoryBlock title="PCTFREE e PCTUSED na prática">
-        <p>
-          `PCTFREE` define quanto do bloco deve permanecer livre para updates que aumentem o tamanho das linhas já
-          existentes. Se `PCTFREE = 20`, o Oracle insere novas linhas até o bloco ficar aproximadamente 80% cheio.
-          A partir daí, ele preserva os 20% restantes para crescimento de linhas que já estão ali.
-        </p>
-        <p>
-          `PCTUSED` define o ponto em que um bloco volta a aceitar inserções depois de perder dados por deleções. Se
-          `PCTUSED = 40`, um bloco que estava cheio só volta para a lista de blocos disponíveis quando sua ocupação
-          cair abaixo de 40%. Isso evita que o banco fique alternando o mesmo bloco entre disponível e indisponível a
-          cada pequena mudança.
-        </p>
+        <p>{renderInlineCodeText(`\`PCTFREE\` define quanto do bloco deve permanecer livre para updates que aumentem o tamanho das linhas já existentes. Se \`PCTFREE = 20\`, o Oracle insere novas linhas até o bloco ficar aproximadamente 80% cheio. A partir daí, ele preserva os 20% restantes para crescimento de linhas que já estão ali.`)}</p>
+        <p>{renderInlineCodeText(`\`PCTUSED\` define o ponto em que um bloco volta a aceitar inserções depois de perder dados por deleções. Se \`PCTUSED = 40\`, um bloco que estava cheio só volta para a lista de blocos disponíveis quando sua ocupação cair abaixo de 40%. Isso evita que o banco fique alternando o mesmo bloco entre disponível e indisponível a cada pequena mudança.`)}</p>
       </TheoryBlock>
 
-      <div className="space-y-3">
-        <h3 className="font-display font-bold text-2xl text-accent4">Exemplo mental de ocupação do bloco</h3>
+      <ExampleBox title="Exemplo mental de ocupação do bloco" accent="var(--color-accent4)">
         <CodeBlock>{`Bloco com PCTFREE = 20 e PCTUSED = 40
 
 1. Inserts ocupam o bloco ate cerca de 80%.
@@ -1088,7 +1365,7 @@ function ArmazenamentoSection() {
 3. Updates ainda podem usar a reserva de 20%.
 4. Deletes reduzem a ocupacao do bloco.
 5. Se o uso cair abaixo de 40%, o bloco volta a aceitar inserts.`}</CodeBlock>
-      </div>
+      </ExampleBox>
 
       <TheoryBlock title="Extents e segmentos: como os objetos crescem">
         <p>
@@ -1096,21 +1373,13 @@ function ArmazenamentoSection() {
           isto é, um conjunto contíguo de blocos. Quando esse extent enche, outro extent pode ser alocado para o
           mesmo objeto. Os extents de um objeto não precisam ficar todos lado a lado no disco.
         </p>
-        <p>
-          O segmento é o conjunto desses extents para um objeto específico. Se `TAB_VEICULO`, `TAB_MOTORISTA` e
-          `TAB_TRAJETO` estão no mesmo tablespace, elas ainda são segmentos diferentes. Cada uma cresce de forma
-          própria, de acordo com o volume de dados que recebe.
-        </p>
+        <p>{renderInlineCodeText(`O segmento é o conjunto desses extents para um objeto específico. Se \`TAB_VEICULO\`, \`TAB_MOTORISTA\` e \`TAB_TRAJETO\` estão no mesmo tablespace, elas ainda são segmentos diferentes. Cada uma cresce de forma própria, de acordo com o volume de dados que recebe.`)}</p>
       </TheoryBlock>
 
       <PanelList items={segmentoItems} />
 
       <TheoryBlock title="Tablespace e datafile: a ponte entre os mundos">
-        <p>
-          O tablespace é lógico: ele agrupa segmentos e dá ao DBA uma forma de organizar o banco por finalidade. Em
-          uma aplicação de frota, uma escolha comum seria separar dados e índices, por exemplo `TBS_FROTA_DD` para
-          tabelas e `TBS_FROTA_IX` para índices.
-        </p>
+        <p>{renderInlineCodeText(`O tablespace é lógico: ele agrupa segmentos e dá ao DBA uma forma de organizar o banco por finalidade. Em uma aplicação de frota, uma escolha comum seria separar dados e índices, por exemplo \`TBS_FROTA_DD\` para tabelas e \`TBS_FROTA_IX\` para índices.`)}</p>
         <p>
           O datafile é físico: é o arquivo real gravado no sistema operacional. Um tablespace pode usar um ou mais
           datafiles. Isso permite distribuir armazenamento, controlar crescimento e fazer manutenção sem que a
@@ -1287,17 +1556,12 @@ function SegurancaSection() {
           permissões proporcionais ao seu papel. Conta genérica, senha fraca e privilégios amplos demais dificultam
           auditoria e aumentam o impacto de qualquer erro.
         </p>
-        <p>
-          O `PROFILE` entra nessa camada como um pacote de política. Em vez de configurar senha e consumo de recursos
-          usuário por usuário, o DBA cria perfis reutilizáveis, como um profile para aplicações, outro para analistas
-          de relatório e outro para contas de teste. Isso melhora padronização e reduz esquecimento operacional.
-        </p>
+        <p>{renderInlineCodeText(`O \`PROFILE\` entra nessa camada como um pacote de política. Em vez de configurar senha e consumo de recursos usuário por usuário, o DBA cria perfis reutilizáveis, como um profile para aplicações, outro para analistas de relatório e outro para contas de teste. Isso melhora padronização e reduz esquecimento operacional.`)}</p>
       </TheoryBlock>
 
       <ColoredPanelList items={profileItems} />
 
-      <div className="space-y-3">
-        <h3 className="font-display font-bold text-2xl text-accent2">Exemplo de profile</h3>
+      <ExampleBox title="Exemplo de profile" accent="var(--color-accent2)">
         <CodeBlock>{`CREATE PROFILE app_restrito LIMIT
   FAILED_LOGIN_ATTEMPTS 3
   PASSWORD_LOCK_TIME 1/24
@@ -1312,20 +1576,11 @@ CREATE USER sistema_frota IDENTIFIED BY senha_inicial
   PROFILE app_restrito;
 
 ALTER USER sistema_frota PROFILE app_restrito;`}</CodeBlock>
-      </div>
+      </ExampleBox>
 
       <TheoryBlock title="Política de senha">
-        <p>
-          A política de senha tenta bloquear padrões previsíveis. `FAILED_LOGIN_ATTEMPTS` e `PASSWORD_LOCK_TIME`
-          reduzem ataques por tentativa repetida. Se o limite for 3 e a quarta tentativa falhar, a conta é bloqueada
-          pelo tempo configurado. Como o Oracle aceita frações de dia, `1/24` representa aproximadamente uma hora.
-        </p>
-        <p>
-          Expiração e histórico resolvem outro problema: o usuário trocar a senha apenas formalmente e voltar para a
-          antiga. `PASSWORD_LIFE_TIME` define a validade; `PASSWORD_GRACE_TIME` dá uma janela curta para troca;
-          `PASSWORD_REUSE_TIME` e `PASSWORD_REUSE_MAX` impedem reutilização fácil. Já `PASSWORD_VERIFY_FUNCTION`
-          permite aplicar uma função PL/SQL para rejeitar senhas triviais, curtas ou muito parecidas com a anterior.
-        </p>
+        <p>{renderInlineCodeText(`A política de senha tenta bloquear padrões previsíveis. \`FAILED_LOGIN_ATTEMPTS\` e \`PASSWORD_LOCK_TIME\` reduzem ataques por tentativa repetida. Se o limite for 3 e a quarta tentativa falhar, a conta é bloqueada pelo tempo configurado. Como o Oracle aceita frações de dia, \`1/24\` representa aproximadamente uma hora.`)}</p>
+        <p>{renderInlineCodeText(`Expiração e histórico resolvem outro problema: o usuário trocar a senha apenas formalmente e voltar para a antiga. \`PASSWORD_LIFE_TIME\` define a validade; \`PASSWORD_GRACE_TIME\` dá uma janela curta para troca; \`PASSWORD_REUSE_TIME\` e \`PASSWORD_REUSE_MAX\` impedem reutilização fácil. Já \`PASSWORD_VERIFY_FUNCTION\` permite aplicar uma função PL/SQL para rejeitar senhas triviais, curtas ou muito parecidas com a anterior.`)}</p>
       </TheoryBlock>
 
       <ColoredPanelList items={senhaItems} />
@@ -1336,12 +1591,7 @@ ALTER USER sistema_frota PROFILE app_restrito;`}</CodeBlock>
           abrir sessões demais, deixar conexões ociosas por horas ou executar uma consulta pesada em horário crítico.
           Profiles ajudam a limitar esse impacto antes que o problema vire indisponibilidade para todos.
         </p>
-        <p>
-          Limites por sessão olham a conexão como um todo. Limites por chamada olham cada comando SQL individual. Se
-          um `SELECT` ultrapassa `CPU_PER_CALL`, por exemplo, o comando pode ser interrompido sem necessariamente
-          derrubar a sessão inteira. Para que esses limites sejam aplicados, o parâmetro global `RESOURCE_LIMIT`
-          precisa estar habilitado.
-        </p>
+        <p>{renderInlineCodeText(`Limites por sessão olham a conexão como um todo. Limites por chamada olham cada comando SQL individual. Se um \`SELECT\` ultrapassa \`CPU_PER_CALL\`, por exemplo, o comando pode ser interrompido sem necessariamente derrubar a sessão inteira. Para que esses limites sejam aplicados, o parâmetro global \`RESOURCE_LIMIT\` precisa estar habilitado.`)}</p>
       </TheoryBlock>
 
       <ColoredPanelList items={limiteSessaoItems} />
@@ -1363,17 +1613,8 @@ ALTER SYSTEM SET RESOURCE_LIMIT = TRUE;`}</CodeBlock>
       </div>
 
       <TheoryBlock title="Falhas lógicas">
-        <p>
-          Nem toda falha exige restaurar arquivos físicos. Muitas ocorrências são lógicas: um `UPDATE` sem `WHERE`,
-          um `DELETE` indevido, um `TRUNCATE` acidental ou uma alteração de atributo feita no conjunto errado de
-          registros. Nesses casos, restaurar o banco inteiro pode ser mais caro e perigoso do que recuperar apenas o
-          dado afetado.
-        </p>
-        <p>
-          O LogMiner ajuda na investigação porque lê redo logs e reconstrói a história das alterações. Com
-          supplemental logging e dicionário adequado, ele permite consultar `V$LOGMNR_CONTENTS` para enxergar comandos
-          executados, ordem dos eventos, objetos afetados e possíveis instruções de desfazer.
-        </p>
+        <p>{renderInlineCodeText(`Nem toda falha exige restaurar arquivos físicos. Muitas ocorrências são lógicas: um \`UPDATE\` sem \`WHERE\`, um \`DELETE\` indevido, um \`TRUNCATE\` acidental ou uma alteração de atributo feita no conjunto errado de registros. Nesses casos, restaurar o banco inteiro pode ser mais caro e perigoso do que recuperar apenas o dado afetado.`)}</p>
+        <p>{renderInlineCodeText(`O LogMiner ajuda na investigação porque lê redo logs e reconstrói a história das alterações. Com supplemental logging e dicionário adequado, ele permite consultar \`V$LOGMNR_CONTENTS\` para enxergar comandos executados, ordem dos eventos, objetos afetados e possíveis instruções de desfazer.`)}</p>
       </TheoryBlock>
 
       <FlowDiagram
@@ -1406,24 +1647,13 @@ FLASHBACK TABLE tab_cliente TO BEFORE DROP;`}</CodeBlock>
       </div>
 
       <TheoryBlock title="Backup lógico e físico">
-        <p>
-          Data Pump e RMAN respondem a problemas diferentes. Data Pump trabalha no nível lógico: schemas, tabelas,
-          objetos e subconjuntos de dados. Ele é indicado para migração, homologação, cópia seletiva e transporte de
-          partes do banco. Antes de usar `expdp` e `impdp`, o DBA normalmente cria um `DIRECTORY` no Oracle e concede
-          permissões de leitura e escrita sobre esse diretório.
-        </p>
-        <p>
-          RMAN trabalha no nível físico e é o caminho principal para backup e recovery de arquivos do banco. Ele lida
-          com datafiles, archived redo logs, control file, SPFILE e Flash Recovery Area. A diferença entre `RESTORE` e
-          `RECOVER` é essencial: restore traz arquivos do backup; recover aplica logs para deixar os arquivos
-          consistentes no ponto necessário.
-        </p>
+        <p>{renderInlineCodeText(`Data Pump e RMAN respondem a problemas diferentes. Data Pump trabalha no nível lógico: schemas, tabelas, objetos e subconjuntos de dados. Ele é indicado para migração, homologação, cópia seletiva e transporte de partes do banco. Antes de usar \`expdp\` e \`impdp\`, o DBA normalmente cria um \`DIRECTORY\` no Oracle e concede permissões de leitura e escrita sobre esse diretório.`)}</p>
+        <p>{renderInlineCodeText(`RMAN trabalha no nível físico e é o caminho principal para backup e recovery de arquivos do banco. Ele lida com datafiles, archived redo logs, control file, SPFILE e Flash Recovery Area. A diferença entre \`RESTORE\` e \`RECOVER\` é essencial: restore traz arquivos do backup; recover aplica logs para deixar os arquivos consistentes no ponto necessário.`)}</p>
       </TheoryBlock>
 
       <ConceptGrid items={backupItems} />
 
-      <div className="space-y-3">
-        <h3 className="font-display font-bold text-2xl text-accent5">Exemplos de escolha</h3>
+      <ExampleBox title="Exemplos de escolha" accent="var(--color-accent5)">
         <CodeBlock>{`-- Migrar um schema para homologacao:
 expdp system DIRECTORY=dp_dir DUMPFILE=frota.dmp LOGFILE=frota.log SCHEMAS=FROTA
 impdp system DIRECTORY=dp_dir DUMPFILE=frota.dmp LOGFILE=imp_frota.log REMAP_SCHEMA=FROTA:FROTA_TESTE
@@ -1435,15 +1665,10 @@ RMAN> RECOVER DATAFILE 5;
 -- Recuperacao incompleta:
 RMAN> RECOVER DATABASE UNTIL TIME "TO_DATE('2026-05-29 10:30:00','YYYY-MM-DD HH24:MI:SS')";
 SQL> ALTER DATABASE OPEN RESETLOGS;`}</CodeBlock>
-      </div>
+      </ExampleBox>
 
       <TheoryBlock title="Continuidade e DRP">
-        <p>
-          O plano de recuperação de desastres entra quando a falha ultrapassa um erro local. Perda de mídia, queda de
-          infraestrutura, indisponibilidade do data center e catástrofes exigem decisões anteriores ao incidente.
-          Nessa etapa, duas métricas orientam a estratégia: `RTO`, tempo máximo aceitável para voltar a operar, e
-          `RPO`, perda máxima de dados aceitável.
-        </p>
+        <p>{renderInlineCodeText(`O plano de recuperação de desastres entra quando a falha ultrapassa um erro local. Perda de mídia, queda de infraestrutura, indisponibilidade do data center e catástrofes exigem decisões anteriores ao incidente. Nessa etapa, duas métricas orientam a estratégia: \`RTO\`, tempo máximo aceitável para voltar a operar, e \`RPO\`, perda máxima de dados aceitável.`)}</p>
         <p>
           Um RTO baixo tende a exigir alta disponibilidade, failover e ambientes standby. Um RPO baixo exige backups
           frequentes, archived logs, replicação e, em cenários críticos, Data Guard. Recursos como RAC, Active Data
@@ -1469,11 +1694,7 @@ SQL> ALTER DATABASE OPEN RESETLOGS;`}</CodeBlock>
           Data Pump atende movimentação lógica de dados; RMAN cobre falhas físicas; DRP organiza continuidade quando o
           problema ultrapassa o banco local.
         </p>
-        <p>
-          Essas camadas não competem. Em um incidente real, elas se complementam. Um `UPDATE` errado pode ser
-          investigado com LogMiner e revertido com Flashback. Um datafile corrompido chama RMAN. Uma indisponibilidade
-          do data center exige Data Guard, RAC, site alternativo e um plano de operação previamente testado.
-        </p>
+        <p>{renderInlineCodeText(`Essas camadas não competem. Em um incidente real, elas se complementam. Um \`UPDATE\` errado pode ser investigado com LogMiner e revertido com Flashback. Um datafile corrompido chama RMAN. Uma indisponibilidade do data center exige Data Guard, RAC, site alternativo e um plano de operação previamente testado.`)}</p>
       </TheoryBlock>
 
       <ColoredPanelList items={relacaoRecursosItems} />
@@ -1494,11 +1715,7 @@ SQL> ALTER DATABASE OPEN RESETLOGS;`}</CodeBlock>
       <ColoredPanelList items={estudoCenarioItems} />
 
       <HighlightBox title="Resumo por incidente" accent="var(--color-accent4)">
-        <p>
-          Senha fraca ou abuso de conexão aponta para profiles. `UPDATE` errado aponta para LogMiner ou Flashback.
-          Migração de schema aponta para Data Pump. Datafile perdido aponta para RMAN. Data center indisponível aponta
-          para DRP com redundância, Data Guard, RAC e site alternativo.
-        </p>
+        <p>{renderInlineCodeText(`Senha fraca ou abuso de conexão aponta para profiles. \`UPDATE\` errado aponta para LogMiner ou Flashback. Migração de schema aponta para Data Pump. Datafile perdido aponta para RMAN. Data center indisponível aponta para DRP com redundância, Data Guard, RAC e site alternativo.`)}</p>
       </HighlightBox>
     </section>
   );
@@ -1514,12 +1731,7 @@ function ArquiteturaSection() {
       />
 
       <HighlightBox title="Ideia central">
-        <p>
-          Oracle separa claramente a parte que executa da parte que persiste. A instância é memória mais processos em
-          execução; o banco de dados é o conjunto de arquivos físicos. Essa separação explica por que uma instância
-          pode estar iniciada em `NOMOUNT` sem ainda ter aberto os arquivos do banco, e por que recovery depende tanto
-          de redo logs, control files e checkpoints.
-        </p>
+        <p>{renderInlineCodeText(`Oracle separa claramente a parte que executa da parte que persiste. A instância é memória mais processos em execução; o banco de dados é o conjunto de arquivos físicos. Essa separação explica por que uma instância pode estar iniciada em \`NOMOUNT\` sem ainda ter aberto os arquivos do banco, e por que recovery depende tanto de redo logs, control files e checkpoints.`)}</p>
       </HighlightBox>
 
       <TheoryBlock title="Instância, banco e sessão">
@@ -1537,12 +1749,7 @@ function ArquiteturaSection() {
       </TheoryBlock>
 
       <HighlightBox title="Exemplo operacional">
-        <p>
-          Se um usuário abre o SQL Developer e executa um `SELECT`, o User Process envia a solicitação ao Oracle Net.
-          O Listener direciona a conexão, o Server Process usa PGA para o contexto privado da sessão e consulta a SGA
-          para reaproveitar SQL já interpretado e blocos que talvez já estejam em memória. Esse encadeamento mostra
-          que sessão, memória compartilhada e arquivos físicos participam da mesma operação, mas com papéis diferentes.
-        </p>
+        <p>{renderInlineCodeText(`Se um usuário abre o SQL Developer e executa um \`SELECT\`, o User Process envia a solicitação ao Oracle Net. O Listener direciona a conexão, o Server Process usa PGA para o contexto privado da sessão e consulta a SGA para reaproveitar SQL já interpretado e blocos que talvez já estejam em memória. Esse encadeamento mostra que sessão, memória compartilhada e arquivos físicos participam da mesma operação, mas com papéis diferentes.`)}</p>
       </HighlightBox>
 
       <ColoredPanelList items={arquiteturaMemoriaItems} />
@@ -1554,19 +1761,10 @@ function ArquiteturaSection() {
 FROM v$sga_dynamic_components;`}</CodeBlock>
       </div>
 
-      <TheoryBlock title="Exemplo de leitura repetida e reaproveitamento de cache">
-        <p>
-          Imagine duas execuções seguidas de `SELECT * FROM clientes WHERE cliente_id = 10`. Na primeira, o Oracle pode
-          precisar interpretar o SQL, localizar o plano e buscar o bloco no disco. Na segunda, se o SQL já estiver no
-          Shared Pool e o bloco no Buffer Cache, parte desse trabalho desaparece. Esse reaproveitamento é um dos
-          motivos pelos quais a arquitetura de memória influencia tanto desempenho.
-        </p>
-        <p>
-          Também vale distinguir estados práticos dos buffers. Um bloco `clean` já pode ser reutilizado; um bloco
-          `dirty` ainda precisa ser gravado pelo DBWn; um bloco `pinned` está em uso ativo por alguma sessão. Essa
-          leitura ajuda a entender por que o Oracle não grava cada alteração imediatamente no disco.
-        </p>
-      </TheoryBlock>
+      <ExampleBox title="Exemplo de leitura repetida e reaproveitamento de cache" accent="var(--color-accent)">
+        <p>{renderInlineCodeText(`Imagine duas execuções seguidas de \`SELECT * FROM clientes WHERE cliente_id = 10\`. Na primeira, o Oracle pode precisar interpretar o SQL, localizar o plano e buscar o bloco no disco. Na segunda, se o SQL já estiver no Shared Pool e o bloco no Buffer Cache, parte desse trabalho desaparece. Esse reaproveitamento é um dos motivos pelos quais a arquitetura de memória influencia tanto desempenho.`)}</p>
+        <p>{renderInlineCodeText(`Também vale distinguir estados práticos dos buffers. Um bloco \`clean\` já pode ser reutilizado; um bloco \`dirty\` ainda precisa ser gravado pelo DBWn; um bloco \`pinned\` está em uso ativo por alguma sessão. Essa leitura ajuda a entender por que o Oracle não grava cada alteração imediatamente no disco.`)}</p>
+      </ExampleBox>
 
       <PanelList
         items={[
@@ -1590,12 +1788,7 @@ FROM v$sga_dynamic_components;`}</CodeBlock>
       />
 
       <TheoryBlock title="Como uma alteração chega ao disco">
-        <p>
-          Um `UPDATE` altera blocos no Database Buffer Cache e gera registros no Redo Log Buffer. O bloco alterado em
-          memória vira um dirty block, mas o Oracle não precisa gravá-lo imediatamente no datafile. Quem garante a
-          durabilidade da transação no `COMMIT` é o LGWR, gravando o redo em disco. Depois, em momento oportuno, o
-          DBWn grava os dirty blocks nos datafiles.
-        </p>
+        <p>{renderInlineCodeText(`Um \`UPDATE\` altera blocos no Database Buffer Cache e gera registros no Redo Log Buffer. O bloco alterado em memória vira um dirty block, mas o Oracle não precisa gravá-lo imediatamente no datafile. Quem garante a durabilidade da transação no \`COMMIT\` é o LGWR, gravando o redo em disco. Depois, em momento oportuno, o DBWn grava os dirty blocks nos datafiles.`)}</p>
         <p>
           Essa ordem é decisiva para desempenho e recovery. Se o banco caísse logo após o commit, o dado talvez ainda
           não estivesse no datafile, mas o redo estaria gravado. Na próxima abertura, o Oracle consegue reaplicar o
@@ -1633,12 +1826,7 @@ SELECT * FROM v$diag_info;`}</CodeBlock>
       </div>
 
       <TheoryBlock title="Como interpretar esses arquivos no dia a dia">
-        <p>
-          `V$CONTROLFILE` responde onde estão os arquivos de controle realmente usados pela instância. `DBA_DATA_FILES`
-          e `DBA_TEMP_FILES` ajudam a conferir capacidade, autoextend e distribuição por tablespace. `V$LOGFILE`
-          expõe membros de redo log e ajuda a validar multiplexação. `V$DIAG_INFO` aponta para diagnóstico, inclusive
-          diretórios do alert log e traces.
-        </p>
+        <p>{renderInlineCodeText(`\`V$CONTROLFILE\` responde onde estão os arquivos de controle realmente usados pela instância. \`DBA_DATA_FILES\` e \`DBA_TEMP_FILES\` ajudam a conferir capacidade, autoextend e distribuição por tablespace. \`V$LOGFILE\` expõe membros de redo log e ajuda a validar multiplexação. \`V$DIAG_INFO\` aponta para diagnóstico, inclusive diretórios do alert log e traces.`)}</p>
         <p>
           Em troubleshooting, a pergunta correta quase nunca é apenas "qual arquivo existe?". O ponto é saber se ele
           está no lugar certo, se há redundância, se a instância está de fato usando aquele arquivo e se o layout faz
@@ -1647,12 +1835,7 @@ SELECT * FROM v$diag_info;`}</CodeBlock>
       </TheoryBlock>
 
       <TheoryBlock title="Arquitetura Multitenant">
-        <p>
-          A partir do Oracle 12c, o modelo Multitenant permite que um CDB contenha vários PDBs. O `CDB$ROOT` guarda
-          metadados comuns, o `PDB$SEED` funciona como template somente leitura e os PDBs de usuário são onde as
-          aplicações normalmente residem. Isso permite provisionamento mais rápido, isolamento lógico e administração
-          centralizada.
-        </p>
+        <p>{renderInlineCodeText(`A partir do Oracle 12c, o modelo Multitenant permite que um CDB contenha vários PDBs. O \`CDB$ROOT\` guarda metadados comuns, o \`PDB$SEED\` funciona como template somente leitura e os PDBs de usuário são onde as aplicações normalmente residem. Isso permite provisionamento mais rápido, isolamento lógico e administração centralizada.`)}</p>
         <p>
           A navegação entre containers importa porque alguns comandos fazem sentido no root e outros no PDB. Um DBA
           precisa saber onde está antes de criar objetos, consultar estruturas ou abrir e fechar bancos plugáveis.
@@ -1667,24 +1850,12 @@ SELECT name, open_mode
 FROM v$pdbs;`}</CodeBlock>
 
       <HighlightBox title="Exemplo de erro comum em Multitenant" accent="var(--color-accent4)">
-        <p>
-          Criar usuário ou tabela no container errado é um erro frequente. Se o DBA pensa estar no PDB da aplicação,
-          mas ainda está em `CDB$ROOT`, o objeto nasce em outro escopo. Por isso, `SHOW CON_NAME` e a leitura de
-          `V$PDBS` devem virar hábito antes de qualquer operação administrativa relevante.
-        </p>
+        <p>{renderInlineCodeText(`Criar usuário ou tabela no container errado é um erro frequente. Se o DBA pensa estar no PDB da aplicação, mas ainda está em \`CDB$ROOT\`, o objeto nasce em outro escopo. Por isso, \`SHOW CON_NAME\` e a leitura de \`V$PDBS\` devem virar hábito antes de qualquer operação administrativa relevante.`)}</p>
       </HighlightBox>
 
       <TheoryBlock title="Dicionário de dados">
-        <p>
-          O dicionário de dados é o catálogo interno do Oracle. Ele descreve objetos, usuários, privilégios,
-          constraints, tablespaces e espaço alocado. O servidor o atualiza automaticamente quando comandos DDL são
-          executados. Ele pertence ao usuário `SYS`, fica na tablespace `SYSTEM` e deve ser consultado, não alterado
-          manualmente.
-        </p>
-        <p>
-          As famílias `DBA_xxx`, `ALL_xxx` e `USER_xxx` mudam o escopo da consulta. Já as visões `V$` mostram o que
-          está acontecendo agora na instância, sendo essenciais para diagnóstico operacional.
-        </p>
+        <p>{renderInlineCodeText(`O dicionário de dados é o catálogo interno do Oracle. Ele descreve objetos, usuários, privilégios, constraints, tablespaces e espaço alocado. O servidor o atualiza automaticamente quando comandos DDL são executados. Ele pertence ao usuário \`SYS\`, fica na tablespace \`SYSTEM\` e deve ser consultado, não alterado manualmente.`)}</p>
+        <p>{renderInlineCodeText(`As famílias \`DBA_xxx\`, \`ALL_xxx\` e \`USER_xxx\` mudam o escopo da consulta. Já as visões \`V$\` mostram o que está acontecendo agora na instância, sendo essenciais para diagnóstico operacional.`)}</p>
       </TheoryBlock>
 
       <ColoredPanelList items={dicionarioItems} />
@@ -1722,18 +1893,10 @@ GROUP BY event
 ORDER BY 2 DESC;`}</CodeBlock>
       </div>
 
-      <TheoryBlock title="Exemplos de resposta a problemas operacionais">
-        <p>
-          Se uma tabela ficou `INVALID`, a ação costuma ser recompilar ou recriar o objeto afetado. Se um índice ficou
-          `UNUSABLE`, a consequência prática é perda do benefício do índice até um `REBUILD`. Se há sessões bloqueadas,
-          o DBA precisa decidir entre esperar, agir na aplicação ou matar a sessão ofensora de forma controlada.
-        </p>
-        <p>
-          Em operações demoradas, monitorar progresso é melhor do que agir por ansiedade. Um `ALTER INDEX ... REBUILD`
-          ou um backup RMAN pode estar saudável e apenas consumindo tempo. Nesses cenários, `V$SESSION_LONGOPS`
-          fornece visibilidade mais útil do que olhar apenas para sessões ativas.
-        </p>
-      </TheoryBlock>
+      <ExampleBox title="Exemplos de resposta a problemas operacionais" accent="var(--color-accent4)">
+        <p>{renderInlineCodeText(`Se uma tabela ficou \`INVALID\`, a ação costuma ser recompilar ou recriar o objeto afetado. Se um índice ficou \`UNUSABLE\`, a consequência prática é perda do benefício do índice até um \`REBUILD\`. Se há sessões bloqueadas, o DBA precisa decidir entre esperar, agir na aplicação ou matar a sessão ofensora de forma controlada.`)}</p>
+        <p>{renderInlineCodeText(`Em operações demoradas, monitorar progresso é melhor do que agir por ansiedade. Um \`ALTER INDEX ... REBUILD\` ou um backup RMAN pode estar saudável e apenas consumindo tempo. Nesses cenários, \`V$SESSION_LONGOPS\` fornece visibilidade mais útil do que olhar apenas para sessões ativas.`)}</p>
+      </ExampleBox>
 
       <CodeBlock>{`SELECT opname, sid, serial#, sofar, totalwork,
        ROUND(sofar / totalwork * 100, 2) AS pct_concluido,
@@ -1744,17 +1907,8 @@ WHERE totalwork > 0;
 ALTER SYSTEM KILL SESSION 'SID,SERIAL#';`}</CodeBlock>
 
       <TheoryBlock title="AWR, ADDM e advisors">
-        <p>
-          O AWR é o repositório histórico de estatísticas do Oracle. Snapshots periódicos permitem comparar períodos,
-          entender carga de trabalho e investigar degradação. O ADDM usa snapshots do AWR para identificar gargalos e
-          priorizar recomendações com foco em reduzir `DB Time`, que combina tempo de CPU e tempo de espera das
-          sessões.
-        </p>
-        <p>
-          Por trás disso, processos como `MMON` e `MMNL` coletam e descarregam métricas. A disponibilidade desses
-          recursos depende de parâmetros como `STATISTICS_LEVEL` e `CONTROL_MANAGEMENT_PACK_ACCESS`, que controlam o
-          quanto o Oracle mede e quais pacotes de diagnóstico/tuning ficam habilitados.
-        </p>
+        <p>{renderInlineCodeText(`O AWR é o repositório histórico de estatísticas do Oracle. Snapshots periódicos permitem comparar períodos, entender carga de trabalho e investigar degradação. O ADDM usa snapshots do AWR para identificar gargalos e priorizar recomendações com foco em reduzir \`DB Time\`, que combina tempo de CPU e tempo de espera das sessões.`)}</p>
+        <p>{renderInlineCodeText(`Por trás disso, processos como \`MMON\` e \`MMNL\` coletam e descarregam métricas. A disponibilidade desses recursos depende de parâmetros como \`STATISTICS_LEVEL\` e \`CONTROL_MANAGEMENT_PACK_ACCESS\`, que controlam o quanto o Oracle mede e quais pacotes de diagnóstico/tuning ficam habilitados.`)}</p>
         <p>
           Os advisors especializam esse diagnóstico: SQL Tuning Advisor olha SQL problemático, SQL Access Advisor
           sugere estruturas de acesso, MTTR Advisor trata tempo de recuperação, Memory Advisor apoia SGA/PGA, Segment
@@ -1782,12 +1936,7 @@ SELECT * FROM dba_advisor_rationale;`}</CodeBlock>
       </div>
 
       <TheoryBlock title="Oracle Net e conexões">
-        <p>
-          Antes de administrar startup e shutdown, é preciso entender como as conexões chegam. O Listener escuta
-          conexões remotas e normalmente usa a porta 1521. O cliente pode resolver o destino por `tnsnames.ora`, por
-          `EZCONNECT` ou por parâmetros globais em `sqlnet.ora`. Quando uma conexão falha, o diagnóstico começa pelo
-          servidor e depois passa para cliente, rede, listener e variável `TNS_ADMIN`.
-        </p>
+        <p>{renderInlineCodeText(`Antes de administrar startup e shutdown, é preciso entender como as conexões chegam. O Listener escuta conexões remotas e normalmente usa a porta 1521. O cliente pode resolver o destino por \`tnsnames.ora\`, por \`EZCONNECT\` ou por parâmetros globais em \`sqlnet.ora\`. Quando uma conexão falha, o diagnóstico começa pelo servidor e depois passa para cliente, rede, listener e variável \`TNS_ADMIN\`.`)}</p>
       </TheoryBlock>
 
       <ColoredPanelList items={networkItems} />
@@ -1825,17 +1974,8 @@ tnsping MEU_ALIAS
 traceroute hostname`}</CodeBlock>
 
       <TheoryBlock title="Startup e shutdown">
-        <p>
-          O `STARTUP` passa por etapas. Em `NOMOUNT`, o Oracle lê parâmetros, aloca SGA e inicia processos. Em
-          `MOUNT`, abre control files e descobre a estrutura física. Em `OPEN`, abre datafiles e redo logs para
-          operação normal. Essa progressão permite manutenção controlada, como restaurar backup em MOUNT ou criar um
-          banco em NOMOUNT.
-        </p>
-        <p>
-          Encerrar a instância também tem níveis. `NORMAL` espera usuários saírem, `TRANSACTIONAL` espera transações
-          terminarem, `IMMEDIATE` faz rollback e encerra limpo, e `ABORT` derruba a instância de forma abrupta. Após
-          `ABORT`, o SMON precisa executar crash recovery na próxima inicialização.
-        </p>
+        <p>{renderInlineCodeText(`O \`STARTUP\` passa por etapas. Em \`NOMOUNT\`, o Oracle lê parâmetros, aloca SGA e inicia processos. Em \`MOUNT\`, abre control files e descobre a estrutura física. Em \`OPEN\`, abre datafiles e redo logs para operação normal. Essa progressão permite manutenção controlada, como restaurar backup em MOUNT ou criar um banco em NOMOUNT.`)}</p>
+        <p>{renderInlineCodeText(`Encerrar a instância também tem níveis. \`NORMAL\` espera usuários saírem, \`TRANSACTIONAL\` espera transações terminarem, \`IMMEDIATE\` faz rollback e encerra limpo, e \`ABORT\` derruba a instância de forma abrupta. Após \`ABORT\`, o SMON precisa executar crash recovery na próxima inicialização.`)}</p>
       </TheoryBlock>
 
       <ColoredPanelList items={startupShutdownItems} />
@@ -1869,12 +2009,7 @@ SHUTDOWN ABORT;`}</CodeBlock>
       <CodeBlock>{`SELECT * FROM v$diag_info WHERE name = 'Diag Trace';`}</CodeBlock>
 
       <TheoryBlock title="Gerenciamento em Multitenant">
-        <p>
-          Em ambientes CDB/PDB, `STARTUP` inicia o CDB, mas PDBs de usuário podem permanecer em `MOUNTED` até serem
-          abertos explicitamente. O `PDB$SEED` sobe automaticamente como template, enquanto os PDBs reais precisam ser
-          administrados com comandos `ALTER PLUGGABLE DATABASE`. Para manter um PDB abrindo após restart, usa-se
-          `SAVE STATE`.
-        </p>
+        <p>{renderInlineCodeText(`Em ambientes CDB/PDB, \`STARTUP\` inicia o CDB, mas PDBs de usuário podem permanecer em \`MOUNTED\` até serem abertos explicitamente. O \`PDB$SEED\` sobe automaticamente como template, enquanto os PDBs reais precisam ser administrados com comandos \`ALTER PLUGGABLE DATABASE\`. Para manter um PDB abrindo após restart, usa-se \`SAVE STATE\`.`)}</p>
       </TheoryBlock>
 
       <CodeBlock>{`CONNECT / AS SYSDBA
@@ -1890,12 +2025,308 @@ SELECT name, open_mode FROM v$pdbs;`}</CodeBlock>
   );
 }
 
+function PlSqlSection() {
+  return (
+    <section className="animate-fade-in space-y-6">
+      <SectionHeader
+        title="PL/SQL no Oracle"
+        subtitle="Programação procedural no servidor para validar regras, processar dados e encapsular lógica no próprio banco."
+        colorClass="text-accent"
+      />
+
+      <HighlightBox title="Ideia central do PL/SQL">
+        <p>
+          SQL puro diz ao banco o que consultar ou alterar. PL/SQL adiciona a camada procedural que permite decidir,
+          repetir, capturar erro, encapsular rotinas e reagir a eventos. Na prática, ele faz o Oracle deixar de ser
+          apenas um repositório de dados e passar a executar lógica de negócio perto dos próprios registros.
+        </p>
+      </HighlightBox>
+
+      <TheoryBlock title="Por que isso importa em Administração e Projeto de Banco de Dados?">
+        <p>
+          A disciplina já vinha mostrando que regras de integridade no banco sobrevivem mesmo quando a aplicação muda.
+          PL/SQL estende essa ideia: além de constraints declarativas, o DBA e o projetista podem programar validações,
+          auditorias, cálculos e rotinas administrativas diretamente no servidor. Isso reduz divergência entre clientes
+          diferentes e evita que cada sistema implemente a mesma regra de forma inconsistente.
+        </p>
+        <p>
+          Esse uso não elimina a lógica da aplicação, mas muda o ponto de responsabilidade. O que precisa ser central,
+          confiável e executado com visão imediata dos dados costuma ser forte candidato a PL/SQL.
+        </p>
+      </TheoryBlock>
+
+      <ConceptGrid items={plsqlFundamentosItems} />
+
+      <div className="study-surface p-5 md:p-6 space-y-4">
+        <h3 className="font-display font-bold text-2xl text-accent3">Estrutura de um bloco</h3>
+        <p className="text-text-muted text-sm md:text-base leading-relaxed">
+          Todo código PL/SQL nasce em blocos. A parte mais importante é separar declaração, execução e tratamento de
+          falhas para que o fluxo fique previsível.
+        </p>
+        <CodeBlock>{`DECLARE
+  v_nome      VARCHAR2(50);
+  v_salario   NUMBER(10,2);
+BEGIN
+  v_nome := 'Ana';
+  v_salario := 2500;
+  DBMS_OUTPUT.PUT_LINE(v_nome || ' recebe ' || v_salario);
+EXCEPTION
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Erro: ' || SQLERRM);
+END;
+/`}</CodeBlock>
+      </div>
+
+      <TheoryBlock title="Declaração, escopo e reaproveitamento de tipos">
+        <p>{renderInlineCodeText(`Variáveis e constantes devem ser declaradas antes do uso. Em vez de repetir tipos manualmente, \`%TYPE\` copia o tipo de uma coluna ou variável já existente, enquanto \`%ROWTYPE\` monta um registro com a estrutura inteira de uma tabela. Isso reduz acoplamento com detalhes físicos que podem mudar ao longo do projeto.`)}</p>
+        <p>
+          O escopo segue a ideia de blocos aninhados: o bloco interno enxerga o externo, mas o inverso não acontece.
+          Quando um nome é repetido, o identificador mais interno prevalece, a menos que o bloco externo seja
+          qualificado por label.
+        </p>
+      </TheoryBlock>
+
+      <CodeBlock>{`DECLARE
+  v_empno      emp.empno%TYPE;
+  v_empregado  emp%ROWTYPE;
+  c_bonus      CONSTANT NUMBER := 0.10;
+BEGIN
+  SELECT empno, ename, job, mgr, hiredate, sal, comm, deptno
+  INTO   v_empregado
+  FROM   emp
+  WHERE  empno = 7369;
+
+  v_empno := v_empregado.empno;
+  DBMS_OUTPUT.PUT_LINE(v_empregado.ename || ' bonus=' || (v_empregado.sal * c_bonus));
+END;
+/`}</CodeBlock>
+
+      <div className="study-surface p-5 md:p-6 space-y-4">
+        <h3 className="font-display font-bold text-2xl text-accent4">Controle de fluxo</h3>
+        <p className="text-text-muted text-sm md:text-base leading-relaxed">
+          {renderInlineCodeText(`O ganho procedimental do PL/SQL aparece quando SQL é cercado por decisões e repetições. A linguagem oferece \`IF\`, \`CASE\`, \`LOOP\`, \`WHILE\` e \`FOR\` para expressar essas escolhas com clareza.`)}
+        </p>
+        <CodeBlock>{`DECLARE
+  v_categoria VARCHAR2(20) := 'SERVIDOR';
+  v_desconto  NUMBER := 0;
+BEGIN
+  CASE v_categoria
+    WHEN 'BASICO' THEN v_desconto := 0.15;
+    WHEN 'SERVIDOR' THEN v_desconto := 0.10;
+    ELSE v_desconto := 0.05;
+  END CASE;
+
+  FOR i IN 1..3 LOOP
+    DBMS_OUTPUT.PUT_LINE('Parcela ' || i || ' com desconto ' || v_desconto);
+  END LOOP;
+END;
+/`}</CodeBlock>
+      </div>
+
+      <SectionHeader
+        title="SQL dentro do PL/SQL"
+        subtitle="Consulta, DML, transações e cursores mudam de forma quando entram em blocos procedurais."
+        colorClass="text-accent3"
+      />
+
+      <PanelList items={plsqlCursorItems} />
+
+      <TheoryBlock title="Quando SELECT INTO basta e quando ele quebra">
+        <p>{renderInlineCodeText(`\`SELECT INTO\` é conveniente para buscar um único registro já esperado pela regra de negócio, como o usuário autenticado, o funcionário de uma matrícula específica ou o total de uma venda. O problema é usá-lo em situações incertas: se a consulta puder retornar zero ou várias linhas, a exceção passa a ser parte normal do fluxo, e não um erro raro.`)}</p>
+        <p>
+          Nesses casos, cursores deixam o programa mais explícito. Eles mostram que o problema é iterar resultados,
+          não apenas capturar uma linha isolada.
+        </p>
+      </TheoryBlock>
+
+      <CodeBlock>{`DECLARE
+  v_empno  emp.empno%TYPE;
+  v_ename  emp.ename%TYPE;
+BEGIN
+  SELECT empno, ename
+  INTO   v_empno, v_ename
+  FROM   emp
+  WHERE  empno = 7369;
+
+  UPDATE emp
+  SET    sal = sal * 1.08
+  WHERE  empno = v_empno;
+
+  DBMS_OUTPUT.PUT_LINE(v_ename || ' teve reajuste.');
+END;
+/`}</CodeBlock>
+
+      <CodeBlock>{`DECLARE
+  CURSOR c_emp IS
+    SELECT empno, ename, sal
+    FROM   emp
+    WHERE  deptno = 30;
+BEGIN
+  FOR r_emp IN c_emp LOOP
+    DBMS_OUTPUT.PUT_LINE(r_emp.empno || ' - ' || r_emp.ename || ' - ' || r_emp.sal);
+  END LOOP;
+END;
+/`}</CodeBlock>
+
+      <CodeBlock>{`DECLARE
+  CURSOR c_salarios IS
+    SELECT empno, sal
+    FROM   emp
+    WHERE  deptno = 30
+    FOR UPDATE OF sal NOWAIT;
+BEGIN
+  FOR r_sal IN c_salarios LOOP
+    UPDATE emp
+    SET    sal = r_sal.sal * 1.05
+    WHERE  CURRENT OF c_salarios;
+  END LOOP;
+
+  COMMIT;
+END;
+/`}</CodeBlock>
+
+      <TheoryBlock title="Tipos compostos em cenários reais">
+        <p>{renderInlineCodeText(`\`RECORD\` e arrays associativos resolvem um problema comum: tratar estrutura de dados na memória sem criar tabela temporária desnecessária. Um \`RECORD\` representa uma linha coerente; uma coleção indexada permite acumular resultados, comparar estados ou preparar lotes de processamento antes do DML final.`)}</p>
+        <p>
+          Em exercícios didáticos isso parece detalhe de sintaxe, mas em rotinas de importação, validação e auditoria
+          esse padrão evita ida e volta excessiva ao banco e deixa o código mais legível.
+        </p>
+      </TheoryBlock>
+
+      <CodeBlock>{`DECLARE
+  TYPE t_nomes IS TABLE OF emp.ename%TYPE INDEX BY BINARY_INTEGER;
+  v_nomes t_nomes;
+BEGIN
+  v_nomes(1) := 'SMITH';
+  v_nomes(2) := 'ALLEN';
+
+  IF v_nomes.EXISTS(2) THEN
+    DBMS_OUTPUT.PUT_LINE(v_nomes(2));
+  END IF;
+END;
+/`}</CodeBlock>
+
+      <SectionHeader
+        title="Exceções e Programas Armazenados"
+        subtitle="Tratamento de falhas, mensagens de negócio e encapsulamento da lógica em objetos reutilizáveis."
+        colorClass="text-accent4"
+      />
+
+      <PanelList items={plsqlExceptionItems} />
+
+      <TheoryBlock title="Erro tratado não é erro ignorado">
+        <p>{renderInlineCodeText(`O objetivo do bloco \`EXCEPTION\` não é esconder falhas, mas responder a elas de modo controlado. Um \`NO_DATA_FOUND\` pode virar mensagem amigável; uma violação de integridade pode gerar log ou impedir a continuação do processo; e um \`WHEN OTHERS\` deve ser último recurso, idealmente registrando \`SQLCODE\` e \`SQLERRM\` para diagnóstico posterior.`)}</p>
+        <p>
+          Em administração de banco, isso importa muito para rotinas agendadas, scripts de manutenção e objetos
+          armazenados que serão executados por outros usuários ou aplicações.
+        </p>
+      </TheoryBlock>
+
+      <CodeBlock>{`DECLARE
+  e_fk_violation EXCEPTION;
+  PRAGMA EXCEPTION_INIT(e_fk_violation, -2291);
+BEGIN
+  DELETE FROM departamento
+  WHERE  id_departamento = 10;
+EXCEPTION
+  WHEN e_fk_violation THEN
+    DBMS_OUTPUT.PUT_LINE('Nao foi possivel excluir: existem registros filhos.');
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE(SQLCODE || ' - ' || SQLERRM);
+END;
+/`}</CodeBlock>
+
+      <CodeBlock>{`BEGIN
+  IF :NEW.sal - :OLD.sal < :OLD.sal * 0.025 THEN
+    RAISE_APPLICATION_ERROR(-20512, 'Aumento abaixo do indice minimo permitido.');
+  END IF;
+END;
+/`}</CodeBlock>
+
+      <PanelList items={plsqlStoredProgramItems} />
+
+      <CodeBlock>{`CREATE OR REPLACE PROCEDURE reajusta_departamento (
+  p_deptno   IN NUMBER,
+  p_percent  IN NUMBER
+) IS
+BEGIN
+  UPDATE emp
+  SET    sal = sal * (1 + p_percent)
+  WHERE  deptno = p_deptno;
+
+  DBMS_OUTPUT.PUT_LINE(SQL%ROWCOUNT || ' linhas atualizadas.');
+END;
+/
+
+CREATE OR REPLACE FUNCTION calcula_bonus (
+  p_salario IN NUMBER
+) RETURN NUMBER IS
+BEGIN
+  RETURN p_salario * 0.15;
+END;
+/`}</CodeBlock>
+
+      <CodeBlock>{`CREATE OR REPLACE PACKAGE auditoria_pkg AS
+  PROCEDURE registra_evento(p_usuario IN VARCHAR2, p_evento IN VARCHAR2);
+END auditoria_pkg;
+/
+
+CREATE OR REPLACE PACKAGE BODY auditoria_pkg AS
+  PROCEDURE registra_evento(p_usuario IN VARCHAR2, p_evento IN VARCHAR2) IS
+    PRAGMA AUTONOMOUS_TRANSACTION;
+  BEGIN
+    INSERT INTO log_auditoria(usuario, evento, data_evento)
+    VALUES (p_usuario, p_evento, SYSTIMESTAMP);
+    COMMIT;
+  END registra_evento;
+END auditoria_pkg;
+/`}</CodeBlock>
+
+      <SectionHeader
+        title="Triggers"
+        subtitle="Execução automática orientada a eventos para auditoria, validação e reação a mudanças de dados."
+        colorClass="text-accent5"
+      />
+
+      <PanelList items={triggerItems} />
+
+      <TheoryBlock title="Quando uma trigger ajuda e quando atrapalha">
+        <p>{renderInlineCodeText(`Trigger é poderosa porque executa sem depender da boa vontade do cliente. Se qualquer sistema fizer um \`UPDATE\` na tabela, a auditoria ou a validação configurada no banco continuará rodando. Isso é excelente para regras transversais e difíceis de confiar apenas na aplicação.`)}</p>
+        <p>
+          O risco é transformar o banco em um lugar cheio de efeitos colaterais invisíveis. Por isso, uma boa trigger
+          precisa ser curta, específica, bem documentada e justificada por uma necessidade que realmente peça reação
+          automática no nível do dado.
+        </p>
+      </TheoryBlock>
+
+      <CodeBlock>{`CREATE OR REPLACE TRIGGER trg_audita_salario
+  BEFORE UPDATE OF sal ON emp
+  FOR EACH ROW
+BEGIN
+  IF :NEW.sal <> :OLD.sal THEN
+    INSERT INTO log_salario(empno, salario_antigo, salario_novo, data_evento)
+    VALUES (:OLD.empno, :OLD.sal, :NEW.sal, SYSTIMESTAMP);
+  END IF;
+END;
+/`}</CodeBlock>
+
+      <HighlightBox title="Resumo operacional" accent="var(--color-accent5)">
+        <p>
+          Em termos de prova e prática, o raciocínio mais importante é este: bloco organiza a execução, cursor percorre
+          múltiplas linhas, exceção controla falhas, procedure e function encapsulam comportamento, package organiza
+          rotinas correlatas e trigger reage automaticamente a eventos do banco.
+        </p>
+      </HighlightBox>
+    </section>
+  );
+}
+
 function StaticQuizSection() {
   return (
     <section className="animate-fade-in space-y-5">
       <SectionHeader
         title="Quiz de Revisão"
-        subtitle="Perguntas fixas baseadas nas fontes disponíveis: introdução, modelagem, armazenamento, desempenho, segurança e arquitetura."
+        subtitle="Perguntas fixas baseadas nas fontes disponíveis: introdução, modelagem, armazenamento, desempenho, segurança, arquitetura e PL/SQL."
       />
       <div>
         {ADMINISTRACAO_PROJETO_BANCO_DADOS_QUIZ_DATA.map(question => (
@@ -1921,7 +2352,7 @@ function AIQuizSection() {
       <HighlightBox title="Escopo atual">
         <p>
           A IA foi limitada aos conteúdos presentes em .docs/apdb já implementados no guia, incluindo a seção de
-          segurança, backup, recuperação e arquitetura Oracle.
+          segurança, backup, recuperação, arquitetura Oracle e PL/SQL.
         </p>
       </HighlightBox>
       <AIQuizGenerator
@@ -1955,6 +2386,8 @@ export default function AdministracaoProjetoBancoDadosSections({ activeSection }
       return <SegurancaSection />;
     case 'arquitetura':
       return <ArquiteturaSection />;
+    case 'plsql':
+      return <PlSqlSection />;
     case 'quiz':
       return <StaticQuizSection />;
     case 'iaquiz':

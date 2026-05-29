@@ -38,6 +38,8 @@ GUIA DE ADMINISTRACAO E PROJETO DE BANCO DE DADOS - Topicos disponiveis:
 17. AWR, ADDM E ADVISORS: AWR armazena snapshots de estatisticas em tabelas fisicas, com MMON e MMNL coletando metricas; STATISTICS_LEVEL e CONTROL_MANAGEMENT_PACK_ACCESS controlam disponibilidade. ADDM analisa snapshots do AWR, identifica gargalos e recomenda acoes para reduzir DB Time. Advisors especializados incluem SQL Tuning Advisor, SQL Access Advisor, MTTR Advisor, Segment Advisor, Memory Advisor e Undo Management Advisor; resultados aparecem em DBA_ADVISOR_TASKS, DBA_ADVISOR_FINDINGS, DBA_ADVISOR_RECOMMENDATIONS, DBA_ADVISOR_ACTIONS e DBA_ADVISOR_RATIONALE.
 
 18. GERENCIAMENTO DA INSTANCIA: Oracle Net Services conecta cliente e servidor. Listener escuta conexoes na porta 1521 e e gerenciado por lsnrctl; nomes podem ser resolvidos por tnsnames.ora, EZCONNECT e sqlnet.ora. Diagnostico de conexao segue ordem logica: testar instancia e listener no servidor, depois ping, tnsping, rota de rede e TNS_ADMIN no cliente. STARTUP passa por NOMOUNT, MOUNT e OPEN: NOMOUNT le parametros e cria SGA/processos; MOUNT abre control files; OPEN abre datafiles e redo logs. Variantes como STARTUP FORCE, STARTUP OPEN READ ONLY, STARTUP RESTRICT e STARTUP PFILE atendem cenarios administrativos especificos. SHUTDOWN NORMAL espera usuarios sairem, TRANSACTIONAL espera transacoes terminarem, IMMEDIATE faz rollback e encerra limpo, ABORT derruba abruptamente e exige crash recovery pelo SMON. Alert log e trace files sao referencia central para erros criticos e eventos administrativos. Em multitenant, STARTUP abre o CDB e PDBs podem precisar de ALTER PLUGGABLE DATABASE ... OPEN ou SAVE STATE.
+
+19. PLSQL: PL/SQL e a extensao procedural do SQL no Oracle, usada para concentrar regras de negocio no lado servidor e reduzir trafego entre cliente e banco quando ha processamento intensivo sobre dados. Todo codigo e organizado em blocos com secoes DECLARE, BEGIN, EXCEPTION e END; blocos podem ser anonimos ou armazenados como procedures, functions, packages e triggers. Variaveis, constantes, records, arrays associativos e cursores devem ser declarados antes do uso; %TYPE e %ROWTYPE reaproveitam tipos ja existentes para reduzir inconsistencias. Controle de fluxo usa IF, CASE, LOOP, WHILE, FOR, EXIT e labels. SELECT em PL/SQL exige INTO e deve retornar exatamente uma linha; multiplas linhas pedem cursores explicitos ou cursor FOR loop. DML, COMMIT, ROLLBACK e SAVEPOINT funcionam dentro dos blocos. Excecoes podem ser predefinidas, nomeadas com PRAGMA EXCEPTION_INIT ou criadas pelo usuario; SQLCODE, SQLERRM e RAISE_APPLICATION_ERROR apoiam tratamento e mensagens. Procedures executam acoes, functions retornam valor, packages agrupam interface e implementacao, transacoes autonomas isolam logs e triggers executam automaticamente em eventos DML ou DDL para auditoria e validacao.
 `;
 
 export const ADMINISTRACAO_PROJETO_BANCO_DADOS_TOPICS: QuizTopicOption[] = [
@@ -81,6 +83,11 @@ export const ADMINISTRACAO_PROJETO_BANCO_DADOS_TOPICS: QuizTopicOption[] = [
     label: 'Arquitetura Oracle',
     prompt: 'Instância, SGA, PGA, background processes, arquivos físicos, Multitenant, dicionário de dados, V$, AWR, ADDM, Oracle Net, startup e shutdown.',
   },
+  {
+    value: 'plsql',
+    label: 'PL/SQL',
+    prompt: 'Blocos PL/SQL, variáveis, %TYPE, %ROWTYPE, IF, CASE, loops, SELECT INTO, cursores, records, arrays associativos, exceções, procedures, functions, packages, transações autônomas e triggers.',
+  },
 ];
 
 export const ADMINISTRACAO_PROJETO_BANCO_DADOS_SECTIONS = [
@@ -91,6 +98,7 @@ export const ADMINISTRACAO_PROJETO_BANCO_DADOS_SECTIONS = [
   { id: 'desempenho', title: 'Desempenho e Particionamento', shortTitle: 'Desempenho', exam: 'P1' },
   { id: 'seguranca', title: 'Segurança e Recuperação', shortTitle: 'Segurança', exam: 'P2' },
   { id: 'arquitetura', title: 'Arquitetura e Administração Oracle', shortTitle: 'Arquitetura', exam: 'P2' },
+  { id: 'plsql', title: 'PL/SQL no Oracle', shortTitle: 'PL/SQL', exam: 'P2' },
   { id: 'quiz', title: 'Quiz de Revisão', shortTitle: 'Quiz' },
   { id: 'iaquiz', title: 'Quiz com IA', shortTitle: 'Quiz IA' },
 ];
@@ -654,5 +662,117 @@ export const ADMINISTRACAO_PROJETO_BANCO_DADOS_QUIZ_DATA: QuizQuestionData[] = [
     correctIndex: 0,
     feedbackCorrect: 'Correto. O ponto crítico do COMMIT é a gravação do redo; os dirty blocks podem ser persistidos mais tarde sem perder a consistência.',
     feedbackWrong: 'O COMMIT depende da persistência do redo pelo LGWR. O bloco de dados pode continuar apenas em memória até o DBWn gravá-lo.',
+  },
+  {
+    id: 'apbd-q47',
+    exam: 'prova2',
+    question: '47. Qual estrutura representa corretamente a organização básica de um bloco PL/SQL?',
+    options: [
+      'DECLARE ... BEGIN ... EXCEPTION ... END',
+      'CREATE ... SELECT ... FETCH ... CLOSE',
+      'OPEN ... WHERE CURRENT OF ... COMMIT',
+      'PACKAGE ... BODY ... TRIGGER ... ROLLBACK',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. DECLARE é opcional, BEGIN...END é obrigatório e EXCEPTION é a área de tratamento de erros.',
+    feedbackWrong: 'O bloco PL/SQL é estruturado em torno de DECLARE, BEGIN, EXCEPTION e END; apenas a parte executável é obrigatória.',
+  },
+  {
+    id: 'apbd-q48',
+    exam: 'prova2',
+    question: '48. Qual é a principal vantagem de declarar uma variável com `%TYPE`?',
+    options: [
+      'Herda o mesmo tipo de uma coluna ou variável existente, reduzindo inconsistência de manutenção',
+      'Transforma a variável em cursor explícito automaticamente',
+      'Permite executar COMMIT sem abrir transação',
+      'Faz a variável aceitar qualquer tipo de dado sem validação',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. `%TYPE` evita duplicar a definição do tipo e acompanha mudanças na coluna referenciada.',
+    feedbackWrong: '`%TYPE` serve para reaproveitar tipos já existentes, não para flexibilizar tipos indefinidamente nem criar cursores.',
+  },
+  {
+    id: 'apbd-q49',
+    exam: 'prova2',
+    question: '49. Em PL/SQL, quando `SELECT ... INTO` é uma escolha segura?',
+    options: [
+      'Quando a consulta retorna exatamente uma linha',
+      'Quando a consulta pode retornar qualquer quantidade de linhas',
+      'Somente quando a consulta não usa WHERE',
+      'Apenas para comandos DDL como CREATE TABLE',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. Zero linhas gera `NO_DATA_FOUND` e mais de uma linha gera `TOO_MANY_ROWS`.',
+    feedbackWrong: '`SELECT INTO` exige resultado único. Para múltiplas linhas, o caminho típico é usar cursores.',
+  },
+  {
+    id: 'apbd-q50',
+    exam: 'prova2',
+    question: '50. Por que o cursor FOR loop costuma ser preferido ao ciclo manual OPEN/FETCH/CLOSE?',
+    options: [
+      'Porque o Oracle faz automaticamente a abertura, leitura e fechamento do cursor',
+      'Porque ele dispensa a consulta SQL',
+      'Porque ele permite COMMIT dentro de qualquer loop FOR UPDATE sem risco',
+      'Porque ele substitui todas as exceções por `WHEN OTHERS`',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. O cursor FOR loop reduz código repetitivo e diminui chance de erro no gerenciamento do cursor.',
+    feedbackWrong: 'A principal vantagem é automatizar OPEN, FETCH e CLOSE; a consulta continua existindo e as regras transacionais não desaparecem.',
+  },
+  {
+    id: 'apbd-q51',
+    exam: 'prova2',
+    question: '51. Qual alternativa descreve melhor o uso de `PRAGMA EXCEPTION_INIT`?',
+    options: [
+      'Dar nome a um código de erro Oracle específico para tratá-lo de forma explícita',
+      'Criar uma sequence para exceções de usuário',
+      'Converter uma procedure em transaction autonomous',
+      'Liberar locks de cursores FOR UPDATE',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. O pragma vincula um nome PL/SQL a um erro Oracle, como ORA-02291, melhorando a clareza do handler.',
+    feedbackWrong: '`PRAGMA EXCEPTION_INIT` não trata transações nem cursores; ele associa um nome a um erro Oracle para tratamento específico.',
+  },
+  {
+    id: 'apbd-q52',
+    exam: 'prova2',
+    question: '52. O que diferencia uma function de uma procedure no Oracle?',
+    options: [
+      'A function precisa retornar um valor com RETURN; a procedure executa uma ação e pode usar parâmetros de saída',
+      'A procedure sempre roda em trigger e a function nunca pode ser armazenada',
+      'A function não aceita parâmetros e a procedure aceita apenas IN OUT',
+      'A procedure só pode conter SQL e a function só pode conter PL/SQL puro',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. Essa é a distinção central entre os dois tipos de programa armazenado.',
+    feedbackWrong: 'Functions retornam valor obrigatório; procedures focam na ação e podem devolver dados por parâmetros OUT ou IN OUT.',
+  },
+  {
+    id: 'apbd-q53',
+    exam: 'prova2',
+    question: '53. Em qual cenário `PRAGMA AUTONOMOUS_TRANSACTION` faz mais sentido?',
+    options: [
+      'Registrar log de auditoria que deve permanecer salvo mesmo se a transação principal sofrer rollback',
+      'Evitar a necessidade de COMMIT em qualquer transação',
+      'Substituir RMAN em backup físico',
+      'Permitir que `SELECT INTO` retorne múltiplas linhas',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. Transações autônomas isolam a gravação, muito úteis para log e auditoria.',
+    feedbackWrong: 'O uso clássico é log independente da transação principal; isso não substitui backup nem altera o comportamento de `SELECT INTO`.',
+  },
+  {
+    id: 'apbd-q54',
+    exam: 'prova2',
+    question: '54. Qual afirmação resume melhor o papel de uma trigger?',
+    options: [
+      'É um programa PL/SQL armazenado executado automaticamente em resposta a eventos como INSERT, UPDATE, DELETE ou DDL',
+      'É uma tabela temporária criada para guardar resultados de cursores',
+      'É uma função de senha usada em profiles',
+      'É o mecanismo que abre PDBs após o STARTUP do CDB',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. Triggers automatizam reações a eventos do banco, como validações e auditoria.',
+    feedbackWrong: 'Trigger é código disparado automaticamente por eventos do banco; não é estrutura temporária, profile nem mecanismo de startup.',
   },
 ];
