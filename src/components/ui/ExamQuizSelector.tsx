@@ -15,14 +15,27 @@ interface ExamQuizSelectorProps {
   mode: ReviewMode;
 }
 
-const examOptions: ExamFilterOption[] = [
-  { value: 'todos', label: 'Todas', description: 'Mistura os conteúdos das duas avaliações.' },
-  { value: 'prova1', label: 'Prova 1', description: 'Revisa somente os conteúdos da primeira avaliação.' },
-  { value: 'prova2', label: 'Prova 2', description: 'Revisa somente os conteúdos da segunda avaliação.' },
-];
+const ordinais = ['primeira', 'segunda', 'terceira', 'quarta', 'quinta', 'sexta', 'sétima', 'oitava', 'nona', 'décima'];
 
 export default function ExamQuizSelector({ questions, mode }: ExamQuizSelectorProps) {
   const [selectedExam, setSelectedExam] = useState<ExamFilterOption['value']>('todos');
+
+  const examOptions = useMemo(() => {
+    const exams = [...new Set(questions.map(q => q.exam).filter(Boolean))] as QuizExam[];
+    exams.sort((a, b) => Number(a.replace('prova', '')) - Number(b.replace('prova', '')));
+
+    return [
+      { value: 'todos' as const, label: 'Todas', description: 'Mistura os conteúdos de todas as avaliações.' },
+      ...exams.map(exam => {
+        const num = exam.replace('prova', '');
+        return {
+          value: exam,
+          label: `Prova ${num}`,
+          description: `Revisa somente os conteúdos da ${ordinais[Number(num) - 1] ?? `${num}ª`} avaliação.`,
+        };
+      }),
+    ];
+  }, [questions]);
 
   const filteredQuestions = useMemo(() => (
     selectedExam === 'todos'

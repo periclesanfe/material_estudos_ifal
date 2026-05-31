@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export type QuizExam = 'prova1' | 'prova2';
+export type QuizExam = `prova${number}`;
 
 export interface QuizTopicOption {
   value: string;
