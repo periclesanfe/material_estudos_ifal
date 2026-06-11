@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/periclesanfe/material_estudos_ifal/docs/contribuicoes/registro.schema.json",
+  "title": "Registro de contribuicoes do Material de Estudo IFAL",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["versao", "contribuintes", "contribuicoes"],
+  "properties": {
+    "versao": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "atualizadoEm": {
+      "type": ["string", "null"],
+      "description": "Data/hora ISO 8601 da ultima atualizacao manual do registro."
+    },
+    "contribuintes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/contribuinte"
+      },
+      "uniqueItems": true
+    },
+    "contribuicoes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/contribuicao"
+      },
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "contribuinte": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "nome", "matricula", "emailInstitucional"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$",
+          "description": "Identificador estavel usado pelas contribuicoes. Ex: ana-silva."
+        },
+        "nome": {
+          "type": "string",
+          "minLength": 1
+        },
+        "matricula": {
+          "type": "string",
+          "minLength": 1
+        },
+        "emailInstitucional": {
+          "type": "string",
+          "format": "email"
+        },
+        "curso": {
+          "type": "string"
+        },
+        "observacoes": {
+          "type": "string"
+        }
+      }
+    },
+    "contribuicao": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "contribuinteId", "quando", "onde", "tipo", "como", "status"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^contrib-[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+$",
+          "description": "ID unico no formato contrib-AAAA-MM-DD-resumo-curto."
+        },
+        "contribuinteId": {
+          "type": "string",
+          "description": "Referencia ao campo id em contribuintes."
+        },
+        "quando": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["data"],
+          "properties": {
+            "data": {
+              "type": "string",
+              "format": "date"
+            },
+            "registradoEm": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "timezone": {
+              "type": "string",
+              "default": "America/Maceio"
+            }
+          }
+        },
+        "onde": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["escopo"],
+          "properties": {
+            "escopo": {
+              "type": "string",
+              "enum": [
+                "materia",
+                "projeto",
+                "issue",
+                "pull_request",
+                "documentacao",
+                "automacao",
+                "outro"
+              ]
+            },
+            "materiaSlug": {
+              "type": "string"
+            },
+            "materiaCodigo": {
+              "type": "string"
+            },
+            "arquivo": {
+              "type": "string"
+            },
+            "secao": {
+              "type": "string"
+            },
+            "linhas": {
+              "type": "string",
+              "description": "Linha ou intervalo em texto livre. Ex: 10, 10-20."
+            },
+            "issue": {
+              "type": "string",
+              "description": "Numero ou URL da issue."
+            },
+            "pullRequest": {
+              "type": "string",
+              "description": "Numero ou URL do pull request."
+            }
+          }
+        },
+        "tipo": {
+          "type": "string",
+          "enum": [
+            "conteudo_materia",
+            "questao_quiz",
+            "correcao",
+            "melhoria",
+            "revisao",
+            "issue",
+            "documentacao",
+            "codigo",
+            "design_ui",
+            "dados",
+            "infraestrutura",
+            "outro"
+          ]
+        },
+        "como": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["resumo", "origem"],
+          "properties": {
+            "resumo": {
+              "type": "string",
+              "minLength": 1
+            },
+            "detalhes": {
+              "type": "string"
+            },
+            "origem": {
+              "type": "string",
+              "enum": [
+                "pull_request",
+                "issue",
+                "commit",
+                "aula",
+                "material_professor",
+                "revisao_manual",
+                "outro"
+              ]
+            },
+            "referencia": {
+              "type": "string",
+              "description": "URL, hash de commit, numero de issue/PR ou referencia externa."
+            }
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": ["proposto", "em_revisao", "aprovado", "incorporado", "rejeitado"]
+        },
+        "revisadoPor": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
