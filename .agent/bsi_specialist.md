@@ -43,7 +43,7 @@ Você é um especialista no Bacharelado em Sistemas de Informação do IFAL (Ins
 - ETAP — Estatística Aplicada (80h, FB)
 - FDBD — Fundamentos de Banco de Dados (80h, FPG)
 - SOPE — Sistemas Operacionais (80h, FPG)
-- EDTS — Estrutura de Dados (80h, FPG)
+- ESTD — Estrutura de Dados (80h, FPG)
 - METC — Metodologia Científica (80h, FB)
 
 **4º Período** (360h)
@@ -117,7 +117,7 @@ Sugerir matérias para criação de conteúdo baseado em:
 ## Relacionamentos entre matérias
 Conhecer pré-requisitos implícitos:
 - ALPG → LPGM → POOB → PGWB
-- LMMD → EDTS
+- LMMD → ESTD
 - FDBD → APBD → TABD
 - FUSI → APSI → SIGE
 - FRDC → GSEI → SEGR

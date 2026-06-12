@@ -4,6 +4,7 @@ import AdministracaoProjetoBancoDadosContent from '../content/administracao-proj
 import ComportamentoOrganizacionalContent from '../content/comportamento-organizacional/ComportamentoOrganizacionalContent';
 import MarketingContent from '../content/marketing-comercio-eletronico/MarketingContent';
 import MetodologiaCientificaContent from '../content/metodologia-cientifica/MetodologiaCientificaContent';
+import EstruturaDadosContent from '../content/estrutura-dados/EstruturaDadosContent';
 import NotFoundPage from './NotFoundPage';
 
 const contentRegistry: Record<string, React.ComponentType> = {
@@ -11,6 +12,7 @@ const contentRegistry: Record<string, React.ComponentType> = {
   'comportamento-organizacional': ComportamentoOrganizacionalContent,
   'marketing-comercio-eletronico': MarketingContent,
   'metodologia-cientifica': MetodologiaCientificaContent,
+  'estrutura-dados': EstruturaDadosContent,
 };
 
 export default function SubjectPage() {
