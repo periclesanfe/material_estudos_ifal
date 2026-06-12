@@ -1,7 +1,116 @@
 {
   "$schema": "./registro.schema.json",
   "versao": 1,
-  "atualizadoEm": null,
-  "contribuintes": [],
-  "contribuicoes": []
+  "atualizadoEm": "2026-06-12T10:50:00-03:00",
+  "contribuintes": [
+    {
+      "id": "isaque-braga",
+      "nome": "Isaque Braga",
+      "matricula": "2024001384",
+      "emailInstitucional": "isb15@aluno.ifal.edu.br",
+      "curso": "Sistemas de Informação"
+    }
+  ],
+  "contribuicoes": [
+    {
+      "id": "contrib-2026-05-31-quiz-dinamico",
+      "contribuinteId": "isaque-braga",
+      "quando": {
+        "data": "2026-05-31",
+        "registradoEm": "2026-05-31T13:07:13-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "projeto",
+        "arquivo": "src/components/quiz/ExamQuizSelector.tsx",
+        "pullRequest": "#17"
+      },
+      "tipo": "codigo",
+      "como": {
+        "resumo": "Refatoração do filtro de provas no quiz para suportar número dinâmico de avaliações.",
+        "detalhes": "Tipo QuizExam alterado de union literal para template literal (prova${number}). Opções de filtro agora derivadas dinamicamente via useMemo, ordenadas numericamente, com labels em ordinais em português.",
+        "origem": "pull_request",
+        "referencia": "#17"
+      },
+      "status": "incorporado",
+      "revisadoPor": ["periclesanfe"],
+      "tags": ["quiz", "refatoracao", "typescript"]
+    },
+    {
+      "id": "contrib-2026-05-31-metodologia-cientifica",
+      "contribuinteId": "isaque-braga",
+      "quando": {
+        "data": "2026-05-31",
+        "registradoEm": "2026-05-31T14:29:48-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "metodologia-cientifica",
+        "materiaCodigo": "METC",
+        "arquivo": "src/content/metodologia-cientifica/data.ts",
+        "pullRequest": "#18"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Adiciona conteúdo completo da matéria Metodologia Científica com seções navegáveis e quiz de revisão.",
+        "detalhes": "Criados data.ts, MetodologiaCientificaSections.tsx e MetodologiaCientificaContent.tsx. Inclui estrutura principal da disciplina, contexto para geração de quiz com IA e perguntas de revisão.",
+        "origem": "pull_request",
+        "referencia": "#18"
+      },
+      "status": "incorporado",
+      "revisadoPor": ["periclesanfe"],
+      "tags": ["metodologia-cientifica", "conteudo", "quiz"]
+    },
+    {
+      "id": "contrib-2026-06-11-componente-codeblock",
+      "contribuinteId": "isaque-braga",
+      "quando": {
+        "data": "2026-06-11",
+        "registradoEm": "2026-06-11T08:28:45-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "projeto",
+        "arquivo": "src/components/ui/CodeBlock.tsx",
+        "pullRequest": "#19"
+      },
+      "tipo": "codigo",
+      "como": {
+        "resumo": "Cria componente CodeBlock com syntax highlighting para múltiplas linguagens, sem dependências externas.",
+        "detalhes": "Tokenização manual com cores baseadas nas variáveis de tema do projeto. Suporta: python, javascript, typescript, java, c, cpp, go, rust. Props: code (obrigatório), language (obrigatório), title (opcional).",
+        "origem": "pull_request",
+        "referencia": "#19"
+      },
+      "status": "incorporado",
+      "revisadoPor": ["periclesanfe"],
+      "tags": ["componente", "syntax-highlighting", "ui"]
+    },
+    {
+      "id": "contrib-2026-06-11-conteudo-estrutura-dados",
+      "contribuinteId": "isaque-braga",
+      "quando": {
+        "data": "2026-06-11",
+        "registradoEm": "2026-06-11T08:28:51-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "estrutura-dados",
+        "materiaCodigo": "ESTD",
+        "arquivo": "src/content/estrutura-dados/data.ts",
+        "pullRequest": "#19"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Adiciona conteúdo completo da matéria Estrutura de Dados com exemplos de código usando o novo componente CodeBlock.",
+        "detalhes": "Criados arquivos de conteúdo em src/content/estrutura-dados/. Realizados ajustes para registrar a matéria no fluxo do projeto conforme estrutura existente.",
+        "origem": "pull_request",
+        "referencia": "#19"
+      },
+      "status": "incorporado",
+      "revisadoPor": ["periclesanfe"],
+      "tags": ["estrutura-dados", "conteudo", "codeblock"]
+    }
+  ]
 }
