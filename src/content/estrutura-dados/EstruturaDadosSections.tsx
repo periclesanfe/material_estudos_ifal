@@ -637,7 +637,7 @@ const sortConcepts: ConceptItem[] = [
   },
   {
     title: 'Quick Sort',
-    description: 'Escolhe pivô, particiona em menores/maiores. O(n log n) médio; O(n²) no pior caso. In-place.',
+    description: 'Escolhe pivô, particiona em menores/maiores. O(n log n) médio; O(n²) no pior caso. Exemplo funcional (não in-place).',
     accent: 'accent5',
   },
 ];
@@ -1227,18 +1227,25 @@ class FilaArray:
         self._tam = 0
         self._N = capacidade
 
-    def enqueue(self, e):   # O(1)
+    def enqueue(self, e):
+        if self._tam == self._N:
+            raise IndexError("fila cheia")
         self._dados[self._fim] = e
         self._fim = (self._fim + 1) % self._N   # avança circular
         self._tam += 1
 
     def dequeue(self):      # O(1) - sem deslocar elementos!
+        if self.is_empty():
+            raise IndexError("fila vazia")
         val = self._dados[self._ini]
+        self._dados[self._ini] = None
         self._ini = (self._ini + 1) % self._N   # avança circular
         self._tam -= 1
         return val
 
     def first(self):        # O(1)
+        if self.is_empty():
+            raise IndexError("fila vazia")
         return self._dados[self._ini]
 
     def is_empty(self):
