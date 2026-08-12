@@ -29,20 +29,30 @@
   --color-error: #ff6b6b;
   --color-warning: #ffe66d;
 
-  /* Paleta categórica da trilha de aprendizado. Uma matéria por matiz, e não o
-     rodízio dos 5 acentos: com 8 matérias no grafo o rodízio repetia cor e duas
-     matérias viravam a mesma nuvem de pontos. Os matizes estão espaçados no
-     círculo cromático e partem do roxo da marca. Ver src/data/taxonomia/. */
-  --color-taxo-1: #6c63ff;
-  --color-taxo-2: #4ecdc4;
-  --color-taxo-3: #ff6b6b;
-  --color-taxo-4: #ffb703;
-  --color-taxo-5: #a8e6cf;
-  --color-taxo-6: #f78bdc;
-  --color-taxo-7: #61a5ff;
-  --color-taxo-8: #c9a227;
-  --color-taxo-9: #ff9166;
-  --color-taxo-10: #9d8cff;
+  /* ── Trilha de aprendizado (rota /trilha) ──────────────────────────────────
+     O grafo é desenhado em canvas, que não herda CSS, então os valores são
+     lidos em tempo de execução (ver useTokensDoTema). A rota tem fundo próprio,
+     mais profundo que o do site: o funil é uma peça de leitura escura, e sobre
+     o #0f0f12 padrão os fios de aresta desapareciam. */
+  --color-trilha-fundo: #0a0c14;
+  --color-trilha-fio: #dbe2f5;
+  --color-trilha-eixo: #646c84;
+
+  /* Paleta categórica das matérias. Uma matéria por matiz, e não o rodízio dos
+     5 acentos: com 10 matérias no grafo o rodízio repetia cor e duas viravam a
+     mesma nuvem de pontos. Os matizes são harmônicos entre si (azuis, rosas e
+     cremes) em vez de puramente espaçados no círculo cromático, porque num
+     grafo denso o contraste máximo entre vizinhos vira vibração. */
+  --color-taxo-1: #3d63d8;
+  --color-taxo-2: #9db8dc;
+  --color-taxo-3: #e76d95;
+  --color-taxo-4: #efe3c8;
+  --color-taxo-5: #dd3b31;
+  --color-taxo-6: #e8b8c4;
+  --color-taxo-7: #4b5aa8;
+  --color-taxo-8: #e8b08a;
+  --color-taxo-9: #7ea6e0;
+  --color-taxo-10: #c98fb0;
 
   --font-display: 'Playfair Display', serif;
   --font-body: 'Source Sans 3', sans-serif;
@@ -82,18 +92,24 @@ html[data-theme='light'] {
   --color-error: #c83f54;
   --color-warning: #8a6600;
 
-  /* Trilha no tema claro: mesmos matizes, escurecidos para manter contraste
-     sobre fundo branco (os tons pastel do tema escuro somem no claro). */
-  --color-taxo-1: #5a52e8;
-  --color-taxo-2: #0d817b;
-  --color-taxo-3: #c83f54;
-  --color-taxo-4: #8a6600;
-  --color-taxo-5: #19764f;
-  --color-taxo-6: #b0338f;
-  --color-taxo-7: #1f6fd0;
-  --color-taxo-8: #7a5c00;
-  --color-taxo-9: #c2521f;
-  --color-taxo-10: #6d4ac9;
+  /* Trilha no tema claro. O fundo do grafo continua escuro de propósito: é uma
+     peça de leitura noturna, e no claro os fios de aresta e o brilho dos nós
+     sumiriam. Os matizes são os mesmos, com os cremes puxados para o âmbar para
+     não desaparecerem contra o painel branco da interface em volta. */
+  --color-trilha-fundo: #0a0c14;
+  --color-trilha-fio: #dbe2f5;
+  --color-trilha-eixo: #7c85a0;
+
+  --color-taxo-1: #4a70e0;
+  --color-taxo-2: #9db8dc;
+  --color-taxo-3: #e76d95;
+  --color-taxo-4: #d9bf86;
+  --color-taxo-5: #e04a40;
+  --color-taxo-6: #e8b8c4;
+  --color-taxo-7: #5c6bbd;
+  --color-taxo-8: #e0a077;
+  --color-taxo-9: #7ea6e0;
+  --color-taxo-10: #c98fb0;
 }
 
 
@@ -655,8 +671,13 @@ html[data-clean-mode='true'] {
   --color-warning: #6b7280;
 
   /* Trilha no modo limpo: o modo existe para tirar a cor da frente, então as
-     matérias passam a se distinguir por VALOR e não por matiz. Oito cinzas
-     idênticos deixariam o grafo ilegível, que é o oposto do objetivo. */
+     matérias passam a se distinguir por VALOR e não por matiz. Dez cinzas
+     idênticos deixariam o grafo ilegível, que é o oposto do objetivo. Aqui o
+     fundo do grafo acompanha o modo e fica claro, então os fios escurecem. */
+  --color-trilha-fundo: #f2f2ee;
+  --color-trilha-fio: #2b3440;
+  --color-trilha-eixo: #5d6673;
+
   --color-taxo-1: #1f2933;
   --color-taxo-2: #3f4652;
   --color-taxo-3: #5d6673;
@@ -746,4 +767,600 @@ html[data-clean-mode='true'] .study-pill.active {
   background: var(--color-card-hover);
   border-color: var(--color-border-hover);
   color: var(--color-text);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TRILHA DE APRENDIZADO (rota /trilha)
+
+   Peça de tela cheia: o funil ocupa a área toda e os painéis flutuam sobre ele
+   em camadas. Difere do resto do site de propósito, porque aqui o conteúdo é a
+   visualização e não o texto. Os tokens --color-trilha-* estão no bloco de
+   variáveis, com variante para os três temas.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.trilha-cena {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 560px;
+  overflow: hidden;
+  background: var(--color-trilha-fundo);
+  color: #edeff7;
+  user-select: none;
+}
+
+html[data-clean-mode='true'] .trilha-cena {
+  color: var(--color-text);
+}
+
+.trilha-cena canvas {
+  position: absolute;
+  inset: 0;
+}
+
+/* ── bloco editorial ── */
+.trilha-editorial {
+  position: absolute;
+  /* ancorado acima do centro: a legenda ocupa o canto inferior esquerdo, e
+     centrar no meio exato fazia os dois se sobreporem em tela de 900 px */
+  top: 8%;
+  left: clamp(18px, 3vw, 40px);
+  z-index: 5;
+  max-width: min(470px, 38vw);
+  pointer-events: none;
+}
+
+.trilha-kicker {
+  margin: 0 0 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #98a0b8;
+}
+
+.trilha-titulo {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 3.6vw, 58px);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  color: #fff;
+}
+
+html[data-clean-mode='true'] .trilha-titulo {
+  color: var(--color-text);
+}
+
+/* o ponto final em vermelho é o único acento gráfico do bloco */
+.trilha-ponto {
+  color: #ff3b30;
+}
+
+.trilha-lead {
+  margin: 0 0 6px;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.55;
+  color: #fff;
+}
+
+html[data-clean-mode='true'] .trilha-lead {
+  color: var(--color-text);
+}
+
+.trilha-stats {
+  margin: 0;
+  max-width: 46ch;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #c6cde0;
+}
+
+.trilha-stats b {
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+html[data-clean-mode='true'] .trilha-stats,
+html[data-clean-mode='true'] .trilha-ctx {
+  color: var(--color-text-muted);
+}
+
+html[data-clean-mode='true'] .trilha-stats b {
+  color: var(--color-text);
+}
+
+.trilha-ctx {
+  margin: 10px 0 0;
+  max-width: 44ch;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #98a0b8;
+}
+
+.trilha-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  pointer-events: auto;
+}
+
+/* ── seletor de eixo, em cápsula ── */
+.trilha-eixo {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid rgba(130, 145, 190, 0.35);
+  border-radius: 999px;
+  background: rgba(20, 24, 38, 0.6);
+}
+
+.trilha-eixo button {
+  padding: 6px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #98a0b8;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.trilha-eixo button:hover {
+  color: #edeff7;
+}
+
+.trilha-eixo button.ativo {
+  background: rgba(130, 145, 190, 0.2);
+  color: #fff;
+}
+
+.trilha-lic-botao {
+  border: 0;
+  background: transparent;
+  color: #98a0b8;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.trilha-lic-botao:hover {
+  color: #edeff7;
+  text-decoration: underline;
+}
+
+/* ── legenda ── */
+.trilha-legenda {
+  position: absolute;
+  left: clamp(14px, 3vw, 30px);
+  bottom: 24px;
+  z-index: 5;
+  max-height: 34vh;
+  overflow-y: auto;
+  padding: 12px 13px;
+  border: 1px solid rgba(130, 145, 190, 0.16);
+  border-radius: 20px;
+  background: rgba(14, 17, 28, 0.78);
+  backdrop-filter: blur(10px);
+}
+
+html[data-clean-mode='true'] .trilha-legenda,
+html[data-clean-mode='true'] .trilha-card,
+html[data-clean-mode='true'] .trilha-balao {
+  background: color-mix(in srgb, var(--color-card) 88%, transparent);
+  border-color: var(--color-border);
+}
+
+.trilha-legenda-titulo {
+  margin: 1px 4px 6px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #646c84;
+}
+
+.trilha-chip {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  min-width: 226px;
+  padding: 3.5px 7px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.trilha-chip:hover {
+  background: rgba(130, 145, 190, 0.09);
+}
+
+.trilha-chip.off {
+  opacity: 0.32;
+}
+
+.trilha-chip .sw {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.trilha-chip .nm {
+  flex: 1;
+  overflow: hidden;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trilha-chip .ct {
+  font-size: 11.5px;
+  color: #98a0b8;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── balão de passagem ── */
+.trilha-balao {
+  position: absolute;
+  z-index: 9;
+  max-width: 290px;
+  padding: 12px 14px;
+  border: 1px solid rgba(130, 145, 190, 0.16);
+  border-radius: 16px;
+  background: rgba(10, 13, 22, 0.95);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+.trilha-balao .meta,
+.trilha-card .meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #98a0b8;
+}
+
+.trilha-balao .sw,
+.trilha-card .sw {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.trilha-balao .ttl {
+  margin: 0 0 7px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.trilha-balao .q {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #d3d9e8;
+}
+
+/* ── card do conceito ── */
+.trilha-card {
+  position: absolute;
+  top: 26px;
+  right: clamp(14px, 2vw, 26px);
+  z-index: 8;
+  width: 340px;
+  max-height: calc(100vh - 52px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 16px 18px 18px;
+  border: 1px solid rgba(130, 145, 190, 0.16);
+  border-radius: 20px;
+  background: rgba(14, 17, 28, 0.86);
+  backdrop-filter: blur(13px);
+}
+
+.trilha-card .barra {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  margin-bottom: 8px;
+}
+
+.trilha-card .voltar {
+  height: 24px;
+  padding: 0 10px;
+  border: 1px solid rgba(130, 145, 190, 0.16);
+  border-radius: 7px;
+  background: transparent;
+  color: #98a0b8;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.trilha-card .voltar:hover {
+  background: rgba(130, 145, 190, 0.12);
+  color: #edeff7;
+}
+
+.trilha-card .fechar {
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(130, 145, 190, 0.16);
+  border-radius: 7px;
+  background: transparent;
+  color: #98a0b8;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.trilha-card .fechar:hover {
+  background: rgba(130, 145, 190, 0.1);
+  color: #edeff7;
+}
+
+.trilha-card .titulo {
+  margin: 0 0 9px;
+  font-family: var(--font-body);
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.trilha-card .pergunta {
+  margin: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #d3d9e8;
+}
+
+.trilha-card .numero {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.trilha-card .numero .n {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.trilha-card .numero .u {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #98a0b8;
+}
+
+.trilha-card .sub {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #aeb6cc;
+}
+
+.trilha-card .secao {
+  margin-top: 15px;
+}
+
+.trilha-card .rotulo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 7px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #646c84;
+}
+
+.trilha-card .rotulo .k {
+  color: #98a0b8;
+  font-variant-numeric: tabular-nums;
+}
+
+.trilha-card .linhas {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trilha-card .linha {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.trilha-card .linha:hover {
+  border-color: rgba(130, 145, 190, 0.16);
+  background: rgba(130, 145, 190, 0.1);
+}
+
+.trilha-card .linha .ord {
+  flex: 0 0 auto;
+  width: 18px;
+  font-size: 10px;
+  color: #646c84;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  line-height: 1.5;
+}
+
+.trilha-card .linha .rdot {
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  margin-top: 3px;
+  border-radius: 50%;
+}
+
+.trilha-card .linha .rt {
+  flex: 1;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.trilha-card .linha .razao,
+.trilha-card .linha .citacao {
+  display: block;
+  font-weight: 400;
+}
+
+.trilha-card .linha .razao {
+  margin-top: 3px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #aeb6cc;
+}
+
+/* a citação verbatim é a prova da dependência: aparece recuada e em itálico */
+.trilha-card .linha .citacao {
+  margin-top: 4px;
+  padding-left: 8px;
+  border-left: 1px solid rgba(130, 145, 190, 0.28);
+  font-size: 11px;
+  font-style: italic;
+  line-height: 1.45;
+  color: #98a0b8;
+}
+
+.trilha-card .linha .ra {
+  flex: 0 0 auto;
+  font-size: 10.5px;
+  color: #646c84;
+  line-height: 1.6;
+}
+
+.trilha-card .nota {
+  margin: 4px 0 0 8px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #98a0b8;
+}
+
+.trilha-card .rodape {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(130, 145, 190, 0.16);
+  font-size: 10.5px;
+  line-height: 1.55;
+  color: #646c84;
+}
+
+.trilha-card .rodape a {
+  color: #9db8dc;
+  text-decoration: none;
+}
+
+.trilha-card .rodape a:hover {
+  text-decoration: underline;
+}
+
+/* ── dica ── */
+.trilha-dica {
+  position: absolute;
+  right: 26px;
+  bottom: 26px;
+  z-index: 5;
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.7;
+  color: #646c84;
+  text-align: right;
+  pointer-events: none;
+}
+
+.trilha-dica b {
+  font-weight: 600;
+  color: #98a0b8;
+}
+
+@media (max-width: 980px) {
+  .trilha-editorial {
+    position: static;
+    max-width: none;
+    padding: 24px 18px 0;
+    transform: none;
+  }
+
+  .trilha-cena {
+    height: auto;
+    min-height: 0;
+  }
+
+  .trilha-cena canvas {
+    position: static;
+    height: 58vh;
+  }
+
+  .trilha-legenda {
+    position: static;
+    margin: 14px 18px;
+    max-height: 30vh;
+  }
+
+  .trilha-card {
+    position: static;
+    width: auto;
+    max-height: none;
+    margin: 0 18px 18px;
+  }
+
+  .trilha-dica {
+    display: none;
+  }
 }

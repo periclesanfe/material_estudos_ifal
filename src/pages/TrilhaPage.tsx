@@ -1,10 +1,11 @@
 import { useCallback, useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import GrafoTrilha from '../components/trilha/GrafoTrilha';
+import GrafoTrilha, { type NoSobCursor } from '../components/trilha/GrafoTrilha';
 import {
   contaDesbloqueados,
   dependencias,
   disciplinasTaxonomia,
+  getDesbloqueia,
   getPrerequisitos,
   getTopico,
   getTrilha,
@@ -12,25 +13,15 @@ import {
 } from '../data/taxonomia';
 import type { EixoVertical } from '../lib/grafoTrilha';
 
-const EIXOS: { valor: EixoVertical; rotulo: string; explica: string }[] = [
-  {
-    valor: 'profundidade',
-    rotulo: 'ordem de aprendizado',
-    explica:
-      'A altura é quantos pré-requisitos existem atrás do conceito. A boca larga em cima são os pontos de partida, e o funil afina até o fim das cadeias mais longas.',
-  },
-  {
-    valor: 'periodo',
-    rotulo: 'período do curso',
-    explica: 'A altura é o semestre em que a matéria é ofertada, do 1º período às optativas.',
-  },
-];
-
 const TOTAL_HARD = dependencias.filter(d => d.forca === 'hard').length;
 
-/** Rótulo do período, com optativa em vez de "9º". */
+const EIXOS: { valor: EixoVertical; rotulo: string }[] = [
+  { valor: 'profundidade', rotulo: 'ordem de aprendizado' },
+  { valor: 'periodo', rotulo: 'período do curso' },
+];
+
 function rotuloPeriodo(periodo: number): string {
-  return periodo >= 9 ? 'Optativa' : `${periodo}º período`;
+  return periodo >= 9 ? 'optativa' : `${periodo}º período`;
 }
 
 export default function TrilhaPage() {
@@ -39,9 +30,9 @@ export default function TrilhaPage() {
   const materiaFoco = params.get('materia');
 
   /**
-   * Chegando de uma matéria, o grafo abre focado nela e nas matérias que
-   * fornecem pré-requisitos, porque "os pré-requisitos desta matéria" não é uma
-   * pergunta que se responde sem os fornecedores.
+   * Chegando de uma matéria, o grafo abre focado nela e nas que fornecem
+   * pré-requisitos, porque "o que vem antes desta matéria" não se responde sem
+   * os fornecedores.
    */
   const [ocultas, setOcultas] = useState<ReadonlySet<string>>(() => {
     if (!materiaFoco) return new Set();
@@ -55,8 +46,11 @@ export default function TrilhaPage() {
     }
     return new Set(disciplinasTaxonomia.filter(d => !manter.has(d.codigo)).map(d => d.codigo));
   });
+
   const [cores, setCores] = useState<Record<string, string>>({});
   const [eixo, setEixo] = useState<EixoVertical>('profundidade');
+  const [sobCursor, setSobCursor] = useState<NoSobCursor | null>(null);
+  const [historico, setHistorico] = useState<string[]>([]);
 
   const contagemPorDisciplina = useMemo(() => {
     const mapa = new Map<string, number>();
@@ -79,6 +73,25 @@ export default function TrilhaPage() {
     [setParams],
   );
 
+  /** Navega para outro conceito guardando de onde veio, para o botão voltar. */
+  const navegarPara = (id: string) => {
+    if (selecionadoId && selecionadoId !== id) setHistorico(h => [...h, selecionadoId]);
+    aoSelecionar(id);
+  };
+
+  const voltar = () => {
+    setHistorico(h => {
+      const anterior = h[h.length - 1];
+      if (anterior) aoSelecionar(anterior);
+      return h.slice(0, -1);
+    });
+  };
+
+  const fechar = () => {
+    setHistorico([]);
+    aoSelecionar(null);
+  };
+
   const alternar = (codigo: string) => {
     setOcultas(anterior => {
       const proximo = new Set(anterior);
@@ -88,330 +101,246 @@ export default function TrilhaPage() {
     });
   };
 
-  const materiaEmFoco = materiaFoco ? disciplinasTaxonomia.find(d => d.codigo === materiaFoco) : undefined;
-
   const topico = selecionadoId ? getTopico(selecionadoId) : undefined;
   const trilha = topico ? getTrilha(topico.id) : [];
   const prerequisitos = topico ? getPrerequisitos(topico.id) : [];
+  const desbloqueiaDireto = topico ? getDesbloqueia(topico.id) : [];
   const desbloqueados = topico ? contaDesbloqueados(topico.id) : 0;
   const disciplinaDoTopico = topico ? disciplinasTaxonomia.find(d => d.codigo === topico.disciplina) : undefined;
-  // resolvido pelo slug que o próprio dataset carrega, e não por busca em
-  // curriculum.ts pelo código: PINT está duplicado lá (Projeto Integrador e
-  // Propriedade Intelectual), e Array.find devolveria sempre a primeira
-  const slugDaMateria = disciplinaDoTopico?.slug ?? null;
+  const materiaEmFoco = materiaFoco ? disciplinasTaxonomia.find(d => d.codigo === materiaFoco) : undefined;
+
+  const noSobCursor = sobCursor ? getTopico(sobCursor.id) : undefined;
 
   return (
-    <div className="mx-auto w-full max-w-[1600px] px-4 py-8 sm:px-6 lg:px-10">
-      <header className="mb-6">
-        <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.16em] text-accent">
-          Trilha de aprendizado · {disciplinasTaxonomia.length} matérias
+    <div className="trilha-cena">
+      <GrafoTrilha
+        eixo={eixo}
+        topicoInicial={selecionadoId ?? undefined}
+        ocultas={ocultas}
+        onSelecionar={aoSelecionar}
+        onCores={setCores}
+        onSobCursor={setSobCursor}
+      />
+
+      {/* ── bloco editorial, à esquerda e centrado na vertical ── */}
+      <header className="trilha-editorial">
+        <p className="trilha-kicker">
+          BSI · IFAL · {disciplinasTaxonomia.length} matérias mapeadas
         </p>
-        <h1 className="font-display text-3xl font-black tracking-tight text-text text-balance sm:text-4xl">
-          {materiaEmFoco ? `O que vem antes de ${materiaEmFoco.nome}` : 'O curso como grafo'}
+        <h1 className="trilha-titulo">
+          {materiaEmFoco ? (
+            <>
+              O que vem antes de
+              <br />
+              {materiaEmFoco.nome}
+              <span className="trilha-ponto">.</span>
+            </>
+          ) : (
+            <>
+              Tudo que um
+              <br />
+              analista aprende<span className="trilha-ponto">.</span>
+            </>
+          )}
         </h1>
-        <p className="reading-measure mt-3 text-sm leading-relaxed text-text-muted">
-          São <strong className="tabular-nums text-text">{topicos.length}</strong> conceitos ensináveis ligados por{' '}
-          <strong className="tabular-nums text-text">{dependencias.length}</strong> pré-requisitos, extraídos do material
-          das matérias e da ementa oficial do PPC.{' '}
-          <strong className="tabular-nums text-text">{TOTAL_HARD}</strong> são dependências duras: sem elas o conceito
-          não fecha. Clique em qualquer ponto para ver tudo que vem antes, na ordem de estudo.
+        <p className="trilha-lead">
+          O mapa aberto do curso, construído a partir do material dos professores.
         </p>
-        {materiaEmFoco && (
-          <p className="mt-2 text-[13px] leading-relaxed text-text-muted">
-            O grafo está mostrando {materiaEmFoco.nome} e as matérias que fornecem pré-requisitos a ela.{' '}
-            <button
-              type="button"
-              onClick={() => setOcultas(new Set())}
-              className="text-accent underline underline-offset-2 hover:no-underline"
-            >
-              mostrar o curso inteiro
+        <p className="trilha-stats">
+          <b>{topicos.length}</b> conceitos e <b>{dependencias.length}</b> pré-requisitos, de "o que é um algoritmo" a
+          banco de dados distribuído. <b>{TOTAL_HARD}</b> são indispensáveis: sem eles o conceito não fecha.{' '}
+          <b>Clique em qualquer ponto</b> para ver tudo que vem antes dele.
+        </p>
+        <p className="trilha-ctx">
+          Cada dependência cita a frase do material que a sustenta. Ancorado também na ementa oficial do PPC.
+        </p>
+
+        <div className="trilha-acoes">
+          <div className="trilha-eixo" role="group" aria-label="Eixo vertical do grafo">
+            {EIXOS.map(op => (
+              <button
+                key={op.valor}
+                type="button"
+                onClick={() => setEixo(op.valor)}
+                aria-pressed={eixo === op.valor}
+                className={eixo === op.valor ? 'ativo' : undefined}
+              >
+                {op.rotulo}
+              </button>
+            ))}
+          </div>
+          {materiaEmFoco && (
+            <button type="button" onClick={() => setOcultas(new Set())} className="trilha-lic-botao">
+              ver o curso inteiro
             </button>
-          </p>
-        )}
+          )}
+        </div>
       </header>
 
-      <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1fr)_340px]">
-        <div className="flex flex-col gap-3">
-          <div className="flex flex-wrap items-end justify-between gap-3">
-            <div>
-              <p className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted">
-                Eixo vertical
-              </p>
-              <div className="inline-flex rounded-lg border border-border p-0.5">
-                {EIXOS.map(op => (
-                  <button
-                    key={op.valor}
-                    type="button"
-                    onClick={() => setEixo(op.valor)}
-                    aria-pressed={eixo === op.valor}
-                    className={`rounded-md px-3 py-1.5 text-xs transition-colors ${
-                      eixo === op.valor
-                        ? 'bg-accent/15 font-semibold text-accent'
-                        : 'text-text-muted hover:bg-card-hover hover:text-text'
-                    }`}
-                  >
-                    {op.rotulo}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <p className="reading-measure max-w-[46ch] text-[11.5px] leading-relaxed text-text-muted">
-              {EIXOS.find(op => op.valor === eixo)?.explica}
-            </p>
-          </div>
-
-          <div className="relative h-[clamp(460px,72vh,860px)] overflow-hidden rounded-xl border border-border bg-card">
-            <GrafoTrilha
-              eixo={eixo}
-              topicoInicial={selecionadoId ?? undefined}
-              ocultas={ocultas}
-              onSelecionar={aoSelecionar}
-              onCores={setCores}
-            />
-          </div>
-
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[10.5px] text-text-muted">
-            <span>arrastar: girar</span>
-            <span>scroll: zoom</span>
-            <span>clique: traçar trilha</span>
-            <span>setas: percorrer</span>
-            <span>esc: limpar</span>
-          </div>
-
-          <div className="rounded-xl border border-border bg-card p-4">
-            <div className="mb-3 flex items-center justify-between">
-              <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted">Matérias no grafo</p>
-              {ocultas.size > 0 && (
-                <button
-                  type="button"
-                  onClick={() => setOcultas(new Set())}
-                  className="font-mono text-[10px] uppercase tracking-[0.1em] text-accent hover:underline"
-                >
-                  mostrar tudo
-                </button>
-              )}
-            </div>
-            <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 lg:grid-cols-3">
-              {disciplinasTaxonomia.map(d => {
-                const ativa = !ocultas.has(d.codigo);
-                return (
-                  <button
-                    key={d.codigo}
-                    type="button"
-                    onClick={() => alternar(d.codigo)}
-                    aria-pressed={ativa}
-                    className={`flex items-center gap-2.5 rounded-lg px-2 py-1.5 text-left text-xs transition-colors hover:bg-card-hover ${
-                      ativa ? 'text-text' : 'text-text-muted/55'
-                    }`}
-                  >
-                    <span
-                      className="h-2 w-2 shrink-0 rounded-full transition-opacity"
-                      style={{
-                        backgroundColor: cores[d.codigo] ?? 'currentColor',
-                        opacity: ativa ? 1 : 0.25,
-                      }}
-                    />
-                    <span className="min-w-0 flex-1 truncate">{d.nome}</span>
-                    <span className="font-mono text-[10px] tabular-nums text-text-muted">
-                      {contagemPorDisciplina.get(d.codigo) ?? 0}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
+      {/* ── legenda, canto inferior esquerdo ── */}
+      <div className="trilha-legenda">
+        <p className="trilha-legenda-titulo">Matérias · clique para filtrar</p>
+        <div>
+          {disciplinasTaxonomia.map(d => {
+            const ativa = !ocultas.has(d.codigo);
+            return (
+              <button
+                key={d.codigo}
+                type="button"
+                onClick={() => alternar(d.codigo)}
+                aria-pressed={ativa}
+                className={`trilha-chip${ativa ? '' : ' off'}`}
+              >
+                <span className="sw" style={{ background: cores[d.codigo] ?? 'currentColor' }} />
+                <span className="nm">{d.nome}</span>
+                <span className="ct">{contagemPorDisciplina.get(d.codigo) ?? 0}</span>
+              </button>
+            );
+          })}
         </div>
-
-        <aside className="lg:sticky lg:top-6 lg:self-start">
-          {topico ? (
-            <div className="flex max-h-[calc(100vh-3rem)] flex-col overflow-hidden rounded-xl border border-border bg-card">
-              <div className="border-b border-border/60 p-4">
-                <p className="mb-2 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-text-muted">
-                  <span
-                    className="h-1.5 w-1.5 shrink-0 rounded-full"
-                    style={{ backgroundColor: cores[topico.disciplina] ?? 'currentColor' }}
-                  />
-                  <span className="truncate">
-                    {disciplinaDoTopico?.nome ?? topico.disciplina} · {rotuloPeriodo(topico.periodo)}
-                  </span>
-                </p>
-                <h2 className="font-display text-xl font-bold leading-tight text-text text-balance">{topico.nome}</h2>
-                <p className="mt-1 font-mono text-[10px] text-text-muted">{topico.unidade}</p>
-              </div>
-
-              <div className="flex items-baseline gap-3 border-b border-border/60 p-4">
-                <span className="font-display text-4xl font-black leading-none tabular-nums text-text">
-                  {trilha.length}
-                </span>
-                <span className="text-xs leading-snug text-text-muted">
-                  {trilha.length === 0
-                    ? 'nenhum pré-requisito: é por aqui que se começa'
-                    : `conceito${trilha.length > 1 ? 's' : ''} que vêm antes, até a raiz do curso`}
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-4 overflow-y-auto p-4">
-                <section>
-                  <h3 className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted">O que é</h3>
-                  <p className="text-[13px] leading-relaxed text-text-muted">{topico.descricao}</p>
-                </section>
-
-                {topico.checagem && (
-                  <section>
-                    <h3 className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted">
-                      Pergunta de checagem
-                    </h3>
-                    <p
-                      className="border-l-2 pl-3 text-[13px] leading-relaxed text-text"
-                      style={{ borderColor: cores[topico.disciplina] ?? 'currentColor' }}
-                    >
-                      {topico.checagem}
-                    </p>
-                  </section>
-                )}
-
-                {topico.evidencia.length > 0 && (
-                  <section>
-                    <h3 className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted">
-                      Evidência de domínio
-                    </h3>
-                    <ul className="list-disc space-y-1 pl-4">
-                      {topico.evidencia.map(e => (
-                        <li key={e} className="text-xs leading-relaxed text-text-muted">
-                          {e}
-                        </li>
-                      ))}
-                    </ul>
-                  </section>
-                )}
-
-                {trilha.length > 0 && (
-                  <section>
-                    <h3 className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted">
-                      A trilha, do começo até aqui
-                    </h3>
-                    <ol className="flex flex-col">
-                      {trilha.map((t, i) => (
-                        <li key={t.id}>
-                          <button
-                            type="button"
-                            onClick={() => aoSelecionar(t.id)}
-                            className="flex w-full items-center gap-2 rounded px-1 py-1 text-left transition-colors hover:bg-card-hover"
-                          >
-                            <span className="w-5 shrink-0 text-right font-mono text-[9.5px] tabular-nums text-text-muted">
-                              {String(i + 1).padStart(2, '0')}
-                            </span>
-                            <span
-                              className="h-1.5 w-1.5 shrink-0 rounded-full"
-                              style={{ backgroundColor: cores[t.disciplina] ?? 'currentColor' }}
-                            />
-                            <span className="min-w-0 flex-1 truncate text-xs text-text-muted">{t.nome}</span>
-                            <span className="shrink-0 font-mono text-[9px] text-text-muted/70">{t.disciplina}</span>
-                          </button>
-                        </li>
-                      ))}
-                    </ol>
-                  </section>
-                )}
-
-                {prerequisitos.length > 0 && (
-                  <section>
-                    <h3 className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted">
-                      Por que depende
-                    </h3>
-                    <ul className="flex flex-col gap-3">
-                      {prerequisitos.map(d => {
-                        const pai = getTopico(d.prerequisitoId);
-                        return (
-                          <li key={`${d.topicoId}-${d.prerequisitoId}`} className="text-xs leading-relaxed">
-                            <p>
-                              <button
-                                type="button"
-                                onClick={() => aoSelecionar(d.prerequisitoId)}
-                                className="text-left font-semibold text-text hover:underline"
-                              >
-                                {pai?.nome ?? d.prerequisitoId}
-                              </button>
-                              <span className="ml-1 font-mono text-[9px] uppercase text-text-muted/70">
-                                {d.forca === 'hard' ? 'indispensável' : 'ajuda'}
-                              </span>
-                            </p>
-                            <p className="text-text-muted">{d.razao}</p>
-                            {/* a citação é o que separa este dataset de um palpite:
-                                mostra no material do professor onde a dependência está escrita */}
-                            {d.trecho && (
-                              <p className="mt-1 border-l border-border pl-2 text-[11px] italic leading-relaxed text-text-muted/85">
-                                “{d.trecho}”
-                              </p>
-                            )}
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </section>
-                )}
-
-                {desbloqueados > 0 && (
-                  <section>
-                    <h3 className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted">
-                      Desbloqueia
-                    </h3>
-                    <p className="text-[13px] leading-relaxed text-text-muted">
-                      <strong className="tabular-nums text-text">{desbloqueados}</strong>{' '}
-                      {desbloqueados > 1 ? 'conceitos dependem' : 'conceito depende'} deste, direta ou indiretamente.
-                    </p>
-                  </section>
-                )}
-
-                <footer className="flex flex-col gap-2 border-t border-border/60 pt-3 font-mono text-[9.5px] leading-relaxed text-text-muted">
-                  {topico.ementaPPC.length > 0 && <p>Ementa do PPC: {topico.ementaPPC.join(' · ')}</p>}
-                  {topico.avaliacoes.length > 0 && <p>Cobrado em: {topico.avaliacoes.join(', ')}</p>}
-                  {slugDaMateria && (
-                    <Link to={`/materia/${slugDaMateria}`} className="text-accent hover:underline">
-                      abrir o conteúdo de {disciplinaDoTopico?.nome}
-                    </Link>
-                  )}
-                </footer>
-              </div>
-            </div>
-          ) : (
-            <div className="rounded-xl border border-border bg-card p-5">
-              <h2 className="font-display text-base font-bold text-text">Nenhum conceito selecionado</h2>
-              <p className="mt-2 text-[13px] leading-relaxed text-text-muted">
-                Clique num ponto do grafo para traçar a trilha até ele. Os pontos maiores são os conceitos que travam
-                mais conteúdo adiante.
-              </p>
-              <h3 className="mt-5 mb-2 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted">
-                Os que travam mais o curso
-              </h3>
-              <ol className="flex flex-col">
-                {[...topicos]
-                  .sort((a, b) => b.centralidade - a.centralidade)
-                  .slice(0, 8)
-                  .map((t, i) => (
-                    <li key={t.id}>
-                      <button
-                        type="button"
-                        onClick={() => aoSelecionar(t.id)}
-                        className="flex w-full items-center gap-2 rounded px-1 py-1 text-left transition-colors hover:bg-card-hover"
-                      >
-                        <span className="w-5 shrink-0 text-right font-mono text-[9.5px] tabular-nums text-text-muted">
-                          {String(i + 1).padStart(2, '0')}
-                        </span>
-                        <span
-                          className="h-1.5 w-1.5 shrink-0 rounded-full"
-                          style={{ backgroundColor: cores[t.disciplina] ?? 'currentColor' }}
-                        />
-                        <span className="min-w-0 flex-1 truncate text-xs text-text-muted">{t.nome}</span>
-                        <span className="shrink-0 font-mono text-[9px] text-text-muted/70">{t.disciplina}</span>
-                      </button>
-                    </li>
-                  ))}
-              </ol>
-            </div>
-          )}
-        </aside>
       </div>
+
+      {/* ── balão de passagem do cursor ── */}
+      {noSobCursor && !sobCursor?.id.startsWith('__') && (
+        <div
+          className="trilha-balao"
+          style={{
+            left: Math.min(sobCursor?.x ?? 0, 9999) + 16,
+            top: (sobCursor?.y ?? 0) + 16,
+          }}
+        >
+          <p className="meta">
+            <span className="sw" style={{ background: cores[noSobCursor.disciplina] ?? 'currentColor' }} />
+            {noSobCursor.unidade} · {rotuloPeriodo(noSobCursor.periodo)}
+          </p>
+          <p className="ttl">{noSobCursor.nome}</p>
+          <p className="q">{noSobCursor.checagem || noSobCursor.descricao}</p>
+        </div>
+      )}
+
+      {/* ── card do conceito selecionado, à direita ── */}
+      {topico && (
+        <aside className="trilha-card" aria-live="polite">
+          <div className="barra">
+            {historico.length > 0 && (
+              <button type="button" onClick={voltar} className="voltar">
+                ← voltar
+              </button>
+            )}
+          </div>
+          <button type="button" onClick={fechar} className="fechar" aria-label="Fechar painel">
+            ×
+          </button>
+
+          <p className="meta">
+            <span className="sw" style={{ background: cores[topico.disciplina] ?? 'currentColor' }} />
+            {disciplinaDoTopico?.nome ?? topico.disciplina} · {rotuloPeriodo(topico.periodo)} · {topico.unidade}
+          </p>
+          <h2 className="titulo">{topico.nome}</h2>
+          {topico.checagem && <p className="pergunta">{topico.checagem}</p>}
+
+          <div className="numero">
+            <span className="n">{trilha.length}</span>
+            <span className="u">{trilha.length === 1 ? 'pré-requisito' : 'pré-requisitos'}</span>
+          </div>
+          <p className="sub">
+            {trilha.length === 0
+              ? 'Nenhum: é por aqui que se começa.'
+              : 'Tudo que precisa ser dominado antes deste conceito, traçado até a raiz do curso.'}
+          </p>
+
+          {prerequisitos.length > 0 && (
+            <section className="secao">
+              <p className="rotulo">
+                Depende diretamente de <span className="k">{prerequisitos.length}</span>
+              </p>
+              <div className="linhas">
+                {prerequisitos.map(d => {
+                  const pai = getTopico(d.prerequisitoId);
+                  if (!pai) return null;
+                  return (
+                    <button
+                      key={`${d.topicoId}-${d.prerequisitoId}`}
+                      type="button"
+                      onClick={() => navegarPara(pai.id)}
+                      className="linha"
+                    >
+                      <span className="rdot" style={{ background: cores[pai.disciplina] ?? 'currentColor' }} />
+                      <span className="rt">
+                        {pai.nome}
+                        <span className="razao">{d.razao}</span>
+                        {d.trecho && <span className="citacao">“{d.trecho}”</span>}
+                      </span>
+                      <span className="ra">{d.forca === 'hard' ? 'duro' : 'ajuda'}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+
+          {desbloqueiaDireto.length > 0 && (
+            <section className="secao">
+              <p className="rotulo">
+                Destrava em seguida <span className="k">{desbloqueiaDireto.length}</span>
+              </p>
+              <div className="linhas">
+                {desbloqueiaDireto.slice(0, 8).map(d => {
+                  const filho = getTopico(d.topicoId);
+                  if (!filho) return null;
+                  return (
+                    <button
+                      key={`${d.topicoId}-${d.prerequisitoId}`}
+                      type="button"
+                      onClick={() => navegarPara(filho.id)}
+                      className="linha"
+                    >
+                      <span className="rdot" style={{ background: cores[filho.disciplina] ?? 'currentColor' }} />
+                      <span className="rt">{filho.nome}</span>
+                      <span className="ra">{filho.disciplina}</span>
+                    </button>
+                  );
+                })}
+                {desbloqueados > desbloqueiaDireto.length && (
+                  <p className="nota">
+                    {desbloqueados} conceitos dependem deste no total, contando as cadeias adiante.
+                  </p>
+                )}
+              </div>
+            </section>
+          )}
+
+          {trilha.length > 0 && (
+            <section className="secao">
+              <p className="rotulo">A trilha, do começo até aqui</p>
+              <ol className="linhas">
+                {trilha.map((t, i) => (
+                  <li key={t.id}>
+                    <button type="button" onClick={() => navegarPara(t.id)} className="linha">
+                      <span className="ord">{String(i + 1).padStart(2, '0')}</span>
+                      <span className="rdot" style={{ background: cores[t.disciplina] ?? 'currentColor' }} />
+                      <span className="rt">{t.nome}</span>
+                      <span className="ra">{t.disciplina}</span>
+                    </button>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
+
+          <footer className="rodape">
+            {topico.ementaPPC.length > 0 && <p>Ementa do PPC: {topico.ementaPPC.join(' · ')}</p>}
+            {topico.avaliacoes.length > 0 && <p>Cobrado em: {topico.avaliacoes.join(', ')}</p>}
+            {disciplinaDoTopico?.slug && (
+              <Link to={`/materia/${disciplinaDoTopico.slug}`}>abrir o conteúdo da matéria</Link>
+            )}
+          </footer>
+        </aside>
+      )}
+
+      <p className="trilha-dica">
+        <b>Arraste</b> para girar · <b>Scroll</b> para zoom · <b>Clique</b> num ponto para ver a cadeia
+      </p>
     </div>
   );
 }
