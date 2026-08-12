@@ -1,0 +1,160 @@
+{
+  "versao": "v1",
+  "totalDisciplinas": 8,
+  "fonte": "PPC do Bacharelado em Sistemas de Informação — IFAL",
+  "disciplinas": [
+    {
+      "codigo": "ALPG",
+      "codigoPPC": "ALPG",
+      "nome": "Algoritmos e Logica de Programacao",
+      "periodo": 1,
+      "eixo": "FPG",
+      "slug": "algoritmos-logica-programacao",
+      "cor": "#38bdf8",
+      "ementa": "Estudo dos conceitos básicos de algoritmos. Resolução de problemas de forma estruturada. Lógica de programação. Programação em Blocos. Estudo de funções, escopo e passagem de parâmetros.",
+      "unidadesEmenta": [
+        "Estudo dos conceitos básicos de algoritmos",
+        "Resolução de problemas de forma estruturada",
+        "Lógica de programação",
+        "Programação em Blocos",
+        "Estudo de funções, escopo e passagem de parâmetros."
+      ]
+    },
+    {
+      "codigo": "LPGM",
+      "codigoPPC": "LNPG",
+      "nome": "Linguagem de Programação",
+      "periodo": 2,
+      "eixo": "FPG",
+      "slug": "linguagem-programacao",
+      "cor": "#818cf8",
+      "ementa": "Conceitos básicos de linguagens de programação. Histórico, classificação e principais paradigmas de linguagens de programação. Ferramentas de desenvolvimento. Identificadores, valores, tipos de dados. Constantes e variáveis. Comandos de estruturação do fluxo de controle. Modularização. Escopo de nomes e tempo de vida de variáveis. Passagem de parâmetros. Tipos de dados definidos pelo usuário. Entrada e saída de dados.",
+      "unidadesEmenta": [
+        "Conceitos básicos de linguagens de programação",
+        "Histórico, classificação e principais paradigmas de linguagens de programação",
+        "Ferramentas de desenvolvimento",
+        "Identificadores, valores, tipos de dados",
+        "Constantes e variáveis",
+        "Comandos de estruturação do fluxo de controle",
+        "Modularização",
+        "Escopo de nomes e tempo de vida de variáveis",
+        "Passagem de parâmetros",
+        "Tipos de dados definidos pelo usuário",
+        "Entrada e saída de dados."
+      ]
+    },
+    {
+      "codigo": "ESTD",
+      "codigoPPC": "ESTD",
+      "nome": "Estrutura de Dados",
+      "periodo": 3,
+      "eixo": "FPG",
+      "slug": "estrutura-dados",
+      "cor": "#c084fc",
+      "ementa": "Visão geral das estruturas de dados. Tipos abstratos de dados. Listas Encadeadas. Pilhas. Filas. Árvores. Algoritmos Recursivos.",
+      "unidadesEmenta": [
+        "Visão geral das estruturas de dados",
+        "Tipos abstratos de dados",
+        "Listas Encadeadas",
+        "Pilhas",
+        "Filas",
+        "Árvores",
+        "Algoritmos Recursivos."
+      ]
+    },
+    {
+      "codigo": "METC",
+      "codigoPPC": "METC",
+      "nome": "Metodologia Científica",
+      "periodo": 3,
+      "eixo": "FB",
+      "slug": "metodologia-cientifica",
+      "cor": "#94a3b8",
+      "ementa": "Ciência e senso comum. Tipos de conhecimento científico. Paradigmas positivista, interpretativista e complexo. Pesquisa quantitativa, qualitativa e mista. Métodos e técnicas de pesquisa. Estrutura de um projeto de pesquisa. Instrumentos de coleta de dados. Análise de dados quantitativos e qualitativos. Redação da Pesquisa. Normas da ABNT.",
+      "unidadesEmenta": [
+        "Ciência e senso comum",
+        "Tipos de conhecimento científico",
+        "Paradigmas positivista, interpretativista e complexo",
+        "Pesquisa quantitativa, qualitativa e mista",
+        "Métodos e técnicas de pesquisa",
+        "Estrutura de um projeto de pesquisa",
+        "Instrumentos de coleta de dados",
+        "Análise de dados quantitativos e qualitativos",
+        "Redação da Pesquisa",
+        "Normas da ABNT."
+      ]
+    },
+    {
+      "codigo": "APBD",
+      "codigoPPC": "APBD",
+      "nome": "Administração e Projeto de Banco de Dados",
+      "periodo": 4,
+      "eixo": "FPG",
+      "slug": "administracao-projeto-banco-dados",
+      "cor": "#34d399",
+      "ementa": "Desenvolvimento de projeto de banco de dados utilizando a linguagem SQL. Comandos DDL, DML, DCL e comandos de controle de transações. Programação em SQL. Atividades do Administrador de Banco de Dados.",
+      "unidadesEmenta": [
+        "Desenvolvimento de projeto de banco de dados utilizando a linguagem SQL. Comandos DDL, DML, DCL e comandos de controle de transações",
+        "Programação em SQL. Atividades do Administrador de Banco de Dados."
+      ]
+    },
+    {
+      "codigo": "TABD",
+      "codigoPPC": "TABD",
+      "nome": "Topicos Avancados de Banco de Dados",
+      "periodo": 5,
+      "eixo": "FPG",
+      "slug": "topicos-avancados-banco-dados",
+      "cor": "#2dd4bf",
+      "ementa": "Banco de dados multidimensional. Data Warehouse. Business Intelligence. Mineração de dados. Bancos de Dados Emergentes.",
+      "unidadesEmenta": [
+        "Banco de dados multidimensional",
+        "Data Warehouse",
+        "Business Intelligence",
+        "Mineração de dados",
+        "Bancos de Dados Emergentes."
+      ]
+    },
+    {
+      "codigo": "PDSW",
+      "codigoPPC": "PDSW",
+      "nome": "Processos de Desenvolvimento de Software",
+      "periodo": 6,
+      "eixo": "FPG",
+      "slug": "processos-desenvolvimento-software",
+      "cor": "#fbbf24",
+      "ementa": "Visão geral da Engenharia de Software. Modelos de processos de desenvolvimento de software. Requisitos e especificação de software. Métodos de análise e projeto de software. Métodos de Desenvolvimento de software. Gestão de Projetos de Software. Aplicações da Engenharia de Software. Gerenciamento de configuração.",
+      "unidadesEmenta": [
+        "Visão geral da Engenharia de Software",
+        "Modelos de processos de desenvolvimento de software",
+        "Requisitos e especificação de software",
+        "Métodos de análise e projeto de software",
+        "Métodos de Desenvolvimento de software",
+        "Gestão de Projetos de Software",
+        "Aplicações da Engenharia de Software",
+        "Gerenciamento de configuração."
+      ]
+    },
+    {
+      "codigo": "CORG",
+      "codigoPPC": "CORG",
+      "nome": "Comportamento Organizacional",
+      "periodo": 9,
+      "eixo": "FPF",
+      "slug": "comportamento-organizacional",
+      "cor": "#f472b6",
+      "ementa": "O indivíduo e a organização. Valores, atitudes e satisfação no trabalho. Percepção e diferenças individuais. Motivação. Comunicação interpessoal e organizacional. Comportamento grupal e intergrupal. Liderança e confiança. Conflito e negociação. Aplicações organizacionais: diagnóstico; gerência participativa; reestruturação do trabalho e inovações no contexto de trabalho.",
+      "unidadesEmenta": [
+        "O indivíduo e a organização",
+        "Valores, atitudes e satisfação no trabalho",
+        "Percepção e diferenças individuais",
+        "Motivação",
+        "Comunicação interpessoal e organizacional",
+        "Comportamento grupal e intergrupal",
+        "Liderança e confiança",
+        "Conflito e negociação",
+        "Aplicações organizacionais: diagnóstico; gerência participativa; reestruturação do trabalho e inovações no contexto de trabalho."
+      ]
+    }
+  ]
+}

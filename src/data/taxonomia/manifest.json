@@ -1,0 +1,53 @@
+{
+  "dataset": "Taxonomia de Aprendizagem — BSI/IFAL",
+  "versao": "v0.1-rascunho",
+  "geradoEm": "2026-08-12T09:50:00-03:00",
+  "contagens": {
+    "topicos": 380,
+    "topicosPorDisciplina": {
+      "ALPG": 45,
+      "APBD": 60,
+      "CORG": 60,
+      "ESTD": 60,
+      "LPGM": 60,
+      "METC": 24,
+      "PDSW": 45,
+      "TABD": 26
+    },
+    "topicosPorTipo": {
+      "CONCEITUAL": 185,
+      "REPRESENTACIONAL": 30,
+      "PROCEDIMENTAL": 101,
+      "LINGUAGEM": 50,
+      "META": 14
+    },
+    "dependencias": 492,
+    "dependenciasDuras": 300,
+    "dependenciasCruzadas": 31,
+    "disciplinas": 8,
+    "disciplinasNaGrade": 64
+  },
+  "arquivos": {
+    "topicos.json": {
+      "bytes": 379105,
+      "sha256": "f10d22aaee6a2e76bd2c0be2e80d47d146425ae0f72c8186d27f3eb80bb52e41"
+    },
+    "dependencias.json": {
+      "bytes": 202451,
+      "sha256": "5d4a1fa99457e67e376f8ce45f3cac8767094bf28da63b8bd0f62d032e65c361"
+    },
+    "disciplinas.json": {
+      "bytes": 7244,
+      "sha256": "b4349f758dd5341bdd0885a7edb7fc9046eb7eac790d7f5bf481dddf4ac6d0ca"
+    }
+  },
+  "excluido": [
+    "progresso individual de aluno (nunca publicado)",
+    "material autoral dos professores na íntegra"
+  ],
+  "avisos": {
+    "ciclos": 0,
+    "periodoInvertido": 0,
+    "problemas": 4
+  }
+}
