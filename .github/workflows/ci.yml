@@ -1,10 +1,16 @@
 name: CI Pipeline
 
+# Valida Pull Requests antes do merge. O push na main é coberto pelo workflow
+# Deploy to GitHub Pages (que também compila), então o CI não roda em push
+# para evitar duas execuções no mesmo commit.
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+
+# Cancela execuções anteriores ainda em andamento para o mesmo PR.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   quality-check:

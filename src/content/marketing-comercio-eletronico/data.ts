@@ -37,11 +37,13 @@ DIVISÃO POR AVALIAÇÕES:
 
 15. CONTEÚDO, OMNICANALIDADE E ENGAJAMENTO: Marketing de conteúdo educa e reduz insegurança. Omnicanalidade integra canais online e offline, diferente de multicanalidade. Apps, CRM social e gamificação aumentam conveniência, relacionamento e participação.
 
-16. MARKETING 5.0: Uso de tecnologias que mimetizam capacidades humanas para criar, comunicar, entregar e aumentar valor na jornada do cliente. Componentes: marketing direcionado por dados, preditivo, contextual, aumentado e ágil. Desafios: abismo entre gerações, polarização da prosperidade e fosso digital.
+16. CONECTIVIDADE (MKT 4.0): Infraestrutura do Marketing 4.0. Três níveis: móvel (acesso via smartphone), experiencial (profundidade nos pontos de contato) e social (força das comunidades). Três paradoxos: on-line×off-line (coexistem; "high-tech" pede "high-touch"), informado×distraído (atenção caiu de 12s para 8s) e defesa positiva×negativa (marcas fortes têm adoradores e odiadores). Subculturas mais influentes — JMN: Jovens (adotantes iniciais e definidores de tendência; conquistam a mente), Mulheres (coletoras de informação e compradoras holísticas; conquistam o mercado) e Netizens (conectores sociais e criadores de conteúdo; conquistam o coração).
 
-17. E-COMMERCE ORIENTADO POR DADOS: Ecossistema de dados integra navegação, compras, carrinho abandonado, redes sociais, atendimento, CRM e transações. Sistemas de recomendação viabilizam personalização, up-selling e cross-selling. Métricas importantes: conversão, retenção, recompra, CLV, abandono, CAC e defesa da marca.
+17. CAMINHO DO CONSUMIDOR — 5 As: Assimilação (Aware), Atração (Appeal), Arguição (Ask), Ação (Act), Apologia (Advocate). Evolui do funil linear (AIDA/4 As) para um caminho em espiral, com saltos e retornos. A Arguição é onde a jornada vira social. Três fontes de influência (zona O³): externa (da marca, controlável, menos confiável), dos outros (comunidade, mais confiável, pico na arguição) e própria (experiência pessoal, predomina na apologia). Métricas: CAC/PAR (conversão de consciência em compra) e CDM/BAR (conversão de consciência em defesa). O gargalo é a menor taxa de conversão entre etapas.
 
-18. CX, AUTOMAÇÃO E CENTRALIDADE HUMANA: A experiência do cliente depende de pontos de contato consistentes. Chatbots e assistentes automatizam dúvidas simples, enquanto humanos cuidam de casos complexos, empatia e relacionamento. Tecnologia deve servir à estratégia e à centralidade humana, respeitando privacidade, inclusão e confiança.
+18. MARKETING 5.0: Aplicação de tecnologias que imitam o humano (next tech) para criar, comunicar, entregar e aumentar valor na jornada do cliente. Equação: 5.0 = 3.0 (centralidade humana) + 4.0 (empoderamento tecnológico). Next techs: IA, PLN, sensores/biometria, robótica (RPA), realidade aumentada e virtual, IoT e blockchain. Cinco componentes: duas DISCIPLINAS-base (orientado por dados e ágil) e três APLICAÇÕES (preditivo, contextual e aumentado). Três desafios: abismo entre gerações, polarização da prosperidade (mercado em "M") e fosso digital. Cinco gerações: Baby Boomers (1946-64), X (1965-80), Y/Millennials (1981-96), Z (1997-2009) e Alfa (2010-25).
+
+19. MARKETING CONTEXTUAL E CX: Três níveis de personalização — informação personalizada (geofencing), interação customizada (gamificação, AR) e imersão total (físico+digital sem emendas). Pirâmide do conhecimento: a máquina vai dos dados ao conhecimento; o humano transforma em ideias e sabedoria (paradoxo de Moravec: máquina vence na lógica/escala, humano na empatia/criatividade). E-commerce orientado por dados: ecossistema integrado sob identidade única do cliente, rumo aos "segmentos de um"; recomendação, up-selling e cross-selling. Métricas: conversão, abandono de carrinho, retenção, recompra, CLV, satisfação e CDM. Tecnologia serve à estratégia e à centralidade humana, com privacidade e confiança.
 `;
 
 export const MARKETING_TOPICS: QuizTopicOption[] = [
@@ -53,7 +55,7 @@ export const MARKETING_TOPICS: QuizTopicOption[] = [
   {
     value: 'prova2',
     label: 'Prova 2: Marketing 4.0/5.0',
-    prompt: 'Conteúdo da Prova 2: Marketing 4.0, consumidor conectado, prova social, subculturas digitais, jornada dos 5 As, métricas digitais, marketing de conteúdo, omnicanalidade, CRM social, apps, gamificação, marcas humanas, Marketing 5.0, desafios geracionais, polarização da prosperidade, fosso digital, marketing direcionado por dados, marketing preditivo, marketing contextual, marketing aumentado, marketing ágil, sistemas de recomendação, up-selling, cross-selling, CX, chatbots, privacidade e tecnologia com centralidade humana.',
+    prompt: 'Conteúdo da Prova 2: Marketing 4.0 e suas três transições (exclusivo→inclusivo, vertical→horizontal, individual→social); conectividade (níveis móvel, experiencial e social) e seus três paradoxos; subculturas digitais JMN (Jovens, Mulheres, Netizens); jornada dos 5 As (Assimilação, Atração, Arguição, Ação, Apologia) em espiral; três fontes de influência (externa, dos outros, própria); métricas CAC/PAR e CDM/BAR; marketing de conteúdo, omnicanalidade, CRM social, gamificação, marcas humanas; Marketing 5.0 (next tech que imita o humano); IA, PLN, sensores, robótica, realidade aumentada/virtual, IoT, blockchain; duas disciplinas (orientado por dados, ágil) e três aplicações (preditivo, contextual, aumentado); desafios (abismo entre gerações, polarização da prosperidade, fosso digital); cinco gerações (Baby Boomers, X, Y, Z, Alfa); marketing contextual e níveis de personalização; pirâmide do conhecimento e paradoxo de Moravec; recomendação, up-selling, cross-selling, CX, chatbots, privacidade e centralidade humana.',
   },
   { value: 'conceitos', label: 'Conceitos Centrais de Marketing' },
   { value: 'demanda', label: 'Tipos de Demanda' },
@@ -71,23 +73,23 @@ export const MARKETING_TOPICS: QuizTopicOption[] = [
 ];
 
 export const MARKETING_SECTIONS = [
-  { id: 'intro', title: 'Introdução', shortTitle: 'Introdução', exam: 'P1' },
-  { id: 'conceitos', title: 'Conceitos Centrais', shortTitle: 'Conceitos', exam: 'P1' },
-  { id: 'aplicacao', title: 'Aplicação do Marketing', shortTitle: 'Aplicação', exam: 'P1' },
-  { id: 'demanda', title: 'Tipos de Demanda', shortTitle: 'Demanda', exam: 'P1' },
-  { id: 'maslow', title: 'Pirâmide de Maslow', shortTitle: 'Maslow', exam: 'P1' },
-  { id: '4ps', title: 'Os 4 Ps do Marketing', shortTitle: '4 Ps', exam: 'P1' },
-  { id: '8ps', title: 'A Evolução: 8 Ps', shortTitle: '8 Ps', exam: 'P1' },
-  { id: '4cs', title: 'Os 4 Cs do Marketing', shortTitle: '4 Cs', exam: 'P1' },
-  { id: 'mktrel', title: 'Marketing de Relacionamento', shortTitle: 'Mkt Rel.', exam: 'P1' },
-  { id: '15carac', title: '15 Características', shortTitle: '15 Carac.', exam: 'P1' },
-  { id: 'ferramentas', title: 'Ferramentas e Estratégias', shortTitle: 'Ferramentas', exam: 'P1' },
-  { id: 'pesquisa', title: 'Pesquisa de Marketing', shortTitle: 'Pesquisa', exam: 'P1' },
-  { id: 'segmentacao', title: 'Segmentação de Mercado', shortTitle: 'Segmentação', exam: 'P1' },
-  { id: 'mkt40', title: 'Marketing 4.0 e Consumidor Conectado', shortTitle: 'Mkt 4.0', exam: 'P2' },
-  { id: 'jornada5a', title: 'Jornada Digital dos 5 As', shortTitle: '5 As', exam: 'P2' },
-  { id: 'mkt50', title: 'Marketing 5.0 e Martech', shortTitle: 'Mkt 5.0', exam: 'P2' },
-  { id: 'cx-dados', title: 'Dados, CX e Comércio Eletrônico', shortTitle: 'Dados/CX', exam: 'P2' },
+  { id: 'intro', title: 'Introdução', shortTitle: 'Introdução', exam: 'AV1' },
+  { id: 'conceitos', title: 'Conceitos Centrais', shortTitle: 'Conceitos', exam: 'AV1' },
+  { id: 'aplicacao', title: 'Aplicação do Marketing', shortTitle: 'Aplicação', exam: 'AV1' },
+  { id: 'demanda', title: 'Tipos de Demanda', shortTitle: 'Demanda', exam: 'AV1' },
+  { id: 'maslow', title: 'Pirâmide de Maslow', shortTitle: 'Maslow', exam: 'AV1' },
+  { id: '4ps', title: 'Os 4 Ps do Marketing', shortTitle: '4 Ps', exam: 'AV1' },
+  { id: '8ps', title: 'A Evolução: 8 Ps', shortTitle: '8 Ps', exam: 'AV1' },
+  { id: '4cs', title: 'Os 4 Cs do Marketing', shortTitle: '4 Cs', exam: 'AV1' },
+  { id: 'mktrel', title: 'Marketing de Relacionamento', shortTitle: 'Mkt Rel.', exam: 'AV1' },
+  { id: '15carac', title: '15 Características', shortTitle: '15 Carac.', exam: 'AV1' },
+  { id: 'ferramentas', title: 'Ferramentas e Estratégias', shortTitle: 'Ferramentas', exam: 'AV1' },
+  { id: 'pesquisa', title: 'Pesquisa de Marketing', shortTitle: 'Pesquisa', exam: 'AV1' },
+  { id: 'segmentacao', title: 'Segmentação de Mercado', shortTitle: 'Segmentação', exam: 'AV1' },
+  { id: 'mkt40', title: 'Marketing 4.0 e Consumidor Conectado', shortTitle: 'Mkt 4.0', exam: 'AV2' },
+  { id: 'jornada5a', title: 'Jornada Digital dos 5 As', shortTitle: '5 As', exam: 'AV2' },
+  { id: 'mkt50', title: 'Marketing 5.0 e Martech', shortTitle: 'Mkt 5.0', exam: 'AV2' },
+  { id: 'cx-dados', title: 'Dados, CX e Comércio Eletrônico', shortTitle: 'Dados/CX', exam: 'AV2' },
   { id: 'quiz', title: 'Quiz de Revisão', shortTitle: 'Quiz' },
 ];
 
@@ -275,6 +277,110 @@ const QUIZ_DATA_PROVA2: QuizQuestionData[] = [
     correctIndex: 1,
     feedbackCorrect: 'Correto. Marketing ágil combina experimentação, dados e aprendizado contínuo.',
     feedbackWrong: 'Marketing ágil usa testes, MVPs, equipes rápidas e ajustes baseados em resultados reais.',
+  },
+  {
+    id: 'q38',
+    question: '38. As três transições do Marketing 4.0 são de exclusivo a inclusivo, de vertical a horizontal e de:',
+    options: [
+      'individual a social',
+      'digital a tradicional',
+      'global a local',
+      'produto a preço',
+    ],
+    correctIndex: 0,
+    feedbackCorrect: 'Correto. As três transições são: exclusivo→inclusivo, vertical→horizontal e individual→social.',
+    feedbackWrong: 'A terceira transição é de individual a social: a decisão de compra passa a ser moldada pela conformidade social.',
+  },
+  {
+    id: 'q39',
+    question: '39. Qual NÃO é um dos três paradoxos da conectividade descritos por Kotler?',
+    options: [
+      'On-line versus off-line',
+      'Consumidor informado versus distraído',
+      'Defesa positiva versus negativa',
+      'Preço alto versus preço baixo',
+    ],
+    correctIndex: 3,
+    feedbackCorrect: 'Correto. Preço não é um dos paradoxos. Os três são: on-line×off-line, informado×distraído e defesa positiva×negativa.',
+    feedbackWrong: 'Os três paradoxos da conectividade são: on-line×off-line, informado×distraído e defesa positiva×negativa.',
+  },
+  {
+    id: 'q40',
+    question: '40. As subculturas digitais mais influentes (JMN) são:',
+    options: [
+      'Jornalistas, Marqueteiros e Negociantes',
+      'Jovens, Mulheres e Netizens',
+      'Jovens, Millennials e Nativos digitais',
+      'Jurados, Mídia e Network',
+    ],
+    correctIndex: 1,
+    feedbackCorrect: 'Correto. JMN = Jovens (mente), Mulheres (mercado) e Netizens (coração).',
+    feedbackWrong: 'JMN são Jovens, Mulheres e Netizens: conquistam, respectivamente, a mente, o mercado e o coração.',
+  },
+  {
+    id: 'q41',
+    question: '41. Na jornada dos 5 As, em qual etapa o caminho muda de individual para social e a influência "dos outros" atinge o pico?',
+    options: [
+      'Assimilação',
+      'Atração',
+      'Arguição',
+      'Apologia',
+    ],
+    correctIndex: 2,
+    feedbackCorrect: 'Correto. É na Arguição que o consumidor pesquisa, pergunta e compara — a janela de ouro do marketing comunitário.',
+    feedbackWrong: 'É na Arguição (Ask) que a jornada vira social e a influência dos outros atinge o pico.',
+  },
+  {
+    id: 'q42',
+    question: '42. O CDM (Coeficiente de Defesa da Marca) mede a conversão de consciência em:',
+    options: [
+      'compra efetiva',
+      'recomendação/defesa da marca',
+      'lembrança de marca',
+      'lucro por cliente',
+    ],
+    correctIndex: 1,
+    feedbackCorrect: 'Correto. O CDM mede quantos dos que conhecem a marca a recomendam. Já o CAC mede a conversão em compra.',
+    feedbackWrong: 'O CDM mede a conversão de consciência em defesa/recomendação. Quem mede conversão em compra é o CAC.',
+  },
+  {
+    id: 'q43',
+    question: '43. Marketing 5.0 é definido por Kotler como:',
+    options: [
+      'a substituição completa do humano pela inteligência artificial',
+      'a aplicação de tecnologias que imitam o humano para criar e entregar valor na jornada do cliente',
+      'o uso exclusivo de redes sociais para vender',
+      'a volta ao marketing tradicional, sem tecnologia',
+    ],
+    correctIndex: 1,
+    feedbackCorrect: 'Correto. Marketing 5.0 = next tech (que imita o humano) a serviço da jornada do cliente — é o 3.0 + o 4.0.',
+    feedbackWrong: 'Marketing 5.0 aplica tecnologias que imitam o humano para criar, comunicar, entregar e aumentar valor na jornada.',
+  },
+  {
+    id: 'q44',
+    question: '44. Os cinco componentes do Marketing 5.0 dividem-se em duas disciplinas e três aplicações. As DUAS disciplinas (a base) são:',
+    options: [
+      'Preditivo e Contextual',
+      'Orientado por dados e Ágil',
+      'Aumentado e Preditivo',
+      'Contextual e Aumentado',
+    ],
+    correctIndex: 1,
+    feedbackCorrect: 'Correto. Disciplinas (base): orientado por dados e ágil. Aplicações (entrega): preditivo, contextual e aumentado.',
+    feedbackWrong: 'As duas disciplinas-base são: marketing orientado por dados e marketing ágil. As três aplicações são preditivo, contextual e aumentado.',
+  },
+  {
+    id: 'q45',
+    question: '45. Pela primeira vez na história, o mercado reúne cinco gerações. A ordem correta, da mais velha à mais nova, é:',
+    options: [
+      'Geração X, Baby Boomers, Y, Z, Alfa',
+      'Baby Boomers, Geração X, Y (Millennials), Z, Alfa',
+      'Baby Boomers, Y, X, Alfa, Z',
+      'Millennials, Z, Alfa, Baby Boomers, X',
+    ],
+    correctIndex: 1,
+    feedbackCorrect: 'Correto. A ordem é: Baby Boomers → X → Y (Millennials) → Z → Alfa.',
+    feedbackWrong: 'A ordem da mais velha à mais nova é: Baby Boomers, Geração X, Geração Y (Millennials), Geração Z e Geração Alfa.',
   },
 ];
 

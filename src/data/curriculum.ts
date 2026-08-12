@@ -19,7 +19,7 @@ export interface Period {
 const subjects: Subject[] = [
   // ═══════ 1º PERÍODO ═══════
   { id: 'fusi', name: 'Fundamentos de Sistemas de Informação', slug: 'fundamentos-si', code: 'FUSI', period: 1, axis: 'FB', hours: 80, hasContent: false },
-  { id: 'alpg', name: 'Algoritmos e Lógica de Programação', slug: 'algoritmos-logica-programacao', code: 'ALPG', period: 1, axis: 'FPG', hours: 80, hasContent: false },
+  { id: 'alpg', name: 'Algoritmos e Lógica de Programação', slug: 'algoritmos-logica-programacao', code: 'ALPG', period: 1, axis: 'FPG', hours: 80, hasContent: true },
   { id: 'intw', name: 'Introdução às Tecnologias Web', slug: 'introducao-tecnologias-web', code: 'INTW', period: 1, axis: 'FPG', hours: 40, hasContent: false },
   { id: 'lmmd', name: 'Lógica Matemática e Matemática Discreta', slug: 'logica-matematica-discreta', code: 'LMMD', period: 1, axis: 'FB', hours: 80, hasContent: false },
   { id: 'ingt', name: 'Inglês Técnico', slug: 'ingles-tecnico', code: 'INGT', period: 1, axis: 'FB', hours: 80, hasContent: false },
@@ -29,26 +29,26 @@ const subjects: Subject[] = [
   { id: 'mtsi', name: 'Matemática para Sistemas de Informação', slug: 'matematica-si', code: 'MTSI', period: 2, axis: 'FB', hours: 80, hasContent: false },
   { id: 'fgeo', name: 'Fundamentos da Gestão Organizacional', slug: 'fundamentos-gestao-organizacional', code: 'FGEO', period: 2, axis: 'FB', hours: 80, hasContent: false },
   { id: 'aocp', name: 'Arquitetura e Organização de Computadores', slug: 'arquitetura-organizacao-computadores', code: 'AOCP', period: 2, axis: 'FPG', hours: 80, hasContent: false },
-  { id: 'lpgm', name: 'Linguagem de Programação', slug: 'linguagem-programacao', code: 'LPGM', period: 2, axis: 'FPG', hours: 80, hasContent: false },
+  { id: 'lpgm', name: 'Linguagem de Programação', slug: 'linguagem-programacao', code: 'LPGM', period: 2, axis: 'FPG', hours: 80, hasContent: true },
   { id: 'sorg', name: 'Sociologia das Organizações', slug: 'sociologia-organizacoes', code: 'SORG', period: 2, axis: 'FHS', hours: 80, hasContent: false },
 
   // ═══════ 3º PERÍODO ═══════
   { id: 'etap', name: 'Estatística Aplicada', slug: 'estatistica-aplicada', code: 'ETAP', period: 3, axis: 'FB', hours: 80, hasContent: false },
   { id: 'fdbd', name: 'Fundamentos de Banco de Dados', slug: 'fundamentos-banco-dados', code: 'FDBD', period: 3, axis: 'FPG', hours: 80, hasContent: false },
   { id: 'sope', name: 'Sistemas Operacionais', slug: 'sistemas-operacionais', code: 'SOPE', period: 3, axis: 'FPG', hours: 80, hasContent: false },
-  { id: 'edts', name: 'Estrutura de Dados', slug: 'estrutura-dados', code: 'EDTS', period: 3, axis: 'FPG', hours: 80, hasContent: false },
-  { id: 'metc', name: 'Metodologia Científica', slug: 'metodologia-cientifica', code: 'METC', period: 3, axis: 'FB', hours: 80, hasContent: false },
+  { id: 'estd', name: 'Estrutura de Dados', slug: 'estrutura-dados', code: 'ESTD', period: 3, axis: 'FPG', hours: 80, hasContent: true },
+  { id: 'metc', name: 'Metodologia Científica', slug: 'metodologia-cientifica', code: 'METC', period: 3, axis: 'FB', hours: 80, hasContent: true },
 
   // ═══════ 4º PERÍODO ═══════
   { id: 'ihcc', name: 'Interação Humano-Computador', slug: 'interacao-humano-computador', code: 'IHCC', period: 4, axis: 'FPG', hours: 80, hasContent: false },
-  { id: 'apbd', name: 'Administração e Projeto de Banco de Dados', slug: 'administracao-projeto-banco-dados', code: 'APBD', period: 4, axis: 'FPG', hours: 80, hasContent: false },
+  { id: 'apbd', name: 'Administração e Projeto de Banco de Dados', slug: 'administracao-projeto-banco-dados', code: 'APBD', period: 4, axis: 'FPG', hours: 80, hasContent: true },
   { id: 'frdc', name: 'Fundamentos de Redes de Computadores', slug: 'fundamentos-redes-computadores', code: 'FRDC', period: 4, axis: 'FPG', hours: 80, hasContent: false },
   { id: 'poob', name: 'Programação Orientada a Objetos', slug: 'programacao-orientada-objetos', code: 'POOB', period: 4, axis: 'FPG', hours: 80, hasContent: false },
   { id: 'gpti', name: 'Gestão de Pessoas em TI', slug: 'gestao-pessoas-ti', code: 'GPTI', period: 4, axis: 'FB', hours: 40, hasContent: false },
 
   // ═══════ 5º PERÍODO ═══════
   { id: 'gvti', name: 'Governança em Tecnologia da Informação', slug: 'governanca-ti', code: 'GVTI', period: 5, axis: 'FPG', hours: 80, hasContent: false },
-  { id: 'tabd', name: 'Tópicos Avançados de Banco de Dados', slug: 'topicos-avancados-banco-dados', code: 'TABD', period: 5, axis: 'FPG', hours: 80, hasContent: false },
+  { id: 'tabd', name: 'Tópicos Avançados de Banco de Dados', slug: 'topicos-avancados-banco-dados', code: 'TABD', period: 5, axis: 'FPG', hours: 80, hasContent: true },
   { id: 'pint', name: 'Projeto Integrador', slug: 'projeto-integrador', code: 'PINT', period: 5, axis: 'EXT', hours: 40, hasContent: false },
   { id: 'pgwb', name: 'Programação Web', slug: 'programacao-web', code: 'PGWB', period: 5, axis: 'FPG', hours: 80, hasContent: false },
   { id: 'apsi', name: 'Análise e Projeto de Sistemas de Informação', slug: 'analise-projeto-si', code: 'APSI', period: 5, axis: 'FPG', hours: 80, hasContent: false },
@@ -57,7 +57,7 @@ const subjects: Subject[] = [
   // ═══════ 6º PERÍODO ═══════
   { id: 'empd', name: 'Empreendedorismo Digital', slug: 'empreendedorismo-digital', code: 'EMPD', period: 6, axis: 'FB', hours: 80, hasContent: false },
   { id: 'pisi', name: 'Projeto Integrador em SI', slug: 'projeto-integrador-si', code: 'PISI', period: 6, axis: 'EXT', hours: 80, hasContent: false },
-  { id: 'pdsw', name: 'Processos de Desenvolvimento de Software', slug: 'processos-desenvolvimento-software', code: 'PDSW', period: 6, axis: 'FPG', hours: 80, hasContent: false },
+  { id: 'pdsw', name: 'Processos de Desenvolvimento de Software', slug: 'processos-desenvolvimento-software', code: 'PDSW', period: 6, axis: 'FPG', hours: 80, hasContent: true },
 
   // ═══════ 7º PERÍODO ═══════
   { id: 'gsei', name: 'Gestão da Segurança da Informação', slug: 'gestao-seguranca-informacao', code: 'GSEI', period: 7, axis: 'FPG', hours: 80, hasContent: false },

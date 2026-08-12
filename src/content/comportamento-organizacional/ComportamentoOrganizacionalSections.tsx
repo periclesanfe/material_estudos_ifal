@@ -1,10 +1,18 @@
 import AIQuizGenerator from '../../components/ui/AIQuizGenerator';
 import AIKahootQuiz from '../../components/ui/AIKahootQuiz';
-import ConceptCard from '../../components/ui/ConceptCard';
 import ExamQuizSelector from '../../components/ui/ExamQuizSelector';
 import FlowDiagram from '../../components/ui/FlowDiagram';
 import HighlightBox from '../../components/ui/HighlightBox';
 import QuizTabs from '../../components/ui/QuizTabs';
+import {
+  SectionHeader,
+  ConceptGrid,
+  PanelList,
+  StatStrip,
+  type ConceptItem,
+  type PanelItem,
+  type StatItem,
+} from '../../components/sections';
 import {
   COMPORTAMENTO_ORGANIZACIONAL_GUIDE_CONTEXT,
   COMPORTAMENTO_ORGANIZACIONAL_TOPICS,
@@ -13,31 +21,6 @@ import {
 
 interface ComportamentoOrganizacionalSectionsProps {
   activeSection: string;
-}
-
-interface SectionHeaderProps {
-  title: string;
-  subtitle: string;
-  colorClass: string;
-}
-
-type Accent = 'accent' | 'accent2' | 'accent3' | 'accent4' | 'accent5';
-
-interface ConceptItem {
-  title: string;
-  description: string;
-  accent: Accent;
-}
-
-interface PanelItem {
-  title: string;
-  description: string;
-}
-
-interface StatItem {
-  label: string;
-  value: string;
-  accent: string;
 }
 
 const foundations: ConceptItem[] = [
@@ -807,51 +790,6 @@ const negotiationIndividualDifferences: PanelItem[] = [
     description: 'Expectativas sociais podem penalizar comportamentos percebidos como fora do padrão, especialmente quando mulheres negociam de forma mais assertiva.',
   },
 ];
-
-function SectionHeader({ title, subtitle, colorClass }: SectionHeaderProps) {
-  return (
-    <div className="space-y-2">
-      <h2 className={`section-title ${colorClass}`}>{title}</h2>
-      <p className="section-subtitle max-w-3xl">{subtitle}</p>
-    </div>
-  );
-}
-
-function ConceptGrid({ items, columns = 'md:grid-cols-2' }: { items: ConceptItem[]; columns?: string }) {
-  return (
-    <div className={`grid grid-cols-1 ${columns} gap-4`}>
-      {items.map(item => (
-        <ConceptCard key={item.title} title={item.title} description={item.description} accent={item.accent} />
-      ))}
-    </div>
-  );
-}
-
-function PanelList({ items }: { items: PanelItem[] }) {
-  return (
-    <div className="space-y-3">
-      {items.map(item => (
-        <div key={item.title} className="bg-card border border-border rounded-xl px-5 py-4">
-          <h3 className="font-semibold text-sm md:text-base text-text mb-0.5">{item.title}</h3>
-          <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function StatStrip({ items }: { items: StatItem[] }) {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-      {items.map(item => (
-        <div key={item.label} className="bg-card border border-border rounded-xl px-5 py-5 text-center">
-          <p className={`font-display font-black text-2xl ${item.accent}`}>{item.label}</p>
-          <p className="text-text-muted text-sm">{item.value}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 function IntroSection() {
   return (

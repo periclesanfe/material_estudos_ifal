@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -7,6 +7,12 @@
   --color-card-hover: #23232f;
   --color-sidebar: #14141c;
 
+  /* Acentos. Os de papel fixo devem ser respeitados:
+     accent  = marca / ações primárias / estado ativo (roxo)
+     accent2 = erro / resposta errada (vermelho)
+     accent5 = sucesso / resposta correta (verde)
+     accent3 / accent4 = cores de destaque/rodízio para títulos de conteúdo (turquesa, amarelo).
+     Cada acento tem variante de contraste corrigida no tema claro (ver html[data-theme='light']). */
   --color-accent: #6c63ff;
   --color-accent2: #ff6b6b;
   --color-accent3: #4ecdc4;
@@ -25,10 +31,10 @@
 
   --font-display: 'Playfair Display', serif;
   --font-body: 'Source Sans 3', sans-serif;
+  --font-logo: 'Orbitron', var(--font-body);
 
   --animate-fade-in: fade-in 0.5s ease;
-  --animate-slide-up: slide-up 0.5s ease;
-  --animate-bg-float: bg-float 20s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
   --animate-spin: spin 0.9s linear infinite;
   --animate-pulse-soft: pulse-soft 2s ease-in-out infinite;
 }
@@ -66,10 +72,10 @@ html[data-theme='light'] {
 
 body {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 17px;
   background: var(--color-bg);
   color: var(--color-text);
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -113,30 +119,15 @@ body {
   }
 }
 
-@keyframes slide-up {
+@keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(14px);
   }
 
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes bg-float {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-
-  33% {
-    transform: translate(2%, -2%) rotate(1deg);
-  }
-
-  66% {
-    transform: translate(-1%, 1%) rotate(-0.5deg);
   }
 }
 
@@ -157,8 +148,9 @@ body {
   }
 }
 
+/* Gradiente de marca: roxo → turquesa (sem o vermelho, que é reservado para erro). */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent2), var(--color-accent3));
+  background: linear-gradient(120deg, var(--color-accent) 10%, var(--color-accent3) 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -223,6 +215,53 @@ html[data-theme='light'] .glass {
   gap: clamp(1.5rem, 2.6vw, 2.35rem);
 }
 
+/* Medida de leitura confortável (~65-75 caracteres por linha) para texto corrido. */
+.reading-measure {
+  max-width: 68ch;
+  text-wrap: pretty;
+}
+
+/* Entrada escalonada: cada filho direto sobe e aparece com pequeno atraso. */
+.stagger-children > * {
+  animation: var(--animate-fade-up);
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.02s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.07s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.12s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.17s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.22s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.27s; }
+.stagger-children > *:nth-child(n + 7) { animation-delay: 0.3s; }
+
+/* Transição suave ao trocar a seção/painel ativo. */
+.panel-enter {
+  animation: var(--animate-fade-up);
+}
+
+/* Link de pular para o conteúdo: invisível até receber foco via teclado. */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  top: 1rem;
+}
+
+/* Âncoras de título não ficam escondidas sob a navegação sticky. */
+:where(h1, h2, h3, h4)[id] {
+  scroll-margin-top: 5rem;
+}
+
 .main-surface {
   background:
     radial-gradient(circle at 25% -18%, rgba(108, 99, 255, 0.14), transparent 42%),
@@ -241,6 +280,66 @@ html[data-theme='light'] .glass {
 
 .sidebar-brand {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, transparent 100%);
+}
+
+/* Marca "SI" — ver src/components/ui/Logo.tsx.
+
+   O brilho é montado em duas camadas de text-shadow: um halo curto que dá o
+   corpo da luz e um largo que espalha. As distâncias estão em `em` para que a
+   logo possa ser reescalada por font-size sem recalibrar o brilho.
+
+   `--logo-ink` é a cor da letra e `--logo-glow` a do halo; cada tema
+   redefine as duas mais abaixo. */
+.site-logo {
+  --logo-ink: #cfefff;
+  --logo-glow: 125, 211, 255;
+
+  display: inline-block;
+  font-family: var(--font-logo);
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  /* A Orbitron tem tracking à direita da última letra; o padding-left
+     compensa para o bloco ficar opticamente alinhado à margem. */
+  padding-left: 0.06em;
+  line-height: 1;
+  color: var(--logo-ink);
+  text-shadow:
+    0 0 0.14em rgba(var(--logo-glow), 0.95),
+    0 0 0.42em rgba(var(--logo-glow), 0.65),
+    0 0 0.9em rgba(var(--logo-glow), 0.35);
+}
+
+/* No tema claro o halo largo some (vira véu cinza sobre fundo branco) e a
+   letra escurece, senão o texto perde contraste contra o fundo. */
+html[data-theme='light'] .site-logo {
+  --logo-ink: #0b6ea8;
+  --logo-glow: 34, 150, 220;
+  text-shadow:
+    0 0 0.1em rgba(var(--logo-glow), 0.45),
+    0 0 0.3em rgba(var(--logo-glow), 0.22);
+}
+
+/* Clean mode: brilho discreto, mantendo a marca legível sem competir com o
+   texto. É o único acento que sobrevive neste modo — ver o bloco
+   html[data-clean-mode='true'], onde todos os outros viram cinza. */
+html[data-clean-mode='true'] .site-logo {
+  --logo-ink: #1f2933;
+  --logo-glow: 90, 140, 175;
+  text-shadow:
+    0 0 0.08em rgba(var(--logo-glow), 0.3),
+    0 0 0.22em rgba(var(--logo-glow), 0.16);
+}
+
+/* Quem pediu menos movimento não perde a marca, só o brilho pulsante que o
+   hover aplicaria. Mantido estático. */
+@media (prefers-reduced-motion: no-preference) {
+  .sidebar-brand:hover .site-logo {
+    text-shadow:
+      0 0 0.14em rgba(var(--logo-glow), 1),
+      0 0 0.5em rgba(var(--logo-glow), 0.75),
+      0 0 1.1em rgba(var(--logo-glow), 0.45);
+    transition: text-shadow 0.25s ease;
+  }
 }
 
 html[data-theme='light'] .main-surface {
@@ -501,5 +600,108 @@ select option {
 
 ::selection {
   background: rgba(108, 99, 255, 0.3);
+  color: var(--color-text);
+}
+
+html[data-clean-mode='true'] {
+  color-scheme: light;
+  --color-bg: #f7f7f4;
+  --color-card: #ffffff;
+  --color-card-hover: #f0f0eb;
+  --color-sidebar: #ffffff;
+
+  --color-accent: #343a40;
+  --color-accent2: #4b5563;
+  --color-accent3: #52525b;
+  --color-accent4: #6b7280;
+  --color-accent5: #3f3f46;
+
+  --color-text: #1f2933;
+  --color-text-muted: #5d6673;
+
+  --color-border: #d8d8d1;
+  --color-border-hover: #b9b9b0;
+
+  --color-success: #3f3f46;
+  --color-error: #4b5563;
+  --color-warning: #6b7280;
+
+  --font-display: 'Source Sans 3', sans-serif;
+}
+
+html[data-clean-mode='true'] body {
+  letter-spacing: 0;
+}
+
+html[data-clean-mode='true'] p {
+  line-height: 1.85;
+  margin-block: 0.2rem;
+  max-width: 70ch;
+  text-wrap: pretty;
+}
+
+html[data-clean-mode='true'] h1,
+html[data-clean-mode='true'] h2,
+html[data-clean-mode='true'] h3,
+html[data-clean-mode='true'] h4 {
+  letter-spacing: 0;
+}
+
+html[data-clean-mode='true'] *,
+html[data-clean-mode='true'] *::before,
+html[data-clean-mode='true'] *::after {
+  animation: none !important;
+  transition-duration: 0.01ms !important;
+}
+
+html[data-clean-mode='true'] .main-surface,
+html[data-clean-mode='true'] .sidebar-surface,
+html[data-clean-mode='true'] .sidebar-surface-mobile,
+html[data-clean-mode='true'] .sidebar-brand {
+  background: var(--color-bg);
+}
+
+html[data-clean-mode='true'] .gradient-text {
+  background: none;
+  background-clip: border-box;
+  color: var(--color-text);
+  -webkit-text-fill-color: currentColor;
+}
+
+html[data-clean-mode='true'] .home-hero-bg,
+html[data-clean-mode='true'] .subject-hero-bg {
+  background: transparent !important;
+}
+
+html[data-clean-mode='true'] .content-progress-fill {
+  background: var(--color-accent) !important;
+}
+
+html[data-clean-mode='true'] .study-surface,
+html[data-clean-mode='true'] .concept-card,
+html[data-clean-mode='true'] .highlight-box,
+html[data-clean-mode='true'] .glass {
+  background: var(--color-card);
+  border-color: var(--color-border);
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+html[data-clean-mode='true'] .study-surface-hover:hover,
+html[data-clean-mode='true'] .concept-card:hover,
+html[data-clean-mode='true'] .card-hover:hover,
+html[data-clean-mode='true'] .btn-primary:hover,
+html[data-clean-mode='true'] .btn-secondary:hover,
+html[data-clean-mode='true'] .study-pill:hover,
+html[data-clean-mode='true'] .study-pill.active {
+  transform: none;
+  box-shadow: none;
+}
+
+html[data-clean-mode='true'] .study-pill:hover,
+html[data-clean-mode='true'] .study-pill.active {
+  background: var(--color-card-hover);
+  border-color: var(--color-border-hover);
   color: var(--color-text);
 }

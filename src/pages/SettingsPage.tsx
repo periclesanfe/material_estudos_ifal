@@ -1,22 +1,86 @@
 import { useState } from 'react';
 import { useApiKey } from '../hooks/useApiKey';
+import {
+  PROVIDERS,
+  getProvider,
+  listModels,
+  type AIConfig,
+  type ModelOption,
+  type ProviderId,
+} from '../lib/aiProviders';
 
 export default function SettingsPage() {
-  const { getApiKey, setApiKey, removeApiKey, hasApiKey } = useApiKey();
-  const [keyValue, setKeyValue] = useState(() => getApiKey() ?? '');
+  const { getConfig, setConfig, removeConfig, hasApiKey } = useApiKey();
+
+  const initial = getConfig();
+  const [provider, setProvider] = useState<ProviderId>(initial.provider);
+  const [apiKey, setApiKeyValue] = useState(initial.apiKey);
+  const [baseUrl, setBaseUrl] = useState(initial.baseUrl ?? '');
+  const [model, setModel] = useState(initial.model);
+  const [models, setModels] = useState<ModelOption[]>(
+    initial.model ? [{ id: initial.model, label: initial.model }] : []
+  );
+
   const [showKey, setShowKey] = useState(false);
+  const [loadingModels, setLoadingModels] = useState(false);
+  const [modelsError, setModelsError] = useState<string | null>(null);
   const [saved, setSaved] = useState(false);
 
+  const providerInfo = getProvider(provider);
+
+  const handleProviderChange = (id: ProviderId) => {
+    setProvider(id);
+    // Trocar de provedor invalida modelos e chave anteriores.
+    setModels([]);
+    setModel('');
+    setModelsError(null);
+    setBaseUrl(getProvider(id).requiresBaseUrl ? baseUrl : '');
+  };
+
+  const handleFetchModels = async () => {
+    setModelsError(null);
+    setLoadingModels(true);
+    try {
+      const result = await listModels({ provider, apiKey: apiKey.trim(), baseUrl: baseUrl.trim() });
+      setModels(result);
+      if (result.length === 0) {
+        setModelsError('Nenhum modelo retornado por este provedor.');
+      } else if (!result.some(m => m.id === model)) {
+        setModel(result[0].id);
+      }
+    } catch (err) {
+      setModels([]);
+      setModelsError(err instanceof Error ? err.message : 'Falha ao buscar modelos.');
+    } finally {
+      setLoadingModels(false);
+    }
+  };
+
+  const canFetchModels =
+    apiKey.trim().length > 0 && (!providerInfo.requiresBaseUrl || baseUrl.trim().length > 0);
+
+  const canSave = canFetchModels && model.trim().length > 0;
+
   const handleSave = () => {
-    if (!keyValue.trim()) return;
-    setApiKey(keyValue.trim());
+    if (!canSave) return;
+    const config: AIConfig = {
+      provider,
+      apiKey: apiKey.trim(),
+      model: model.trim(),
+      baseUrl: providerInfo.requiresBaseUrl ? baseUrl.trim() : '',
+    };
+    setConfig(config);
     setSaved(true);
     setTimeout(() => setSaved(false), 3000);
   };
 
   const handleRemove = () => {
-    removeApiKey();
-    setKeyValue('');
+    removeConfig();
+    setApiKeyValue('');
+    setBaseUrl('');
+    setModel('');
+    setModels([]);
+    setModelsError(null);
   };
 
   return (
@@ -30,8 +94,10 @@ export default function SettingsPage() {
         <section className="study-surface p-6 md:p-7">
           <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
             <div>
-              <h2 className="font-display font-bold text-2xl text-text">API Key — Google Gemini</h2>
-              <p className="text-text-muted text-sm md:text-base mt-1">Necessária para gerar perguntas no Quiz com IA.</p>
+              <h2 className="font-display font-bold text-2xl text-text">Provedor de IA</h2>
+              <p className="text-text-muted text-sm md:text-base mt-1">
+                Escolha o provedor, informe a chave e selecione um modelo para usar no Quiz com IA.
+              </p>
             </div>
             {hasApiKey() && (
               <span className="px-3 py-1.5 bg-accent5/10 text-accent5 text-[11px] font-bold rounded-md uppercase tracking-[0.14em]">
@@ -41,6 +107,46 @@ export default function SettingsPage() {
           </div>
 
           <div className="space-y-5">
+            {/* Provedor */}
+            <div>
+              <label htmlFor="provider-select" className="block text-xs font-semibold text-text-muted uppercase tracking-[0.12em] mb-2">
+                Provedor
+              </label>
+              <select
+                id="provider-select"
+                value={provider}
+                onChange={(e) => handleProviderChange(e.target.value as ProviderId)}
+                className="w-full bg-bg border border-border rounded-lg px-3 py-2.5 text-text focus:outline-none focus:border-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg transition-colors text-sm"
+              >
+                {PROVIDERS.map(p => (
+                  <option key={p.id} value={p.id}>{p.label}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Base URL (apenas genérico) */}
+            {providerInfo.requiresBaseUrl && (
+              <div>
+                <label htmlFor="base-url-input" className="block text-xs font-semibold text-text-muted uppercase tracking-[0.12em] mb-2">
+                  Base URL (compatível com OpenAI)
+                </label>
+                <input
+                  id="base-url-input"
+                  type="text"
+                  value={baseUrl}
+                  onChange={(e) => setBaseUrl(e.target.value)}
+                  autoComplete="off"
+                  spellCheck={false}
+                  placeholder="https://api.deepseek.com/v1"
+                  className="w-full bg-bg border border-border rounded-lg px-3 py-2.5 text-text placeholder-text-muted/40 focus:outline-none focus:border-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg transition-colors font-mono text-sm"
+                />
+                <p className="text-text-muted/70 text-xs mt-1.5">
+                  Ex.: DeepSeek <code>https://api.deepseek.com/v1</code> · OpenRouter <code>https://openrouter.ai/api/v1</code> · Groq <code>https://api.groq.com/openai/v1</code> · Ollama <code>http://localhost:11434/v1</code>
+                </p>
+              </div>
+            )}
+
+            {/* API Key */}
             <div>
               <label htmlFor="api-key-input" className="block text-xs font-semibold text-text-muted uppercase tracking-[0.12em] mb-2">
                 Token da API
@@ -49,12 +155,12 @@ export default function SettingsPage() {
                 <input
                   id="api-key-input"
                   type={showKey ? 'text' : 'password'}
-                  value={keyValue}
-                  onChange={(e) => setKeyValue(e.target.value)}
-                  name="gemini-api-key"
+                  value={apiKey}
+                  onChange={(e) => setApiKeyValue(e.target.value)}
+                  name="ai-api-key"
                   autoComplete="off"
                   spellCheck={false}
-                  placeholder="Cole aqui seu token…"
+                  placeholder={providerInfo.placeholder || 'Cole aqui seu token…'}
                   className="w-full bg-bg border border-border rounded-lg px-3 py-2.5 text-text placeholder-text-muted/40 focus:outline-none focus:border-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg transition-colors font-mono text-sm"
                 />
                 <button
@@ -67,10 +173,44 @@ export default function SettingsPage() {
               </div>
             </div>
 
-            <div className="flex gap-2.5 flex-wrap">
+            {/* Buscar + selecionar modelo */}
+            <div>
+              <label htmlFor="model-select" className="block text-xs font-semibold text-text-muted uppercase tracking-[0.12em] mb-2">
+                Modelo
+              </label>
+              <div className="flex gap-2.5 flex-wrap">
+                <select
+                  id="model-select"
+                  value={model}
+                  onChange={(e) => setModel(e.target.value)}
+                  disabled={models.length === 0}
+                  className="flex-1 min-w-[200px] bg-bg border border-border rounded-lg px-3 py-2.5 text-text focus:outline-none focus:border-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg transition-colors text-sm disabled:opacity-40"
+                >
+                  {models.length === 0 ? (
+                    <option value="">Busque os modelos disponíveis…</option>
+                  ) : (
+                    models.map(m => (
+                      <option key={m.id} value={m.id}>{m.label}</option>
+                    ))
+                  )}
+                </select>
+                <button
+                  onClick={handleFetchModels}
+                  disabled={!canFetchModels || loadingModels}
+                  type="button"
+                  className="btn-secondary px-5 py-2.5 text-sm disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  {loadingModels ? 'Buscando…' : 'Buscar modelos'}
+                </button>
+              </div>
+              <p role="alert" aria-live="polite" className="text-accent2 text-sm mt-2 empty:hidden">{modelsError}</p>
+            </div>
+
+            {/* Ações */}
+            <div className="flex gap-2.5 flex-wrap pt-1">
               <button
                 onClick={handleSave}
-                disabled={!keyValue.trim()}
+                disabled={!canSave}
                 className="btn-primary px-5 py-2.5 text-sm disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0"
               >
                 {saved ? 'Salvo' : 'Salvar'}
@@ -83,14 +223,16 @@ export default function SettingsPage() {
                   Remover
                 </button>
               )}
-              <a
-                href="https://aistudio.google.com/apikey"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary px-5 py-2.5 text-sm"
-              >
-                Gerar token no Gemini
-              </a>
+              {providerInfo.apiKeyUrl && (
+                <a
+                  href={providerInfo.apiKeyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary px-5 py-2.5 text-sm"
+                >
+                  Gerar token
+                </a>
+              )}
             </div>
           </div>
 
@@ -110,7 +252,7 @@ export default function SettingsPage() {
               mantido por alunos e egressos do curso.
             </p>
             <p className="text-text-muted/70 text-sm">
-              React · TypeScript · Tailwind CSS · Vite · Google Gemini API
+              React · TypeScript · Tailwind CSS · Vite · Gemini / OpenAI / Anthropic / APIs compatíveis
             </p>
           </div>
         </section>

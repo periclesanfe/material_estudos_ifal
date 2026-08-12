@@ -15,8 +15,8 @@ export default function HighlightBox({ title, children, accent }: HighlightBoxPr
       className="highlight-box"
       style={{ borderColor }}
     >
-      {title && <h3 className="font-display font-bold text-2xl mb-2" style={{ color: titleColor }}>{title}</h3>}
-      <div className="text-text text-sm md:text-base leading-relaxed space-y-1.5">{children}</div>
+      {title && <h3 className="font-display font-bold text-2xl mb-2 text-pretty" style={{ color: titleColor }}>{title}</h3>}
+      <div className="reading-measure text-text text-sm md:text-base leading-relaxed space-y-1.5">{children}</div>
     </div>
   );
 }

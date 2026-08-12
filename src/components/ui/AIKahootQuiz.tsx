@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { QUESTION_COUNT_OPTIONS, type AIQuizQuestion, type QuestionCount, useGeminiQuiz } from '../../hooks/useGeminiQuiz';
 import { useApiKey } from '../../hooks/useApiKey';
+import AIErrorBox from './AIErrorBox';
+import AIProviderBadge from './AIProviderBadge';
 import KahootQuiz from './KahootQuiz';
 import type { QuizQuestionData, QuizTopicOption } from './QuizCard';
 
@@ -37,7 +39,7 @@ export default function AIKahootQuiz({ guideContext, topics }: AIKahootQuizProps
   const quizKey = kahootQuestions.map(question => question.id).join('|');
 
   const generateLabel = loading
-    ? `Gerando ${selectedCount}...`
+    ? `Gerando ${selectedCount}…`
     : selectedCount === 1
       ? 'Gerar Kahoot'
       : `Gerar Kahoot com ${selectedCount}`;
@@ -71,9 +73,10 @@ export default function AIKahootQuiz({ guideContext, topics }: AIKahootQuizProps
   if (!hasApiKey()) {
     return (
       <div className="study-surface p-6 md:p-8 text-center">
-        <h3 className="font-display font-bold text-3xl md:text-4xl text-text mb-2 leading-tight">Configure sua API Key</h3>
+        <h3 className="font-display font-bold text-3xl md:text-4xl text-text mb-2 leading-tight">Configure a IA</h3>
         <p className="text-text-muted text-sm md:text-base mb-5">
-          Para usar o Kahoot com IA, configure sua API Key do Google Gemini nas Configurações.
+          Para usar o Kahoot com IA, escolha um provedor (Gemini, OpenAI, Anthropic ou compatível),
+          informe sua API Key e selecione um modelo nas Configurações.
         </p>
         <Link to="/configuracoes" className="btn-primary inline-flex px-5 py-2.5 text-sm">
           Ir para Configurações
@@ -85,6 +88,7 @@ export default function AIKahootQuiz({ guideContext, topics }: AIKahootQuizProps
   return (
     <div className="space-y-4">
       <div className="study-surface p-4 md:p-5 space-y-4">
+        <AIProviderBadge />
         <div>
           <label className="block text-[11px] font-semibold text-text-muted uppercase tracking-wider mb-2">
             Conteúdos do Kahoot
@@ -181,17 +185,13 @@ export default function AIKahootQuiz({ guideContext, topics }: AIKahootQuizProps
       </div>
 
       {loading && (
-        <div className="text-center py-10">
-          <div className="w-8 h-8 border-2 border-border border-t-accent rounded-full animate-spin mx-auto" />
-          <p className="text-text-muted mt-3 text-sm">Consultando a IA...</p>
+        <div className="text-center py-10" role="status" aria-live="polite">
+          <div className="w-8 h-8 border-2 border-border border-t-accent rounded-full animate-spin mx-auto" aria-hidden="true" />
+          <p className="text-text-muted mt-3 text-sm">Consultando a IA…</p>
         </div>
       )}
 
-      {error && (
-        <div className="bg-accent2/10 border border-accent2/20 rounded-lg p-3 text-accent2 text-sm leading-relaxed">
-          {error}
-        </div>
-      )}
+      {error && <AIErrorBox error={error} />}
 
       {kahootQuestions.length > 0 && !loading && (
         <KahootQuiz

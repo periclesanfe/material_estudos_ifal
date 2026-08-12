@@ -61,7 +61,7 @@ O quiz com IA utiliza a API do **Google Gemini**. Para usar:
 MATERIAL_ESTUDO_IFAL/
 ├── .agent/              # Agentes de desenvolvimento (IA)
 │   ├── orchestrator.md  # Coordena os demais agentes
-│   ├── bsi_specialist.md # Especialista no PCC e conteúdo acadêmico
+│   ├── bsi_specialist.md # Especialista no PPC e conteúdo acadêmico
 │   ├── frontend_developer.md # Dev React/TS/Tailwind
 │   └── qa.md            # Quality Assurance
 ├── .docs/               # Documentação do projeto
@@ -78,6 +78,8 @@ MATERIAL_ESTUDO_IFAL/
 │   ├── content_creation.md # Como criar conteúdo de matéria
 │   ├── quiz_creation.md # Como criar perguntas de quiz
 │   └── code_review.md   # Checklist de revisão de código
+├── scripts/
+│   └── classroom/       # Coletor de materiais do Google Classroom (ver README próprio)
 ├── src/
 │   ├── components/
 │   │   ├── layout/      # Sidebar
@@ -105,7 +107,7 @@ O projeto utiliza agentes de IA especializados para desenvolvimento assistido:
 | Agente | Arquivo | Papel |
 |--------|---------|-------|
 | **Orquestrador** | `.agent/orchestrator.md` | Coordena tarefas entre agentes |
-| **BSI Specialist** | `.agent/bsi_specialist.md` | Especialista no PCC — conteúdo acadêmico |
+| **BSI Specialist** | `.agent/bsi_specialist.md` | Especialista no PPC — conteúdo acadêmico |
 | **Frontend Developer** | `.agent/frontend_developer.md` | Implementação React/TS/Tailwind |
 | **QA** | `.agent/qa.md` | Revisão de código, build, visual |
 
@@ -129,6 +131,23 @@ O projeto utiliza agentes de IA especializados para desenvolvimento assistido:
 6. Abra um **Pull Request** usando o template
 
 Leia o [Guia de Contribuição](.github/CONTRIBUTING.md) e as [Regras de Código](.rules/CODE_STANDARDS.md).
+
+### Trazer material do Google Classroom
+
+Para acelerar a criação de conteúdo, há um coletor que baixa os materiais das
+suas turmas do Classroom (avisos, atividades e anexos) direto do seu login,
+gerando um índice por turma. Ele é **somente leitura** e salva tudo em
+`.classroom/`, uma pasta **ignorada pelo git** (o material não é publicado).
+
+```bash
+cd scripts/classroom
+python3 coletar_classroom.py --listar   # lista suas turmas
+python3 coletar_classroom.py            # baixa tudo
+```
+
+Veja o passo a passo (credencial OAuth, etc.) em
+[`scripts/classroom/README.md`](scripts/classroom/README.md). Ao virar conteúdo
+do site, **resuma e cite os professores** — não copie material autoral na íntegra.
 
 ## Grade Curricular
 

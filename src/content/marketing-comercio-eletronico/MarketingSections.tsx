@@ -5,38 +5,20 @@ import ExamQuizSelector from '../../components/ui/ExamQuizSelector';
 import FlowDiagram from '../../components/ui/FlowDiagram';
 import HighlightBox from '../../components/ui/HighlightBox';
 import QuizTabs from '../../components/ui/QuizTabs';
+import {
+  SectionHeader,
+  ConceptGrid,
+  PanelList,
+  TheoryBlock,
+  ComparisonTable,
+  type ConceptItem,
+  type PanelItem,
+  type ComparisonRow,
+} from '../../components/sections';
 import { MARKETING_GUIDE_CONTEXT, MARKETING_TOPICS, QUIZ_DATA } from './data';
 
 interface MarketingSectionsProps {
   activeSection: string;
-}
-
-interface SectionHeaderProps {
-  title: string;
-  subtitle: string;
-  colorClass: string;
-}
-
-type Accent = 'accent' | 'accent2' | 'accent3' | 'accent4' | 'accent5';
-
-interface ConceptItem {
-  title: string;
-  description: string;
-  accent: Accent;
-}
-
-interface PanelItem {
-  title: string;
-  description: string;
-}
-
-function SectionHeader({ title, subtitle, colorClass }: SectionHeaderProps) {
-  return (
-    <div className="space-y-2">
-      <h2 className={`section-title ${colorClass}`}>{title}</h2>
-      <p className="section-subtitle max-w-3xl">{subtitle}</p>
-    </div>
-  );
 }
 
 const marketingApplications: ConceptItem[] = [
@@ -329,104 +311,214 @@ const segmentationCriteria: PanelItem[] = [
 const marketing40Shifts: ConceptItem[] = [
   {
     title: 'Do exclusivo ao inclusivo',
-    description: 'Marcas precisam dialogar com públicos diversos e reduzir barreiras de acesso. No digital, comunidades antes pequenas ganham voz e visibilidade.',
+    description: 'O poder deixa de ser hegemônico e se distribui (do G7 ao G20). Setores antes separados se integram e marcas locais inspiram-se em modelos globais. Para o marketing, diversidade não é risco — é força: comunidades antes pequenas ganham voz, e a marca precisa dialogar com públicos plurais.',
     accent: 'accent',
   },
   {
     title: 'Do vertical ao horizontal',
-    description: 'A comunicação deixa de ser apenas empresa para consumidor. Reviews, fóruns, influenciadores e avaliações tornam a confiança mais distribuída.',
+    description: 'A confiança deixa de fluir de cima para baixo (empresa → mercado) e passa a ser distribuída entre pares. A inovação vem de fora (modelo "Conexão + Desenvolvimento" da P&G), a competição é lateral (Uber, Airbnb) e o cliente confia mais em estranhos na internet do que em propaganda. Marcas competem pela autenticidade.',
     accent: 'accent3',
   },
   {
     title: 'Do individual ao social',
-    description: 'A decisão de compra passa a ser moldada por grupos, recomendações, comentários, prova social e experiências compartilhadas.',
+    description: 'A decisão de compra deixa de ser pessoal e passa a ser moldada pela conformidade social. O consumidor pesquisa com o celular dentro da loja, compila avaliações e confia no conselho da comunidade. A propaganda boca a boca vira a forma de influência mais credível.',
     accent: 'accent5',
   },
 ];
 
-const digitalInfluenceItems: PanelItem[] = [
+// Os três níveis de conectividade (Marketing 4.0, Kotler).
+const connectivityLevels: ConceptItem[] = [
   {
-    title: 'Consumidor conectado',
-    description: 'Pesquisa em buscadores, compara preços, assiste reviews, conversa com outras pessoas e avalia reputação antes de comprar.',
+    title: 'Conectividade móvel',
+    description: 'Nível básico: a internet via dispositivos móveis como infraestrutura de comunicação. Smartphones baratos — não laptops — são a porta de entrada da maioria dos novos usuários.',
+    accent: 'accent',
   },
   {
-    title: 'Prova social',
-    description: 'Comentários, estrelas, vídeos, unboxings, depoimentos e reclamações públicas reduzem ou aumentam a confiança na marca.',
+    title: 'Conectividade experiencial',
+    description: 'Nível intermediário: a internet eleva a experiência nos pontos de contato. Importa a profundidade, não só o alcance. Ex.: o shopBeacon da Macy’s entrega ofertas direcionadas dentro da loja.',
+    accent: 'accent3',
   },
   {
-    title: 'Subculturas digitais',
-    description: 'Jovens, mulheres e netizens podem impulsionar tendências, defender marcas, produzir conteúdo e pressionar empresas por coerência.',
+    title: 'Conectividade social',
+    description: 'Nível supremo: a força da conexão dentro de comunidades de consumidores. Cresce de forma exponencial porque se apoia em vínculos emocionais e mutuamente benéficos.',
+    accent: 'accent5',
+  },
+];
+
+// Os três paradoxos da conectividade.
+const connectivityParadoxes: PanelItem[] = [
+  {
+    title: 'On-line × off-line',
+    description: 'Não se substituem — coexistem e se completam. Num mundo "high-tech", o "high-touch" (envolvimento humano profundo) vira diferencial. A Birchbox, nascida online, abriu loja física; a Amazon criou o Dash Button para ligar o digital ao físico.',
   },
   {
-    title: 'Marcas humanas',
-    description: 'Na economia digital, marcas fortes parecem menos distantes: são autênticas, transparentes, empáticas e consistentes no atendimento.',
+    title: 'Informado × distraído',
+    description: 'A conectividade protege (o círculo íntimo funciona como escudo), mas também distrai. O intervalo de atenção caiu de 12s (2000) para 8s (2013). O desafio é conquistar atenção em "momentos UAU!", não no volume.',
+  },
+  {
+    title: 'Defesa positiva × negativa',
+    description: 'Marcas com DNA forte têm adoradores E odiadores — e isso é saudável. Manifestações negativas podem ativar o exército de defensores. O objetivo não é zerar críticos, é cultivar adoradores.',
+  },
+];
+
+// Subculturas digitais influentes: Jovens, Mulheres e Netizens (JMN).
+const jmnSubcultures: ConceptItem[] = [
+  {
+    title: 'Jovens — participação na mente',
+    description: 'Adotantes iniciais e definidores de tendências. Sem medo de experimentar, levam produtos do nicho ao mainstream (iPod, Netflix, Spotify começaram com eles). Conquistar a mente jovem é influenciar o mercado de massa.',
+    accent: 'accent',
+  },
+  {
+    title: 'Mulheres — participação no mercado',
+    description: 'Coletoras de informação e compradoras holísticas. Pesquisam em espiral, comparam muitas marcas e decidem pela família. Por avaliarem benefícios funcionais e emocionais, têm fidelidade e recomendação mais altas.',
+    accent: 'accent2',
+  },
+  {
+    title: 'Netizens — participação no coração',
+    description: 'Conectores sociais e evangelistas expressivos (coletores, críticos e criadores de conteúdo). Cidadãos da internet que enriquecem a rede com tags, avaliações e conteúdo, e defendem apaixonadamente marcas com que se importam.',
+    accent: 'accent3',
   },
 ];
 
 const fiveAPath: PanelItem[] = [
   {
-    title: '1. Assimilação',
-    description: 'O consumidor toma conhecimento da marca por anúncio, busca, indicação, rede social, vitrine, marketplace ou conteúdo.',
+    title: '1. Assimilação (Aware)',
+    description: 'O consumidor é exposto passivamente a uma longa lista de marcas, a partir de experiências passadas, comunicação de marketing e da defesa de outras pessoas. É o portão de entrada da jornada. Métrica: lembrança e reconhecimento de marca.',
   },
   {
-    title: '2. Atração',
-    description: 'A marca entra no conjunto de opções interessantes. Design, proposta de valor, reputação e identificação ajudam nessa etapa.',
+    title: '2. Atração (Appeal)',
+    description: 'O consumidor processa as mensagens e é atraído por uma lista curta de marcas. Marcas memoráveis, com fatores "UAU!", entram e ficam no topo. Em setores commoditizados, a atração precisa ser forte. Métrica: nº de marcas na consideração.',
   },
   {
-    title: '3. Arguição',
-    description: 'O consumidor pergunta, pesquisa, compara e valida. No e-commerce, essa etapa envolve preço, frete, prazo, reviews, troca e confiança.',
+    title: '3. Arguição (Ask)',
+    description: 'A curiosidade leva à pesquisa ativa: pede conselhos, lê avaliações, compara preços, testa na loja. É aqui que a jornada muda de individual para SOCIAL e que on-line e off-line se integram. Curiosidade de menos = marca sem apelo; de mais = mensagem confusa.',
   },
   {
-    title: '4. Ação',
-    description: 'A pessoa compra, assina, baixa, agenda ou usa. Checkout simples, meios de pagamento e entrega clara reduzem abandono.',
+    title: '4. Ação (Act)',
+    description: 'Convencido, o consumidor age: compra, consome e usa o pós-venda. Disponibilidade, experiência de loja, qualidade, preço e checkout influenciam. A ação não termina na compra — inclui toda a interação de uso. Métrica: taxa de conversão.',
   },
   {
-    title: '5. Apologia',
-    description: 'Depois da experiência, o cliente recomenda, avalia positivamente, defende a marca ou volta a comprar.',
+    title: '5. Apologia (Advocate)',
+    description: 'A fidelidade forte gera retenção, recompra e defesa diante de outros. Pode ser espontânea (rara, do fã inveterado) ou estimulada (ativada por pesquisa ou por uma crítica que mobiliza o defensor). Métrica: taxa de defesa e recomendação.',
   },
 ];
 
-const marketing50Components: ConceptItem[] = [
+// Evolução dos modelos do caminho do consumidor.
+const pathEvolution: ComparisonRow[] = [
+  { criterion: 'Origem', left: 'AIDA (1920) e os 4 As de Derek Rucker', right: 'Os 5 As (Marketing 4.0, Kotler)' },
+  { criterion: 'Atitude', left: 'Atitude individual decide a compra', right: 'Atração + influência social da comunidade' },
+  { criterion: 'Fidelidade', left: 'Retenção e recompra', right: 'Disposição de defender, mesmo sem recomprar' },
+  { criterion: 'Formato', left: 'Funil linear e fixo', right: 'Caminho em espiral, com saltos e retornos' },
+];
+
+// As três fontes de influência ao longo dos 5 As (zona O³ / POE).
+const influenceSources: ConceptItem[] = [
   {
-    title: 'Direcionado por dados',
-    description: 'Coleta e integra dados internos e externos para orientar decisões. Sem ecossistema de dados, a personalização vira chute.',
-    accent: 'accent',
-  },
-  {
-    title: 'Preditivo',
-    description: 'Usa modelos para antecipar demanda, abandono, resposta a campanhas, vendas e potencial de novos produtos.',
+    title: 'Influência externa (Externa)',
+    description: 'Vem da marca, por propaganda e comunicação. É controlável (mensagem, mídia, frequência), mas é a menos confiável. Dispara a primeira onda de consciência.',
     accent: 'accent2',
   },
   {
-    title: 'Contextual',
-    description: 'Entrega interações personalizadas conforme momento, canal, localização, comportamento e situação do cliente.',
+    title: 'Influência dos outros (Outros)',
+    description: 'Vem de amigos, família e da comunidade: boca a boca, redes sociais, avaliações. É a mais confiável (83% confiam em amigos — Nielsen) e atinge o pico na arguição. Difícil de controlar; gere via marketing comunitário.',
     accent: 'accent3',
   },
   {
-    title: 'Aumentado',
-    description: 'Usa tecnologia para elevar a produtividade do atendimento e das vendas, combinando automação com empatia humana.',
-    accent: 'accent4',
+    title: 'Influência própria (Própria)',
+    description: 'Vem de si mesmo: experiências passadas e julgamento pessoal. Predomina na apologia e nos clientes experientes, que saltam etapas e vão direto às marcas favoritas.',
+    accent: 'accent5',
+  },
+];
+
+// Métricas do caminho do consumidor: CAC e CDM (PAR e BAR).
+const pathMetrics: PanelItem[] = [
+  {
+    title: 'CAC — Coeficiente de Ação de Compra (PAR)',
+    description: 'Mede a conversão de consciência em compra: nº de quem compra ÷ nº de quem conhece a marca. Equivale a participação de mercado ÷ consciência de marca. Diagnostica se a marca converte o que conhece em vendas.',
   },
   {
-    title: 'Ágil',
-    description: 'Executa testes rápidos, MVPs, experimentos e ajustes contínuos por equipes multidisciplinares.',
-    accent: 'accent5',
+    title: 'CDM — Coeficiente de Defesa da Marca (BAR)',
+    description: 'Mede a conversão de consciência em defesa: nº de quem recomenda ÷ nº de quem conhece a marca. O ideal seria 1 (todos que conhecem recomendam). Diagnostica a fidelidade real, além da compra.',
+  },
+  {
+    title: 'Gargalos da jornada',
+    description: 'A menor taxa de conversão entre etapas é o gargalo que limita todo o caminho: atração baixa (humanizar a marca), curiosidade baixa (marketing de conteúdo), compromisso baixo (omnicanal) ou afinidade baixa (engajamento pós-venda).',
   },
 ];
 
 const marketing50Challenges: PanelItem[] = [
   {
     title: 'Abismo entre gerações',
-    description: 'Baby boomers, X, Y, Z e Alfa têm hábitos, linguagem, canais e expectativas diferentes. A marca precisa equilibrar presente e futuro.',
+    description: 'Pela primeira vez, cinco gerações convivem no mercado (boomers, X, Y, Z e Alfa) com atitudes e canais distintos. Em geral, executivos mais velhos decidem, mas clientes e gerentes mais jovens exigem inovação digital.',
   },
   {
     title: 'Polarização da prosperidade',
-    description: 'Mercados premium e de baixo custo crescem, enquanto o meio pode encolher. Posicionamento e proposta de valor ficam mais críticos.',
+    description: 'A riqueza se distribui num formato de "M": a classe média encolhe e o mercado migra para os extremos — luxo (premium) ou desconto (value). A empresa precisa escolher entre liderança de custo ou experiência premium.',
   },
   {
     title: 'Fosso digital',
-    description: 'Acesso, confiança e habilidade tecnológica variam. Inclusão digital e transparência ajudam a reduzir resistência.',
+    description: 'O acesso e o domínio da tecnologia variam, e há medo do desconhecido (privacidade, desemprego) frente à promessa de crescimento. A saída é humanizar a tecnologia: torná-la pessoal, social e experiencial.',
   },
+];
+
+// Evolução do marketing 1.0 ao 5.0.
+const marketingEras: ComparisonRow[] = [
+  { criterion: 'Marketing 1.0', left: 'Centrado no produto', right: 'Vender o que se fabrica (era industrial)' },
+  { criterion: 'Marketing 2.0', left: 'Centrado no consumidor', right: 'Satisfazer e reter o cliente (era da informação)' },
+  { criterion: 'Marketing 3.0', left: 'Centrado no ser humano', right: 'Valores, propósito e impacto social' },
+  { criterion: 'Marketing 4.0', left: 'Do tradicional ao digital', right: 'Integrar on-line e off-line (omnicanal)' },
+  { criterion: 'Marketing 5.0', left: 'Tecnologia para a humanidade', right: 'Next tech que imita o humano ao longo da jornada' },
+];
+
+// As tecnologias "next tech" do Marketing 5.0.
+const nextTechs: ConceptItem[] = [
+  { title: 'Inteligência Artificial', description: 'Algoritmos que imitam a cognição humana. Movem motores de recomendação (Netflix, Amazon), detecção de fraude e precificação dinâmica.', accent: 'accent' },
+  { title: 'PLN — Linguagem Natural', description: 'Máquinas que entendem e geram fala e texto. Sustentam chatbots e assistentes de voz (Alexa, Google Assistant, Siri).', accent: 'accent2' },
+  { title: 'Sensores e biometria', description: 'Reconhecimento facial, de imagem e de voz para identificar perfil, idade e até emoção do cliente no mundo físico.', accent: 'accent3' },
+  { title: 'Robótica', description: 'Automação de processos (RPA) no back-office e robôs físicos na linha de frente (recepção, cafeteria, hotéis).', accent: 'accent4' },
+  { title: 'Realidade aumentada e virtual', description: 'AR sobrepõe o digital ao real (IKEA, Sephora Virtual Artist); VR cria ambientes imersivos (tours, lojas virtuais).', accent: 'accent5' },
+  { title: 'IoT e blockchain', description: 'Objetos conectados (Disney MagicBand, varejo inteligente) e registros distribuídos para transparência e fidelidade.', accent: 'accent' },
+];
+
+// Os 5 componentes do Marketing 5.0: 2 disciplinas + 3 aplicações.
+const marketing50DisciplinesDetail: ConceptItem[] = [
+  {
+    title: 'Marketing orientado por dados',
+    description: 'Disciplina-base: montar um ecossistema integrado de dados (sociais, web, transações, IoT, atendimento) sob uma identidade única do cliente, para decidir com fatos. Meta final: os "segmentos de um".',
+    accent: 'accent',
+  },
+  {
+    title: 'Marketing ágil',
+    description: 'Disciplina de execução: equipes pequenas, descentralizadas e multidisciplinares que criam, testam (MVP) e ajustam rápido. Processos simultâneos e experimentação contínua. Exemplo: a Zara, com ~10 mil designs/ano.',
+    accent: 'accent5',
+  },
+];
+
+const marketing50ApplicationsDetail: ConceptItem[] = [
+  {
+    title: 'Marketing preditivo',
+    description: 'Usa machine learning para prever o resultado antes de lançar: valor do cliente (CLV), churn, resposta a campanhas e sucesso de produtos. A Netflix usou dados para apostar em "House of Cards".',
+    accent: 'accent2',
+  },
+  {
+    title: 'Marketing contextual',
+    description: 'Sensores e IA entregam a interação certa, na hora e no lugar certos. Beacons, reconhecimento facial e IoT replicam, no físico, a personalização que já existe no digital.',
+    accent: 'accent3',
+  },
+  {
+    title: 'Marketing aumentado',
+    description: 'Tecnologia que potencializa (não substitui) o humano: interfaces em camadas onde o digital qualifica e o humano fecha. Reserva o atendente caro para o que exige empatia e julgamento.',
+    accent: 'accent4',
+  },
+];
+
+// As cinco gerações.
+const generations: PanelItem[] = [
+  { title: 'Baby Boomers (1946–1964)', description: 'Cresceram no pós-guerra e com a TV. Maior poder aquisitivo, adiam a aposentadoria e ainda ocupam cargos executivos. Adotaram a tecnologia tardiamente.' },
+  { title: 'Geração X (1965–1980)', description: 'Viram a evolução do CD ao streaming; altamente adaptáveis. Hoje na liderança das empresas, equilibram vida e trabalho e muitos empreendem.' },
+  { title: 'Geração Y / Millennials (1981–1996)', description: 'Primeiros com redes sociais desde jovens. Preferem experiência à posse (streaming, assinaturas), questionam tudo e buscam propósito e causa social.' },
+  { title: 'Geração Z (1997–2009)', description: 'Primeiros nativos digitais; sempre conectados em múltiplas telas. Pragmáticos, valorizam autenticidade (detestam imagens editadas) e têm baixa lealdade a marcas.' },
+  { title: 'Geração Alfa (2010–2025)', description: 'A tecnologia é extensão de si. Consomem vídeo desde a infância e influenciam ~74% das decisões domésticas. Crescerão com IA, voz e robôs.' },
 ];
 
 const dataCommerceItems: PanelItem[] = [
@@ -485,28 +577,40 @@ const cxAutomationItems: PanelItem[] = [
   },
 ];
 
-function ConceptGrid({ items, columns = 'md:grid-cols-2' }: { items: ConceptItem[]; columns?: string }) {
-  return (
-    <div className={`grid grid-cols-1 ${columns} gap-4`}>
-      {items.map(item => (
-        <ConceptCard key={item.title} title={item.title} description={item.description} accent={item.accent} />
-      ))}
-    </div>
-  );
-}
+// Os três níveis de experiência personalizada (marketing contextual).
+const contextLevels: ConceptItem[] = [
+  {
+    title: 'Informação personalizada',
+    description: 'Conteúdo certo pela localização e perfil (geofencing). Ex.: o "Whopper Detour" do Burger King liberava um cupom de US$ 0,01 quando o cliente estava perto de um McDonald’s.',
+    accent: 'accent',
+  },
+  {
+    title: 'Interação customizada',
+    description: 'Diálogo nos dois sentidos, com gamificação e progressão. Ex.: a Sephora une o provador virtual (AR) à consulta na loja, conduzindo o cliente passo a passo.',
+    accent: 'accent3',
+  },
+  {
+    title: 'Imersão total',
+    description: 'Experiência sensorial sem emendas entre físico e digital. Ex.: app da Lowe com AR para montar a lista e navegação no chão; provadores inteligentes com RFID e espelho digital.',
+    accent: 'accent5',
+  },
+];
 
-function PanelList({ items, columns }: { items: PanelItem[]; columns?: string }) {
-  return (
-    <div className={columns ? `grid grid-cols-1 ${columns} gap-3` : 'space-y-3'}>
-      {items.map(item => (
-        <div key={item.title} className="bg-card border border-border rounded-xl px-5 py-4">
-          <h3 className="font-semibold text-sm md:text-base text-text mb-0.5">{item.title}</h3>
-          <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
+// Pirâmide do conhecimento: onde máquina e humano atuam.
+const knowledgePyramid: PanelItem[] = [
+  {
+    title: 'Dados e informação — papel da máquina',
+    description: 'Coletar, estruturar e organizar volume massivo de dados. A máquina filtra ruído, encontra padrões, clusters e correlações com eficiência impossível para o humano.',
+  },
+  {
+    title: 'Conhecimento — máquina + humano',
+    description: 'Armazenar e recuperar o que foi aprendido, conectando informação a contexto. A máquina organiza; o humano começa a interpretar.',
+  },
+  {
+    title: 'Ideias e sabedoria — papel do humano',
+    description: 'Gerar soluções criativas, julgar o que é anomalia ou insight e tomar decisões éticas. A criatividade e a empatia continuam humanas: a máquina converge, o humano diverge.',
+  },
+];
 
 function IntroSection() {
   return (
@@ -806,24 +910,46 @@ function SegmentacaoSection() {
 
 function Marketing40Section() {
   return (
-    <section className="animate-fade-in space-y-6">
+    <section className="animate-fade-in space-y-8">
       <SectionHeader title="Marketing 4.0" subtitle="A passagem do tradicional ao digital em um mercado guiado por conectividade, comunidades e prova social" colorClass="text-accent2" />
       <HighlightBox title="Ideia central">
         <p>
-          Marketing 4.0 não significa abandonar o marketing tradicional. A proposta é integrar presença física e digital, comunicação de marca, relacionamento e dados para acompanhar uma jornada de compra cada vez mais conectada.
+          Marketing 4.0 não significa abandonar o marketing tradicional. Para Kotler, é a <strong>integração</strong> entre marketing on-line e off-line: a tecnologia conecta máquina a máquina, mas a humanidade conecta pessoa a pessoa. O papel do tradicional é construir consciência e interesse; o do digital é aprofundar o relacionamento e levar à ação.
         </p>
       </HighlightBox>
 
-      <ConceptGrid items={marketing40Shifts} columns="md:grid-cols-3" />
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent2 mb-3">As três grandes transições</h3>
+        <ConceptGrid items={marketing40Shifts} columns="md:grid-cols-3" />
+      </div>
+
+      <TheoryBlock title="Conectividade: a força que muda tudo">
+        <p>
+          A <strong>conectividade</strong> é a infraestrutura por trás do Marketing 4.0: a capacidade de as pessoas se conectarem, compartilharem informação e acessarem a sabedoria das multidões em tempo real. Ela reduz o custo de interação, derruba barreiras de entrada e transfere poder para o consumidor — que compara preços, lê avaliações e se protege em comunidade.
+        </p>
+      </TheoryBlock>
 
       <div>
-        <h3 className="font-display font-bold text-xl text-accent3 mb-3">O novo poder do consumidor</h3>
-        <PanelList items={digitalInfluenceItems} columns="md:grid-cols-2" />
+        <h3 className="font-display font-bold text-xl text-accent mb-3">Os três níveis de conectividade</h3>
+        <ConceptGrid items={connectivityLevels} columns="md:grid-cols-3" />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent4 mb-3">Os três paradoxos da conectividade</h3>
+        <PanelList items={connectivityParadoxes} columns="md:grid-cols-3" />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent3 mb-3">Subculturas digitais mais influentes (JMN)</h3>
+        <p className="text-text-muted text-sm md:text-base leading-relaxed mb-4 reading-measure">
+          Três segmentos detêm a chave da influência na era digital: <strong>Jovens, Mulheres e Netizens</strong>. Conquistar a mente dos jovens, o mercado das mulheres e o coração dos netizens é a estratégia central proposta no livro.
+        </p>
+        <ConceptGrid items={jmnSubcultures} columns="md:grid-cols-3" />
       </div>
 
       <HighlightBox title="Aplicação ao comércio eletrônico" accent="var(--color-accent5)">
         <p>
-          Uma loja virtual não compete apenas por anúncio e preço. Ela compete pela soma de reputação, avaliações, atendimento, prazo, política de troca, conteúdo, experiência mobile e confiança gerada em cada ponto de contato.
+          Uma loja virtual não compete apenas por anúncio e preço. Ela compete pela soma de reputação, avaliações, atendimento, prazo, política de troca, conteúdo, experiência mobile e confiança gerada em cada ponto de contato. A prova social — estrelas, comentários, unboxings — vira fator decisivo de conversão.
         </p>
       </HighlightBox>
     </section>
@@ -832,22 +958,39 @@ function Marketing40Section() {
 
 function Jornada5ASection() {
   return (
-    <section className="animate-fade-in space-y-6">
+    <section className="animate-fade-in space-y-8">
       <SectionHeader title="Jornada Digital dos 5 As" subtitle="Do primeiro contato à recomendação espontânea" colorClass="text-accent3" />
       <FlowDiagram items={['Assimilação', 'Atração', 'Arguição', 'Ação', 'Apologia']} />
 
       <PanelList items={fiveAPath} />
 
-      <div className="study-surface p-5 md:p-6">
-        <h3 className="font-display font-bold text-2xl text-accent mb-3">Por que a Arguição pesa tanto no e-commerce?</h3>
-        <p className="text-text-muted text-sm md:text-base leading-relaxed">
-          Antes de comprar, o cliente compara preço, frete, prazo, reputação, comentários, vídeos, fotos reais, política de troca e meios de pagamento. Quanto mais risco percebido, maior a necessidade de prova e confiança.
-        </p>
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent4 mb-3">Por que os 5 As substituíram o velho funil</h3>
+        <ComparisonTable rows={pathEvolution} leftLabel="Antes (funil clássico)" rightLabel="Agora (5 As)" />
       </div>
 
-      <HighlightBox title="Métrica por etapa" accent="var(--color-accent4)">
+      <TheoryBlock title="A jornada não é linear">
         <p>
-          A jornada ajuda a interpretar problemas: muito alcance e pouca ação indicam falha de conversão; muitas compras e pouca apologia indicam experiência ou pós-venda fracos.
+          Ao contrário do funil, os 5 As formam um caminho <strong>em espiral</strong>: o consumidor pode pular etapas (uma indicação forte leva da assimilação direto à arguição) ou voltar atrás (um problema no uso o devolve à arguição). O número de marcas consideradas expande e estreita ao longo do caminho, e o tempo em cada etapa varia por categoria — curto em bens de consumo, longo em imóveis e carros.
+        </p>
+      </TheoryBlock>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent mb-3">As três fontes de influência (zona O³)</h3>
+        <p className="text-text-muted text-sm md:text-base leading-relaxed mb-4 reading-measure">
+          Em cada etapa, três forças disputam a decisão. A influência <strong>dos outros</strong> atinge o pico na arguição — é a janela de ouro do marketing comunitário.
+        </p>
+        <ConceptGrid items={influenceSources} columns="md:grid-cols-3" />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent5 mb-3">Medindo a jornada: CAC e CDM</h3>
+        <PanelList items={pathMetrics} columns="md:grid-cols-3" />
+      </div>
+
+      <HighlightBox title="Por que a Arguição pesa tanto no e-commerce?" accent="var(--color-accent4)">
+        <p>
+          Antes de comprar, o cliente compara preço, frete, prazo, reputação, comentários, vídeos, fotos reais, política de troca e meios de pagamento. Quanto mais risco percebido, maior a necessidade de prova e confiança — por isso a arguição é a etapa mais decisiva da loja virtual.
         </p>
       </HighlightBox>
     </section>
@@ -856,27 +999,53 @@ function Jornada5ASection() {
 
 function Marketing50Section() {
   return (
-    <section className="animate-fade-in space-y-6">
+    <section className="animate-fade-in space-y-8">
       <SectionHeader title="Marketing 5.0 e Martech" subtitle="Tecnologia a serviço da humanidade, da estratégia e da jornada do cliente" colorClass="text-accent4" />
-      <HighlightBox title="Definição prática">
+      <HighlightBox title="Definição (Kotler)">
         <p>
-          Marketing 5.0 aplica tecnologias que simulam capacidades humanas para criar, comunicar, entregar e aumentar valor ao longo da experiência do cliente. O ponto-chave é equilibrar inteligência de máquina com sensibilidade humana.
+          Marketing 5.0 é a <strong>aplicação de tecnologias que imitam o ser humano</strong> (next tech) para criar, comunicar, entregar e aumentar valor ao longo da jornada do cliente. Em uma equação: <strong>Marketing 5.0 = Marketing 3.0 (centralidade humana) + Marketing 4.0 (empoderamento tecnológico)</strong>. O ponto-chave é equilibrar inteligência de máquina com sensibilidade humana.
         </p>
       </HighlightBox>
 
       <div>
-        <h3 className="font-display font-bold text-xl text-accent mb-3">Cinco componentes</h3>
-        <ConceptGrid items={marketing50Components} columns="md:grid-cols-2 lg:grid-cols-3" />
+        <h3 className="font-display font-bold text-xl text-accent mb-3">A evolução do marketing</h3>
+        <ComparisonTable rows={marketingEras} leftLabel="Foco" rightLabel="Essência" />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent2 mb-3">As tecnologias "next tech"</h3>
+        <ConceptGrid items={nextTechs} columns="md:grid-cols-2 lg:grid-cols-3" />
       </div>
 
       <div>
         <h3 className="font-display font-bold text-xl text-accent5 mb-3">Três desafios para implementar</h3>
-        <PanelList items={marketing50Challenges} />
+        <PanelList items={marketing50Challenges} columns="md:grid-cols-3" />
+      </div>
+
+      <TheoryBlock title="Os cinco componentes: 2 disciplinas + 3 aplicações">
+        <p>
+          O Marketing 5.0 se organiza em duas <strong>disciplinas</strong> que dão a base (orientado por dados e ágil) e três <strong>aplicações</strong> que entregam valor (preditivo, contextual e aumentado). As disciplinas são o alicerce; as aplicações, o que o cliente percebe.
+        </p>
+      </TheoryBlock>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent mb-3">As duas disciplinas (base)</h3>
+        <ConceptGrid items={marketing50DisciplinesDetail} columns="md:grid-cols-2" />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent3 mb-3">As três aplicações (entrega)</h3>
+        <ConceptGrid items={marketing50ApplicationsDetail} columns="md:grid-cols-3" />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent4 mb-3">As cinco gerações no mercado</h3>
+        <PanelList items={generations} columns="md:grid-cols-2" />
       </div>
 
       <HighlightBox title="Tecnologia não substitui estratégia" accent="var(--color-accent3)">
         <p>
-          IA, sensores, IoT, realidade aumentada, blockchain, chatbots e automação só geram valor quando resolvem um problema real da jornada. A ferramenta vem depois do objetivo.
+          IA, sensores, IoT, realidade aumentada, blockchain, chatbots e automação só geram valor quando resolvem um problema real da jornada. Vale o <em>paradoxo de Moravec</em>: a máquina vence no raciocínio lógico e na escala; o humano vence na empatia, na criatividade e na conexão emocional. A ferramenta vem depois do objetivo.
         </p>
       </HighlightBox>
     </section>
@@ -903,9 +1072,22 @@ function DadosCxSection() {
         <PanelList items={cxAutomationItems} columns="md:grid-cols-2" />
       </div>
 
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent3 mb-3">Marketing contextual: três níveis de personalização</h3>
+        <ConceptGrid items={contextLevels} columns="md:grid-cols-3" />
+      </div>
+
+      <div>
+        <h3 className="font-display font-bold text-xl text-accent mb-3">Onde a máquina ajuda e onde o humano decide</h3>
+        <p className="text-text-muted text-sm md:text-base leading-relaxed mb-4 reading-measure">
+          A pirâmide do conhecimento mostra a divisão de trabalho ideal: a máquina sobe dos dados ao conhecimento; o humano transforma conhecimento em ideias e sabedoria.
+        </p>
+        <PanelList items={knowledgePyramid} columns="md:grid-cols-3" />
+      </div>
+
       <HighlightBox title="Indicadores de revisão" accent="var(--color-accent2)">
         <p>
-          Para estudar, conecte cada ação a uma métrica: conversão, abandono de carrinho, retenção, recompra, valor do cliente, satisfação, tempo de resposta e defesa da marca.
+          Para estudar, conecte cada ação a uma métrica: conversão, abandono de carrinho, retenção, recompra, valor do cliente (CLV), satisfação, tempo de resposta e defesa da marca (CDM).
         </p>
       </HighlightBox>
     </section>

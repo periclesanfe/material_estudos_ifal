@@ -120,7 +120,7 @@ export default function KahootQuiz({ questions, onGenerateNewQuiz, newQuizButton
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-[11px] font-semibold text-text-muted uppercase tracking-[0.18em]">Resultado final</p>
-            <h3 className="font-display text-4xl md:text-5xl font-black text-text leading-tight mt-1">
+            <h3 className="font-display text-4xl md:text-5xl font-black text-text leading-tight mt-1 tabular-nums">
               {correctCount} / {totalQuestions}
             </h3>
             <p className="text-text-muted text-sm md:text-base mt-2">

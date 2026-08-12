@@ -1,8 +1,8 @@
 import { useState, useCallback } from 'react';
 import { useApiKey } from './useApiKey';
+import { generateContent, describeAIError, type AIErrorInfo } from '../lib/aiProviders';
 
 export const QUESTION_COUNT_OPTIONS = [1, 5, 10] as const;
-const GEMINI_MODEL = 'gemini-3-flash-preview';
 
 export type QuestionCount = (typeof QUESTION_COUNT_OPTIONS)[number];
 
@@ -18,7 +18,7 @@ export interface AIQuizQuestion {
 interface AIQuizState {
   questions: AIQuizQuestion[];
   loading: boolean;
-  error: string | null;
+  error: AIErrorInfo | null;
   score: { correct: number; wrong: number; total: number };
   selectedAnswers: Record<number, number>;
 }
@@ -75,23 +75,8 @@ function normalizeGeneratedQuestions(rawText: string, desiredCount: number): AIQ
     );
 }
 
-function formatGeminiError(message: string): string {
-  const isQuotaError = /quota|rate|limit|exceeded|429/i.test(message);
-  const isZeroFreeTier = /free_tier|limit:\s*0/i.test(message);
-
-  if (isQuotaError && isZeroFreeTier) {
-    return `Sua API key do Gemini está sem quota gratuita disponível para este modelo/projeto. Confira os limites em https://ai.dev/rate-limit ou ative billing no Google AI Studio. Detalhes: ${message}`;
-  }
-
-  if (isQuotaError) {
-    return `Limite de uso do Gemini atingido. Aguarde um pouco, gere menos perguntas por lote ou confira sua quota em https://ai.dev/rate-limit. Detalhes: ${message}`;
-  }
-
-  return message;
-}
-
 export function useGeminiQuiz(guideContext: string) {
-  const { getApiKey, hasApiKey } = useApiKey();
+  const { getConfig, hasApiKey } = useApiKey();
   const [state, setState] = useState<AIQuizState>({
     questions: [],
     loading: false,
@@ -102,7 +87,14 @@ export function useGeminiQuiz(guideContext: string) {
 
   const generateQuestion = useCallback(async (topicSelection: string | string[] = 'aleatorio', difficulty: string = 'mista', count: number = 1) => {
     if (!hasApiKey()) {
-      setState(prev => ({ ...prev, error: 'Configure sua API key nas Configurações antes de usar o quiz com IA.' }));
+      setState(prev => ({
+        ...prev,
+        error: {
+          title: 'Configuração incompleta',
+          detail: 'Escolha um provedor de IA, informe sua API key e selecione um modelo nas Configurações antes de usar o quiz.',
+          action: { label: 'Abrir Configurações', to: '/configuracoes' },
+        },
+      }));
       return;
     }
 
@@ -162,50 +154,31 @@ Formato JSON exato:
   ]
 }`;
 
+    const config = getConfig();
+
     try {
-      const apiKey = getApiKey()!;
-      const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'x-goog-api-key': apiKey,
-          },
-          body: JSON.stringify({
-            contents: [{ parts: [{ text: prompt }] }],
-            generationConfig: {
-              temperature: 0.9,
-              maxOutputTokens: Math.min(8192, Math.max(1024, desiredCount * 900)),
-              responseMimeType: 'application/json',
-            },
-          }),
-        }
-      );
-
-      if (!res.ok) {
-        const errData = await res.json().catch(() => ({}));
-        throw new Error(errData?.error?.message || `Erro HTTP ${res.status}`);
-      }
-
-      const data = await res.json();
-      const text = data?.candidates?.[0]?.content?.parts?.map((part: { text?: string }) => part.text || '').join('');
-      if (!text) throw new Error('Resposta vazia da API.');
+      const text = await generateContent(config, {
+        prompt,
+        temperature: 0.9,
+        maxOutputTokens: Math.min(8192, Math.max(1024, desiredCount * 900)),
+        jsonMode: true,
+      });
 
       const questions = normalizeGeneratedQuestions(text, desiredCount);
       if (questions.length === 0) {
-        throw new Error('O Gemini não retornou perguntas válidas. Tente novamente.');
+        throw new Error('A IA não retornou perguntas válidas. Tente novamente.');
       }
 
       setState(prev => ({ ...prev, questions, loading: false }));
     } catch (err) {
+      const message = err instanceof Error ? err.message : 'Erro desconhecido.';
       setState(prev => ({
         ...prev,
         loading: false,
-        error: err instanceof Error ? formatGeminiError(err.message) : 'Erro desconhecido.',
+        error: describeAIError(message, config.provider),
       }));
     }
-  }, [guideContext, getApiKey, hasApiKey]);
+  }, [guideContext, getConfig, hasApiKey]);
 
   const answerQuestion = useCallback((questionIndex: number, selectedIndex: number) => {
     setState(prev => {

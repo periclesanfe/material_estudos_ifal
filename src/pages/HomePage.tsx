@@ -1,34 +1,41 @@
 import { NavLink } from 'react-router-dom';
-import { getSubjectsWithContent, getTotalSubjects, getSubjectsWithContentCount } from '../data/curriculum';
+import SubjectCatalog from '../components/ui/SubjectCatalog';
+import subjects, { getTotalSubjects, getSubjectsWithContentCount } from '../data/curriculum';
+import { SITE_LAST_UPDATED_LABEL } from '../data/siteMetadata';
 
 export default function HomePage() {
-  const subjectsWithContent = getSubjectsWithContent();
   const totalSubjects = getTotalSubjects();
   const contentCount = getSubjectsWithContentCount();
   const progressPercent = Math.round((contentCount / totalSubjects) * 100);
 
   return (
-    <div className="page-wrap py-10 md:py-12 animate-fade-in content-stack">
-      <section className="study-surface relative overflow-hidden px-6 py-12 md:px-10 md:py-14 text-center">
-        <div className="absolute inset-0 pointer-events-none opacity-70">
+    <div className="page-wrap py-10 md:py-12 content-stack stagger-children">
+      <section className="study-surface relative overflow-hidden px-6 py-14 md:px-10 md:py-20 text-center">
+        <div className="home-hero-bg absolute inset-0 pointer-events-none opacity-70">
           <div
             className="absolute inset-0"
             style={{
               background:
-                'radial-gradient(circle at 25% 30%, rgba(108,99,255,0.16) 0%, transparent 46%), radial-gradient(circle at 75% 65%, rgba(78,205,196,0.08) 0%, transparent 44%)',
+                'radial-gradient(circle at 25% 30%, rgba(108,99,255,0.18) 0%, transparent 46%), radial-gradient(circle at 75% 65%, rgba(78,205,196,0.10) 0%, transparent 44%)',
             }}
           />
         </div>
 
-        <p className="text-text-muted text-[11px] font-semibold tracking-[0.2em] uppercase relative z-10 mb-4">
+        <p className="text-accent text-[11px] font-bold tracking-[0.22em] uppercase relative z-10 mb-4">
           Bacharelado em Sistemas de Informação · IFAL
         </p>
-        <h1 className="font-display font-black text-5xl md:text-7xl text-text relative z-10 mb-4 leading-[1.03] tracking-tight">
+        <h1 className="font-display font-black text-5xl md:text-7xl text-text relative z-10 mb-4 leading-[1.03] tracking-tight text-balance">
           Material de <span className="gradient-text">Estudo</span>
         </h1>
-        <p className="text-text-muted text-sm md:text-base relative z-10 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-text-muted text-base md:text-lg relative z-10 max-w-2xl mx-auto leading-relaxed text-pretty">
           Conteúdos organizados por matéria, quizzes interativos e geração de perguntas por IA.
         </p>
+        <NavLink
+          to="/atualizacoes"
+          className="text-text-muted/80 hover:text-text text-xs relative z-10 mt-4 inline-block underline underline-offset-2 transition-colors"
+        >
+          Atualizado em {SITE_LAST_UPDATED_LABEL}
+        </NavLink>
       </section>
 
       <section className="study-surface p-5 md:p-6">
@@ -49,32 +56,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {subjectsWithContent.length > 0 && (
-        <section className="space-y-4">
-          <h2 className="section-title text-accent">Matérias Disponíveis</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-            {subjectsWithContent.map(subject => (
-              <NavLink
-                key={subject.id}
-                to={`/materia/${subject.slug}`}
-                className="study-surface study-surface-hover px-4 py-3.5 group flex items-center justify-between min-h-[78px]"
-              >
-                <div>
-                  <h3 className="font-semibold text-sm md:text-base text-text group-hover:text-accent transition-colors">
-                    {subject.name}
-                  </h3>
-                  <p className="text-text-muted text-xs md:text-sm mt-0.5">
-                    {subject.period === 'optativa' ? 'Optativa' : `${subject.period}º Período`} · {subject.hours}h · {subject.code}
-                  </p>
-                </div>
-                <svg className="w-4 h-4 text-text-muted group-hover:text-accent transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </NavLink>
-            ))}
-          </div>
-        </section>
-      )}
+      <SubjectCatalog subjects={subjects} />
 
       <section className="grid grid-cols-2 md:grid-cols-4 gap-3.5">
         {[
@@ -83,8 +65,8 @@ export default function HomePage() {
           { label: 'Com conteúdo', value: String(contentCount) },
           { label: 'Quiz IA', value: '∞' },
         ].map(stat => (
-          <div key={stat.label} className="study-surface p-4 text-center">
-            <span className="font-display font-black text-2xl text-text block">{stat.value}</span>
+          <div key={stat.label} className="study-surface card-hover p-4 text-center">
+            <span className="font-display font-black text-3xl text-accent block tabular-nums leading-none mb-1.5">{stat.value}</span>
             <span className="text-text-muted text-[11px] font-semibold uppercase tracking-[0.14em]">{stat.label}</span>
           </div>
         ))}

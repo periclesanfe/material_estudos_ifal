@@ -1,13 +1,31 @@
-import { useParams } from 'react-router-dom';
+import { lazy, Suspense, type ComponentType } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { getSubjectBySlug } from '../data/curriculum';
-import ComportamentoOrganizacionalContent from '../content/comportamento-organizacional/ComportamentoOrganizacionalContent';
-import MarketingContent from '../content/marketing-comercio-eletronico/MarketingContent';
+import { SITE_LAST_UPDATED_LABEL } from '../data/siteMetadata';
 import NotFoundPage from './NotFoundPage';
 
-const contentRegistry: Record<string, React.ComponentType> = {
-  'comportamento-organizacional': ComportamentoOrganizacionalContent,
-  'marketing-comercio-eletronico': MarketingContent,
+const contentRegistry: Record<string, ComponentType> = {
+  'administracao-projeto-banco-dados': lazy(() => import('../content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosContent')),
+  'comportamento-organizacional': lazy(() => import('../content/comportamento-organizacional/ComportamentoOrganizacionalContent')),
+  'marketing-comercio-eletronico': lazy(() => import('../content/marketing-comercio-eletronico/MarketingContent')),
+  'metodologia-cientifica': lazy(() => import('../content/metodologia-cientifica/MetodologiaCientificaContent')),
+  'estrutura-dados': lazy(() => import('../content/estrutura-dados/EstruturaDadosContent')),
+  'processos-desenvolvimento-software': lazy(() => import('../content/processos-desenvolvimento-software/ProcessosDesenvolvimentoSoftwareContent')),
+  'algoritmos-logica-programacao': lazy(() => import('../content/algoritmos-logica-programacao/ALPGContent')),
+  'topicos-avancados-banco-dados': lazy(() => import('../content/topicos-avancados-banco-dados/TABDContent')),
+  'linguagem-programacao': lazy(() => import('../content/linguagem-programacao/LPGMContent')),
 };
+
+function SubjectContentFallback() {
+  return (
+    <div className="page-wrap py-10 md:py-12 animate-fade-in">
+      <section className="study-surface px-6 py-12 md:px-10 md:py-14 text-center">
+        <div className="w-8 h-8 border-2 border-border border-t-accent rounded-full animate-spin mx-auto" />
+        <p className="text-text-muted text-sm mt-4">Carregando conteúdo da matéria…</p>
+      </section>
+    </div>
+  );
+}
 
 export default function SubjectPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -34,9 +52,15 @@ export default function SubjectPage() {
             {subject.period === 'optativa' ? 'Optativa' : `${subject.period}º Período`} · {subject.hours}h · {subject.code}
           </p>
           <h1 className="font-display font-bold text-4xl md:text-5xl text-text relative z-10 mb-3 tracking-tight">{subject.name}</h1>
-          <p className="text-text-muted text-sm md:text-base relative z-10 max-w-xl mx-auto mb-7">
+          <p className="text-text-muted text-sm md:text-base relative z-10 max-w-xl mx-auto mb-3">
             Esta matéria ainda não tem conteúdo disponível. Quer ser o primeiro a contribuir?
           </p>
+          <Link
+            to="/atualizacoes"
+            className="text-text-muted/80 hover:text-text text-xs relative z-10 mb-7 inline-block underline underline-offset-2 transition-colors"
+          >
+            Atualizado em {SITE_LAST_UPDATED_LABEL}
+          </Link>
           <div className="flex gap-2 flex-wrap justify-center relative z-10">
             <a
               href="https://github.com/periclesanfe/material_estudos_ifal/issues/new"
@@ -77,5 +101,9 @@ export default function SubjectPage() {
     );
   }
 
-  return <ContentComponent />;
+  return (
+    <Suspense fallback={<SubjectContentFallback />}>
+      <ContentComponent />
+    </Suspense>
+  );
 }

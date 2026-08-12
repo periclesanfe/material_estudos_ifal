@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { QUESTION_COUNT_OPTIONS, type QuestionCount, useGeminiQuiz } from '../../hooks/useGeminiQuiz';
 import { useApiKey } from '../../hooks/useApiKey';
+import AIErrorBox from './AIErrorBox';
+import AIProviderBadge from './AIProviderBadge';
 import type { QuizTopicOption } from './QuizCard';
 
 interface AIQuizGeneratorProps {
@@ -64,7 +66,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
   const allTopicsSelected = selectedTopicValues.length === topics.length;
   const progressPct = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0;
   const generateLabel = loading
-    ? `Gerando ${selectedCount}...`
+    ? `Gerando ${selectedCount}…`
     : selectedCount === 1
       ? 'Gerar pergunta'
       : `Gerar ${selectedCount} perguntas`;
@@ -72,9 +74,10 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
   if (!hasApiKey()) {
     return (
       <div className="study-surface p-6 md:p-8 text-center">
-        <h3 className="font-display font-bold text-3xl md:text-4xl text-text mb-2 leading-tight">Configure sua API Key</h3>
+        <h3 className="font-display font-bold text-3xl md:text-4xl text-text mb-2 leading-tight">Configure a IA</h3>
         <p className="text-text-muted text-sm md:text-base mb-5">
-          Para usar o Quiz com IA, configure sua API Key do Google Gemini nas Configurações.
+          Para usar o Quiz com IA, escolha um provedor (Gemini, OpenAI, Anthropic ou compatível),
+          informe sua API Key e selecione um modelo nas Configurações.
         </p>
         <Link
           to="/configuracoes"
@@ -89,6 +92,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
   return (
     <div className="space-y-4">
       <div className="study-surface p-4 md:p-5 space-y-4">
+        <AIProviderBadge />
         <div>
           <label className="block text-[11px] font-semibold text-text-muted uppercase tracking-wider mb-2">
             Conteúdos para gerar perguntas
@@ -184,7 +188,7 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
         </div>
       </div>
 
-      <div className="study-surface flex gap-5 items-center px-4 py-3.5 text-sm">
+      <div className="study-surface flex gap-5 items-center px-4 py-3.5 text-sm tabular-nums">
         <div className="text-center">
           <div className="font-bold text-accent5">{score.correct}</div>
           <div className="text-[11px] text-text-muted uppercase tracking-wider">Acertos</div>
@@ -211,17 +215,13 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
       </div>
 
       {loading && (
-        <div className="text-center py-10">
-          <div className="w-8 h-8 border-2 border-border border-t-accent rounded-full animate-spin mx-auto" />
-          <p className="text-text-muted mt-3 text-sm">Consultando a IA...</p>
+        <div className="text-center py-10" role="status" aria-live="polite">
+          <div className="w-8 h-8 border-2 border-border border-t-accent rounded-full animate-spin mx-auto" aria-hidden="true" />
+          <p className="text-text-muted mt-3 text-sm">Consultando a IA…</p>
         </div>
       )}
 
-      {error && (
-        <div className="bg-accent2/10 border border-accent2/20 rounded-lg p-3 text-accent2 text-sm leading-relaxed">
-          {error}
-        </div>
-      )}
+      {error && <AIErrorBox error={error} />}
 
       {questions.length > 0 && !loading && (
         <div className="space-y-4 animate-fade-in">
@@ -231,16 +231,16 @@ export default function AIQuizGenerator({ guideContext, topics }: AIQuizGenerato
 
             return (
               <div key={`${question.pergunta}-${questionIndex}`} className="study-surface p-5 md:p-6">
-                <div className="flex justify-between items-center gap-3 mb-3">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-semibold px-2.5 py-1 rounded bg-accent/10 text-accent uppercase tracking-wider">
+                <div className="flex justify-between items-start gap-3 mb-3">
+                  <div className="flex flex-wrap items-center gap-2 min-w-0">
+                    <span className="text-xs font-semibold px-2.5 py-1 rounded bg-accent/10 text-accent uppercase tracking-wider tabular-nums shrink-0">
                       Pergunta {questionIndex + 1} de {questions.length}
                     </span>
-                    <span className="text-xs font-semibold px-2.5 py-1 rounded bg-accent3/10 text-accent3 uppercase tracking-wider">
+                    <span className="text-xs font-semibold px-2.5 py-1 rounded bg-accent3/10 text-accent3 uppercase tracking-wider break-words">
                       {question.tema}
                     </span>
                   </div>
-                  <span className="text-xs font-semibold text-text-muted">
+                  <span className="text-xs font-semibold text-text-muted shrink-0">
                     {difficultyLabels[question.dificuldade] || question.dificuldade}
                   </span>
                 </div>

@@ -1,0 +1,326 @@
+{
+  "$schema": "./contribuicoes.schema.json",
+  "versao": 1,
+  "atualizadoEm": "2026-08-11T00:00:00-03:00",
+  "contribuintes": [
+    {
+      "id": "isaque-braga",
+      "nome": "Isaque Braga",
+      "matricula": "2024001384",
+      "emailInstitucional": "isb15@aluno.ifal.edu.br",
+      "curso": "Sistemas de Informação"
+    },
+    {
+      "id": "maria-luisa-alaquoke",
+      "nome": "Maria Luisa Alaquoke Ferreira dos Santos",
+      "matricula": "2024001400",
+      "emailInstitucional": "mlafs2@aluno.ifal.edu.br",
+      "curso": "Sistemas de Informação"
+    },
+    {
+      "id": "pericles-feitoza",
+      "nome": "Péricles Feitoza",
+      "matricula": "2022000806",
+      "emailInstitucional": "paf1@aluno.ifal.edu.br",
+      "curso": "Sistemas de Informação"
+    },
+    {
+      "id": "marina-medeiros",
+      "nome": "Marina Medeiros Correia de Paffer",
+      "matricula": "13177016402",
+      "emailInstitucional": "mmcp1@aluno.ifal.edu.br",
+      "curso": "Sistemas de Informação"
+    }
+  ],
+  "contribuicoes": [
+    {
+      "id": "contrib-2026-05-31-quiz-dinamico",
+      "contribuinteId": "isaque-braga",
+      "quando": {
+        "data": "2026-05-31",
+        "registradoEm": "2026-05-31T13:07:13-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "projeto",
+        "arquivo": "src/components/quiz/ExamQuizSelector.tsx",
+        "pullRequest": "#17"
+      },
+      "tipo": "codigo",
+      "como": {
+        "resumo": "Refatoração do filtro de provas no quiz para suportar número dinâmico de avaliações.",
+        "detalhes": "Tipo QuizExam alterado de union literal para template literal (prova${number}). Opções de filtro agora derivadas dinamicamente via useMemo, ordenadas numericamente, com labels em ordinais em português.",
+        "origem": "pull_request",
+        "referencia": "#17"
+      },
+      "status": "incorporado",
+      "revisadoPor": [
+        "periclesanfe"
+      ],
+      "tags": [
+        "quiz",
+        "refatoracao",
+        "typescript"
+      ]
+    },
+    {
+      "id": "contrib-2026-05-31-metodologia-cientifica",
+      "contribuinteId": "isaque-braga",
+      "quando": {
+        "data": "2026-05-31",
+        "registradoEm": "2026-05-31T14:29:48-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "metodologia-cientifica",
+        "materiaCodigo": "METC",
+        "arquivo": "src/content/metodologia-cientifica/data.ts",
+        "pullRequest": "#18"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Adiciona conteúdo completo da matéria Metodologia Científica com seções navegáveis e quiz de revisão.",
+        "detalhes": "Criados data.ts, MetodologiaCientificaSections.tsx e MetodologiaCientificaContent.tsx. Inclui estrutura principal da disciplina, contexto para geração de quiz com IA e perguntas de revisão.",
+        "origem": "pull_request",
+        "referencia": "#18"
+      },
+      "status": "incorporado",
+      "revisadoPor": [
+        "periclesanfe"
+      ],
+      "tags": [
+        "metodologia-cientifica",
+        "conteudo",
+        "quiz"
+      ]
+    },
+    {
+      "id": "contrib-2026-06-11-componente-codeblock",
+      "contribuinteId": "isaque-braga",
+      "quando": {
+        "data": "2026-06-11",
+        "registradoEm": "2026-06-11T08:28:45-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "projeto",
+        "arquivo": "src/components/ui/CodeBlock.tsx",
+        "pullRequest": "#19"
+      },
+      "tipo": "codigo",
+      "como": {
+        "resumo": "Cria componente CodeBlock com syntax highlighting para múltiplas linguagens, sem dependências externas.",
+        "detalhes": "Tokenização manual com cores baseadas nas variáveis de tema do projeto. Suporta: python, javascript, typescript, java, c, cpp, go, rust. Props: code (obrigatório), language (obrigatório), title (opcional).",
+        "origem": "pull_request",
+        "referencia": "#19"
+      },
+      "status": "incorporado",
+      "revisadoPor": [
+        "periclesanfe"
+      ],
+      "tags": [
+        "componente",
+        "syntax-highlighting",
+        "ui"
+      ]
+    },
+    {
+      "id": "contrib-2026-06-11-conteudo-estrutura-dados",
+      "contribuinteId": "isaque-braga",
+      "quando": {
+        "data": "2026-06-11",
+        "registradoEm": "2026-06-11T08:28:51-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "estrutura-dados",
+        "materiaCodigo": "ESTD",
+        "arquivo": "src/content/estrutura-dados/data.ts",
+        "pullRequest": "#19"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Adiciona conteúdo completo da matéria Estrutura de Dados com exemplos de código usando o novo componente CodeBlock.",
+        "detalhes": "Criados arquivos de conteúdo em src/content/estrutura-dados/. Realizados ajustes para registrar a matéria no fluxo do projeto conforme estrutura existente.",
+        "origem": "pull_request",
+        "referencia": "#19"
+      },
+      "status": "incorporado",
+      "revisadoPor": [
+        "periclesanfe"
+      ],
+      "tags": [
+        "estrutura-dados",
+        "conteudo",
+        "codeblock"
+      ]
+    },
+    {
+      "id": "contrib-2026-06-21-conteudo-apbd",
+      "contribuinteId": "maria-luisa-alaquoke",
+      "quando": {
+        "data": "2026-06-21",
+        "registradoEm": "2026-06-21T10:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "administracao-projeto-banco-dados",
+        "materiaCodigo": "APBD",
+        "arquivo": "src/content/administracao-projeto-banco-dados/data.ts"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Responsável pelo conteúdo da matéria Administração e Projeto de Banco de Dados.",
+        "origem": "revisao_manual"
+      },
+      "status": "incorporado",
+      "revisadoPor": [
+        "periclesanfe"
+      ],
+      "tags": [
+        "administracao-projeto-banco-dados",
+        "conteudo"
+      ]
+    },
+    {
+      "id": "contrib-2026-04-13-conteudo-mkce",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-04-13",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "marketing-comercio-eletronico",
+        "materiaCodigo": "MKCE",
+        "arquivo": "src/content/marketing-comercio-eletronico/data.ts"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Responsável pelo conteúdo da matéria Marketing e Comércio Eletrônico.",
+        "origem": "revisao_manual"
+      },
+      "status": "incorporado",
+      "revisadoPor": [
+        "periclesanfe"
+      ],
+      "tags": [
+        "marketing-comercio-eletronico",
+        "conteudo"
+      ]
+    },
+    {
+      "id": "contrib-2026-05-12-conteudo-corg",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-05-12",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "comportamento-organizacional",
+        "materiaCodigo": "CORG",
+        "arquivo": "src/content/comportamento-organizacional/data.ts"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Responsável pelo conteúdo da matéria Comportamento Organizacional.",
+        "origem": "revisao_manual"
+      },
+      "status": "incorporado",
+      "revisadoPor": [
+        "periclesanfe"
+      ],
+      "tags": [
+        "comportamento-organizacional",
+        "conteudo"
+      ]
+    },
+    {
+      "id": "contrib-2026-06-17-conteudo-pdsw",
+      "contribuinteId": "marina-medeiros",
+      "quando": {
+        "data": "2026-06-17",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "processos-desenvolvimento-software",
+        "materiaCodigo": "PDSW",
+        "arquivo": "src/content/processos-desenvolvimento-software/data.ts",
+        "pullRequest": "#21"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Responsável pelo conteúdo da matéria Processos de Desenvolvimento de Software, organizado por capítulos com leitor do livro base.",
+        "origem": "pull_request",
+        "referencia": "#21"
+      },
+      "status": "incorporado",
+      "revisadoPor": [
+        "periclesanfe"
+      ],
+      "tags": [
+        "processos-desenvolvimento-software",
+        "conteudo"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-11-enriquecimento-estrutura-dados",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-11",
+        "registradoEm": "2026-08-11T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "estrutura-dados",
+        "materiaCodigo": "ESTD",
+        "arquivo": "src/content/estrutura-dados/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Enriquece Estrutura de Dados com seção própria de Notação Big O, desdobramento de árvores em conceitos e BST/heap, aplicação de filas na coloração de regiões e 25 novas questões de quiz.",
+        "detalhes": "Criadas as seções Big O e Árvores de Busca e Heap; a seção de Filas ganhou o algoritmo de coloração de regiões com os dois testes da atividade do professor; a lista encadeada ordenada e a recursividade foram aprofundadas com exercícios das listas. O quiz passou de 43 para 58 questões, com exercícios das listas 03, 08 e 09 e as três questões de traço de execução dos slides de ordenação. Corrigidos o fator de carga do rehash (0,7-0,8), o exemplo do folding method, o número de comparações do selection sort e o tratamento de chave duplicada na BST. Todo o código Python foi verificado por execução.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "estrutura-dados",
+        "conteudo",
+        "big-o",
+        "arvores",
+        "quiz"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-11-refatoracao-sections",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-11",
+        "registradoEm": "2026-08-11T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "projeto",
+        "arquivo": "src/components/sections/index.tsx"
+      },
+      "tipo": "melhoria",
+      "como": {
+        "resumo": "Quebra o arquivo único de seções de Estrutura de Dados em um componente por seção e cria o componente Subsection, reaproveitável pelas demais matérias.",
+        "detalhes": "O EstruturaDadosSections.tsx de 1.740 linhas virou um mapa id → componente com 17 arquivos de seção, todos abaixo de 150 linhas, separando dados (blocks.ts), código Python (snippets.ts) e composição (*.tsx). O Subsection substitui o par div + h3 que se repetia 78 vezes.",
+        "origem": "revisao_manual"
+      },
+      "status": "incorporado",
+      "tags": [
+        "refatoracao",
+        "componente",
+        "arquitetura"
+      ]
+    }
+  ]
+}

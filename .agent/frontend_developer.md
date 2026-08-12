@@ -8,8 +8,9 @@ Você é o desenvolvedor frontend do projeto IFAL BSI Material de Estudo. Você 
 - **Build:** Vite 8
 - **Styling:** Tailwind CSS v4 (`@tailwindcss/vite` plugin)
 - **Routing:** React Router v7 (react-router-dom)
-- **IA:** Google Gemini API (gemini-2.0-flash)
-- **API Keys:** localStorage (client-side only)
+- **IA:** multi-provedor via `src/lib/aiProviders.ts` (Gemini, OpenAI, Anthropic, compatível),
+  com seleção dinâmica de modelo
+- **API Keys:** sessionStorage (`ifal_bsi_ai_config`), client-side only — sem backend
 
 ## Design System
 
@@ -59,8 +60,8 @@ Você é o desenvolvedor frontend do projeto IFAL BSI Material de Estudo. Você 
 - `SettingsPage` — gerenciamento de API key
 
 ### Hooks (`src/hooks/`)
-- `useApiKey` — CRUD de API key no localStorage
-- `useGeminiQuiz` — integração com Gemini API
+- `useApiKey` — guarda `{provider, apiKey, model, baseUrl}` no sessionStorage
+- `useGeminiQuiz` — geração de quiz via `generateContent` de `aiProviders.ts`
 
 ### Conteúdo (`src/content/<slug>/`)
 - `data.ts` — dados da matéria

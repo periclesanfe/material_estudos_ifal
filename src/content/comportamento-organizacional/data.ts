@@ -50,19 +50,19 @@ export const COMPORTAMENTO_ORGANIZACIONAL_TOPICS: QuizTopicOption[] = [
 ];
 
 export const COMPORTAMENTO_ORGANIZACIONAL_SECTIONS = [
-  { id: 'intro', title: 'Introdução ao CO', shortTitle: 'Introdução', exam: 'P1' },
-  { id: 'diversidade', title: 'Diversidade nas Organizações', shortTitle: 'Diversidade', exam: 'P1' },
-  { id: 'valores', title: 'Valores', shortTitle: 'Valores', exam: 'P1' },
-  { id: 'atitudes', title: 'Atitudes e Satisfação', shortTitle: 'Atitudes', exam: 'P1' },
-  { id: 'percepcao', title: 'Percepção', shortTitle: 'Percepção', exam: 'P1' },
-  { id: 'personalidade', title: 'Diferenças Individuais', shortTitle: 'Personalidade', exam: 'P1' },
-  { id: 'motivacao', title: 'Motivação', shortTitle: 'Motivação', exam: 'P1' },
-  { id: 'teorias', title: 'Teorias Motivacionais', shortTitle: 'Teorias', exam: 'P2' },
-  { id: 'aplicacoes', title: 'Aplicações Organizacionais', shortTitle: 'Aplicações', exam: 'P2' },
-  { id: 'grupos', title: 'Comportamento de Grupo', shortTitle: 'Grupos', exam: 'P2' },
-  { id: 'comunicacao', title: 'Comunicação', shortTitle: 'Comunicação', exam: 'P2' },
-  { id: 'lideranca', title: 'Liderança', shortTitle: 'Liderança', exam: 'P2' },
-  { id: 'conflito', title: 'Conflito e Negociação', shortTitle: 'Conflitos', exam: 'P2' },
+  { id: 'intro', title: 'Introdução ao CO', shortTitle: 'Introdução', exam: 'AV1' },
+  { id: 'diversidade', title: 'Diversidade nas Organizações', shortTitle: 'Diversidade', exam: 'AV1' },
+  { id: 'valores', title: 'Valores', shortTitle: 'Valores', exam: 'AV1' },
+  { id: 'atitudes', title: 'Atitudes e Satisfação', shortTitle: 'Atitudes', exam: 'AV1' },
+  { id: 'percepcao', title: 'Percepção', shortTitle: 'Percepção', exam: 'AV1' },
+  { id: 'personalidade', title: 'Diferenças Individuais', shortTitle: 'Personalidade', exam: 'AV1' },
+  { id: 'motivacao', title: 'Motivação', shortTitle: 'Motivação', exam: 'AV1' },
+  { id: 'teorias', title: 'Teorias Motivacionais', shortTitle: 'Teorias', exam: 'AV2' },
+  { id: 'aplicacoes', title: 'Aplicações Organizacionais', shortTitle: 'Aplicações', exam: 'AV2' },
+  { id: 'grupos', title: 'Comportamento de Grupo', shortTitle: 'Grupos', exam: 'AV2' },
+  { id: 'comunicacao', title: 'Comunicação', shortTitle: 'Comunicação', exam: 'AV2' },
+  { id: 'lideranca', title: 'Liderança', shortTitle: 'Liderança', exam: 'AV2' },
+  { id: 'conflito', title: 'Conflito e Negociação', shortTitle: 'Conflitos', exam: 'AV2' },
   { id: 'quiz', title: 'Quiz de Revisão', shortTitle: 'Quiz' },
 ];
 

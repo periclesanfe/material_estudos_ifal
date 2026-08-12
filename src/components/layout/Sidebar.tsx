@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { getPeriods } from '../../data/curriculum';
+import Logo from '../ui/Logo';
 import SidebarOptativesSection from './sidebar/SidebarOptativesSection';
 import SidebarPeriodsSection from './sidebar/SidebarPeriodsSection';
 
 const THEME_STORAGE_KEY = 'ifal_bsi_theme';
+const CLEAN_MODE_STORAGE_KEY = 'ifal_bsi_clean_mode';
 
 type Theme = 'dark' | 'light';
 
@@ -44,6 +46,15 @@ function GearIcon() {
   );
 }
 
+function FocusIcon() {
+  return (
+    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h8" />
+    </svg>
+  );
+}
+
 function getInitialTheme(): Theme {
   try {
     const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
@@ -54,12 +65,21 @@ function getInitialTheme(): Theme {
   }
 }
 
+function getInitialCleanMode(): boolean {
+  try {
+    return localStorage.getItem(CLEAN_MODE_STORAGE_KEY) === 'true';
+  } catch {
+    return false;
+  }
+}
+
 export default function Sidebar() {
   const [collapsed, setCollapsed] = useState(false);
   const [expandedPeriods, setExpandedPeriods] = useState<Set<string>>(new Set());
   const [expandedOptCategories, setExpandedOptCategories] = useState<Set<string>>(new Set());
   const [mobileOpen, setMobileOpen] = useState(false);
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const [cleanMode, setCleanMode] = useState(getInitialCleanMode);
 
   const location = useLocation();
   const periods = getPeriods();
@@ -74,6 +94,17 @@ export default function Sidebar() {
       // A preferência visual é opcional; se o navegador bloquear, o app segue funcionando.
     }
   }, [theme]);
+
+  useEffect(() => {
+    document.documentElement.dataset.cleanMode = cleanMode ? 'true' : 'false';
+    document.documentElement.style.colorScheme = cleanMode ? 'light' : theme;
+
+    try {
+      localStorage.setItem(CLEAN_MODE_STORAGE_KEY, String(cleanMode));
+    } catch {
+      // O modo de leitura é opcional; se o navegador bloquear, o app segue funcionando.
+    }
+  }, [cleanMode, theme]);
 
   const togglePeriod = (key: string) => {
     setExpandedPeriods(prev => {
@@ -145,6 +176,23 @@ export default function Sidebar() {
     </button>
   );
 
+  const renderCleanModeToggle = () => (
+    <button
+      type="button"
+      onClick={() => setCleanMode(active => !active)}
+      aria-label={cleanMode ? 'Desativar modo foco' : 'Ativar modo foco'}
+      aria-pressed={cleanMode}
+      title={cleanMode ? 'Modo foco ativo' : 'Modo foco'}
+      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg ${
+        cleanMode
+          ? 'border-accent bg-accent text-white'
+          : 'border-border bg-card text-text-muted hover:border-border-hover hover:bg-card-hover hover:text-text'
+      }`}
+    >
+      <FocusIcon />
+    </button>
+  );
+
   const sidebarContent = (
     <div className="flex flex-col h-full">
       <NavLink
@@ -152,8 +200,15 @@ export default function Sidebar() {
         onClick={handleNavigate}
         className="sidebar-brand block px-4 pt-5 pb-4 border-b border-border"
       >
-        <p className="text-[10px] text-text-muted tracking-[0.22em] uppercase">IFAL BSI</p>
-        <h1 className="font-display font-bold text-[1.95rem] text-text leading-[1.02] tracking-tight mt-1.5">
+        <div className="flex items-center gap-2.5">
+          <Logo className="text-[2rem]" />
+          <p className="text-[10px] text-text-muted tracking-[0.22em] uppercase leading-tight">
+            IFAL
+            <br />
+            BSI
+          </p>
+        </div>
+        <h1 className="font-display font-bold text-[1.95rem] text-text leading-[1.02] tracking-tight mt-2">
           Material de Estudo
         </h1>
         <p className="text-text-muted/80 text-xs mt-2">Navegação por período, optativas e conteúdo disponível.</p>
@@ -190,6 +245,7 @@ export default function Sidebar() {
             <GearIcon />
             Configurações
           </NavLink>
+          {renderCleanModeToggle()}
           {renderThemeToggle()}
         </div>
       </div>
@@ -256,6 +312,7 @@ export default function Sidebar() {
         >
           <GearIcon />
         </NavLink>
+        {renderCleanModeToggle()}
         {renderThemeToggle(true)}
       </div>
     </div>
