@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import SectionNav from '../../components/layout/SectionNav.tsx';
+import AtalhoTrilha from '../../components/trilha/AtalhoTrilha';
 import AdministracaoProjetoBancoDadosSections from './AdministracaoProjetoBancoDadosSections.tsx';
 import { ADMINISTRACAO_PROJETO_BANCO_DADOS_SECTIONS } from './data.ts';
 
@@ -31,6 +32,7 @@ export default function AdministracaoProjetoBancoDadosContent() {
           </p>
         </div>
       )}
+      {activeSection === 'intro' && <AtalhoTrilha codigo="APBD" />}
 
       <div className="page-wrap flex">
         <SectionNav

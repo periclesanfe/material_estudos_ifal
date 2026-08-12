@@ -10,6 +10,7 @@ export default function MarketingContent() {
   return (
     <SubjectContentLayout
       sections={MARKETING_SECTIONS}
+      codigo="MKCE"
       eyebrow="Optativa · Gestão de TI · 80h"
       title={(
         <>

@@ -9,6 +9,7 @@ export default function ProcessosDesenvolvimentoSoftwareContent() {
   return (
     <SubjectContentLayout
       sections={PDSW_SECTIONS}
+      codigo="PDSW"
       eyebrow="6º período · 80h · PDSW"
       title={(
         <>

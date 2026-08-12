@@ -10,6 +10,7 @@ export default function TABDContent() {
     <SubjectContentLayout
       sections={TABD_SECTIONS}
       exams={TABD_EXAMS}
+      codigo="TABD"
       eyebrow="5º período · 80h · TABD"
       title={(
         <>

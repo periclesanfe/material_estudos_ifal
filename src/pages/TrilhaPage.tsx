@@ -37,7 +37,25 @@ function rotuloPeriodo(periodo: number): string {
 export default function TrilhaPage() {
   const [params, setParams] = useSearchParams();
   const selecionadoId = params.get('topico');
-  const [ocultas, setOcultas] = useState<ReadonlySet<string>>(() => new Set());
+  const materiaFoco = params.get('materia');
+
+  /**
+   * Chegando de uma matéria, o grafo abre focado nela e nas matérias que
+   * fornecem pré-requisitos, porque "os pré-requisitos desta matéria" não é uma
+   * pergunta que se responde sem os fornecedores.
+   */
+  const [ocultas, setOcultas] = useState<ReadonlySet<string>>(() => {
+    if (!materiaFoco) return new Set();
+    const manter = new Set([materiaFoco]);
+    for (const d of dependencias) {
+      if (d.escopo !== 'cruzada') continue;
+      if (getTopico(d.topicoId)?.disciplina === materiaFoco) {
+        const fornecedor = getTopico(d.prerequisitoId)?.disciplina;
+        if (fornecedor) manter.add(fornecedor);
+      }
+    }
+    return new Set(disciplinasTaxonomia.filter(d => !manter.has(d.codigo)).map(d => d.codigo));
+  });
   const [cores, setCores] = useState<Record<string, string>>({});
   const [eixo, setEixo] = useState<EixoVertical>('profundidade');
 
@@ -71,6 +89,8 @@ export default function TrilhaPage() {
     });
   };
 
+  const materiaEmFoco = materiaFoco ? disciplinasTaxonomia.find(d => d.codigo === materiaFoco) : undefined;
+
   const topico = selecionadoId ? getTopico(selecionadoId) : undefined;
   const trilha = topico ? getTrilha(topico.id) : [];
   const prerequisitos = topico ? getPrerequisitos(topico.id) : [];
@@ -85,7 +105,7 @@ export default function TrilhaPage() {
           Trilha de aprendizado · {disciplinasTaxonomia.length} matérias
         </p>
         <h1 className="font-display text-3xl font-black tracking-tight text-text text-balance sm:text-4xl">
-          O curso como grafo
+          {materiaEmFoco ? `O que vem antes de ${materiaEmFoco.nome}` : 'O curso como grafo'}
         </h1>
         <p className="reading-measure mt-3 text-sm leading-relaxed text-text-muted">
           São <strong className="tabular-nums text-text">{topicos.length}</strong> conceitos ensináveis ligados por{' '}
@@ -94,6 +114,18 @@ export default function TrilhaPage() {
           <strong className="tabular-nums text-text">{TOTAL_HARD}</strong> são dependências duras: sem elas o conceito
           não fecha. Clique em qualquer ponto para ver tudo que vem antes, na ordem de estudo.
         </p>
+        {materiaEmFoco && (
+          <p className="mt-2 text-[13px] leading-relaxed text-text-muted">
+            O grafo está mostrando {materiaEmFoco.nome} e as matérias que fornecem pré-requisitos a ela.{' '}
+            <button
+              type="button"
+              onClick={() => setOcultas(new Set())}
+              className="text-accent underline underline-offset-2 hover:no-underline"
+            >
+              mostrar o curso inteiro
+            </button>
+          </p>
+        )}
       </header>
 
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1fr)_340px]">

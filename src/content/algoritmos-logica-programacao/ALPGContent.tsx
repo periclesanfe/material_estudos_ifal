@@ -10,6 +10,7 @@ export default function ALPGContent() {
     <SubjectContentLayout
       sections={ALPG_SECTIONS}
       exams={ALPG_EXAMS}
+      codigo="ALPG"
       eyebrow="1º período · 80h · ALPG"
       title={(
         <>

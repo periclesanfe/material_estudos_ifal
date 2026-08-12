@@ -10,6 +10,7 @@ export default function LPGMContent() {
     <SubjectContentLayout
       sections={LPGM_SECTIONS}
       exams={LPGM_EXAMS}
+      codigo="LPGM"
       eyebrow="2º período · 80h · LNPG"
       title={(
         <>

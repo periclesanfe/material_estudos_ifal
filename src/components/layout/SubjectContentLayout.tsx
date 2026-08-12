@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, type ReactNode } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { FINAL_EXAM_ID, type ExamDefinition } from '../../lib/exams';
+import AtalhoTrilha from '../trilha/AtalhoTrilha';
 import ExamMode from './ExamMode';
 import SectionNav, { type SectionNavItem } from './SectionNav';
 import SubjectHero from './SubjectHero';
@@ -17,6 +18,8 @@ interface SubjectContentLayoutProps {
   heroBackground: string;
   /** Ações exibidas na capa (ex.: exportar .md/PDF). Só aparecem na introdução. */
   heroActions?: ReactNode;
+  /** Código da matéria. Liga a página à trilha de aprendizado quando há taxonomia. */
+  codigo?: string;
   renderSection: (sectionId: string) => ReactNode;
 }
 
@@ -28,6 +31,7 @@ export default function SubjectContentLayout({
   description,
   heroBackground,
   heroActions,
+  codigo,
   renderSection,
 }: SubjectContentLayoutProps) {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -114,7 +118,10 @@ export default function SubjectContentLayout({
   return (
     <div>
       {activeSection === 'intro' && (
-        <SubjectHero eyebrow={eyebrow} title={title} description={description} background={heroBackground} actions={heroActions} />
+        <>
+          <SubjectHero eyebrow={eyebrow} title={title} description={description} background={heroBackground} actions={heroActions} />
+          {codigo && <AtalhoTrilha codigo={codigo} />}
+        </>
       )}
 
       <div className="page-wrap flex flex-col gap-2 sm:flex-row sm:items-stretch">

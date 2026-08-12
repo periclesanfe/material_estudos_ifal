@@ -10,6 +10,7 @@ export default function EstruturaDadosContent() {
     <SubjectContentLayout
       sections={ESTRUTURA_DADOS_SECTIONS}
       exams={ESTRUTURA_DADOS_EXAMS}
+      codigo="ESTD"
       eyebrow="3º período · 80h · ESTD"
       title={(
         <>

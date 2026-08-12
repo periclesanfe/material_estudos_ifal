@@ -14,6 +14,7 @@ export default function ComportamentoOrganizacionalContent() {
   return (
     <SubjectContentLayout
       sections={COMPORTAMENTO_ORGANIZACIONAL_SECTIONS}
+      codigo="CORG"
       eyebrow="Optativa do 8º período · Gestão de TI · 80h · CORG"
       title={(
         <>

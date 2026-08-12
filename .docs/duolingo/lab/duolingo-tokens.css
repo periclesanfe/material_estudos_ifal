@@ -1,0 +1,1700 @@
+/* ==========================================================================
+   CAMADA DE TOKENS — reconciliação Duolingo × Falcão System Design
+   Protótipo isolado. NÃO está integrado ao app: nenhum seletor toca `:root`,
+   nenhum arquivo do app importa este. Só src/pages/DesignLab.tsx importa.
+
+   Extração do Duolingo: 13/08/2026 (5 eixos: tipografia, cor, forma,
+   movimento, componentes/carregamento).
+   Falcão System Design: ~/.claude-work/skills/falcao-system-design/SKILL.md,
+   seções "Non-Negotiables" e "Editorial Refined".
+
+   --------------------------------------------------------------------------
+   AVISO DE LICENÇA DE FONTE — leia antes de copiar qualquer coisa daqui
+   --------------------------------------------------------------------------
+   Nenhuma fonte do Duolingo pode entrar num projeto open source:
+     · Feather Bold   — Fontsmith / Krista Radoeva, 2019. Proprietária,
+                        intransferível, um único corte (700).
+     · Duolingo Sans  — Bezier Inc. Proprietária, variável 100-900.
+     · DIN Next Round — Linotype/Monotype. Licença comercial.
+   As substitutas abaixo são todas OFL (Google Fonts):
+     · Nunito     — substituta indicada pela PRÓPRIA Duolingo para a DIN
+                    (altura-x idêntica). É o texto/UI dos cenários B e C.
+     · Baloo 2    — substituta de display para o papel da Feather Bold.
+   Do lado Falcão as três fontes já são OFL e não têm ressalva:
+     · Fraunces, Plus Jakarta Sans, JetBrains Mono.
+
+   O @import abaixo carrega CINCO famílias porque a página compara os dois
+   sistemas lado a lado. Isso é custo de laboratório, não de produção: ao
+   integrar, mova só as famílias do cenário escolhido para o <link
+   rel="preconnect"> + <link> que já existe no index.html deste projeto.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Baloo+2:wght@600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap");
+
+/* ==========================================================================
+   COMO ESTE ARQUIVO ESTÁ ORGANIZADO (e por que assim)
+
+   Camada 0 — PRIMITIVOS. Todo hex dos DOIS sistemas, mais as constantes de
+              geometria medidas no CSS de produção do Duolingo. Ninguém
+              consome primitivo direto; eles só alimentam a camada 1.
+   Camada 1 — CONTRATO SEMÂNTICO. A lista fechada de tokens que uma receita
+              de componente pode ler. Cada cenário é uma implementação
+              COMPLETA desse mesmo contrato — é isso que permite os três
+              renderizarem o MESMO markup e diferirem só pelos tokens.
+   Camada 2 — RECEITAS. Escritas uma vez. Zero hex no corpo (regra Falcão:
+              "no hardcoded hex in component bodies").
+
+   POR QUE NADA VAI EM `:root`
+   Dois motivos, os dois importam:
+     1) inércia — enquanto a decisão de integrar não for tomada, este arquivo
+        não pode alterar nada do app mesmo se alguém o importar por acidente;
+     2) comparabilidade — três blocos em `:root` se sobrescrevem e é
+        impossível mostrar os três na mesma tela. Escopo por classe é a única
+        forma de o laboratório existir.
+   Ao integrar: promova o bloco escolhido de `.dl-cenario-X` para `:root`, e
+   o bloco `[data-tema=...]` dele para `:root[data-theme=...]` (o app já usa
+   `data-theme`). O resto do arquivo continua valendo sem edição.
+
+   POLARIDADE DE TEMA — cada cenário declara a sua
+   O Falcão é dark-first ("Dark-mode-first. Light mode must be fully
+   supported"); o Duolingo é light-first e nem usa prefers-color-scheme, só
+   um atributo no html. Não dá para unificar sem mentir sobre um dos dois.
+   Então: o bloco BASE de cada cenário é a polaridade NATIVA dele, e o outro
+   tema entra como override. `.dl-cenario-a` nasce escuro; `.dl-cenario-c`
+   nasce claro. O cenário B nasce dividido — e essa divisão é o achado dele.
+   ========================================================================== */
+
+/* ==========================================================================
+   CAMADA 0 — PRIMITIVOS
+   ========================================================================== */
+
+.dl-lab {
+  /* ---- Primitivos Duolingo: marca (não invertem, não usar na UI) -------- */
+  --p-feather-green: #58cc02; /* PMS 361 C. O token interno deles é "owl"   */
+  --p-mask-green: #89e219;
+  --p-tree-frog: #58a700; /* irmão escuro: é o lip do feather-green         */
+  --p-turtle: #a5ed6e;
+  --p-sea-sponge: #d7ffb8;
+
+  --p-macaw: #1cb0f6;
+  --p-whale: #1899d6; /* lip do macaw                                       */
+  --p-humpback: #2b70c9; /* 4,93:1 — o único azul deles que passa AA        */
+  --p-narwhal: #1453a3;
+  --p-blue-jay: #84d8ff;
+  --p-iguana: #ddf4ff;
+
+  --p-cardinal: #ff4b4b;
+  --p-fire-ant: #ea2b2b;
+  --p-pig: #f5a4a4;
+  --p-walking-fish: #ffdfe0;
+
+  --p-bee: #ffc800;
+  --p-fox: #ff9600;
+  --p-guinea-pig: #cd7900;
+  --p-duck: #fbe56d;
+  --p-canary: #fff5d3;
+
+  --p-beetle: #ce82ff;
+
+  /* Neutros Duolingo, 6 degraus + o texto real do corpo */
+  --p-snow: #ffffff;
+  --p-polar: #f7f7f7;
+  --p-swan: #e5e5e5;
+  --p-hare: #afafaf;
+  --p-wolf: #777777; /* 4,48:1 sobre branco — reprova AA por 0,02          */
+  --p-eel: #4b4b4b;
+  --p-black-text: #3c3c3c; /* 11,03:1. O texto REAL do corpo do Duolingo   */
+
+  /* Neutros do tema escuro OFICIAL do Duolingo (html[data-duo-theme=dark]) */
+  --p-snow-dark: #131f24;
+  --p-polar-dark: #202f36;
+  --p-swan-dark: #37464f;
+  --p-hare-dark: #52656d;
+  --p-eel-dark: #f1f7fb;
+  --p-feather-green-dark: #93d333; /* clareado por ESTÉTICA, não contraste */
+  --p-macaw-dark: #49c0f8;
+  --p-cardinal-dark: #ee5555;
+
+  /* ---- Primitivos Duolingo CORRIGIDOS para AA -------------------------- *
+   * Estes NÃO existem no Duolingo. Existem porque as triplas semânticas
+   * dele reprovam AA sobre o próprio fundo pálido, e a regra Falcão "WCAG AA
+   * contrast minimum on all text/background combinations" não abre exceção.
+   * Medido (fórmula WCAG 2.x, verificada em nó separado):
+   *   Tree Frog  #58A700 sobre Sea Sponge   #D7FFB8 = 2,72:1  REPROVA
+   *   Fire Ant   #EA2B2B sobre Walking Fish #FFDFE0 = 3,46:1  só texto grande
+   *   Whale      #1899D6 sobre Iguana       #DDF4FF = 2,81:1  REPROVA
+   *   Guinea Pig #CD7900 sobre Canary       #FFF5D3 = 3,04:1  só texto grande
+   * Escurecendo só o texto (o fundo pálido, que é a identidade, fica):
+   *   #3D7300 / Sea Sponge   = 5,17:1  ok
+   *   #A81B1B / Walking Fish = 5,95:1  ok
+   *   #0E6EA3 / Iguana       = 4,89:1  ok
+   *   #7A4A00 / Canary       = 6,86:1  ok                                  */
+  --p-tree-frog-aa: #3d7300;
+  --p-fire-ant-aa: #a81b1b;
+  --p-whale-aa: #0e6ea3;
+  --p-guinea-pig-aa: #7a4a00;
+
+  /* O texto secundário deles também reprova, e por pouquíssimo: Wolf
+     #777777 dá 4,478:1 sobre branco. A correção óbvia seria #767676 (o
+     famoso cinza mínimo sobre branco, 4,542:1) — mas ela AINDA REPROVA sobre
+     Polar #F7F7F7, que é a superfície de card do próprio Duolingo, onde este
+     texto também vive: 4,240:1. Medido degrau a degrau, o primeiro cinza que
+     passa nos DOIS chões é #717171 (4,881:1 sobre Snow, 4,556:1 sobre Polar).
+     Fica registrado porque é o tipo de conserto que se faz errado quando se
+     testa contra o fundo da página e se esquece do fundo do card.          */
+  --p-wolf-aa: #717171;
+
+  /* ---- Primitivos Falcão ---------------------------------------------- */
+  --p-fx-bg: #0f1117;
+  --p-fx-bg-2: #1a1d28;
+  --p-fx-bg-3: #242836;
+  --p-fx-text: #f0f0f5;
+  --p-fx-text-2: #8b8fa3;
+  --p-fx-text-muted: #5a5e72;
+
+  --p-fx-bg-light: #eceef3; /* NUNCA branco puro — regra de conforto ocular */
+  --p-fx-bg-2-light: #f6f7fa;
+  --p-fx-bg-3-light: #e2e5ec;
+  --p-fx-text-light: #171a21;
+  --p-fx-text-2-light: #555b6a;
+  --p-fx-text-muted-light: #7a7f8c;
+
+  --p-fx-accent: #6366f1; /* Indigo. Tintável pelo usuário no app real     */
+  --p-fx-accent-2: #818cf8;
+  --p-fx-success: #22c55e;
+  --p-fx-warning: #f59e0b;
+  --p-fx-danger: #ef4444;
+  --p-fx-info: #3b82f6;
+
+  --p-fx-border-subtle-dark: rgb(255 255 255 / 6%);
+  --p-fx-border-dark: rgb(255 255 255 / 10%);
+  --p-fx-border-subtle-light: rgb(17 24 39 / 6%);
+  --p-fx-border-light: rgb(17 24 39 / 11%);
+
+  --p-fx-shadow-sm-dark: 0 1px 2px rgb(0 0 0 / 30%);
+  --p-fx-shadow-md-dark: 0 4px 12px rgb(0 0 0 / 40%);
+  --p-fx-shadow-lg-dark: 0 8px 32px rgb(0 0 0 / 50%);
+  --p-fx-shadow-sm-light: 0 1px 2px rgb(17 24 39 / 6%);
+  --p-fx-shadow-md-light: 0 4px 14px rgb(17 24 39 / 9%);
+
+  /* Grão de papel — fractalNoise inline, ~1,5% de opacidade percebida.
+     Um dos quatro compromissos do "Editorial Refined". Fica no CHÃO da
+     página; ver a nota sobre grão × lip na receita do botão.               */
+  --p-fx-noise: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E");
+
+  /* ---- Constantes de geometria medidas no Duolingo --------------------- */
+  --g-raio-botao: 16px; /* :root de app-fb80adb2.css                       */
+  --g-raio-card: 12px; /* --web-ui_card-border-radius                      */
+  --g-raio-campo: 12px;
+  --g-raio-modal: 16px;
+  --g-raio-pequeno: 8px;
+  --g-borda: 2px; /* a ÚNICA borda estrutural do sistema deles             */
+  --g-lip: 4px; /* --web-ui_button-lip-width                               */
+  --g-altura-botao: 50px;
+  --g-altura-campo: 48px;
+  --g-pad-botao: 0 16px;
+
+  /* Grade de espaçamento. Aqui os dois sistemas JÁ CONCORDAM e ninguém
+     precisa ceder: o Duolingo não tem token de espaçamento mas tem base 4px
+     de fato (69% de aderência em 335 valores medidos), e o Tailwind que o
+     Falcão usa também é base 4px. Eixo sem conflito.                       */
+  --g-sp-1: 4px;
+  --g-sp-2: 8px;
+  --g-sp-3: 12px;
+  --g-sp-4: 16px;
+  --g-sp-5: 24px;
+  --g-sp-6: 32px;
+  --g-sp-7: 48px;
+}
+
+/* ==========================================================================
+   CAMADA 1 — O CONTRATO SEMÂNTICO
+
+   Toda receita da camada 2 lê SOMENTE os tokens desta lista. Um cenário só é
+   válido se preencher a lista inteira. Documentado aqui porque é o contrato
+   que torna os três comparáveis:
+
+   CHÃO       --bg --surface --surface-2 --border --border-forte --grao
+   TEXTO      --fg --fg-2 --fg-muted
+   AÇÃO       --face --face-lip --face-fg          (botão primário)
+              --face-2 --face-2-lip --face-2-fg    (botão secundário/neutro)
+              --accent --focus-cor --focus-anel
+   SEMÂNTICA  --ok-bg --ok-bd --ok-fg   --err-bg --err-bd --err-fg
+              --info-bg --info-bd --info-fg  --warn-bg --warn-bd --warn-fg
+   FORMA      --r-btn --r-card --r-campo --r-modal --r-pill --bd
+              --h-btn --h-campo --pad-btn
+   PROFUNDIDADE  --lip --press-y
+              --btn-depth --btn-depth-press
+              --card-depth --card-depth-hover
+   TIPO       --ff-display --ff-text --ff-mono
+              --fs-display --lh-display --tr-display --case-display
+              --fs-title --lh-title --fs-head --lh-head
+              --fs-body --lh-body --fs-cap --lh-cap
+              --fs-label --lh-label --tr-label --case-label
+              --fw-body --fw-bold --fw-display
+              --fs-btn --fw-btn --tr-btn --case-btn
+   MOVIMENTO  --dur-press --dur-hover --dur-mov --dur-reveal
+              --dur-dwell-ok --dur-dwell-err --hold-stop
+              --ease-default --ease-enter --ease-overshoot
+              --fb-entrada-ok --fb-entrada-err  (NOME da @keyframes)
+   PROGRESSO  --prog-track --prog-fill --prog-shine --prog-dur
+
+   AS DUAS PARAMETRIZAÇÕES QUE FAZEM O CONTRATO FUNCIONAR
+   Sem elas eu precisaria de três receitas de botão em vez de uma, e o
+   protótipo não provaria nada.
+
+   1) PROFUNDIDADE É PARÂMETRO, NÃO RAMO.
+      O lip do Duolingo (box-shadow 0 4px 0, blur ZERO) e a sombra difusa do
+      Falcão (0 4px 12px rgba) são o MESMO slot: `--btn-depth`. Com
+      `--lip: 0px` e uma sombra difusa no slot, a receita do lip degrada para
+      um botão Falcão sem nenhum `if`. É por isso que o cenário B consegue
+      dois vocabulários com uma receita só.
+
+   2) A ANIMAÇÃO DE FEEDBACK É ESCOLHIDA PELO NOME.
+      `animation-name` aceita var(). Então `--fb-entrada-ok` guarda o NOME da
+      @keyframes: `dl-ok-duo` (segura a cor e trava com forwards, jeito
+      Duolingo) ou `dl-ok-radial` (clip-path circle 0%→150%, o "radial
+      reveal" que o Falcão declara não-negociável). Trocar de linguagem de
+      feedback é trocar uma string de token.
+   ========================================================================== */
+
+/* ==========================================================================
+   CENÁRIO A — DUOLINGO MANDA NA FORMA, FALCÃO MANDA NA COR
+   --------------------------------------------------------------------------
+   Vem do Duolingo: raios, alturas, padding de controle, borda 2px, o lip e o
+   gesto de afundar 4px, blur zero no pressável, a grade de 4px.
+   Fica Falcão: paleta indigo, Fraunces no display, Plus Jakarta no texto,
+   JetBrains no dinheiro, grão de papel, dark-first, radial reveal.
+
+   TRÊS COISAS QUE SÓ APARECEM QUANDO SE IMPLEMENTA (não estavam na pesquisa)
+
+   (a) O accent puro do Falcão não pode ser face de botão com rótulo branco.
+       branco sobre #6366F1 = 4,47:1 — reprova AA por 0,03, e rótulo de botão
+       (15px/700) NÃO é "texto grande" pela WCAG (large = 18,66px bold).
+       Solução que preserva a propriedade de o accent ser tintável pelo
+       usuário: derivar a face por color-mix a partir do próprio accent.
+         face = color-mix(in srgb, accent 82%, black) → #5154C6 → 6,12:1 ok
+         lip  = color-mix(in srgb, accent 62%, black) → #3D3F95
+       Trocar o accent no runtime re-tinge face e lip juntos, sem token novo.
+
+   (b) O LIP É UMA INVENÇÃO DE TEMA CLARO — e o custo é mensurável.
+       O lip é sombra sólida: só lê como aresta extrudada se ficar ENTRE o
+       chão da página e a face em luminância. No claro sobra range de sobra.
+       No escuro do Falcão o range encolhe, e dá para medir quanto.
+       Luminância relativa disponível entre o chão (#0F1117) e a face:
+         face NEUTRA    (#242836) → 0,016
+         face SATURADA  (#818CF8) → 0,296   ≈ 18× mais range
+       Ou seja: o lip no escuro sobre face neutra é geometricamente possível
+       (um lip a color-mix 70% cai entre o chão e a face), mas dispõe de ~1/18
+       da faixa para se fazer perceber. Ele NÃO desaparece; ele fica fraco.
+       Conclusão codificada: no escuro o lip só carrega significado em face
+       saturada, e no neutro ele é ornamento quase invisível — quem depende
+       dele para comunicar "pressionável" precisa da borda também. É o custo
+       real de casar a forma do Duolingo com o dark-first do Falcão, e fica
+       visível na página alternando o tema.
+
+   (c) SUPERFÍCIE TRANSLÚCIDA E LIP SÃO INCOMPATÍVEIS.
+       O Falcão tem --bg-card rgba(26,29,40,0.8) e --bg-glass rgba(255,255,
+       255,0.04). Face translúcida sobre lip sólido deixa o lip aparecer
+       ATRAVÉS da face e lê como erro de impressão. Aqui toda face de
+       pressável é opaca; o vidro fica para superfície não-pressável
+       (drawer, popover), onde ela não tem lip para atrapalhar.
+   ========================================================================== */
+
+.dl-cenario-a {
+  /* --- chão (dark-first, polaridade nativa do Falcão) --- */
+  --bg: var(--p-fx-bg);
+  --surface: var(--p-fx-bg-2);
+  --surface-2: var(--p-fx-bg-3);
+  --border: var(--p-fx-border-dark);
+  --border-forte: var(--p-fx-border-dark);
+  --grao: var(--p-fx-noise);
+
+  --fg: var(--p-fx-text);
+  --fg-2: var(--p-fx-text-2);
+  --fg-muted: var(--p-fx-text-muted);
+
+  /* --- ação: face DERIVADA do accent (ver nota (a)) --- */
+  --accent: var(--p-fx-accent);
+  /* No escuro a face clareia e o rótulo escurece: #818CF8 com #0F1117 dá
+     6,33:1. Face escura com rótulo branco funcionaria no claro, mas no
+     escuro recuaria contra o chão.                                        */
+  --face: var(--p-fx-accent-2);
+  --face-lip: var(--p-fx-accent);
+  --face-fg: var(--p-fx-bg);
+
+  --face-2: var(--surface-2);
+  /* nota (b): existe, cai entre o chão e a face, mas com ~1/18 da faixa de
+     luminância que teria numa face saturada. Fraco de propósito e honesto —
+     não é "sem lip", é "lip que quase não se vê".                          */
+  --face-2-lip: color-mix(in srgb, var(--surface-2) 70%, black);
+  --face-2-fg: var(--fg);
+
+  --focus-cor: var(--p-fx-accent-2);
+  --focus-anel: 0 0 0 2px var(--bg), 0 0 0 4px var(--p-fx-accent-2);
+
+  /* --- semântica: paleta Falcão, tripla no formato Duolingo ---
+     O padrão de TRIPLA (fundo pálido + borda + texto) é a contribuição
+     estrutural do Duolingo aqui; os hex são Falcão. color-mix dá o pálido
+     e o escuro do mesmo matiz sem inventar hex novo.                      */
+  --ok-bg: color-mix(in srgb, var(--p-fx-success) 16%, var(--bg));
+  --ok-bd: color-mix(in srgb, var(--p-fx-success) 40%, var(--bg));
+  --ok-fg: color-mix(in srgb, var(--p-fx-success) 78%, white);
+  --err-bg: color-mix(in srgb, var(--p-fx-danger) 16%, var(--bg));
+  --err-bd: color-mix(in srgb, var(--p-fx-danger) 40%, var(--bg));
+  --err-fg: color-mix(in srgb, var(--p-fx-danger) 72%, white);
+  --info-bg: color-mix(in srgb, var(--p-fx-info) 16%, var(--bg));
+  --info-bd: color-mix(in srgb, var(--p-fx-info) 40%, var(--bg));
+  --info-fg: color-mix(in srgb, var(--p-fx-info) 72%, white);
+  --warn-bg: color-mix(in srgb, var(--p-fx-warning) 16%, var(--bg));
+  --warn-bd: color-mix(in srgb, var(--p-fx-warning) 40%, var(--bg));
+  --warn-fg: color-mix(in srgb, var(--p-fx-warning) 80%, white);
+
+  /* --- forma: 100% Duolingo --- */
+  --r-btn: var(--g-raio-botao);
+  --r-card: var(--g-raio-card);
+  --r-campo: var(--g-raio-campo);
+  --r-modal: var(--g-raio-modal);
+  --r-pill: 9999px;
+  --bd: var(--g-borda);
+  --h-btn: var(--g-altura-botao);
+  --h-campo: var(--g-altura-campo);
+  --pad-btn: var(--g-pad-botao);
+
+  /* --- profundidade: lip do Duolingo, blur zero --- */
+  --lip: var(--g-lip);
+  --press-y: var(--g-lip);
+  --btn-depth: 0 var(--lip) 0 var(--face-lip);
+  --btn-depth-press: none;
+  /* Card não é pressável: mantém a sombra difusa do Falcão. O Duolingo põe
+     lip em card SELECIONÁVEL; card informativo não recebe profundidade
+     física em nenhum dos dois sistemas.                                   */
+  --card-depth: var(--p-fx-shadow-sm-dark);
+  --card-depth-hover: var(--p-fx-shadow-md-dark);
+
+  /* --- tipo: 100% Falcão --- */
+  --ff-display: "Fraunces", Georgia, serif;
+  --ff-text: "Plus Jakarta Sans", sans-serif;
+  --ff-mono: "JetBrains Mono", monospace;
+
+  /* Do manual de display do Duolingo eu importo só as regras de FORMA
+     (entrelinha 1.1, nunca hifenizar, alinhado à esquerda) e o tracking, que
+     no Falcão é ainda mais fechado (-0.035em). NÃO importo "sempre
+     minúscula": caixa é voz de marca, não geometria, e minúscula forçada em
+     Fraunces com ss01 leria como a marca de outro produto.                */
+  --fs-display: 2.25rem;
+  --lh-display: 1.1;
+  --tr-display: -0.035em;
+  --case-display: none;
+  --fw-display: 700;
+
+  --fs-title: 2rem;
+  --lh-title: 2.25rem;
+  --fs-head: 1.25rem;
+  --lh-head: 1.5rem;
+  /* Corpo 16px, não os 20px do Duolingo: este projeto tem tabela densa e
+     relatório, e 20px de corpo em tabela é ilegível por excesso.          */
+  --fs-body: 1rem;
+  --lh-body: 1.5rem;
+  --fs-cap: 0.8125rem;
+  --lh-cap: 1.25rem;
+  --fw-body: 500;
+  --fw-bold: 700;
+
+  /* Rótulo: caixa alta + tracking positivo é o único papel do Duolingo com
+     isso, e é forma, não voz. Fica.                                       */
+  --fs-label: 0.75rem;
+  --lh-label: 1rem;
+  --tr-label: 0.04em;
+  --case-label: uppercase;
+
+  --fs-btn: 15px;
+  --fw-btn: 700;
+  --tr-btn: 0.8px;
+  --case-btn: uppercase;
+
+  /* --- movimento: reveal do Falcão sobre a cadência do Duolingo ---
+     Ver o bloco "RECONCILIAÇÃO DO MOVIMENTO" mais abaixo.                 */
+  --dur-press: 100ms;
+  --dur-hover: 200ms;
+  --dur-mov: 300ms;
+  --dur-reveal: 450ms;
+  --dur-dwell-ok: 300ms;
+  --dur-dwell-err: 800ms;
+  --hold-stop: 62%;
+  --ease-default: ease-in-out;
+  --ease-enter: ease-out;
+  --ease-overshoot: cubic-bezier(0.35, 1.8, 0.35, 0.83);
+  --fb-entrada-ok: dl-ok-radial;
+  --fb-entrada-err: dl-err-radial;
+
+  /* --- progresso --- */
+  --prog-track: var(--surface-2);
+  --prog-fill: var(--accent);
+  --prog-shine: 0; /* o brilho branco a 20% é gesto lúdico: fora do Falcão */
+  --prog-dur: 400ms;
+}
+
+/* Cenário A no tema claro. O achado (b) inverte aqui: com chão claro a face
+   pode escurecer e o rótulo volta a branco — e o botão NEUTRO recupera o
+   lip, porque agora existe cinza mais escuro que a face e mais claro que o
+   chão. O lip no claro é simplesmente melhor.                             */
+.dl-cenario-a[data-tema="claro"] {
+  --bg: var(--p-fx-bg-light);
+  --surface: var(--p-fx-bg-2-light);
+  --surface-2: var(--p-fx-bg-3-light);
+  --border: var(--p-fx-border-light);
+  --border-forte: var(--p-fx-border-light);
+
+  --fg: var(--p-fx-text-light);
+  --fg-2: var(--p-fx-text-2-light);
+  --fg-muted: var(--p-fx-text-muted-light);
+
+  --face: color-mix(in srgb, var(--p-fx-accent) 82%, black); /* 6,12:1     */
+  --face-lip: color-mix(in srgb, var(--p-fx-accent) 62%, black);
+  --face-fg: #ffffff;
+
+  --face-2: var(--p-fx-bg-2-light);
+  --face-2-lip: var(--p-fx-bg-3-light); /* nota (b): no claro o lip volta   */
+  --face-2-fg: var(--p-fx-text-light);
+
+  --focus-anel: 0 0 0 2px var(--bg), 0 0 0 4px var(--p-fx-accent);
+
+  /* Percentuais resolvidos numericamente contra o -bg de cada tripla, com 6
+     pontos de margem sob o limite de 4,5:1. O verde é o caso apertado: o
+     limite dele é 58% e o 62% que eu tinha usado por simetria REPROVAVA a
+     4,14:1 — foi o medidor da própria página que pegou.
+       success 52% → 5,38:1   danger 66% → 5,20:1
+       info    67% → 5,10:1   warning 51% → 5,36:1                          */
+  --ok-fg: color-mix(in srgb, var(--p-fx-success) 52%, black);
+  --err-fg: color-mix(in srgb, var(--p-fx-danger) 66%, black);
+  --info-fg: color-mix(in srgb, var(--p-fx-info) 67%, black);
+  --warn-fg: color-mix(in srgb, var(--p-fx-warning) 51%, black);
+
+  --card-depth: var(--p-fx-shadow-sm-light);
+  --card-depth-hover: var(--p-fx-shadow-md-light);
+}
+
+/* ==========================================================================
+   CENÁRIO B — DUOLINGO MANDA NO LÚDICO, FALCÃO MANDA NO DENSO
+   --------------------------------------------------------------------------
+   Dois vocabulários com fronteira explícita por TIPO DE SUPERFÍCIE:
+     [data-superficie="pratica"] → quiz, modo prova, botão de resposta,
+                                   progresso, feedback de acerto e erro.
+     [data-superficie="leitura"] → conteúdo da matéria, trilha, tabela.
+
+   A REGRA QUE DECIDE SE B FUNCIONA (e que a pesquisa não podia dar, porque
+   é decisão de arquitetura, não de extração):
+
+     A FRONTEIRA TEM DE SER DE ROTA/TELA CHEIA, NUNCA DENTRO DE UMA PÁGINA.
+
+   Botão Duolingo dentro de card Falcão é exatamente o frankenstein que se
+   quer evitar: dois raios, duas profundidades e duas famílias tipográficas
+   a 8px de distância. Já a matéria em Fraunces escuro e o quiz em Nunito
+   claro em TELA CHEIA lêem como dois lugares diferentes — e o Duolingo faz
+   justamente isso (a lição é fullscreen, o chrome sai). O corte vira
+   intenção em vez de acidente.
+
+   A página de demonstração mostra as duas superfícies empilhadas de
+   propósito: é a única forma de deixar a costura visível para julgar.
+
+   Contraste: aqui a face verde FICA (é a identidade do lúdico) e o problema
+   dos 2,09:1 se resolve pelo RÓTULO, não pela face —
+     #3C3C3C sobre #58CC02 = 5,28:1 (passa AA)
+   contra branco sobre a mesma face = 2,09:1. O Duolingo já faz texto escuro
+   nos botões amarelos; aqui isso se estende ao verde e ao azul
+   (#3C3C3C sobre Macaw #1CB0F6 = 4,51:1). Escurecer a face seria pior:
+   branco sobre Tree Frog #58A700 ainda dá 3,02:1 e continua reprovando.
+   ========================================================================== */
+
+.dl-cenario-b {
+  /* Tokens compartilhados pelas duas superfícies: só movimento e grade.
+     Tudo que é cor, tipo e forma é decidido pela superfície.              */
+  --r-pill: 9999px;
+  --dur-press: 100ms;
+  --dur-hover: 200ms;
+  --dur-mov: 300ms;
+  --dur-reveal: 450ms;
+  --dur-dwell-ok: 300ms;
+  --dur-dwell-err: 800ms;
+  --hold-stop: 62%;
+  --ease-default: ease-in-out;
+  --ease-enter: ease-out;
+  --ease-overshoot: cubic-bezier(0.35, 1.8, 0.35, 0.83);
+}
+
+/* --- B / superfície de PRÁTICA: vocabulário Duolingo, light-first ------- */
+.dl-cenario-b [data-superficie="pratica"] {
+  --bg: var(--p-snow);
+  --surface: var(--p-polar);
+  --surface-2: var(--p-swan);
+  --border: var(--p-swan);
+  --border-forte: var(--p-swan);
+  --grao: none; /* grão de papel é Editorial: não entra no lúdico          */
+
+  --fg: var(--p-black-text);
+  --fg-2: var(--p-wolf-aa); /* Wolf puro dá 4,478:1 e reprova. Ver primitivos */
+  --fg-muted: var(--p-hare);
+
+  --accent: var(--p-macaw);
+  --face: var(--p-feather-green);
+  --face-lip: var(--p-tree-frog);
+  --face-fg: var(--p-black-text); /* 5,28:1 — o conserto do 2,09:1         */
+
+  --face-2: var(--p-snow);
+  --face-2-lip: var(--p-swan);
+  --face-2-fg: var(--p-macaw);
+
+  --focus-cor: var(--p-macaw);
+  --focus-anel: none; /* o Duolingo só troca a cor da borda no foco        */
+
+  --ok-bg: var(--p-sea-sponge);
+  --ok-bd: var(--p-turtle);
+  --ok-fg: var(--p-tree-frog-aa);
+  --err-bg: var(--p-walking-fish);
+  --err-bd: var(--p-pig);
+  --err-fg: var(--p-fire-ant-aa);
+  --info-bg: var(--p-iguana);
+  --info-bd: var(--p-blue-jay);
+  --info-fg: var(--p-whale-aa);
+  --warn-bg: var(--p-canary);
+  --warn-bd: var(--p-duck);
+  --warn-fg: var(--p-guinea-pig-aa);
+
+  --r-btn: var(--g-raio-botao);
+  --r-card: var(--g-raio-card);
+  --r-campo: var(--g-raio-campo);
+  --r-modal: var(--g-raio-modal);
+  --bd: var(--g-borda);
+  --h-btn: var(--g-altura-botao);
+  --h-campo: var(--g-altura-campo);
+  --pad-btn: var(--g-pad-botao);
+
+  --lip: var(--g-lip);
+  --press-y: var(--g-lip);
+  --btn-depth: 0 var(--lip) 0 var(--face-lip);
+  --btn-depth-press: none;
+  --card-depth: 0 var(--bd) 0 var(--border); /* lip de 2px, blur zero      */
+  --card-depth-hover: 0 var(--bd) 0 var(--border);
+
+  --ff-display: "Baloo 2", "Nunito", sans-serif; /* substituta da Feather  */
+  --ff-text: "Nunito", sans-serif; /* substituta indicada pela Duolingo    */
+  --ff-mono: "Nunito", sans-serif;
+
+  --fs-display: 2.25rem;
+  --lh-display: 1.1;
+  --tr-display: -0.02em;
+  --case-display: lowercase; /* aqui a regra de voz da Feather FICA         */
+  --fw-display: 700;
+
+  --fs-title: 2rem;
+  --lh-title: 2.25rem;
+  --fs-head: 1.25rem;
+  --lh-head: 1.5rem;
+  --fs-body: 1.25rem; /* os 20px de verdade do Duolingo                     */
+  --lh-body: 1.75rem; /* fator 1.4 = "Set leading to 140%" do manual        */
+  --fs-cap: 1rem;
+  --lh-cap: 1.5rem;
+  /* 600 no Nunito = o 500 da DIN, régua do próprio manual deles            */
+  --fw-body: 600;
+  --fw-bold: 700;
+
+  --fs-label: 1rem;
+  --lh-label: 1rem;
+  --tr-label: 0.04em;
+  --case-label: uppercase;
+
+  --fs-btn: 15px;
+  --fw-btn: 700;
+  --tr-btn: 0.8px;
+  --case-btn: uppercase;
+
+  --fb-entrada-ok: dl-ok-duo;
+  --fb-entrada-err: dl-err-duo;
+
+  --prog-track: var(--p-swan);
+  --prog-fill: var(--p-feather-green);
+  --prog-shine: 0.2; /* a pílula branca por cima do fill                    */
+  --prog-dur: 400ms;
+}
+
+/* --- B / superfície de LEITURA: vocabulário Falcão, dark-first ---------- */
+.dl-cenario-b [data-superficie="leitura"] {
+  --bg: var(--p-fx-bg);
+  --surface: var(--p-fx-bg-2);
+  --surface-2: var(--p-fx-bg-3);
+  --border: var(--p-fx-border-dark);
+  --border-forte: var(--p-fx-border-dark);
+  --grao: var(--p-fx-noise);
+
+  --fg: var(--p-fx-text);
+  --fg-2: var(--p-fx-text-2);
+  --fg-muted: var(--p-fx-text-muted);
+
+  --accent: var(--p-fx-accent);
+  --face: var(--p-fx-accent-2);
+  --face-lip: transparent;
+  --face-fg: var(--p-fx-bg);
+  --face-2: var(--p-fx-bg-3);
+  --face-2-lip: transparent;
+  --face-2-fg: var(--p-fx-text);
+
+  --focus-cor: var(--p-fx-accent-2);
+  --focus-anel: 0 0 0 2px var(--bg), 0 0 0 4px var(--p-fx-accent-2);
+
+  --ok-bg: color-mix(in srgb, var(--p-fx-success) 16%, var(--bg));
+  --ok-bd: color-mix(in srgb, var(--p-fx-success) 40%, var(--bg));
+  --ok-fg: color-mix(in srgb, var(--p-fx-success) 78%, white);
+  --err-bg: color-mix(in srgb, var(--p-fx-danger) 16%, var(--bg));
+  --err-bd: color-mix(in srgb, var(--p-fx-danger) 40%, var(--bg));
+  --err-fg: color-mix(in srgb, var(--p-fx-danger) 72%, white);
+  --info-bg: color-mix(in srgb, var(--p-fx-info) 16%, var(--bg));
+  --info-bd: color-mix(in srgb, var(--p-fx-info) 40%, var(--bg));
+  --info-fg: color-mix(in srgb, var(--p-fx-info) 72%, white);
+  --warn-bg: color-mix(in srgb, var(--p-fx-warning) 16%, var(--bg));
+  --warn-bd: color-mix(in srgb, var(--p-fx-warning) 40%, var(--bg));
+  --warn-fg: color-mix(in srgb, var(--p-fx-warning) 80%, white);
+
+  /* Forma Falcão: raios da escala dele, controle 44px (não 50), sem lip    */
+  --r-btn: 10px;
+  --r-card: 16px;
+  --r-campo: 10px;
+  --r-modal: 24px;
+  --bd: 1px;
+  --h-btn: 44px;
+  --h-campo: 44px;
+  --pad-btn: 0 18px;
+
+  --lip: 0px; /* a parametrização (1): sem lip, a receita vira Falcão       */
+  --press-y: 1px;
+  --btn-depth: var(--p-fx-shadow-sm-dark);
+  --btn-depth-press: none;
+  --card-depth: var(--p-fx-shadow-sm-dark);
+  --card-depth-hover: var(--p-fx-shadow-md-dark);
+
+  --ff-display: "Fraunces", Georgia, serif;
+  --ff-text: "Plus Jakarta Sans", sans-serif;
+  --ff-mono: "JetBrains Mono", monospace;
+
+  --fs-display: 2.25rem;
+  --lh-display: 1.15;
+  --tr-display: -0.035em;
+  --case-display: none;
+  --fw-display: 700;
+
+  --fs-title: 1.75rem;
+  --lh-title: 2rem;
+  --fs-head: 1.125rem;
+  --lh-head: 1.5rem;
+  --fs-body: 1rem;
+  --lh-body: 1.625rem;
+  --fs-cap: 0.8125rem;
+  --lh-cap: 1.25rem;
+  --fw-body: 400;
+  --fw-bold: 700;
+
+  --fs-label: 0.75rem;
+  --lh-label: 1rem;
+  --tr-label: 0.06em;
+  --case-label: uppercase;
+
+  --fs-btn: 14px;
+  --fw-btn: 600;
+  --tr-btn: 0;
+  --case-btn: none;
+
+  --fb-entrada-ok: dl-ok-radial;
+  --fb-entrada-err: dl-err-radial;
+
+  --prog-track: var(--p-fx-bg-3);
+  --prog-fill: var(--p-fx-accent);
+  --prog-shine: 0;
+  --prog-dur: 300ms;
+}
+
+/* B no tema claro: só a superfície de LEITURA inverte. A de prática já é
+   light-first e o Duolingo não tem prefers-color-scheme — manter ela clara
+   nos dois temas é o comportamento fiel, e é também o que evidencia a
+   costura: no tema claro as duas superfícies quase se encostam; no escuro
+   elas gritam que são dois sistemas.                                      */
+.dl-cenario-b[data-tema="claro"] [data-superficie="leitura"] {
+  --bg: var(--p-fx-bg-light);
+  --surface: var(--p-fx-bg-2-light);
+  --surface-2: var(--p-fx-bg-3-light);
+  --border: var(--p-fx-border-light);
+  --border-forte: var(--p-fx-border-light);
+  --fg: var(--p-fx-text-light);
+  --fg-2: var(--p-fx-text-2-light);
+  --fg-muted: var(--p-fx-text-muted-light);
+  --face: color-mix(in srgb, var(--p-fx-accent) 82%, black);
+  --face-fg: #ffffff;
+  --face-2: var(--p-fx-bg-2-light);
+  --face-2-fg: var(--p-fx-text-light);
+  /* Percentuais resolvidos numericamente contra o -bg de cada tripla, com 6
+     pontos de margem sob o limite de 4,5:1. O verde é o caso apertado: o
+     limite dele é 58% e o 62% que eu tinha usado por simetria REPROVAVA a
+     4,14:1 — foi o medidor da própria página que pegou.
+       success 52% → 5,38:1   danger 66% → 5,20:1
+       info    67% → 5,10:1   warning 51% → 5,36:1                          */
+  --ok-fg: color-mix(in srgb, var(--p-fx-success) 52%, black);
+  --err-fg: color-mix(in srgb, var(--p-fx-danger) 66%, black);
+  --info-fg: color-mix(in srgb, var(--p-fx-info) 67%, black);
+  --warn-fg: color-mix(in srgb, var(--p-fx-warning) 51%, black);
+  --btn-depth: var(--p-fx-shadow-sm-light);
+  --card-depth: var(--p-fx-shadow-sm-light);
+  --card-depth-hover: var(--p-fx-shadow-md-light);
+  --focus-anel: 0 0 0 2px var(--bg), 0 0 0 4px var(--p-fx-accent);
+}
+
+/* ==========================================================================
+   CENÁRIO C — DUOLINGO INTEGRAL
+   --------------------------------------------------------------------------
+   O Falcão System Design sai. Um vocabulário só, light-first, tudo Duolingo.
+
+   DUAS RESSALVAS QUE O RÓTULO "INTEGRAL" NÃO SUPORTA — e é honesto dizer
+   antes de qualquer discussão de gosto:
+
+   1) "INTEGRAL" É IMPOSSÍVEL NA TIPOGRAFIA. Feather Bold e Duolingo Sans são
+      proprietárias e intransferíveis. O que se adota é Nunito + Baloo 2 —
+      formato Duolingo, identidade nenhuma. A camada mais reconhecível da
+      marca deles é justamente a que não pode ser copiada.
+
+   2) ADOTAR O SISTEMA É ADOTAR OS BURACOS DELE. Confirmado na extração:
+      zero skeleton, zero shimmer, zero spinner, zero @media
+      prefers-reduced-motion (só um atributo no html, que depende do JS ter
+      carregado), zero token de duração, zero token de espaçamento, zero
+      grade de ícone, zero razão de contraste publicada (5 ocorrências de
+      "accessib" no bundle, nenhuma sobre cor), e sem valor escuro conhecido
+      para Sea Sponge, Walking Fish, Iguana e Canary. Sem source of truth
+      upstream, cada buraco vira decisão local sem ninguém para consultar.
+
+   Aqui eu mantenho a fidelidade e conserto SÓ o que a lei brasileira de
+   acessibilidade não deixa passar num projeto institucional. A conta fechada
+   das correções obrigatórias — a MESMA que o cenário B paga na superfície de
+   prática, e que o cenário A não paga em lugar nenhum:
+     1. rótulo do botão: texto escuro na face saturada (2,09 → 5,28:1);
+     2. os quatro -fg das triplas semânticas (2,72–3,46 → 4,89–6,86:1);
+     3. o texto secundário: Wolf #777777 → #717171 (4,478 → 4,881:1).
+   Três frentes, e nenhuma delas documentada por eles, porque eles nunca
+   publicaram razão de contraste nenhuma. Tudo o mais fica fiel, inclusive o
+   brilho da barra e os 20px de corpo.
+   ========================================================================== */
+
+.dl-cenario-c {
+  --bg: var(--p-snow);
+  --surface: var(--p-polar);
+  --surface-2: var(--p-swan);
+  --border: var(--p-swan);
+  --border-forte: var(--p-swan);
+  --grao: none; /* sai o grão de papel: não existe textura no Duolingo      */
+
+  --fg: var(--p-black-text);
+  --fg-2: var(--p-wolf-aa); /* Wolf puro dá 4,478:1 e reprova. Ver primitivos */
+  --fg-muted: var(--p-hare);
+
+  --accent: var(--p-macaw);
+  --face: var(--p-feather-green);
+  --face-lip: var(--p-tree-frog);
+  --face-fg: var(--p-black-text); /* fiel seria #FFF = 2,09:1. Ver acima.  */
+
+  --face-2: var(--p-snow);
+  --face-2-lip: var(--p-swan);
+  --face-2-fg: var(--p-macaw);
+
+  --focus-cor: var(--p-macaw);
+  --focus-anel: none;
+
+  --ok-bg: var(--p-sea-sponge);
+  --ok-bd: var(--p-turtle);
+  --ok-fg: var(--p-tree-frog-aa);
+  --err-bg: var(--p-walking-fish);
+  --err-bd: var(--p-pig);
+  --err-fg: var(--p-fire-ant-aa);
+  --info-bg: var(--p-iguana);
+  --info-bd: var(--p-blue-jay);
+  --info-fg: var(--p-whale-aa);
+  /* Aviso é o papel DERIVADO: o Duolingo não tem esta tripla.             */
+  --warn-bg: var(--p-canary);
+  --warn-bd: var(--p-duck);
+  --warn-fg: var(--p-guinea-pig-aa);
+
+  --r-btn: var(--g-raio-botao);
+  --r-card: var(--g-raio-card);
+  --r-campo: var(--g-raio-campo);
+  --r-modal: var(--g-raio-modal);
+  --r-pill: 9999px;
+  --bd: var(--g-borda);
+  --h-btn: var(--g-altura-botao);
+  --h-campo: var(--g-altura-campo);
+  --pad-btn: var(--g-pad-botao);
+
+  --lip: var(--g-lip);
+  --press-y: var(--g-lip);
+  --btn-depth: 0 var(--lip) 0 var(--face-lip);
+  --btn-depth-press: none;
+  --card-depth: 0 var(--bd) 0 var(--border);
+  --card-depth-hover: 0 var(--bd) 0 var(--border);
+
+  --ff-display: "Baloo 2", "Nunito", sans-serif;
+  --ff-text: "Nunito", sans-serif;
+  --ff-mono: "Nunito", sans-serif;
+
+  --fs-display: 2.25rem; /* 36px, medido nas 3 classes de componente       */
+  --lh-display: 1.1;
+  --tr-display: -0.02em;
+  --case-display: lowercase;
+  --fw-display: 700;
+
+  --fs-title: 2.5rem; /* pageTitle large: 40px/44px                        */
+  --lh-title: 2.75rem;
+  --fs-head: 1.25rem; /* heading small = título de card                    */
+  --lh-head: 1.5rem;
+  --fs-body: 1.25rem;
+  --lh-body: 1.75rem;
+  --fs-cap: 1rem;
+  --lh-cap: 1.5rem;
+  --fw-body: 600;
+  --fw-bold: 700;
+
+  --fs-label: 1rem;
+  --lh-label: 1rem;
+  --tr-label: 0.04em;
+  --case-label: uppercase;
+
+  --fs-btn: 15px;
+  --fw-btn: 700;
+  --tr-btn: 0.8px;
+  --case-btn: uppercase;
+
+  --dur-press: 100ms;
+  --dur-hover: 200ms;
+  --dur-mov: 300ms;
+  --dur-reveal: 300ms;
+  --dur-dwell-ok: 300ms;
+  --dur-dwell-err: 800ms;
+  --hold-stop: 62%;
+  --ease-default: ease-in-out;
+  --ease-enter: ease-out;
+  --ease-overshoot: cubic-bezier(0.35, 1.8, 0.35, 0.83);
+  --fb-entrada-ok: dl-ok-duo;
+  --fb-entrada-err: dl-err-duo;
+
+  --prog-track: var(--p-swan);
+  --prog-fill: var(--p-feather-green);
+  --prog-shine: 0.2;
+  --prog-dur: 400ms;
+}
+
+/* Tema escuro OFICIAL do Duolingo: só os 10 tokens que ele confirmadamente
+   inverte. Sea Sponge, Walking Fish, Iguana e Canary NÃO têm valor escuro
+   conhecido — derivo por color-mix com o chão escuro e MARCO como derivado,
+   em vez de inventar hex e apresentar como extraído.                       */
+.dl-cenario-c[data-tema="escuro"] {
+  --bg: var(--p-snow-dark);
+  --surface: var(--p-polar-dark);
+  --surface-2: var(--p-swan-dark);
+  --border: var(--p-swan-dark);
+  --border-forte: var(--p-swan-dark);
+  --fg: var(--p-eel-dark);
+  --fg-2: #dce6ec;
+  --fg-muted: var(--p-hare-dark);
+
+  --accent: var(--p-macaw-dark);
+  --face: var(--p-feather-green-dark);
+  --face-lip: var(--p-tree-frog);
+  --face-fg: var(--p-snow-dark);
+  --face-2: var(--p-polar-dark);
+  --face-2-lip: var(--p-swan-dark);
+  --face-2-fg: var(--p-macaw-dark);
+
+  /* DERIVADO por mim, não extraído: */
+  --ok-bg: color-mix(in srgb, var(--p-feather-green-dark) 18%, var(--bg));
+  --ok-bd: color-mix(in srgb, var(--p-feather-green-dark) 42%, var(--bg));
+  --ok-fg: var(--p-turtle);
+  --err-bg: color-mix(in srgb, var(--p-cardinal-dark) 18%, var(--bg));
+  --err-bd: color-mix(in srgb, var(--p-cardinal-dark) 42%, var(--bg));
+  --err-fg: var(--p-pig);
+  --info-bg: color-mix(in srgb, var(--p-macaw-dark) 18%, var(--bg));
+  --info-bd: color-mix(in srgb, var(--p-macaw-dark) 42%, var(--bg));
+  --info-fg: var(--p-blue-jay);
+  --warn-bg: color-mix(in srgb, var(--p-bee) 18%, var(--bg));
+  --warn-bd: color-mix(in srgb, var(--p-bee) 42%, var(--bg));
+  --warn-fg: var(--p-duck);
+
+  --prog-track: var(--p-swan-dark);
+  --prog-fill: var(--p-feather-green-dark);
+}
+
+/* ==========================================================================
+   RECONCILIAÇÃO DO MOVIMENTO — o conflito numérico que se dissolve
+
+   O Falcão diz "Motion is subtle. NEVER > 350ms". O Duolingo insiste 800ms
+   no erro. Parece contradição frontal, mas não é: o próprio Falcão já
+   estoura os 350ms nos gestos que ele chama de assinatura — o radial reveal
+   do Button é 450ms e o do tema é 550ms. Ou seja, o teto de 350ms dele
+   nunca foi sobre "toda animação"; é sobre MOVIMENTO.
+
+   Separando as grandezas, os dois sistemas passam a caber:
+     MOVIMENTO   (deslocar, escalar, elevar)      ≤ 350ms   — teto Falcão
+     REVELAÇÃO   (clip-path, entrada de camada)   450–550ms — assinatura Falcão
+     PERMANÊNCIA (cor que fica antes de lavar)    300ms acerto / 800ms erro
+
+   PERMANÊNCIA é a categoria que o Falcão não nomeou e o Duolingo mediu: 300ms
+   no acerto travando com forwards, 800ms no erro segurando a cor até 62% e
+   lavando no resto. Não é uma animação lenta, é a decisão pedagógica de
+   PUNIR POR TEMPO E NÃO POR INTENSIDADE — o som deles confirma: erro e
+   acerto saem no mesmo volume 0,35, e o que difere é a duração.
+
+   Nada aqui se move por 800ms. O que dura 800ms é a cor esfriando. Nenhum
+   dos dois sistemas precisa ceder.
+   ========================================================================== */
+
+/* ==========================================================================
+   CAMADA 2 — RECEITAS DE COMPONENTE
+   Escritas uma única vez. Só tokens semânticos, zero hex.
+   As classes .is-hover / .is-press existem para a página conseguir MOSTRAR
+   hover e pressionado ao mesmo tempo, sem o leitor ter que passar o mouse em
+   nove botões. Elas espelham exatamente :hover e :active.
+   ========================================================================== */
+
+.dl-superficie {
+  background-color: var(--bg);
+  background-image: var(--grao, none);
+  background-blend-mode: overlay;
+  color: var(--fg);
+  font-family: var(--ff-text);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: var(--fw-body);
+}
+
+/* ---- Tipografia ------------------------------------------------------- */
+
+.dl-display {
+  font-family: var(--ff-display);
+  font-size: var(--fs-display);
+  line-height: var(--lh-display);
+  font-weight: var(--fw-display);
+  letter-spacing: var(--tr-display);
+  text-transform: var(--case-display);
+  text-align: left; /* manual do Duolingo: display sempre à esquerda       */
+  hyphens: none; /* manual do Duolingo: nunca hifenizar                    */
+  text-wrap: balance;
+  margin: 0;
+  /* ss01/ss02 só têm efeito na Fraunces; em Nunito/Baloo são inertes —
+     por isso pode ficar na receita compartilhada sem ramificar.           */
+  font-feature-settings: "ss01", "ss02";
+}
+
+.dl-title {
+  font-family: var(--ff-text);
+  font-size: var(--fs-title);
+  line-height: var(--lh-title);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.dl-head {
+  font-family: var(--ff-text);
+  font-size: var(--fs-head);
+  line-height: var(--lh-head);
+  font-weight: var(--fw-bold);
+  margin: 0;
+}
+
+.dl-body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: var(--fw-body);
+  margin: 0;
+}
+
+.dl-cap {
+  font-size: var(--fs-cap);
+  line-height: var(--lh-cap);
+  font-weight: var(--fw-body);
+  color: var(--fg-2);
+  margin: 0;
+}
+
+.dl-label {
+  font-size: var(--fs-label);
+  line-height: var(--lh-label);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tr-label);
+  text-transform: var(--case-label);
+  color: var(--fg-2);
+  display: block;
+}
+
+/* Dinheiro. O Duolingo NÃO tem token de número e serve dígito proporcional;
+   o Falcão exige mono tabular, peso 500, tracking -0.02em, à direita. Não é
+   empate de gosto: coluna de R$ desalinhada é defeito de leitura. E os dois
+   sistemas até concordam no princípio — a própria pesquisa do Duolingo
+   recomenda ligar tnum em contador que atualiza ao vivo.                  */
+.dl-money {
+  font-family: var(--ff-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-align: right;
+}
+
+/* ---- Botão ------------------------------------------------------------
+   Receita do lip transcrita de ._1VYyp, com a profundidade parametrizada:
+   a borda inferior TRANSPARENTE reserva o espaço do lip (sem layout shift),
+   o ::before pinta a face e o box-shadow sem blur pinta a aresta. Com
+   --lip: 0px e uma sombra difusa em --btn-depth, a mesma receita entrega o
+   botão Falcão.
+
+   NOTA GRÃO × LIP: o grão de papel fica no CHÃO da página e NUNCA na face do
+   botão. Ruído sobre uma aresta sólida de 4px quebra a ilusão de bloco
+   extrudado — a face precisa ler como material único. Por isso o
+   background-image do grão está em .dl-superficie e não aqui.             */
+
+.dl-btn {
+  position: relative;
+  z-index: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: var(--h-btn);
+  padding: var(--pad-btn);
+  border-radius: var(--r-btn);
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0 0 var(--lip);
+  background: none;
+  color: var(--face-fg);
+  font-family: var(--ff-text);
+  font-size: var(--fs-btn);
+  font-weight: var(--fw-btn);
+  line-height: 1.2;
+  letter-spacing: var(--tr-btn);
+  text-transform: var(--case-btn);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition:
+    filter var(--dur-hover) var(--ease-default),
+    transform var(--dur-press) linear;
+}
+
+.dl-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-color: var(--face);
+  box-shadow: var(--btn-depth);
+  transition: box-shadow var(--dur-press) linear;
+}
+
+.dl-btn:focus-visible {
+  outline: 2px solid var(--focus-cor);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .dl-btn:hover:not(:disabled) {
+    filter: brightness(1.1);
+  }
+}
+
+.dl-btn.is-hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.dl-btn:active:not(:disabled),
+.dl-btn.is-press:not(:disabled) {
+  transform: translateY(var(--press-y)) translateZ(0);
+}
+
+.dl-btn:active:not(:disabled)::before,
+.dl-btn.is-press:not(:disabled)::before {
+  box-shadow: var(--btn-depth-press);
+}
+
+/* Desabilitado = permanentemente afundado (achado do eixo de forma).
+   Não é só opacidade: o botão perde a aresta e fica no fundo do poço, o que
+   comunica "não pressionável" pela física e não só pela cor.              */
+.dl-btn:disabled {
+  transform: translateY(var(--press-y)) translateZ(0);
+  color: var(--fg-muted);
+  cursor: default;
+}
+
+.dl-btn:disabled::before {
+  background-color: var(--surface-2);
+  box-shadow: none;
+}
+
+/* Variante contornada: lip total 4px mas afunda só 2px, porque a linha de
+   contorno não afunda junto.                                              */
+.dl-btn--contornado {
+  color: var(--face-2-fg);
+  border-width: 0 0 calc(var(--lip) / 2);
+}
+
+.dl-btn--contornado::before {
+  background-color: var(--face-2);
+  border: var(--bd) solid var(--border);
+  box-shadow: 0 calc(var(--lip) / 2) 0 var(--face-2-lip);
+}
+
+.dl-btn--contornado:active:not(:disabled),
+.dl-btn--contornado.is-press:not(:disabled) {
+  transform: translateY(calc(var(--press-y) / 2)) translateZ(0);
+}
+
+@media (hover: hover) {
+  .dl-btn--contornado:hover:not(:disabled) {
+    filter: brightness(0.95);
+  }
+}
+
+.dl-btn--contornado.is-hover:not(:disabled) {
+  filter: brightness(0.95);
+}
+
+/* ---- Card ------------------------------------------------------------ */
+
+.dl-card {
+  box-sizing: border-box;
+  background-color: var(--surface);
+  border: var(--bd) solid var(--border);
+  border-radius: var(--r-card);
+  box-shadow: var(--card-depth);
+  padding: var(--g-sp-4);
+  transition: box-shadow var(--dur-mov) var(--ease-default);
+}
+
+.dl-card.is-hover {
+  box-shadow: var(--card-depth-hover);
+}
+
+/* ---- Campo ----------------------------------------------------------
+   Chapado, SEM lip nos dois sistemas: profundidade física é reservada ao
+   que é pressionável. O que difere é o foco — o Duolingo só troca a cor da
+   borda, o Falcão adiciona anel com offset. Parametrizado em --focus-anel
+   (none no lado Duolingo).                                               */
+
+.dl-field {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--h-campo);
+  padding: 0 14px;
+  border: var(--bd) solid var(--border);
+  border-radius: var(--r-campo);
+  background-color: var(--surface);
+  color: var(--fg);
+  font-family: var(--ff-text);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-body);
+  box-shadow: none;
+  transition:
+    border-color var(--dur-hover) var(--ease-default),
+    box-shadow var(--dur-hover) var(--ease-default);
+}
+
+.dl-field::placeholder {
+  color: var(--fg-muted);
+}
+
+.dl-field:focus,
+.dl-field.is-focus {
+  outline: none;
+  border-color: var(--focus-cor);
+  box-shadow: var(--focus-anel);
+}
+
+/* ---- Feedback -------------------------------------------------------
+   O ::after é a camada que entra; a animação dela é escolhida pelo NOME
+   guardado em --fb-entrada-ok / --fb-entrada-err (parametrização 2).
+   Duolingo: a cor entra e segura (forwards no acerto, lava a partir de 62%
+   no erro). Falcão: a cor entra por clip-path circle(0% → 150%), porque
+   "Feedback colors NEVER pop" é non-negotiable dele.                     */
+
+.dl-feedback {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  border-radius: var(--r-card);
+  border: var(--bd) solid var(--border);
+  background-color: var(--surface);
+  color: var(--fg);
+  padding: var(--g-sp-3) var(--g-sp-4);
+  font-weight: var(--fw-bold);
+  overflow: hidden;
+}
+
+.dl-feedback::after {
+  content: "";
+  position: absolute;
+  inset: calc(var(--bd) * -1);
+  z-index: -1;
+  border-radius: inherit;
+  border: var(--bd) solid transparent;
+  opacity: 0;
+}
+
+.dl-feedback[data-estado="acerto"] {
+  color: var(--ok-fg);
+  border-color: var(--ok-bd);
+}
+
+.dl-feedback[data-estado="acerto"]::after {
+  background-color: var(--ok-bg);
+  border-color: var(--ok-bd);
+  animation: var(--fb-entrada-ok) var(--dur-dwell-ok) var(--ease-default) forwards;
+}
+
+.dl-feedback[data-estado="erro"] {
+  color: var(--err-fg);
+  border-color: var(--err-bd);
+}
+
+.dl-feedback[data-estado="erro"]::after {
+  background-color: var(--err-bg);
+  border-color: var(--err-bd);
+  animation: var(--fb-entrada-err) var(--dur-dwell-err) var(--ease-default) forwards;
+}
+
+/* Duolingo: acerto entra e trava. */
+@keyframes dl-ok-duo {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Duolingo: erro segura a cor até 62% e lava no resto. É a PERMANÊNCIA —
+   nada se move, só a cor esfria.                                          */
+@keyframes dl-err-duo {
+  0% {
+    opacity: 1;
+  }
+  62% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Falcão: radial reveal. clip-path circle 0% → 150%. */
+@keyframes dl-ok-radial {
+  from {
+    opacity: 1;
+    clip-path: circle(0% at 50% 50%);
+  }
+  to {
+    opacity: 1;
+    clip-path: circle(150% at 50% 50%);
+  }
+}
+
+@keyframes dl-err-radial {
+  0% {
+    opacity: 1;
+    clip-path: circle(0% at 50% 50%);
+  }
+  40% {
+    opacity: 1;
+    clip-path: circle(150% at 50% 50%);
+  }
+  62% {
+    opacity: 1;
+    clip-path: circle(150% at 50% 50%);
+  }
+  to {
+    opacity: 0;
+    clip-path: circle(150% at 50% 50%);
+  }
+}
+
+/* ---- Barra de progresso ---------------------------------------------
+   Técnica do Duolingo: recorte por clip-path, não largura. Preserva o canto
+   arredondado e permite o brilho. --prog-shine a 0 apaga o gesto lúdico sem
+   precisar de outra receita.                                             */
+
+.dl-progress {
+  position: relative;
+  height: 16px;
+  border-radius: var(--r-pill);
+  background-color: var(--prog-track);
+  overflow: hidden;
+}
+
+.dl-progress__fill {
+  position: absolute;
+  inset: 0;
+  background-color: var(--prog-fill);
+  clip-path: inset(0 calc(100% - var(--valor, 60%)) 0 0 round 8px);
+  transition: clip-path var(--prog-dur) ease;
+}
+
+.dl-progress__shine {
+  position: absolute;
+  top: 25%;
+  left: 4px;
+  height: 30%;
+  width: calc(var(--valor, 60%) - 12px);
+  border-radius: var(--r-pill);
+  background-color: #fff;
+  opacity: var(--prog-shine);
+  transition: width var(--prog-dur) ease;
+}
+
+/* ---- Amostra de cor ------------------------------------------------- */
+
+.dl-swatch {
+  border-radius: var(--g-raio-pequeno);
+  border: 1px solid var(--border);
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 6px 8px;
+  font-family: var(--ff-text);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* ==========================================================================
+   ACESSIBILIDADE DE MOVIMENTO
+
+   O Duolingo respeita reduced-motion apenas por html[reduced-motion] — um
+   atributo que o JS escreve, ou seja, não protege ninguém antes do bundle
+   carregar. Este projeto já tem um reset global em src/index.css que
+   neutraliza animação sob prefers-reduced-motion, mas o protótipo não pode
+   DEPENDER de arquivo que ele não importa. Então cobre as duas fontes,
+   como a pesquisa recomendou: @media (sistema) e atributo (preferência de
+   conta). A regra é SUBSTITUIR a trilha, não apagar o feedback — quem
+   desliga movimento continua precisando saber que errou.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .dl-btn,
+  .dl-btn::before,
+  .dl-card,
+  .dl-field,
+  .dl-progress__fill,
+  .dl-progress__shine {
+    transition-duration: 0.01ms;
+  }
+
+  /* A cor permanece; só o clip-path e a lavagem saem. */
+  .dl-feedback[data-estado="acerto"]::after,
+  .dl-feedback[data-estado="erro"]::after {
+    animation: none;
+    opacity: 1;
+    clip-path: none;
+  }
+}
+
+[data-reduced-motion] .dl-btn,
+[data-reduced-motion] .dl-btn::before,
+[data-reduced-motion] .dl-card,
+[data-reduced-motion] .dl-field,
+[data-reduced-motion] .dl-progress__fill,
+[data-reduced-motion] .dl-progress__shine {
+  transition-duration: 0.01ms;
+}
+
+[data-reduced-motion] .dl-feedback[data-estado="acerto"]::after,
+[data-reduced-motion] .dl-feedback[data-estado="erro"]::after {
+  animation: none;
+  opacity: 1;
+  clip-path: none;
+}
+
+/* ==========================================================================
+   LAYOUT DO LABORATÓRIO — só a página de demonstração usa. Nada de token
+   semântico aqui; é andaime da comparação.
+   ========================================================================== */
+
+.dl-lab {
+  min-height: 100vh;
+  background-color: #101013;
+  color: #e9e9ee;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: var(--g-sp-6) var(--g-sp-5) var(--g-sp-7);
+}
+
+.dl-lab[data-tema="claro"] {
+  background-color: #f1f1f4;
+  color: #17171b;
+}
+
+.dl-lab__head {
+  max-width: 1400px;
+  margin: 0 auto var(--g-sp-6);
+}
+
+.dl-lab__kicker {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin: 0 0 var(--g-sp-2);
+}
+
+.dl-lab__h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+  margin: 0 0 var(--g-sp-3);
+}
+
+.dl-lab__lead {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  max-width: 78ch;
+  opacity: 0.82;
+  margin: 0 0 var(--g-sp-3);
+}
+
+.dl-lab__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--g-sp-2);
+  align-items: center;
+  margin-top: var(--g-sp-4);
+}
+
+.dl-lab__ctl {
+  appearance: none;
+  border: 1px solid currentcolor;
+  background: transparent;
+  color: inherit;
+  border-radius: 999px;
+  padding: 7px 14px;
+  font: 600 12px/1 "Plus Jakarta Sans", sans-serif;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.dl-lab__ctl[aria-pressed="true"] {
+  opacity: 1;
+  background: currentcolor;
+}
+
+.dl-lab__ctl[aria-pressed="true"] span {
+  mix-blend-mode: difference;
+  filter: invert(1) grayscale(1) contrast(9);
+}
+
+.dl-lab__grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--g-sp-5);
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 1100px) {
+  .dl-lab__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.dl-col {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgb(128 128 128 / 32%);
+}
+
+.dl-col__banner {
+  padding: var(--g-sp-4);
+  background: rgb(128 128 128 / 12%);
+  border-bottom: 1px solid rgb(128 128 128 / 32%);
+}
+
+.dl-col__tag {
+  font: 800 10px/1 "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.dl-col__name {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 6px 0 0;
+}
+
+.dl-col__verdict {
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.75;
+  margin: 8px 0 0;
+}
+
+.dl-col__body > * + * {
+  border-top: 1px dashed rgb(128 128 128 / 28%);
+}
+
+.dl-sec {
+  padding: var(--g-sp-5) var(--g-sp-4);
+}
+
+.dl-sec__title {
+  font: 800 10px/1 "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin: 0 0 var(--g-sp-4);
+}
+
+.dl-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--g-sp-3);
+}
+
+.dl-stack--tight {
+  gap: var(--g-sp-2);
+}
+
+.dl-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--g-sp-3);
+  align-items: flex-start;
+}
+
+.dl-btnrow {
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  gap: var(--g-sp-2) var(--g-sp-3);
+  align-items: center;
+}
+
+.dl-state {
+  font: 700 10px/1.2 "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.dl-swatches {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--g-sp-2);
+}
+
+.dl-cr {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font: 700 10px/1 "JetBrains Mono", monospace;
+  padding: 3px 6px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.dl-cr--ok {
+  background: rgb(34 197 94 / 18%);
+  color: #7ae2a5;
+}
+
+.dl-cr--warn {
+  background: rgb(245 158 11 / 20%);
+  color: #f3c46a;
+}
+
+.dl-cr--fail {
+  background: rgb(239 68 68 / 20%);
+  color: #ff9d9d;
+}
+
+.dl-lab[data-tema="claro"] .dl-cr--ok {
+  color: #14663a;
+}
+
+.dl-lab[data-tema="claro"] .dl-cr--warn {
+  color: #7a4a00;
+}
+
+.dl-lab[data-tema="claro"] .dl-cr--fail {
+  color: #96140f;
+}
+
+.dl-note {
+  font-size: 11.5px;
+  line-height: 1.55;
+  opacity: 0.62;
+  margin: var(--g-sp-3) 0 0;
+}
+
+.dl-frontier {
+  font: 800 9px/1 "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: rgb(128 128 128 / 20%);
+  display: inline-block;
+  margin-bottom: var(--g-sp-3);
+}
+
+.dl-verdict {
+  max-width: 1400px;
+  margin: var(--g-sp-6) auto 0;
+  border: 1px solid rgb(128 128 128 / 32%);
+  border-radius: 18px;
+  padding: var(--g-sp-5);
+}
+
+.dl-verdict h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.375rem;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  margin: 0 0 var(--g-sp-3);
+}
+
+.dl-verdict p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  max-width: 90ch;
+  margin: 0 0 var(--g-sp-3);
+  opacity: 0.85;
+}
+
+.dl-verdict ol {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  max-width: 90ch;
+  opacity: 0.85;
+  padding-left: 1.25rem;
+  margin: 0 0 var(--g-sp-3);
+}
+
+.dl-verdict li + li {
+  margin-top: 6px;
+}
+
+.dl-verdict strong {
+  font-weight: 800;
+  opacity: 1;
+}
