@@ -1,6 +1,6 @@
 {
   "versao": "v1",
-  "totalTopicos": 420,
+  "totalTopicos": 462,
   "topicos": [
     {
       "id": "mt_ALPG_01",
@@ -2397,7 +2397,7 @@
       "nome": "Definição de comportamento organizacional",
       "descricao": "CO é o campo que investiga o impacto de indivíduos, grupos e estruturas no comportamento dentro das organizações. O objetivo é usar esse conhecimento para melhorar a eficácia organizacional.",
       "ordem": 1,
-      "centralidade": 0.5,
+      "centralidade": 0.5364,
       "evidencia": [
         "Dizer o que o CO estuda em uma frase, sem confundir com finanças ou marketing",
         "Classificar um problema real nos três níveis: indivíduo, grupo ou estrutura"
@@ -2466,7 +2466,7 @@
       "nome": "Diversidade aparente e profunda",
       "descricao": "Diversidade é o conjunto de características que diferenciam as pessoas. A aparente reúne traços visíveis como idade, etnia, gênero, raça, religião e deficiência; a profunda reúne personalidade, valores, capacidades e habilidades.",
       "ordem": 4,
-      "centralidade": 0.2182,
+      "centralidade": 0.2545,
       "evidencia": [
         "Classificar exemplos reais em aparente ou profunda",
         "Explicar por que a profunda pesa mais no trabalho conjunto"
@@ -2512,7 +2512,7 @@
       "nome": "Capacidades intelectuais e físicas",
       "descricao": "Capacidade é o saber-fazer necessário para executar tarefas. As intelectuais incluem aptidão numérica, compreensão verbal, raciocínio e memória; as físicas incluem força, flexibilidade, coordenação, equilíbrio e vigor.",
       "ordem": 6,
-      "centralidade": 0.1364,
+      "centralidade": 0.1727,
       "evidencia": [
         "Apontar quais capacidades uma função específica exige",
         "Diferenciar capacidade de motivação ao explicar desempenho fraco"
@@ -2535,7 +2535,7 @@
       "nome": "Valores: conteúdo e intensidade",
       "descricao": "Valores são convicções básicas de que um modo de conduta ou uma condição de existência é preferível ao seu oposto. O conteúdo diz o que é importante e a intensidade diz o quanto, formando o sistema de valores, relativamente estável.",
       "ordem": 7,
-      "centralidade": 0.2,
+      "centralidade": 0.2364,
       "evidencia": [
         "Explicar a diferença entre conteúdo e intensidade de um valor",
         "Dizer por que valores ajudam a entender atitudes, motivação e percepção"
@@ -2811,7 +2811,7 @@
       "nome": "Definição de motivação",
       "descricao": "Motivação é o processo responsável pela intensidade (quanto esforço), pela direção (para qual meta) e pela persistência (por quanto tempo) do esforço. Motivação não explica tudo: desempenho também depende de habilidades, oportunidades e condições.",
       "ordem": 19,
-      "centralidade": 0.1273,
+      "centralidade": 0.1636,
       "evidencia": [
         "Apontar os três elementos da definição em um exemplo",
         "Explicar por que alguém motivado ainda pode ter desempenho fraco"
@@ -2834,7 +2834,7 @@
       "nome": "Hierarquia de Maslow",
       "descricao": "As necessidades vão de fisiológicas, segurança e sociais até estima e autorrealização. Para motivar, é preciso entender em que nível a pessoa está e agir nesse nível ou no imediatamente superior.",
       "ordem": 20,
-      "centralidade": 0,
+      "centralidade": 0.0364,
       "evidencia": [
         "Ordenar os cinco níveis",
         "Escolher uma ação de gestão a partir do nível em que a pessoa está"
@@ -6520,7 +6520,7 @@
       "nome": "Metodologia e método",
       "descricao": "Metodologia vem do Latim methodus, entendido como caminho, e é o campo que estuda os melhores métodos de uma área para produzir conhecimento. Método é o conjunto de regras, critérios e procedimentos que orienta a busca de explicações e respostas.",
       "ordem": 1,
-      "centralidade": 0.1909,
+      "centralidade": 0.1636,
       "evidencia": [
         "Explica a origem da palavra metodologia e o que ela estuda",
         "Separa metodologia de método em um exemplo concreto de pesquisa"
@@ -6543,7 +6543,7 @@
       "nome": "Níveis da inteligência humana",
       "descricao": "O material apresenta três níveis de desenvolvimento da inteligência humana: medo, misticismo e ciência. No medo os fenômenos são percebidos com temor, no misticismo são explicados por pensamento mágico, e na ciência as respostas passam a ser buscadas por caminhos controláveis, críticos e passíveis de comprovação.",
       "ordem": 2,
-      "centralidade": 0,
+      "centralidade": 0.0364,
       "evidencia": [
         "Cita os três níveis na ordem correta",
         "Explica o que muda do misticismo para a ciência"
@@ -6566,7 +6566,7 @@
       "nome": "Conhecimento do senso comum",
       "descricao": "É o conhecimento adquirido no cotidiano, pela experiência vivida. Tende a ser assistemático, acrítico, superficial, falível, inexato e transmitido socialmente entre gerações sem problematização.",
       "ordem": 3,
-      "centralidade": 0.2,
+      "centralidade": 0.0455,
       "evidencia": [
         "Reconhece um exemplo de senso comum em uma frase do dia a dia",
         "Lista quatro características do senso comum"
@@ -6590,7 +6590,7 @@
       "nome": "Conhecimento filosófico e teológico",
       "descricao": "O filosófico se apoia em reflexão crítica e racional sobre o sentido das coisas: é valorativo, racional e sistemático, mas não verificável empiricamente. O teológico se apoia em fé, revelação e doutrina, e busca compreender uma verdade já aceita em vez de construir uma nova.",
       "ordem": 4,
-      "centralidade": 0.1909,
+      "centralidade": 0.0364,
       "evidencia": [
         "Separa filosófico de teológico pela fonte de autoridade de cada um",
         "Explica por que nenhum dos dois é verificável por experimento"
@@ -6613,7 +6613,7 @@
       "nome": "Conhecimento científico",
       "descricao": "É sistemático, racional, metódico e orientado à verificação. Procura compreender não só o fenômeno, mas suas causas, relações e regularidades, e aceita ser revisado, consolidado ou corrigido.",
       "ordem": 5,
-      "centralidade": 0.1818,
+      "centralidade": 0.0273,
       "evidencia": [
         "Aponta as três exigências que separam o científico do senso comum",
         "Explica por que o conhecimento científico não é estático"
@@ -6683,7 +6683,7 @@
       "nome": "Verdade, evidência e certeza",
       "descricao": "Verdade é o desvelamento ou manifestação do ser. Evidência é a manifestação clara e transparente da natureza das coisas. Certeza é a adesão firme a uma verdade, sem temor de engano, normalmente apoiada em evidência suficiente.",
       "ordem": 8,
-      "centralidade": 0.1455,
+      "centralidade": 0.0364,
       "evidencia": [
         "Define os três termos sem trocá-los",
         "Explica por que a certeza depende da evidência"
@@ -6704,7 +6704,7 @@
       "nome": "Indução, dedução e teoria",
       "descricao": "A indução parte de casos ou verdades particulares para construir generalizações, e está associada a Francis Bacon. A dedução parte de princípios gerais para explicitar verdades particulares. Quando a ciência identifica regularidade constante e uniforme formula leis, e o conjunto inter-relacionado de conceitos e proposições que explica um domínio é a teoria.",
       "ordem": 9,
-      "centralidade": 0.1364,
+      "centralidade": 0.0273,
       "evidencia": [
         "Classifica um raciocínio dado como indutivo ou dedutivo",
         "Diferencia lei de teoria"
@@ -6727,7 +6727,7 @@
       "nome": "Paradigma, ontologia e epistemologia",
       "descricao": "Paradigma é o conjunto de crenças, valores, pressupostos e técnicas compartilhados por uma comunidade científica. Ontologia trata da natureza do ser e da realidade estudada; epistemologia trata de como o conhecimento é produzido e reconhecido como válido. Por isso o método não é neutro.",
       "ordem": 10,
-      "centralidade": 0.1545,
+      "centralidade": 0.0909,
       "evidencia": [
         "Define paradigma sem confundir com método",
         "Diz qual pergunta a ontologia responde e qual a epistemologia responde"
@@ -6750,7 +6750,7 @@
       "nome": "Paradigma positivista",
       "descricao": "Valoriza observação neutra, objetividade, experimentação e mensuração, analisando a relação entre variável independente (causa) e variável dependente (efeito), com raciocínio dedutivo.",
       "ordem": 11,
-      "centralidade": 0.1273,
+      "centralidade": 0.0182,
       "evidencia": [
         "Identifica variável independente e dependente em um exemplo",
         "Reconhece o positivismo por trás de um desenho de pesquisa"
@@ -6773,7 +6773,7 @@
       "nome": "Paradigma interpretativo",
       "descricao": "Entende que a realidade é acessada por construções sociais: o conhecimento nasce da interação entre o que o sujeito observa e o sentido que ele atribui ao observado.",
       "ordem": 12,
-      "centralidade": 0.0818,
+      "centralidade": 0.0545,
       "evidencia": [
         "Explica por que a observação não é neutra nesse paradigma",
         "Reconhece o interpretativismo em uma pesquisa com entrevistas abertas"
@@ -6842,7 +6842,7 @@
       "nome": "Quantitativa, qualitativa e mista",
       "descricao": "Classificação quanto à abordagem. A quantitativa mede, testa hipóteses formuladas antes da coleta, usa estatística e busca generalização. A qualitativa trabalha com dados descritivos, contato direto, entrevistas abertas e interpretação, e pode refinar hipóteses antes, durante ou depois da coleta. A mista usa um método para ampliar ou complementar o outro.",
       "ordem": 15,
-      "centralidade": 0.0727,
+      "centralidade": 0.0455,
       "evidencia": [
         "Escolhe a abordagem adequada para um problema dado",
         "Diz em que momento a hipótese aparece em cada abordagem"
@@ -6865,7 +6865,7 @@
       "nome": "Exploratória, descritiva e explicativa",
       "descricao": "Classificação quanto aos objetivos. A exploratória serve a objeto pouco estudado e levanta padrões, ideias e hipóteses. A descritiva retrata em detalhe um fenômeno, população ou conjunto de características. A explicativa busca fundamentos, causas e razões do fenômeno.",
       "ordem": 16,
-      "centralidade": 0.0636,
+      "centralidade": 0.0091,
       "evidencia": [
         "Classifica um objetivo de pesquisa nos três tipos",
         "Explica por que um tema sem estudos anteriores pede pesquisa exploratória"
@@ -6888,7 +6888,7 @@
       "nome": "Bibliográfica e documental",
       "descricao": "Dois procedimentos técnicos. A bibliográfica se apoia em livros, artigos e fontes teóricas já analisadas, exigindo seleção criteriosa e atualizada. A documental usa documentos de primeira mão, ainda sem tratamento analítico anterior.",
       "ordem": 17,
-      "centralidade": 0.0182,
+      "centralidade": 0.0091,
       "evidencia": [
         "Classifica uma fonte como bibliográfica ou documental",
         "Justifica a escolha do procedimento pelo tipo de material disponível"
@@ -6934,7 +6934,7 @@
       "nome": "Survey e estudo de campo",
       "descricao": "O levantamento ou survey interroga diretamente as pessoas, geralmente por questionário, e costuma produzir descrição quantitativa com amostragem. O estudo de campo observa um grupo ou comunidade na sua estrutura social e na interação cotidiana.",
       "ordem": 19,
-      "centralidade": 0.0091,
+      "centralidade": 0.0364,
       "evidencia": [
         "Escolhe entre survey e estudo de campo para um problema dado",
         "Explica por que o survey pede amostra e o campo pede permanência"
@@ -6980,7 +6980,7 @@
       "nome": "População e amostra",
       "descricao": "População é o conjunto completo de elementos que compartilham os parâmetros relevantes para a pesquisa; amostra é o subgrupo efetivamente observado ou analisado. A amostra precisa ser representativa do objetivo do estudo e viável em tempo, acesso e recursos.",
       "ordem": 21,
-      "centralidade": 0.0364,
+      "centralidade": 0.0091,
       "evidencia": [
         "Delimita população e amostra em um caso concreto",
         "Explica por que a amostra afeta o alcance das conclusões"
@@ -7003,7 +7003,7 @@
       "nome": "Amostragem probabilística e não probabilística",
       "descricao": "Na probabilística todos os elementos têm chance conhecida de seleção, como no sorteio e na estratificada proporcional. Na não probabilística a escolha depende de critérios do pesquisador: conveniência, quotas, bola de neve, casos típicos, críticos ou contrastantes.",
       "ordem": 22,
-      "centralidade": 0.0091,
+      "centralidade": 0,
       "evidencia": [
         "Classifica uma técnica de seleção nos dois grupos",
         "Descreve como funciona a bola de neve e quando ela é útil"
@@ -7068,7 +7068,7 @@
       "nome": "Projeto de pesquisa e 5W2H",
       "descricao": "O projeto é o planejamento das atividades a serem desenvolvidas na pesquisa e funciona como documento que explicita as ações. O fluxo básico vai de tema, problema, hipótese, objetivos, metodologia e cronograma, e o 5W2H ajuda a clarificar o que será feito, por que, onde, quando, por quem, como e com que custo.",
       "ordem": 25,
-      "centralidade": 0.1364,
+      "centralidade": 0.1545,
       "evidencia": [
         "Diz para que serve o projeto antes de começar a coletar dados",
         "Usa o 5W2H para conferir se o projeto está completo"
@@ -7091,7 +7091,7 @@
       "nome": "Tema e problema de pesquisa",
       "descricao": "O tema é o assunto geral e precisa ser delimitado para se tornar investigável. O problema é a questão não resolvida que será objeto de estudo, e deve ser claro, relevante e possível de responder.",
       "ordem": 26,
-      "centralidade": 0.0727,
+      "centralidade": 0.0455,
       "evidencia": [
         "Transforma um tema amplo em um problema delimitado",
         "Escreve o problema em forma de pergunta respondível"
@@ -7229,7 +7229,7 @@
       "nome": "Formatação ABNT",
       "descricao": "Papel A4, texto em um só lado, espaçamento 1,5 e alinhamento justificado; margens esquerda e superior de 3 cm, direita e inferior de 2 cm; texto principal em corpo 12 e elementos auxiliares em 10; citação longa com recuo de 4 cm. A paginação é contada desde o início mas aparece a partir da introdução, em algarismos arábicos no canto superior direito; siglas vêm por extenso na primeira ocorrência e o resumo é parágrafo único com 3 a 5 palavras-chave.",
       "ordem": 32,
-      "centralidade": 0.0364,
+      "centralidade": 0.0182,
       "evidencia": [
         "Configura margens, fonte e espaçamento de um trabalho",
         "Diz onde e a partir de qual página o número aparece"
@@ -7276,7 +7276,7 @@
       "nome": "Citação direta",
       "descricao": "É a transcrição literal das palavras do autor. Até três linhas fica dentro do texto entre aspas; com mais de três linhas exige recuo de 4 cm, fonte 10 e destaque, sempre com indicação de autor, ano e página.",
       "ordem": 34,
-      "centralidade": 0.0182,
+      "centralidade": 0,
       "evidencia": [
         "Formata uma citação de cinco linhas com recuo, corpo 10 e aspas",
         "Decide se a citação entra no corpo do texto ou em bloco recuado"
@@ -7345,7 +7345,7 @@
       "nome": "Instrumentos de coleta",
       "descricao": "A coleta é a pesquisa propriamente dita: levantar as informações necessárias para responder ao problema e atingir os objetivos. Os instrumentos podem ser estruturados (planejados e padronizados, com maior comparabilidade), semiestruturados (partes definidas com margem de adaptação) ou não estruturados (abertos e centrados no depoente).",
       "ordem": 37,
-      "centralidade": 0.0364,
+      "centralidade": 0.0091,
       "evidencia": [
         "Escolhe o grau de estruturação adequado ao objetivo da coleta",
         "Explica o que se ganha e o que se perde ao padronizar o instrumento"
@@ -7542,6 +7542,1043 @@
         "Análise de dados quantitativos e qualitativos"
       ],
       "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_01",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Fundamentos do marketing",
+      "nome": "Definição de marketing",
+      "descricao": "Marketing é a atividade dirigida à satisfação de necessidades e desejos por meio de processos de troca. É um processo social e gerencial pelo qual pessoas e grupos obtêm o que necessitam e desejam com criação, oferta e negociação de produtos e serviços de valor. A versão curta de Kotler é: suprir necessidades gerando lucro.",
+      "ordem": 1,
+      "centralidade": 0.3364,
+      "evidencia": [
+        "Define marketing como satisfação de necessidades e desejos por processos de troca",
+        "Reduz a definição à forma curta de Kotler, suprir necessidades gerando lucro",
+        "Recusa a redução do marketing a propaganda"
+      ],
+      "checagem": "Qual é a definição mais sucinta de marketing e o que a troca tem a ver com ela?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Introdução ao Marketing"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_02",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Fundamentos do marketing",
+      "nome": "Prospect e concorrência",
+      "descricao": "O profissional de marketing busca uma resposta (atenção, compra, voto, doação) de outra parte, o cliente potencial ou prospect. Para conseguir essa resposta, a empresa precisa realizar trocas de forma mais eficiente que os concorrentes, que podem ser rivais diretos ou substitutos.",
+      "ordem": 2,
+      "centralidade": 0,
+      "evidencia": [
+        "Identifica o prospect como a parte de quem se busca uma resposta",
+        "Cita respostas possíveis além da compra, como atenção, voto e doação",
+        "Diferencia concorrência rival de concorrência substituta"
+      ],
+      "checagem": "Quem é o prospect e por que a troca precisa ser mais eficiente que a do concorrente?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Introdução ao Marketing"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_03",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Fundamentos do marketing",
+      "nome": "Dez campos de aplicação do marketing",
+      "descricao": "O marketing se aplica a dez tipos de oferta: bens, serviços, eventos, experiências, pessoas, lugares, propriedades, organizações, informações e ideias. Bens são tangíveis, serviços não podem ser estocados e dependem do atendimento, e ideias buscam adesão e mudança de atitude, como vacinação e segurança no trânsito.",
+      "ordem": 3,
+      "centralidade": 0,
+      "evidencia": [
+        "Cita os dez campos de aplicação do marketing",
+        "Classifica um caso real no campo correto, como campanha de vacinação em ideias",
+        "Justifica por que serviços dependem mais do atendimento do que bens"
+      ],
+      "checagem": "Uma campanha de vacinação e a divulgação de uma cidade turística são marketing de quê?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Introdução ao Marketing"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_04",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Conceitos centrais",
+      "nome": "Necessidade, desejo e demanda",
+      "descricao": "Necessidades são inatas (ar, comida, roupa, abrigo) e o marketing não as cria: ele cria desejos, que são necessidades direcionadas a objetos específicos. Demanda é o desejo sustentado pela capacidade de compra. O material ainda classifica cinco tipos de necessidade: declaradas, reais, não declaradas, algo mais e secretas.",
+      "ordem": 4,
+      "centralidade": 0.3091,
+      "evidencia": [
+        "Explica a cadeia de necessidade, desejo e demanda com um exemplo",
+        "Responde que o marketing não cria necessidades e sim desejos",
+        "Aponta a capacidade de compra como o que separa desejo de demanda",
+        "Dá exemplo de necessidade secreta e de necessidade não declarada"
+      ],
+      "checagem": "O marketing cria necessidades? E qual é a diferença entre desejo e demanda?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Introdução ao Marketing",
+        "Comportamento do Consumidor"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_05",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Conceitos centrais",
+      "nome": "Oferta, marca e valor",
+      "descricao": "Oferta é a proposta de mercado, tangível ou intangível, posicionada na mente do consumidor-alvo. Marca é a oferta de uma fonte conhecida, e as empresas trabalham para que a imagem de marca seja sólida, favorável e exclusiva. Valor é a relação entre benefícios e custos, resumida na tríade qualidade, serviço e preço.",
+      "ordem": 5,
+      "centralidade": 0.2091,
+      "evidencia": [
+        "Diferencia oferta de marca",
+        "Cita os três elementos da tríade do valor",
+        "Explica valor como relação entre benefícios e custos"
+      ],
+      "checagem": "Do que é composta a tríade do valor e o que separa oferta de marca?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Introdução ao Marketing"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_06",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Conceitos centrais",
+      "nome": "Satisfação e encantamento",
+      "descricao": "A satisfação nasce da comparação entre desempenho e expectativa. Desempenho abaixo da expectativa gera decepção, desempenho igual gera satisfação e desempenho acima gera encantamento. Por isso prometer mais do que se entrega destrói satisfação mesmo com um produto bom.",
+      "ordem": 6,
+      "centralidade": 0.2,
+      "evidencia": [
+        "Nomeia os três resultados da comparação entre desempenho e expectativa",
+        "Explica por que prometer demais reduz a satisfação",
+        "Aponta o encantamento como desempenho acima da expectativa"
+      ],
+      "checagem": "Quando o desempenho supera a expectativa, qual é o resultado?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Introdução ao Marketing"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_07",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Demanda e comportamento do consumidor",
+      "nome": "Oito tipos de demanda",
+      "descricao": "São oito estados de demanda que o profissional deve reconhecer: negativa (o produto é evitado ou rejeitado), inexistente (não conhecem ou não se interessam), latente (a necessidade é forte e nenhum produto a satisfaz), em declínio, irregular (compras sazonais), plena (situação ideal), excessiva (mais consumidores do que produtos disponíveis) e indesejada (atração por produtos de consequência negativa).",
+      "ordem": 7,
+      "centralidade": 0,
+      "evidencia": [
+        "Nomeia os oito estados de demanda",
+        "Classifica um caso concreto no estado certo, como sorvete no inverno em demanda irregular",
+        "Distingue demanda latente de demanda inexistente"
+      ],
+      "checagem": "Como se chama a situação com mais consumidores querendo comprar do que produtos disponíveis?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Introdução ao Marketing",
+        "Comportamento do Consumidor"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_08",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Demanda e comportamento do consumidor",
+      "nome": "Pirâmide de Maslow",
+      "descricao": "A hierarquia de Maslow organiza as necessidades em cinco níveis, da base ao topo: fisiológicas, segurança, sociais, estima e autorrealização. Seguros e garantias falam com segurança, marcas aspiracionais e produtos premium falam com estima, cursos e experiências transformadoras falam com autorrealização. Saber o nível ajuda a posicionar produto e mensagem.",
+      "ordem": 8,
+      "centralidade": 0,
+      "evidencia": [
+        "Ordena os cinco níveis da base ao topo",
+        "Aponta em que nível um seguro de vida atua",
+        "Liga um nível da pirâmide a uma decisão de posicionamento"
+      ],
+      "checagem": "Qual é o nível mais alto da pirâmide e que tipo de produto dialoga com ele?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Comportamento do Consumidor"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_09",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Mix de marketing",
+      "nome": "Mix de marketing: produto, praça e promoção",
+      "descricao": "O mix é o conjunto de ferramentas usadas para alcançar objetivos de marketing no mercado-alvo, e sua finalidade declarada é gerar desejo de compra. Produto é a solução oferecida, com qualidade, design, embalagem, marca e garantia. Praça é onde e como o cliente acessa o produto, incluindo canais, estoque, logística e entrega. Promoção é a comunicação que torna a oferta conhecida e desejada.",
+      "ordem": 9,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Diz para que serve o mix de marketing",
+        "Classifica decisões de empresa em produto, praça ou promoção",
+        "Reconhece que esses três Ps representam custo e não receita"
+      ],
+      "checagem": "Frete grátis e prazo de entrega são decisões de qual P, e qual é a finalidade do mix?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Mix de Marketing"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_10",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Mix de marketing",
+      "nome": "Preço, o único P que gera receita",
+      "descricao": "O preço é o único P do mix que gera receita, enquanto produto, praça e promoção representam custo. Ele também sinaliza posicionamento e deve considerar custos, concorrência, percepção de valor, margem e capacidade de pagamento do público.",
+      "ordem": 10,
+      "centralidade": 0,
+      "evidencia": [
+        "Justifica por que só o preço gera receita",
+        "Lista o que entra na decisão de preço",
+        "Explica o preço como sinal de posicionamento"
+      ],
+      "checagem": "Qual é o único P do mix de marketing que gera receita e por quê?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Mix de Marketing"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_11",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Mix de marketing",
+      "nome": "Pessoas, processos, posicionamento e performance",
+      "descricao": "Os 8 Ps somam quatro elementos aos 4 Ps clássicos. Pessoas são colaboradores, parceiros e clientes envolvidos na experiência, decisivos em serviços. Processos são os fluxos de pedido, pagamento, atendimento, suporte, troca e pós-venda, que reduzem atrito. Posicionamento é o lugar que a marca ocupa na mente do cliente. Performance é o acompanhamento por métricas como vendas, retenção, satisfação, conversão e lucratividade.",
+      "ordem": 11,
+      "centralidade": 0,
+      "evidencia": [
+        "Nomeia os quatro Ps que os 8 Ps acrescentam",
+        "Explica que o sétimo P trata da percepção do cliente",
+        "Propõe métricas de performance para avaliar uma campanha",
+        "Aponta um processo que estraga a experiência de compra"
+      ],
+      "checagem": "O que os Ps de pessoas, processos, posicionamento e performance acrescentam aos 4 Ps?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Mix de Marketing"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_12",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Mix de marketing",
+      "nome": "Os 4 Cs do cliente",
+      "descricao": "Os 4 Cs reescrevem o mix na ótica do cliente: produto vira cliente cujos desejos devem ser satisfeitos, preço vira custo que o cliente considera justo, praça vira conveniência de acesso e promoção vira comunicação, entendida como canal para o consumidor.",
+      "ordem": 12,
+      "centralidade": 0,
+      "evidencia": [
+        "Traduz cada P no C correspondente",
+        "Explica por que a tradução muda o foco da empresa para o cliente",
+        "Diz o que substitui a praça nos 4 Cs"
+      ],
+      "checagem": "Nos 4 Cs, o que substitui a praça e por quê?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Mix de Marketing"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_13",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Marketing de relacionamento",
+      "nome": "Marketing de relacionamento e branding",
+      "descricao": "É o conjunto de estratégias que busca fidelizar clientes, oferecendo benefícios para garantir a satisfação e o sucesso deles. O foco é o relacionamento contínuo e não a venda única, porque reter custa menos do que conquistar. Uma das consequências é o branding: fortalecer a imagem e os significados da marca, que fica mais lembrada, confiável e diferenciada.",
+      "ordem": 13,
+      "centralidade": 0.1909,
+      "evidencia": [
+        "Diz o objetivo central do marketing de relacionamento",
+        "Justifica por que reter custa menos que conquistar",
+        "Define branding como construção e fortalecimento da imagem da marca",
+        "Liga a qualidade do relacionamento à força da marca"
+      ],
+      "checagem": "Qual é o objetivo do marketing de relacionamento e como ele fortalece o branding?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Marketing de Relacionamento"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_14",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Marketing de relacionamento",
+      "nome": "Da atração ao divulgador",
+      "descricao": "A jornada do relacionamento tem cinco degraus: atrair, conquistar, reter, fidelizar e divulgador. No último degrau o cliente satisfeito gera o efeito boca a boca e passa a trazer novos clientes, o que o material chama de efeito multiplicador.",
+      "ordem": 14,
+      "centralidade": 0,
+      "evidencia": [
+        "Ordena os cinco degraus da jornada de relacionamento",
+        "Explica o efeito boca a boca como resultado do último degrau",
+        "Identifica em que degrau o cliente começa a divulgar a marca"
+      ],
+      "checagem": "Quais são as etapas entre atrair um cliente e transformá-lo em divulgador?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Marketing de Relacionamento"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_15",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Marketing de relacionamento",
+      "nome": "CRM e ferramentas de relacionamento",
+      "descricao": "O CRM (Customer Relationship Management) registra todos os pontos de contato e o histórico do cliente. Ao lado dele operam gestão de redes sociais (responder a qualquer feedback), programas de fidelidade (pontos, descontos e brindes), email marketing (conteúdo, aniversário e ofertas) e WhatsApp Business (catálogo, respostas automáticas e tags de organização).",
+      "ordem": 15,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Diz o que a sigla CRM significa e o que o sistema guarda",
+        "Escolhe a ferramenta adequada para um objetivo de relacionamento",
+        "Cita o que o WhatsApp Business oferece ao atendimento"
+      ],
+      "checagem": "O que é CRM e que outras ferramentas sustentam o marketing de relacionamento?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Marketing de Relacionamento",
+        "Ferramentas do Marketing Eletrônico"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_16",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Pesquisa de marketing",
+      "nome": "Pesquisa de marketing",
+      "descricao": "É o conjunto de atividades sistemáticas de concepção, coleta, análise e edição de relatórios e conclusões relevantes sobre situações de marketing. Não se confunde com pesquisa de preço nem com olhar redes sociais: o que a define é o método e o vínculo com uma decisão a tomar.",
+      "ordem": 16,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Define pesquisa de marketing como processo sistemático de concepção, coleta, análise e relato",
+        "Distingue pesquisa de marketing de uma consulta informal",
+        "Diz a que decisão de marketing a pesquisa serve"
+      ],
+      "checagem": "O que é pesquisa de marketing e o que a distingue de uma consulta informal?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Pesquisa de Marketing"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_17",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Pesquisa de marketing",
+      "nome": "Seis etapas da pesquisa de marketing",
+      "descricao": "A pesquisa segue seis etapas: definição do problema (transformar dúvida ampla em pergunta investigável), desenvolvimento do plano (objetivos, fontes, método, público, instrumento, prazo e orçamento), coleta de informações (a mais dispendiosa e sujeita a erros), análise das informações, apresentação dos resultados e tomada de decisão.",
+      "ordem": 17,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Ordena as seis etapas da pesquisa",
+        "Aponta a coleta como a etapa mais dispendiosa e sujeita a erros",
+        "Transforma uma dúvida ampla em pergunta investigável",
+        "Explica o que a etapa de plano define"
+      ],
+      "checagem": "Quais são as seis etapas da pesquisa e qual delas é a mais dispendiosa?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Pesquisa de Marketing"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_18",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Pesquisa de marketing",
+      "nome": "Dados primários e dados secundários",
+      "descricao": "Dados primários são coletados pela primeira vez para o problema atual: exigem mais tempo e custo, mas podem ser desenhados exatamente para a pergunta da pesquisa. Dados secundários já existiam antes, como IBGE, relatórios internos, estudos de mercado e bases públicas: são mais rápidos, porém podem não responder tudo.",
+      "ordem": 18,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Separa dado primário de dado secundário pela origem",
+        "Cita uma fonte de dado secundário",
+        "Escolhe o tipo de dado adequado ao prazo e ao orçamento da pesquisa"
+      ],
+      "checagem": "Qual é a diferença entre dados primários e secundários e quando cada um serve?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Pesquisa de Marketing"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_19",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Pesquisa de marketing",
+      "nome": "Instrumentos de coleta de dados",
+      "descricao": "São três os instrumentos apresentados: questionários, o mais usado para dados primários, que permitem comparar respostas de muitas pessoas quando as perguntas são claras e bem estruturadas; pesquisa qualitativa, que explora percepções, sentimentos e motivações por entrevistas e grupos focais; e instrumentos mecânicos, que registram comportamento, como medidores de audiência, rastreamento de navegação, mapas de calor e sensores em loja.",
+      "ordem": 19,
+      "centralidade": 0,
+      "evidencia": [
+        "Aponta o questionário como o instrumento mais usado para dados primários",
+        "Escolhe pesquisa qualitativa quando o objetivo é entender o porquê do comportamento",
+        "Cita um instrumento mecânico de coleta"
+      ],
+      "checagem": "Qual é o instrumento mais usado na coleta de dados primários e para que serve a pesquisa qualitativa?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Pesquisa de Marketing"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_20",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Segmentação do mercado-alvo",
+      "nome": "Segmentação de mercado",
+      "descricao": "Segmentar é dividir um mercado em grupos de compradores com necessidades, desejos ou comportamentos semelhantes, para adaptar oferta e mensagem a cada grupo em vez de falar com todos do mesmo jeito.",
+      "ordem": 20,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Define segmentação como divisão do mercado em grupos semelhantes",
+        "Explica por que tratar todos de forma genérica desperdiça esforço",
+        "Distingue segmentar de baixar preço para atingir mais gente"
+      ],
+      "checagem": "O que é segmentação de mercado e qual problema ela resolve?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Segmentação do Mercado-alvo"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_21",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Segmentação do mercado-alvo",
+      "nome": "As quatro variáveis de segmentação",
+      "descricao": "São quatro as variáveis de segmentação: geográfica (países, regiões, cidades), demográfica (características mensuráveis como idade, sexo e renda), psicográfica (personalidade, estilo de vida, valores e atitudes) e comportamental (conhecimento, atitude, uso ou reação ao produto, incluindo o grau de fidelidade).",
+      "ordem": 21,
+      "centralidade": 0,
+      "evidencia": [
+        "Nomeia as quatro variáveis de segmentação",
+        "Classifica um critério concreto na variável correta, como estilo de vida em psicográfica",
+        "Diferencia variável demográfica de variável psicográfica"
+      ],
+      "checagem": "Qual variável de segmentação considera estilos de vida e valores?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Segmentação do Mercado-alvo",
+        "Comportamento do Consumidor"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_22",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Segmentação do mercado-alvo",
+      "nome": "Cinco níveis de segmentação",
+      "descricao": "Os níveis vão do mais amplo ao mais fino: marketing de massa (público único, ganha escala e ignora diferenças), segmentado (grupos amplos com necessidades parecidas), de nicho (grupo menor e específico, útil quando os recursos são limitados), local (cidade, bairro, região ou comunidade) e individual (oferta personalizada por cliente).",
+      "ordem": 22,
+      "centralidade": 0,
+      "evidencia": [
+        "Ordena os cinco níveis do mais amplo ao mais fino",
+        "Indica o marketing de nicho quando os recursos são limitados",
+        "Diferencia marketing local de marketing individual"
+      ],
+      "checagem": "Quando o marketing concentrado, de nicho, é a escolha indicada?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Segmentação do Mercado-alvo"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_23",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Segmentação do mercado-alvo",
+      "nome": "Seis critérios de uma boa segmentação",
+      "descricao": "Um segmento útil precisa ser identificável (dá para reconhecer quem pertence a ele), mensurável (dá para estimar tamanho, renda ou demanda), substancial (grande e rentável o suficiente para justificar estratégia própria), acessível (alcançável por canais viáveis), diferenciável (responde de forma diferente dos demais) e acionável (a empresa consegue criar ações para ele).",
+      "ordem": 23,
+      "centralidade": 0,
+      "evidencia": [
+        "Nomeia os seis critérios de uma boa segmentação",
+        "Explica o critério substancial como tamanho e rentabilidade suficientes",
+        "Rejeita um segmento que não responde de forma diferente dos demais"
+      ],
+      "checagem": "O que o critério substancial exige de um segmento?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Segmentação do Mercado-alvo"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_24",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Marketing 4.0 e consumidor conectado",
+      "nome": "Marketing 4.0: tradicional e digital integrados",
+      "descricao": "Marketing 4.0 integra marketing tradicional e digital em um mundo conectado, sem abandonar o tradicional. O papel do tradicional é construir consciência e interesse, o do digital é aprofundar o relacionamento e levar à ação. O poder se desloca para consumidores e comunidades, que pesquisam, comparam, avaliam, recomendam e influenciam outras pessoas.",
+      "ordem": 24,
+      "centralidade": 0.1636,
+      "evidencia": [
+        "Explica que o 4.0 integra e não substitui o marketing tradicional",
+        "Divide os papéis do tradicional e do digital na jornada",
+        "Descreve o consumidor conectado como quem pesquisa, compara e influencia"
+      ],
+      "checagem": "O Marketing 4.0 substitui o marketing tradicional? Qual papel cabe a cada um?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital",
+        "Marketing digital X marketing tradicional"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_25",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Marketing 4.0 e consumidor conectado",
+      "nome": "As três transições do Marketing 4.0",
+      "descricao": "São três transições. Do exclusivo ao inclusivo: o poder se distribui, setores se integram e a marca dialoga com públicos plurais. Do vertical ao horizontal: a confiança flui entre pares, a inovação vem de fora e a competição é lateral, como Uber e Airbnb, então marcas competem por autenticidade. Do individual ao social: a decisão de compra é moldada pela conformidade social e o boca a boca vira a influência mais credível.",
+      "ordem": 25,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Nomeia as três transições do Marketing 4.0",
+        "Explica a transição do vertical ao horizontal com um exemplo de competição lateral",
+        "Liga a transição do individual ao social ao peso do boca a boca"
+      ],
+      "checagem": "Quais são as três transições do Marketing 4.0?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital",
+        "Comportamento do Consumidor"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_26",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Marketing 4.0 e consumidor conectado",
+      "nome": "Os três níveis de conectividade",
+      "descricao": "A conectividade é a infraestrutura do Marketing 4.0 e tem três níveis. Móvel é o básico: a internet por dispositivos móveis, com o smartphone barato como porta de entrada da maioria dos novos usuários. Experiencial é o intermediário: a internet aprofunda os pontos de contato, e o que importa é a profundidade, não o alcance. Social é o supremo: a força da conexão dentro das comunidades de consumidores.",
+      "ordem": 26,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Nomeia os três níveis de conectividade e os ordena",
+        "Explica por que o nível experiencial trata de profundidade e não de alcance",
+        "Aponta a conectividade social como o nível supremo"
+      ],
+      "checagem": "Quais são os três níveis de conectividade e qual deles é o supremo?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_27",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Marketing 4.0 e consumidor conectado",
+      "nome": "Os três paradoxos da conectividade",
+      "descricao": "A conectividade traz três paradoxos. On-line contra off-line: não se substituem, coexistem, e num mundo high-tech o envolvimento humano high-touch vira diferencial. Informado contra distraído: a mesma rede protege e dispersa, com o intervalo de atenção caindo de 12 para 8 segundos. Defesa positiva contra negativa: marcas de DNA forte têm adoradores e odiadores, e o objetivo é cultivar adoradores, não zerar críticos.",
+      "ordem": 27,
+      "centralidade": 0,
+      "evidencia": [
+        "Nomeia os três paradoxos da conectividade",
+        "Explica por que on-line e off-line não se substituem",
+        "Justifica por que críticos podem ativar os defensores da marca"
+      ],
+      "checagem": "Quais são os três paradoxos da conectividade e por que ter odiadores pode ser saudável?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital",
+        "Marketing digital X marketing tradicional"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_28",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Marketing 4.0 e consumidor conectado",
+      "nome": "Subculturas digitais JMN",
+      "descricao": "Três subculturas concentram a influência digital. Jovens são adotantes iniciais e definidores de tendência, levam produtos do nicho ao mainstream e dão a participação na mente. Mulheres são coletoras de informação e compradoras holísticas, pesquisam em espiral e decidem pela família, com fidelidade e recomendação mais altas, e dão a participação no mercado. Netizens são conectores sociais e criadores de conteúdo, e dão a participação no coração.",
+      "ordem": 28,
+      "centralidade": 0,
+      "evidencia": [
+        "Diz o que significa a sigla JMN",
+        "Liga cada subcultura à participação que entrega, mente, mercado ou coração",
+        "Explica por que as mulheres apresentam fidelidade e recomendação mais altas"
+      ],
+      "checagem": "Quem são os JMN e o que cada grupo conquista?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital",
+        "Comportamento do Consumidor"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_29",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Jornada dos 5 As",
+      "nome": "A jornada dos 5 As",
+      "descricao": "O caminho do consumidor tem cinco etapas: assimilação (exposição passiva a uma longa lista de marcas), atração (a lista curta das marcas que interessam), arguição (pesquisa ativa, pede conselho, lê avaliações, compara preços e testa), ação (compra, consumo e pós-venda) e apologia (retenção, recompra e defesa da marca diante de outros). É na arguição que a jornada muda de individual para social.",
+      "ordem": 29,
+      "centralidade": 0.0364,
+      "evidencia": [
+        "Ordena as cinco etapas da jornada e diz o que acontece em cada uma",
+        "Aponta a arguição como o ponto em que a jornada vira social",
+        "Reconhece que a ação não termina na compra e inclui uso e pós-venda"
+      ],
+      "checagem": "Quais são os 5 As e o que o consumidor faz na etapa de arguição?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital",
+        "Comportamento do Consumidor"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_30",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Jornada dos 5 As",
+      "nome": "Caminho em espiral, não funil",
+      "descricao": "Os 5 As substituem o funil linear de AIDA e dos 4 As. No funil, a atitude individual decide a compra e a fidelidade é recompra. Nos 5 As, entra a influência social da comunidade e a fidelidade vira disposição de defender, mesmo sem recomprar. O caminho é em espiral: o consumidor pula etapas e volta atrás, o número de marcas consideradas expande e estreita, e o tempo em cada etapa varia por categoria.",
+      "ordem": 30,
+      "centralidade": 0,
+      "evidencia": [
+        "Explica por que o caminho é espiral e não funil",
+        "Dá um exemplo de salto de etapa e de retorno na jornada",
+        "Diferencia fidelidade como recompra de fidelidade como defesa da marca"
+      ],
+      "checagem": "O que muda do funil clássico para os 5 As?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital",
+        "Comportamento do Consumidor"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_31",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Jornada dos 5 As",
+      "nome": "As três fontes de influência",
+      "descricao": "Em cada etapa três forças disputam a decisão. A influência externa vem da marca por propaganda e comunicação: é controlável, mas a menos confiável. A influência dos outros vem de amigos, família e comunidade, por boca a boca, redes sociais e avaliações: é a mais confiável e atinge o pico na arguição. A influência própria vem da experiência pessoal e predomina na apologia e nos clientes experientes.",
+      "ordem": 31,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Nomeia as três fontes de influência",
+        "Aponta em que etapa a influência dos outros atinge o pico",
+        "Explica por que a influência externa é controlável e ainda assim a menos confiável"
+      ],
+      "checagem": "Quais são as três fontes de influência e qual delas pesa mais na arguição?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital",
+        "Comportamento do Consumidor"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_32",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Jornada dos 5 As",
+      "nome": "CAC, CDM e gargalo da jornada",
+      "descricao": "O CAC (coeficiente de ação de compra) mede a conversão de consciência em compra: quem compra dividido por quem conhece a marca. O CDM (coeficiente de defesa da marca) mede a conversão de consciência em recomendação, e o ideal seria 1. A menor taxa de conversão entre etapas é o gargalo que limita todo o caminho. Na operação digital, esses coeficientes convivem com conversão, abandono de carrinho, retenção, recompra, valor do cliente (CLV) e satisfação.",
+      "ordem": 32,
+      "centralidade": 0,
+      "evidencia": [
+        "Calcula CAC e CDM a partir de quem conhece, quem compra e quem recomenda",
+        "Diferencia o que o CAC mede do que o CDM mede",
+        "Identifica o gargalo da jornada pela menor taxa de conversão entre etapas",
+        "Cita as métricas de operação digital que acompanham esses coeficientes"
+      ],
+      "checagem": "O CDM mede a conversão de consciência em quê, e como se acha o gargalo da jornada?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_33",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Jornada dos 5 As",
+      "nome": "Arguição e prova social no comércio eletrônico",
+      "descricao": "A arguição é a etapa mais decisiva da loja virtual: antes de comprar, o cliente compara preço, frete, prazo, reputação, comentários, vídeos, fotos reais, política de troca e meios de pagamento. Quanto maior o risco percebido, maior a necessidade de prova e confiança, e a prova social, com estrelas, comentários e unboxings, vira fator de conversão. A loja não compete apenas por anúncio e preço.",
+      "ordem": 33,
+      "centralidade": 0,
+      "evidencia": [
+        "Explica por que a arguição pesa mais no comércio eletrônico",
+        "Lista os elementos que o cliente compara antes de comprar em uma loja virtual",
+        "Relaciona risco percebido com necessidade de prova social"
+      ],
+      "checagem": "Por que a arguição é a etapa mais decisiva em uma loja virtual?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Comércio eletrônico: B2B, B2C, C2C, mobile commerce, e-government etc.",
+        "Marketing digital"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_34",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Marketing 5.0 e martech",
+      "nome": "Da era 1.0 à era 5.0 do marketing",
+      "descricao": "As eras do marketing mudam de foco: 1.0 é centrado no produto, vender o que se fabrica; 2.0 é centrado no consumidor, satisfazer e reter; 3.0 é centrado no ser humano, com valores, propósito e impacto social; 4.0 vai do tradicional ao digital, integrando on-line e off-line; e 5.0 é tecnologia para a humanidade, com next tech ao longo da jornada.",
+      "ordem": 34,
+      "centralidade": 0.0636,
+      "evidencia": [
+        "Ordena as cinco eras e nomeia o foco de cada uma",
+        "Aponta o marketing 3.0 como o da centralidade humana",
+        "Explica por que o 4.0 é descrito como a passagem do tradicional ao digital"
+      ],
+      "checagem": "Qual é o foco de cada era, do marketing 1.0 ao 5.0?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital",
+        "Marketing digital X marketing tradicional"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_35",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Marketing 5.0 e martech",
+      "nome": "Marketing 5.0 e as next techs",
+      "descricao": "Marketing 5.0 é a aplicação de tecnologias que imitam o ser humano (next tech) para criar, comunicar, entregar e aumentar valor ao longo da jornada do cliente, na equação 5.0 igual a 3.0 (centralidade humana) mais 4.0 (empoderamento tecnológico). As next techs são inteligência artificial, processamento de linguagem natural, sensores e biometria, robótica e RPA, realidade aumentada e virtual, IoT e blockchain.",
+      "ordem": 35,
+      "centralidade": 0.0545,
+      "evidencia": [
+        "Define Marketing 5.0 como aplicação de tecnologias que imitam o humano na jornada do cliente",
+        "Escreve a equação que soma centralidade humana e empoderamento tecnológico",
+        "Cita next techs com um uso concreto de cada, como recomendação por IA e chatbot por linguagem natural"
+      ],
+      "checagem": "O que é Marketing 5.0 e quais tecnologias ele chama de next tech?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital",
+        "Ferramentas do Marketing Eletrônico"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_36",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Marketing 5.0 e martech",
+      "nome": "As duas disciplinas: orientado por dados e ágil",
+      "descricao": "Dos cinco componentes do Marketing 5.0, duas são disciplinas de base. Marketing orientado por dados é montar um ecossistema integrado de dados (sociais, web, transações, IoT, atendimento) sob uma identidade única do cliente para decidir com fatos, tendo como meta os segmentos de um. Marketing ágil é execução por equipes pequenas, descentralizadas e multidisciplinares que criam, testam com MVP e ajustam rápido, com experimentação contínua e testes A/B em anúncios, páginas, ofertas e checkout.",
+      "ordem": 36,
+      "centralidade": 0.0364,
+      "evidencia": [
+        "Nomeia as duas disciplinas de base do Marketing 5.0",
+        "Explica o que um ecossistema de dados sob identidade única permite decidir",
+        "Descreve uma prática de marketing ágil em campanha digital, como testar versões e ajustar com dados reais"
+      ],
+      "checagem": "Quais são as duas disciplinas-base do Marketing 5.0 e o que cada uma exige da empresa?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital",
+        "Ferramentas do Marketing Eletrônico"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_37",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Marketing 5.0 e martech",
+      "nome": "As três aplicações: preditivo, contextual e aumentado",
+      "descricao": "As três aplicações entregam valor sobre as disciplinas. Preditivo usa aprendizado de máquina para prever antes de lançar: valor do cliente, churn, resposta a campanhas e sucesso de produtos. Contextual usa sensores e IA para entregar a interação certa na hora e no lugar certos. Aumentado potencializa e não substitui o humano, em camadas onde o digital qualifica e a pessoa fecha, seguindo a pirâmide do conhecimento e o paradoxo de Moravec: a máquina vence na lógica e na escala, o humano na empatia e na criatividade.",
+      "ordem": 37,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Nomeia as três aplicações e diz o que cada uma entrega",
+        "Dá um exemplo de uso do marketing preditivo, como prever abandono ou resposta a campanha",
+        "Divide o trabalho entre máquina e humano usando o paradoxo de Moravec"
+      ],
+      "checagem": "Quais são as três aplicações do Marketing 5.0 e como o aumentado divide o trabalho com o humano?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital",
+        "Ferramentas do Marketing Eletrônico"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_38",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Marketing 5.0 e martech",
+      "nome": "Desafios do Marketing 5.0 e as cinco gerações",
+      "descricao": "Implantar o 5.0 enfrenta três desafios: abismo entre gerações, com cinco gerações no mercado ao mesmo tempo; polarização da prosperidade, com a riqueza em formato de M, a classe média encolhendo e o mercado migrando para luxo ou desconto; e fosso digital, com acesso desigual e medo do desconhecido, que se enfrenta humanizando a tecnologia. As gerações são baby boomers (1946 a 1964), X (1965 a 1980), Y ou millennials (1981 a 1996), Z (1997 a 2009) e alfa (2010 a 2025).",
+      "ordem": 38,
+      "centralidade": 0,
+      "evidencia": [
+        "Nomeia os três desafios de implantação do Marketing 5.0",
+        "Ordena as cinco gerações da mais velha para a mais nova",
+        "Explica a polarização da prosperidade e a escolha entre liderança de custo e experiência premium",
+        "Aponta um traço de consumo da geração Z e da geração alfa"
+      ],
+      "checagem": "Quais são os três desafios do Marketing 5.0 e em que ordem vêm as cinco gerações?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital",
+        "Comportamento do Consumidor"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_39",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Dados, CX e comércio eletrônico",
+      "nome": "Marketing contextual: três níveis de personalização",
+      "descricao": "O marketing contextual se organiza em três níveis. Informação personalizada entrega conteúdo pela localização e perfil, com geofencing, como o cupom liberado quando o cliente passa perto do concorrente. Interação customizada é diálogo nos dois sentidos, com gamificação, progressão e realidade aumentada, como o provador virtual ligado à consulta na loja. Imersão total é experiência sensorial sem emendas entre físico e digital, com AR na loja e provadores inteligentes.",
+      "ordem": 39,
+      "centralidade": 0,
+      "evidencia": [
+        "Ordena os três níveis de personalização do marketing contextual",
+        "Reconhece geofencing como informação personalizada",
+        "Dá um exemplo de imersão total no varejo"
+      ],
+      "checagem": "Quais são os três níveis de personalização do marketing contextual?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Ferramentas do Marketing Eletrônico",
+        "Comércio eletrônico: B2B, B2C, C2C, mobile commerce, e-government etc."
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_40",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Dados, CX e comércio eletrônico",
+      "nome": "Omnicanalidade e experiência integrada",
+      "descricao": "Multicanalidade é estar em vários canais, omnicanalidade é integrar esses canais e o histórico do cliente em uma experiência contínua entre on-line e off-line. Publicidade, busca, conteúdo, página de produto, checkout, entrega, suporte e recompra precisam formar uma jornada coerente. O marketing de conteúdo educa e reduz insegurança, chatbots resolvem dúvidas simples, status de pedido e triagem, e o atendimento em camadas (FAQ, bot, comunidade, atendente e especialista) mantém a pessoa onde empatia e julgamento importam mais.",
+      "ordem": 40,
+      "centralidade": 0,
+      "evidencia": [
+        "Diferencia multicanalidade de omnicanalidade",
+        "Explica para que serve o marketing de conteúdo no comércio eletrônico",
+        "Define o limite do chatbot e quando passar para atendimento humano",
+        "Ordena as camadas de atendimento"
+      ],
+      "checagem": "Qual é a diferença entre multicanalidade e omnicanalidade?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Marketing digital X marketing tradicional",
+        "Ferramentas do Marketing Eletrônico"
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/data.ts, src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_41",
+      "tipo": "CONCEITUAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Dados, CX e comércio eletrônico",
+      "nome": "E-commerce orientado por dados",
+      "descricao": "A operação digital integra navegação, compras, carrinho abandonado, CRM, atendimento, redes sociais, transações, campanhas e pós-venda em um ecossistema único. Conectar as interações de uma mesma pessoa sob identidade única permite personalizar sem tratar cada canal como se fosse um cliente diferente, aproximando a empresa dos segmentos de um. Dado útil não autoriza abuso: consentimento, segurança e transparência sustentam a confiança de longo prazo.",
+      "ordem": 41,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Lista as fontes que compõem o ecossistema de dados de uma loja virtual",
+        "Explica o que a identidade única do cliente resolve",
+        "Define segmentos de um",
+        "Aponta consentimento, segurança e transparência como condição do uso de dados"
+      ],
+      "checagem": "O que é identidade única do cliente e por que ela é condição para os segmentos de um?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Ferramentas do Marketing Eletrônico",
+        "Comércio eletrônico: B2B, B2C, C2C, mobile commerce, e-government etc."
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
+    },
+    {
+      "id": "mt_MKCE_42",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "MKCE",
+      "periodo": 9,
+      "unidade": "Dados, CX e comércio eletrônico",
+      "nome": "Recomendação, up-selling e cross-selling",
+      "descricao": "Sobre os dados integrados operam três mecânicas de venda. Recomendação usa motores que leem padrões de navegação, compra e similaridade para sugerir itens relevantes. Up-selling estimula a versão superior, mais completa ou mais cara do produto considerado. Cross-selling sugere itens complementares à compra principal, como capa e película para um celular, acessórios, serviços ou garantia.",
+      "ordem": 42,
+      "centralidade": 0,
+      "evidencia": [
+        "Diferencia up-selling de cross-selling com exemplo",
+        "Explica em que dados o motor de recomendação se apoia",
+        "Escolhe a mecânica adequada para uma situação concreta de loja virtual"
+      ],
+      "checagem": "Sugerir capa e película para quem compra celular é up-selling ou cross-selling?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Ferramentas do Marketing Eletrônico",
+        "Comércio eletrônico: B2B, B2C, C2C, mobile commerce, e-government etc."
+      ],
+      "fonte": "src/content/marketing-comercio-eletronico/MarketingSections.tsx"
     },
     {
       "id": "mt_PDSW_01",

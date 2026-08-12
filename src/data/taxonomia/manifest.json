@@ -1,9 +1,9 @@
 {
   "dataset": "Taxonomia de Aprendizagem — BSI/IFAL",
   "versao": "v0.1-rascunho",
-  "geradoEm": "2026-08-12T10:15:00-03:00",
+  "geradoEm": "2026-08-12T11:00:00-03:00",
   "contagens": {
-    "topicos": 420,
+    "topicos": 462,
     "topicosPorDisciplina": {
       "ALPG": 45,
       "APBD": 60,
@@ -11,34 +11,35 @@
       "ESTD": 60,
       "LPGM": 60,
       "METC": 45,
+      "MKCE": 42,
       "PDSW": 45,
       "TABD": 45
     },
     "topicosPorTipo": {
-      "CONCEITUAL": 202,
-      "REPRESENTACIONAL": 35,
-      "PROCEDIMENTAL": 118,
+      "CONCEITUAL": 234,
+      "REPRESENTACIONAL": 39,
+      "PROCEDIMENTAL": 124,
       "LINGUAGEM": 50,
       "META": 15
     },
-    "dependencias": 608,
-    "dependenciasDuras": 371,
-    "dependenciasCruzadas": 32,
-    "disciplinas": 8,
+    "dependencias": 640,
+    "dependenciasDuras": 392,
+    "dependenciasCruzadas": 35,
+    "disciplinas": 9,
     "disciplinasNaGrade": 64
   },
   "arquivos": {
     "topicos.json": {
-      "bytes": 420593,
-      "sha256": "b073638cd15ec54b5b9dad7501c14778444fdddcf7fb7228916e9c24eecc29ca"
+      "bytes": 472648,
+      "sha256": "f27b5edfc7d8534b8a8d3b8a93225457cfc299c7ba5d8327b4bb058f3e1454a6"
     },
     "dependencias.json": {
-      "bytes": 251814,
-      "sha256": "08a67f4929330573ac71f974ccdbc0bc6d89445b3e96555466980c55913ac814"
+      "bytes": 266559,
+      "sha256": "72e5c2774c718cab06cf356b456a5e4f26a84b3180130c6a42e58fda3a649ac9"
     },
     "disciplinas.json": {
-      "bytes": 7244,
-      "sha256": "b4349f758dd5341bdd0885a7edb7fc9046eb7eac790d7f5bf481dddf4ac6d0ca"
+      "bytes": 8284,
+      "sha256": "bd87b202bbd098b5fb8e95a69cd620573b6c05a2694ebf5004f575276c05d3bb"
     }
   },
   "excluido": [
@@ -48,6 +49,6 @@
   "avisos": {
     "ciclos": 0,
     "periodoInvertido": 0,
-    "problemas": 3
+    "problemas": 0
   }
 }

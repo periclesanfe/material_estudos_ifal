@@ -1,6 +1,6 @@
 {
   "versao": "v1",
-  "totalArestas": 608,
+  "totalArestas": 640,
   "dependencias": [
     {
       "topicoId": "mt_ALPG_03",
@@ -3505,18 +3505,9 @@
     },
     {
       "topicoId": "mt_METC_05",
-      "prerequisitoId": "mt_METC_01",
-      "forca": "hard",
-      "razao": "O conhecimento científico é definido por ser metódico, então sem saber o que é método a definição fica vazia.",
-      "origem": "texto",
-      "trecho": "É sistemático, racional, metódico e orientado à verificação. Procura compreender não apenas o fenômeno, mas também suas causas, relações e regularidades.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_05",
       "prerequisitoId": "mt_METC_03",
       "forca": "soft",
-      "razao": "O material define o científico por contraste com a vivência do senso comum, então o contraste precisa existir antes.",
+      "razao": "O científico é apresentado por contraste com a experiência do cotidiano: o aluno precisa reconhecer o senso comum como forma de conhecer para ver o que o método acrescenta.",
       "origem": "texto",
       "trecho": "O conhecimento científico se distingue porque não depende apenas da vivência ou crença: ele exige método, argumentação, sistematização e possibilidade de revisão crítica.",
       "escopo": "interna"
@@ -3525,16 +3516,25 @@
       "topicoId": "mt_METC_05",
       "prerequisitoId": "mt_METC_04",
       "forca": "soft",
-      "razao": "A mesma comparação separa o científico do filosófico e do teológico: o que muda é a verificação.",
+      "razao": "O científico se define por construir e revisar verdade nova, o oposto do teológico, que compreende uma verdade já aceita, e do filosófico, que não se verifica por experimento.",
       "origem": "texto",
-      "trecho": "Baseia-se na reflexão crítica e racional. Busca compreender o sentido das coisas e da existência por meio da argumentação e do pensamento.",
+      "trecho": "Relaciona-se à fé, à revelação e a doutrinas sagradas. Não procura construir uma verdade nova, mas compreender uma verdade já aceita.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_METC_05",
+      "prerequisitoId": "mt_METC_02",
+      "forca": "soft",
+      "razao": "A ciência é o terceiro nível da inteligência humana no material, então o conceito de conhecimento científico detalha justamente o nível que o aluno acabou de ver.",
+      "origem": "texto",
+      "trecho": "A ciência busca respostas comprováveis e representa o terceiro nível de desenvolvimento da inteligência humana, após o medo e o misticismo.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_06",
       "prerequisitoId": "mt_METC_05",
       "forca": "soft",
-      "razao": "O conhecimento artístico é apresentado pelo que ele dispensa em relação ao científico, então precisa do científico como referência.",
+      "razao": "As outras formas de conhecer são caracterizadas pelo que dispensam em relação à ciência, como o artístico, que não tem obrigação de verificação.",
       "origem": "texto",
       "trecho": "Tem caráter subjetivo, intuitivo, aberto e expressivo, sem a obrigação de objetividade ou verificação científica.",
       "escopo": "interna"
@@ -3543,7 +3543,7 @@
       "topicoId": "mt_METC_07",
       "prerequisitoId": "mt_METC_05",
       "forca": "hard",
-      "razao": "Moderna e pós-moderna são fases de discussão sobre o próprio conhecimento científico e suas exigências de controle.",
+      "razao": "Ciência moderna e pós-moderna são dois momentos do mesmo conhecimento científico: sem saber o que ele exige, controle e experimentação não significam nada.",
       "origem": "texto",
       "trecho": "Na ciência moderna, observar não basta: a experiência precisa ser controlada, sistemática e intelectualmente refinada.",
       "escopo": "interna"
@@ -3552,34 +3552,25 @@
       "topicoId": "mt_METC_09",
       "prerequisitoId": "mt_METC_08",
       "forca": "soft",
-      "razao": "Indução, dedução, lei e teoria são apresentados como os caminhos para chegar a afirmações com evidência e certeza suficientes.",
+      "razao": "Indução, dedução, lei e teoria são os processos com que o cientista chega a afirmação sustentada por evidência e com grau suficiente de certeza.",
       "origem": "texto",
       "trecho": "A preocupação do cientista é chegar a afirmações sustentadas por evidência e com grau suficiente de certeza, usando processos como indução, dedução, formulação de leis e construção de teorias.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_10",
-      "prerequisitoId": "mt_METC_05",
-      "forca": "soft",
-      "razao": "Paradigma é definido como acordo de uma comunidade científica, o que pressupõe entender o que é ciência.",
-      "origem": "texto",
-      "trecho": "É um conjunto de crenças, valores, pressupostos e técnicas compartilhadas por uma comunidade científica.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_11",
       "prerequisitoId": "mt_METC_10",
       "forca": "hard",
-      "razao": "O positivismo só faz sentido como um paradigma entre outros, com ontologia e epistemologia próprias.",
+      "razao": "O positivista é um caso do conceito geral de paradigma: sem a ideia de que o método não é neutro, a lista de traços positivistas não tem por que existir.",
       "origem": "texto",
-      "trecho": "O paradigma adotado altera o modo como o pesquisador entende o objeto, define evidência, interpreta dados e justifica conclusões.",
+      "trecho": "O método não é neutro: ele se relaciona à visão que o pesquisador tem da realidade investigada.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_11",
       "prerequisitoId": "mt_METC_09",
       "forca": "soft",
-      "razao": "O positivismo opera por raciocínio dedutivo, então o aluno precisa saber o que é dedução antes.",
+      "razao": "O positivismo é descrito como operando por raciocínio dedutivo, termo que só faz sentido depois de indução e dedução estarem definidas.",
       "origem": "texto",
       "trecho": "Paradigma positivista: variáveis independentes (causa) e dependentes (efeito), observação neutra, raciocínio dedutivo.",
       "escopo": "interna"
@@ -3588,79 +3579,43 @@
       "topicoId": "mt_METC_12",
       "prerequisitoId": "mt_METC_10",
       "forca": "hard",
-      "razao": "O interpretativo é uma resposta diferente à pergunta epistemológica de como o conhecimento é produzido.",
+      "razao": "O interpretativo só é legível como escolha de paradigma, porque é o paradigma que altera o que conta como evidência e como o objeto é entendido.",
       "origem": "texto",
-      "trecho": "Trata de como o conhecimento é produzido, justificado e reconhecido como válido.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_13",
-      "prerequisitoId": "mt_METC_10",
-      "forca": "hard",
-      "razao": "O complexo também é um paradigma, e é lido contra os pressupostos dos outros dois.",
-      "origem": "texto",
-      "trecho": "É um conjunto de crenças, valores, pressupostos e técnicas compartilhadas por uma comunidade científica.",
+      "trecho": "O paradigma adotado altera o modo como o pesquisador entende o objeto, define evidência, interpreta dados e justifica conclusões.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_13",
       "prerequisitoId": "mt_METC_07",
-      "forca": "soft",
-      "razao": "O paradigma complexo se define criticando a ordem, a separabilidade e as lógicas da ciência moderna.",
+      "forca": "hard",
+      "razao": "O paradigma complexo se define pela crítica à separabilidade e às lógicas da ciência moderna, então o aluno precisa saber antes o que a ciência moderna afirma.",
       "origem": "texto",
       "trecho": "Paradigma complexo: inclui físico, biológico e social; critica ordem, separabilidade e lógicas modernas.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_15",
-      "prerequisitoId": "mt_METC_11",
-      "forca": "soft",
-      "razao": "A abordagem quantitativa herda do positivismo a mensuração, a neutralidade e a análise de variáveis.",
-      "origem": "texto",
-      "trecho": "Valoriza observação neutra, objetividade, experimentação, mensuração e análise da relação entre variáveis, distinguindo causa e efeito.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_15",
       "prerequisitoId": "mt_METC_12",
       "forca": "soft",
-      "razao": "A abordagem qualitativa é a face metodológica da perspectiva interpretativista.",
+      "razao": "A abordagem qualitativa é apresentada com perspectiva interpretativista, e o momento em que a hipótese aparece nela vem dessa visão de realidade construída.",
       "origem": "texto",
       "trecho": "Qualitativa: dados descritivos e interativos, hipóteses antes, durante ou após; entrevistas abertas, perspectiva interpretativista.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_17",
-      "prerequisitoId": "mt_METC_16",
-      "forca": "soft",
-      "razao": "O procedimento técnico é escolhido em função do objetivo da pesquisa, e o material cobra essa coerência.",
-      "origem": "texto",
-      "trecho": "Objetivos, abordagem, procedimentos e técnicas precisam ser compatíveis entre si; quando essa coerência falha, o projeto perde clareza e força analítica.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_18",
       "prerequisitoId": "mt_METC_11",
       "forca": "hard",
-      "razao": "Experimento e ex-post-facto se definem pelo controle ou não da variável independente, conceito que vem do positivismo.",
+      "razao": "Experimental e ex-post-facto se separam por manipular ou não a variável independente, par de conceitos apresentado no paradigma positivista.",
       "origem": "texto",
       "trecho": "O pesquisador não controla diretamente variáveis independentes, pois seus efeitos já ocorreram ou não podem ser manipulados.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_18",
-      "prerequisitoId": "mt_METC_16",
-      "forca": "soft",
-      "razao": "O experimento é o desenho usado quando o objetivo é explicativo, isto é, quando se quer causa e razão.",
-      "origem": "inferido",
-      "trecho": "",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_19",
       "prerequisitoId": "mt_METC_15",
       "forca": "soft",
-      "razao": "O survey é apresentado como procedimento associado à descrição quantitativa, então depende da abordagem quantitativa.",
+      "razao": "O survey é apresentado como muito associado a descrição quantitativa, então a escolha desse procedimento se explica pela abordagem adotada.",
       "origem": "texto",
       "trecho": "Baseia-se em interrogação direta das pessoas, geralmente por questionário, sendo muito associado a descrições quantitativas.",
       "escopo": "interna"
@@ -3669,7 +3624,7 @@
       "topicoId": "mt_METC_20",
       "prerequisitoId": "mt_METC_14",
       "forca": "soft",
-      "razao": "A pesquisa-ação intervém para resolver problema real, o que é exatamente a finalidade da pesquisa aplicada.",
+      "razao": "A pesquisa-ação intervém para melhorar uma situação real, que é exatamente a finalidade prática usada para definir a pesquisa aplicada.",
       "origem": "texto",
       "trecho": "Articula investigação e intervenção prática para melhorar situações reais ou resolver problemas coletivos.",
       "escopo": "interna"
@@ -3678,7 +3633,7 @@
       "topicoId": "mt_METC_22",
       "prerequisitoId": "mt_METC_21",
       "forca": "hard",
-      "razao": "Toda técnica de amostragem é descrita como forma de selecionar elementos da população para compor a amostra.",
+      "razao": "As duas famílias de amostragem se definem pela chance que cada elemento da população tem de ser selecionado, então população e amostra precisam estar claras antes.",
       "origem": "texto",
       "trecho": "Todos os elementos da população têm chance conhecida de serem selecionados, como no sorteio e na amostragem estratificada proporcional.",
       "escopo": "interna"
@@ -3686,44 +3641,44 @@
     {
       "topicoId": "mt_METC_24",
       "prerequisitoId": "mt_METC_23",
-      "forca": "hard",
-      "razao": "O fichamento é composto por resumos e apreciações, então quem não sabe resumir não fecha um fichamento.",
+      "forca": "soft",
+      "razao": "O fichamento é descrito como reunião de partes que incluem resumos, logo saber resumir ajuda a entender o que a ficha guarda.",
       "origem": "texto",
       "trecho": "Pode reunir indicação bibliográfica, transcrição de trechos, apreciação, esquemas e resumos, servindo de base para estudo e escrita.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_METC_25",
+      "prerequisitoId": "mt_METC_01",
+      "forca": "soft",
+      "razao": "O projeto é o planejamento do processo de pesquisa que os fundamentos descrevem: formular problema, selecionar método, produzir dados e analisá-los.",
+      "origem": "texto",
+      "trecho": "Pesquisar não é apenas coletar informações: é formular problema, selecionar método, produzir dados, analisá-los e justificar resultados.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_26",
       "prerequisitoId": "mt_METC_25",
       "forca": "hard",
-      "razao": "Tema e problema são as duas primeiras etapas do fluxo do projeto, e só fazem sentido dentro dele.",
+      "razao": "Tema e problema são as primeiras casas do fluxo do projeto, e é o projeto que explicita o que será estudado.",
       "origem": "texto",
-      "trecho": "Um bom projeto começa em um tema amplo, delimita um problema real, formula objetivos claros, apresenta justificativa consistente e descreve metodologia viável.",
+      "trecho": "O projeto organiza antecipadamente o caminho da pesquisa e explicita o que será estudado, por que, como, em que tempo e com quais recursos.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_27",
       "prerequisitoId": "mt_METC_26",
       "forca": "hard",
-      "razao": "A hipótese é a pré-solução de um problema, então sem problema formulado não existe hipótese.",
+      "razao": "A hipótese é a pré-solução do problema, então não há hipótese para escrever antes de o problema estar formulado.",
       "origem": "texto",
       "trecho": "É uma proposição testável, uma pré-solução que poderá ser confirmada ou negada ao longo da investigação.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_27",
-      "prerequisitoId": "mt_METC_15",
-      "forca": "soft",
-      "razao": "O momento em que a hipótese é formulada depende da abordagem escolhida, antes da coleta na quantitativa e durante ou depois na qualitativa.",
-      "origem": "texto",
-      "trecho": "Quantitativa: coleta baseada em medições numéricas e análise estatística, hipóteses elaboradas antes dos dados, generalização.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_28",
       "prerequisitoId": "mt_METC_26",
       "forca": "hard",
-      "razao": "Os objetivos são a tradução do problema em ações, então precisam do problema já delimitado.",
+      "razao": "Os objetivos dizem o que será feito para responder ao problema delimitado, e o material ordena o projeto do tema para o problema e depois para os objetivos.",
       "origem": "texto",
       "trecho": "Um bom projeto começa em um tema amplo, delimita um problema real, formula objetivos claros, apresenta justificativa consistente e descreve metodologia viável.",
       "escopo": "interna"
@@ -3732,7 +3687,7 @@
       "topicoId": "mt_METC_28",
       "prerequisitoId": "mt_METC_16",
       "forca": "soft",
-      "razao": "Os verbos dos objetivos específicos são divididos em descritivos e explicativos, os mesmos rótulos da classificação por objetivos da pesquisa.",
+      "razao": "Os verbos dos objetivos específicos repetem a divisão entre pesquisa descritiva e explicativa, então escolher o verbo exige essa classificação.",
       "origem": "texto",
       "trecho": "Objetivos específicos: descritivos (identificar, descrever, caracterizar) ou explicativos (comparar, relacionar, analisar).",
       "escopo": "interna"
@@ -3741,61 +3696,34 @@
       "topicoId": "mt_METC_29",
       "prerequisitoId": "mt_METC_26",
       "forca": "soft",
-      "razao": "A justificativa argumenta a relevância do problema escolhido, então precisa do problema já definido.",
+      "razao": "A justificativa argumenta a relevância de estudar aquele problema, então só fica consistente depois que o problema está delimitado.",
       "origem": "texto",
-      "trecho": "Expõe relevância social, científica, acadêmica ou profissional do estudo, evidenciando contribuições e originalidade.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_30",
-      "prerequisitoId": "mt_METC_17",
-      "forca": "soft",
-      "razao": "A revisão de literatura é feita pelo procedimento da pesquisa bibliográfica, com seleção criteriosa de livros e artigos.",
-      "origem": "texto",
-      "trecho": "É desenvolvida com base em livros, artigos e outras fontes teóricas já analisadas, exigindo seleção criteriosa e atualizada da literatura.",
+      "trecho": "Um bom projeto começa em um tema amplo, delimita um problema real, formula objetivos claros, apresenta justificativa consistente e descreve metodologia viável.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_30",
       "prerequisitoId": "mt_METC_24",
       "forca": "soft",
-      "razao": "O material diz explicitamente que fichamento e esquema são o que viabiliza a revisão de literatura.",
+      "razao": "O fichamento é o registro organizado dos autores lidos, e o material afirma que essas técnicas facilitam a revisão de literatura.",
       "origem": "texto",
-      "trecho": "eles organizam a base intelectual do pesquisador e facilitam revisão de literatura e escrita científica",
+      "trecho": "Esquema, fichamento, resumo e resenha não são apenas técnicas escolares: eles organizam a base intelectual do pesquisador e facilitam revisão de literatura e escrita científica.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_31",
-      "prerequisitoId": "mt_METC_15",
+      "prerequisitoId": "mt_METC_25",
       "forca": "hard",
-      "razao": "A seção de metodologia declara o tipo de pesquisa e a abordagem, então exige as classificações já dominadas.",
+      "razao": "Metodologia, cronograma e orçamento são seções do projeto: fora do documento de planejamento elas não têm função.",
       "origem": "texto",
-      "trecho": "Explica de forma detalhada o tipo de pesquisa, estratégia, instrumentos de coleta, tratamento dos dados e etapas de execução.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_31",
-      "prerequisitoId": "mt_METC_16",
-      "forca": "soft",
-      "razao": "A metodologia é onde a coerência entre objetivo, abordagem e procedimento tem de aparecer escrita.",
-      "origem": "texto",
-      "trecho": "Objetivos, abordagem, procedimentos e técnicas precisam ser compatíveis entre si; quando essa coerência falha, o projeto perde clareza e força analítica.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_31",
-      "prerequisitoId": "mt_METC_22",
-      "forca": "soft",
-      "razao": "A metodologia precisa justificar a amostra escolhida, o que exige conhecer as técnicas de amostragem.",
-      "origem": "texto",
-      "trecho": "A escolha da amostra afeta validade, alcance das conclusões e viabilidade da pesquisa, exigindo justificativa coerente com o objetivo do estudo.",
+      "trecho": "É o planejamento das atividades a serem desenvolvidas para realizar a pesquisa, funcionando como documento explicitador das ações.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_33",
       "prerequisitoId": "mt_METC_32",
       "forca": "soft",
-      "razao": "Os blocos pré-textual, textual e pós-textual são apresentados junto com as regras de formatação que os organizam.",
+      "razao": "A divisão em pré-textuais, textuais e pós-textuais é apresentada dentro das regras de formatação, que dão a página em que essa estrutura é montada.",
       "origem": "texto",
       "trecho": "Os elementos podem ser pré-textuais, textuais e pós-textuais, organizando formalmente a apresentação acadêmica.",
       "escopo": "interna"
@@ -3804,34 +3732,16 @@
       "topicoId": "mt_METC_34",
       "prerequisitoId": "mt_METC_32",
       "forca": "hard",
-      "razao": "A citação longa é definida pela formatação: recuo de 4 cm e corpo 10, que vêm das regras gerais de formatação.",
+      "razao": "A citação longa é uma regra de formatação: sem margem, recuo de 4 cm e corpo 10 não há como formatá-la.",
       "origem": "texto",
       "trecho": "Margem esquerda e superior com 3 cm; direita e inferior com 2 cm. Citações longas usam recuo de 4 cm.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_35",
-      "prerequisitoId": "mt_METC_34",
-      "forca": "soft",
-      "razao": "A citação indireta é definida por contraste com a transcrição literal da citação direta.",
-      "origem": "texto",
-      "trecho": "É a reprodução da ideia do autor com redação própria, mantendo a obrigatoriedade de indicar a fonte.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_36",
-      "prerequisitoId": "mt_METC_34",
-      "forca": "hard",
-      "razao": "A lista de referências existe para dar destino a toda fonte citada no texto, então depende de saber citar.",
-      "origem": "texto",
-      "trecho": "Toda ideia, dado, argumento ou trecho retirado de outra fonte precisa ser corretamente atribuído.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_36",
       "prerequisitoId": "mt_METC_35",
       "forca": "soft",
-      "razao": "No apud é a obra consultada, e não a original, que entra na lista, e essa regra só se aplica quem já entendeu o apud.",
+      "razao": "Decidir qual obra entra na lista de referências depende de entender o apud e a citação feita sem acesso ao original.",
       "origem": "texto",
       "trecho": "Usa a forma apud quando o pesquisador não teve acesso direto ao texto original, referenciando a obra efetivamente consultada.",
       "escopo": "interna"
@@ -3839,107 +3749,53 @@
     {
       "topicoId": "mt_METC_37",
       "prerequisitoId": "mt_METC_26",
-      "forca": "hard",
-      "razao": "A coleta é definida como levantar o que é necessário para responder ao problema, então sem problema não se escolhe instrumento.",
+      "forca": "soft",
+      "razao": "A coleta é definida como levantar as informações que respondem ao problema, então é o problema que decide o que coletar.",
       "origem": "texto",
       "trecho": "Corresponde à pesquisa propriamente dita: levantamento de informações necessárias para responder ao problema e atingir os objetivos.",
       "escopo": "interna"
     },
     {
-      "topicoId": "mt_METC_37",
-      "prerequisitoId": "mt_METC_15",
-      "forca": "soft",
-      "razao": "O grau de estruturação do instrumento acompanha a abordagem: quantitativa pede padronização, qualitativa pede abertura.",
-      "origem": "texto",
-      "trecho": "Pode ser qualitativa, quantitativa ou mista, de acordo com o tipo de dado, o modo de coleta e a lógica de análise.",
-      "escopo": "interna"
-    },
-    {
       "topicoId": "mt_METC_38",
       "prerequisitoId": "mt_METC_37",
-      "forca": "hard",
-      "razao": "O questionário fechado é o caso típico do instrumento estruturado e padronizado.",
+      "forca": "soft",
+      "razao": "O questionário é o caso típico do instrumento estruturado, e escolher entre questão fechada e aberta é decidir o grau de padronização.",
       "origem": "texto",
       "trecho": "Têm partes previamente planejadas e maior padronização, sendo úteis quando se deseja comparabilidade maior entre respostas.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_38",
-      "prerequisitoId": "mt_METC_19",
-      "forca": "soft",
-      "razao": "O questionário é o instrumento com que o survey se realiza, então o procedimento dá sentido ao instrumento.",
-      "origem": "texto",
-      "trecho": "Baseia-se em interrogação direta das pessoas, geralmente por questionário, sendo muito associado a descrições quantitativas.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_39",
-      "prerequisitoId": "mt_METC_37",
-      "forca": "soft",
-      "razao": "Entrevista e grupo focal são operados com roteiro semiestruturado ou não estruturado, categorias vistas antes.",
-      "origem": "texto",
-      "trecho": "Combinam partes definidas com margem para adaptação ao longo da interação.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_40",
       "prerequisitoId": "mt_METC_17",
       "forca": "soft",
-      "razao": "A análise documental como técnica de coleta reaproveita a distinção de fontes já vista na pesquisa bibliográfica e documental.",
+      "razao": "A análise documental como técnica de coleta retoma os procedimentos bibliográfico e documental, inclusive a diferença entre documento de primeira mão e material já analisado.",
       "origem": "texto",
       "trecho": "Utiliza documentos e produções bibliográficas como base de coleta, podendo trabalhar com fontes primárias ou secundárias.",
       "escopo": "interna"
     },
     {
-      "topicoId": "mt_METC_41",
-      "prerequisitoId": "mt_METC_11",
-      "forca": "soft",
-      "razao": "A noção de variável é introduzida no paradigma positivista, com a distinção entre independente e dependente.",
-      "origem": "texto",
-      "trecho": "Paradigma positivista: variáveis independentes (causa) e dependentes (efeito), observação neutra, raciocínio dedutivo.",
-      "escopo": "interna"
-    },
-    {
       "topicoId": "mt_METC_42",
       "prerequisitoId": "mt_METC_41",
       "forca": "hard",
-      "razao": "Média, mediana e desvio padrão só podem ser aplicados depois de saber o tipo de variável em mãos.",
+      "razao": "O material diz que entender a variável é o primeiro passo para escolher a análise, e média, mediana e desvio padrão só se aplicam a variável numérica.",
       "origem": "texto",
       "trecho": "Tudo aquilo que pode assumir diferentes valores. Entender as variáveis é o primeiro passo para escolher análise, teste e forma de apresentação.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_42",
-      "prerequisitoId": "mt_METC_21",
-      "forca": "soft",
-      "razao": "A medida de tendência central é apresentada como forma de representar a amostra, conceito visto na amostragem.",
-      "origem": "texto",
-      "trecho": "Representa a amostra por medidas como média e mediana.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_METC_43",
-      "prerequisitoId": "mt_METC_41",
-      "forca": "hard",
-      "razao": "Correlação é associação entre variáveis, então exige o conceito e os tipos de variável.",
-      "origem": "texto",
-      "trecho": "Avalia associação entre variáveis, permitindo verificar se elas se relacionam.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_43",
       "prerequisitoId": "mt_METC_42",
       "forca": "hard",
-      "razao": "Não se compara médias de dois grupos sem antes saber calcular a média e ler a dispersão em torno dela.",
-      "origem": "inferido",
-      "trecho": "",
+      "razao": "Comparar médias entre grupos ou entre momentos pressupõe a própria medida de tendência central, apresentada no tópico anterior.",
+      "origem": "texto",
+      "trecho": "Representa a amostra por medidas como média e mediana.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_METC_44",
       "prerequisitoId": "mt_METC_39",
       "forca": "hard",
-      "razao": "Transcrever é passar a limpo as falas dos participantes, que só existem se houve entrevista ou grupo focal.",
+      "razao": "Só existe fala para transcrever se houve entrevista ou grupo focal, então a técnica de coleta vem antes do tratamento do material.",
       "origem": "texto",
       "trecho": "Consiste em produzir cópia digitada clara e fiel das falas dos participantes.",
       "escopo": "interna"
@@ -3948,9 +3804,414 @@
       "topicoId": "mt_METC_45",
       "prerequisitoId": "mt_METC_44",
       "forca": "hard",
-      "razao": "A categorização da análise de conteúdo trabalha sobre o material já transcrito e codificado em segmentos.",
+      "razao": "A análise de conteúdo categoriza unidades de um corpus que já passou por transcrição e codificação.",
       "origem": "texto",
-      "trecho": "Organiza o material em blocos ou segmentos de texto antes de atribuir significados analíticos.",
+      "trecho": "Envolve pré-exploração do corpus, seleção de unidades de análise, categorização e subcategorização dos significados.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_02",
+      "prerequisitoId": "mt_MKCE_01",
+      "forca": "hard",
+      "razao": "O prospect é a outra parte do processo de troca, então a definição de marketing como troca precisa vir antes.",
+      "origem": "texto",
+      "trecho": "Marketing é a atividade dirigida para a satisfação das necessidades e desejos, por meio dos processos de troca.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_03",
+      "prerequisitoId": "mt_MKCE_01",
+      "forca": "soft",
+      "razao": "Os dez campos são tipos de oferta a que a definição de marketing se aplica, e a lista só faz sentido depois de saber o que é marketing.",
+      "origem": "texto",
+      "trecho": "APLICAÇÃO DO MARKETING: Bens, Serviços, Eventos, Experiências, Pessoas, Lugares, Propriedades, Organizações, Informações, Ideias.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_04",
+      "prerequisitoId": "mt_MKCE_01",
+      "forca": "hard",
+      "razao": "A definição curta fala em suprir necessidades, e é este tópico que separa necessidade, desejo e demanda.",
+      "origem": "texto",
+      "trecho": "Resumo: Marketing = suprir necessidades gerando lucro.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_05",
+      "prerequisitoId": "mt_MKCE_04",
+      "forca": "soft",
+      "razao": "O material apresenta oferta, marca e valor como continuação da cadeia que começa em necessidade e termina em demanda.",
+      "origem": "texto",
+      "trecho": "Necessidades (inatas: ar, comida, abrigo) → Desejos (necessidades direcionadas a objetos específicos) → Demandas (desejos + capacidade de compra). Oferta, Marca, Valor",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_06",
+      "prerequisitoId": "mt_MKCE_05",
+      "forca": "soft",
+      "razao": "A satisfação compara o desempenho da oferta com a expectativa, então a noção de oferta e de valor vem antes.",
+      "origem": "texto",
+      "trecho": "Oferta, Marca, Valor (tríade: qualidade, serviço, preço). Satisfação: Decepção (desempenho < expectativa), Satisfação (=), Encantamento (>).",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_07",
+      "prerequisitoId": "mt_MKCE_04",
+      "forca": "hard",
+      "razao": "Os oito tipos descrevem estados da demanda, e demanda é definida como desejo sustentado pela capacidade de compra.",
+      "origem": "texto",
+      "trecho": "Necessidades (inatas: ar, comida, abrigo) → Desejos (necessidades direcionadas a objetos específicos) → Demandas (desejos + capacidade de compra).",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_08",
+      "prerequisitoId": "mt_MKCE_04",
+      "forca": "soft",
+      "razao": "Maslow hierarquiza necessidades, então antes é preciso distinguir necessidade de desejo.",
+      "origem": "texto",
+      "trecho": "Necessidades (inatas: ar, comida, abrigo) → Desejos (necessidades direcionadas a objetos específicos)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_09",
+      "prerequisitoId": "mt_MKCE_04",
+      "forca": "soft",
+      "razao": "A finalidade declarada do mix é gerar desejo de compra, conceito definido na cadeia de necessidade, desejo e demanda.",
+      "origem": "texto",
+      "trecho": "Conjunto de ferramentas para alcançar objetivos de marketing no mercado-alvo. A finalidade é gerar desejo de compra no consumidor.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_10",
+      "prerequisitoId": "mt_MKCE_09",
+      "forca": "hard",
+      "razao": "O preço só aparece como o único P que gera receita em contraste com os outros Ps do mix.",
+      "origem": "texto",
+      "trecho": "4 Ps: Produto, Preço (ÚNICO que gera receita), Praça, Promoção.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_11",
+      "prerequisitoId": "mt_MKCE_09",
+      "forca": "hard",
+      "razao": "Os quatro Ps adicionais são definidos como acréscimo aos 4 Ps clássicos do mix.",
+      "origem": "texto",
+      "trecho": "8 Ps: 4 Ps + Pessoas, Processos, Posicionamento, Performance.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_12",
+      "prerequisitoId": "mt_MKCE_09",
+      "forca": "hard",
+      "razao": "Cada C é a tradução de um P, então a lista dos Ps vem antes da leitura pelo lado do cliente.",
+      "origem": "texto",
+      "trecho": "4 Cs: Produto→Cliente, Preço→Custo, Praça→Conveniência, Promoção→Comunicação.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_13",
+      "prerequisitoId": "mt_MKCE_06",
+      "forca": "soft",
+      "razao": "O relacionamento é definido pela busca de satisfação e sucesso do cliente, que é o conceito trabalhado no tópico de satisfação.",
+      "origem": "texto",
+      "trecho": "Conjunto de estratégias que tem como objetivo fidelizar clientes. A empresa oferece benefícios para garantir a satisfação e o sucesso dos seus clientes.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_14",
+      "prerequisitoId": "mt_MKCE_13",
+      "forca": "hard",
+      "razao": "Os cinco degraus são o desdobramento do objetivo de fidelizar enunciado no marketing de relacionamento.",
+      "origem": "texto",
+      "trecho": "Jornada: Atrair→Conquistar→Reter→Fidelizar→Divulgador.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_15",
+      "prerequisitoId": "mt_MKCE_13",
+      "forca": "hard",
+      "razao": "As ferramentas existem para executar as estratégias de fidelização, então o objetivo vem antes do instrumento.",
+      "origem": "texto",
+      "trecho": "Ferramentas: CRM, WhatsApp Business. Estratégias: redes sociais, programas de fidelidade, email marketing.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_17",
+      "prerequisitoId": "mt_MKCE_16",
+      "forca": "hard",
+      "razao": "As seis etapas são a execução das atividades sistemáticas que a definição de pesquisa enuncia.",
+      "origem": "texto",
+      "trecho": "Atividades sistemáticas de concepção, coleta, análise e edição de relatórios e conclusões relevantes sobre situações de marketing.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_18",
+      "prerequisitoId": "mt_MKCE_17",
+      "forca": "soft",
+      "razao": "É na etapa de coleta que se decide entre produzir dado novo e buscar dado que já existe.",
+      "origem": "texto",
+      "trecho": "Aplica questionários, entrevistas, observações ou busca dados secundários. Costuma ser a fase mais cara e sujeita a erros de execução.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_19",
+      "prerequisitoId": "mt_MKCE_18",
+      "forca": "hard",
+      "razao": "Os instrumentos são apresentados como meios de coletar dados primários, então a distinção entre primário e secundário vem antes.",
+      "origem": "texto",
+      "trecho": "Instrumento mais usado para dados primários. Permite comparar respostas de muitas pessoas, desde que as perguntas sejam claras e bem estruturadas.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_19",
+      "prerequisitoId": "mt_MKCE_17",
+      "forca": "soft",
+      "razao": "O instrumento é escolhido na etapa de plano, então a sequência de etapas situa a escolha.",
+      "origem": "texto",
+      "trecho": "Define objetivos, fontes de dados, método, público pesquisado, instrumento, prazo e orçamento.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_20",
+      "prerequisitoId": "mt_MKCE_04",
+      "forca": "soft",
+      "razao": "Segmentar é agrupar compradores por necessidades e desejos semelhantes, conceitos definidos antes.",
+      "origem": "texto",
+      "trecho": "Processo de dividir um mercado em grupos de compradores com semelhantes necessidades, desejos ou comportamentos.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_21",
+      "prerequisitoId": "mt_MKCE_20",
+      "forca": "hard",
+      "razao": "As quatro variáveis são os critérios usados para dividir o mercado, divisão definida no tópico de segmentação.",
+      "origem": "texto",
+      "trecho": "SEGMENTAÇÃO: Geográfica, Demográfica, Psicográfica, Comportamental.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_22",
+      "prerequisitoId": "mt_MKCE_20",
+      "forca": "hard",
+      "razao": "Os cinco níveis medem quão fina é a divisão do mercado, então dependem da ideia de dividir o mercado.",
+      "origem": "texto",
+      "trecho": "Níveis: Massa, Segmentado, Nicho, Local, Individual.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_23",
+      "prerequisitoId": "mt_MKCE_20",
+      "forca": "hard",
+      "razao": "Os seis critérios servem para testar se um segmento já delimitado vale uma estratégia própria.",
+      "origem": "texto",
+      "trecho": "Critérios: Identificável, Mensurável, Substancial, Acessível, Diferenciável, Acionável.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_24",
+      "prerequisitoId": "mt_MKCE_13",
+      "forca": "soft",
+      "razao": "O papel atribuído ao digital é aprofundar o relacionamento, conceito construído no marketing de relacionamento.",
+      "origem": "texto",
+      "trecho": "O papel do tradicional é construir consciência e interesse; o do digital é aprofundar o relacionamento e levar à ação.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_25",
+      "prerequisitoId": "mt_MKCE_24",
+      "forca": "hard",
+      "razao": "As três transições descrevem o deslocamento de poder a que o Marketing 4.0 responde, então a ideia central vem antes.",
+      "origem": "texto",
+      "trecho": "MARKETING 4.0: Integra marketing tradicional e digital em um mundo conectado. O poder se desloca para consumidores e comunidades.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_26",
+      "prerequisitoId": "mt_MKCE_24",
+      "forca": "hard",
+      "razao": "O material trata a conectividade como a infraestrutura do próprio Marketing 4.0.",
+      "origem": "texto",
+      "trecho": "A conectividade é a infraestrutura por trás do Marketing 4.0: a capacidade de as pessoas se conectarem, compartilharem informação e acessarem a sabedoria das multidões em tempo real.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_27",
+      "prerequisitoId": "mt_MKCE_26",
+      "forca": "hard",
+      "razao": "Os três paradoxos são efeitos colaterais da própria conectividade, que precisa estar definida antes.",
+      "origem": "texto",
+      "trecho": "A conectividade protege (o círculo íntimo funciona como escudo), mas também distrai.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_28",
+      "prerequisitoId": "mt_MKCE_26",
+      "forca": "soft",
+      "razao": "As subculturas influenciam pela conectividade social, que é o nível supremo descrito antes.",
+      "origem": "texto",
+      "trecho": "Nível supremo: a força da conexão dentro de comunidades de consumidores.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_28",
+      "prerequisitoId": "mt_MKCE_25",
+      "forca": "soft",
+      "razao": "O peso dessas subculturas se explica pela transição do individual ao social.",
+      "origem": "texto",
+      "trecho": "A decisão de compra deixa de ser pessoal e passa a ser moldada pela conformidade social.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_29",
+      "prerequisitoId": "mt_MKCE_24",
+      "forca": "soft",
+      "razao": "A jornada é descrita como o ponto em que on-line e off-line se integram, integração que é a ideia central do Marketing 4.0.",
+      "origem": "texto",
+      "trecho": "É aqui que a jornada muda de individual para SOCIAL e que on-line e off-line se integram.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_30",
+      "prerequisitoId": "mt_MKCE_29",
+      "forca": "hard",
+      "razao": "O formato em espiral é descrito por saltos e retornos entre as cinco etapas, que precisam ser conhecidas antes.",
+      "origem": "texto",
+      "trecho": "Ao contrário do funil, os 5 As formam um caminho em espiral: o consumidor pode pular etapas (uma indicação forte leva da assimilação direto à arguição) ou voltar atrás",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_31",
+      "prerequisitoId": "mt_MKCE_29",
+      "forca": "hard",
+      "razao": "As fontes de influência são localizadas etapa por etapa da jornada, com pico na arguição.",
+      "origem": "texto",
+      "trecho": "Em cada etapa, três forças disputam a decisão. A influência dos outros atinge o pico na arguição",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_32",
+      "prerequisitoId": "mt_MKCE_29",
+      "forca": "hard",
+      "razao": "Os coeficientes são razões entre etapas da jornada, e sem as etapas não há o que dividir.",
+      "origem": "texto",
+      "trecho": "Mede a conversão de consciência em compra: nº de quem compra ÷ nº de quem conhece a marca.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_33",
+      "prerequisitoId": "mt_MKCE_29",
+      "forca": "hard",
+      "razao": "O tópico trata do peso da arguição na loja virtual, então a etapa precisa estar definida antes.",
+      "origem": "texto",
+      "trecho": "A etapa de arguição é forte no comércio eletrônico por causa de avaliações, frete, reputação, vídeos, política de troca e preço.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_33",
+      "prerequisitoId": "mt_MKCE_31",
+      "forca": "soft",
+      "razao": "A prova social da loja virtual é a influência dos outros aplicada ao comércio eletrônico.",
+      "origem": "texto",
+      "trecho": "Vem de amigos, família e da comunidade: boca a boca, redes sociais, avaliações. É a mais confiável",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_34",
+      "prerequisitoId": "mt_MKCE_24",
+      "forca": "soft",
+      "razao": "O quadro das eras posiciona o 4.0 como a passagem do tradicional ao digital, já explicada antes.",
+      "origem": "texto",
+      "trecho": "MARKETING 4.0: Integra marketing tradicional e digital em um mundo conectado.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_35",
+      "prerequisitoId": "mt_MKCE_34",
+      "forca": "hard",
+      "razao": "A definição do 5.0 é escrita como soma do 3.0 e do 4.0, eras apresentadas no quadro de evolução.",
+      "origem": "texto",
+      "trecho": "Em uma equação: Marketing 5.0 = Marketing 3.0 (centralidade humana) + Marketing 4.0 (empoderamento tecnológico).",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_36",
+      "prerequisitoId": "mt_MKCE_35",
+      "forca": "hard",
+      "razao": "As duas disciplinas são componentes do Marketing 5.0 e só se explicam dentro dessa arquitetura.",
+      "origem": "texto",
+      "trecho": "O Marketing 5.0 se organiza em duas disciplinas que dão a base (orientado por dados e ágil) e três aplicações que entregam valor (preditivo, contextual e aumentado).",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_37",
+      "prerequisitoId": "mt_MKCE_35",
+      "forca": "hard",
+      "razao": "As três aplicações são o outro bloco de componentes do Marketing 5.0.",
+      "origem": "texto",
+      "trecho": "O Marketing 5.0 se organiza em duas disciplinas que dão a base (orientado por dados e ágil) e três aplicações que entregam valor (preditivo, contextual e aumentado).",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_37",
+      "prerequisitoId": "mt_MKCE_36",
+      "forca": "hard",
+      "razao": "O material coloca as aplicações rodando sobre as disciplinas de dados e de agilidade.",
+      "origem": "texto",
+      "trecho": "As disciplinas são o alicerce; as aplicações, o que o cliente percebe.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_38",
+      "prerequisitoId": "mt_MKCE_35",
+      "forca": "soft",
+      "razao": "Os três desafios são obstáculos para implantar o Marketing 5.0, que precisa estar definido antes.",
+      "origem": "texto",
+      "trecho": "Três desafios: abismo entre gerações, polarização da prosperidade",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_39",
+      "prerequisitoId": "mt_MKCE_37",
+      "forca": "hard",
+      "razao": "Os três níveis de personalização detalham o marketing contextual, uma das três aplicações.",
+      "origem": "texto",
+      "trecho": "Sensores e IA entregam a interação certa, na hora e no lugar certos.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_40",
+      "prerequisitoId": "mt_MKCE_24",
+      "forca": "soft",
+      "razao": "A omnicanalidade é a forma operacional da integração entre on-line e off-line proposta pelo Marketing 4.0.",
+      "origem": "texto",
+      "trecho": "Omnicanalidade integra canais online e offline, diferente de multicanalidade.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_41",
+      "prerequisitoId": "mt_MKCE_36",
+      "forca": "hard",
+      "razao": "O e-commerce orientado por dados é a disciplina de dados aplicada à loja, com o mesmo vocabulário de ecossistema e identidade única.",
+      "origem": "texto",
+      "trecho": "Disciplina-base: montar um ecossistema integrado de dados (sociais, web, transações, IoT, atendimento) sob uma identidade única do cliente, para decidir com fatos.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_41",
+      "prerequisitoId": "mt_MKCE_15",
+      "forca": "soft",
+      "razao": "O ecossistema de dados lista o CRM como uma de suas fontes, então é preciso saber o que o CRM registra.",
+      "origem": "texto",
+      "trecho": "Integra navegação, compras, carrinho abandonado, CRM, atendimento, redes sociais, transações, campanhas e pós-venda.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_42",
+      "prerequisitoId": "mt_MKCE_41",
+      "forca": "hard",
+      "razao": "A recomendação depende dos padrões de navegação e compra que só existem com os dados integrados.",
+      "origem": "texto",
+      "trecho": "Motores de recomendação usam padrões de navegação, compra e similaridade para sugerir produtos ou conteúdos relevantes.",
       "escopo": "interna"
     },
     {
@@ -5472,6 +5733,33 @@
       "razao": "Somar facetas para compor uma pontuação geral é construção de escala e medição numérica, conteúdo da abordagem quantitativa em Metodologia Científica.",
       "origem": "texto",
       "trecho": "a classificação única global, com uma pergunta geral sobre satisfação, e a soma de facetas, que avalia natureza do trabalho, supervisão, remuneração, promoções e relação com colegas",
+      "escopo": "cruzada"
+    },
+    {
+      "topicoId": "mt_MKCE_20",
+      "prerequisitoId": "mt_METC_25",
+      "forca": "soft",
+      "razao": "O questionário de pesquisa de marketing é o instrumento do levantamento: quem já viu survey sabe por que a pergunta precisa ser estruturada antes de comparar respostas.",
+      "origem": "texto",
+      "trecho": "Instrumento mais usado para dados primários. Permite comparar respostas de muitas pessoas, desde que as perguntas sejam claras e bem estruturadas.",
+      "escopo": "cruzada"
+    },
+    {
+      "topicoId": "mt_MKCE_20",
+      "prerequisitoId": "mt_METC_19",
+      "forca": "soft",
+      "razao": "A pesquisa qualitativa de marketing usa entrevista e grupo focal para explicar o porquê do comportamento, que é a abordagem qualitativa de Metodologia Científica.",
+      "origem": "texto",
+      "trecho": "Explora percepções, sentimentos e motivações. É útil para entender o “porquê” por trás de comportamentos, especialmente por entrevistas e grupos focais.",
+      "escopo": "cruzada"
+    },
+    {
+      "topicoId": "mt_MKCE_09",
+      "prerequisitoId": "mt_CORG_20",
+      "forca": "soft",
+      "razao": "A pirâmide de Maslow é a mesma hierarquia de necessidades usada em Comportamento Organizacional para motivar equipe, aqui lida do lado do consumidor.",
+      "origem": "texto",
+      "trecho": "Necessidades fisiológicas, segurança, sociais, estima e autorrealização. Motivar exige entender o nível atual da pessoa.",
       "escopo": "cruzada"
     }
   ]

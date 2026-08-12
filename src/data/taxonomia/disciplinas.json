@@ -1,6 +1,6 @@
 {
   "versao": "v1",
-  "totalDisciplinas": 8,
+  "totalDisciplinas": 9,
   "fonte": "PPC do Bacharelado em Sistemas de Informação — IFAL",
   "disciplinas": [
     {
@@ -154,6 +154,28 @@
         "Liderança e confiança",
         "Conflito e negociação",
         "Aplicações organizacionais: diagnóstico; gerência participativa; reestruturação do trabalho e inovações no contexto de trabalho."
+      ]
+    },
+    {
+      "codigo": "MKCE",
+      "codigoPPC": "MKCE",
+      "nome": "Marketing e Comércio Eletrônico",
+      "periodo": 9,
+      "eixo": "FPF",
+      "slug": "marketing-comercio-eletronico",
+      "cor": "#fb923c",
+      "ementa": "Introdução ao Marketing. Mix de Marketing. Marketing de Relacionamento. Pesquisa de Marketing. Comportamento do Consumidor. Segmentação do Mercado-alvo. Marketing digital. Marketing digital X marketing tradicional. Ferramentas do Marketing Eletrônico. Comércio eletrônico: B2B, B2C, C2C, mobile commerce, e-government etc.",
+      "unidadesEmenta": [
+        "Introdução ao Marketing",
+        "Mix de Marketing",
+        "Marketing de Relacionamento",
+        "Pesquisa de Marketing",
+        "Comportamento do Consumidor",
+        "Segmentação do Mercado-alvo",
+        "Marketing digital",
+        "Marketing digital X marketing tradicional",
+        "Ferramentas do Marketing Eletrônico",
+        "Comércio eletrônico: B2B, B2C, C2C, mobile commerce, e-government etc."
       ]
     }
   ]
