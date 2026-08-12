@@ -1,6 +1,6 @@
 {
   "versao": "v1",
-  "totalTopicos": 380,
+  "totalTopicos": 420,
   "topicos": [
     {
       "id": "mt_ALPG_01",
@@ -1027,7 +1027,7 @@
       "nome": "Formato e avaliação da disciplina",
       "descricao": "A disciplina roda em laboratório com Oracle Database, SQL Developer, Data Modeler, VirtualBox e Live SQL. A nota 1 soma projeto fase 1 e 2 (2 pts cada) mais prova 1 em duas partes (3 pts cada). A nota 2 soma fases 3, 4 e 5 (2 pts cada) mais prova 2 (4 pts). O projeto em grupo é avaliado por correção técnica, inovação, complexidade e aderência à realidade.",
       "ordem": 2,
-      "centralidade": 0.2909,
+      "centralidade": 0.4182,
       "evidencia": [
         "Dizer quanto vale cada entrega e o que o professor cobra em cada critério do projeto",
         "Escolher a ferramenta certa (Data Modeler, SQL Developer ou Live SQL) para cada tarefa"
@@ -1072,7 +1072,7 @@
       "nome": "Configuração do Data Modeler",
       "descricao": "Antes de desenhar objetos, o Data Modeler precisa ser configurado: versão do SGBD, colunas obrigatórias, índices de chave estrangeira, estilo de relacionamento, tipos e domínios. A versão escolhida muda recursos disponíveis, tipos aceitos e o formato do SQL gerado.",
       "ordem": 4,
-      "centralidade": 0.2818,
+      "centralidade": 0.4091,
       "evidencia": [
         "Ajustar a versão do banco na ferramenta antes de gerar o DDL",
         "Explicar por que um SQL gerado pode não rodar na versão instalada"
@@ -1096,7 +1096,7 @@
       "nome": "Padronização de nomes de objetos",
       "descricao": "A nomenclatura física é decisão de projeto. Convenções comuns: PK_{tabela}, FK_{pai}_{filho}, AK/UK para unicidade, IDX para índice, CK para validação e NN para obrigatoriedade. Abreviações como Cod, Dta, Nom, Des, Qtd, Val e Id mantêm nomes curtos e previsíveis.",
       "ordem": 5,
-      "centralidade": 0.2727,
+      "centralidade": 0.4,
       "evidencia": [
         "Olhar um nome de constraint e dizer que tipo de objeto ele é",
         "Nomear PK, FK, unique, índice e check de uma tabela sem inventar padrão novo"
@@ -1144,7 +1144,7 @@
       "nome": "Constraints de integridade",
       "descricao": "A tabela é ponto de defesa dos dados. Chave primária evita identificação ambígua, chave estrangeira evita relacionamento quebrado, unique evita duplicidade, not null evita registro incompleto e check valida conteúdo. As regras continuam valendo mesmo se outro sistema ou script acessar o banco.",
       "ordem": 7,
-      "centralidade": 0.3909,
+      "centralidade": 0.5,
       "evidencia": [
         "Dizer qual constraint impede cada tipo de dado errado",
         "Defender por que a regra no banco é mais forte que a regra só na aplicação"
@@ -1169,7 +1169,7 @@
       "nome": "CREATE TABLE no Oracle",
       "descricao": "Escrever o DDL da tabela já com colunas, tipos e constraints nomeadas: NOT NULL de coluna, PRIMARY KEY, UNIQUE e FOREIGN KEY com REFERENCES. A tabela nasce com as regras, não recebe regras depois.",
       "ordem": 8,
-      "centralidade": 0.2636,
+      "centralidade": 0.3909,
       "evidencia": [
         "Escrever um CREATE TABLE com PK, FK, unique e not null nomeados",
         "Ler o DDL de uma tabela e dizer quais regras ela impõe"
@@ -1241,7 +1241,7 @@
       "nome": "Sequences, NEXTVAL e CURRVAL",
       "descricao": "Sequence gera números automaticamente para chaves artificiais, com INCREMENT BY, START WITH, NOMAXVALUE, NOCYCLE e CACHE. NEXTVAL devolve o próximo valor e CURRVAL recupera o valor atual da sessão.",
       "ordem": 11,
-      "centralidade": 0.0091,
+      "centralidade": 0.0273,
       "evidencia": [
         "Criar uma sequence e usá-la em um insert",
         "Dizer a diferença entre NEXTVAL e CURRVAL"
@@ -6520,7 +6520,7 @@
       "nome": "Metodologia e método",
       "descricao": "Metodologia vem do Latim methodus, entendido como caminho, e é o campo que estuda os melhores métodos de uma área para produzir conhecimento. Método é o conjunto de regras, critérios e procedimentos que orienta a busca de explicações e respostas.",
       "ordem": 1,
-      "centralidade": 0,
+      "centralidade": 0.1909,
       "evidencia": [
         "Explica a origem da palavra metodologia e o que ela estuda",
         "Separa metodologia de método em um exemplo concreto de pesquisa"
@@ -6566,7 +6566,7 @@
       "nome": "Conhecimento do senso comum",
       "descricao": "É o conhecimento adquirido no cotidiano, pela experiência vivida. Tende a ser assistemático, acrítico, superficial, falível, inexato e transmitido socialmente entre gerações sem problematização.",
       "ordem": 3,
-      "centralidade": 0.0091,
+      "centralidade": 0.2,
       "evidencia": [
         "Reconhece um exemplo de senso comum em uma frase do dia a dia",
         "Lista quatro características do senso comum"
@@ -6590,7 +6590,7 @@
       "nome": "Conhecimento filosófico e teológico",
       "descricao": "O filosófico se apoia em reflexão crítica e racional sobre o sentido das coisas: é valorativo, racional e sistemático, mas não verificável empiricamente. O teológico se apoia em fé, revelação e doutrina, e busca compreender uma verdade já aceita em vez de construir uma nova.",
       "ordem": 4,
-      "centralidade": 0,
+      "centralidade": 0.1909,
       "evidencia": [
         "Separa filosófico de teológico pela fonte de autoridade de cada um",
         "Explica por que nenhum dos dois é verificável por experimento"
@@ -6613,7 +6613,7 @@
       "nome": "Conhecimento científico",
       "descricao": "É sistemático, racional, metódico e orientado à verificação. Procura compreender não só o fenômeno, mas suas causas, relações e regularidades, e aceita ser revisado, consolidado ou corrigido.",
       "ordem": 5,
-      "centralidade": 0,
+      "centralidade": 0.1818,
       "evidencia": [
         "Aponta as três exigências que separam o científico do senso comum",
         "Explica por que o conhecimento científico não é estático"
@@ -6660,7 +6660,7 @@
       "nome": "Ciência moderna e pós-moderna",
       "descricao": "A ciência moderna (séc. XVI) enfatiza controle, objetividade, experimentação e matematização, buscando leis e regularidades universais. A pós-moderna (séc. XX) critica o mito da neutralidade absoluta e considera trajetórias, contextos e o habitus do pesquisador.",
       "ordem": 7,
-      "centralidade": 0,
+      "centralidade": 0.0091,
       "evidencia": [
         "Diz o século de cada uma e a ênfase de cada uma",
         "Explica por que observar não basta na ciência moderna"
@@ -6683,7 +6683,7 @@
       "nome": "Verdade, evidência e certeza",
       "descricao": "Verdade é o desvelamento ou manifestação do ser. Evidência é a manifestação clara e transparente da natureza das coisas. Certeza é a adesão firme a uma verdade, sem temor de engano, normalmente apoiada em evidência suficiente.",
       "ordem": 8,
-      "centralidade": 0,
+      "centralidade": 0.1455,
       "evidencia": [
         "Define os três termos sem trocá-los",
         "Explica por que a certeza depende da evidência"
@@ -6704,7 +6704,7 @@
       "nome": "Indução, dedução e teoria",
       "descricao": "A indução parte de casos ou verdades particulares para construir generalizações, e está associada a Francis Bacon. A dedução parte de princípios gerais para explicitar verdades particulares. Quando a ciência identifica regularidade constante e uniforme formula leis, e o conjunto inter-relacionado de conceitos e proposições que explica um domínio é a teoria.",
       "ordem": 9,
-      "centralidade": 0,
+      "centralidade": 0.1364,
       "evidencia": [
         "Classifica um raciocínio dado como indutivo ou dedutivo",
         "Diferencia lei de teoria"
@@ -6727,7 +6727,7 @@
       "nome": "Paradigma, ontologia e epistemologia",
       "descricao": "Paradigma é o conjunto de crenças, valores, pressupostos e técnicas compartilhados por uma comunidade científica. Ontologia trata da natureza do ser e da realidade estudada; epistemologia trata de como o conhecimento é produzido e reconhecido como válido. Por isso o método não é neutro.",
       "ordem": 10,
-      "centralidade": 0,
+      "centralidade": 0.1545,
       "evidencia": [
         "Define paradigma sem confundir com método",
         "Diz qual pergunta a ontologia responde e qual a epistemologia responde"
@@ -6750,7 +6750,7 @@
       "nome": "Paradigma positivista",
       "descricao": "Valoriza observação neutra, objetividade, experimentação e mensuração, analisando a relação entre variável independente (causa) e variável dependente (efeito), com raciocínio dedutivo.",
       "ordem": 11,
-      "centralidade": 0,
+      "centralidade": 0.1273,
       "evidencia": [
         "Identifica variável independente e dependente em um exemplo",
         "Reconhece o positivismo por trás de um desenho de pesquisa"
@@ -6773,7 +6773,7 @@
       "nome": "Paradigma interpretativo",
       "descricao": "Entende que a realidade é acessada por construções sociais: o conhecimento nasce da interação entre o que o sujeito observa e o sentido que ele atribui ao observado.",
       "ordem": 12,
-      "centralidade": 0,
+      "centralidade": 0.0818,
       "evidencia": [
         "Explica por que a observação não é neutra nesse paradigma",
         "Reconhece o interpretativismo em uma pesquisa com entrevistas abertas"
@@ -6819,7 +6819,7 @@
       "nome": "Pesquisa básica e aplicada",
       "descricao": "Classificação quanto à natureza. A básica amplia conhecimentos e teorias sem finalidade imediata. A aplicada gera produtos, processos ou soluções com finalidade prática para problemas concretos.",
       "ordem": 14,
-      "centralidade": 0,
+      "centralidade": 0.0091,
       "evidencia": [
         "Classifica uma pesquisa dada como básica ou aplicada",
         "Justifica a classificação pela finalidade do estudo"
@@ -6842,7 +6842,7 @@
       "nome": "Quantitativa, qualitativa e mista",
       "descricao": "Classificação quanto à abordagem. A quantitativa mede, testa hipóteses formuladas antes da coleta, usa estatística e busca generalização. A qualitativa trabalha com dados descritivos, contato direto, entrevistas abertas e interpretação, e pode refinar hipóteses antes, durante ou depois da coleta. A mista usa um método para ampliar ou complementar o outro.",
       "ordem": 15,
-      "centralidade": 0,
+      "centralidade": 0.0727,
       "evidencia": [
         "Escolhe a abordagem adequada para um problema dado",
         "Diz em que momento a hipótese aparece em cada abordagem"
@@ -6865,7 +6865,7 @@
       "nome": "Exploratória, descritiva e explicativa",
       "descricao": "Classificação quanto aos objetivos. A exploratória serve a objeto pouco estudado e levanta padrões, ideias e hipóteses. A descritiva retrata em detalhe um fenômeno, população ou conjunto de características. A explicativa busca fundamentos, causas e razões do fenômeno.",
       "ordem": 16,
-      "centralidade": 0,
+      "centralidade": 0.0636,
       "evidencia": [
         "Classifica um objetivo de pesquisa nos três tipos",
         "Explica por que um tema sem estudos anteriores pede pesquisa exploratória"
@@ -6888,7 +6888,7 @@
       "nome": "Bibliográfica e documental",
       "descricao": "Dois procedimentos técnicos. A bibliográfica se apoia em livros, artigos e fontes teóricas já analisadas, exigindo seleção criteriosa e atualizada. A documental usa documentos de primeira mão, ainda sem tratamento analítico anterior.",
       "ordem": 17,
-      "centralidade": 0,
+      "centralidade": 0.0182,
       "evidencia": [
         "Classifica uma fonte como bibliográfica ou documental",
         "Justifica a escolha do procedimento pelo tipo de material disponível"
@@ -6934,7 +6934,7 @@
       "nome": "Survey e estudo de campo",
       "descricao": "O levantamento ou survey interroga diretamente as pessoas, geralmente por questionário, e costuma produzir descrição quantitativa com amostragem. O estudo de campo observa um grupo ou comunidade na sua estrutura social e na interação cotidiana.",
       "ordem": 19,
-      "centralidade": 0,
+      "centralidade": 0.0091,
       "evidencia": [
         "Escolhe entre survey e estudo de campo para um problema dado",
         "Explica por que o survey pede amostra e o campo pede permanência"
@@ -6980,7 +6980,7 @@
       "nome": "População e amostra",
       "descricao": "População é o conjunto completo de elementos que compartilham os parâmetros relevantes para a pesquisa; amostra é o subgrupo efetivamente observado ou analisado. A amostra precisa ser representativa do objetivo do estudo e viável em tempo, acesso e recursos.",
       "ordem": 21,
-      "centralidade": 0,
+      "centralidade": 0.0364,
       "evidencia": [
         "Delimita população e amostra em um caso concreto",
         "Explica por que a amostra afeta o alcance das conclusões"
@@ -7003,7 +7003,7 @@
       "nome": "Amostragem probabilística e não probabilística",
       "descricao": "Na probabilística todos os elementos têm chance conhecida de seleção, como no sorteio e na estratificada proporcional. Na não probabilística a escolha depende de critérios do pesquisador: conveniência, quotas, bola de neve, casos típicos, críticos ou contrastantes.",
       "ordem": 22,
-      "centralidade": 0,
+      "centralidade": 0.0091,
       "evidencia": [
         "Classifica uma técnica de seleção nos dois grupos",
         "Descreve como funciona a bola de neve e quando ela é útil"
@@ -7026,7 +7026,7 @@
       "nome": "Resumo e resenha",
       "descricao": "O resumo condensa o texto em seus tópicos essenciais por apagamento, generalização e construção, sem julgar. A resenha resume e ainda avalia criticamente a obra, combinando informação e opinião fundamentada.",
       "ordem": 23,
-      "centralidade": 0.2455,
+      "centralidade": 0.2636,
       "evidencia": [
         "Produz um resumo que preserva a ideia central e corta o supérfluo",
         "Diz o que precisa entrar na resenha e não entra no resumo"
@@ -7047,7 +7047,7 @@
       "nome": "Esquema e fichamento",
       "descricao": "O esquema é a representação gráfica das ideias principais na sequência do texto, com palavras-chave, e o sublinhar destaca as expressões centrais. O fichamento reúne indicação bibliográfica, transcrição de trechos, apreciação, esquemas e resumos, servindo de base para estudo e escrita.",
       "ordem": 24,
-      "centralidade": 0,
+      "centralidade": 0.0091,
       "evidencia": [
         "Monta um esquema mantendo a sequência lógica do texto",
         "Lista as partes que compõem um fichamento"
@@ -7057,6 +7057,490 @@
         "AV1"
       ],
       "ementaPPC": [],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_25",
+      "tipo": "CONCEITUAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Projeto de pesquisa",
+      "nome": "Projeto de pesquisa e 5W2H",
+      "descricao": "O projeto é o planejamento das atividades a serem desenvolvidas na pesquisa e funciona como documento que explicita as ações. O fluxo básico vai de tema, problema, hipótese, objetivos, metodologia e cronograma, e o 5W2H ajuda a clarificar o que será feito, por que, onde, quando, por quem, como e com que custo.",
+      "ordem": 25,
+      "centralidade": 0.1364,
+      "evidencia": [
+        "Diz para que serve o projeto antes de começar a coletar dados",
+        "Usa o 5W2H para conferir se o projeto está completo"
+      ],
+      "checagem": "O que é um projeto de pesquisa e quais perguntas o 5W2H obriga a responder?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Estrutura de um projeto de pesquisa"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_26",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Projeto de pesquisa",
+      "nome": "Tema e problema de pesquisa",
+      "descricao": "O tema é o assunto geral e precisa ser delimitado para se tornar investigável. O problema é a questão não resolvida que será objeto de estudo, e deve ser claro, relevante e possível de responder.",
+      "ordem": 26,
+      "centralidade": 0.0727,
+      "evidencia": [
+        "Transforma um tema amplo em um problema delimitado",
+        "Escreve o problema em forma de pergunta respondível"
+      ],
+      "checagem": "Qual a diferença entre tema e problema, e o que faz um problema ser mal formulado?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Estrutura de um projeto de pesquisa"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_27",
+      "tipo": "CONCEITUAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Projeto de pesquisa",
+      "nome": "Hipótese",
+      "descricao": "É uma proposição testável, uma pré-solução do problema, que a pesquisa confirma ou nega. Na abordagem quantitativa é formulada antes da coleta; na qualitativa pode ser formulada ou refinada durante e depois.",
+      "ordem": 27,
+      "centralidade": 0,
+      "evidencia": [
+        "Escreve uma hipótese testável para um problema dado",
+        "Explica por que hipótese não é conclusão"
+      ],
+      "checagem": "O que é uma hipótese e por que ela é chamada de pré-solução?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Estrutura de um projeto de pesquisa"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_28",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Projeto de pesquisa",
+      "nome": "Objetivo geral e específicos",
+      "descricao": "O objetivo geral diz o que se pretende atingir em uma formulação sintética, normalmente com um único verbo no infinitivo. Os específicos desdobram o geral em etapas operacionais, com verbos descritivos (identificar, descrever, sistematizar, caracterizar, levantar) ou explicativos (comparar, relacionar, analisar).",
+      "ordem": 28,
+      "centralidade": 0,
+      "evidencia": [
+        "Escreve um objetivo geral com um verbo no infinitivo",
+        "Separa verbos descritivos de explicativos nos objetivos específicos"
+      ],
+      "checagem": "Quantos verbos deve ter o objetivo geral, e que verbos indicam um objetivo específico descritivo?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Estrutura de um projeto de pesquisa"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_29",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Projeto de pesquisa",
+      "nome": "Justificativa",
+      "descricao": "Expõe a relevância social, científica, acadêmica ou profissional do estudo, evidenciando contribuições e originalidade. Não é lugar de descrever método nem de antecipar resultado.",
+      "ordem": 29,
+      "centralidade": 0,
+      "evidencia": [
+        "Escreve uma justificativa que mostra relevância social e científica",
+        "Reconhece quando um texto de justificativa virou metodologia"
+      ],
+      "checagem": "O que precisa aparecer na justificativa de um projeto de pesquisa?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Estrutura de um projeto de pesquisa"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_30",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Projeto de pesquisa",
+      "nome": "Revisão de literatura e estado da arte",
+      "descricao": "A revisão examina o estado da arte, apresenta as principais ideias já discutidas por outros autores e mostra o diferencial do trabalho. O estado da arte é o conhecimento já em operação sobre o tópico, e serve para ajustar a originalidade do projeto.",
+      "ordem": 30,
+      "centralidade": 0,
+      "evidencia": [
+        "Localiza e organiza autores que já discutiram o problema",
+        "Explica o que o estado da arte muda na originalidade do projeto"
+      ],
+      "checagem": "Para que serve a revisão de literatura em um projeto, além de mostrar leitura?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Estrutura de um projeto de pesquisa"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_31",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Projeto de pesquisa",
+      "nome": "Metodologia, cronograma e orçamento",
+      "descricao": "A metodologia do projeto detalha tipo de pesquisa, estratégia, instrumentos de coleta, tratamento dos dados e etapas de execução. O cronograma prevê o tempo de cada atividade e o orçamento estima os gastos quando há recursos materiais, técnicos ou logísticos envolvidos.",
+      "ordem": 31,
+      "centralidade": 0,
+      "evidencia": [
+        "Escreve a metodologia declarando natureza, abordagem, objetivo e procedimento",
+        "Monta um cronograma por atividade e período"
+      ],
+      "checagem": "Que informações a seção de metodologia de um projeto precisa trazer?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Estrutura de um projeto de pesquisa"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_32",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Normas ABNT",
+      "nome": "Formatação ABNT",
+      "descricao": "Papel A4, texto em um só lado, espaçamento 1,5 e alinhamento justificado; margens esquerda e superior de 3 cm, direita e inferior de 2 cm; texto principal em corpo 12 e elementos auxiliares em 10; citação longa com recuo de 4 cm. A paginação é contada desde o início mas aparece a partir da introdução, em algarismos arábicos no canto superior direito; siglas vêm por extenso na primeira ocorrência e o resumo é parágrafo único com 3 a 5 palavras-chave.",
+      "ordem": 32,
+      "centralidade": 0.0364,
+      "evidencia": [
+        "Configura margens, fonte e espaçamento de um trabalho",
+        "Diz onde e a partir de qual página o número aparece"
+      ],
+      "checagem": "Quais são as quatro margens da ABNT e a partir de onde a paginação aparece?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Normas da ABNT."
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_33",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Normas ABNT",
+      "nome": "Elementos pré, textuais e pós-textuais",
+      "descricao": "Pré-textuais: capa, folha de rosto, listas, resumo, abstract e sumário. Textuais: introdução, desenvolvimento e conclusão, que formam o núcleo argumentativo. Pós-textuais: referências, glossário, anexos e apêndices, sendo o apêndice produzido pelo próprio autor e o anexo por terceiros.",
+      "ordem": 33,
+      "centralidade": 0,
+      "evidencia": [
+        "Coloca cada parte do trabalho no bloco certo",
+        "Separa anexo de apêndice pela autoria"
+      ],
+      "checagem": "Em que bloco entra o sumário, e qual a diferença entre anexo e apêndice?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Normas da ABNT.",
+        "Redação da Pesquisa"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_34",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Citações e referências",
+      "nome": "Citação direta",
+      "descricao": "É a transcrição literal das palavras do autor. Até três linhas fica dentro do texto entre aspas; com mais de três linhas exige recuo de 4 cm, fonte 10 e destaque, sempre com indicação de autor, ano e página.",
+      "ordem": 34,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Formata uma citação de cinco linhas com recuo, corpo 10 e aspas",
+        "Decide se a citação entra no corpo do texto ou em bloco recuado"
+      ],
+      "checagem": "Como se formata uma citação direta com mais de três linhas?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Normas da ABNT."
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_35",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Citações e referências",
+      "nome": "Citação indireta e apud",
+      "descricao": "A citação indireta reproduz a ideia do autor com redação própria e mantém a indicação de sobrenome e ano. A citação de citação usa apud quando não houve acesso ao texto original, e nas referências entra a obra efetivamente consultada.",
+      "ordem": 35,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Parafraseia um trecho mantendo a indicação da fonte",
+        "Escreve uma citação com apud e diz qual obra vai para as referências"
+      ],
+      "checagem": "Quando se usa apud, e qual das duas obras entra na lista de referências?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Normas da ABNT."
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_36",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Citações e referências",
+      "nome": "Lista de referências e ética",
+      "descricao": "A lista vem em ordem alfabética pelo sobrenome, alinhada à esquerda, com espaçamento simples e linha em branco entre as entradas. Cada tipo tem seu formato: livro, artigo de periódico, trabalho em evento, monografia, dissertação ou tese. Referenciar corretamente é parte da honestidade intelectual e do combate ao plágio.",
+      "ordem": 36,
+      "centralidade": 0,
+      "evidencia": [
+        "Monta a referência de um livro e de um artigo de periódico",
+        "Organiza a lista final na ordem e no espaçamento exigidos"
+      ],
+      "checagem": "Como se organiza a lista de referências e quais dados entram na referência de um artigo de periódico?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Normas da ABNT."
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_37",
+      "tipo": "CONCEITUAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Coleta de dados",
+      "nome": "Instrumentos de coleta",
+      "descricao": "A coleta é a pesquisa propriamente dita: levantar as informações necessárias para responder ao problema e atingir os objetivos. Os instrumentos podem ser estruturados (planejados e padronizados, com maior comparabilidade), semiestruturados (partes definidas com margem de adaptação) ou não estruturados (abertos e centrados no depoente).",
+      "ordem": 37,
+      "centralidade": 0.0364,
+      "evidencia": [
+        "Escolhe o grau de estruturação adequado ao objetivo da coleta",
+        "Explica o que se ganha e o que se perde ao padronizar o instrumento"
+      ],
+      "checagem": "Qual a diferença entre instrumento estruturado, semiestruturado e não estruturado?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Instrumentos de coleta de dados"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_38",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Coleta de dados",
+      "nome": "Questionário e escala Likert",
+      "descricao": "O questionário pode ter questões fechadas, abertas ou mistas. As fechadas podem ser dicotômicas, de múltipla escolha ou de escala Likert, que mede grau de concordância e gera dado ordenável.",
+      "ordem": 38,
+      "centralidade": 0,
+      "evidencia": [
+        "Escreve uma questão fechada dicotômica e uma em escala Likert",
+        "Decide quando usar questão aberta em vez de fechada"
+      ],
+      "checagem": "Que tipos de questão fechada existem e o que a escala Likert mede?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Instrumentos de coleta de dados"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_39",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Coleta de dados",
+      "nome": "Entrevista e grupo focal",
+      "descricao": "A entrevista é conversa planejada entre pesquisador e participante para aprofundar percepções, experiências e informações. O grupo focal é a entrevista coletiva, geralmente de 3 a 12 pessoas com características similares e duração de 1 a 2 horas. Em ambos, o participante precisa saber o foco da pesquisa, o destino dos dados e consentir.",
+      "ordem": 39,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Dimensiona um grupo focal em número de pessoas e duração",
+        "Decide entre entrevista individual e grupo focal para um objetivo dado"
+      ],
+      "checagem": "Quantas pessoas e quanto tempo tem um grupo focal, e o que o participante precisa saber antes?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Instrumentos de coleta de dados"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_40",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Coleta de dados",
+      "nome": "Observação e análise documental",
+      "descricao": "Na observação o pesquisador se posiciona com cuidado no contexto investigado, evitando ao máximo interferências indevidas. A análise documental usa documentos e produções bibliográficas como base de coleta, podendo trabalhar com fontes primárias ou secundárias.",
+      "ordem": 40,
+      "centralidade": 0,
+      "evidencia": [
+        "Planeja uma observação dizendo o que registrar e como não interferir",
+        "Classifica um documento como fonte primária ou secundária"
+      ],
+      "checagem": "O que diferencia fonte primária de secundária na análise documental?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Instrumentos de coleta de dados"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_41",
+      "tipo": "CONCEITUAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Análise de dados",
+      "nome": "Tipos de variáveis",
+      "descricao": "Variável é tudo aquilo que pode assumir valores diferentes. Nominais indicam categorias sem ordem natural, ordinais permitem ordenação entre os níveis e escalares são numéricas e admitem mais operações estatísticas. Entender a variável é o primeiro passo para escolher a análise.",
+      "ordem": 41,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Classifica variáveis de um questionário em nominal, ordinal e escalar",
+        "Explica por que o tipo de variável limita a análise possível"
+      ],
+      "checagem": "Qual a diferença entre variável nominal, ordinal e escalar, com um exemplo de cada?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Análise de dados quantitativos e qualitativos"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_42",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Análise de dados",
+      "nome": "Tendência central e dispersão",
+      "descricao": "A tendência central representa a amostra por medidas como média e mediana. A dispersão, como o desvio padrão, mostra o quanto os dados estão espalhados em torno dessa medida central.",
+      "ordem": 42,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Escolhe entre média e mediana conforme os dados",
+        "Explica o que o desvio padrão informa que a média sozinha esconde"
+      ],
+      "checagem": "Para que serve o desvio padrão se você já tem a média?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Análise de dados quantitativos e qualitativos"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_43",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Análise de dados",
+      "nome": "Correlação e comparação de médias",
+      "descricao": "A correlação avalia se duas variáveis se associam. O teste de comparação de médias verifica diferença entre grupos ou entre medições em momentos distintos. Excel e SPSS aparecem como as ferramentas recorrentes para esses cálculos.",
+      "ordem": 43,
+      "centralidade": 0,
+      "evidencia": [
+        "Decide entre correlação e comparação de médias diante de uma pergunta",
+        "Diz qual ferramenta usar para organizar e calcular"
+      ],
+      "checagem": "Quando você usa correlação e quando usa teste de comparação de médias?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Análise de dados quantitativos e qualitativos"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_44",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Análise de dados",
+      "nome": "Transcrição, diário e codificação",
+      "descricao": "A transcrição produz cópia digitada clara e fiel das falas dos participantes. O diário de pesquisa registra impressões, ideias e observações do pesquisador ao longo do processo. A codificação organiza o material em blocos ou segmentos de texto antes de atribuir significados analíticos.",
+      "ordem": 44,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Transcreve uma fala sem editar o sentido",
+        "Codifica um trecho de entrevista em segmentos antes de interpretar"
+      ],
+      "checagem": "O que a codificação faz com o material transcrito, e por que ela vem antes da interpretação?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Análise de dados quantitativos e qualitativos"
+      ],
+      "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
+    },
+    {
+      "id": "mt_METC_45",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "METC",
+      "periodo": 3,
+      "unidade": "Análise de dados",
+      "nome": "Análise de conteúdo e SADQ",
+      "descricao": "A análise de conteúdo passa por pré-exploração do corpus, seleção das unidades de análise, categorização e subcategorização dos significados, buscando padrões, motivações e insights. O SADQ, software de análise de dados qualitativos, ajuda a organizar dados, registros analíticos e o percurso interpretativo.",
+      "ordem": 45,
+      "centralidade": 0,
+      "evidencia": [
+        "Executa as etapas da análise de conteúdo em um conjunto de entrevistas",
+        "Diz o que um SADQ organiza no trabalho do pesquisador"
+      ],
+      "checagem": "Quais são as etapas da análise de conteúdo, na ordem?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Análise de dados quantitativos e qualitativos"
+      ],
       "fonte": "ifal/src/content/metodologia-cientifica/MetodologiaCientificaSections.tsx"
     },
     {
@@ -8081,7 +8565,7 @@
       "nome": "Business Intelligence: definicao e origem",
       "descricao": "BI e o conjunto de tecnicas e ferramentas que transforma dados em informacao util para decidir: coletar, organizar, analisar, compartilhar e monitorar. O termo e do fim dos anos 1980, atribuido a Howard Dresner (Gartner). O problema que ele ataca e a empresa ser interligada enquanto os dados ficam fragmentados em varios sistemas.",
       "ordem": 1,
-      "centralidade": 0,
+      "centralidade": 0.3364,
       "evidencia": [
         "Consegue definir BI pelas cinco acoes sobre a informacao",
         "Consegue explicar por que dado fragmentado atrapalha a decisao"
@@ -8104,7 +8588,7 @@
       "nome": "A cadeia OLTP, ETL, DW e OLAP",
       "descricao": "A arquitetura de BI vai das fontes (legado, ERP, CRM) para o ETL, dai para o Data Warehouse e os data marts com metadados, depois servidor e finalmente consulta, OLAP e mineracao. Essa cadeia e o fio que atravessa toda a disciplina.",
       "ordem": 2,
-      "centralidade": 0,
+      "centralidade": 0.3182,
       "evidencia": [
         "Consegue desenhar a arquitetura de ponta a ponta",
         "Consegue dizer em que caixa entram Pentaho, Oracle, Power BI e Orange"
@@ -8127,7 +8611,7 @@
       "nome": "As quatro caracteristicas do DW",
       "descricao": "Inmon define o Data Warehouse como conjunto de dados orientado por assunto, integrado, variante no tempo e nao volatil, voltado ao suporte a decisao. Nao volatil quer dizer que a carga e planejada e o dado historico nao e atualizado depois.",
       "ordem": 3,
-      "centralidade": 0,
+      "centralidade": 0.2636,
       "evidencia": [
         "Consegue listar as quatro caracteristicas",
         "Consegue explicar o que variante no tempo obriga em termos de historico"
@@ -8150,7 +8634,7 @@
       "nome": "DW versus banco transacional",
       "descricao": "O OLTP e normalizado, transacional e atualizado a todo instante. O DW e desnormalizado, voltado a consulta e atualizado por cargas periodicas. Os dois convivem: o OLTP e a fonte, o DW e o destino.",
       "ordem": 4,
-      "centralidade": 0,
+      "centralidade": 0.1636,
       "evidencia": [
         "Consegue apontar tres diferencas entre OLTP e DW",
         "Consegue justificar por que nao se faz analise histórica direto no transacional"
@@ -8196,7 +8680,7 @@
       "nome": "Esquema estrela e floco de neve",
       "descricao": "A modelagem dimensional de Kimball apresenta o dado de forma padronizada e rapida de consultar. No star schema uma tabela fato central fica cercada por dimensoes desnormalizadas que respondem onde, quando, o que e quem. No snowflake as dimensoes sao normalizadas em hierarquias, o que reduz redundancia mas exige mais joins.",
       "ordem": 6,
-      "centralidade": 0,
+      "centralidade": 0.1545,
       "evidencia": [
         "Consegue desenhar um star schema a partir de um requisito",
         "Consegue dizer o que muda no snowflake e o custo disso"
@@ -8219,7 +8703,7 @@
       "nome": "Tabela fato e seus tipos",
       "descricao": "A fato guarda as metricas e tem PK composta por todas as FKs das dimensoes. Ha fatos de movimento, de snapshot e factless, que registram existencia sem metrica. Duas regras do professor: nao misture assuntos numa mesma fato e nao misture granularidades.",
       "ordem": 7,
-      "centralidade": 0,
+      "centralidade": 0.1273,
       "evidencia": [
         "Consegue montar a PK composta e a lista de metricas de uma fato",
         "Consegue justificar por que linha de resumo nao entra na fato detalhada"
@@ -8242,7 +8726,7 @@
       "nome": "Aditividade das metricas",
       "descricao": "Metrica aditiva soma em todas as dimensoes. Semi-aditiva soma em algumas, como saldo e estoque, que nao fazem sentido somados ao longo do tempo. Nao-aditiva nunca soma, como percentual e temperatura.",
       "ordem": 8,
-      "centralidade": 0,
+      "centralidade": 0.0455,
       "evidencia": [
         "Consegue classificar uma metrica nos tres tipos",
         "Consegue dizer que agregacao usar quando a soma nao vale"
@@ -8265,7 +8749,7 @@
       "nome": "Dimensao, surrogate key e hierarquia",
       "descricao": "A dimensao tem PK artificial (surrogate key, nunca o codigo do sistema de origem), atributos textuais usados como filtro e hierarquias 1 para N em cascata. A surrogate key isola o DW das regras da origem, sustenta o historico e melhora o desempenho.",
       "ordem": 9,
-      "centralidade": 0,
+      "centralidade": 0.1,
       "evidencia": [
         "Consegue criar a surrogate key e separar atributos de filtro",
         "Consegue montar a hierarquia de uma dimensao"
@@ -8288,7 +8772,7 @@
       "nome": "Granularidade e o grao",
       "descricao": "Granularidade e o nivel de detalhe dos dados. O grao e o nivel mais detalhado da fato, e todas as metricas dela compartilham a mesma granularidade. Quanto menor o grao, mais detalhe e mais volume.",
       "ordem": 10,
-      "centralidade": 0,
+      "centralidade": 0.0364,
       "evidencia": [
         "Consegue declarar o grao de uma fato em uma frase",
         "Consegue mostrar que o requisito e quem fixa o grao"
@@ -8311,7 +8795,7 @@
       "nome": "Os quatro passos da modelagem",
       "descricao": "Para modelar, responda na ordem: o que avaliamos (metricas), como analisar (dimensoes), qual o menor detalhe (granularidade) e como agrupar (hierarquias). As quatro respostas saem do requisito do negocio, nao do gosto do modelador.",
       "ordem": 11,
-      "centralidade": 0,
+      "centralidade": 0.0091,
       "evidencia": [
         "Consegue transformar um requisito escrito em fato, dimensoes, grao e hierarquias",
         "Consegue identificar a mesma dimensao em dois papeis no requisito"
@@ -8357,7 +8841,7 @@
       "nome": "Slowly Changing Dimensions",
       "descricao": "Tipo 1 sobrescreve e perde o historico, util quando o dado estava errado. Tipo 2 cria nova linha com nova surrogate key e marca a vigencia, preservando o historico ligado a cada fato. Tipo 3 acrescenta coluna com o valor original ao lado do atual, e a hibrida Tipo 6 combina nova linha com colunas de original e atual.",
       "ordem": 13,
-      "centralidade": 0,
+      "centralidade": 0.0182,
       "evidencia": [
         "Consegue escolher o tipo de SCD a partir do requisito de historico",
         "Consegue mostrar o que cada tipo perde"
@@ -8449,7 +8933,7 @@
       "nome": "ETL: extrair, transformar e carregar",
       "descricao": "ETL e extrair das fontes, transformar conforme as regras do negocio e carregar no destino. A teoria e simples e a pratica e complexa, porque as fontes tem convencoes, tipos, unidades e granularidades diferentes.",
       "ordem": 17,
-      "centralidade": 0,
+      "centralidade": 0.1364,
       "evidencia": [
         "Consegue separar as tres etapas num plano de carga",
         "Consegue citar um conflito real entre duas fontes"
@@ -8470,7 +8954,7 @@
       "nome": "Preparacao e limpeza dos dados",
       "descricao": "Antes de carregar trate quatro frentes: limpeza (ausentes, ruido e outliers, duplicados), reducao (PCA, amostragem), transformacao (normalizacao, discretizacao) e integracao (redundancia entre fontes).",
       "ordem": 18,
-      "centralidade": 0,
+      "centralidade": 0.1,
       "evidencia": [
         "Consegue apontar a frente certa para cada defeito do dado",
         "Consegue tratar valor ausente sem inventar dado"
@@ -8491,7 +8975,7 @@
       "nome": "Kettle: transformations, jobs e executaveis",
       "descricao": "No Pentaho Data Integration uma transformation e um conjunto de steps ligados por hops, e cada hop e a saida de um step e a entrada de outro. O job agrupa e orquestra transformations, e seus hops carregam condicao. Spoon e a interface grafica, Pan roda transformations, Kitchen roda jobs e Carte e o servidor remoto.",
       "ordem": 19,
-      "centralidade": 0,
+      "centralidade": 0.0273,
       "evidencia": [
         "Consegue montar uma transformation ligando steps por hops",
         "Consegue rodar a carga por linha de comando sem abrir o Spoon"
@@ -8512,7 +8996,7 @@
       "nome": "Catalogo de steps do PDI",
       "descricao": "Os steps se agrupam em input, output, lookup, transformacao de campos e de conjuntos. Database Lookup busca numa tabela do banco e Stream Lookup busca em dados vindos de outro step. Filter Rows produz dois fluxos, Unique Rows exige linhas ordenadas e Dummy serve para descartar um fluxo.",
       "ordem": 20,
-      "centralidade": 0,
+      "centralidade": 0.0091,
       "evidencia": [
         "Consegue escolher o step certo para cada necessidade do fluxo",
         "Consegue ordenar antes do Unique Rows"
@@ -8554,7 +9038,7 @@
       "nome": "Estatistica descritiva, amostra e variaveis",
       "descricao": "A estatistica descritiva organiza e resume o que se tem, a inferencial usa uma amostra representativa para generalizar a populacao. No conjunto de dados, observacoes sao linhas e variaveis sao colunas. As variaveis sao qualitativas (nominal, ordinal) ou quantitativas (discreta, continua).",
       "ordem": 22,
-      "centralidade": 0,
+      "centralidade": 0.0636,
       "evidencia": [
         "Consegue classificar cada coluna de uma base",
         "Consegue dizer o que a amostra permite e o que nao permite afirmar"
@@ -8575,7 +9059,7 @@
       "nome": "Tendencia central e dispersao",
       "descricao": "Media, mediana e moda resumem a posicao. Amplitude, desvio medio, variancia e desvio-padrao medem a dispersao. O coeficiente de variacao compara conjuntos com medias e unidades diferentes, e CV menor ou igual a 20 por cento indica conjunto homogeneo.",
       "ordem": 23,
-      "centralidade": 0,
+      "centralidade": 0.0455,
       "evidencia": [
         "Consegue calcular e interpretar desvio-padrao e CV",
         "Consegue dizer quando a media engana"
@@ -8596,7 +9080,7 @@
       "nome": "As tres regras da assimetria",
       "descricao": "Na distribuicao simetrica, media igual a mediana igual a moda. Na assimetrica positiva, com cauda a direita, media maior que mediana maior que moda. Na negativa, o inverso. Curtose e o grau de achatamento em relacao a curva normal.",
       "ordem": 24,
-      "centralidade": 0,
+      "centralidade": 0.0364,
       "evidencia": [
         "Consegue deduzir a assimetria a partir das tres medidas",
         "Consegue ler a assimetria no histograma"
@@ -8617,7 +9101,7 @@
       "nome": "Quartis, box plot e outliers",
       "descricao": "Separatrizes dividem os dados ordenados: quartis em 4 partes, decis em 10 e percentis em 100, e a mediana e o percentil 50. O box plot usa minimo, Q1, mediana, Q3 e maximo, mostra posicao, dispersao e assimetria e evidencia outliers, que distorcem medias e conclusoes.",
       "ordem": 25,
-      "centralidade": 0,
+      "centralidade": 0.0273,
       "evidencia": [
         "Consegue montar um box plot com os cinco valores",
         "Consegue decidir o que fazer com o outlier encontrado"
@@ -8645,6 +9129,442 @@
       ],
       "checagem": "Cambio (manual ou automatico) e preco do veiculo: qual caso de analise bidimensional e que recurso o material sugere?",
       "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_27",
+      "tipo": "CONCEITUAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "OLAP e Cubos",
+      "nome": "O cubo: OLAP versus OLTP",
+      "descricao": "OLAP e o conjunto de tecnologias de suporte a decisao com visao multidimensional dos dados: o cubo, feito de dimensoes, medidas e celulas. OLAP e analitico e multidimensional, OLTP e transacional e bidimensional.",
+      "ordem": 27,
+      "centralidade": 0.0364,
+      "evidencia": [
+        "Consegue identificar dimensoes, medidas e celulas em um cubo",
+        "Consegue dizer por que a planilha do OLTP e bidimensional"
+      ],
+      "checagem": "O que compoe um cubo OLAP e em que ele difere da visao do sistema transacional?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Banco de dados multidimensional"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_28",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "OLAP e Cubos",
+      "nome": "Operacoes sobre o cubo",
+      "descricao": "Drill-down vai do geral ao detalhe e roll-up faz o inverso. Slice fixa um membro de uma dimensao e dice seleciona varios membros de varias dimensoes, formando um sub-cubo: os dois sao formas de filtro. Pivoteamento gira o cubo, trocando a ordem de visualizacao das dimensoes.",
+      "ordem": 28,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Consegue nomear a operacao a partir do que o analista fez",
+        "Consegue navegar uma hierarquia com drill-down e roll-up"
+      ],
+      "checagem": "O analista fixou 2024, restringiu as regioes a Norte e Nordeste e a categoria a Bebidas. Que operacao ele executou?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Banco de dados multidimensional"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_29",
+      "tipo": "CONCEITUAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "OLAP e Cubos",
+      "nome": "Drill across e drill through",
+      "descricao": "O professor deu duas definicoes para cada, e as duas podem cair na prova. Drill across: consultar varias tabelas fato e combinar os resultados, o que exige dimensoes conformadas, ou pular um nivel intermediario dentro da mesma dimensao. Drill through: passar de uma dimensao para outra, ou buscar detalhe alem do grao, fora do esquema dimensional.",
+      "ordem": 29,
+      "centralidade": 0,
+      "evidencia": [
+        "Consegue apresentar as duas leituras de cada operacao",
+        "Consegue explicar por que combinar fatos exige dimensoes conformadas"
+      ],
+      "checagem": "A fato guarda vendas no grao de produto e voce quer o detalhe por nota fiscal. Que operacao e essa, e qual a outra leitura dela no material?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Banco de dados multidimensional"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_30",
+      "tipo": "CONCEITUAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "OLAP e Cubos",
+      "nome": "Tipos de OLAP e o servidor Mondrian",
+      "descricao": "MOLAP guarda dados e agregacoes em estrutura multidimensional e responde mais rapido, ROLAP deixa tudo no banco relacional e traduz para SQL, HOLAP mistura os dois, e existem ainda DOLAP (desktop) e WOLAP (web). O Mondrian e um servidor ROLAP open source em Java que executa consultas MDX, com camadas de apresentacao, dimensional, estrela (cache de agregados) e armazenamento.",
+      "ordem": 30,
+      "centralidade": 0,
+      "evidencia": [
+        "Consegue escolher entre MOLAP e ROLAP justificando",
+        "Consegue dizer o que o Mondrian faz e o que o JPivot faz"
+      ],
+      "checagem": "O que muda entre MOLAP e ROLAP, e em qual dos dois o Mondrian se encaixa?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Banco de dados multidimensional"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_31",
+      "tipo": "CONCEITUAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Power BI",
+      "nome": "Power BI: versoes e os tres motores",
+      "descricao": "O Power BI vem em Desktop, Service e Mobile, e reune tres suplementos do Excel: Power Query (obter e limpar), Power Pivot (modelo e medidas) e Power View (visualizar). No Desktop ha os paineis Relatorio, Dados e Modelo, e o ciclo e obter dados, revisar o modelo, criar relatorios e paineis, publicar. A ferramenta sugere o visual pelo tipo de dado, e ha visuais inadequados para certos tipos.",
+      "ordem": 31,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Consegue dizer em que motor cada tarefa acontece",
+        "Consegue percorrer o ciclo do obter dados ate publicar"
+      ],
+      "checagem": "Qual componente do Power BI obtem e limpa os dados, e qual cuida do modelo e das medidas?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Business Intelligence"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_32",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Power BI",
+      "nome": "Limpeza e outliers no Power BI",
+      "descricao": "No Power Query cada transformacao vira um passo em Etapas Aplicadas, que pode ser editado, reordenado ou removido: tipos, filtro por faixa, nulos, duplicadas, primeira linha como cabecalho e preenchimento. Como nao existe box plot nativo, os outliers saem de medidas DAX (MEDIAN, PERCENTILE.INC para Q1 e Q3, IQR e limites de 1,5 IQR) plotadas como linhas constantes num grafico de dispersao.",
+      "ordem": 32,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Consegue limpar uma base no Power Query e refazer um passo errado",
+        "Consegue montar as medidas DAX do box plot e ler os outliers no grafico"
+      ],
+      "checagem": "Sem visual de box plot, como o material ensina a identificar outliers no Power BI?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Business Intelligence"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/TABDSections.tsx"
+    },
+    {
+      "id": "mt_TABD_33",
+      "tipo": "CONCEITUAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Big Data",
+      "nome": "Os 5 V's do Big Data",
+      "descricao": "Big Data e o conjunto de dados grande e complexo que o software tradicional nao consegue gerenciar. Os 5 V's sao Volume, Velocidade, Variedade, Veracidade (confiabilidade) e Valor (significancia para a organizacao). Os dados podem ser estruturados, semiestruturados ou nao estruturados.",
+      "ordem": 33,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Consegue listar os cinco V's do material",
+        "Consegue classificar um dado em estruturado, semiestruturado ou nao estruturado"
+      ],
+      "checagem": "Quais sao os 5 V's do Big Data e o que Veracidade e Valor significam?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Bancos de Dados Emergentes."
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_34",
+      "tipo": "CONCEITUAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Big Data",
+      "nome": "Hadoop e o Data Lake",
+      "descricao": "O Hadoop traz o HDFS, sistema de arquivos distribuido, e o MapReduce, processamento distribuido, e viabiliza o Data Lake com hardware barato. Data Lake guarda dado bruto, Data Warehouse guarda dado processado e Lakehouse combina os dois.",
+      "ordem": 34,
+      "centralidade": 0,
+      "evidencia": [
+        "Consegue separar o papel do HDFS do papel do MapReduce",
+        "Consegue decidir entre Data Lake e DW para um caso"
+      ],
+      "checagem": "Qual a diferenca entre Data Lake, Data Warehouse e Lakehouse, e o que o HDFS faz no Hadoop?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Bancos de Dados Emergentes."
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_35",
+      "tipo": "CONCEITUAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Big Data",
+      "nome": "NoSQL e suas quatro categorias",
+      "descricao": "NoSQL e nao relacional e schemaless, e responde a variedade e ao volume dos dados. As quatro categorias do material sao chave e valor (Redis), documentos (MongoDB), grafos (Neo4j) e colunar (Cassandra).",
+      "ordem": 35,
+      "centralidade": 0,
+      "evidencia": [
+        "Consegue encaixar um banco na categoria certa",
+        "Consegue explicar o que schemaless muda na pratica"
+      ],
+      "checagem": "MongoDB pertence a qual das quatro categorias de NoSQL, e o que schemaless significa?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Bancos de Dados Emergentes."
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_36",
+      "tipo": "CONCEITUAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Mineracao de Dados",
+      "nome": "KDD e suas etapas",
+      "descricao": "KDD e o processo de descobrir padroes compreensiveis, validos, novos e uteis, e a mineracao e sua etapa principal. As etapas sao preparacao dos dados, mineracao (escolher a tarefa e depois o algoritmo que a atende) e avaliacao ou interpretacao. Vale o lema: dado sem qualidade resulta em mineracao sem qualidade.",
+      "ordem": 36,
+      "centralidade": 0.0818,
+      "evidencia": [
+        "Consegue situar a mineracao dentro do KDD",
+        "Consegue escolher primeiro a tarefa e so depois o algoritmo"
+      ],
+      "checagem": "Quais sao as etapas do KDD e em que ordem se escolhe tarefa e algoritmo?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Mineração de dados"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_37",
+      "tipo": "CONCEITUAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Mineracao de Dados",
+      "nome": "Classificacao",
+      "descricao": "Classificacao e tarefa preditiva: constroi um modelo que classifica objetos novos a partir de atributos preditivos, que influenciam a decisao, e do atributo objetivo, que e a classe. Exemplo do material: aprovar ou nao credito usando cargo e tempo, com arvore de classificacao.",
+      "ordem": 37,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Consegue separar atributos preditivos do atributo objetivo numa base",
+        "Consegue justificar por que a classificacao e preditiva"
+      ],
+      "checagem": "Qual a diferenca entre atributo preditivo e atributo objetivo, e por que classificacao e tarefa preditiva?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Mineração de dados"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_38",
+      "tipo": "CONCEITUAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Mineracao de Dados",
+      "nome": "Associacao: suporte e confianca",
+      "descricao": "Associacao e tarefa descritiva: encontra em dados historicos regras entre um antecedente e um consequente. O grau de certeza vem do suporte, percentual das transacoes em que a regra aparece, e da confianca, que considera apenas as transacoes com o antecedente. O algoritmo e o APRIORI e o caso classico e a cesta de compras.",
+      "ordem": 38,
+      "centralidade": 0,
+      "evidencia": [
+        "Consegue calcular suporte e confianca de uma regra",
+        "Consegue ler uma regra no formato antecedente e consequente"
+      ],
+      "checagem": "Numa regra de associacao, qual a diferenca entre suporte e confianca?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Mineração de dados"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_39",
+      "tipo": "CONCEITUAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Mineracao de Dados",
+      "nome": "Agrupamento e K-Means",
+      "descricao": "Agrupamento reune individuos semelhantes calculando distancias, em tecnicas hierarquicas e nao hierarquicas de particao, como o K-Means. A clusterizacao identifica os padroes, mas nao responde por que eles existem.",
+      "ordem": 39,
+      "centralidade": 0,
+      "evidencia": [
+        "Consegue escolher agrupamento quando nao ha classe-alvo",
+        "Consegue dizer o limite da resposta que o cluster da"
+      ],
+      "checagem": "Que pergunta a clusterizacao responde e qual ela nao responde?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Mineração de dados"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_40",
+      "tipo": "CONCEITUAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Mineracao de Dados",
+      "nome": "Critérios de avaliacao do modelo",
+      "descricao": "Na etapa 3 do KDD avaliam-se acuracia, desempenho (custo computacional para gerar e usar o modelo), robustez (atuar com atributos faltando ou ruido), escalabilidade e interpretabilidade. Diante de um resultado ruim ha apenas duas acoes: ajustar os parametros do algoritmo ou escolher outro algoritmo.",
+      "ordem": 40,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Consegue nomear o critério violado num modelo ruim",
+        "Consegue apontar as duas acoes possiveis depois de um resultado ruim"
+      ],
+      "checagem": "Qual critério mede o comportamento do modelo em amostras com atributos faltando ou com ruido?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Mineração de dados"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_41",
+      "tipo": "CONCEITUAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Mineracao de Dados",
+      "nome": "Data Mining versus OLAP",
+      "descricao": "OLAP e verificacao: o analista conhece a questao, formula a hipotese e usa a ferramenta para confirmar ou refutar. Mineracao e descoberta: a questao e total ou parcialmente desconhecida e a ferramenta busca os padroes. O DW alimenta os dois, porque entrega dados integrados, consistentes e limpos.",
+      "ordem": 41,
+      "centralidade": 0,
+      "evidencia": [
+        "Consegue classificar uma pergunta de negocio como OLAP ou mineracao",
+        "Consegue explicar por que o DW facilita o KDD"
+      ],
+      "checagem": "Montar um cubo para responder se as vendas cairam e OLAP ou mineracao, e por que?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Mineração de dados"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_42",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Orange e Machine Learning",
+      "nome": "Orange: fluxo de widgets",
+      "descricao": "O Orange faz mineracao por programacao visual: widgets conectados em um fluxo de trabalho, sem escrever codigo. O fluxo vai de entrada, amostragem e visualizacao para pre-processamento, criacao do modelo, avaliacao e aplicacao. Aprendizado supervisionado tem classe-alvo (classificacao, regressao) e nao supervisionado nao tem (clusterizacao, associacao).",
+      "ordem": 42,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Consegue montar o fluxo do CSV ate o valor previsto",
+        "Consegue dizer se um problema e supervisionado ou nao"
+      ],
+      "checagem": "Qual a ordem dos widgets no fluxo do Orange, e onde entra a diferenca entre supervisionado e nao supervisionado?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Mineração de dados"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_43",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Orange e Machine Learning",
+      "nome": "Discretizar, continuizar e normalizar",
+      "descricao": "Discretizar transforma valores continuos numa colecao finita de intervalos, porque alguns algoritmos nao aceitam coluna continua (Naive Bayes) e porque valores distintos demais escondem os padroes. Continuize transforma discretas em numericas e padroniza as numericas. Normalizar e essencial com atributos em escalas diferentes, senao o de escala menor perde relevancia.",
+      "ordem": 43,
+      "centralidade": 0,
+      "evidencia": [
+        "Consegue escolher o metodo de binning no widget Discretize",
+        "Consegue justificar a normalizacao pela escala dos atributos"
+      ],
+      "checagem": "Por que o material recomenda discretizar atributos continuos antes de certos algoritmos?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Mineração de dados"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_44",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Orange e Machine Learning",
+      "nome": "Test and Score: amostragem e metricas",
+      "descricao": "No widget Test and Score escolhe-se o metodo de amostragem: cross validation, cross validation by feature, random sampling, leave-one-out (muito preciso e confiavel, porem muito lento), test on train data e test on test data. As metricas de classificacao sao AUC, CA, F1, Precision, Recall e MCC, e as de regressao sao MSE, RMSE, MAE e R2. Os resultados se analisam em ROC, matriz de confusao e lift curve.",
+      "ordem": 44,
+      "centralidade": 0,
+      "evidencia": [
+        "Consegue escolher o metodo de amostragem e justificar o custo",
+        "Consegue ler a matriz de confusao e a curva lift"
+      ],
+      "checagem": "Qual metodo de amostragem separa uma amostra por vez, por que ele e confiavel e por que e lento?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Mineração de dados"
+      ],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_45",
+      "tipo": "META",
+      "disciplina": "TABD",
+      "periodo": 5,
+      "unidade": "Projetos Praticos",
+      "nome": "A cadeia das quatro entregas",
+      "descricao": "A avaliacao e 6 pontos de projeto em dupla e 4 pontos de prova escrita individual, nas duas notas: o projeto vale 60 por cento. As quatro entregas encadeiam modelagem do DW (com script SQL de implantacao em Oracle no anexo), integracao de dados (video das cargas e documentacao dos planos ETL), consultas analiticas (paineis, graficos e conclusoes) e mineracao (artigo com o workflow do Orange).",
+      "ordem": 45,
+      "centralidade": 0,
+      "evidencia": [
+        "Consegue dizer o que cada nota exige como entregavel",
+        "Consegue planejar o projeto sabendo que a prova e so 40 por cento"
+      ],
+      "checagem": "O que cada uma das quatro entregas exige, e quanto do total da nota vem do projeto?",
+      "avaliacoes": [
+        "AV1",
         "AV2"
       ],
       "ementaPPC": [],

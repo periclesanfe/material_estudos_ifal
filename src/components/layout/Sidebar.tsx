@@ -220,6 +220,9 @@ export default function Sidebar() {
           <NavLink to="/" end onClick={handleNavigate} className={mainNavItem}>
             Início
           </NavLink>
+          <NavLink to="/trilha" onClick={handleNavigate} className={mainNavItem}>
+            Trilha de aprendizado
+          </NavLink>
         </div>
 
         <SidebarPeriodsSection

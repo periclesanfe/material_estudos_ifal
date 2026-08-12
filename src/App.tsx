@@ -5,6 +5,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import OptativesPage from './pages/OptativesPage';
 import SubjectPage from './pages/SubjectPage';
 import SettingsPage from './pages/SettingsPage';
+import TrilhaPage from './pages/TrilhaPage';
 import UpdatesPage from './pages/UpdatesPage';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/materia/:slug" element={<SubjectPage />} />
           <Route path="/optativas" element={<OptativesPage />} />
+          <Route path="/trilha" element={<TrilhaPage />} />
           <Route path="/configuracoes" element={<SettingsPage />} />
           <Route path="/atualizacoes" element={<UpdatesPage />} />
           <Route path="*" element={<NotFoundPage />} />

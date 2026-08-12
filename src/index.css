@@ -29,6 +29,21 @@
   --color-error: #ff6b6b;
   --color-warning: #ffe66d;
 
+  /* Paleta categórica da trilha de aprendizado. Uma matéria por matiz, e não o
+     rodízio dos 5 acentos: com 8 matérias no grafo o rodízio repetia cor e duas
+     matérias viravam a mesma nuvem de pontos. Os matizes estão espaçados no
+     círculo cromático e partem do roxo da marca. Ver src/data/taxonomia/. */
+  --color-taxo-1: #6c63ff;
+  --color-taxo-2: #4ecdc4;
+  --color-taxo-3: #ff6b6b;
+  --color-taxo-4: #ffb703;
+  --color-taxo-5: #a8e6cf;
+  --color-taxo-6: #f78bdc;
+  --color-taxo-7: #61a5ff;
+  --color-taxo-8: #c9a227;
+  --color-taxo-9: #ff9166;
+  --color-taxo-10: #9d8cff;
+
   --font-display: 'Playfair Display', serif;
   --font-body: 'Source Sans 3', sans-serif;
   --font-logo: 'Orbitron', var(--font-body);
@@ -66,6 +81,19 @@ html[data-theme='light'] {
   --color-success: #19764f;
   --color-error: #c83f54;
   --color-warning: #8a6600;
+
+  /* Trilha no tema claro: mesmos matizes, escurecidos para manter contraste
+     sobre fundo branco (os tons pastel do tema escuro somem no claro). */
+  --color-taxo-1: #5a52e8;
+  --color-taxo-2: #0d817b;
+  --color-taxo-3: #c83f54;
+  --color-taxo-4: #8a6600;
+  --color-taxo-5: #19764f;
+  --color-taxo-6: #b0338f;
+  --color-taxo-7: #1f6fd0;
+  --color-taxo-8: #7a5c00;
+  --color-taxo-9: #c2521f;
+  --color-taxo-10: #6d4ac9;
 }
 
 
@@ -625,6 +653,20 @@ html[data-clean-mode='true'] {
   --color-success: #3f3f46;
   --color-error: #4b5563;
   --color-warning: #6b7280;
+
+  /* Trilha no modo limpo: o modo existe para tirar a cor da frente, então as
+     matérias passam a se distinguir por VALOR e não por matiz. Oito cinzas
+     idênticos deixariam o grafo ilegível, que é o oposto do objetivo. */
+  --color-taxo-1: #1f2933;
+  --color-taxo-2: #3f4652;
+  --color-taxo-3: #5d6673;
+  --color-taxo-4: #7b8494;
+  --color-taxo-5: #2b3440;
+  --color-taxo-6: #4d5563;
+  --color-taxo-7: #6c7583;
+  --color-taxo-8: #8a929f;
+  --color-taxo-9: #39404b;
+  --color-taxo-10: #59616e;
 
   --font-display: 'Source Sans 3', sans-serif;
 }
