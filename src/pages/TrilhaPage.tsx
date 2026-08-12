@@ -11,6 +11,21 @@ import {
   topicos,
 } from '../data/taxonomia';
 import subjects from '../data/curriculum';
+import type { EixoVertical } from '../lib/grafoTrilha';
+
+const EIXOS: { valor: EixoVertical; rotulo: string; explica: string }[] = [
+  {
+    valor: 'profundidade',
+    rotulo: 'ordem de aprendizado',
+    explica:
+      'A altura é quantos pré-requisitos existem atrás do conceito. A boca larga em cima são os pontos de partida, e o funil afina até o fim das cadeias mais longas.',
+  },
+  {
+    valor: 'periodo',
+    rotulo: 'período do curso',
+    explica: 'A altura é o semestre em que a matéria é ofertada, do 1º período às optativas.',
+  },
+];
 
 const TOTAL_HARD = dependencias.filter(d => d.forca === 'hard').length;
 
@@ -24,6 +39,7 @@ export default function TrilhaPage() {
   const selecionadoId = params.get('topico');
   const [ocultas, setOcultas] = useState<ReadonlySet<string>>(() => new Set());
   const [cores, setCores] = useState<Record<string, string>>({});
+  const [eixo, setEixo] = useState<EixoVertical>('profundidade');
 
   const contagemPorDisciplina = useMemo(() => {
     const mapa = new Map<string, number>();
@@ -82,8 +98,37 @@ export default function TrilhaPage() {
 
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1fr)_340px]">
         <div className="flex flex-col gap-3">
-          <div className="relative h-[clamp(380px,58vh,680px)] overflow-hidden rounded-xl border border-border bg-card">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <p className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted">
+                Eixo vertical
+              </p>
+              <div className="inline-flex rounded-lg border border-border p-0.5">
+                {EIXOS.map(op => (
+                  <button
+                    key={op.valor}
+                    type="button"
+                    onClick={() => setEixo(op.valor)}
+                    aria-pressed={eixo === op.valor}
+                    className={`rounded-md px-3 py-1.5 text-xs transition-colors ${
+                      eixo === op.valor
+                        ? 'bg-accent/15 font-semibold text-accent'
+                        : 'text-text-muted hover:bg-card-hover hover:text-text'
+                    }`}
+                  >
+                    {op.rotulo}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <p className="reading-measure max-w-[46ch] text-[11.5px] leading-relaxed text-text-muted">
+              {EIXOS.find(op => op.valor === eixo)?.explica}
+            </p>
+          </div>
+
+          <div className="relative h-[clamp(460px,72vh,860px)] overflow-hidden rounded-xl border border-border bg-card">
             <GrafoTrilha
+              eixo={eixo}
               topicoInicial={selecionadoId ?? undefined}
               ocultas={ocultas}
               onSelecionar={aoSelecionar}

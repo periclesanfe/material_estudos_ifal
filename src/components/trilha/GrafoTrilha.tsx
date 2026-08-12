@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
-  alturaDoEstrato,
+  alturaEmTela,
   criarProjecao,
   fecharTrilha,
   montarLayout,
   projetar,
   type Camera,
+  type EixoVertical,
 } from '../../lib/grafoTrilha';
 import { dependencias, disciplinasTaxonomia, topicos } from '../../data/taxonomia';
 import { useTokensDoTema } from '../../hooks/useTokensDoTema';
@@ -36,6 +37,8 @@ const TOKENS = [
 ] as const;
 
 interface Props {
+  /** O que o eixo vertical representa. */
+  eixo: EixoVertical;
   /** Tópico destacado ao abrir, quando vem de link profundo. */
   topicoInicial?: string;
   /** Disciplinas ocultas, controladas pela legenda de fora. */
@@ -46,7 +49,7 @@ interface Props {
   onCores?: (cores: Record<string, string>) => void;
 }
 
-export default function GrafoTrilha({ topicoInicial, ocultas, onSelecionar, onCores }: Props) {
+export default function GrafoTrilha({ eixo, topicoInicial, ocultas, onSelecionar, onCores }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const tokens = useTokensDoTema(TOKENS);
   const [reduzir] = useState(
@@ -58,11 +61,12 @@ export default function GrafoTrilha({ topicoInicial, ocultas, onSelecionar, onCo
   const layout = useMemo(
     () =>
       montarLayout(
-        topicos.map(t => ({ id: t.id, disciplina: t.disciplina, periodo: t.periodo })),
+        topicos.map(t => ({ id: t.id, disciplina: t.disciplina, periodo: t.periodo, ordem: t.ordem })),
         dependencias.map(d => ({ topicoId: d.topicoId, prerequisitoId: d.prerequisitoId, forca: d.forca })),
         ordem,
+        eixo,
       ),
-    [ordem],
+    [ordem, eixo],
   );
 
   /** Cor resolvida por disciplina, do design system e não do dataset. */
@@ -154,7 +158,10 @@ export default function GrafoTrilha({ topicoInicial, ocultas, onSelecionar, onCo
         altura,
         cx: largura * 0.5,
         cy: altura * 0.5,
-        raio: Math.min(largura, altura) * 0.36,
+        // o grafo mede 3,4 de altura por 2 de largura em unidades de mundo, então
+        // o enquadramento é limitado pela altura na maioria das telas. A folga do
+        // 0,245 evita que a boca larga do funil encoste na borda de cima.
+        raio: Math.min(largura * 0.44, altura * 0.245),
       };
     };
     medir();
@@ -193,36 +200,45 @@ export default function GrafoTrilha({ topicoInicial, ocultas, onSelecionar, onCo
       ctx.fillStyle = tokens['--color-bg'];
       ctx.fillRect(0, 0, largura, altura);
 
-      // régua dos períodos
+      // rótulos do eixo vertical na borda esquerda, com um traço curto de
+      // ancoragem. A linha de largura total foi removida de propósito: ela
+      // achatava o grafo em discos empilhados e brigava com a forma de funil.
       ctx.font = '9px ui-monospace, SFMono-Regular, Menlo, monospace';
       ctx.textBaseline = 'middle';
       ctx.textAlign = 'left';
-      for (const p of layout.periodos) {
-        const sy = alturaDoEstrato(layout, p, camera.current, cy, raio);
-        ctx.strokeStyle = comAlfa(tokens['--color-border'], 0.45);
+      for (const marca of layout.marcacoes) {
+        const sy = alturaEmTela(marca.altura, camera.current, cy, raio);
+        if (sy < 10 || sy > altura - 10) continue;
+        ctx.strokeStyle = comAlfa(tokens['--color-border'], 0.7);
         ctx.lineWidth = 1;
         ctx.beginPath();
-        ctx.moveTo(26, sy);
-        ctx.lineTo(largura - 14, sy);
+        ctx.moveTo(48, sy);
+        ctx.lineTo(58, sy);
         ctx.stroke();
-        ctx.fillStyle = comAlfa(tokens['--color-text-muted'], 0.75);
-        ctx.fillText(p >= 9 ? 'OPT' : `${p}º`, 5, sy);
+        ctx.fillStyle = comAlfa(tokens['--color-text-muted'], 0.7);
+        ctx.fillText(marca.rotulo, 5, sy);
       }
 
-      // arestas
+      // arestas: fios finos e quase brancos quando nada está selecionado, porque
+      // é o emaranhado deles que desenha a silhueta do funil. Coloridas apenas
+      // na trilha, onde a cor identifica a matéria de origem.
       const fecho = trilha.current?.fecho;
       ctx.lineCap = 'round';
       for (const a of layout.arestas) {
         if (!visivel(a.t) || !visivel(a.p)) continue;
         const naTrilha = fecho ? fecho.has(a.t) && fecho.has(a.p) : false;
-        const alfa = fecho
-          ? naTrilha
-            ? 0.66
-            : 0.03
-          : (a.forca === 'hard' ? 0.17 : 0.085) * (0.45 + escala[a.t] * 0.55);
-        if (alfa < 0.015) continue;
-        ctx.strokeStyle = comAlfa(corDe(a.p), alfa);
-        ctx.lineWidth = naTrilha ? 1.3 : 0.65;
+        if (fecho) {
+          const alfa = naTrilha ? 0.7 : 0.025;
+          if (alfa < 0.015) continue;
+          ctx.strokeStyle = comAlfa(naTrilha ? corDe(a.p) : tokens['--color-text-muted'], alfa);
+          ctx.lineWidth = naTrilha ? 1.35 : 0.5;
+        } else {
+          ctx.strokeStyle = comAlfa(
+            tokens['--color-text-muted'],
+            (a.forca === 'hard' ? 0.2 : 0.1) * (0.5 + escala[a.t] * 0.5),
+          );
+          ctx.lineWidth = 0.55;
+        }
         ctx.beginPath();
         ctx.moveTo(px[a.p], py[a.p]);
         ctx.lineTo(px[a.t], py[a.t]);
@@ -262,14 +278,16 @@ export default function GrafoTrilha({ topicoInicial, ocultas, onSelecionar, onCo
         if (!visivel(i)) continue;
         const dentro = !fecho || fecho.has(i);
         const eSelecionado = i === selecionado.current;
-        const base = 1.55 + (layout.alcance[i] / layout.alcanceMaximo) * 5.2;
-        const r = base * escala[i] * (0.7 + camera.current.zoom * 0.3) * (eSelecionado ? 1.7 : 1);
+        // o raio cresce com quantos conceitos dependem deste: o ponto grande é o
+        // que trava mais conteúdo adiante
+        const base = 2.4 + (layout.alcance[i] / layout.alcanceMaximo) * 6.4;
+        const r = base * escala[i] * (0.72 + camera.current.zoom * 0.28) * (eSelecionado ? 1.7 : 1);
         const cor = corDe(i);
 
-        if (dentro && (eSelecionado || layout.alcance[i] > layout.alcanceMaximo * 0.12)) {
-          const brilho = r * (eSelecionado ? 7 : 4.2);
+        if (dentro && eSelecionado) {
+          const brilho = r * 7;
           const g = ctx.createRadialGradient(px[i], py[i], 0, px[i], py[i], brilho);
-          g.addColorStop(0, comAlfa(cor, eSelecionado ? 0.5 : 0.22));
+          g.addColorStop(0, comAlfa(cor, 0.5));
           g.addColorStop(1, comAlfa(cor, 0));
           ctx.fillStyle = g;
           ctx.beginPath();
@@ -277,7 +295,7 @@ export default function GrafoTrilha({ topicoInicial, ocultas, onSelecionar, onCo
           ctx.fill();
         }
 
-        ctx.fillStyle = comAlfa(cor, dentro ? 0.42 + escala[i] * 0.58 : 0.09);
+        ctx.fillStyle = comAlfa(cor, dentro ? 0.62 + escala[i] * 0.38 : 0.08);
         ctx.beginPath();
         ctx.arc(px[i], py[i], r, 0, Math.PI * 2);
         ctx.fill();

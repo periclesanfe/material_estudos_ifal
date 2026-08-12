@@ -4,10 +4,18 @@
  * Sem dependência externa e sem React: recebe tópicos e dependências, devolve
  * posições. Fica separado do componente para poder ser exercitado sozinho.
  *
- * O eixo vertical não é contínuo: cada período do curso é um estrato discreto,
- * porque a grade é uma escada de semestres, não um gradiente. O plano
- * horizontal vem de força dirigida com âncora radial por disciplina, o que
- * mantém cada matéria como um lobo de cor legível em vez de uma nuvem única.
+ * A forma de funil não é imposta, ela emerge de duas regras:
+ *
+ * 1. A altura é contínua. O período dá a faixa e a posição na sequência
+ *    didática da matéria dá o lugar dentro dela, então cada disciplina é um fio
+ *    que sobe em vez de um disco achatado. As faixas se sobrepõem de leve, o que
+ *    é honesto: um conceito do fim do 3º período vem depois de um do começo do 4º.
+ * 2. O raio acompanha a densidade. Cada nó é atraído para um raio proporcional à
+ *    raiz da quantidade de nós na sua altura, então onde há muito conteúdo o
+ *    grafo se abre e onde há pouco ele afunila.
+ *
+ * O ângulo vem da matéria, o que mantém cada disciplina como um lobo de cor
+ * legível em vez de uma nuvem única.
  */
 
 export interface NoGrafo {
@@ -15,6 +23,8 @@ export interface NoGrafo {
   disciplina: string;
   /** Período do curso. 9 representa optativa. */
   periodo: number;
+  /** Posição na sequência didática da matéria, começando em 1. */
+  ordem: number;
 }
 
 export interface ArestaGrafo {
@@ -22,6 +32,18 @@ export interface ArestaGrafo {
   prerequisitoId: string;
   forca: 'hard' | 'soft';
 }
+
+/**
+ * O que o eixo vertical representa.
+ *
+ * `profundidade`: quantos pré-requisitos existem atrás do conceito. É a ordem
+ * real de aprendizado e é o que desenha o funil, porque há muitos conceitos de
+ * partida e poucos no fim de cadeias longas.
+ *
+ * `periodo`: o semestre em que a matéria é ofertada. Responde "quando eu vejo
+ * isso no curso", ao custo de empilhar as matérias em faixas.
+ */
+export type EixoVertical = 'profundidade' | 'periodo';
 
 export interface Layout {
   /** Coordenadas por índice do nó. */
@@ -41,7 +63,17 @@ export interface Layout {
   arestas: { t: number; p: number; forca: 'hard' | 'soft' }[];
   /** Períodos presentes, em ordem crescente. */
   periodos: number[];
+  /** Profundidade no grafo por índice, para o painel e para os rótulos. */
+  profundidade: Int32Array;
+  /** Marcações do eixo vertical, já em unidades de mundo. */
+  marcacoes: { rotulo: string; altura: number }[];
 }
+
+/**
+ * Extensão vertical do grafo em unidades de mundo, contra um raio máximo de 1.
+ * Mais que o dobro da largura: o funil é uma coluna alta, não um disco.
+ */
+const ALTURA_TOTAL = 3.4;
 
 /** Semente determinística: o mesmo dataset gera sempre o mesmo desenho. */
 function pseudoAleatorio(i: number, sal: number): number {
@@ -53,6 +85,7 @@ export function montarLayout(
   nos: readonly NoGrafo[],
   arestasEntrada: readonly ArestaGrafo[],
   ordemDisciplinas: readonly string[],
+  eixo: EixoVertical = 'profundidade',
   iteracoes = 240,
 ): Layout {
   const N = nos.length;
@@ -97,10 +130,19 @@ export function montarLayout(
   const alcanceMaximo = Math.max(1, ...alcance);
 
   const periodos = [...new Set(nos.map(n => n.periodo))].sort((a, b) => a - b);
-  const alturaDe = (periodo: number): number => {
+  const faixaDe = (periodo: number): number => {
     const i = periodos.indexOf(periodo);
-    return periodos.length > 1 ? -1.05 + (i / (periodos.length - 1)) * 2.1 : 0;
+    return periodos.length > 1 ? -ALTURA_TOTAL / 2 + (i / (periodos.length - 1)) * ALTURA_TOTAL : 0;
   };
+
+  // espessura da faixa de um período: 0.78 do espaçamento deixa as faixas se
+  // sobreporem de leve, o que evita o empilhamento de discos achatados
+  const espacamento = periodos.length > 1 ? ALTURA_TOTAL / (periodos.length - 1) : 1;
+  const espessura = espacamento * 0.78;
+
+  /** Quantos tópicos cada matéria tem, para normalizar o progresso didático. */
+  const totalPorDisciplina = new Map<string, number>();
+  for (const n of nos) totalPorDisciplina.set(n.disciplina, Math.max(totalPorDisciplina.get(n.disciplina) ?? 0, n.ordem));
 
   const anguloPorDisciplina = new Map<string, number>();
   ordemDisciplinas.forEach((codigo, i) => {
@@ -111,13 +153,80 @@ export function montarLayout(
   const y = new Float64Array(N);
   const z = new Float64Array(N);
 
+  /**
+   * Profundidade no grafo: o tamanho da maior cadeia de pré-requisitos atrás do
+   * nó. Zero para quem não depende de nada.
+   */
+  const profundidade = new Int32Array(N);
+  {
+    const memo = new Int32Array(N).fill(-1);
+    const calcula = (n: number, guarda: Set<number>): number => {
+      if (memo[n] >= 0) return memo[n];
+      if (guarda.has(n)) return 0;
+      guarda.add(n);
+      let maior = 0;
+      for (const p of pais[n]) {
+        const v = 1 + calcula(p, guarda);
+        if (v > maior) maior = v;
+      }
+      guarda.delete(n);
+      memo[n] = maior;
+      return maior;
+    };
+    for (let i = 0; i < N; i++) profundidade[i] = calcula(i, new Set());
+  }
+  const profundidadeMaxima = Math.max(1, ...profundidade);
+
+  /** Posição vertical normalizada, de 0 na base a 1 no topo. */
+  const nivel = new Float64Array(N);
+  for (let i = 0; i < N; i++) {
+    if (eixo === 'profundidade') {
+      nivel[i] = profundidade[i] / profundidadeMaxima;
+    } else {
+      const total = totalPorDisciplina.get(nos[i].disciplina) ?? 1;
+      const progresso = total > 1 ? (nos[i].ordem - 1) / (total - 1) : 0.5;
+      const faixa = faixaDe(nos[i].periodo) + (progresso - 0.5) * espessura;
+      nivel[i] = (faixa + ALTURA_TOTAL / 2) / ALTURA_TOTAL;
+    }
+  }
+
+  /**
+   * Altura. No eixo de profundidade o sentido é invertido de propósito: o nível
+   * zero fica no TOPO e as cadeias longas descem. É a forma de funil, e ela cai
+   * bem com o dado real, porque 198 dos conceitos estão nos quatro primeiros
+   * níveis e precisam da boca larga, enquanto o fim das cadeias é rarefeito e
+   * cabe no bico.
+   *
+   * O respiro aleatório impede que nós de mesmo nível caiam numa linha perfeita:
+   * é o que separa uma nuvem orgânica de discos empilhados.
+   */
+  const respiro = eixo === 'profundidade' ? (ALTURA_TOTAL / profundidadeMaxima) * 0.62 : 0;
+  for (let i = 0; i < N; i++) {
+    const posicao = eixo === 'profundidade' ? 1 - nivel[i] : nivel[i];
+    y[i] = -ALTURA_TOTAL / 2 + posicao * ALTURA_TOTAL + (pseudoAleatorio(i, 7) - 0.5) * respiro;
+  }
+
+  /**
+   * Raio que cada nó persegue, e é daqui que sai o funil: largo onde há muitos
+   * conceitos, estreito onde há poucos. No eixo de profundidade isso significa
+   * boca larga nos pontos de partida e bico fino no fim das cadeias longas.
+   *
+   * O raio do nível é um teto, não um anel: a raiz quadrada do sorteio distribui
+   * os nós por área e preenche o volume do cone, em vez de empilhar argolas.
+   */
+  const raioAlvo = new Float64Array(N);
+  for (let i = 0; i < N; i++) {
+    const abertura = eixo === 'profundidade' ? 1 - nivel[i] : nivel[i];
+    const teto = 0.08 + Math.pow(abertura, 0.62) * 0.92;
+    raioAlvo[i] = teto * (0.32 + Math.sqrt(pseudoAleatorio(i, 3)) * 0.68);
+  }
+
   for (let i = 0; i < N; i++) {
     const base = anguloPorDisciplina.get(nos[i].disciplina) ?? 0;
-    const raio = 0.34 + pseudoAleatorio(i, 1) * 0.5;
+    const raio = raioAlvo[i] * (0.8 + pseudoAleatorio(i, 1) * 0.4);
     const angulo = base + (pseudoAleatorio(i, 2) - 0.5) * 1.05;
     x[i] = Math.cos(angulo) * raio;
     z[i] = Math.sin(angulo) * raio;
-    y[i] = alturaDe(nos[i].periodo);
   }
 
   const fx = new Float64Array(N);
@@ -133,7 +242,7 @@ export function montarLayout(
     for (let i = 0; i < N; i++) {
       for (let j = i + 1; j < N; j++) {
         const dy = y[i] - y[j];
-        if (dy * dy > 0.16) continue;
+        if (dy * dy > 0.2) continue;
         let dx = x[i] - x[j];
         let dz = z[i] - z[j];
         let d2 = dx * dx + dz * dz;
@@ -143,7 +252,9 @@ export function montarLayout(
           d2 = 1e-6;
         }
         const d = Math.sqrt(d2);
-        const f = 0.0021 / d2;
+        // repulsão fraca de propósito: o desenho da referência é denso, e
+        // repulsão forte espalharia o funil numa nuvem rala
+        const f = 0.0011 / d2;
         fx[i] += (dx / d) * f;
         fz[i] += (dz / d) * f;
         fx[j] -= (dx / d) * f;
@@ -151,23 +262,33 @@ export function montarLayout(
       }
     }
 
-    // molas nas arestas: aproxima quem depende de quem
+    // molas nas arestas: a estrutura do grafo é a força dominante, é ela que faz
+    // o descendente orbitar o pré-requisito e dá a silhueta orgânica
     for (const a of arestas) {
       const dx = x[a.t] - x[a.p];
       const dz = z[a.t] - z[a.p];
       const d = Math.hypot(dx, dz) || 1e-6;
-      const f = (d - 0.16) * (a.forca === 'hard' ? 0.075 : 0.035);
+      const f = (d - 0.13) * (a.forca === 'hard' ? 0.115 : 0.05);
       fx[a.t] -= (dx / d) * f;
       fz[a.t] -= (dz / d) * f;
       fx[a.p] += (dx / d) * f;
       fz[a.p] += (dz / d) * f;
     }
 
-    // âncora radial por disciplina
     for (let i = 0; i < N; i++) {
+      const r = Math.hypot(x[i], z[i]) || 1e-6;
+
+      // raio pela profundidade no grafo: firme, porque é o que desenha o cone
+      const correcao = (raioAlvo[i] - r) * 0.055;
+      fx[i] += (x[i] / r) * correcao;
+      fz[i] += (z[i] / r) * correcao;
+
+      // dica angular por disciplina, deliberadamente fraca: o suficiente para a
+      // cor não virar ruído, fraca o bastante para as matérias se entrelaçarem
+      // em vez de virarem gomos separados
       const base = anguloPorDisciplina.get(nos[i].disciplina) ?? 0;
-      fx[i] += (Math.cos(base) * 0.62 - x[i]) * 0.02;
-      fz[i] += (Math.sin(base) * 0.62 - z[i]) * 0.02;
+      fx[i] += (Math.cos(base) * raioAlvo[i] - x[i]) * 0.004;
+      fz[i] += (Math.sin(base) * raioAlvo[i] - z[i]) * 0.004;
     }
 
     for (let i = 0; i < N; i++) {
@@ -176,17 +297,49 @@ export function montarLayout(
     }
   }
 
-  // normaliza o raio para o enquadramento não depender do tamanho do dataset
-  let raioMaximo = 0;
-  for (let i = 0; i < N; i++) raioMaximo = Math.max(raioMaximo, Math.hypot(x[i], z[i]));
-  if (raioMaximo > 0) {
+  // normaliza pelo percentil 97 em vez do máximo: um nó solto muito afastado
+  // encolheria o grafo inteiro para caber
+  {
+    const raios = new Float64Array(N);
+    for (let i = 0; i < N; i++) raios[i] = Math.hypot(x[i], z[i]);
+    const ordenados = Float64Array.from(raios).sort();
+    const referencia = ordenados[Math.min(N - 1, Math.floor(N * 0.97))] || 1;
     for (let i = 0; i < N; i++) {
-      x[i] /= raioMaximo;
-      z[i] /= raioMaximo;
+      x[i] /= referencia;
+      z[i] /= referencia;
     }
   }
 
-  return { x, y, z, alcance, alcanceMaximo, indicePorId, pais, filhos, arestas, periodos };
+  // marcações do eixo: níveis de profundidade ou faixas de período
+  const marcacoes: Layout['marcacoes'] = [];
+  if (eixo === 'profundidade') {
+    const passo = profundidadeMaxima > 8 ? Math.ceil(profundidadeMaxima / 6) : 2;
+    for (let d = 0; d <= profundidadeMaxima; d += passo) {
+      marcacoes.push({
+        rotulo: d === 0 ? 'ponto de partida' : `nível ${d}`,
+        altura: -ALTURA_TOTAL / 2 + (1 - d / profundidadeMaxima) * ALTURA_TOTAL,
+      });
+    }
+  } else {
+    for (const p of periodos) {
+      marcacoes.push({ rotulo: p >= 9 ? 'OPT' : `${p}º`, altura: faixaDe(p) });
+    }
+  }
+
+  return {
+    x,
+    y,
+    z,
+    alcance,
+    alcanceMaximo,
+    indicePorId,
+    pais,
+    filhos,
+    arestas,
+    periodos,
+    profundidade,
+    marcacoes,
+  };
 }
 
 export interface Camera {
@@ -246,16 +399,13 @@ export function projetar(
   }
 }
 
-/** Altura em pixels do estrato de um período, para a régua lateral. */
-export function alturaDoEstrato(
-  layout: Layout,
-  periodo: number,
+/** Converte uma altura de mundo em pixel de tela, para os rótulos do eixo. */
+export function alturaEmTela(
+  altura: number,
   camera: Camera,
   centroY: number,
   raio: number,
 ): number {
-  const i = layout.periodos.indexOf(periodo);
-  const altura = layout.periodos.length > 1 ? -1.05 + (i / (layout.periodos.length - 1)) * 2.1 : 0;
   const y2 = altura * Math.cos(camera.pitch);
   const z2 = altura * Math.sin(camera.pitch);
   const perspectiva = DISTANCIA / (DISTANCIA + z2);
