@@ -1,6 +1,6 @@
 {
   "versao": "v1",
-  "totalArestas": 640,
+  "totalArestas": 641,
   "dependencias": [
     {
       "topicoId": "mt_ALPG_03",
@@ -3813,7 +3813,7 @@
       "topicoId": "mt_MKCE_02",
       "prerequisitoId": "mt_MKCE_01",
       "forca": "hard",
-      "razao": "O prospect é a outra parte do processo de troca, então a definição de marketing como troca precisa vir antes.",
+      "razao": "Prospect e troca competitiva só fazem sentido depois de saber que o marketing existe para satisfazer necessidades e desejos por meio de processos de troca.",
       "origem": "texto",
       "trecho": "Marketing é a atividade dirigida para a satisfação das necessidades e desejos, por meio dos processos de troca.",
       "escopo": "interna"
@@ -3822,7 +3822,7 @@
       "topicoId": "mt_MKCE_03",
       "prerequisitoId": "mt_MKCE_01",
       "forca": "soft",
-      "razao": "Os dez campos são tipos de oferta a que a definição de marketing se aplica, e a lista só faz sentido depois de saber o que é marketing.",
+      "razao": "A lista de dez ofertas amplia o alcance de um conceito que precisa estar definido antes, senão o aluno confunde campo de aplicação com tipo de propaganda.",
       "origem": "texto",
       "trecho": "APLICAÇÃO DO MARKETING: Bens, Serviços, Eventos, Experiências, Pessoas, Lugares, Propriedades, Organizações, Informações, Ideias.",
       "escopo": "interna"
@@ -3831,7 +3831,7 @@
       "topicoId": "mt_MKCE_04",
       "prerequisitoId": "mt_MKCE_01",
       "forca": "hard",
-      "razao": "A definição curta fala em suprir necessidades, e é este tópico que separa necessidade, desejo e demanda.",
+      "razao": "A cadeia necessidade, desejo e demanda detalha exatamente as necessidades que a definição de marketing diz suprir.",
       "origem": "texto",
       "trecho": "Resumo: Marketing = suprir necessidades gerando lucro.",
       "escopo": "interna"
@@ -3840,43 +3840,43 @@
       "topicoId": "mt_MKCE_05",
       "prerequisitoId": "mt_MKCE_04",
       "forca": "soft",
-      "razao": "O material apresenta oferta, marca e valor como continuação da cadeia que começa em necessidade e termina em demanda.",
+      "razao": "A oferta é a resposta de mercado ao desejo e à demanda, que aparecem antes dela na cadeia apresentada pelo material.",
       "origem": "texto",
-      "trecho": "Necessidades (inatas: ar, comida, abrigo) → Desejos (necessidades direcionadas a objetos específicos) → Demandas (desejos + capacidade de compra). Oferta, Marca, Valor",
+      "trecho": "Necessidades (inatas: ar, comida, abrigo) → Desejos (necessidades direcionadas a objetos específicos) → Demandas (desejos + capacidade de compra).",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_06",
       "prerequisitoId": "mt_MKCE_05",
       "forca": "soft",
-      "razao": "A satisfação compara o desempenho da oferta com a expectativa, então a noção de oferta e de valor vem antes.",
+      "razao": "A satisfação compara o desempenho da oferta com a expectativa criada, então oferta e valor precisam estar definidos antes.",
       "origem": "texto",
-      "trecho": "Oferta, Marca, Valor (tríade: qualidade, serviço, preço). Satisfação: Decepção (desempenho < expectativa), Satisfação (=), Encantamento (>).",
+      "trecho": "Oferta, Marca, Valor (tríade: qualidade, serviço, preço).",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_07",
       "prerequisitoId": "mt_MKCE_04",
       "forca": "hard",
-      "razao": "Os oito tipos descrevem estados da demanda, e demanda é definida como desejo sustentado pela capacidade de compra.",
+      "razao": "Os oito estados são estados de demanda, conceito definido na cadeia necessidade, desejo e demanda.",
       "origem": "texto",
-      "trecho": "Necessidades (inatas: ar, comida, abrigo) → Desejos (necessidades direcionadas a objetos específicos) → Demandas (desejos + capacidade de compra).",
+      "trecho": "TIPOS DE DEMANDA (8): Negativa, Inexistente, Latente, em Declínio, Irregular (sazonal), Plena (ideal), Excessiva, Indesejada.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_08",
       "prerequisitoId": "mt_MKCE_04",
       "forca": "soft",
-      "razao": "Maslow hierarquiza necessidades, então antes é preciso distinguir necessidade de desejo.",
+      "razao": "Maslow organiza em cinco níveis as mesmas necessidades que o material apresenta como inatas e não criadas pelo marketing.",
       "origem": "texto",
-      "trecho": "Necessidades (inatas: ar, comida, abrigo) → Desejos (necessidades direcionadas a objetos específicos)",
+      "trecho": "Requisitos básicos do ser humano: ar, comida, roupa, abrigo. São inerentes, não criadas pelo marketing.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_09",
       "prerequisitoId": "mt_MKCE_04",
       "forca": "soft",
-      "razao": "A finalidade declarada do mix é gerar desejo de compra, conceito definido na cadeia de necessidade, desejo e demanda.",
+      "razao": "A finalidade declarada do mix é gerar desejo de compra, e desejo é conceito definido na cadeia anterior.",
       "origem": "texto",
       "trecho": "Conjunto de ferramentas para alcançar objetivos de marketing no mercado-alvo. A finalidade é gerar desejo de compra no consumidor.",
       "escopo": "interna"
@@ -3885,7 +3885,7 @@
       "topicoId": "mt_MKCE_10",
       "prerequisitoId": "mt_MKCE_09",
       "forca": "hard",
-      "razao": "O preço só aparece como o único P que gera receita em contraste com os outros Ps do mix.",
+      "razao": "O preço é um dos quatro Ps e só se destaca como único gerador de receita em contraste com os outros três, que representam custo.",
       "origem": "texto",
       "trecho": "4 Ps: Produto, Preço (ÚNICO que gera receita), Praça, Promoção.",
       "escopo": "interna"
@@ -3894,7 +3894,7 @@
       "topicoId": "mt_MKCE_11",
       "prerequisitoId": "mt_MKCE_09",
       "forca": "hard",
-      "razao": "Os quatro Ps adicionais são definidos como acréscimo aos 4 Ps clássicos do mix.",
+      "razao": "O material define os 8 Ps como os 4 Ps mais quatro elementos, logo o mix clássico é pré-requisito.",
       "origem": "texto",
       "trecho": "8 Ps: 4 Ps + Pessoas, Processos, Posicionamento, Performance.",
       "escopo": "interna"
@@ -3903,7 +3903,7 @@
       "topicoId": "mt_MKCE_12",
       "prerequisitoId": "mt_MKCE_09",
       "forca": "hard",
-      "razao": "Cada C é a tradução de um P, então a lista dos Ps vem antes da leitura pelo lado do cliente.",
+      "razao": "Cada C é a tradução de um P, então o mix na ótica da empresa precede a leitura pela ótica do cliente.",
       "origem": "texto",
       "trecho": "4 Cs: Produto→Cliente, Preço→Custo, Praça→Conveniência, Promoção→Comunicação.",
       "escopo": "interna"
@@ -3912,7 +3912,7 @@
       "topicoId": "mt_MKCE_13",
       "prerequisitoId": "mt_MKCE_06",
       "forca": "soft",
-      "razao": "O relacionamento é definido pela busca de satisfação e sucesso do cliente, que é o conceito trabalhado no tópico de satisfação.",
+      "razao": "Fidelizar depende de garantir satisfação, que é o resultado definido no tópico de satisfação e encantamento.",
       "origem": "texto",
       "trecho": "Conjunto de estratégias que tem como objetivo fidelizar clientes. A empresa oferece benefícios para garantir a satisfação e o sucesso dos seus clientes.",
       "escopo": "interna"
@@ -3921,7 +3921,7 @@
       "topicoId": "mt_MKCE_14",
       "prerequisitoId": "mt_MKCE_13",
       "forca": "hard",
-      "razao": "Os cinco degraus são o desdobramento do objetivo de fidelizar enunciado no marketing de relacionamento.",
+      "razao": "A escada de cinco degraus é o desdobramento operacional do objetivo de fidelizar apresentado antes.",
       "origem": "texto",
       "trecho": "Jornada: Atrair→Conquistar→Reter→Fidelizar→Divulgador.",
       "escopo": "interna"
@@ -3930,16 +3930,25 @@
       "topicoId": "mt_MKCE_15",
       "prerequisitoId": "mt_MKCE_13",
       "forca": "hard",
-      "razao": "As ferramentas existem para executar as estratégias de fidelização, então o objetivo vem antes do instrumento.",
+      "razao": "As ferramentas existem para executar as estratégias de relacionamento, então o objetivo precede a escolha do instrumento.",
       "origem": "texto",
       "trecho": "Ferramentas: CRM, WhatsApp Business. Estratégias: redes sociais, programas de fidelidade, email marketing.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_16",
+      "prerequisitoId": "mt_MKCE_01",
+      "forca": "soft",
+      "razao": "A pesquisa investiga situações de marketing, então o conceito da disciplina precede o método de investigá-la.",
+      "origem": "inferido",
+      "trecho": "",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_17",
       "prerequisitoId": "mt_MKCE_16",
       "forca": "hard",
-      "razao": "As seis etapas são a execução das atividades sistemáticas que a definição de pesquisa enuncia.",
+      "razao": "As seis etapas detalham a sequência sistemática que a definição de pesquisa de marketing enuncia.",
       "origem": "texto",
       "trecho": "Atividades sistemáticas de concepção, coleta, análise e edição de relatórios e conclusões relevantes sobre situações de marketing.",
       "escopo": "interna"
@@ -3948,7 +3957,7 @@
       "topicoId": "mt_MKCE_18",
       "prerequisitoId": "mt_MKCE_17",
       "forca": "soft",
-      "razao": "É na etapa de coleta que se decide entre produzir dado novo e buscar dado que já existe.",
+      "razao": "A distinção entre dado primário e secundário aparece dentro da etapa de coleta descrita nas seis etapas.",
       "origem": "texto",
       "trecho": "Aplica questionários, entrevistas, observações ou busca dados secundários. Costuma ser a fase mais cara e sujeita a erros de execução.",
       "escopo": "interna"
@@ -3957,25 +3966,16 @@
       "topicoId": "mt_MKCE_19",
       "prerequisitoId": "mt_MKCE_18",
       "forca": "hard",
-      "razao": "Os instrumentos são apresentados como meios de coletar dados primários, então a distinção entre primário e secundário vem antes.",
+      "razao": "Os instrumentos são classificados pelo tipo de dado que coletam, então primário e secundário vêm antes.",
       "origem": "texto",
-      "trecho": "Instrumento mais usado para dados primários. Permite comparar respostas de muitas pessoas, desde que as perguntas sejam claras e bem estruturadas.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_MKCE_19",
-      "prerequisitoId": "mt_MKCE_17",
-      "forca": "soft",
-      "razao": "O instrumento é escolhido na etapa de plano, então a sequência de etapas situa a escolha.",
-      "origem": "texto",
-      "trecho": "Define objetivos, fontes de dados, método, público pesquisado, instrumento, prazo e orçamento.",
+      "trecho": "Instrumento mais usado para dados primários.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_20",
       "prerequisitoId": "mt_MKCE_04",
       "forca": "soft",
-      "razao": "Segmentar é agrupar compradores por necessidades e desejos semelhantes, conceitos definidos antes.",
+      "razao": "Segmentar é agrupar compradores por necessidades e desejos semelhantes, conceitos definidos na cadeia inicial.",
       "origem": "texto",
       "trecho": "Processo de dividir um mercado em grupos de compradores com semelhantes necessidades, desejos ou comportamentos.",
       "escopo": "interna"
@@ -3984,7 +3984,7 @@
       "topicoId": "mt_MKCE_21",
       "prerequisitoId": "mt_MKCE_20",
       "forca": "hard",
-      "razao": "As quatro variáveis são os critérios usados para dividir o mercado, divisão definida no tópico de segmentação.",
+      "razao": "As variáveis são os critérios pelos quais o mercado é dividido, logo a noção de segmento vem primeiro.",
       "origem": "texto",
       "trecho": "SEGMENTAÇÃO: Geográfica, Demográfica, Psicográfica, Comportamental.",
       "escopo": "interna"
@@ -3993,7 +3993,7 @@
       "topicoId": "mt_MKCE_22",
       "prerequisitoId": "mt_MKCE_20",
       "forca": "hard",
-      "razao": "Os cinco níveis medem quão fina é a divisão do mercado, então dependem da ideia de dividir o mercado.",
+      "razao": "Os níveis expressam o grau de divisão do mercado, do público único ao cliente individual, e dependem do conceito de segmento.",
       "origem": "texto",
       "trecho": "Níveis: Massa, Segmentado, Nicho, Local, Individual.",
       "escopo": "interna"
@@ -4002,7 +4002,7 @@
       "topicoId": "mt_MKCE_23",
       "prerequisitoId": "mt_MKCE_20",
       "forca": "hard",
-      "razao": "Os seis critérios servem para testar se um segmento já delimitado vale uma estratégia própria.",
+      "razao": "Os critérios servem para avaliar a qualidade de um segmento já delimitado.",
       "origem": "texto",
       "trecho": "Critérios: Identificável, Mensurável, Substancial, Acessível, Diferenciável, Acionável.",
       "escopo": "interna"
@@ -4011,7 +4011,7 @@
       "topicoId": "mt_MKCE_24",
       "prerequisitoId": "mt_MKCE_13",
       "forca": "soft",
-      "razao": "O papel atribuído ao digital é aprofundar o relacionamento, conceito construído no marketing de relacionamento.",
+      "razao": "A integração do 4.0 é descrita em termos de relacionamento e ação, tema tratado no marketing de relacionamento.",
       "origem": "texto",
       "trecho": "O papel do tradicional é construir consciência e interesse; o do digital é aprofundar o relacionamento e levar à ação.",
       "escopo": "interna"
@@ -4020,16 +4020,16 @@
       "topicoId": "mt_MKCE_25",
       "prerequisitoId": "mt_MKCE_24",
       "forca": "hard",
-      "razao": "As três transições descrevem o deslocamento de poder a que o Marketing 4.0 responde, então a ideia central vem antes.",
+      "razao": "As três transições são apresentadas como o conteúdo do próprio Marketing 4.0.",
       "origem": "texto",
-      "trecho": "MARKETING 4.0: Integra marketing tradicional e digital em um mundo conectado. O poder se desloca para consumidores e comunidades.",
+      "trecho": "Tendências: de exclusivo para inclusivo, de vertical para horizontal e de individual para social.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_26",
       "prerequisitoId": "mt_MKCE_24",
       "forca": "hard",
-      "razao": "O material trata a conectividade como a infraestrutura do próprio Marketing 4.0.",
+      "razao": "O material define conectividade como a infraestrutura por trás do Marketing 4.0, então a era precede seus níveis.",
       "origem": "texto",
       "trecho": "A conectividade é a infraestrutura por trás do Marketing 4.0: a capacidade de as pessoas se conectarem, compartilharem informação e acessarem a sabedoria das multidões em tempo real.",
       "escopo": "interna"
@@ -4038,16 +4038,16 @@
       "topicoId": "mt_MKCE_27",
       "prerequisitoId": "mt_MKCE_26",
       "forca": "hard",
-      "razao": "Os três paradoxos são efeitos colaterais da própria conectividade, que precisa estar definida antes.",
+      "razao": "Os paradoxos são propriedades da conectividade, que precisa estar definida em seus níveis antes de ser problematizada.",
       "origem": "texto",
-      "trecho": "A conectividade protege (o círculo íntimo funciona como escudo), mas também distrai.",
+      "trecho": "Três paradoxos: on-line×off-line (coexistem; \"high-tech\" pede \"high-touch\"), informado×distraído (atenção caiu de 12s para 8s) e defesa positiva×negativa (marcas fortes têm adoradores e odiadores).",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_28",
       "prerequisitoId": "mt_MKCE_26",
       "forca": "soft",
-      "razao": "As subculturas influenciam pela conectividade social, que é o nível supremo descrito antes.",
+      "razao": "As subculturas JMN são as comunidades cuja força o nível social da conectividade explica.",
       "origem": "texto",
       "trecho": "Nível supremo: a força da conexão dentro de comunidades de consumidores.",
       "escopo": "interna"
@@ -4056,7 +4056,7 @@
       "topicoId": "mt_MKCE_28",
       "prerequisitoId": "mt_MKCE_25",
       "forca": "soft",
-      "razao": "O peso dessas subculturas se explica pela transição do individual ao social.",
+      "razao": "A influência das subculturas decorre da transição do individual para o social, em que a conformidade social molda a compra.",
       "origem": "texto",
       "trecho": "A decisão de compra deixa de ser pessoal e passa a ser moldada pela conformidade social.",
       "escopo": "interna"
@@ -4065,7 +4065,7 @@
       "topicoId": "mt_MKCE_29",
       "prerequisitoId": "mt_MKCE_24",
       "forca": "soft",
-      "razao": "A jornada é descrita como o ponto em que on-line e off-line se integram, integração que é a ideia central do Marketing 4.0.",
+      "razao": "A jornada dos 5 As pressupõe a integração entre on-line e off-line que define o Marketing 4.0.",
       "origem": "texto",
       "trecho": "É aqui que a jornada muda de individual para SOCIAL e que on-line e off-line se integram.",
       "escopo": "interna"
@@ -4074,7 +4074,7 @@
       "topicoId": "mt_MKCE_30",
       "prerequisitoId": "mt_MKCE_29",
       "forca": "hard",
-      "razao": "O formato em espiral é descrito por saltos e retornos entre as cinco etapas, que precisam ser conhecidas antes.",
+      "razao": "Só compara o caminho com o funil quem já conhece as cinco etapas e a ordem em que elas aparecem.",
       "origem": "texto",
       "trecho": "Ao contrário do funil, os 5 As formam um caminho em espiral: o consumidor pode pular etapas (uma indicação forte leva da assimilação direto à arguição) ou voltar atrás",
       "escopo": "interna"
@@ -4083,7 +4083,7 @@
       "topicoId": "mt_MKCE_31",
       "prerequisitoId": "mt_MKCE_29",
       "forca": "hard",
-      "razao": "As fontes de influência são localizadas etapa por etapa da jornada, com pico na arguição.",
+      "razao": "As fontes de influência são descritas etapa por etapa da jornada, com pico na arguição.",
       "origem": "texto",
       "trecho": "Em cada etapa, três forças disputam a decisão. A influência dos outros atinge o pico na arguição",
       "escopo": "interna"
@@ -4092,16 +4092,16 @@
       "topicoId": "mt_MKCE_32",
       "prerequisitoId": "mt_MKCE_29",
       "forca": "hard",
-      "razao": "Os coeficientes são razões entre etapas da jornada, e sem as etapas não há o que dividir.",
+      "razao": "Os coeficientes medem conversões entre etapas dos 5 As, então as etapas precisam estar dominadas antes do cálculo.",
       "origem": "texto",
-      "trecho": "Mede a conversão de consciência em compra: nº de quem compra ÷ nº de quem conhece a marca.",
+      "trecho": "Métricas: CAC/PAR (conversão de consciência em compra) e CDM/BAR (conversão de consciência em defesa). O gargalo é a menor taxa de conversão entre etapas.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_33",
       "prerequisitoId": "mt_MKCE_29",
       "forca": "hard",
-      "razao": "O tópico trata do peso da arguição na loja virtual, então a etapa precisa estar definida antes.",
+      "razao": "O tópico aplica ao comércio eletrônico uma etapa específica da jornada, a arguição.",
       "origem": "texto",
       "trecho": "A etapa de arguição é forte no comércio eletrônico por causa de avaliações, frete, reputação, vídeos, política de troca e preço.",
       "escopo": "interna"
@@ -4110,79 +4110,88 @@
       "topicoId": "mt_MKCE_33",
       "prerequisitoId": "mt_MKCE_31",
       "forca": "soft",
-      "razao": "A prova social da loja virtual é a influência dos outros aplicada ao comércio eletrônico.",
+      "razao": "A prova social da loja virtual é a influência dos outros operando dentro da arguição.",
       "origem": "texto",
-      "trecho": "Vem de amigos, família e da comunidade: boca a boca, redes sociais, avaliações. É a mais confiável",
+      "trecho": "Vem de amigos, família e da comunidade: boca a boca, redes sociais, avaliações.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_34",
       "prerequisitoId": "mt_MKCE_24",
-      "forca": "soft",
-      "razao": "O quadro das eras posiciona o 4.0 como a passagem do tradicional ao digital, já explicada antes.",
+      "forca": "hard",
+      "razao": "A própria definição do 5.0 soma o Marketing 4.0, então a era anterior é pré-requisito da equação.",
       "origem": "texto",
-      "trecho": "MARKETING 4.0: Integra marketing tradicional e digital em um mundo conectado.",
+      "trecho": "Em uma equação: Marketing 5.0 = Marketing 3.0 (centralidade humana) + Marketing 4.0 (empoderamento tecnológico).",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_35",
       "prerequisitoId": "mt_MKCE_34",
       "forca": "hard",
-      "razao": "A definição do 5.0 é escrita como soma do 3.0 e do 4.0, eras apresentadas no quadro de evolução.",
+      "razao": "As next techs são justamente as tecnologias que a definição do 5.0 chama de imitadoras do ser humano.",
       "origem": "texto",
-      "trecho": "Em uma equação: Marketing 5.0 = Marketing 3.0 (centralidade humana) + Marketing 4.0 (empoderamento tecnológico).",
+      "trecho": "Next techs: IA, PLN, sensores/biometria, robótica (RPA), realidade aumentada e virtual, IoT e blockchain.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_36",
-      "prerequisitoId": "mt_MKCE_35",
+      "prerequisitoId": "mt_MKCE_34",
       "forca": "hard",
-      "razao": "As duas disciplinas são componentes do Marketing 5.0 e só se explicam dentro dessa arquitetura.",
+      "razao": "As disciplinas são componentes do Marketing 5.0, que precisa estar definido antes de ser decomposto.",
       "origem": "texto",
-      "trecho": "O Marketing 5.0 se organiza em duas disciplinas que dão a base (orientado por dados e ágil) e três aplicações que entregam valor (preditivo, contextual e aumentado).",
+      "trecho": "Cinco componentes: duas DISCIPLINAS-base (orientado por dados e ágil) e três APLICAÇÕES (preditivo, contextual e aumentado).",
       "escopo": "interna"
     },
     {
-      "topicoId": "mt_MKCE_37",
-      "prerequisitoId": "mt_MKCE_35",
-      "forca": "hard",
-      "razao": "As três aplicações são o outro bloco de componentes do Marketing 5.0.",
+      "topicoId": "mt_MKCE_36",
+      "prerequisitoId": "mt_MKCE_15",
+      "forca": "soft",
+      "razao": "O ecossistema de dados integra o CRM e o atendimento já apresentados como ferramentas de relacionamento.",
       "origem": "texto",
-      "trecho": "O Marketing 5.0 se organiza em duas disciplinas que dão a base (orientado por dados e ágil) e três aplicações que entregam valor (preditivo, contextual e aumentado).",
+      "trecho": "Integra navegação, compras, carrinho abandonado, CRM, atendimento, redes sociais, transações, campanhas e pós-venda.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_37",
       "prerequisitoId": "mt_MKCE_36",
       "forca": "hard",
-      "razao": "O material coloca as aplicações rodando sobre as disciplinas de dados e de agilidade.",
+      "razao": "O material coloca as disciplinas como alicerce das três aplicações, que são a parte percebida pelo cliente.",
       "origem": "texto",
       "trecho": "As disciplinas são o alicerce; as aplicações, o que o cliente percebe.",
       "escopo": "interna"
     },
     {
-      "topicoId": "mt_MKCE_38",
+      "topicoId": "mt_MKCE_37",
       "prerequisitoId": "mt_MKCE_35",
       "forca": "soft",
-      "razao": "Os três desafios são obstáculos para implantar o Marketing 5.0, que precisa estar definido antes.",
+      "razao": "As três aplicações operam sobre as next techs (IA, sensores, linguagem natural), então a lista de tecnologias precede o uso delas.",
+      "origem": "inferido",
+      "trecho": "",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_38",
+      "prerequisitoId": "mt_MKCE_34",
+      "forca": "soft",
+      "razao": "Os desafios são obstáculos para implantar o Marketing 5.0, logo a era precisa estar compreendida antes.",
       "origem": "texto",
-      "trecho": "Três desafios: abismo entre gerações, polarização da prosperidade",
+      "trecho": "Três desafios: abismo entre gerações, polarização da prosperidade (mercado em \"M\") e fosso digital.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_39",
       "prerequisitoId": "mt_MKCE_37",
       "forca": "hard",
-      "razao": "Os três níveis de personalização detalham o marketing contextual, uma das três aplicações.",
+      "razao": "Os três níveis de personalização detalham a aplicação contextual apresentada entre as três aplicações.",
       "origem": "texto",
-      "trecho": "Sensores e IA entregam a interação certa, na hora e no lugar certos.",
+      "trecho": "Sensores e IA entregam a interação certa, na hora e no lugar certos. Beacons, reconhecimento facial e IoT replicam, no físico, a personalização que já existe no digital.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_40",
       "prerequisitoId": "mt_MKCE_24",
       "forca": "soft",
-      "razao": "A omnicanalidade é a forma operacional da integração entre on-line e off-line proposta pelo Marketing 4.0.",
+      "razao": "A omnicanalidade operacionaliza a integração entre on-line e off-line que define o Marketing 4.0.",
       "origem": "texto",
       "trecho": "Omnicanalidade integra canais online e offline, diferente de multicanalidade.",
       "escopo": "interna"
@@ -4190,28 +4199,28 @@
     {
       "topicoId": "mt_MKCE_41",
       "prerequisitoId": "mt_MKCE_36",
-      "forca": "hard",
-      "razao": "O e-commerce orientado por dados é a disciplina de dados aplicada à loja, com o mesmo vocabulário de ecossistema e identidade única.",
-      "origem": "texto",
-      "trecho": "Disciplina-base: montar um ecossistema integrado de dados (sociais, web, transações, IoT, atendimento) sob uma identidade única do cliente, para decidir com fatos.",
-      "escopo": "interna"
-    },
-    {
-      "topicoId": "mt_MKCE_41",
-      "prerequisitoId": "mt_MKCE_15",
       "forca": "soft",
-      "razao": "O ecossistema de dados lista o CRM como uma de suas fontes, então é preciso saber o que o CRM registra.",
+      "razao": "A recomendação depende dos padrões de navegação e compra que só existem no ecossistema de dados da disciplina orientada por dados.",
       "origem": "texto",
-      "trecho": "Integra navegação, compras, carrinho abandonado, CRM, atendimento, redes sociais, transações, campanhas e pós-venda.",
+      "trecho": "Motores de recomendação usam padrões de navegação, compra e similaridade para sugerir produtos ou conteúdos relevantes.",
       "escopo": "interna"
     },
     {
       "topicoId": "mt_MKCE_42",
-      "prerequisitoId": "mt_MKCE_41",
-      "forca": "hard",
-      "razao": "A recomendação depende dos padrões de navegação e compra que só existem com os dados integrados.",
+      "prerequisitoId": "mt_MKCE_36",
+      "forca": "soft",
+      "razao": "A pirâmide parte dos dados e da informação, cujo ecossistema é objeto da disciplina orientada por dados.",
       "origem": "texto",
-      "trecho": "Motores de recomendação usam padrões de navegação, compra e similaridade para sugerir produtos ou conteúdos relevantes.",
+      "trecho": "A pirâmide do conhecimento mostra a divisão de trabalho ideal: a máquina sobe dos dados ao conhecimento; o humano transforma conhecimento em ideias e sabedoria.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_MKCE_42",
+      "prerequisitoId": "mt_MKCE_37",
+      "forca": "soft",
+      "razao": "O paradoxo de Moravec fundamenta a divisão de trabalho que o marketing aumentado já aplica entre bot e atendente.",
+      "origem": "texto",
+      "trecho": "Tecnologia que potencializa (não substitui) o humano: interfaces em camadas onde o digital qualifica e o humano fecha.",
       "escopo": "interna"
     },
     {

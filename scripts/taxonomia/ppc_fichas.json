@@ -1,0 +1,1105 @@
+[
+  {
+    "codigo_ppc": "ALPG",
+    "nome": "Algoritmos e Lógica de Programação",
+    "periodo": 1,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Estudo dos conceitos básicos de algoritmos. Resolução de problemas de forma estruturada. Lógica de programação. Programação em Blocos. Estudo de funções, escopo e passagem de parâmetros.",
+    "unidadesEmenta": [
+      "Estudo dos conceitos básicos de algoritmos",
+      "Resolução de problemas de forma estruturada",
+      "Lógica de programação",
+      "Programação em Blocos",
+      "Estudo de funções, escopo e passagem de parâmetros."
+    ]
+  },
+  {
+    "codigo_ppc": "FILO",
+    "nome": "Filosofia",
+    "periodo": 1,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "As origens da filosofia. A origem do conhecimento. A essência do conhecimento. Razão filosófica. Raciocínio e lógica. Razão teórica versus razão prática. Emoção e razão humana. Razão e argumentação. Modernidade Líquida. A busca da verdade e das certezas em uma sociedade em transformação.",
+    "unidadesEmenta": [
+      "As origens da filosofia",
+      "A origem do conhecimento",
+      "A essência do conhecimento",
+      "Razão filosófica",
+      "Raciocínio e lógica",
+      "Razão teórica versus razão prática",
+      "Emoção e razão humana",
+      "Razão e argumentação",
+      "Modernidade Líquida",
+      "A busca da verdade e das certezas em uma sociedade em transformação."
+    ]
+  },
+  {
+    "codigo_ppc": "FNSI",
+    "nome": "Fundamentos de Sistemas de",
+    "periodo": 1,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Sistemas de Informação nos negócios. Tomada de Decisão estratégica. E-Business. Softwares de sistemas e de aplicação. Sistemas de Banco de dados e inteligência de negócios. Telecomunicações e redes. Internet, Intranet e Extranet. Ética e segurança na Internet. Sistemas de Apoio à Decisão. Sistemas Especialistas. Privacidade nas empresas. Conversão Numérica.",
+    "unidadesEmenta": [
+      "Sistemas de Informação nos negócios",
+      "Tomada de Decisão estratégica",
+      "E-Business",
+      "Softwares de sistemas e de aplicação",
+      "Sistemas de Banco de dados e inteligência de negócios",
+      "Telecomunicações e redes",
+      "Internet, Intranet e Extranet",
+      "Ética e segurança na Internet",
+      "Sistemas de Apoio à Decisão",
+      "Sistemas Especialistas",
+      "Privacidade nas empresas",
+      "Conversão Numérica."
+    ]
+  },
+  {
+    "codigo_ppc": "INGT",
+    "nome": "Inglês Técnico",
+    "periodo": 1,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Estudo de textos (verbais e não verbais) dos mais variados gêneros discursivos relacionados à área de Sistemas de Informação. Conhecimentos linguísticos necessários à compreensão de textos. Processo de decodificação. Desenvolvimento da criticidade do discente em relação aos temas discutidos.",
+    "unidadesEmenta": [
+      "Estudo de textos (verbais e não verbais) dos mais variados gêneros discursivos relacionados à área de Sistemas de Informação",
+      "Conhecimentos linguísticos necessários à compreensão de textos",
+      "Processo de decodificação",
+      "Desenvolvimento da criticidade do discente em relação aos temas discutidos."
+    ]
+  },
+  {
+    "codigo_ppc": "INTW",
+    "nome": "Introdução a Tecnologias Web (EAD)",
+    "periodo": 1,
+    "cargaHoraria": 40,
+    "preRequisito": "",
+    "ementa": "Introdução a Tecnologias da Informação e Comunicação. Internet e Protocolo HTTP. Documentos HTML, Folhas de Estilos e Client-Side Script.",
+    "unidadesEmenta": [
+      "Introdução a Tecnologias da Informação e Comunicação",
+      "Internet e Protocolo HTTP. Documentos HTML, Folhas de Estilos e Client-Side Script."
+    ]
+  },
+  {
+    "codigo_ppc": "LMMD",
+    "nome": "Lógica Matemática e Matemática",
+    "periodo": 1,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Fundamentos da Lógica. Lógica Proposicional. Teoria dos Conjuntos. Sequências. Teoria dos Números. Números Inteiros e Primos. Prova e Indução Matemática.",
+    "unidadesEmenta": [
+      "Fundamentos da Lógica",
+      "Lógica Proposicional",
+      "Teoria dos Conjuntos",
+      "Sequências",
+      "Teoria dos Números",
+      "Números Inteiros e Primos",
+      "Prova e Indução Matemática."
+    ]
+  },
+  {
+    "codigo_ppc": "ARQC",
+    "nome": "Arquitetura e Organização de Computadores",
+    "periodo": 2,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Estrutura básica de computadores. A Unidade Central de Processamento. Estruturas de barramentos. Organização de memória. Sistemas de entrada/saída. Suporte ao sistema operacional. Padrões de arquiteturas (RISC x CISC). Introdução a arquiteturas paralelas.",
+    "unidadesEmenta": [
+      "Estrutura básica de computadores",
+      "A Unidade Central de Processamento",
+      "Estruturas de barramentos",
+      "Organização de memória",
+      "Sistemas de entrada/saída",
+      "Suporte ao sistema operacional",
+      "Padrões de arquiteturas (RISC x CISC)",
+      "Introdução a arquiteturas paralelas."
+    ]
+  },
+  {
+    "codigo_ppc": "FNGO",
+    "nome": "Fundamentos da Gestão",
+    "periodo": 2,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "O conceito de Administração. A evolução das escolas do pensamento administrativo. As atividades do processo administrativo: planejamento, organização, direção e controle. SI, organizações e estratégia. Inteligência competitiva e sistemas de informação. Processo decisório e sistemas de informação.",
+    "unidadesEmenta": [
+      "O conceito de Administração",
+      "A evolução das escolas do pensamento administrativo",
+      "As atividades do processo administrativo: planejamento, organização, direção e controle",
+      "SI, organizações e estratégia",
+      "Inteligência competitiva e sistemas de informação",
+      "Processo decisório e sistemas de informação."
+    ]
+  },
+  {
+    "codigo_ppc": "LNPG",
+    "nome": "Linguagem de Programação",
+    "periodo": 2,
+    "cargaHoraria": 80,
+    "preRequisito": "Algoritmos e Lógica de Programação",
+    "ementa": "Conceitos básicos de linguagens de programação. Histórico, classificação e principais paradigmas de linguagens de programação. Ferramentas de desenvolvimento. Identificadores, valores, tipos de dados. Constantes e variáveis. Comandos de estruturação do fluxo de controle. Modularização. Escopo de nomes e tempo de vida de variáveis. Passagem de parâmetros. Tipos de dados definidos pelo usuário. Entrada e saída de dados.",
+    "unidadesEmenta": [
+      "Conceitos básicos de linguagens de programação",
+      "Histórico, classificação e principais paradigmas de linguagens de programação",
+      "Ferramentas de desenvolvimento",
+      "Identificadores, valores, tipos de dados",
+      "Constantes e variáveis",
+      "Comandos de estruturação do fluxo de controle",
+      "Modularização",
+      "Escopo de nomes e tempo de vida de variáveis",
+      "Passagem de parâmetros",
+      "Tipos de dados definidos pelo usuário",
+      "Entrada e saída de dados."
+    ]
+  },
+  {
+    "codigo_ppc": "MTSI",
+    "nome": "Matemática para Sistemas de",
+    "periodo": 2,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Sistemas Lineares. Matrizes. Transformações Lineares. Relações. Funções. Recursão. Grafos.",
+    "unidadesEmenta": [
+      "Sistemas Lineares",
+      "Matrizes",
+      "Transformações Lineares",
+      "Relações",
+      "Funções",
+      "Recursão",
+      "Grafos."
+    ]
+  },
+  {
+    "codigo_ppc": "SCOG",
+    "nome": "SOCIOLOGIA DAS ORGANIZAÇÕES",
+    "periodo": 2,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Processo de formação do capitalismo e a sociologia (Revolução Industrial, classes sociais e questão social). Durkheim (fato social, divisão do trabalho social e solidariedade social), Weber (ação social, racionalização e burocracia) e Marx (trabalho, divisão social do trabalho e alienação). Transformações econômicas e políticas do capitalismo (concorrência e monopólio; crise cíclica e estrutural; processo de mundialização do capital - mercado e globalização; Estado liberal, bem-estar social, neoliberal e social-liberal). Reestruturação produtiva, Modelos de Gestão e Cultura das Organizações (taylorismo, fordismo e toyotismo; organizações, cultura organizacional e a responsabilidade socioambiental).",
+    "unidadesEmenta": [
+      "Processo de formação do capitalismo e a sociologia (Revolução Industrial, classes sociais e questão social)",
+      "Durkheim (fato social, divisão do trabalho social e solidariedade social), Weber (ação social, racionalização e burocracia) e Marx (trabalho, divisão social do trabalho e alienação)",
+      "Transformações econômicas e políticas do capitalismo (concorrência e monopólio; crise cíclica e estrutural; processo de mundialização do capital - mercado e globalização; Estado liberal, bem-estar social, neoliberal e social-liberal)",
+      "Reestruturação produtiva, Modelos de Gestão e Cultura das Organizações (taylorismo, fordismo e toyotismo; organizações, cultura organizacional e a responsabilidade socioambiental)."
+    ]
+  },
+  {
+    "codigo_ppc": "ESTA",
+    "nome": "Estatística Aplicada",
+    "periodo": 3,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Tabelas e Gráficos. Distribuição de Frequências. Medidas de Posição. Medidas de Separatrizes. Medidas de Dispersão. Correlação e Regressão Linear e Probabilidades.",
+    "unidadesEmenta": [
+      "Tabelas e Gráficos",
+      "Distribuição de Frequências",
+      "Medidas de Posição",
+      "Medidas de Separatrizes",
+      "Medidas de Dispersão",
+      "Correlação e Regressão Linear e Probabilidades."
+    ]
+  },
+  {
+    "codigo_ppc": "ESTD",
+    "nome": "Estrutura de Dados",
+    "periodo": 3,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Visão geral das estruturas de dados. Tipos abstratos de dados. Listas Encadeadas. Pilhas. Filas. Árvores. Algoritmos Recursivos.",
+    "unidadesEmenta": [
+      "Visão geral das estruturas de dados",
+      "Tipos abstratos de dados",
+      "Listas Encadeadas",
+      "Pilhas",
+      "Filas",
+      "Árvores",
+      "Algoritmos Recursivos."
+    ]
+  },
+  {
+    "codigo_ppc": "FNBD",
+    "nome": "Fundamentos de Banco de Dados",
+    "periodo": 3,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Banco de Dados e Usuários de Banco de Dados. Conceitos de Arquitetura dos sistema de banco de dados. Modelo de Dados Entidade-Relacionamento (ER). Modelo de Dados Entidade- Relacionamento Estendido (EER). Modelo de Dados Relacional. Regras de conversão de EER/ Relacional. Linguagem SQL.",
+    "unidadesEmenta": [
+      "Banco de Dados e Usuários de Banco de Dados",
+      "Conceitos de Arquitetura dos sistema de banco de dados",
+      "Modelo de Dados Entidade-Relacionamento (ER)",
+      "Modelo de Dados Entidade- Relacionamento Estendido (EER)",
+      "Modelo de Dados Relacional",
+      "Regras de conversão de EER/ Relacional",
+      "Linguagem SQL."
+    ]
+  },
+  {
+    "codigo_ppc": "METC",
+    "nome": "Metodologia Científica",
+    "periodo": 3,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Ciência e senso comum. Tipos de conhecimento científico. Paradigmas positivista, interpretativista e complexo. Pesquisa quantitativa, qualitativa e mista. Métodos e técnicas de pesquisa. Estrutura de um projeto de pesquisa. Instrumentos de coleta de dados. Análise de dados quantitativos e qualitativos. Redação da Pesquisa. Normas da ABNT.",
+    "unidadesEmenta": [
+      "Ciência e senso comum",
+      "Tipos de conhecimento científico",
+      "Paradigmas positivista, interpretativista e complexo",
+      "Pesquisa quantitativa, qualitativa e mista",
+      "Métodos e técnicas de pesquisa",
+      "Estrutura de um projeto de pesquisa",
+      "Instrumentos de coleta de dados",
+      "Análise de dados quantitativos e qualitativos",
+      "Redação da Pesquisa",
+      "Normas da ABNT."
+    ]
+  },
+  {
+    "codigo_ppc": "SOPE",
+    "nome": "Sistemas Operacionais",
+    "periodo": 3,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Introdução aos Sistemas Operacionais. Estrutura dos Sistemas Operacionais. Concorrência. Gerência de processos e threads. Gerência do processador. Gerência de memória. Sistemas de Arquivos. Sistema de entrada e saída. Estudo de casos de sistemas operacionais.",
+    "unidadesEmenta": [
+      "Introdução aos Sistemas Operacionais",
+      "Estrutura dos Sistemas Operacionais",
+      "Concorrência",
+      "Gerência de processos e threads",
+      "Gerência do processador",
+      "Gerência de memória",
+      "Sistemas de Arquivos",
+      "Sistema de entrada e saída",
+      "Estudo de casos de sistemas operacionais."
+    ]
+  },
+  {
+    "codigo_ppc": "APBD",
+    "nome": "Administração e Projeto de Banco de",
+    "periodo": 4,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Desenvolvimento de projeto de banco de dados utilizando a linguagem SQL. Comandos DDL, DML, DCL e comandos de controle de transações. Programação em SQL. Atividades do Administrador de Banco de Dados.",
+    "unidadesEmenta": [
+      "Desenvolvimento de projeto de banco de dados utilizando a linguagem SQL. Comandos DDL, DML, DCL e comandos de controle de transações",
+      "Programação em SQL. Atividades do Administrador de Banco de Dados."
+    ]
+  },
+  {
+    "codigo_ppc": "FNRC",
+    "nome": "Fundamentos de Redes de",
+    "periodo": 4,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Introdução às Redes de Computadores e Internet. Arquiteturas e padrões. Topologias e meios físicos de transmissão. Camada de Aplicação: DNS e serviços Internet (mail, telnet, ftp e web). Camada de Transporte: TCP e UDP. Camada de Redes: Endereçamento e Roteamento. Camada de Enlace. Camada Física. Redes Locais. Redes públicas de comunicação de dados (tipos, padrões e utilização). Interligação de redes. Projeto de redes.",
+    "unidadesEmenta": [
+      "Introdução às Redes de Computadores e Internet",
+      "Arquiteturas e padrões",
+      "Topologias e meios físicos de transmissão",
+      "Camada de Aplicação: DNS e serviços Internet (mail, telnet, ftp e web)",
+      "Camada de Transporte: TCP e UDP. Camada de Redes: Endereçamento e Roteamento",
+      "Camada de Enlace",
+      "Camada Física",
+      "Redes Locais",
+      "Redes públicas de comunicação de dados (tipos, padrões e utilização)",
+      "Interligação de redes",
+      "Projeto de redes."
+    ]
+  },
+  {
+    "codigo_ppc": "GPTI",
+    "nome": "Gestão de Pessoas em TI",
+    "periodo": 4,
+    "cargaHoraria": 40,
+    "preRequisito": "",
+    "ementa": "A interação entre pessoas e organizações. Principais processos da Gestão de Pessoas. Cultura Organizacional. Motivação. Liderança. Avaliação do desempenho.",
+    "unidadesEmenta": [
+      "A interação entre pessoas e organizações",
+      "Principais processos da Gestão de Pessoas",
+      "Cultura Organizacional",
+      "Motivação",
+      "Liderança",
+      "Avaliação do desempenho."
+    ]
+  },
+  {
+    "codigo_ppc": "INHC",
+    "nome": "Interação Humano-Computador",
+    "periodo": 4,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Introdução à Interação Humano-Computador. Engenharia Cognitiva. Engenharia Semiótica. Avaliação Interpretativa. Avaliação preditiva. Estilos de Interação. Diretrizes e Padrões de Projeto de Interação. Modelagem de Tarefas. Modelagem de Interação. Storyboarding e Prototipação.",
+    "unidadesEmenta": [
+      "Introdução à Interação Humano-Computador",
+      "Engenharia Cognitiva",
+      "Engenharia Semiótica",
+      "Avaliação Interpretativa",
+      "Avaliação preditiva",
+      "Estilos de Interação",
+      "Diretrizes e Padrões de Projeto de Interação",
+      "Modelagem de Tarefas",
+      "Modelagem de Interação",
+      "Storyboarding e Prototipação."
+    ]
+  },
+  {
+    "codigo_ppc": "PROO",
+    "nome": "Programação Orientada a Objetos",
+    "periodo": 4,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Paradigma Orientado a Objetos (OO). Programação OO vs Programação Estruturada. Classes, objetos, atributos, métodos e construtores. Encapsulamento. Herança. Polimorfismo. Classes abstratas e Interfaces. Linguagem de programação OO. Pacotes. Coleções. Tratamento de Exceções.",
+    "unidadesEmenta": [
+      "Paradigma Orientado a Objetos (OO)",
+      "Programação OO vs Programação Estruturada",
+      "Classes, objetos, atributos, métodos e construtores",
+      "Encapsulamento",
+      "Herança",
+      "Polimorfismo",
+      "Classes abstratas e Interfaces",
+      "Linguagem de programação OO. Pacotes",
+      "Coleções",
+      "Tratamento de Exceções."
+    ]
+  },
+  {
+    "codigo_ppc": "APSI",
+    "nome": "Análise e Projeto de Sistemas de",
+    "periodo": 5,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Conceitos de Engenharia de software. Análise de Requisitos. Modelagem UML. Arquitetura do Software. Análise e Documentação de Requisitos. Modelagem OO. Diagrama de Classes, Diagrama de Sequência, Diagrama de Atividades. Desenvolvimento de um Projeto de Software.",
+    "unidadesEmenta": [
+      "Conceitos de Engenharia de software",
+      "Análise de Requisitos",
+      "Modelagem UML. Arquitetura do Software",
+      "Análise e Documentação de Requisitos",
+      "Modelagem OO. Diagrama de Classes, Diagrama de Sequência, Diagrama de Atividades",
+      "Desenvolvimento de um Projeto de Software."
+    ]
+  },
+  {
+    "codigo_ppc": "GEPJ",
+    "nome": "Gerência de Projetos",
+    "periodo": 5,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Gestão estratégica de projetos (portfólios e programas). Escritórios de projetos. Gestão do escopo, tempo, recursos, custos, qualidade, comunicações, riscos. Estimativas e métricas. Planejamento, execução, acompanhamento e controle de um projeto. Revisão de avaliação de um projeto. Fechamento de um projeto. Metodologias, técnicas e ferramentas de gerência de projetos. Modelo de gerenciamento de projetos do Project Management Institute – PMI. Gerência de projetos de software. Tendências em gestão de Projetos.",
+    "unidadesEmenta": [
+      "Gestão estratégica de projetos (portfólios e programas)",
+      "Escritórios de projetos",
+      "Gestão do escopo, tempo, recursos, custos, qualidade, comunicações, riscos",
+      "Estimativas e métricas",
+      "Planejamento, execução, acompanhamento e controle de um projeto",
+      "Revisão de avaliação de um projeto",
+      "Fechamento de um projeto",
+      "Metodologias, técnicas e ferramentas de gerência de projetos",
+      "Modelo de gerenciamento de projetos do Project Management Institute – PMI. Gerência de projetos de software",
+      "Tendências em gestão de Projetos."
+    ]
+  },
+  {
+    "codigo_ppc": "GOTI",
+    "nome": "Governança em Tecnologia da",
+    "periodo": 5,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Fundamentos de Governança de TI. Relação entre Governança de TI e Governança Corporativa, Visão geral da implantação de Governança de TI com COBIT e ITIL, Ferramentas de implantação da Governança de TI.",
+    "unidadesEmenta": [
+      "Fundamentos de Governança de TI. Relação entre Governança de TI e Governança Corporativa, Visão geral da implantação de Governança de TI com COBIT e ITIL, Ferramentas de implantação da Governança de TI."
+    ]
+  },
+  {
+    "codigo_ppc": "PWEB",
+    "nome": "Programação Web",
+    "periodo": 5,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Aplicações distribuídas e para WEB. Páginas web dinâmicas e serviços para internet. Programação para internet utilizando arquitetura adequada. Conexão e persistência em banco de dados. Geração de relatórios online.",
+    "unidadesEmenta": [
+      "Aplicações distribuídas e para WEB. Páginas web dinâmicas e serviços para internet",
+      "Programação para internet utilizando arquitetura adequada",
+      "Conexão e persistência em banco de dados",
+      "Geração de relatórios online."
+    ]
+  },
+  {
+    "codigo_ppc": "TABD",
+    "nome": "Tópicos Avançados em Banco de",
+    "periodo": 5,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Banco de dados multidimensional. Data Warehouse. Business Intelligence. Mineração de dados. Bancos de Dados Emergentes.",
+    "unidadesEmenta": [
+      "Banco de dados multidimensional",
+      "Data Warehouse",
+      "Business Intelligence",
+      "Mineração de dados",
+      "Bancos de Dados Emergentes."
+    ]
+  },
+  {
+    "codigo_ppc": "EMPD",
+    "nome": "Empreendedorismo Digital",
+    "periodo": 6,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Conceito de empreendedorismo e empreendimento. Perfil do empreendedor. Geração de idéias. Busca de informações. Mecanismos e procedimentos para criação de empresas. Gerenciamento e negociação. Qualidade e competitividade. Marketing pessoal e empresarial. Gestão do empreendimento. Empreendedorismo digital. Startups. Startup enxuta (Lean). Negócio sustentável. Prototipação de projeto. Modelo de negócios.",
+    "unidadesEmenta": [
+      "Conceito de empreendedorismo e empreendimento",
+      "Perfil do empreendedor",
+      "Geração de idéias",
+      "Busca de informações",
+      "Mecanismos e procedimentos para criação de empresas",
+      "Gerenciamento e negociação",
+      "Qualidade e competitividade",
+      "Marketing pessoal e empresarial",
+      "Gestão do empreendimento",
+      "Empreendedorismo digital",
+      "Startups",
+      "Startup enxuta (Lean)",
+      "Negócio sustentável",
+      "Prototipação de projeto",
+      "Modelo de negócios."
+    ]
+  },
+  {
+    "codigo_ppc": "PDSW",
+    "nome": "Processos de Desenvolvimento de",
+    "periodo": 6,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Visão geral da Engenharia de Software. Modelos de processos de desenvolvimento de software. Requisitos e especificação de software. Métodos de análise e projeto de software. Métodos de Desenvolvimento de software. Gestão de Projetos de Software. Aplicações da Engenharia de Software. Gerenciamento de configuração.",
+    "unidadesEmenta": [
+      "Visão geral da Engenharia de Software",
+      "Modelos de processos de desenvolvimento de software",
+      "Requisitos e especificação de software",
+      "Métodos de análise e projeto de software",
+      "Métodos de Desenvolvimento de software",
+      "Gestão de Projetos de Software",
+      "Aplicações da Engenharia de Software",
+      "Gerenciamento de configuração."
+    ]
+  },
+  {
+    "codigo_ppc": "PJSI",
+    "nome": "Projeto Integrador em Sistemas de",
+    "periodo": 6,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Aplicação dos conteúdos programáticos envolvendo todas os componentes curriculares do período na execução de um projeto interdisciplinar.",
+    "unidadesEmenta": [
+      "Aplicação dos conteúdos programáticos envolvendo todas os componentes curriculares do período na execução de um projeto interdisciplinar."
+    ]
+  },
+  {
+    "codigo_ppc": "GESI",
+    "nome": "Gestão de Segurança da Informação",
+    "periodo": 7,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Conceitos Básicos de Segurança da Informação. Leis, normas e padrões de Segurança da Informação. Aspectos tecnológicos Segurança da Informação. Organização da Segurança da Informação. Gestão de Riscos, Política de Segurança da Informação. Classificação da Informação. Segurança Física e Operacional. Gestão de Continuidade de Negócios. Gestão de Pessoas em Segurança da Informação.",
+    "unidadesEmenta": [
+      "Conceitos Básicos de Segurança da Informação",
+      "Leis, normas e padrões de Segurança da Informação",
+      "Aspectos tecnológicos Segurança da Informação",
+      "Organização da Segurança da Informação",
+      "Gestão de Riscos, Política de Segurança da Informação",
+      "Classificação da Informação",
+      "Segurança Física e Operacional",
+      "Gestão de Continuidade de Negócios",
+      "Gestão de Pessoas em Segurança da Informação."
+    ]
+  },
+  {
+    "codigo_ppc": "PPAP",
+    "nome": "Projeto de Pesquisa Aplicada",
+    "periodo": 7,
+    "cargaHoraria": 80,
+    "preRequisito": "Metodologia Científica",
+    "ementa": "Elaboração de projeto de pesquisa aplicada. Problematização na área de sistemas de informação. Delineamento e desenho da pesquisa. Pesquisa qualitativa e quantitativa em Sistemas de Informação. Design Science. Valores e ética no processo de pesquisa.",
+    "unidadesEmenta": [
+      "Elaboração de projeto de pesquisa aplicada",
+      "Problematização na área de sistemas de informação",
+      "Delineamento e desenho da pesquisa",
+      "Pesquisa qualitativa e quantitativa em Sistemas de Informação",
+      "Design Science",
+      "Valores e ética no processo de pesquisa."
+    ]
+  },
+  {
+    "codigo_ppc": "SIGE",
+    "nome": "Sistemas de Informação",
+    "periodo": 7,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Sistemas de informação Gerencial (principais características), Processamento Analítico On-line (OLAP). Conceitos de Vantagens Competitivas, Papéis Estratégicos para os Sistemas de Informação Gerencial e Metodologia para o desenvolvimento de Sistemas de Informações Gerenciais para dotar a empresa de vantagens competitiva.",
+    "unidadesEmenta": [
+      "Sistemas de informação Gerencial (principais características), Processamento Analítico On-line (OLAP)",
+      "Conceitos de Vantagens Competitivas, Papéis Estratégicos para os Sistemas de Informação Gerencial e Metodologia para o desenvolvimento de Sistemas de Informações Gerenciais para dotar a empresa de vantagens competitiva."
+    ]
+  },
+  {
+    "codigo_ppc": "TOSI",
+    "nome": "Tópicos Especiais em Sistemas de",
+    "periodo": 7,
+    "cargaHoraria": 40,
+    "preRequisito": "",
+    "ementa": "Apresentar e discutir tecnologias emergentes voltadas para aplicações na éra de Sistemas de Informação.",
+    "unidadesEmenta": [
+      "Apresentar e discutir tecnologias emergentes voltadas para aplicações na éra de Sistemas de Informação."
+    ]
+  },
+  {
+    "codigo_ppc": "PSIF",
+    "nome": "Pesquisa em Sistema de Informação",
+    "periodo": 8,
+    "cargaHoraria": 40,
+    "preRequisito": "Projeto de Pesquisa Aplicada",
+    "ementa": "Revisão Sistemática de Literatura. Pesquisa de Campo. Escrita Científica. Comunicação de Resultados.",
+    "unidadesEmenta": [
+      "Revisão Sistemática de Literatura",
+      "Pesquisa de Campo",
+      "Escrita Científica",
+      "Comunicação de Resultados."
+    ]
+  },
+  {
+    "codigo_ppc": "SADE",
+    "nome": "Sistema de Apoio à Decisão",
+    "periodo": 8,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Decisão: teoria e prática. Modelos decisórios. Apoio à Decisão: requisitos e Como tomar Decisões Inteligentes; Etapas de Análise de Decisão Múltiplos Critérios; O Método AHP - Conceitos Básicos e aplicação; O processo de KDD: Conceitos Básicos, Etapas do Processo de KDD, Ferramentas de KDD e Exemplos de Aplicações.",
+    "unidadesEmenta": [
+      "Decisão: teoria e prática",
+      "Modelos decisórios",
+      "Apoio à Decisão: requisitos e Como tomar Decisões Inteligentes; Etapas de Análise de Decisão Múltiplos Critérios; O Método AHP - Conceitos Básicos e aplicação; O processo de KDD: Conceitos Básicos, Etapas do Processo de KDD, Ferramentas de KDD e Exemplos de Aplicações."
+    ]
+  },
+  {
+    "codigo_ppc": "TSAS",
+    "nome": "Tecnologias Sociais e Assistivas",
+    "periodo": 8,
+    "cargaHoraria": 40,
+    "preRequisito": "",
+    "ementa": "Definição e categorias de Tecnologias Assistivas. Legislação brasileira em Tecnologias Assistivas e Ações Governamentais. As Tecnologias da Informação e da Comunicação (TIC) e a Tecnologia Assistiva. Projetos de tecnologias assistivas. Tecnologias para a inclusão social. Desenvolvimento de tecnologias sociais no Brasil e análise do impacto das mesmas no âmbito das políticas públicas e do desenvolvimento social e sustentável.",
+    "unidadesEmenta": [
+      "Definição e categorias de Tecnologias Assistivas",
+      "Legislação brasileira em Tecnologias Assistivas e Ações Governamentais",
+      "As Tecnologias da Informação e da Comunicação (TIC) e a Tecnologia Assistiva",
+      "Projetos de tecnologias assistivas",
+      "Tecnologias para a inclusão social",
+      "Desenvolvimento de tecnologias sociais no Brasil e análise do impacto das mesmas no âmbito das políticas públicas e do desenvolvimento social e sustentável."
+    ]
+  },
+  {
+    "codigo_ppc": "ADER",
+    "nome": "Avaliação de Desempenho de Redes",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Princípios de avaliação de desempenho em redes de computadores. Métodos e técnicas de mensuração de desempenho. Estatística aplicada às redes de computadores. Teoria de Filas. Técnicas de Benchmarking. Simulação. Conceito de Tráfego e Congestionamento de Recursos. Traçando perfis de tráfego.",
+    "unidadesEmenta": [
+      "Princípios de avaliação de desempenho em redes de computadores",
+      "Métodos e técnicas de mensuração de desempenho",
+      "Estatística aplicada às redes de computadores",
+      "Teoria de Filas",
+      "Técnicas de Benchmarking",
+      "Simulação",
+      "Conceito de Tráfego e Congestionamento de Recursos",
+      "Traçando perfis de tráfego."
+    ]
+  },
+  {
+    "codigo_ppc": "AGIL",
+    "nome": "Metodologias Ágeis",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Princípios e valores das Metodologias Ágeis. Métodos, técnicas, métricas e práticas ágeis. SCRUM. eXtreme Programming (XP). Desenvolvimento orientado a testes (TDD). Lean Software Development.",
+    "unidadesEmenta": [
+      "Princípios e valores das Metodologias Ágeis",
+      "Métodos, técnicas, métricas e práticas ágeis",
+      "SCRUM. eXtreme Programming (XP)",
+      "Desenvolvimento orientado a testes (TDD)",
+      "Lean Software Development."
+    ]
+  },
+  {
+    "codigo_ppc": "ARQS",
+    "nome": "Arquitetura de Software",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Relação entre arquitetura de software e projeto de software. Conceitos de arquitetura de software. Estilos arquiteturais (pipe-and-filter, camadas, transações, publish-subscribe, baseado em eventos, cliente- servidor, MVC, Peer-to-Peer, REST e outros). Arquitetura orientada a serviços. Componentes. Frameworks. Padrões Arquiteturais e MVC.",
+    "unidadesEmenta": [
+      "Relação entre arquitetura de software e projeto de software",
+      "Conceitos de arquitetura de software",
+      "Estilos arquiteturais (pipe-and-filter, camadas, transações, publish-subscribe, baseado em eventos, cliente- servidor, MVC, Peer-to-Peer, REST e outros)",
+      "Arquitetura orientada a serviços",
+      "Componentes",
+      "Frameworks",
+      "Padrões Arquiteturais e MVC."
+    ]
+  },
+  {
+    "codigo_ppc": "CDON",
+    "nome": "Ciência de Dados Orientada a Negócios",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Introdução à Ciência de Dados. Ciclo de Vida dos Dados. Identificação de problemas de negócio. Estabelecimento e refinamento de objetivos e expectativas do negócio. Formulação de questões aos dados. Preparação e Análise Exploratória de Dados. Predição e inferência. Interpretação de resultados e respostas às questões de negócio. Ciência de Dados e a Estratégia de Negócios.",
+    "unidadesEmenta": [
+      "Introdução à Ciência de Dados",
+      "Ciclo de Vida dos Dados",
+      "Identificação de problemas de negócio",
+      "Estabelecimento e refinamento de objetivos e expectativas do negócio",
+      "Formulação de questões aos dados",
+      "Preparação e Análise Exploratória de Dados",
+      "Predição e inferência",
+      "Interpretação de resultados e respostas às questões de negócio",
+      "Ciência de Dados e a Estratégia de Negócios."
+    ]
+  },
+  {
+    "codigo_ppc": "CFOR",
+    "nome": "Computação Forense",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Conceitos. Legislação. Procedimentos de investigação. Coleta e Preservação de Evidências. Funcionamento e Abstrações de Sistemas de Arquivos. Captura e Análise de Tráfego de Rede. Esteganografia. Análise de Dispositivos Móveis e demais artefatos.",
+    "unidadesEmenta": [
+      "Conceitos",
+      "Legislação",
+      "Procedimentos de investigação",
+      "Coleta e Preservação de Evidências",
+      "Funcionamento e Abstrações de Sistemas de Arquivos",
+      "Captura e Análise de Tráfego de Rede",
+      "Esteganografia",
+      "Análise de Dispositivos Móveis e demais artefatos."
+    ]
+  },
+  {
+    "codigo_ppc": "CORG",
+    "nome": "Comportamento Organizacional",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "O indivíduo e a organização. Valores, atitudes e satisfação no trabalho. Percepção e diferenças individuais. Motivação. Comunicação interpessoal e organizacional. Comportamento grupal e intergrupal. Liderança e confiança. Conflito e negociação. Aplicações organizacionais: diagnóstico; gerência participativa; reestruturação do trabalho e inovações no contexto de trabalho.",
+    "unidadesEmenta": [
+      "O indivíduo e a organização",
+      "Valores, atitudes e satisfação no trabalho",
+      "Percepção e diferenças individuais",
+      "Motivação",
+      "Comunicação interpessoal e organizacional",
+      "Comportamento grupal e intergrupal",
+      "Liderança e confiança",
+      "Conflito e negociação",
+      "Aplicações organizacionais: diagnóstico; gerência participativa; reestruturação do trabalho e inovações no contexto de trabalho."
+    ]
+  },
+  {
+    "codigo_ppc": "DEVO",
+    "nome": "DevOps",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "",
+    "unidadesEmenta": []
+  },
+  {
+    "codigo_ppc": "DIRD",
+    "nome": "Direito Digital",
+    "periodo": null,
+    "cargaHoraria": 40,
+    "preRequisito": "",
+    "ementa": "Noções básicas de direito e legislação aplicadas à informática. Política nacional de informática. Contratos digitais. Comércio eletrônico. Direitos do consumidor no comércio eletrônico. Privacidade digital. Assinatura e certificação digital. Crimes digitais.",
+    "unidadesEmenta": [
+      "Noções básicas de direito e legislação aplicadas à informática",
+      "Política nacional de informática",
+      "Contratos digitais",
+      "Comércio eletrônico",
+      "Direitos do consumidor no comércio eletrônico",
+      "Privacidade digital",
+      "Assinatura e certificação digital",
+      "Crimes digitais."
+    ]
+  },
+  {
+    "codigo_ppc": "EDFI",
+    "nome": "Educação Financeira",
+    "periodo": null,
+    "cargaHoraria": 40,
+    "preRequisito": "",
+    "ementa": "As finanças pessoais e a qualidade de vida. Juros simples e compostos. Série de pagamentos. Taxa Interna de Retorno e Valor Presente Líquido. Reflexões sobre ganhar, poupar e investir dinheiro. Investimentos em Renda Fixa: Tesouro Direto, CDB - Certificado de Depósito Bancário, LC – Letra de Câmbio, LCI – Letra de Crédito Imobiliário, LCA – Letra de Crédito do Agronegócio. Investimentos em Renda Variável: Mercado de Ações (análise fundamentalista e análise técnica), Fundos Imobiliários.",
+    "unidadesEmenta": [
+      "As finanças pessoais e a qualidade de vida",
+      "Juros simples e compostos",
+      "Série de pagamentos",
+      "Taxa Interna de Retorno e Valor Presente Líquido",
+      "Reflexões sobre ganhar, poupar e investir dinheiro",
+      "Investimentos em Renda Fixa: Tesouro Direto, CDB - Certificado de Depósito Bancário, LC – Letra de Câmbio, LCI – Letra de Crédito Imobiliário, LCA – Letra de Crédito do Agronegócio",
+      "Investimentos em Renda Variável: Mercado de Ações (análise fundamentalista e análise técnica), Fundos Imobiliários."
+    ]
+  },
+  {
+    "codigo_ppc": "ETCA",
+    "nome": "",
+    "periodo": null,
+    "cargaHoraria": 40,
+    "preRequisito": "",
+    "ementa": "Conceitos básicos: ética, moral e cidadania. Ética nas organizações. Ética do profissional da área de computação. Visão geral de normas e padrões internacionais, leis e resoluções locais pertinentes à área de computação. Códigos de ética profissional na área de computação. Resolução de conflitos. Aspectos de conduta, trajes, comportamento em reuniões. Ética na Internet. Ética na tomada de decisões. Ética e responsabilidade socioambiental.",
+    "unidadesEmenta": [
+      "Conceitos básicos: ética, moral e cidadania",
+      "Ética nas organizações",
+      "Ética do profissional da área de computação",
+      "Visão geral de normas e padrões internacionais, leis e resoluções locais pertinentes à área de computação",
+      "Códigos de ética profissional na área de computação",
+      "Resolução de conflitos",
+      "Aspectos de conduta, trajes, comportamento em reuniões",
+      "Ética na Internet",
+      "Ética na tomada de decisões",
+      "Ética e responsabilidade socioambiental."
+    ]
+  },
+  {
+    "codigo_ppc": "FABS",
+    "nome": "Fábrica de Software",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Modelos de fábrica de software. Processos, técnicas, práticas e medições em fábricas de software. Perfis funcionais e respectivas atividades a serem desempenhadas. Metodologia de desenvolvimento de software, artefatos e métricas, Plano de processos das atividades, Processo definido e padrão;Padronização das solicitações de serviço à fábrica;Estimativas de custos e prazos baseadas no conhecimento real da capacidade produtiva. Ambiente para simulação da implementação de projetos de software.",
+    "unidadesEmenta": [
+      "Modelos de fábrica de software",
+      "Processos, técnicas, práticas e medições em fábricas de software",
+      "Perfis funcionais e respectivas atividades a serem desempenhadas",
+      "Metodologia de desenvolvimento de software, artefatos e métricas, Plano de processos das atividades, Processo definido e padrão;Padronização das solicitações de serviço à fábrica;Estimativas de custos e prazos baseadas no conhecimento real da capacidade produtiva",
+      "Ambiente para simulação da implementação de projetos de software."
+    ]
+  },
+  {
+    "codigo_ppc": "GCMS",
+    "nome": "Gestão de Configuração de Software",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Processos de gerência de configuração. Identificação de itens de configuração. Controle de mudanças. Relatórios de status. Controle de versões e linhas base ou de referência (baselines). Normas (IEEE 828). Princípios de gerência de configuração e relação com atividades de desenvolvimento de software.",
+    "unidadesEmenta": [
+      "Processos de gerência de configuração",
+      "Identificação de itens de configuração",
+      "Controle de mudanças",
+      "Relatórios de status",
+      "Controle de versões e linhas base ou de referência (baselines)",
+      "Normas (IEEE 828)",
+      "Princípios de gerência de configuração e relação com atividades de desenvolvimento de software."
+    ]
+  },
+  {
+    "codigo_ppc": "GCPT",
+    "nome": "Gerência de Redes de Computadores",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Introdução à Administração de Redes (sistemas de administração de redes, fontes e fluxos de informação para administração e objetivos estratégicos); Administração Inovadora de Redes; Tecnologias e Suporte à Administração de Redes (TMN do ITU-T, OSI/NM da ISO, SNMP da Internet ou assemelhadas); Forças do Mercado de Administração de Redes (gerência proprietária, redes locais, e redes heterogêneas); Tendências em Administração e Gerência de Redes. Avaliação de plataformas de gerência, segurança da gerência de redes.",
+    "unidadesEmenta": [
+      "Introdução à Administração de Redes (sistemas de administração de redes, fontes e fluxos de informação para administração e objetivos estratégicos); Administração Inovadora de Redes; Tecnologias e Suporte à Administração de Redes (TMN do ITU-T, OSI/NM da ISO, SNMP da Internet ou assemelhadas); Forças do Mercado de Administração de Redes (gerência proprietária, redes locais, e redes heterogêneas); Tendências em Administração e Gerência de Redes",
+      "Avaliação de plataformas de gerência, segurança da gerência de redes."
+    ]
+  },
+  {
+    "codigo_ppc": "GECO",
+    "nome": "",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Introdução a Gestão do conhecimento. A gestão conhecimento e teoria das organizações. Criação e manutenção do conhecimento. Gestão do Conhecimento nas Organizações. Ferramentas para gestão do conhecimento. Capital intelectual. Modelos e usos da informação.",
+    "unidadesEmenta": [
+      "Introdução a Gestão do conhecimento",
+      "A gestão conhecimento e teoria das organizações",
+      "Criação e manutenção do conhecimento",
+      "Gestão do Conhecimento nas Organizações",
+      "Ferramentas para gestão do conhecimento",
+      "Capital intelectual",
+      "Modelos e usos da informação."
+    ]
+  },
+  {
+    "codigo_ppc": "GETI",
+    "nome": "Gestão Estratégica de TI",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Planejamento e alinhamento estratégico. Processo de planejamento e gestão estratégica. Planejamento Estratégico de TI (PETI). Balanced Scorecard e mapa estratégico de TI. Elaboração do Plano Diretor de TI (PDTI). Governança do PDTI.",
+    "unidadesEmenta": [
+      "Planejamento e alinhamento estratégico",
+      "Processo de planejamento e gestão estratégica",
+      "Planejamento Estratégico de TI (PETI)",
+      "Balanced Scorecard e mapa estratégico de TI. Elaboração do Plano Diretor de TI (PDTI)",
+      "Governança do PDTI."
+    ]
+  },
+  {
+    "codigo_ppc": "GPPR",
+    "nome": "Gestão por Processos",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Organizações e Processos. Visão de gerenciamento de processos de negócio. Visão de gerenciamento de mudanças organizacionais. Conceito de Processo. Objetivos da Modelagem de Processos. Método para Modelagem de Processos. Metamodelos (BPMN). Automação e Simulação de Processos de Negocio. Gerenciamento de Desempenho. Controle e acompanhamento de processos de negócios. Ferramentas para Modelagem de Processos. Gerenciamento Eletrônico de Documentos. Montando um Escritório de Processos.",
+    "unidadesEmenta": [
+      "Organizações e Processos",
+      "Visão de gerenciamento de processos de negócio",
+      "Visão de gerenciamento de mudanças organizacionais",
+      "Conceito de Processo",
+      "Objetivos da Modelagem de Processos",
+      "Método para Modelagem de Processos",
+      "Metamodelos (BPMN)",
+      "Automação e Simulação de Processos de Negocio",
+      "Gerenciamento de Desempenho",
+      "Controle e acompanhamento de processos de negócios",
+      "Ferramentas para Modelagem de Processos",
+      "Gerenciamento Eletrônico de Documentos",
+      "Montando um Escritório de Processos."
+    ]
+  },
+  {
+    "codigo_ppc": "IDCO",
+    "nome": "Internet das Coisas",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Aplicações de Internet das Coisas (IoT). Arquitetura e protocolos de rede para IoT. Tecnologias de dispositivos eletrônicos (MPUs, MCUs, sensores e atuadores). Técnicas de projetos de sistemas embarcados. Ferramentas de desenvolvimento e as boas técnicas de programação de aplicações de Internet das Coisas. Aspectos de segurança.",
+    "unidadesEmenta": [
+      "Aplicações de Internet das Coisas (IoT)",
+      "Arquitetura e protocolos de rede para IoT. Tecnologias de dispositivos eletrônicos (MPUs, MCUs, sensores e atuadores)",
+      "Técnicas de projetos de sistemas embarcados",
+      "Ferramentas de desenvolvimento e as boas técnicas de programação de aplicações de Internet das Coisas",
+      "Aspectos de segurança."
+    ]
+  },
+  {
+    "codigo_ppc": "INFR",
+    "nome": "Projeto de Infraestrutura",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Projeto de Redes Computadores (levantamento de requisitos, projeto lógico, projeto físico, testes, documentação). Projeto de Datacenters (requisitos, instalações físicas, energia, climatização, servidores, redes e armazenamento). Infraestruturas de alta disponibilidade (redundância, planos de contingência e de recuperação de desastres). Virtualização.",
+    "unidadesEmenta": [
+      "Projeto de Redes Computadores (levantamento de requisitos, projeto lógico, projeto físico, testes, documentação)",
+      "Projeto de Datacenters (requisitos, instalações físicas, energia, climatização, servidores, redes e armazenamento)",
+      "Infraestruturas de alta disponibilidade (redundância, planos de contingência e de recuperação de desastres)",
+      "Virtualização."
+    ]
+  },
+  {
+    "codigo_ppc": "INTC",
+    "nome": "Inteligência Computacional",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Inteligência Computacional: Introdução, conceitos básicos. Algoritmos Genéticos e principais operações. Lógica Fuzzy. Redes Neurais. Principais modelos de Redes Neurais. Aprendizado em Redes Neurais. Modelos de Rede Feedforward. Treinamento por Backpropagation.",
+    "unidadesEmenta": [
+      "Inteligência Computacional: Introdução, conceitos básicos",
+      "Algoritmos Genéticos e principais operações",
+      "Lógica Fuzzy",
+      "Redes Neurais",
+      "Principais modelos de Redes Neurais",
+      "Aprendizado em Redes Neurais",
+      "Modelos de Rede Feedforward",
+      "Treinamento por Backpropagation."
+    ]
+  },
+  {
+    "codigo_ppc": "LIBR",
+    "nome": "",
+    "periodo": null,
+    "cargaHoraria": 40,
+    "preRequisito": "",
+    "ementa": "Aspectos históricos, socioculturais e linguísticos da surdez. Compreensão da surdez como experiência visual do mundo. Fundamentos linguísticos da Língua de Sinais Brasileira. Noções básicas de conversação I.",
+    "unidadesEmenta": [
+      "Aspectos históricos, socioculturais e linguísticos da surdez",
+      "Compreensão da surdez como experiência visual do mundo",
+      "Fundamentos linguísticos da Língua de Sinais Brasileira",
+      "Noções básicas de conversação I."
+    ]
+  },
+  {
+    "codigo_ppc": "LSOR",
+    "nome": "Laboratório de Sistemas Operacionais",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Instalação e configuração de sistemas operacionais de rede. Instalação e configuração de interfaces e protocolos de rede. Instalação e configuração de serviços de redes: serviço DHCP, servidor de resolução de nomes, servidor web, transferência de arquivos, acesso remoto. Administração de usuários. Conceitos de segurança em redes e configuração de firewall. Virtualização.",
+    "unidadesEmenta": [
+      "Instalação e configuração de sistemas operacionais de rede",
+      "Instalação e configuração de interfaces e protocolos de rede",
+      "Instalação e configuração de serviços de redes: serviço DHCP, servidor de resolução de nomes, servidor web, transferência de arquivos, acesso remoto",
+      "Administração de usuários",
+      "Conceitos de segurança em redes e configuração de firewall",
+      "Virtualização."
+    ]
+  },
+  {
+    "codigo_ppc": "MKCE",
+    "nome": "Marketing e Comércio Eletrônico",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Introdução ao Marketing. Mix de Marketing. Marketing de Relacionamento. Pesquisa de Marketing. Comportamento do Consumidor. Segmentação do Mercado-alvo. Marketing digital. Marketing digital X marketing tradicional. Ferramentas do Marketing Eletrônico. Comércio eletrônico: B2B, B2C, C2C, mobile commerce, e-government etc.",
+    "unidadesEmenta": [
+      "Introdução ao Marketing",
+      "Mix de Marketing",
+      "Marketing de Relacionamento",
+      "Pesquisa de Marketing",
+      "Comportamento do Consumidor",
+      "Segmentação do Mercado-alvo",
+      "Marketing digital",
+      "Marketing digital X marketing tradicional",
+      "Ferramentas do Marketing Eletrônico",
+      "Comércio eletrônico: B2B, B2C, C2C, mobile commerce, e-government etc."
+    ]
+  },
+  {
+    "codigo_ppc": "NEGS",
+    "nome": "Negócios Sociais",
+    "periodo": null,
+    "cargaHoraria": 40,
+    "preRequisito": "",
+    "ementa": "Conceito de empresa social. Dimensão nova e visionária do capitalismo. Sustentabilidade e negócios.",
+    "unidadesEmenta": [
+      "Conceito de empresa social",
+      "Dimensão nova e visionária do capitalismo",
+      "Sustentabilidade e negócios."
+    ]
+  },
+  {
+    "codigo_ppc": "PASW",
+    "nome": "Projeto Avançado de Software",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Definição e princípios de projeto. Persistência dos dados. Projeto X Ciclos de vida Interação entre projeto e requisitos. Atributos qualitativos em um projeto. Compromissos (custo-benefício). Padrões e princípios GRASP. Ferramentas de suporte a projeto. Medidas de atributos de projeto. Métricas de projeto.",
+    "unidadesEmenta": [
+      "Definição e princípios de projeto",
+      "Persistência dos dados",
+      "Projeto X Ciclos de vida Interação entre projeto e requisitos",
+      "Atributos qualitativos em um projeto",
+      "Compromissos (custo-benefício)",
+      "Padrões e princípios GRASP. Ferramentas de suporte a projeto",
+      "Medidas de atributos de projeto",
+      "Métricas de projeto."
+    ]
+  },
+  {
+    "codigo_ppc": "PDSI",
+    "nome": "Processamento Digital de Sinais e",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Fundamentos de Processamento de Sinais e Imagens. Cor e Visão Humana. Processamento de Imagens. Operações em Imagens. Transformações Geométricas. Filtros de Sinais. Extração de Características. Reconhecimento de Padrões em Sinais.",
+    "unidadesEmenta": [
+      "Fundamentos de Processamento de Sinais e Imagens",
+      "Cor e Visão Humana",
+      "Processamento de Imagens",
+      "Operações em Imagens",
+      "Transformações Geométricas",
+      "Filtros de Sinais",
+      "Extração de Características",
+      "Reconhecimento de Padrões em Sinais."
+    ]
+  },
+  {
+    "codigo_ppc": "PESO",
+    "nome": "Pesquisa Operacional",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Conceitos básicos de Programação Linear (PL). Otimização de Sistemas de Engenharia.",
+    "unidadesEmenta": [
+      "Conceitos básicos de Programação Linear (PL)",
+      "Otimização de Sistemas de Engenharia."
+    ]
+  },
+  {
+    "codigo_ppc": "PGMV",
+    "nome": "Programação para Dispositivos Móveis",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Características dos dispositivos móveis. Arquiteturas de aplicação móvel. Infraestrutura móvel. Projeto de interfaces para dispositivos móveis. Programação de aplicações para clientes móveis. Transferência de dados cliente-servidor. Prática em desenvolvimento de aplicações móveis.",
+    "unidadesEmenta": [
+      "Características dos dispositivos móveis",
+      "Arquiteturas de aplicação móvel",
+      "Infraestrutura móvel",
+      "Projeto de interfaces para dispositivos móveis",
+      "Programação de aplicações para clientes móveis",
+      "Transferência de dados cliente-servidor",
+      "Prática em desenvolvimento de aplicações móveis."
+    ]
+  },
+  {
+    "codigo_ppc": "PINT",
+    "nome": "Propriedade Intelectual (EAD)",
+    "periodo": null,
+    "cargaHoraria": 40,
+    "preRequisito": "",
+    "ementa": "Histórico e evolução. Direitos autorais no espaço digital. Legislação sobre propriedade Intelectual. Bens digitais e compilações passíveis de proteção. Registro de software. Titularidade dos direitos sobre os programas. Marcas e patentes.",
+    "unidadesEmenta": [
+      "Histórico e evolução",
+      "Direitos autorais no espaço digital",
+      "Legislação sobre propriedade Intelectual",
+      "Bens digitais e compilações passíveis de proteção",
+      "Registro de software",
+      "Titularidade dos direitos sobre os programas",
+      "Marcas e patentes."
+    ]
+  },
+  {
+    "codigo_ppc": "QDSW",
+    "nome": "Qualidade de Software",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "O histórico e fundamentos de qualidade. Fundamentos de qualidade de software. Métricas de qualidade de software. Normas de qualidade de software. Técnicas de garantia da qualidade de software. Teste de software: conceitos, tipos e aplicação no contexto da qualidade. Desenvolvimento orientado a Testes. Modelos de melhoria do processo de software. Planejamento de sistemas de qualidade de software. Normas e modelos: ISO, SEI, CMMI, MPS.BR. Manutenção de software.",
+    "unidadesEmenta": [
+      "O histórico e fundamentos de qualidade",
+      "Fundamentos de qualidade de software",
+      "Métricas de qualidade de software",
+      "Normas de qualidade de software",
+      "Técnicas de garantia da qualidade de software",
+      "Teste de software: conceitos, tipos e aplicação no contexto da qualidade",
+      "Desenvolvimento orientado a Testes",
+      "Modelos de melhoria do processo de software",
+      "Planejamento de sistemas de qualidade de software",
+      "Normas e modelos: ISO, SEI, CMMI, MPS.BR. Manutenção de software."
+    ]
+  },
+  {
+    "codigo_ppc": "SEGR",
+    "nome": "Segurança de Redes",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Conceitos básicos sobre segurança da informação. Vulnerabilidades, ameaças e ataques. Autenticação, criptografia e assinatura digital. Segurança da comunicação. Segurança no desenvolvimento de aplicações. Aspectos sociais da segurança de redes de computadores.",
+    "unidadesEmenta": [
+      "Conceitos básicos sobre segurança da informação",
+      "Vulnerabilidades, ameaças e ataques",
+      "Autenticação, criptografia e assinatura digital",
+      "Segurança da comunicação",
+      "Segurança no desenvolvimento de aplicações",
+      "Aspectos sociais da segurança de redes de computadores."
+    ]
+  },
+  {
+    "codigo_ppc": "SINT",
+    "nome": "Sistemas Inteligentes",
+    "periodo": null,
+    "cargaHoraria": 80,
+    "preRequisito": "",
+    "ementa": "Definições de IA. Histórico da IA. Paradigmas da IA; Resolução de Problemas: Métodos de solução de problemas; Exemplos de Problemas; Estratégias; Busca Heurística; Aplicações em jogos; Representação do Conhecimento e Raciocínio: Técnicas de representação de conhecimento; Aquisição de conhecimento; Sistema Especialista e Aplicações; Representação, tratamento e raciocínio sob Incerteza; Ferramentas para a construção de sistemas inteligentes; Tópicos avançados em IA: Linguagem Natural.",
+    "unidadesEmenta": [
+      "Definições de IA. Histórico da IA. Paradigmas da IA; Resolução de Problemas: Métodos de solução de problemas; Exemplos de Problemas; Estratégias; Busca Heurística; Aplicações em jogos; Representação do Conhecimento e Raciocínio: Técnicas de representação de conhecimento; Aquisição de conhecimento; Sistema Especialista e Aplicações; Representação, tratamento e raciocínio sob Incerteza; Ferramentas para a construção de sistemas inteligentes; Tópicos avançados em IA: Linguagem Natural."
+    ]
+  }
+]

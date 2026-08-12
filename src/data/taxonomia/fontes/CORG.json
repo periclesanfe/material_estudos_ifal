@@ -1,0 +1,1540 @@
+{
+  "disciplina": {
+    "codigo": "CORG",
+    "codigoPPC": "CORG",
+    "nome": "Comportamento Organizacional",
+    "periodo": 8
+  },
+  "topicos": [
+    {
+      "id": "mt_CORG_01",
+      "nome": "Definição de comportamento organizacional",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos do CO",
+      "descricao": "CO é o campo que investiga o impacto de indivíduos, grupos e estruturas no comportamento dentro das organizações. O objetivo é usar esse conhecimento para melhorar a eficácia organizacional.",
+      "ordem": 1,
+      "evidencia": [
+        "voce domina se consegue dizer o que o CO estuda em uma frase, sem confundir com finanças ou marketing",
+        "voce domina se consegue classificar um problema real nos três níveis: indivíduo, grupo ou estrutura"
+      ],
+      "checagem": "Quais são os três determinantes do comportamento nas organizações e para que serve estudá-los?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["O indivíduo e a organização"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_02",
+      "nome": "Comportamento não é aleatório",
+      "tipo": "META",
+      "unidade": "Fundamentos do CO",
+      "descricao": "O comportamento pode ser estudado por relações de causa e efeito e por evidências. A disciplina troca intuição, pressentimento e achismo por estudo sistemático e gestão baseada em evidências.",
+      "ordem": 2,
+      "evidencia": [
+        "voce domina se consegue explicar por que prever comportamento é possível sem supor que todos reagem igual",
+        "voce domina se consegue diferenciar uma decisão baseada em evidência de uma baseada em intuição"
+      ],
+      "checagem": "Por que o material diz que o comportamento não é aleatório e o que isso muda na forma de decidir?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["O indivíduo e a organização"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_03",
+      "nome": "Ciências que apoiam o CO",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos do CO",
+      "descricao": "O CO se apoia em psicologia (mede e explica o comportamento individual), sociologia (pessoas no ambiente social), psicologia social (influência entre pessoas) e antropologia (comparação entre sociedades e culturas).",
+      "ordem": 3,
+      "evidencia": [
+        "voce domina se consegue dizer qual ciência responde melhor a cada pergunta de CO",
+        "voce domina se consegue diferenciar o foco da psicologia do foco da sociologia"
+      ],
+      "checagem": "Quais ciências comportamentais alimentam o CO e o que cada uma contribui?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["O indivíduo e a organização"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_04",
+      "nome": "Diversidade aparente e profunda",
+      "tipo": "CONCEITUAL",
+      "unidade": "Diversidade nas organizações",
+      "descricao": "Diversidade é o conjunto de características que diferenciam as pessoas. A aparente reúne traços visíveis como idade, etnia, gênero, raça, religião e deficiência; a profunda reúne personalidade, valores, capacidades e habilidades.",
+      "ordem": 4,
+      "evidencia": [
+        "voce domina se consegue classificar exemplos reais em aparente ou profunda",
+        "voce domina se consegue explicar por que a profunda pesa mais no trabalho conjunto"
+      ],
+      "checagem": "Qual a diferença entre diversidade aparente e diversidade profunda, com um exemplo de cada?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["O indivíduo e a organização"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_05",
+      "nome": "Tipos de discriminação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Diversidade nas organizações",
+      "descricao": "Discriminação inferioriza pessoas e aparece como políticas discriminatórias, assédio sexual, intimidação, zombaria e insultos, exclusão e incivilidade.",
+      "ordem": 5,
+      "evidencia": [
+        "voce domina se consegue nomear o tipo de discriminação a partir de um caso descrito",
+        "voce domina se consegue separar exclusão de incivilidade"
+      ],
+      "checagem": "Uma pessoa deixa de ser convidada para reuniões e eventos da equipe: que tipo de discriminação é esse?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["O indivíduo e a organização"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_06",
+      "nome": "Capacidades intelectuais e físicas",
+      "tipo": "CONCEITUAL",
+      "unidade": "Diversidade nas organizações",
+      "descricao": "Capacidade é o saber-fazer necessário para executar tarefas. As intelectuais incluem aptidão numérica, compreensão verbal, raciocínio e memória; as físicas incluem força, flexibilidade, coordenação, equilíbrio e vigor.",
+      "ordem": 6,
+      "evidencia": [
+        "voce domina se consegue apontar quais capacidades uma função específica exige",
+        "voce domina se consegue diferenciar capacidade de motivação ao explicar desempenho fraco"
+      ],
+      "checagem": "O que é capacidade no CO e como ela se divide?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Percepção e diferenças individuais"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_07",
+      "nome": "Valores: conteúdo e intensidade",
+      "tipo": "CONCEITUAL",
+      "unidade": "Valores",
+      "descricao": "Valores são convicções básicas de que um modo de conduta ou uma condição de existência é preferível ao seu oposto. O conteúdo diz o que é importante e a intensidade diz o quanto, formando o sistema de valores, relativamente estável.",
+      "ordem": 7,
+      "evidencia": [
+        "voce domina se consegue explicar a diferença entre conteúdo e intensidade de um valor",
+        "voce domina se consegue dizer por que valores ajudam a entender atitudes, motivação e percepção"
+      ],
+      "checagem": "Quais são os dois atributos de um valor e o que é o sistema de valores de uma pessoa?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Valores, atitudes e satisfação no trabalho"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_08",
+      "nome": "Valores terminais e instrumentais",
+      "tipo": "CONCEITUAL",
+      "unidade": "Valores",
+      "descricao": "Valores terminais são condições de existência desejáveis, ou seja, metas de vida. Valores instrumentais são modos preferenciais de comportamento, os meios escolhidos para alcançar os terminais.",
+      "ordem": 8,
+      "evidencia": [
+        "voce domina se consegue classificar exemplos como fim ou como meio",
+        "voce domina se consegue mostrar como um valor instrumental serve a um terminal"
+      ],
+      "checagem": "Dê um valor terminal e o valor instrumental que ajuda a alcançá-lo.",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Valores, atitudes e satisfação no trabalho"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_09",
+      "nome": "Atitude e seus três componentes",
+      "tipo": "CONCEITUAL",
+      "unidade": "Atitudes e satisfação no trabalho",
+      "descricao": "Atitudes são afirmações avaliadoras, favoráveis ou desfavoráveis, sobre objetos, pessoas ou eventos. Toda atitude tem cognição (crença), afeto (sentimento) e comportamento (intenção de agir).",
+      "ordem": 9,
+      "evidencia": [
+        "voce domina se consegue separar os três componentes em uma frase de um funcionário insatisfeito",
+        "voce domina se consegue diferenciar atitude de valor"
+      ],
+      "checagem": "Em 'meu chefe foi injusto, não gosto dele e vou procurar outro emprego', qual parte é cognição, afeto e comportamento?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Valores, atitudes e satisfação no trabalho"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_10",
+      "nome": "Atitudes-chave no trabalho",
+      "tipo": "CONCEITUAL",
+      "unidade": "Atitudes e satisfação no trabalho",
+      "descricao": "As principais atitudes no trabalho são satisfação, envolvimento com o trabalho, comprometimento organizacional, suporte organizacional percebido e engajamento. Cada uma mede uma relação diferente entre pessoa, tarefa e empresa.",
+      "ordem": 10,
+      "evidencia": [
+        "voce domina se consegue diferenciar envolvimento com o trabalho de comprometimento com a organização",
+        "voce domina se consegue reconhecer suporte organizacional percebido em uma fala de funcionário"
+      ],
+      "checagem": "Qual a diferença entre satisfação, envolvimento com o trabalho e comprometimento organizacional?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Valores, atitudes e satisfação no trabalho"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_11",
+      "nome": "Medir satisfação no trabalho",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Atitudes e satisfação no trabalho",
+      "descricao": "Há duas abordagens: a classificação única global, com uma pergunta geral, e a soma de facetas, que avalia natureza do trabalho, supervisão, remuneração, promoções e relação com colegas para compor uma pontuação.",
+      "ordem": 11,
+      "evidencia": [
+        "voce domina se consegue montar as facetas de um questionário de satisfação",
+        "voce domina se consegue dizer quando a pergunta global basta e quando não basta"
+      ],
+      "checagem": "Quais são as duas formas de medir satisfação no trabalho e o que a soma de facetas avalia?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Valores, atitudes e satisfação no trabalho"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_12",
+      "nome": "Respostas à insatisfação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Atitudes e satisfação no trabalho",
+      "descricao": "Diante da insatisfação a pessoa pode sair (abandonar a empresa), comunicar (sugerir melhorias), ser leal (esperar passivamente) ou negligenciar (deixar piorar, com atrasos, faltas e mais erros).",
+      "ordem": 12,
+      "evidencia": [
+        "voce domina se consegue classificar as quatro respostas em ativa ou passiva, construtiva ou destrutiva",
+        "voce domina se consegue identificar negligência em indicadores de absenteísmo e erro"
+      ],
+      "checagem": "Um funcionário insatisfeito começa a se atrasar, faltar e errar mais: qual das quatro respostas é essa?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Valores, atitudes e satisfação no trabalho"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_13",
+      "nome": "Alavancas de satisfação",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Atitudes e satisfação no trabalho",
+      "descricao": "Mantêm pessoas satisfeitas: trabalho intelectualmente desafiante mas alcançável, recompensas percebidas como justas, condições de apoio, colegas colaboradores e sentido que vai além do dinheiro.",
+      "ordem": 13,
+      "evidencia": [
+        "voce domina se consegue propor duas ações concretas para elevar satisfação em um caso dado",
+        "voce domina se consegue explicar por que desafio excessivo vira frustração"
+      ],
+      "checagem": "Quais fatores o material aponta para manter pessoas satisfeitas no trabalho?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Valores, atitudes e satisfação no trabalho"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_14",
+      "nome": "Definição de percepção",
+      "tipo": "CONCEITUAL",
+      "unidade": "Percepção",
+      "descricao": "Percepção é o processo pelo qual as pessoas organizam e interpretam impressões sensoriais para dar significado ao ambiente. As pessoas agem conforme o mundo percebido, não conforme a realidade objetiva.",
+      "ordem": 14,
+      "evidencia": [
+        "voce domina se consegue explicar por que duas pessoas descrevem o mesmo fato de formas diferentes",
+        "voce domina se consegue dizer por que percepção importa para gestão"
+      ],
+      "checagem": "O que é percepção e por que ela é decisiva para explicar comportamento no trabalho?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Percepção e diferenças individuais"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_15",
+      "nome": "Fatores que moldam a percepção",
+      "tipo": "CONCEITUAL",
+      "unidade": "Percepção",
+      "descricao": "A percepção depende de quem percebe (atitudes, motivações, interesses, experiências), do alvo percebido (características, semelhança, proximidade, pano de fundo) e da situação (contexto, momento, presença de outros).",
+      "ordem": 15,
+      "evidencia": [
+        "voce domina se consegue separar, num caso, o que vem do percebedor, do alvo e da situação",
+        "voce domina se consegue prever mudança de julgamento quando muda o contexto"
+      ],
+      "checagem": "Quais são os três grupos de fatores que influenciam a percepção?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Percepção e diferenças individuais"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_16",
+      "nome": "Teoria da atribuição",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Percepção",
+      "descricao": "A teoria explica como julgamos se um comportamento tem causa interna ou externa, usando três critérios: diferenciação (age diferente em outras situações?), consenso (outros agem igual?) e coerência (mantém o padrão no tempo?).",
+      "ordem": 16,
+      "evidencia": [
+        "voce domina se consegue aplicar os três critérios a um caso de atraso no trabalho",
+        "voce domina se consegue dizer quando a atribuição tende a ser externa"
+      ],
+      "checagem": "Um funcionário se atrasa e todos os colegas também se atrasaram hoje: a atribuição tende a ser interna ou externa, e por qual critério?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Percepção e diferenças individuais"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_17",
+      "nome": "Atalhos no julgamento",
+      "tipo": "CONCEITUAL",
+      "unidade": "Percepção",
+      "descricao": "Atalhos distorcem o julgamento de pessoas: percepção seletiva (só o que salta aos olhos), efeito halo (uma característica define a impressão geral), efeito de contraste (comparação com quem foi visto antes) e estereótipo (julgar pelo grupo).",
+      "ordem": 17,
+      "evidencia": [
+        "voce domina se consegue nomear o atalho presente em uma avaliação de desempenho enviesada",
+        "voce domina se consegue diferenciar halo de contraste"
+      ],
+      "checagem": "Qual a diferença entre efeito halo, efeito de contraste e estereótipo?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Percepção e diferenças individuais"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_18",
+      "nome": "Big Five da personalidade",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Diferenças individuais",
+      "descricao": "Modelo dos cinco grandes fatores: abertura, consciência, extroversão, socialização e neuroticismo. Cada fator tem dois polos e serve para descrever diferenças individuais sem tratá-las como barreira.",
+      "ordem": 18,
+      "evidencia": [
+        "voce domina se consegue nomear o fator a partir da descrição de uma pessoa",
+        "voce domina se consegue dizer o polo oposto de cada fator"
+      ],
+      "checagem": "Quais são os cinco grandes fatores e a que a consciência está ligada?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Percepção e diferenças individuais"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_19",
+      "nome": "Definição de motivação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Motivação",
+      "descricao": "Motivação é o processo responsável pela intensidade (quanto esforço), pela direção (para qual meta) e pela persistência (por quanto tempo) do esforço. Motivação não explica tudo: desempenho também depende de habilidades, oportunidades e condições.",
+      "ordem": 19,
+      "evidencia": [
+        "voce domina se consegue apontar os três elementos da definição em um exemplo",
+        "voce domina se consegue explicar por que alguém motivado ainda pode ter desempenho fraco"
+      ],
+      "checagem": "Quais são os três elementos da motivação e o que mais é necessário para haver desempenho?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Motivação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_20",
+      "nome": "Hierarquia de Maslow",
+      "tipo": "CONCEITUAL",
+      "unidade": "Motivação",
+      "descricao": "As necessidades vão de fisiológicas, segurança e sociais até estima e autorrealização. Para motivar, é preciso entender em que nível a pessoa está e agir nesse nível ou no imediatamente superior.",
+      "ordem": 20,
+      "evidencia": [
+        "voce domina se consegue ordenar os cinco níveis",
+        "voce domina se consegue escolher uma ação de gestão a partir do nível em que a pessoa está"
+      ],
+      "checagem": "Quais são os níveis de Maslow e o que a teoria orienta fazer para motivar alguém?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Motivação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_21",
+      "nome": "Teoria X e Teoria Y",
+      "tipo": "CONCEITUAL",
+      "unidade": "Motivação",
+      "descricao": "McGregor contrasta dois conjuntos de pressupostos gerenciais: a Teoria X, mais controladora, e a Teoria Y, que assume autonomia, responsabilidade e desejo de desenvolvimento.",
+      "ordem": 21,
+      "evidencia": [
+        "voce domina se consegue classificar uma prática de chefia como X ou Y",
+        "voce domina se consegue explicar que X e Y são pressupostos do gestor, não tipos de funcionário"
+      ],
+      "checagem": "O que diferencia a Teoria X da Teoria Y de McGregor?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Motivação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_22",
+      "nome": "Dois fatores de Herzberg",
+      "tipo": "CONCEITUAL",
+      "unidade": "Motivação",
+      "descricao": "Fatores higiênicos são extrínsecos (salário, benefícios, condições físicas, gestão, relacionamento) e apenas evitam insatisfação. Fatores motivacionais são intrínsecos (reconhecimento, realização) e elevam a satisfação.",
+      "ordem": 22,
+      "evidencia": [
+        "voce domina se consegue classificar itens de um pacote de gestão em higiênico ou motivacional",
+        "voce domina se consegue explicar por que aumentar salário pode não gerar motivação"
+      ],
+      "checagem": "Por que, para Herzberg, resolver os fatores higiênicos não garante alta motivação?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Motivação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_23",
+      "nome": "Teoria da autodeterminação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Motivação",
+      "descricao": "As pessoas preferem sentir controle sobre suas ações. Quando uma tarefa antes apreciada passa a ser vivida como obrigação controlada de fora, a motivação intrínseca tende a cair.",
+      "ordem": 23,
+      "evidencia": [
+        "voce domina se consegue explicar como uma recompensa mal aplicada reduz motivação intrínseca",
+        "voce domina se consegue reconhecer perda de sensação de escolha em um caso"
+      ],
+      "checagem": "Em que situação a teoria da autodeterminação prevê queda de motivação?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Motivação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_24",
+      "nome": "Engajamento no trabalho",
+      "tipo": "CONCEITUAL",
+      "unidade": "Motivação",
+      "descricao": "Engajamento é o investimento de energias física, cognitiva e emocional no desempenho. Sustenta-se com líderes preparados, autonomia às equipes, medição regular, rotina permanente de gestão e escuta nos termos da equipe.",
+      "ordem": 24,
+      "evidencia": [
+        "voce domina se consegue diferenciar engajamento de satisfação",
+        "voce domina se consegue apontar por que campanha pontual não produz engajamento"
+      ],
+      "checagem": "O que é engajamento e quais ações de gestão o material indica para sustentá-lo?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Motivação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_25",
+      "nome": "Teoria da definição de metas",
+      "tipo": "CONCEITUAL",
+      "unidade": "Teorias motivacionais aplicadas",
+      "descricao": "Metas específicas e difíceis, acompanhadas de feedback, tendem a elevar o desempenho. Metas vagas, fáceis ou sem retorno não produzem esse efeito.",
+      "ordem": 25,
+      "evidencia": [
+        "voce domina se consegue reescrever uma meta vaga como meta específica e desafiadora",
+        "voce domina se consegue dizer o papel do feedback na teoria"
+      ],
+      "checagem": "Que características uma meta precisa ter para melhorar o desempenho?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Motivação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_26",
+      "nome": "Autoeficácia e suas fontes",
+      "tipo": "CONCEITUAL",
+      "unidade": "Teorias motivacionais aplicadas",
+      "descricao": "Autoeficácia é a crença na própria capacidade de realizar tarefas e atingir metas. Aumenta por maestria prática, aprendizagem por observação, persuasão verbal e excitação emocional.",
+      "ordem": 26,
+      "evidencia": [
+        "voce domina se consegue indicar qual fonte usar para elevar a autoeficácia de um novato",
+        "voce domina se consegue diferenciar autoeficácia de capacidade real"
+      ],
+      "checagem": "O que é autoeficácia e quais são as quatro formas de aumentá-la?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Motivação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_27",
+      "nome": "Justiça organizacional",
+      "tipo": "CONCEITUAL",
+      "unidade": "Teorias motivacionais aplicadas",
+      "descricao": "Trata da percepção de justiça no modo como as decisões são tomadas e como os resultados são distribuídos. O que motiva ou desmotiva é a justiça percebida, não apenas o valor recebido.",
+      "ordem": 27,
+      "evidencia": [
+        "voce domina se consegue explicar por que duas pessoas com o mesmo salário reagem de formas diferentes",
+        "voce domina se consegue separar justiça do resultado de justiça do procedimento"
+      ],
+      "checagem": "O que a justiça organizacional mede e por que ela afeta a motivação?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Motivação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_28",
+      "nome": "Teoria da expectativa",
+      "tipo": "CONCEITUAL",
+      "unidade": "Teorias motivacionais aplicadas",
+      "descricao": "A motivação depende de três elos: esforço leva a desempenho, desempenho leva a recompensa e a recompensa vale para a pessoa (valência). A sequência é esforço, desempenho, recompensa e metas pessoais.",
+      "ordem": 28,
+      "evidencia": [
+        "voce domina se consegue apontar qual elo está rompido em um caso de desmotivação",
+        "voce domina se consegue definir valência com exemplo"
+      ],
+      "checagem": "Quais são as três relações da teoria da expectativa e o que significa valência?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Motivação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_29",
+      "nome": "Modelo de Características do Trabalho",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Aplicações organizacionais",
+      "descricao": "O MCT descreve uma função por cinco dimensões: variedade de habilidades, identidade da tarefa, significância, autonomia e feedback. Elas geram recompensas internas quando a pessoa percebe bom desempenho em tarefa significativa.",
+      "ordem": 29,
+      "evidencia": [
+        "voce domina se consegue diagnosticar um cargo pelas cinco dimensões",
+        "voce domina se consegue explicar o que é recompensa interna no modelo"
+      ],
+      "checagem": "Quais são as cinco dimensões do MCT e o que o modelo propõe sobre recompensas internas?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["reestruturação do trabalho e inovações no contexto de trabalho"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_30",
+      "nome": "Redesenho do trabalho",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Aplicações organizacionais",
+      "descricao": "Formas de redesenhar o trabalho: rodízio entre tarefas, enriquecimento (mais autonomia, responsabilidade, variedade e feedback), compartilhamento de função, trabalho remoto e horário flexível.",
+      "ordem": 30,
+      "evidencia": [
+        "voce domina se consegue diferenciar rodízio de enriquecimento",
+        "voce domina se consegue dizer o que o trabalho remoto exige para funcionar"
+      ],
+      "checagem": "Qual a diferença entre rodízio e enriquecimento do trabalho?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["reestruturação do trabalho e inovações no contexto de trabalho"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_31",
+      "nome": "Gestão participativa",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Aplicações organizacionais",
+      "descricao": "Programas de envolvimento dos trabalhadores nas decisões, por gestão participativa (decisão compartilhada com a equipe) e por participação representativa (representantes dos trabalhadores nas instâncias de decisão).",
+      "ordem": 31,
+      "evidencia": [
+        "voce domina se consegue diferenciar gestão participativa de participação representativa",
+        "voce domina se consegue relacionar participação com autonomia e engajamento"
+      ],
+      "checagem": "Quais são as duas formas de envolvimento do trabalhador citadas no material?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["gerência participativa"],
+      "fonte": "src/content/comportamento-organizacional/data.ts"
+    },
+    {
+      "id": "mt_CORG_32",
+      "nome": "Remuneração variável",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Aplicações organizacionais",
+      "descricao": "Parte da remuneração muda conforme metas, desempenho ou resultados: pagamento por produção, por mérito, bônus, remuneração por habilidades, participação nos lucros e nos resultados. Exige critérios transparentes e avaliação justa.",
+      "ordem": 32,
+      "evidencia": [
+        "voce domina se consegue escolher o tipo de recompensa adequado a uma atividade",
+        "voce domina se consegue apontar o risco do pagamento por produção sobre a qualidade"
+      ],
+      "checagem": "Qual a diferença entre pagamento por produção, por mérito e participação nos resultados?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["reestruturação do trabalho e inovações no contexto de trabalho"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_33",
+      "nome": "Benefícios flexíveis e reconhecimento",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Aplicações organizacionais",
+      "descricao": "Benefícios flexíveis deixam a pessoa escolher o que se ajusta à sua realidade (alimentação, saúde, educação, mobilidade). Reconhecimento valoriza contribuições por elogio, visibilidade, oportunidades ou prêmios simbólicos.",
+      "ordem": 33,
+      "evidencia": [
+        "voce domina se consegue explicar por que reconhecimento específico e sincero motiva",
+        "voce domina se consegue justificar benefícios flexíveis pela diversidade de necessidades"
+      ],
+      "checagem": "Por que benefícios flexíveis e reconhecimento podem motivar sem aumento de salário?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["reestruturação do trabalho e inovações no contexto de trabalho"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_34",
+      "nome": "Por que as pessoas formam grupos",
+      "tipo": "CONCEITUAL",
+      "unidade": "Comportamento de grupo",
+      "descricao": "As pessoas entram em grupos por segurança, status, autoestima, afiliação, poder e realização de metas. Esses motivos explicam por que agrupamentos se formam e se mantêm.",
+      "ordem": 34,
+      "evidencia": [
+        "voce domina se consegue identificar o motivo predominante em um caso de formação de grupo",
+        "voce domina se consegue diferenciar afiliação de status"
+      ],
+      "checagem": "Quais motivos levam pessoas a participar de grupos no trabalho?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Comportamento grupal e intergrupal"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_35",
+      "nome": "Papéis e conflito de papéis",
+      "tipo": "CONCEITUAL",
+      "unidade": "Comportamento de grupo",
+      "descricao": "Papel é o conjunto de comportamentos esperados de quem ocupa uma posição. Envolve percepção do papel e expectativas dos outros. Há conflito de papéis quando cumprir um papel dificulta cumprir outro.",
+      "ordem": 35,
+      "evidencia": [
+        "voce domina se consegue reconhecer conflito de papéis em um caso de dupla cobrança",
+        "voce domina se consegue diferenciar percepção do papel de expectativa do papel"
+      ],
+      "checagem": "Quando ocorre conflito de papéis dentro de um grupo?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Comportamento grupal e intergrupal"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_36",
+      "nome": "Normas e status do grupo",
+      "tipo": "CONCEITUAL",
+      "unidade": "Comportamento de grupo",
+      "descricao": "Normas são padrões compartilhados sobre como agir em determinadas situações. Status é a posição social percebida dentro do grupo e influencia quem fala, quem é ouvido e o que é tolerado.",
+      "ordem": 36,
+      "evidencia": [
+        "voce domina se consegue identificar uma norma informal em uma equipe",
+        "voce domina se consegue explicar como status afeta participação nas reuniões"
+      ],
+      "checagem": "O que são normas de grupo e como o status atua sobre o comportamento dos membros?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Comportamento grupal e intergrupal"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_37",
+      "nome": "Tamanho, coesividade e diversidade",
+      "tipo": "CONCEITUAL",
+      "unidade": "Comportamento de grupo",
+      "descricao": "Tamanho afeta coordenação, participação e produtividade. Coesividade é a atração entre membros e o desejo de permanecer, e cresce com tempo junto, acordo sobre metas e recompensas coletivas. Diversidade amplia perspectivas e também conflitos.",
+      "ordem": 37,
+      "evidencia": [
+        "voce domina se consegue apontar o que aumenta a coesividade de uma equipe",
+        "voce domina se consegue explicar como o líder reduz o conflito ligado à diversidade"
+      ],
+      "checagem": "O que é coesividade e o que o material recomenda quando a diversidade gera conflito?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Comportamento grupal e intergrupal"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_38",
+      "nome": "Processo de comunicação",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Comunicação",
+      "descricao": "Para haver comunicação são necessários propósito, mensagem, canal, emissor e receptor. O feedback indica se a mensagem foi compreendida e o ruído representa barreiras e distorções.",
+      "ordem": 38,
+      "evidencia": [
+        "voce domina se consegue nomear cada elemento em um episódio real de comunicação",
+        "voce domina se consegue diferenciar feedback de ruído"
+      ],
+      "checagem": "Quais elementos compõem o processo de comunicação e qual o papel do feedback e do ruído?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Comunicação interpessoal e organizacional"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_39",
+      "nome": "Direções da comunicação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Comunicação",
+      "descricao": "Descendente flui de um nível superior para um inferior (objetivos, instruções, normas), ascendente flui para um nível mais alto (feedback aos superiores) e lateral ocorre entre pessoas do mesmo grupo ou nível.",
+      "ordem": 39,
+      "evidencia": [
+        "voce domina se consegue classificar mensagens reais nas três direções",
+        "voce domina se consegue dar um exemplo de comunicação ascendente"
+      ],
+      "checagem": "O que caracteriza comunicação descendente, ascendente e lateral?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Comunicação interpessoal e organizacional"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_40",
+      "nome": "Oral, escrita e não verbal",
+      "tipo": "CONCEITUAL",
+      "unidade": "Comunicação",
+      "descricao": "A comunicação oral é rápida e permite feedback, mas admite interpretações diferentes. A escrita tende a ser mais pensada e clara, porém mais lenta. A não verbal comunica por movimentos, expressões, ênfases e distância física.",
+      "ordem": 40,
+      "evidencia": [
+        "voce domina se consegue escolher a forma adequada a uma situação de trabalho",
+        "voce domina se consegue apontar a vantagem e o risco de cada forma"
+      ],
+      "checagem": "Quando a comunicação escrita é preferível à oral, e o que a não verbal acrescenta?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Comunicação interpessoal e organizacional"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_41",
+      "nome": "Redes de comunicação e rádio corredor",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Comunicação",
+      "descricao": "As redes formais em grupos pequenos são cadeia, roda e todos os canais, com desempenho diferente em velocidade, precisão, surgimento de líder e satisfação. A rede informal é a rádio corredor, que produz rumores.",
+      "ordem": 41,
+      "evidencia": [
+        "voce domina se consegue dizer qual rede favorece surgimento de líder e qual favorece satisfação",
+        "voce domina se consegue listar as condições que fazem rumores surgirem"
+      ],
+      "checagem": "Compare cadeia, roda e todos os canais e diga como reduzir os efeitos negativos dos rumores.",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Comunicação interpessoal e organizacional"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_42",
+      "nome": "Barreiras à comunicação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Comunicação",
+      "descricao": "Prejudicam a comunicação eficaz: filtragem, percepção seletiva, sobrecarga de informação, emoções, linguagem, silêncio, apreensão da comunicação e mentira.",
+      "ordem": 42,
+      "evidencia": [
+        "voce domina se consegue nomear a barreira presente em um caso descrito",
+        "voce domina se consegue explicar por que silêncio também comunica"
+      ],
+      "checagem": "Um subordinado suaviza o relatório antes de entregar ao chefe: qual barreira é essa?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Comunicação interpessoal e organizacional"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_43",
+      "nome": "Definição de liderança",
+      "tipo": "CONCEITUAL",
+      "unidade": "Liderança",
+      "descricao": "Liderança é a capacidade de influenciar um grupo para a realização de uma visão ou conjunto de metas. Pode surgir informalmente dentro do grupo ou por indicação formal na hierarquia.",
+      "ordem": 43,
+      "evidencia": [
+        "voce domina se consegue diferenciar liderança de cargo formal",
+        "voce domina se consegue reconhecer um líder informal em uma equipe"
+      ],
+      "checagem": "O que é liderança e de que duas formas ela pode aparecer numa organização?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Liderança e confiança"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_44",
+      "nome": "Teoria dos traços",
+      "tipo": "CONCEITUAL",
+      "unidade": "Liderança",
+      "descricao": "Procura qualidades pessoais associadas à liderança e converge para os cinco grandes fatores da personalidade. Inclui a inteligência emocional, com a empatia como componente central da liderança eficaz.",
+      "ordem": 44,
+      "evidencia": [
+        "voce domina se consegue ligar traços do Big Five a tendências de liderança",
+        "voce domina se consegue explicar o limite da abordagem por traços"
+      ],
+      "checagem": "Como a teoria dos traços se apoia no Big Five e onde entra a inteligência emocional?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Liderança e confiança"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_45",
+      "nome": "Teorias comportamentais da liderança",
+      "tipo": "CONCEITUAL",
+      "unidade": "Liderança",
+      "descricao": "Em vez de perguntar quais traços o líder tem, perguntam o que ele faz. Distinguem comportamento orientado à tarefa (organizar, distribuir, cobrar) de comportamento orientado às pessoas (apoiar, ouvir, ser acessível) e assumem que podem ser aprendidos.",
+      "ordem": 45,
+      "evidencia": [
+        "voce domina se consegue classificar ações de um chefe em tarefa ou pessoas",
+        "voce domina se consegue explicar por que essas teorias abrem espaço para treinamento"
+      ],
+      "checagem": "Qual a diferença entre comportamento orientado à tarefa e às pessoas, e por que isso importa?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Liderança e confiança"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_46",
+      "nome": "Abordagem contingencial",
+      "tipo": "CONCEITUAL",
+      "unidade": "Liderança",
+      "descricao": "A eficácia da liderança depende da situação: nem todo estilo funciona igualmente bem em todo contexto. Reúne o modelo de Fiedler, a liderança situacional (adaptar ao preparo dos subordinados), a teoria caminho-meta e o modelo de participação do líder de Vroom e Yetton.",
+      "ordem": 46,
+      "evidencia": [
+        "voce domina se consegue nomear as teorias contingenciais e o que cada uma varia",
+        "voce domina se consegue explicar por que a liderança situacional muda com a maturidade da equipe"
+      ],
+      "checagem": "O que a abordagem contingencial afirma sobre estilo de liderança e situação?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Liderança e confiança"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_47",
+      "nome": "Modelo de Fiedler",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Liderança",
+      "descricao": "O desempenho eficaz do grupo depende da correspondência entre o estilo básico do líder e o controle que a situação oferece, medido por três dimensões: relação líder-membro, estrutura da tarefa e poder de posição.",
+      "ordem": 47,
+      "evidencia": [
+        "voce domina se consegue avaliar as três dimensões situacionais em um caso",
+        "voce domina se consegue dizer o que significa situação favorável ao líder"
+      ],
+      "checagem": "Quais são as três dimensões situacionais de Fiedler e o que elas medem?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Liderança e confiança"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_48",
+      "nome": "Teoria caminho-meta",
+      "tipo": "CONCEITUAL",
+      "unidade": "Liderança",
+      "descricao": "Para House, o líder esclarece o caminho até os objetivos, remove obstáculos e aumenta a motivação, ajustando o comportamento entre apoiador, diretivo, participativo e orientado para realizações.",
+      "ordem": 48,
+      "evidencia": [
+        "voce domina se consegue escolher o comportamento de liderança adequado a uma situação",
+        "voce domina se consegue diferenciar diretivo de participativo"
+      ],
+      "checagem": "Quais são os quatro comportamentos da teoria caminho-meta e o que o líder faz nela?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Liderança e confiança"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_49",
+      "nome": "Liderança carismática",
+      "tipo": "CONCEITUAL",
+      "unidade": "Liderança",
+      "descricao": "Os seguidores atribuem ao líder capacidades extraordinárias quando observam visão, disposição para correr riscos, sensibilidade ao ambiente e atenção às necessidades dos liderados. O líder declara a visão, transmite valores e desperta emoção.",
+      "ordem": 49,
+      "evidencia": [
+        "voce domina se consegue listar os componentes do carisma",
+        "voce domina se consegue explicar como o carisma influencia seguidores"
+      ],
+      "checagem": "O que os seguidores observam em um líder para atribuir-lhe carisma?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Liderança e confiança"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_50",
+      "nome": "Liderança transformacional",
+      "tipo": "CONCEITUAL",
+      "unidade": "Liderança",
+      "descricao": "Incentiva, inspira e motiva pessoas a inovar e criar mudanças que ajudam a organização a crescer e a moldar seu futuro.",
+      "ordem": 50,
+      "evidencia": [
+        "voce domina se consegue diferenciar transformacional de carismática",
+        "voce domina se consegue reconhecer prática transformacional em um caso de mudança"
+      ],
+      "checagem": "O que caracteriza a liderança transformacional?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Liderança e confiança"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_51",
+      "nome": "Liderança autêntica e confiança",
+      "tipo": "CONCEITUAL",
+      "unidade": "Liderança",
+      "descricao": "Líderes autênticos sabem quem são, conhecem seus valores e agem de modo aberto e franco, e a consequência principal é a confiança dos seguidores. Envolve agir de forma ética, usar o poder para servir e falar com honestidade.",
+      "ordem": 51,
+      "evidencia": [
+        "voce domina se consegue explicar por que a confiança é resultado, e não pré-condição, da autenticidade",
+        "voce domina se consegue dizer o que a confiança traz para o grupo"
+      ],
+      "checagem": "O que define a liderança autêntica e o que a confiança produz no grupo?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Liderança e confiança"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_52",
+      "nome": "Definição e fontes de conflito",
+      "tipo": "CONCEITUAL",
+      "unidade": "Conflito e negociação",
+      "descricao": "Conflito é o processo que começa quando uma parte percebe que outra afeta ou pode afetar negativamente algo que lhe interessa. Surge de objetivos incompatíveis, interpretações diferentes dos mesmos fatos e expectativas comportamentais frustradas.",
+      "ordem": 52,
+      "evidencia": [
+        "voce domina se consegue identificar a fonte do conflito em um caso de equipe",
+        "voce domina se consegue mostrar por que o conflito começa na percepção de uma das partes"
+      ],
+      "checagem": "Como o material define conflito e quais são as três fontes apresentadas?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Conflito e negociação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_53",
+      "nome": "Visões sobre o conflito",
+      "tipo": "CONCEITUAL",
+      "unidade": "Conflito e negociação",
+      "descricao": "A visão tradicional trata o conflito como algo negativo a evitar. A interacionista defende que algum conflito é positivo e separa funcional de disfuncional. A visão centrada na resolução aceita que o conflito é inevitável, mas alerta para seus custos.",
+      "ordem": 53,
+      "evidencia": [
+        "voce domina se consegue identificar a visão adotada por um gestor a partir da fala dele",
+        "voce domina se consegue diferenciar conflito funcional de disfuncional"
+      ],
+      "checagem": "Quais são as três visões sobre o conflito e o que cada uma sustenta?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Conflito e negociação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_54",
+      "nome": "Tipos de conflito",
+      "tipo": "CONCEITUAL",
+      "unidade": "Conflito e negociação",
+      "descricao": "Conflito de tarefa trata do conteúdo e dos objetivos do trabalho e pode ser produtivo. Conflito de relacionamento envolve atritos pessoais e costuma prejudicar. Conflito de processo trata de como fazer, quem faz o quê e como dividir recursos.",
+      "ordem": 54,
+      "evidencia": [
+        "voce domina se consegue classificar um conflito real nos três tipos",
+        "voce domina se consegue explicar por que o de tarefa pode ser útil e o de relacionamento não"
+      ],
+      "checagem": "Quais são os três tipos de conflito e qual deles tende a ser produtivo?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Conflito e negociação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_55",
+      "nome": "Processo de conflito",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Conflito e negociação",
+      "descricao": "Cinco estágios: oposição potencial (condições antecedentes como comunicação ruim, estrutura, liderança e recompensas), cognição e personalização, intenções, comportamento e resultados funcionais ou disfuncionais.",
+      "ordem": 55,
+      "evidencia": [
+        "voce domina se consegue situar um episódio de conflito no estágio correto",
+        "voce domina se consegue listar condições antecedentes do primeiro estágio"
+      ],
+      "checagem": "Quais são os cinco estágios do processo de conflito, na ordem?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Conflito e negociação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_56",
+      "nome": "Estilos de gestão de conflito",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Conflito e negociação",
+      "descricao": "Competição, colaboração, evitação, acomodação e compromisso, combinando assertividade (satisfazer o próprio interesse) e cooperação (considerar o interesse do outro). O PMBOK descreve as mesmas posturas como retirar, suavizar, ceder, forçar e colaborar.",
+      "ordem": 56,
+      "evidencia": [
+        "voce domina se consegue posicionar cada estilo nos eixos assertividade e cooperação",
+        "voce domina se consegue escolher o estilo adequado a uma emergência e a um problema trivial"
+      ],
+      "checagem": "Quais são os cinco estilos de gestão de conflito e quando cada um é indicado?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Conflito e negociação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_57",
+      "nome": "Definição de negociação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Conflito e negociação",
+      "descricao": "Negociação é um processo de comunicação interativo em que duas ou mais partes buscam acordo para alocar recursos escassos e atender a seus interesses.",
+      "ordem": 57,
+      "evidencia": [
+        "voce domina se consegue explicar por que negociação é um processo de comunicação",
+        "voce domina se consegue diferenciar negociar de impor"
+      ],
+      "checagem": "O que é negociação e qual problema ela tenta resolver?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Conflito e negociação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_58",
+      "nome": "Distributiva e integrativa",
+      "tipo": "CONCEITUAL",
+      "unidade": "Conflito e negociação",
+      "descricao": "Na distributiva as partes disputam um valor fixo, com lógica ganha-perde, foco em posições, pouca troca de informação e relação de curto prazo. Na integrativa criam valor, buscam ganhos mútuos, focam interesses, compartilham informação e preservam a relação.",
+      "ordem": 58,
+      "evidencia": [
+        "voce domina se consegue comparar as duas por meta, motivação, foco, informação e relacionamento",
+        "voce domina se consegue reconhecer qual está em jogo em uma negociação real"
+      ],
+      "checagem": "Compare negociação distributiva e integrativa em meta, foco e compartilhamento de informação.",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Conflito e negociação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_59",
+      "nome": "Processo de negociação",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Conflito e negociação",
+      "descricao": "Cinco etapas: preparação e planejamento, definição de regras básicas, esclarecimento e justificativa, barganha e resolução de problemas, encerramento e implementação.",
+      "ordem": 59,
+      "evidencia": [
+        "voce domina se consegue dizer o que fazer em cada etapa antes de sentar à mesa",
+        "voce domina se consegue explicar por que o encerramento inclui implementação"
+      ],
+      "checagem": "Quais são as cinco etapas do processo de negociação e o que se decide na segunda?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Conflito e negociação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    },
+    {
+      "id": "mt_CORG_60",
+      "nome": "Diferenças individuais na negociação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Conflito e negociação",
+      "descricao": "Traços de personalidade, humor e emoções, cultura e gênero afetam a eficácia da negociação. Pessoas mais agradáveis tendem à integrativa, a raiva endurece a distributiva e expectativas sociais podem penalizar mulheres assertivas.",
+      "ordem": 60,
+      "evidencia": [
+        "voce domina se consegue prever o efeito da raiva em cada tipo de negociação",
+        "voce domina se consegue relacionar um traço de personalidade a um estilo de negociar"
+      ],
+      "checagem": "Como personalidade, emoções e gênero influenciam a eficácia de uma negociação?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Conflito e negociação"],
+      "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
+    }
+  ],
+  "arestas": [
+    {
+      "topicoId": "mt_CORG_02",
+      "prerequisitoId": "mt_CORG_01",
+      "forca": "soft",
+      "razao": "Exigir evidência, causa e efeito e estudo sistemático só faz sentido depois de saber qual objeto o CO se propõe a explicar e prever.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_CORG_03",
+      "prerequisitoId": "mt_CORG_01",
+      "forca": "soft",
+      "razao": "As ciências de apoio são apresentadas como base de um campo já definido, então é preciso primeiro saber o que o CO investiga para ver o que cada ciência contribui.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_CORG_05",
+      "prerequisitoId": "mt_CORG_04",
+      "forca": "soft",
+      "razao": "Discriminação é o tratamento desigual das diferenças entre pessoas, então o conceito e as dimensões de diversidade dão o objeto que a discriminação atinge.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_CORG_06",
+      "prerequisitoId": "mt_CORG_04",
+      "forca": "soft",
+      "razao": "O material apresenta capacidades e habilidades como uma das dimensões da diversidade profunda, logo o par aparente e profunda vem antes.",
+      "origem": "texto",
+      "trecho": "Personalidade, valores, capacidades e habilidades: dimensões menos visíveis, mas decisivas para o trabalho conjunto."
+    },
+    {
+      "topicoId": "mt_CORG_07",
+      "prerequisitoId": "mt_CORG_01",
+      "forca": "soft",
+      "razao": "Valores entram como uma das variáveis do nível do indivíduo anunciadas na abertura do CO.",
+      "origem": "texto",
+      "trecho": "Valores, atitudes, percepção, personalidade, motivação e diferenças individuais explicam como cada pessoa interpreta e reage ao trabalho."
+    },
+    {
+      "topicoId": "mt_CORG_08",
+      "prerequisitoId": "mt_CORG_07",
+      "forca": "hard",
+      "razao": "A separação entre fim e meio é feita dentro do conceito de valor: sem conteúdo e intensidade não há como dizer que um valor serve de meio para outro.",
+      "origem": "texto",
+      "trecho": "Modos preferenciais de comportamento: meios escolhidos para alcançar os valores terminais."
+    },
+    {
+      "topicoId": "mt_CORG_09",
+      "prerequisitoId": "mt_CORG_07",
+      "forca": "soft",
+      "razao": "O material define atitude por contraste com valor e afirma que valores ajudam a compreender atitudes.",
+      "origem": "texto",
+      "trecho": "Elas não são iguais aos valores, mas estão fortemente relacionadas a eles."
+    },
+    {
+      "topicoId": "mt_CORG_10",
+      "prerequisitoId": "mt_CORG_09",
+      "forca": "hard",
+      "razao": "Satisfação, envolvimento, comprometimento e suporte percebido são atitudes específicas, então sem o conceito de atitude e seus componentes não há o que classificar.",
+      "origem": "texto",
+      "trecho": "Atitudes são afirmações avaliadoras, favoráveis ou desfavoráveis, em relação a objetos, pessoas ou eventos."
+    },
+    {
+      "topicoId": "mt_CORG_11",
+      "prerequisitoId": "mt_CORG_10",
+      "forca": "hard",
+      "razao": "Escolher entre pergunta global e soma de facetas exige antes saber o que é satisfação com o trabalho e quais elementos a compõem.",
+      "origem": "texto",
+      "trecho": "Atitude geral da pessoa em relação ao trabalho que realiza."
+    },
+    {
+      "topicoId": "mt_CORG_12",
+      "prerequisitoId": "mt_CORG_10",
+      "forca": "hard",
+      "razao": "Saída, comunicação, lealdade e negligência só se definem como reações à insatisfação, ou seja, à atitude negativa em relação ao trabalho.",
+      "origem": "texto",
+      "trecho": "Atitude geral da pessoa em relação ao trabalho que realiza."
+    },
+    {
+      "topicoId": "mt_CORG_13",
+      "prerequisitoId": "mt_CORG_10",
+      "forca": "hard",
+      "razao": "Não se discute o que eleva ou mantém a satisfação antes de ter o conceito de satisfação com o trabalho.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_CORG_14",
+      "prerequisitoId": "mt_CORG_01",
+      "forca": "soft",
+      "razao": "A percepção é uma das variáveis do nível do indivíduo listadas na abertura do CO.",
+      "origem": "texto",
+      "trecho": "Valores, atitudes, percepção, personalidade, motivação e diferenças individuais explicam como cada pessoa interpreta e reage ao trabalho."
+    },
+    {
+      "topicoId": "mt_CORG_15",
+      "prerequisitoId": "mt_CORG_14",
+      "forca": "hard",
+      "razao": "Os três fatores explicam por que o mesmo estímulo é interpretado de formas diferentes, o que exige antes o processo de organizar e interpretar impressões.",
+      "origem": "texto",
+      "trecho": "Percepção é o processo pelo qual os indivíduos organizam e interpretam suas impressões sensoriais para dar significado ao ambiente."
+    },
+    {
+      "topicoId": "mt_CORG_16",
+      "prerequisitoId": "mt_CORG_14",
+      "forca": "hard",
+      "razao": "A atribuição é apresentada como um caso do julgamento perceptivo de pessoas, então depende do conceito de percepção.",
+      "origem": "texto",
+      "trecho": "A teoria tenta explicar como julgamos pessoas de formas diferentes, atribuindo causas internas ou externas a um comportamento."
+    },
+    {
+      "topicoId": "mt_CORG_17",
+      "prerequisitoId": "mt_CORG_14",
+      "forca": "hard",
+      "razao": "Os atalhos são distorções do processo de organizar e interpretar impressões, logo não se entendem sem esse processo.",
+      "origem": "texto",
+      "trecho": "Percepção é o processo pelo qual os indivíduos organizam e interpretam suas impressões sensoriais para dar significado ao ambiente."
+    },
+    {
+      "topicoId": "mt_CORG_18",
+      "prerequisitoId": "mt_CORG_04",
+      "forca": "soft",
+      "razao": "O Big Five detalha a personalidade, que o material já apontou como dimensão da diversidade profunda.",
+      "origem": "texto",
+      "trecho": "Personalidade, valores, capacidades e habilidades: dimensões menos visíveis, mas decisivas para o trabalho conjunto."
+    },
+    {
+      "topicoId": "mt_CORG_19",
+      "prerequisitoId": "mt_CORG_01",
+      "forca": "soft",
+      "razao": "A motivação é uma das variáveis do nível do indivíduo anunciadas na abertura do CO.",
+      "origem": "texto",
+      "trecho": "Valores, atitudes, percepção, personalidade, motivação e diferenças individuais explicam como cada pessoa interpreta e reage ao trabalho."
+    },
+    {
+      "topicoId": "mt_CORG_19",
+      "prerequisitoId": "mt_CORG_07",
+      "forca": "soft",
+      "razao": "O material coloca os valores como chave para compreender a motivação, porque é o valor que dá direção ao esforço.",
+      "origem": "texto",
+      "trecho": "No CO, valores são importantes porque ajudam a compreender atitudes, motivação e percepção."
+    },
+    {
+      "topicoId": "mt_CORG_19",
+      "prerequisitoId": "mt_CORG_06",
+      "forca": "soft",
+      "razao": "O limite da motivação é explicado pelo fato de o desempenho depender também de habilidades, o que exige o conceito de capacidade.",
+      "origem": "texto",
+      "trecho": "O desempenho também depende de habilidades, oportunidades e condições adequadas."
+    },
+    {
+      "topicoId": "mt_CORG_20",
+      "prerequisitoId": "mt_CORG_19",
+      "forca": "hard",
+      "razao": "A hierarquia de necessidades explica a direção e a persistência do esforço, conceitos que só existem depois da definição de motivação.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_CORG_21",
+      "prerequisitoId": "mt_CORG_19",
+      "forca": "hard",
+      "razao": "X e Y são pressupostos sobre o que move o esforço das pessoas, logo exigem antes saber o que é motivação.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_CORG_22",
+      "prerequisitoId": "mt_CORG_19",
+      "forca": "hard",
+      "razao": "A separação entre fatores que motivam e fatores que só evitam desconforto é uma explicação da intensidade do esforço, que vem da definição de motivação.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_CORG_22",
+      "prerequisitoId": "mt_CORG_10",
+      "forca": "soft",
+      "razao": "Herzberg é enunciado sobre a distinção entre insatisfação e satisfação, que já foi trabalhada como atitude no trabalho.",
+      "origem": "texto",
+      "trecho": "Fatores higiênicos evitam insatisfação; fatores motivacionais, como reconhecimento e realização, elevam satisfação."
+    },
+    {
+      "topicoId": "mt_CORG_23",
+      "prerequisitoId": "mt_CORG_19",
+      "forca": "hard",
+      "razao": "A autodeterminação explica a queda da motivação intrínseca, o que exige antes o conceito de motivação e seus três elementos.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_CORG_24",
+      "prerequisitoId": "mt_CORG_10",
+      "forca": "hard",
+      "razao": "O material define engajamento a partir de envolvimento e satisfação, atitudes apresentadas antes.",
+      "origem": "texto",
+      "trecho": "Envolvimento, satisfação e entusiasmo com o trabalho realizado."
+    },
+    {
+      "topicoId": "mt_CORG_24",
+      "prerequisitoId": "mt_CORG_19",
+      "forca": "soft",
+      "razao": "O engajamento é tratado dentro da motivação como investimento de energia no desempenho, ligado a intensidade e persistência do esforço.",
+      "origem": "texto",
+      "trecho": "Engajamento é o investimento de energias física, cognitiva e emocional no desempenho. Pessoas engajadas sentem propósito e vão além do esperado."
+    },
+    {
+      "topicoId": "mt_CORG_25",
+      "prerequisitoId": "mt_CORG_19",
+      "forca": "hard",
+      "razao": "A definição de metas é listada como uma das teorias de motivação e explica direção e persistência do esforço.",
+      "origem": "texto",
+      "trecho": "autodeterminação, engajamento, definição de metas, autoeficácia, justiça/equidade e expectativa"
+    },
+    {
+      "topicoId": "mt_CORG_26",
+      "prerequisitoId": "mt_CORG_25",
+      "forca": "soft",
+      "razao": "O material apresenta a autoeficácia acoplada à meta específica e difícil, mostrando o efeito conjunto das duas.",
+      "origem": "texto",
+      "trecho": "Quando o gestor estabelece uma meta específica e difícil, a pessoa com alta autoeficácia tende a estabelecer metas pessoais mais altas, persistir mais e alcançar melhor desempenho."
+    },
+    {
+      "topicoId": "mt_CORG_27",
+      "prerequisitoId": "mt_CORG_14",
+      "forca": "soft",
+      "razao": "A justiça organizacional é definida como percepção sobre decisões e distribuição, logo depende do processo perceptivo.",
+      "origem": "texto",
+      "trecho": "Percepção de justiça no modo como decisões são tomadas e resultados são distribuídos."
+    },
+    {
+      "topicoId": "mt_CORG_28",
+      "prerequisitoId": "mt_CORG_19",
+      "forca": "hard",
+      "razao": "A teoria explica de que a motivação depende, então parte da definição de motivação.",
+      "origem": "texto",
+      "trecho": "A motivação depende da expectativa de desempenho, da relação desempenho-recompensa e do valor da recompensa."
+    },
+    {
+      "topicoId": "mt_CORG_29",
+      "prerequisitoId": "mt_CORG_19",
+      "forca": "soft",
+      "razao": "O material apresenta o desenho do trabalho como tradução dos conceitos de motivação em prática organizacional.",
+      "origem": "texto",
+      "trecho": "Transformando conceitos de motivação em desenho do trabalho, participação e recompensas"
+    },
+    {
+      "topicoId": "mt_CORG_30",
+      "prerequisitoId": "mt_CORG_29",
+      "forca": "hard",
+      "razao": "O redesenho age exatamente sobre as dimensões do MCT (autonomia, variedade, responsabilidade e feedback), então sem o modelo não se sabe o que está sendo alterado.",
+      "origem": "texto",
+      "trecho": "Aumenta autonomia, responsabilidade, variedade e feedback. Em vez de apenas trocar tarefas, torna o cargo mais significativo."
+    },
+    {
+      "topicoId": "mt_CORG_31",
+      "prerequisitoId": "mt_CORG_19",
+      "forca": "soft",
+      "razao": "A participação é apresentada como uma das aplicações da motivação no contexto de trabalho.",
+      "origem": "texto",
+      "trecho": "Transformando conceitos de motivação em desenho do trabalho, participação e recompensas"
+    },
+    {
+      "topicoId": "mt_CORG_32",
+      "prerequisitoId": "mt_CORG_28",
+      "forca": "soft",
+      "razao": "Os programas de remuneração variável operacionalizam o elo desempenho-recompensa e o valor da recompensa descritos pela expectativa.",
+      "origem": "texto",
+      "trecho": "A teoria funciona melhor quando a organização recompensa desempenho de forma clara, cumpre o que promete e oferece recompensas que as pessoas realmente valorizam."
+    },
+    {
+      "topicoId": "mt_CORG_32",
+      "prerequisitoId": "mt_CORG_27",
+      "forca": "soft",
+      "razao": "O material condiciona o pagamento por mérito à avaliação percebida como justa, tema da justiça organizacional.",
+      "origem": "texto",
+      "trecho": "Aumentos ou recompensas ligados à avaliação de desempenho individual. Depende de avaliação justa, critérios claros e feedback consistente."
+    },
+    {
+      "topicoId": "mt_CORG_33",
+      "prerequisitoId": "mt_CORG_22",
+      "forca": "soft",
+      "razao": "O reconhecimento é tratado por Herzberg como fator motivacional que eleva satisfação, o que explica por que ele motiva sem mexer no salário.",
+      "origem": "texto",
+      "trecho": "Fatores higiênicos evitam insatisfação; fatores motivacionais, como reconhecimento e realização, elevam satisfação."
+    },
+    {
+      "topicoId": "mt_CORG_34",
+      "prerequisitoId": "mt_CORG_01",
+      "forca": "soft",
+      "razao": "O grupo é o segundo nível de análise anunciado na definição do CO, com suas propriedades já nomeadas.",
+      "origem": "texto",
+      "trecho": "Papéis, normas, status, coesividade, diversidade e comunicação moldam a forma como pessoas trabalham em conjunto."
+    },
+    {
+      "topicoId": "mt_CORG_35",
+      "prerequisitoId": "mt_CORG_34",
+      "forca": "soft",
+      "razao": "Papel e conflito de papéis são propriedades de um grupo já constituído, então ajuda saber antes por que grupos se formam e se mantêm.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_CORG_36",
+      "prerequisitoId": "mt_CORG_34",
+      "forca": "soft",
+      "razao": "O status como propriedade do grupo retoma o status que já aparecia como motivo para entrar em um grupo.",
+      "origem": "texto",
+      "trecho": "Obter reconhecimento e posição social dentro de um coletivo."
+    },
+    {
+      "topicoId": "mt_CORG_37",
+      "prerequisitoId": "mt_CORG_34",
+      "forca": "soft",
+      "razao": "Coesividade é definida como atração entre membros e desejo de permanecer, o que retoma afiliação e autoestima como motivos de entrada no grupo.",
+      "origem": "texto",
+      "trecho": "Sentir pertencimento e interagir com os demais."
+    },
+    {
+      "topicoId": "mt_CORG_37",
+      "prerequisitoId": "mt_CORG_04",
+      "forca": "soft",
+      "razao": "A diversidade como propriedade do grupo aplica as dimensões aparente e profunda já estudadas.",
+      "origem": "texto",
+      "trecho": "Grau de semelhança e diferença entre os membros; pode ampliar aprendizagem e conflito."
+    },
+    {
+      "topicoId": "mt_CORG_38",
+      "prerequisitoId": "mt_CORG_34",
+      "forca": "soft",
+      "razao": "O material trata a comunicação como uma das propriedades que moldam o trabalho em grupo, logo o grupo dá o contexto do processo comunicativo.",
+      "origem": "texto",
+      "trecho": "Papéis, normas, status, coesividade, diversidade e comunicação moldam a forma como pessoas trabalham em conjunto."
+    },
+    {
+      "topicoId": "mt_CORG_39",
+      "prerequisitoId": "mt_CORG_38",
+      "forca": "soft",
+      "razao": "As direções dizem entre quais níveis estão emissor e receptor, elementos definidos no processo de comunicação.",
+      "origem": "texto",
+      "trecho": "Para ocorrer comunicação, é preciso existir um propósito, uma mensagem, um canal, um emissor e um receptor."
+    },
+    {
+      "topicoId": "mt_CORG_40",
+      "prerequisitoId": "mt_CORG_38",
+      "forca": "soft",
+      "razao": "Oral, escrita e não verbal são escolhas de canal e de mensagem dentro do processo de comunicação.",
+      "origem": "texto",
+      "trecho": "Para ocorrer comunicação, é preciso existir um propósito, uma mensagem, um canal, um emissor e um receptor."
+    },
+    {
+      "topicoId": "mt_CORG_41",
+      "prerequisitoId": "mt_CORG_38",
+      "forca": "soft",
+      "razao": "As redes descrevem por onde a mensagem circula entre emissores e receptores, o que exige antes os elementos do processo de comunicação.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_CORG_42",
+      "prerequisitoId": "mt_CORG_38",
+      "forca": "hard",
+      "razao": "Barreira é o ruído do processo: sem mensagem, canal e ruído não há o que ser filtrado, sobrecarregado ou distorcido.",
+      "origem": "texto",
+      "trecho": "O feedback indica se a mensagem foi compreendida; o ruído representa barreiras e distorções."
+    },
+    {
+      "topicoId": "mt_CORG_42",
+      "prerequisitoId": "mt_CORG_17",
+      "forca": "soft",
+      "razao": "A percepção seletiva reaparece como barreira de comunicação e é o mesmo atalho de julgamento visto em percepção.",
+      "origem": "texto",
+      "trecho": "As pessoas tendem a ouvir e interpretar mensagens conforme interesses, experiências e expectativas anteriores."
+    },
+    {
+      "topicoId": "mt_CORG_43",
+      "prerequisitoId": "mt_CORG_34",
+      "forca": "soft",
+      "razao": "A definição de liderança é sobre influenciar um grupo, então exige a noção de grupo de trabalho.",
+      "origem": "texto",
+      "trecho": "Liderança é a capacidade de influenciar um grupo para a realização de uma visão ou conjunto de metas."
+    },
+    {
+      "topicoId": "mt_CORG_44",
+      "prerequisitoId": "mt_CORG_18",
+      "forca": "hard",
+      "razao": "A teoria dos traços é apresentada convergindo para os cinco grandes fatores, então sem o Big Five não há como ler a teoria.",
+      "origem": "texto",
+      "trecho": "Os estudos chegaram a muitos traços, mas a convergência mais consistente se aproxima dos cinco grandes fatores da personalidade."
+    },
+    {
+      "topicoId": "mt_CORG_44",
+      "prerequisitoId": "mt_CORG_43",
+      "forca": "hard",
+      "razao": "A teoria busca quais qualidades pessoais estão associadas à liderança, logo precisa antes do que é liderança.",
+      "origem": "texto",
+      "trecho": "Procura identificar qualidades pessoais associadas à liderança."
+    },
+    {
+      "topicoId": "mt_CORG_45",
+      "prerequisitoId": "mt_CORG_44",
+      "forca": "soft",
+      "razao": "As teorias comportamentais são definidas por contraste com a pergunta dos traços, então o contraste exige conhecer a teoria dos traços.",
+      "origem": "texto",
+      "trecho": "Em vez de perguntar apenas quais traços o líder possui, essas teorias perguntam o que a pessoa faz quando lidera."
+    },
+    {
+      "topicoId": "mt_CORG_46",
+      "prerequisitoId": "mt_CORG_45",
+      "forca": "hard",
+      "razao": "A contingência combina o estilo básico do líder, que vem das teorias comportamentais, com o controle que a situação oferece.",
+      "origem": "texto",
+      "trecho": "A eficácia depende do encaixe entre o estilo básico do líder e o grau de controle que a situação oferece. Nem todo estilo funciona igualmente bem em toda situação."
+    },
+    {
+      "topicoId": "mt_CORG_47",
+      "prerequisitoId": "mt_CORG_46",
+      "forca": "hard",
+      "razao": "Fiedler é o modelo que operacionaliza a ideia contingencial em três dimensões situacionais, então depende da própria ideia de contingência.",
+      "origem": "texto",
+      "trecho": "O desempenho eficaz do grupo depende da correspondência entre o estilo básico do líder e o controle que a situação oferece."
+    },
+    {
+      "topicoId": "mt_CORG_48",
+      "prerequisitoId": "mt_CORG_46",
+      "forca": "hard",
+      "razao": "Caminho-meta é uma das teorias contingenciais apresentadas e ajusta o comportamento do líder ao que a situação exige.",
+      "origem": "texto",
+      "trecho": "Robert House defende que o líder deve esclarecer o caminho até os objetivos, reduzir obstáculos e aumentar a motivação para metas individuais e organizacionais."
+    },
+    {
+      "topicoId": "mt_CORG_48",
+      "prerequisitoId": "mt_CORG_19",
+      "forca": "soft",
+      "razao": "A teoria diz que o líder aumenta a motivação para metas, o que exige antes o conceito de motivação e sua direção.",
+      "origem": "texto",
+      "trecho": "o líder deve esclarecer o caminho até os objetivos, reduzir obstáculos e aumentar a motivação para metas individuais e organizacionais"
+    },
+    {
+      "topicoId": "mt_CORG_49",
+      "prerequisitoId": "mt_CORG_43",
+      "forca": "hard",
+      "razao": "O carisma é descrito pela visão e pela influência sobre os seguidores, exatamente os termos da definição de liderança.",
+      "origem": "texto",
+      "trecho": "Os seguidores atribuem ao líder capacidades heroicas ou extraordinárias quando observam visão, disposição para correr riscos, sensibilidade ao ambiente e atenção às necessidades dos liderados."
+    },
+    {
+      "topicoId": "mt_CORG_50",
+      "prerequisitoId": "mt_CORG_49",
+      "forca": "soft",
+      "razao": "O material apresenta a transformacional no mesmo bloco do carisma, e inspirar mudança pela visão só se distingue do carisma quando o carisma já foi estudado.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_CORG_51",
+      "prerequisitoId": "mt_CORG_07",
+      "forca": "soft",
+      "razao": "A autenticidade é definida por conhecer os próprios valores e agir de acordo com eles, o que exige o conceito de valor.",
+      "origem": "texto",
+      "trecho": "Líderes autênticos sabem quem são, conhecem seus valores e agem de modo aberto e franco. A principal consequência é a confiança dos seguidores."
+    },
+    {
+      "topicoId": "mt_CORG_52",
+      "prerequisitoId": "mt_CORG_14",
+      "forca": "soft",
+      "razao": "O conflito é definido a partir do momento em que uma parte percebe a ameaça, então a percepção sustenta a definição.",
+      "origem": "texto",
+      "trecho": "Conflito é um processo que começa quando uma parte percebe que outra parte tem ou está prestes a afetar negativamente algo que interessa à primeira."
+    },
+    {
+      "topicoId": "mt_CORG_53",
+      "prerequisitoId": "mt_CORG_52",
+      "forca": "hard",
+      "razao": "As visões discutem se o conflito é negativo, positivo ou inevitável, o que só faz sentido depois do conceito de conflito.",
+      "origem": "texto",
+      "trecho": "Defende que algum nível de conflito pode ser positivo, pois grupos excessivamente harmoniosos podem se tornar apáticos. Diferencia conflito funcional e disfuncional."
+    },
+    {
+      "topicoId": "mt_CORG_54",
+      "prerequisitoId": "mt_CORG_52",
+      "forca": "hard",
+      "razao": "Separar conflito de tarefa, de relacionamento e de processo pressupõe o conceito de conflito e o que o origina.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_CORG_55",
+      "prerequisitoId": "mt_CORG_52",
+      "forca": "hard",
+      "razao": "O primeiro estágio do processo é justamente o conjunto de condições antecedentes que geram o conflito, já apresentadas como fontes.",
+      "origem": "texto",
+      "trecho": "Condições antecedentes criam possibilidade de conflito: comunicação ruim, estrutura do grupo, especialização, estilos de liderança, recompensas e variáveis pessoais."
+    },
+    {
+      "topicoId": "mt_CORG_55",
+      "prerequisitoId": "mt_CORG_42",
+      "forca": "soft",
+      "razao": "A comunicação ruim é listada entre as condições antecedentes do conflito, então as barreiras da comunicação alimentam o primeiro estágio.",
+      "origem": "texto",
+      "trecho": "Condições antecedentes criam possibilidade de conflito: comunicação ruim, estrutura do grupo, especialização, estilos de liderança, recompensas e variáveis pessoais."
+    },
+    {
+      "topicoId": "mt_CORG_56",
+      "prerequisitoId": "mt_CORG_55",
+      "forca": "hard",
+      "razao": "Os cinco estilos são o estágio de intenções do processo de conflito, então dependem do processo para fazer sentido.",
+      "origem": "texto",
+      "trecho": "As partes escolhem uma postura: competir, colaborar, evitar, acomodar ou buscar compromisso."
+    },
+    {
+      "topicoId": "mt_CORG_57",
+      "prerequisitoId": "mt_CORG_38",
+      "forca": "hard",
+      "razao": "A negociação é definida como processo de comunicação interativo, logo exige emissor, mensagem, canal, receptor e feedback.",
+      "origem": "texto",
+      "trecho": "Negociação é um processo de comunicação interativo em que duas ou mais partes buscam acordo para alocar recursos escassos e atender a seus interesses."
+    },
+    {
+      "topicoId": "mt_CORG_58",
+      "prerequisitoId": "mt_CORG_57",
+      "forca": "hard",
+      "razao": "Distributiva e integrativa são as duas lógicas possíveis de uma negociação, então exigem antes o conceito de negociação.",
+      "origem": "texto",
+      "trecho": "As partes competem pela distribuição de um valor fixo. A lógica é ganha-perde: um lado obtém mais vantagem à custa do outro."
+    },
+    {
+      "topicoId": "mt_CORG_58",
+      "prerequisitoId": "mt_CORG_56",
+      "forca": "soft",
+      "razao": "A oposição entre competir e colaborar dos estilos de conflito é a mesma lógica ganha-perde e ganhos mútuos das duas negociações.",
+      "origem": "texto",
+      "trecho": "Os estilos combinam dois eixos: assertividade, que é o quanto a parte busca satisfazer seus próprios interesses, e cooperação, que é o quanto considera os interesses da outra parte."
+    },
+    {
+      "topicoId": "mt_CORG_59",
+      "prerequisitoId": "mt_CORG_57",
+      "forca": "hard",
+      "razao": "As cinco etapas descrevem como conduzir uma negociação, o que exige antes saber o que é negociar.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_CORG_59",
+      "prerequisitoId": "mt_CORG_52",
+      "forca": "soft",
+      "razao": "A etapa de preparação começa por entender a natureza do conflito e os interesses envolvidos.",
+      "origem": "texto",
+      "trecho": "Entender a natureza do conflito, histórico, envolvidos, percepções, interesses, limites e objetivos antes da conversa."
+    },
+    {
+      "topicoId": "mt_CORG_60",
+      "prerequisitoId": "mt_CORG_58",
+      "forca": "hard",
+      "razao": "As diferenças individuais são descritas pelo efeito que produzem em cada tipo de negociação, então exigem a distinção distributiva e integrativa.",
+      "origem": "texto",
+      "trecho": "Na distributiva, raiva pode aumentar dureza. Na integrativa, emoções positivas tendem a melhorar cooperação e resultados."
+    },
+    {
+      "topicoId": "mt_CORG_60",
+      "prerequisitoId": "mt_CORG_18",
+      "forca": "soft",
+      "razao": "O material liga o traço de amabilidade, que é a socialização do Big Five, ao estilo de negociação preferido.",
+      "origem": "texto",
+      "trecho": "Pessoas mais agradáveis tendem a se aproximar da negociação integrativa, enquanto perfis mais duros podem favorecer táticas distributivas."
+    }
+  ]
+}

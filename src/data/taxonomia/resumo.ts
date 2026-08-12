@@ -66,7 +66,7 @@ export const resumoPorDisciplina: Record<string, ResumoDisciplina> = {
   },
   MKCE: {
     conceitos: 42,
-    dependenciasInternas: 45,
+    dependenciasInternas: 46,
     dependenciasDeFora: 3,
     conceitoMaisCentral: "Definição de marketing",
   },

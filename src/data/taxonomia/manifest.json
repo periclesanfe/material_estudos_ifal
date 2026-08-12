@@ -1,7 +1,7 @@
 {
   "dataset": "Taxonomia de Aprendizagem — BSI/IFAL",
   "versao": "v0.1-rascunho",
-  "geradoEm": "2026-08-12T11:00:00-03:00",
+  "geradoEm": null,
   "contagens": {
     "topicos": 462,
     "topicosPorDisciplina": {
@@ -16,30 +16,30 @@
       "TABD": 45
     },
     "topicosPorTipo": {
-      "CONCEITUAL": 234,
-      "REPRESENTACIONAL": 39,
-      "PROCEDIMENTAL": 124,
+      "CONCEITUAL": 231,
+      "REPRESENTACIONAL": 41,
+      "PROCEDIMENTAL": 125,
       "LINGUAGEM": 50,
       "META": 15
     },
-    "dependencias": 640,
-    "dependenciasDuras": 392,
+    "dependencias": 641,
+    "dependenciasDuras": 390,
     "dependenciasCruzadas": 35,
     "disciplinas": 9,
-    "disciplinasNaGrade": 64
+    "disciplinasNaGrade": 68
   },
   "arquivos": {
     "topicos.json": {
-      "bytes": 472648,
-      "sha256": "f27b5edfc7d8534b8a8d3b8a93225457cfc299c7ba5d8327b4bb058f3e1454a6"
+      "bytes": 472607,
+      "sha256": "0794b07473ed73f95a3daeec5eba13d5d7541d4ca21008192a605d3d28643fd4"
     },
     "dependencias.json": {
-      "bytes": 266559,
-      "sha256": "72e5c2774c718cab06cf356b456a5e4f26a84b3180130c6a42e58fda3a649ac9"
+      "bytes": 267054,
+      "sha256": "0355f73507aae6ea3ab07fdb84ace54d1742ee6e1246b701029495e42ee9b065"
     },
     "disciplinas.json": {
-      "bytes": 8284,
-      "sha256": "bd87b202bbd098b5fb8e95a69cd620573b6c05a2694ebf5004f575276c05d3bb"
+      "bytes": 8264,
+      "sha256": "2600298955262365063e962c2b610b28d51c221b37a858a54378adcfb9a901b5"
     }
   },
   "excluido": [

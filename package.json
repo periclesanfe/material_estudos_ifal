@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "taxonomia:montar": "node scripts/taxonomia/montar.mjs",
     "taxonomia:validar": "node scripts/taxonomia/validar.mjs"
   },
   "dependencies": {
