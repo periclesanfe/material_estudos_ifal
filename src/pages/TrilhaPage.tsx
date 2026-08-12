@@ -10,7 +10,6 @@ import {
   getTrilha,
   topicos,
 } from '../data/taxonomia';
-import subjects from '../data/curriculum';
 import type { EixoVertical } from '../lib/grafoTrilha';
 
 const EIXOS: { valor: EixoVertical; rotulo: string; explica: string }[] = [
@@ -96,7 +95,10 @@ export default function TrilhaPage() {
   const prerequisitos = topico ? getPrerequisitos(topico.id) : [];
   const desbloqueados = topico ? contaDesbloqueados(topico.id) : 0;
   const disciplinaDoTopico = topico ? disciplinasTaxonomia.find(d => d.codigo === topico.disciplina) : undefined;
-  const materia = topico ? subjects.find(s => s.code === topico.disciplina) : undefined;
+  // resolvido pelo slug que o próprio dataset carrega, e não por busca em
+  // curriculum.ts pelo código: PINT está duplicado lá (Projeto Integrador e
+  // Propriedade Intelectual), e Array.find devolveria sempre a primeira
+  const slugDaMateria = disciplinaDoTopico?.slug ?? null;
 
   return (
     <div className="mx-auto w-full max-w-[1600px] px-4 py-8 sm:px-6 lg:px-10">
@@ -364,9 +366,9 @@ export default function TrilhaPage() {
                 <footer className="flex flex-col gap-2 border-t border-border/60 pt-3 font-mono text-[9.5px] leading-relaxed text-text-muted">
                   {topico.ementaPPC.length > 0 && <p>Ementa do PPC: {topico.ementaPPC.join(' · ')}</p>}
                   {topico.avaliacoes.length > 0 && <p>Cobrado em: {topico.avaliacoes.join(', ')}</p>}
-                  {materia?.hasContent && materia.slug && (
-                    <Link to={`/materia/${materia.slug}`} className="text-accent hover:underline">
-                      abrir o conteúdo de {materia.name}
+                  {slugDaMateria && (
+                    <Link to={`/materia/${slugDaMateria}`} className="text-accent hover:underline">
+                      abrir o conteúdo de {disciplinaDoTopico?.nome}
                     </Link>
                   )}
                 </footer>

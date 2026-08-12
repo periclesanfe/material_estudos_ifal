@@ -117,16 +117,22 @@ for (const f of ['topicos.json', 'dependencias.json', 'disciplinas.json']) {
 "
 ```
 
-### 6. Validar
+### 6. Regerar o resumo
+`src/data/taxonomia/resumo.ts` diz "GERADO, não editar à mão", e é ele (não o dataset) que a
+página da matéria consome, para não arrastar meio megabyte de JSON para o bundle principal.
+Matéria nova sem entrada no resumo simplesmente não mostra o atalho para a trilha, e nada avisa:
+o validador não olha esse arquivo.
+
+### 7. Validar
 ```bash
-npm run taxonomia:validar   # exige: código 0
+npm run taxonomia:validar   # precisa sair com código 0
 npx tsc -b && npm run build
 ```
 
 Aviso não bloqueia, mas leia: tópico sem nenhuma aresta quase sempre é aresta esquecida, não
 conceito isolado de verdade.
 
-### 7. Registrar
+### 8. Registrar
 1. Em `src/data/taxonomia/disciplinas.json` → a disciplina, com `codigo`, `codigoPPC`, `nome`,
    `periodo`, `eixo`, `slug`, `cor`, `ementa` e `unidadesEmenta`.
 2. Em `src/data/contribuicoes.json` → a entrega, com `tipo: "dados"`, refletida em
@@ -151,10 +157,12 @@ conceito isolado de verdade.
 - [ ] `hard` e `soft` revisados um por um, não todos `hard` por comodidade
 - [ ] `centralidade` recalculada para o dataset inteiro
 - [ ] `manifest.json` com contagens, bytes e sha256 atualizados
+- [ ] `resumo.ts` regerado, com a matéria nova presente
 - [ ] `npm run taxonomia:validar` sem erro, avisos lidos e justificados
 - [ ] `npx tsc -b` e `npm run build` passam
 
 ## Referência
 - `src/data/taxonomia/README.md`: formato dos arquivos e procedência do dado
 - `.docs/TAXONOMIA.md`: arquitetura, invariantes e consumo pelo app
-- `ESTD` (Estrutura de Dados) como matéria modelo: é a mais densa em arestas com citação
+- `ESTD` (Estrutura de Dados) como matéria modelo: é a mais densa do dataset, com 112
+  dependências, 110 delas com citação
