@@ -285,16 +285,31 @@ export default function TrilhaPage() {
                     <h3 className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted">
                       Por que depende
                     </h3>
-                    <ul className="flex flex-col gap-2">
+                    <ul className="flex flex-col gap-3">
                       {prerequisitos.map(d => {
                         const pai = getTopico(d.prerequisitoId);
                         return (
                           <li key={`${d.topicoId}-${d.prerequisitoId}`} className="text-xs leading-relaxed">
-                            <span className="text-text">{pai?.nome ?? d.prerequisitoId}</span>
-                            <span className="text-text-muted">: {d.razao}</span>
-                            <span className="ml-1 font-mono text-[9px] uppercase text-text-muted/70">
-                              [{d.forca} · {d.origem}]
-                            </span>
+                            <p>
+                              <button
+                                type="button"
+                                onClick={() => aoSelecionar(d.prerequisitoId)}
+                                className="text-left font-semibold text-text hover:underline"
+                              >
+                                {pai?.nome ?? d.prerequisitoId}
+                              </button>
+                              <span className="ml-1 font-mono text-[9px] uppercase text-text-muted/70">
+                                {d.forca === 'hard' ? 'indispensável' : 'ajuda'}
+                              </span>
+                            </p>
+                            <p className="text-text-muted">{d.razao}</p>
+                            {/* a citação é o que separa este dataset de um palpite:
+                                mostra no material do professor onde a dependência está escrita */}
+                            {d.trecho && (
+                              <p className="mt-1 border-l border-border pl-2 text-[11px] italic leading-relaxed text-text-muted/85">
+                                “{d.trecho}”
+                              </p>
+                            )}
                           </li>
                         );
                       })}
