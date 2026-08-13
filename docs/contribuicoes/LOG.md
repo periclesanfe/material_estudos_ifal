@@ -21,6 +21,7 @@ Fonte estruturada: [`src/data/contribuicoes.json`](../../src/data/contribuicoes.
 | 2026-06-11 | Estrutura de Dados (ESTD) | conteudo_materia | isaque-braga | src/content/estrutura-dados/data.ts | Adiciona conteúdo completo com exemplos usando CodeBlock | #19 | incorporado |
 | 2026-06-17 | Processos de Desenvolvimento de Software (PDSW) | conteudo_materia | marina-medeiros | src/content/processos-desenvolvimento-software/data.ts | Responsável pelo conteúdo da matéria, por capítulos com leitor do livro base | #21 | incorporado |
 | 2026-06-21 | Administração e Projeto de Banco de Dados (APBD) | conteudo_materia | maria-luisa-alaquoke | src/content/administracao-projeto-banco-dados/data.ts | Responsável pelo conteúdo da matéria | — | incorporado |
+| 2026-08-12 | Empreendedorismo Digital (EMPD) | conteudo_materia | marina-medeiros | src/content/empreendedorismo-digital/ | Cria o conteúdo com 14 seções, avaliações por atividade e 32 questões conferidas por execução | #47 | incorporado |
 
 ## Contribuicoes Do Projeto
 

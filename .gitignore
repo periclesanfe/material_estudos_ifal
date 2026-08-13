@@ -35,6 +35,12 @@ dist-ssr
 # Materiais raspados do Google Classroom (local, nao versionado)
 .classroom/
 
+# Apostilas e material-fonte das materias — autorais e frequentemente com dado
+# pessoal do aluno (notas, retorno de entrega). Servem para escrever o conteudo,
+# nao para ser publicados. Mesma regra de .classroom/.
+Apostila_*.docx
+Apostila_*.pdf
+
 # Pareceres dos agentes criticos — artefato de processo, nao conteudo do site
 .reviews/
 

@@ -378,6 +378,35 @@
         "escrita-cientifica",
         "quiz"
       ]
+    },
+    {
+      "id": "contrib-2026-08-12-conteudo-empd",
+      "contribuinteId": "marina-medeiros",
+      "quando": {
+        "data": "2026-08-12",
+        "registradoEm": "2026-08-12T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "empreendedorismo-digital",
+        "materiaCodigo": "EMPD",
+        "arquivo": "src/content/empreendedorismo-digital/",
+        "pullRequest": "#47"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Empreendedorismo Digital, com 14 seções na sequência da jornada de uma startup e 32 questões de quiz.",
+        "detalhes": "Escrito a partir da apostila da turma de 2026.1 do Prof. Anderson Rodrigues Gomes, que sintetiza PDFs, apresentações, vídeos e instruções de atividade. As avaliações seguem as entregas nomeadas na fonte (Canvas, Customer Development, Lean e MVP, estudo de caso, financiamento e pitch) em vez de um AV1/AV2 inventado. Acrescenta o componente CriteriaMatrix no escopo da matéria, porque o ComparisonTable compartilhado é fixo em três colunas e a comparação de fontes de financiamento precisa de cinco. Toda a aritmética do quiz (CAC, LTV, LTV/CAC, payback, NRR, Rule of 40, ponto de equilíbrio e diluição) foi conferida por execução.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "empreendedorismo-digital",
+        "conteudo",
+        "quiz",
+        "unit-economics"
+      ]
     }
   ]
 }

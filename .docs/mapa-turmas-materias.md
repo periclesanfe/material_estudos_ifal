@@ -28,7 +28,7 @@ Levantado em 12/08/2026, com 25 turmas coletadas.
 | `pweb2-bsi-2024-1` | PGWB | Programação Web | 5º | 2,7 MB | — |
 | `apsi-bsi-2024-1` | APSI | Análise e Projeto de Sistemas de Informação | 5º | 118 MB | — |
 | `geren-de-projetos-2024` | GPJT | Gerência de Projeto | 5º | 29 MB | — |
-| `empreendedorismo-digital-bsi-2026-2` | EMPD | Empreendedorismo Digital | 6º | 3,1 MB | — |
+| `empreendedorismo-digital-bsi-2026-2` | EMPD | Empreendedorismo Digital | 6º | 3,1 MB | ✅ publicado |
 | `sad-2026` | SADE | Sistemas de Apoio à Decisão | 8º | 101 MB | — |
 
 ## Optativas
@@ -55,6 +55,10 @@ aparecerem, valem uma rodada de enriquecimento.
 
 - **ETSO — Ética e Sociedade** não constava na grade e foi adicionada às optativas
   humanísticas. O código `ETSO` foi criado aqui: se o PPC usar outro, ajustar.
+- **EMPD — o nome da pasta engana.** A pasta coletada é `...bsi-2026-2`, mas a turma é de
+  **2026.1**, confirmado pela mantenedora; é esse o semestre que o conteúdo credita. O material
+  da turma não chegou a ser baixado: o conteúdo foi escrito só a partir da apostila. Professor:
+  Anderson Rodrigues Gomes. Se a turma for coletada, vale uma rodada de enriquecimento.
 - **`fundamentos-de-matem-tica-i` → MTSI**: a turma tem 5 materiais, nenhuma atividade, e o
   acervo é de nivelamento (Coleção Iezzi, apoio de Fundamental/Médio, introdução ao cálculo).
   Tratada como MTSI por decisão do mantenedor. **O agente autor deve considerar a ementa do

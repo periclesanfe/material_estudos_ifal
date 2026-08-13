@@ -17,6 +17,7 @@ const contentRegistry: Record<string, ComponentType> = {
   'linguagem-programacao': lazy(() => import('../content/linguagem-programacao/LPGMContent')),
   'logica-matematica-discreta': lazy(() => import('../content/logica-matematica-discreta/LmmdContent')),
   'introducao-tecnologias-web': lazy(() => import('../content/introducao-tecnologias-web/IntwContent')),
+  'empreendedorismo-digital': lazy(() => import('../content/empreendedorismo-digital/EmpdContent')),
 };
 
 function SubjectContentFallback() {
