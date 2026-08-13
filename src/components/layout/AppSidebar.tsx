@@ -16,6 +16,11 @@ import {
   SidebarMenuSub,
 } from '../ui/sidebar';
 import { useSidebar } from '../../contexts/sidebarContext';
+import { importadoresConteudo } from '../../content/registro';
+import { usePrefetchRota } from '../../hooks/usePrefetchRota';
+
+/** Importador inerte para matéria sem conteúdo: não busca nada da rede. */
+const SEM_CONTEUDO = () => Promise.resolve({ default: () => null });
 
 function CasaIcon() {
   return (
@@ -53,13 +58,30 @@ function SetaIcon({ aberto }: { aberto: boolean }) {
   );
 }
 
-/** Item de matéria dentro de um submenu. O ponto diz se já tem conteúdo. */
+/**
+ * Item de matéria dentro de um submenu. O ponto diz se já tem conteúdo.
+ *
+ * O chunk da matéria é aquecido no hover, no foco e no toque. Sem isso o
+ * carregamento tardio só dispara no clique, e o aluno vê o estado de espera TODA
+ * vez que abre uma matéria: os chunks vão de 34 a 52 kB comprimidos, o que é
+ * sensível em rede de celular. Aquecer na intenção elimina a espera, e os 80 ms
+ * de atraso do hook separam "passei por cima" de "estou indo aqui".
+ */
 function ItemMateria({ subject, aoNavegar }: { subject: Subject; aoNavegar: () => void }) {
+  // 58 das 68 matérias ainda não têm conteúdo, e para elas o importador é
+  // undefined. O fallback resolve para um módulo vazio em vez de deixar o hook
+  // chamar undefined: hooks não podem ser condicionais, então o guarda tem que
+  // estar no valor e não na chamada. (O TS não pegou isso porque o projeto não
+  // liga noUncheckedIndexedAccess.)
+  const importador = importadoresConteudo[subject.slug] ?? SEM_CONTEUDO;
+  const prefetch = usePrefetchRota(`/materia/${subject.slug}`, importador);
+
   return (
     <SidebarMenuItem>
       <NavLink
         to={`/materia/${subject.slug}`}
         onClick={aoNavegar}
+        {...prefetch.atributos}
         className={({ isActive }) =>
           `flex items-center gap-2 rounded-md px-2 py-1.5 text-[12.5px] leading-snug transition-colors duration-150 ${
             isActive

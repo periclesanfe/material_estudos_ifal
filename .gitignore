@@ -48,6 +48,10 @@ Apostila_*.pdf
 # conteudo do site. Mesma logica de .reviews/
 .docs/duolingo/
 
+# Páginas de laboratório visual — servem para comparar protótipos durante o
+# desenvolvimento e não fazem parte do site
+src/pages/*Lab.tsx
+
 # Segredos OAuth do coletor do Classroom — NUNCA comitar
 scripts/classroom/credentials.json
 scripts/classroom/token.json
