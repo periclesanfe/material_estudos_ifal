@@ -26,7 +26,7 @@
     "dependenciasDuras": 390,
     "dependenciasCruzadas": 35,
     "disciplinas": 9,
-    "disciplinasNaGrade": 68
+    "disciplinasNaGrade": 65
   },
   "arquivos": {
     "topicos.json": {
@@ -38,8 +38,8 @@
       "sha256": "0355f73507aae6ea3ab07fdb84ace54d1742ee6e1246b701029495e42ee9b065"
     },
     "disciplinas.json": {
-      "bytes": 8264,
-      "sha256": "2600298955262365063e962c2b610b28d51c221b37a858a54378adcfb9a901b5"
+      "bytes": 8284,
+      "sha256": "232f54f1e7de2969be1b777183495c78811b74a500dcfa324ac2cfd6b3605178"
     }
   },
   "excluido": [
