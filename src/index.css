@@ -91,6 +91,19 @@
   --color-trilha-fio: #c8cbe0;
   --color-trilha-eixo: var(--text-muted);
 
+  /* Superfícies e tinta da cena da trilha. Existem separados dos tokens gerais
+     porque os painéis flutuam sobre o canvas e precisam de opacidade própria,
+     mas ACOMPANHAM o tema: a primeira versão fixou valores escuros e no tema
+     claro o texto branco desaparecia sobre o fundo claro. */
+  --trilha-painel: rgba(26, 29, 40, 0.82);
+  --trilha-tinta: #f0f0f5;
+  --trilha-tinta-forte: #ffffff;
+  --trilha-tinta-media: #c6cde0;
+  --trilha-tinta-fraca: #8b8fa3;
+  --trilha-tinta-tenue: #5a5e72;
+  --trilha-borda: rgba(255, 255, 255, 0.12);
+  --trilha-hover: rgba(255, 255, 255, 0.07);
+
   /* Paleta categórica das matérias, derivada dos swatches de acento do sistema
      canônico (índigo, esmeralda, âmbar, rosa, pink, ciano, violeta) mais três
      vizinhos, porque o grafo tem 10 matérias. */
@@ -152,6 +165,20 @@ html[data-theme='light'] {
   --shadow-lg: 0 10px 36px rgba(17, 24, 39, 0.14);
 
   --color-trilha-fio: #2b2f45;
+  --color-trilha-fundo: var(--bg-primary);
+  --color-trilha-eixo: #7a7f8c;
+
+  /* Painéis e tinta da trilha no tema claro. A ausência deste bloco era o bug de
+     contraste: sem ele os tokens caíam no valor escuro do :root e o texto branco
+     ficava invisível sobre o fundo claro. */
+  --trilha-painel: rgba(255, 254, 251, 0.9);
+  --trilha-tinta: #171a21;
+  --trilha-tinta-forte: #0d0f14;
+  --trilha-tinta-media: #3b4150;
+  --trilha-tinta-fraca: #555b6a;
+  --trilha-tinta-tenue: #7a7f8c;
+  --trilha-borda: rgba(17, 24, 39, 0.14);
+  --trilha-hover: rgba(17, 24, 39, 0.06);
 }
 
 
@@ -712,26 +739,50 @@ select option {
 
 html[data-clean-mode='true'] {
   color-scheme: light;
-  --color-bg: #f7f7f4;
-  --color-card: #ffffff;
-  --color-card-hover: #f0f0eb;
+
+  /* O modo de leitura redefine os tokens CANÔNICOS, e não os apelidos --color-*.
+     Esta é a correção de um bug real: o bloco vinha de antes da instalação do
+     Falcão System Design e sobrescrevia só os apelidos, então tudo que consome
+     var(--bg-primary) ou var(--accent-primary) direto (o fundo da barra do topo,
+     o estado ativo da sidebar, os anéis de foco) continuava com o valor ESCURO
+     enquanto o resto da página ia para o claro. O audit mostrou 21 de 21 tokens
+     canônicos ausentes aqui. Como o @theme faz os apelidos apontarem para os
+     canônicos, redefinir a base propaga para todo o resto sozinho. */
+
+  --bg-primary: #f7f7f4;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #eeeee8;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-glass: rgba(255, 255, 255, 0.78);
+
+  --text-primary: #1f2933;
+  --text-secondary: #5d6673;
+  --text-muted: #838b98;
+
+  /* O acento perde a cor de propósito: o modo existe para tirar cor da frente.
+     O grafite ainda passa contraste como cor de ação e de estado ativo. */
+  --accent-primary: #343a40;
+  --accent-secondary: #4b5563;
+  --accent-glow: rgba(52, 58, 64, 0.12);
+
+  /* Semânticos também viram grafite: no modo de leitura um alerta vermelho
+     salta e quebra a leitura, que é justamente o que o modo evita. */
+  --success: #3f3f46;
+  --warning: #6b7280;
+  --danger: #4b5563;
+  --info: #52525b;
+
+  --border-subtle: rgba(31, 41, 51, 0.08);
+  --border-default: rgba(31, 41, 51, 0.14);
+
+  --shadow-sm: 0 1px 2px rgba(31, 41, 51, 0.05);
+  --shadow-md: 0 3px 10px rgba(31, 41, 51, 0.07);
+  --shadow-lg: 0 8px 26px rgba(31, 41, 51, 0.1);
+  --shadow-glow: none;
+
+  /* Os dois apelidos que NÃO derivam da base canônica e precisam de valor próprio. */
   --color-sidebar: #ffffff;
-
-  --color-accent: #343a40;
-  --color-accent2: #4b5563;
-  --color-accent3: #52525b;
-  --color-accent4: #6b7280;
-  --color-accent5: #3f3f46;
-
-  --color-text: #1f2933;
-  --color-text-muted: #5d6673;
-
-  --color-border: #d8d8d1;
   --color-border-hover: #b9b9b0;
-
-  --color-success: #3f3f46;
-  --color-error: #4b5563;
-  --color-warning: #6b7280;
 
   /* Trilha no modo limpo: o modo existe para tirar a cor da frente, então as
      matérias passam a se distinguir por VALOR e não por matiz. Dez cinzas
@@ -740,6 +791,17 @@ html[data-clean-mode='true'] {
   --color-trilha-fundo: #f2f2ee;
   --color-trilha-fio: #2b3440;
   --color-trilha-eixo: #5d6673;
+
+  /* Painéis e tinta da trilha no modo de leitura. Mesmo motivo do tema claro:
+     sem estes tokens o texto sairia branco sobre fundo claro. */
+  --trilha-painel: rgba(255, 255, 255, 0.92);
+  --trilha-tinta: #1f2933;
+  --trilha-tinta-forte: #12181f;
+  --trilha-tinta-media: #3a434f;
+  --trilha-tinta-fraca: #5d6673;
+  --trilha-tinta-tenue: #838b98;
+  --trilha-borda: rgba(31, 41, 51, 0.16);
+  --trilha-hover: rgba(31, 41, 51, 0.06);
 
   --color-taxo-1: #1f2933;
   --color-taxo-2: #3f4652;
@@ -759,17 +821,22 @@ html[data-clean-mode='true'] body {
   letter-spacing: 0;
 }
 
-html[data-clean-mode='true'] p {
+/* As regras de prosa do modo de leitura são escopadas ao #conteudo.
+   Globais, elas vazavam para a chrome do aplicativo: o título da barra do topo é
+   um <p> com flex-1, e o max-width de 70ch impedia ele de expandir, o que puxava
+   os botões da direita para o meio da barra. Modo de LEITURA governa o texto que
+   se lê, não a interface em volta dele. */
+html[data-clean-mode='true'] #conteudo p:not([class*='trilha-']) {
   line-height: 1.85;
   margin-block: 0.2rem;
   max-width: 70ch;
   text-wrap: pretty;
 }
 
-html[data-clean-mode='true'] h1,
-html[data-clean-mode='true'] h2,
-html[data-clean-mode='true'] h3,
-html[data-clean-mode='true'] h4 {
+html[data-clean-mode='true'] #conteudo h1,
+html[data-clean-mode='true'] #conteudo h2,
+html[data-clean-mode='true'] #conteudo h3,
+html[data-clean-mode='true'] #conteudo h4 {
   letter-spacing: 0;
 }
 
@@ -844,16 +911,17 @@ html[data-clean-mode='true'] .study-pill.active {
 .trilha-cena {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 560px;
+  /* Desconta a barra do topo (3,5rem). Com 100vh cheios a cena passava da
+     viewport e a PÁGINA ganhava rolagem, então a roda do mouse mexia a tela
+     inteira em vez de dar zoom no grafo. */
+  height: calc(100vh - 3.5rem);
+  min-height: 520px;
   overflow: hidden;
+  /* impede que o gesto de rolagem escape para o documento */
+  overscroll-behavior: contain;
   background: var(--color-trilha-fundo);
-  color: #edeff7;
+  color: var(--trilha-tinta);
   user-select: none;
-}
-
-html[data-clean-mode='true'] .trilha-cena {
-  color: var(--color-text);
 }
 
 .trilha-cena canvas {
@@ -864,13 +932,31 @@ html[data-clean-mode='true'] .trilha-cena {
 /* ── bloco editorial ── */
 .trilha-editorial {
   position: absolute;
-  /* ancorado acima do centro: a legenda ocupa o canto inferior esquerdo, e
-     centrar no meio exato fazia os dois se sobreporem em tela de 900 px */
-  top: 8%;
+  top: clamp(20px, 5vh, 56px);
   left: clamp(18px, 3vw, 40px);
   z-index: 5;
-  max-width: min(470px, 38vw);
+  /* O bloco e a legenda dividem a coluna da esquerda. Limitar a altura aqui é o
+     que impede a sobreposição que acontecia em tela baixa: o texto para onde a
+     legenda começa, em vez de passar por baixo dela. */
+  max-width: min(430px, 34vw);
+  max-height: calc(100% - 26rem);
+  overflow: hidden;
   pointer-events: none;
+}
+
+/* Em tela alta há espaço para os dois; em tela baixa o bloco de estatística e o
+   parágrafo de contexto saem, porque o título e a chamada bastam para orientar. */
+@media (max-height: 820px) {
+  .trilha-stats,
+  .trilha-ctx {
+    display: none;
+  }
+}
+
+@media (max-height: 680px) {
+  .trilha-lead {
+    display: none;
+  }
 }
 
 .trilha-kicker {
@@ -879,22 +965,18 @@ html[data-clean-mode='true'] .trilha-cena {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #98a0b8;
+  color: var(--trilha-tinta-fraca);
 }
 
 .trilha-titulo {
   margin: 0 0 14px;
   font-family: var(--font-display);
-  font-size: clamp(34px, 3.6vw, 58px);
+  font-size: clamp(28px, 3vw, 46px);
   font-weight: 700;
   line-height: 1.06;
   letter-spacing: -0.01em;
   text-wrap: balance;
-  color: #fff;
-}
-
-html[data-clean-mode='true'] .trilha-titulo {
-  color: var(--color-text);
+  color: var(--trilha-tinta-forte);
 }
 
 /* o ponto final em vermelho é o único acento gráfico do bloco */
@@ -907,11 +989,7 @@ html[data-clean-mode='true'] .trilha-titulo {
   font-size: 13.5px;
   font-weight: 700;
   line-height: 1.55;
-  color: #fff;
-}
-
-html[data-clean-mode='true'] .trilha-lead {
-  color: var(--color-text);
+  color: var(--trilha-tinta-forte);
 }
 
 .trilha-stats {
@@ -919,22 +997,13 @@ html[data-clean-mode='true'] .trilha-lead {
   max-width: 46ch;
   font-size: 13.5px;
   line-height: 1.55;
-  color: #c6cde0;
+  color: var(--trilha-tinta-media);
 }
 
 .trilha-stats b {
   font-weight: 700;
-  color: #fff;
+  color: var(--trilha-tinta-forte);
   font-variant-numeric: tabular-nums;
-}
-
-html[data-clean-mode='true'] .trilha-stats,
-html[data-clean-mode='true'] .trilha-ctx {
-  color: var(--color-text-muted);
-}
-
-html[data-clean-mode='true'] .trilha-stats b {
-  color: var(--color-text);
 }
 
 .trilha-ctx {
@@ -942,7 +1011,7 @@ html[data-clean-mode='true'] .trilha-stats b {
   max-width: 44ch;
   font-size: 12.5px;
   line-height: 1.5;
-  color: #98a0b8;
+  color: var(--trilha-tinta-fraca);
 }
 
 .trilha-acoes {
@@ -958,9 +1027,9 @@ html[data-clean-mode='true'] .trilha-stats b {
 .trilha-eixo {
   display: inline-flex;
   padding: 3px;
-  border: 1px solid rgba(130, 145, 190, 0.35);
+  border: 1px solid var(--trilha-borda);
   border-radius: 999px;
-  background: rgba(20, 24, 38, 0.6);
+  background: var(--trilha-hover);
 }
 
 .trilha-eixo button {
@@ -968,7 +1037,7 @@ html[data-clean-mode='true'] .trilha-stats b {
   border: 0;
   border-radius: 999px;
   background: transparent;
-  color: #98a0b8;
+  color: var(--trilha-tinta-fraca);
   font: inherit;
   font-size: 12.5px;
   font-weight: 700;
@@ -978,18 +1047,18 @@ html[data-clean-mode='true'] .trilha-stats b {
 }
 
 .trilha-eixo button:hover {
-  color: #edeff7;
+  color: var(--trilha-tinta);
 }
 
 .trilha-eixo button.ativo {
-  background: rgba(130, 145, 190, 0.2);
-  color: #fff;
+  background: var(--trilha-hover);
+  color: var(--trilha-tinta-forte);
 }
 
 .trilha-lic-botao {
   border: 0;
   background: transparent;
-  color: #98a0b8;
+  color: var(--trilha-tinta-fraca);
   font: inherit;
   font-size: 11px;
   font-weight: 600;
@@ -999,7 +1068,7 @@ html[data-clean-mode='true'] .trilha-stats b {
 }
 
 .trilha-lic-botao:hover {
-  color: #edeff7;
+  color: var(--trilha-tinta);
   text-decoration: underline;
 }
 
@@ -1007,22 +1076,16 @@ html[data-clean-mode='true'] .trilha-stats b {
 .trilha-legenda {
   position: absolute;
   left: clamp(14px, 3vw, 30px);
-  bottom: 24px;
-  z-index: 5;
-  max-height: 34vh;
+  bottom: 20px;
+  z-index: 6;
+  max-height: min(21rem, 40vh);
   overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 12px 13px;
-  border: 1px solid rgba(130, 145, 190, 0.16);
+  border: 1px solid var(--trilha-borda);
   border-radius: 20px;
-  background: rgba(14, 17, 28, 0.78);
+  background: var(--trilha-painel);
   backdrop-filter: blur(10px);
-}
-
-html[data-clean-mode='true'] .trilha-legenda,
-html[data-clean-mode='true'] .trilha-card,
-html[data-clean-mode='true'] .trilha-balao {
-  background: color-mix(in srgb, var(--color-card) 88%, transparent);
-  border-color: var(--color-border);
 }
 
 .trilha-legenda-titulo {
@@ -1031,7 +1094,7 @@ html[data-clean-mode='true'] .trilha-balao {
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #646c84;
+  color: var(--trilha-tinta-tenue);
 }
 
 .trilha-chip {
@@ -1052,7 +1115,7 @@ html[data-clean-mode='true'] .trilha-balao {
 }
 
 .trilha-chip:hover {
-  background: rgba(130, 145, 190, 0.09);
+  background: var(--trilha-hover);
 }
 
 .trilha-chip.off {
@@ -1077,7 +1140,7 @@ html[data-clean-mode='true'] .trilha-balao {
 
 .trilha-chip .ct {
   font-size: 11.5px;
-  color: #98a0b8;
+  color: var(--trilha-tinta-fraca);
   font-variant-numeric: tabular-nums;
 }
 
@@ -1087,9 +1150,9 @@ html[data-clean-mode='true'] .trilha-balao {
   z-index: 9;
   max-width: 290px;
   padding: 12px 14px;
-  border: 1px solid rgba(130, 145, 190, 0.16);
+  border: 1px solid var(--trilha-borda);
   border-radius: 16px;
-  background: rgba(10, 13, 22, 0.95);
+  background: var(--trilha-painel);
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
   pointer-events: none;
 }
@@ -1104,7 +1167,7 @@ html[data-clean-mode='true'] .trilha-balao {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #98a0b8;
+  color: var(--trilha-tinta-fraca);
 }
 
 .trilha-balao .sw,
@@ -1127,7 +1190,7 @@ html[data-clean-mode='true'] .trilha-balao {
   margin: 0;
   font-size: 13px;
   line-height: 1.5;
-  color: #d3d9e8;
+  color: var(--trilha-tinta-media);
 }
 
 /* ── card do conceito ── */
@@ -1141,9 +1204,9 @@ html[data-clean-mode='true'] .trilha-balao {
   overflow-y: auto;
   overscroll-behavior: contain;
   padding: 16px 18px 18px;
-  border: 1px solid rgba(130, 145, 190, 0.16);
+  border: 1px solid var(--trilha-borda);
   border-radius: 20px;
-  background: rgba(14, 17, 28, 0.86);
+  background: var(--trilha-painel);
   backdrop-filter: blur(13px);
 }
 
@@ -1157,10 +1220,10 @@ html[data-clean-mode='true'] .trilha-balao {
 .trilha-card .voltar {
   height: 24px;
   padding: 0 10px;
-  border: 1px solid rgba(130, 145, 190, 0.16);
+  border: 1px solid var(--trilha-borda);
   border-radius: 7px;
   background: transparent;
-  color: #98a0b8;
+  color: var(--trilha-tinta-fraca);
   font: inherit;
   font-size: 11px;
   font-weight: 600;
@@ -1168,8 +1231,8 @@ html[data-clean-mode='true'] .trilha-balao {
 }
 
 .trilha-card .voltar:hover {
-  background: rgba(130, 145, 190, 0.12);
-  color: #edeff7;
+  background: var(--trilha-hover);
+  color: var(--trilha-tinta);
 }
 
 .trilha-card .fechar {
@@ -1180,18 +1243,18 @@ html[data-clean-mode='true'] .trilha-balao {
   place-items: center;
   width: 24px;
   height: 24px;
-  border: 1px solid rgba(130, 145, 190, 0.16);
+  border: 1px solid var(--trilha-borda);
   border-radius: 7px;
   background: transparent;
-  color: #98a0b8;
+  color: var(--trilha-tinta-fraca);
   font-size: 15px;
   line-height: 1;
   cursor: pointer;
 }
 
 .trilha-card .fechar:hover {
-  background: rgba(130, 145, 190, 0.1);
-  color: #edeff7;
+  background: var(--trilha-hover);
+  color: var(--trilha-tinta);
 }
 
 .trilha-card .titulo {
@@ -1208,7 +1271,7 @@ html[data-clean-mode='true'] .trilha-balao {
   margin: 0 0 14px;
   font-size: 13px;
   line-height: 1.5;
-  color: #d3d9e8;
+  color: var(--trilha-tinta-media);
 }
 
 .trilha-card .numero {
@@ -1229,14 +1292,14 @@ html[data-clean-mode='true'] .trilha-balao {
 .trilha-card .numero .u {
   font-size: 12.5px;
   font-weight: 600;
-  color: #98a0b8;
+  color: var(--trilha-tinta-fraca);
 }
 
 .trilha-card .sub {
   margin: 0;
   font-size: 12px;
   line-height: 1.5;
-  color: #aeb6cc;
+  color: var(--trilha-tinta-media);
 }
 
 .trilha-card .secao {
@@ -1252,11 +1315,11 @@ html[data-clean-mode='true'] .trilha-balao {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #646c84;
+  color: var(--trilha-tinta-tenue);
 }
 
 .trilha-card .rotulo .k {
-  color: #98a0b8;
+  color: var(--trilha-tinta-fraca);
   font-variant-numeric: tabular-nums;
 }
 
@@ -1285,15 +1348,15 @@ html[data-clean-mode='true'] .trilha-balao {
 }
 
 .trilha-card .linha:hover {
-  border-color: rgba(130, 145, 190, 0.16);
-  background: rgba(130, 145, 190, 0.1);
+  border-color: var(--trilha-borda);
+  background: var(--trilha-hover);
 }
 
 .trilha-card .linha .ord {
   flex: 0 0 auto;
   width: 18px;
   font-size: 10px;
-  color: #646c84;
+  color: var(--trilha-tinta-tenue);
   font-variant-numeric: tabular-nums;
   text-align: right;
   line-height: 1.5;
@@ -1324,24 +1387,24 @@ html[data-clean-mode='true'] .trilha-balao {
   margin-top: 3px;
   font-size: 11.5px;
   line-height: 1.45;
-  color: #aeb6cc;
+  color: var(--trilha-tinta-media);
 }
 
 /* a citação verbatim é a prova da dependência: aparece recuada e em itálico */
 .trilha-card .linha .citacao {
   margin-top: 4px;
   padding-left: 8px;
-  border-left: 1px solid rgba(130, 145, 190, 0.28);
+  border-left: 1px solid var(--trilha-borda);
   font-size: 11px;
   font-style: italic;
   line-height: 1.45;
-  color: #98a0b8;
+  color: var(--trilha-tinta-fraca);
 }
 
 .trilha-card .linha .ra {
   flex: 0 0 auto;
   font-size: 10.5px;
-  color: #646c84;
+  color: var(--trilha-tinta-tenue);
   line-height: 1.6;
 }
 
@@ -1349,7 +1412,7 @@ html[data-clean-mode='true'] .trilha-balao {
   margin: 4px 0 0 8px;
   font-size: 11.5px;
   line-height: 1.45;
-  color: #98a0b8;
+  color: var(--trilha-tinta-fraca);
 }
 
 .trilha-card .rodape {
@@ -1358,14 +1421,14 @@ html[data-clean-mode='true'] .trilha-balao {
   gap: 5px;
   margin-top: 16px;
   padding-top: 12px;
-  border-top: 1px solid rgba(130, 145, 190, 0.16);
+  border-top: 1px solid var(--trilha-borda);
   font-size: 10.5px;
   line-height: 1.55;
-  color: #646c84;
+  color: var(--trilha-tinta-tenue);
 }
 
 .trilha-card .rodape a {
-  color: #9db8dc;
+  color: var(--color-accent);
   text-decoration: none;
 }
 
@@ -1382,14 +1445,14 @@ html[data-clean-mode='true'] .trilha-balao {
   margin: 0;
   font-size: 11.5px;
   line-height: 1.7;
-  color: #646c84;
+  color: var(--trilha-tinta-tenue);
   text-align: right;
   pointer-events: none;
 }
 
 .trilha-dica b {
   font-weight: 600;
-  color: #98a0b8;
+  color: var(--trilha-tinta-fraca);
 }
 
 @media (max-width: 980px) {

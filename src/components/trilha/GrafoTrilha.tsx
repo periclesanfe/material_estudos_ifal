@@ -340,6 +340,25 @@ export default function GrafoTrilha({
     };
   }, [layout, projecao, tokens, cores, visivel, reduzir]);
 
+  /**
+   * Zoom pela roda do mouse.
+   *
+   * Precisa de listener NATIVO com passive: false. O React anexa wheel como
+   * passivo no root desde a versão 17, e num listener passivo o
+   * preventDefault() é ignorado pelo navegador: o resultado era o zoom
+   * funcionar E a página rolar junto, que é exatamente o defeito relatado.
+   */
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const aoRolar = (ev: WheelEvent) => {
+      ev.preventDefault();
+      camera.current.zoom = Math.max(0.18, Math.min(4, camera.current.zoom * Math.pow(0.999, ev.deltaY)));
+    };
+    canvas.addEventListener('wheel', aoRolar, { passive: false });
+    return () => canvas.removeEventListener('wheel', aoRolar);
+  }, []);
+
   // interação
   const aoApontarBaixo = (ev: React.PointerEvent<HTMLCanvasElement>) => {
     arrasta.current = true;
@@ -373,11 +392,6 @@ export default function GrafoTrilha({
     if (movimento >= 4) return;
     const caixa = ev.currentTarget.getBoundingClientRect();
     selecionar(acharNo(ev.clientX - caixa.left, ev.clientY - caixa.top));
-  };
-
-  const aoRolar = (ev: React.WheelEvent<HTMLCanvasElement>) => {
-    ev.preventDefault();
-    camera.current.zoom = Math.max(0.18, Math.min(4, camera.current.zoom * Math.pow(0.999, ev.deltaY)));
   };
 
   const aoTeclar = (ev: React.KeyboardEvent<HTMLCanvasElement>) => {
@@ -417,7 +431,6 @@ export default function GrafoTrilha({
         hover.current = -1;
         onSobCursor?.(null);
       }}
-      onWheel={aoRolar}
       onKeyDown={aoTeclar}
     />
   );
