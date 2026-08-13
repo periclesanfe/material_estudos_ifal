@@ -15,6 +15,8 @@ interface SubjectContentLayoutProps {
   title: ReactNode;
   description: string;
   heroBackground: string;
+  /** Ações exibidas na capa (ex.: exportar .md/PDF). Só aparecem na introdução. */
+  heroActions?: ReactNode;
   renderSection: (sectionId: string) => ReactNode;
 }
 
@@ -25,6 +27,7 @@ export default function SubjectContentLayout({
   title,
   description,
   heroBackground,
+  heroActions,
   renderSection,
 }: SubjectContentLayoutProps) {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -111,7 +114,7 @@ export default function SubjectContentLayout({
   return (
     <div>
       {activeSection === 'intro' && (
-        <SubjectHero eyebrow={eyebrow} title={title} description={description} background={heroBackground} />
+        <SubjectHero eyebrow={eyebrow} title={title} description={description} background={heroBackground} actions={heroActions} />
       )}
 
       <div className="page-wrap flex flex-col gap-2 sm:flex-row sm:items-stretch">

@@ -7,10 +7,12 @@ interface SubjectHeroProps {
   title: ReactNode;
   description: string;
   background: string;
+  /** Ações da matéria (ex.: exportar), abaixo da descrição. Opcional. */
+  actions?: ReactNode;
 }
 
 /** Capa da matéria, exibida apenas na seção de introdução. */
-export default function SubjectHero({ eyebrow, title, description, background }: SubjectHeroProps) {
+export default function SubjectHero({ eyebrow, title, description, background, actions }: SubjectHeroProps) {
   return (
     <div className="relative min-h-[38vh] md:min-h-[42vh] flex flex-col items-center justify-center text-center px-6 py-12 md:py-14 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none opacity-60">
@@ -26,6 +28,7 @@ export default function SubjectHero({ eyebrow, title, description, background }:
       <p className="text-text-muted text-sm md:text-base relative z-10 max-w-2xl">
         {description}
       </p>
+      {actions}
       <Link
         to="/atualizacoes"
         className="text-text-muted/80 hover:text-text text-xs relative z-10 mt-4 underline underline-offset-2 transition-colors"
