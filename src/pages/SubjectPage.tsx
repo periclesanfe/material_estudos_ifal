@@ -48,7 +48,7 @@ export default function SubjectPage() {
           <div className="absolute inset-0 pointer-events-none opacity-45">
             <div
               className="absolute inset-0"
-              style={{ background: 'radial-gradient(circle at 50% 35%, rgba(108,99,255,0.18) 0%, transparent 50%)' }}
+              style={{ background: 'radial-gradient(circle at 50% 35%, rgba(99, 102, 241,0.18) 0%, transparent 50%)' }}
             />
           </div>
 

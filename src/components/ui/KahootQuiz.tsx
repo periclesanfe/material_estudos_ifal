@@ -198,7 +198,7 @@ export default function KahootQuiz({ questions, onGenerateNewQuiz, newQuizButton
                 key={`${question.id}-${index}`}
                 className={`block rounded-full transition-all duration-300 ${
                   currentSegment
-                    ? 'h-4 bg-accent shadow-[0_0_0_3px_rgba(108,99,255,0.22)]'
+                    ? 'h-4 bg-accent shadow-[0_0_0_3px_rgba(99, 102, 241,0.22)]'
                     : answeredSegment
                       ? 'h-2.5 bg-accent'
                       : 'h-2.5 bg-border'
@@ -239,9 +239,9 @@ export default function KahootQuiz({ questions, onGenerateNewQuiz, newQuizButton
               const isSelectedWrong = answered && index === selectedIndex && index !== currentQuestion.correctIndex;
               const isDimmed = answered && !isCorrectOption && !isSelectedWrong;
               const stateClass = isCorrectOption
-                ? 'border-accent5 bg-accent5 text-bg shadow-[0_0_0_3px_rgba(168,230,207,0.22)]'
+                ? 'border-accent5 bg-accent5 text-bg shadow-[0_0_0_3px_rgba(34, 197, 94,0.22)]'
                 : isSelectedWrong
-                  ? 'border-accent2 bg-accent2 text-white shadow-[0_0_0_3px_rgba(255,107,107,0.22)]'
+                  ? 'border-accent2 bg-accent2 text-white shadow-[0_0_0_3px_rgba(239, 68, 68,0.22)]'
                   : isDimmed
                     ? 'border-border bg-card text-text-muted opacity-45'
                     : `border-transparent ${style.color} text-white`;

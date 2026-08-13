@@ -3,7 +3,7 @@ import LmmdSections from './LmmdSections';
 import { LMMD_EXAMS, LMMD_SECTIONS } from './data';
 
 const heroBackground =
-  'radial-gradient(circle at 28% 35%, rgba(108,99,255,0.16) 0%, transparent 50%), radial-gradient(circle at 72% 62%, rgba(78,205,196,0.10) 0%, transparent 44%)';
+  'radial-gradient(circle at 28% 35%, rgba(99, 102, 241,0.16) 0%, transparent 50%), radial-gradient(circle at 72% 62%, rgba(59, 130, 246,0.10) 0%, transparent 44%)';
 
 export default function LmmdContent() {
   return (

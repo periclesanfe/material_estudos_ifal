@@ -14,7 +14,7 @@ export default function SidebarSubjectLink({ subject, onNavigate }: SidebarSubje
       className={({ isActive }) =>
         `group flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm leading-snug transition-colors duration-200 ${
           isActive
-            ? 'bg-accent/20 text-text border border-accent/30 shadow-[0_6px_16px_rgba(108,99,255,0.2)]'
+            ? 'bg-accent/20 text-text border border-accent/30 shadow-[0_6px_16px_rgba(99, 102, 241,0.2)]'
             : subject.hasContent
               ? 'text-text-muted hover:text-text hover:bg-card-hover'
               : 'text-text-muted/55 hover:text-text-muted/80'

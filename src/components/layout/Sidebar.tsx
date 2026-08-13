@@ -146,7 +146,7 @@ export default function Sidebar() {
   const mainNavItem = ({ isActive }: { isActive: boolean }) =>
     `flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
       isActive
-        ? 'bg-accent/20 text-text border border-accent/30 shadow-[0_6px_16px_rgba(108,99,255,0.2)]'
+        ? 'bg-accent/20 text-text border border-accent/30 shadow-[0_6px_16px_rgba(99, 102, 241,0.2)]'
         : 'text-text-muted hover:text-text hover:bg-card-hover'
     }`;
 
@@ -258,7 +258,7 @@ export default function Sidebar() {
   const collapsedNavButton = (active = false) =>
     `flex h-10 w-10 items-center justify-center rounded-xl border text-sm font-black transition-colors duration-200 ${
       active
-        ? 'border-accent/40 bg-accent/20 text-text shadow-[0_6px_16px_rgba(108,99,255,0.2)]'
+        ? 'border-accent/40 bg-accent/20 text-text shadow-[0_6px_16px_rgba(99, 102, 241,0.2)]'
         : 'border-border bg-card text-text-muted hover:border-border-hover hover:bg-card-hover hover:text-text'
     }`;
 

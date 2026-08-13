@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useRef, type ReactNode } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 import { useSearchParams } from 'react-router-dom';
 import { FINAL_EXAM_ID, type ExamDefinition } from '../../lib/exams';
+import { useMovimentoReduzido } from '../../hooks/useMovimentoReduzido';
+import { troca } from '../../lib/movimento';
 import AtalhoTrilha from '../trilha/AtalhoTrilha';
 import ExamMode from './ExamMode';
 import SectionNav, { type SectionNavItem } from './SectionNav';
@@ -42,6 +45,7 @@ export default function SubjectContentLayout({
   const examMode = searchParams.get('modo') === 'prova';
   const selectedExam = searchParams.get('av') || FINAL_EXAM_ID;
 
+  const reduzido = useMovimentoReduzido();
   const contentRef = useRef<HTMLDivElement>(null);
   const pendingFocusRef = useRef(false);
 
@@ -130,7 +134,7 @@ export default function SubjectContentLayout({
           onClick={() => toggleExamMode(true)}
           className="sticky top-2 z-40 btn-primary shrink-0 px-4 py-2 text-sm inline-flex items-center justify-center gap-1.5"
         >
-          <span aria-hidden>📝</span> Modo Prova
+          Modo Prova
         </button>
         <SectionNav
           sections={sections}
@@ -141,17 +145,26 @@ export default function SubjectContentLayout({
         />
       </div>
 
-      <div
-        ref={contentRef}
-        id="painel-conteudo"
-        role="tabpanel"
-        tabIndex={-1}
-        key={activeSection}
-        aria-labelledby={`tab-${activeSection}`}
-        className={`page-wrap pb-20 focus:outline-none panel-enter ${activeSection === 'intro' ? 'pt-10 md:pt-12' : 'pt-5 md:pt-6'}`}
-      >
-        {renderSection(activeSection)}
-      </div>
+      {/* A seção troca no mesmo lugar, então a saída da anterior precisa terminar
+          antes de a nova entrar: sem `mode="wait"` as duas ocupam o fluxo e a
+          página dá um salto de rolagem. */}
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          ref={contentRef}
+          id="painel-conteudo"
+          role="tabpanel"
+          tabIndex={-1}
+          key={activeSection}
+          aria-labelledby={`tab-${activeSection}`}
+          variants={troca}
+          initial={reduzido ? false : 'inicio'}
+          animate="visivel"
+          exit={reduzido ? undefined : 'saida'}
+          className={`page-wrap pb-20 focus:outline-none ${activeSection === 'intro' ? 'pt-10 md:pt-12' : 'pt-5 md:pt-6'}`}
+        >
+          {renderSection(activeSection)}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }

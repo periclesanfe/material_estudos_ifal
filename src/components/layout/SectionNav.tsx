@@ -1,5 +1,8 @@
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react';
+import { motion } from 'motion/react';
 import { examIdsOf, type ExamDefinition, type ExamTagged } from '../../lib/exams';
+import { useMovimentoReduzido } from '../../hooks/useMovimentoReduzido';
+import { DESLIZE } from '../../lib/movimento';
 import SectionSheet from './SectionSheet';
 
 export interface SectionNavItem extends ExamTagged {
@@ -30,6 +33,7 @@ interface SectionNavProps {
  */
 export default function SectionNav({ sections, exams, activeSection, onSelect, panelId }: SectionNavProps) {
   const [sheetOpen, setSheetOpen] = useState(false);
+  const reduzido = useMovimentoReduzido();
   const tablistRef = useRef<HTMLDivElement>(null);
   const sheetRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -152,9 +156,20 @@ export default function SectionNav({ sections, exams, activeSection, onSelect, p
               tabIndex={selected ? 0 : -1}
               onClick={() => onSelect(section.id, true)}
               onKeyDown={event => handleTabKeyDown(event, index)}
-              className={`study-pill px-3 py-1.5 inline-flex items-center gap-1.5 ${selected ? 'active' : ''}`}
+              className={`study-pill relative px-3 py-1.5 inline-flex items-center gap-1.5 ${selected ? 'active' : ''}`}
             >
-              {badge && <span className="text-[10px] font-black opacity-75">{badge}</span>}
+              {/* O fio de estado ativo é um elemento ÚNICO, compartilhado por
+                  layoutId: em vez de acender e apagar em cada aba, ele desliza da
+                  anterior até a nova. É o gesto que mais separa interface
+                  cuidada de interface montada às pressas. */}
+              {selected && !reduzido && (
+                <motion.span
+                  layoutId="secao-ativa"
+                  transition={DESLIZE}
+                  className="pointer-events-none absolute inset-x-1 -bottom-px h-[2px] bg-accent"
+                />
+              )}
+              {badge && <span className="font-mono text-micro opacity-70">{badge}</span>}
               {section.shortTitle}
             </button>
           );

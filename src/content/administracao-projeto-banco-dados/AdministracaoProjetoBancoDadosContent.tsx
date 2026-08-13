@@ -16,7 +16,7 @@ export default function AdministracaoProjetoBancoDadosContent() {
               className="absolute inset-0"
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(108, 99, 255, 0.13), transparent 38%), linear-gradient(215deg, rgba(78, 205, 196, 0.1), transparent 42%)',
+                  'linear-gradient(135deg, rgba(99, 102, 241, 0.13), transparent 38%), linear-gradient(215deg, rgba(59, 130, 246, 0.1), transparent 42%)',
               }}
             />
           </div>

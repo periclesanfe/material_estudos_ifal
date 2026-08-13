@@ -4,7 +4,7 @@ import MarketingSections from './MarketingSections';
 import { MARKETING_GUIDE_CONTEXT, MARKETING_SECTIONS, QUIZ_DATA } from './data';
 
 const heroBackground =
-  'radial-gradient(circle at 30% 35%, rgba(108,99,255,0.15) 0%, transparent 48%), radial-gradient(circle at 70% 60%, rgba(255,107,107,0.1) 0%, transparent 42%)';
+  'radial-gradient(circle at 30% 35%, rgba(99, 102, 241,0.15) 0%, transparent 48%), radial-gradient(circle at 70% 60%, rgba(239, 68, 68,0.1) 0%, transparent 42%)';
 
 export default function MarketingContent() {
   return (

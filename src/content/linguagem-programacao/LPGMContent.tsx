@@ -3,7 +3,7 @@ import LPGMSections from './LPGMSections';
 import { LPGM_EXAMS, LPGM_SECTIONS } from './data';
 
 const heroBackground =
-  'radial-gradient(circle at 26% 30%, rgba(108,99,255,0.16) 0%, transparent 46%), radial-gradient(circle at 74% 64%, rgba(78,205,196,0.11) 0%, transparent 44%)';
+  'radial-gradient(circle at 26% 30%, rgba(99, 102, 241,0.16) 0%, transparent 46%), radial-gradient(circle at 74% 64%, rgba(59, 130, 246,0.11) 0%, transparent 44%)';
 
 export default function LPGMContent() {
   return (

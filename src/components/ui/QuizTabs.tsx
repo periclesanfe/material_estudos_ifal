@@ -52,7 +52,7 @@ function ToggleGroup<T extends string>({
       {/* Indicador deslizante */}
       <span
         aria-hidden="true"
-        className="absolute top-1 bottom-1 left-1 rounded-md bg-accent shadow-[0_6px_18px_rgba(108,99,255,0.3)] transition-transform duration-300 ease-out"
+        className="absolute top-1 bottom-1 left-1 rounded-md bg-accent shadow-[0_6px_18px_rgba(99, 102, 241,0.3)] transition-transform duration-300 ease-out"
         style={{
           width: `calc((100% - 0.5rem) / ${options.length})`,
           transform: `translateX(calc(${activeIndex} * 100%))`,

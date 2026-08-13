@@ -16,7 +16,7 @@ export default function MetodologiaCientificaContent() {
                             className="absolute inset-0"
                             style={{
                                 background:
-                                    'radial-gradient(circle at 28% 35%, rgba(108,99,255,0.14) 0%, transparent 48%), radial-gradient(circle at 72% 62%, rgba(72,187,120,0.10) 0%, transparent 42%)',
+                                    'radial-gradient(circle at 28% 35%, rgba(99, 102, 241,0.14) 0%, transparent 48%), radial-gradient(circle at 72% 62%, rgba(72,187,120,0.10) 0%, transparent 42%)',
                             }}
                         />
                     </div>

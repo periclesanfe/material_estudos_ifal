@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'motion/react';
 import Sidebar from './components/layout/Sidebar';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -7,6 +8,8 @@ import OptativesPage from './pages/OptativesPage';
 import SubjectPage from './pages/SubjectPage';
 import SettingsPage from './pages/SettingsPage';
 import UpdatesPage from './pages/UpdatesPage';
+import { useMovimentoReduzido } from './hooks/useMovimentoReduzido';
+import { pagina } from './lib/movimento';
 
 /**
  * A trilha carrega o dataset da taxonomia, que passa de meio megabyte de JSON.
@@ -17,22 +20,35 @@ const TrilhaPage = lazy(() => import('./pages/TrilhaPage'));
 
 function TrilhaFallback() {
   return (
-    <div className="page-wrap py-10 md:py-12 animate-fade-in">
-      <section className="study-surface px-6 py-12 md:px-10 md:py-14 text-center">
-        <div className="mx-auto h-8 w-8 animate-spin rounded-full border-2 border-border border-t-accent" />
-        <p className="mt-4 text-sm text-text-muted">Montando o grafo do curso…</p>
-      </section>
+    <div className="page-wrap py-10 md:py-12">
+      <p className="font-mono text-meta uppercase tracking-[0.16em] text-text-muted">
+        montando o grafo do curso
+      </p>
     </div>
   );
 }
 
-export default function App() {
+/**
+ * Troca de rota com animação de entrada e saída.
+ *
+ * A chave do AnimatePresence é o pathname, então o React desmonta a página velha
+ * só depois da animação de saída. `mode="wait"` evita as duas páginas ocupando o
+ * fluxo ao mesmo tempo, que provocava um salto de rolagem na troca.
+ */
+function RotasAnimadas() {
+  const local = useLocation();
+  const reduzido = useMovimentoReduzido();
+
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <a href="#conteudo" className="skip-link">Pular para o conteúdo</a>
-      <Sidebar />
-      <main id="conteudo" tabIndex={-1} className="main-surface flex-1 overflow-y-auto min-h-screen pt-14 lg:pt-0">
-        <Routes>
+    <AnimatePresence mode="wait" initial={false}>
+      <motion.div
+        key={local.pathname}
+        variants={pagina}
+        initial={reduzido ? false : 'inicio'}
+        animate="visivel"
+        exit={reduzido ? undefined : 'saida'}
+      >
+        <Routes location={local}>
           <Route path="/" element={<HomePage />} />
           <Route path="/materia/:slug" element={<SubjectPage />} />
           <Route path="/optativas" element={<OptativesPage />} />
@@ -48,6 +64,18 @@ export default function App() {
           <Route path="/atualizacoes" element={<UpdatesPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+      </motion.div>
+    </AnimatePresence>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <a href="#conteudo" className="skip-link">Pular para o conteúdo</a>
+      <Sidebar />
+      <main id="conteudo" tabIndex={-1} className="main-surface flex-1 overflow-y-auto min-h-screen pt-14 lg:pt-0">
+        <RotasAnimadas />
       </main>
     </BrowserRouter>
   );
