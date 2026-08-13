@@ -44,11 +44,12 @@ export default function QuizCard({ data }: QuizCardProps) {
 
           if (answered) {
             if (i === data.correctIndex) {
-              classes += ' border-accent5 bg-accent5/10 text-accent5';
+              classes += ' quiz-option-certa text-success';
             } else if (i === selected) {
-              classes += ' border-accent2 bg-accent2/10 text-accent2';
+              classes += ' quiz-option-errada text-error';
             } else {
-              classes += ' border-border text-text-muted/30';
+              // as demais recuam para não competir com a resposta
+              classes += ' text-text-muted/40';
             }
           } else {
             classes += ' text-text cursor-pointer';

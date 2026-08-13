@@ -45,6 +45,11 @@
   --border-subtle: rgba(255, 255, 255, 0.06);
   --border-default: rgba(255, 255, 255, 0.1);
 
+  /* Espessura do lip nas alternativas de quiz: um irmão MAIS ESCURO da face, e
+     não o acento. Com o acento em repouso toda alternativa lia como botão
+     primário e a hierarquia sumia. */
+  --lip: #0a0c11;
+
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
@@ -159,6 +164,7 @@ html[data-theme='light'] {
 
   --border-subtle: rgba(17, 24, 39, 0.06);
   --border-default: rgba(17, 24, 39, 0.11);
+  --lip: #cdd1da;
 
   --shadow-sm: 0 1px 2px rgba(17, 24, 39, 0.06);
   --shadow-md: 0 4px 14px rgba(17, 24, 39, 0.09);
@@ -646,19 +652,125 @@ html[data-theme='light'] .btn-primary:hover {
   line-height: 1;
 }
 
+/* ── Alternativa de quiz: forma pressionável ─────────────────────────────────
+   As alternativas eram retângulos chapados com borda de 1 px, indistinguíveis de
+   uma lista de texto: nada dizia "me clique". Ganharam o "lip", que é a borda
+   inferior mais grossa em tom mais escuro que a face, sem desfoque nenhum. A
+   espessura lê como objeto físico, e ao pressionar o botão AFUNDA.
+
+   A técnica é a borda inferior de 4 px, e não um pseudo-elemento com box-shadow.
+   Duas razões: sobrevive a qualquer background do container, e o afundamento sai
+   de graça, encolhendo a borda para 2 px e transladando 2 px para baixo, o que
+   mantém a altura total constante e não empurra o layout.
+
+   A forma vem do vocabulário do Duolingo; o movimento fica dentro da disciplina
+   deste projeto, com 120 ms e curva mecânica em vez dos 300 ms elásticos dele. */
 .quiz-option-base {
-  background: rgba(255, 255, 255, 0.03);
+  position: relative;
+  background: var(--color-card);
   border: 1px solid var(--color-border);
-  border-radius: 10px;
+  border-bottom-width: 4px;
+  border-bottom-color: var(--lip);
+  border-radius: 12px;
+  transition:
+    transform 0.12s cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-bottom-width 0.12s cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-color 0.15s ease,
+    background-color 0.15s ease;
 }
 
-html[data-theme='light'] .quiz-option-base {
-  background: rgba(27, 34, 48, 0.025);
+.quiz-option-base:not(:disabled):hover {
+  border-color: color-mix(in srgb, var(--accent-primary) 55%, transparent);
+  border-bottom-color: var(--accent-primary);
+  background: color-mix(in srgb, var(--accent-primary) 7%, var(--color-card));
 }
 
-.quiz-option-base:hover {
-  border-color: var(--color-accent);
-  background: rgba(99, 102, 241, 0.08);
+/* O afundamento. Só em alternativa ainda respondível: depois de respondida o
+   botão está desabilitado e afundar mentiria sobre poder clicar de novo. */
+.quiz-option-base:not(:disabled):active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+.quiz-option-base:not(:disabled):focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Quem pediu menos movimento perde o afundamento, e o estado passa a se ler
+   apenas por cor e borda. */
+@media (prefers-reduced-motion: reduce) {
+  .quiz-option-base {
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .quiz-option-base:not(:disabled):active {
+    transform: none;
+    border-bottom-width: 4px;
+  }
+}
+
+/* ── Feedback de resposta ────────────────────────────────────────────────────
+   O acerto assenta: a cor entra e fica, sem festa. O erro sacode uma vez, no
+   mesmo gesto que este projeto já usa para "o que você digitou está errado", e
+   depois assenta. Nenhum dos dois passa de 350 ms, que é o teto do sistema. */
+.quiz-option-certa {
+  border-color: var(--success) !important;
+  border-bottom-color: var(--success) !important;
+  background: color-mix(in srgb, var(--success) 12%, var(--color-card)) !important;
+  animation: quiz-assenta 0.26s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.quiz-option-errada {
+  border-color: var(--danger) !important;
+  border-bottom-color: var(--danger) !important;
+  background: color-mix(in srgb, var(--danger) 12%, var(--color-card)) !important;
+  animation: quiz-sacode 0.34s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes quiz-assenta {
+  from {
+    transform: translateY(2px);
+    border-bottom-width: 2px;
+  }
+
+  to {
+    transform: translateY(0);
+    border-bottom-width: 4px;
+  }
+}
+
+@keyframes quiz-sacode {
+  0% {
+    transform: translateX(0);
+  }
+
+  22% {
+    transform: translateX(-5px);
+  }
+
+  44% {
+    transform: translateX(4px);
+  }
+
+  66% {
+    transform: translateX(-3px);
+  }
+
+  84% {
+    transform: translateX(2px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-option-certa,
+  .quiz-option-errada {
+    animation: none;
+  }
 }
 
 .kahoot-answer-button:not(:disabled):hover {
@@ -774,6 +886,7 @@ html[data-clean-mode='true'] {
 
   --border-subtle: rgba(31, 41, 51, 0.08);
   --border-default: rgba(31, 41, 51, 0.14);
+  --lip: #d5d5cd;
 
   --shadow-sm: 0 1px 2px rgba(31, 41, 51, 0.05);
   --shadow-md: 0 3px 10px rgba(31, 41, 51, 0.07);
