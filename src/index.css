@@ -1427,3 +1427,21 @@ html[data-clean-mode='true'] .trilha-balao {
     display: none;
   }
 }
+
+/* ─── View Transition do tema: reveal radial ──────────────────────────────────
+   Desliga o cross-fade padrão da API, empilha o snapshot novo por cima do
+   antigo, e deixa o clip-path (animado por JS no ThemeContext, porque o centro
+   do círculo depende de onde o usuário clicou) fazer a revelação. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}

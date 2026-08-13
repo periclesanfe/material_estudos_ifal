@@ -1,7 +1,10 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
-import Sidebar from './components/layout/Sidebar';
+import AppSidebar from './components/layout/AppSidebar';
+import TopBar from './components/layout/TopBar';
+import { ThemeProvider } from './contexts/ThemeProvider';
+import { SidebarInset, SidebarProvider } from './components/ui/sidebar';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import OptativesPage from './pages/OptativesPage';
@@ -71,12 +74,19 @@ function RotasAnimadas() {
 
 export default function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <a href="#conteudo" className="skip-link">Pular para o conteúdo</a>
-      <Sidebar />
-      <main id="conteudo" tabIndex={-1} className="main-surface flex-1 overflow-y-auto min-h-screen pt-14 lg:pt-0">
-        <RotasAnimadas />
-      </main>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <a href="#conteudo" className="skip-link">Pular para o conteúdo</a>
+        <SidebarProvider>
+          <AppSidebar />
+          <SidebarInset>
+            <TopBar />
+            <main id="conteudo" tabIndex={-1} className="main-surface min-w-0 flex-1">
+              <RotasAnimadas />
+            </main>
+          </SidebarInset>
+        </SidebarProvider>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
