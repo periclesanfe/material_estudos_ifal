@@ -1,0 +1,1371 @@
+{
+  "disciplina": {
+    "codigo": "FUSI",
+    "codigoPPC": "FNSI",
+    "nome": "Fundamentos de Sistemas de Informação",
+    "periodo": 1
+  },
+  "topicos": [
+    {
+      "id": "mt_FUSI_01",
+      "nome": "Panorama da disciplina e o negócio antes da tecnologia",
+      "tipo": "META",
+      "unidade": "Introdução à Disciplina",
+      "descricao": "FUSI é a porta de entrada do curso: dá a visão panorâmica de como uma organização usa tecnologia para transformar dados em decisão, sem esgotar nenhum tema, e cada capítulo dela vira uma disciplina inteira mais adiante. O fio condutor é o valor que o SI gera para a organização, então a tecnologia aparece sempre respondendo a uma necessidade de negócio, nunca como fim em si mesma.",
+      "ordem": 1,
+      "evidencia": [
+        "Explica por que a disciplina passa por todas as camadas de um sistema de informação sem aprofundar nenhuma",
+        "Aponta em que disciplina posterior cada bloco desta é retomado, como TPS, MIS, DSS e ERP em APSI e SIGE"
+      ],
+      "checagem": "Qual é o fio condutor que liga os capítulos da disciplina, e por que a tecnologia nunca aparece como fim em si mesma?",
+      "avaliacoes": [],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/IntroSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_02",
+      "nome": "Dado, processo e informação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Dados, Informação e Conhecimento",
+      "descricao": "Dados são fatos brutos, sem contexto: o número 42 sozinho pode ser idade, temperatura ou quantidade em estoque. Informação é uma coleção de fatos organizados de modo que tenham valor além dos fatos em si, e nasce quando um processo, conjunto de tarefas organizadas de forma lógica para obter um resultado definido, agrupa, ordena, soma, compara ou contextualiza esses dados.",
+      "ordem": 2,
+      "evidencia": [
+        "Classifica um item concreto como dado ou como informação e justifica pelo contexto",
+        "Aponta qual foi o processo que transformou os dados em informação num caso dado"
+      ],
+      "checagem": "O que separa dado de informação, e qual é o papel do processo nessa passagem?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/DadosInformacaoSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_03",
+      "nome": "Conhecimento como compreensão que orienta a ação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Dados, Informação e Conhecimento",
+      "descricao": "Conhecimento é a consciência e a compreensão de um conjunto de informações e de como elas podem ser úteis para apoiar uma tarefa ou uma decisão. No exemplo da papelaria, a lista de vendas ordenada é a informação; perceber que borrachas encalham e reduzir a compra do próximo lote é o conhecimento em uso. A cadeia completa é dado, processo, informação e conhecimento.",
+      "ordem": 3,
+      "evidencia": [
+        "Numa mesma situação, separa o que é informação do que é conhecimento",
+        "Descreve a cadeia dado, processo, informação e conhecimento sem inverter etapas"
+      ],
+      "checagem": "Numa mesma situação de trabalho, o que é a informação e o que é o conhecimento?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/DadosInformacaoSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_04",
+      "nome": "As onze características da informação valiosa",
+      "tipo": "CONCEITUAL",
+      "unidade": "Dados, Informação e Conhecimento",
+      "descricao": "Nem toda informação serve. O material lista onze atributos: precisa, completa, econômica, flexível, confiável, relevante, simples, no prazo, verificável, acessível e segura. Alguns competem entre si: informação perfeita que chega depois da decisão não vale nada, e informação rápida e errada custa caro. Boa parte do projeto de um SI é equilibrar esses atributos.",
+      "ordem": 4,
+      "evidencia": [
+        "Diz qual atributo falhou quando uma decisão deu errado por causa da informação",
+        "Explica por que precisão e pontualidade competem entre si"
+      ],
+      "checagem": "Cite os atributos da informação valiosa e explique o conflito entre ser precisa e chegar no prazo.",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_05",
+      "nome": "Sistema, seus quatro componentes e o Sistema de Informação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Sistemas, CBIS e Tipos de SI",
+      "descricao": "Sistema é um conjunto de elementos que interagem para realizar objetivos, e tem quatro componentes: entrada (captar e reunir dados brutos), processamento (converter dados em saídas úteis), saída (produzir informação útil, em geral documentos e relatórios) e realimentação (informação originada no próprio sistema, usada para mudar a entrada ou o processamento). O feedback fecha o ciclo e permite a correção. Um Sistema de Informação é o conjunto de componentes inter-relacionados que coleta, manipula, armazena e dissemina dados e informações, oferecendo esse mecanismo de realimentação para atender a um objetivo.",
+      "ordem": 5,
+      "evidencia": [
+        "Aponta entrada, processamento, saída e realimentação num sistema concreto",
+        "Explica o que o sistema deixa de fazer quando não existe realimentação"
+      ],
+      "checagem": "Quais são os quatro componentes de um sistema e o que a realimentação faz que os outros três não fazem?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SistemasSISection.tsx"
+    },
+    {
+      "id": "mt_FUSI_06",
+      "nome": "Eficiência, eficácia e padrão de desempenho",
+      "tipo": "CONCEITUAL",
+      "unidade": "Sistemas, CBIS e Tipos de SI",
+      "descricao": "Eficiência é a medida do que é produzido dividido pelo que é consumido, ou seja, fazer com menos recurso. Eficácia é a medida do grau em que o sistema alcança suas metas, ou seja, fazer a coisa certa. As duas são independentes: dá para ser muito eficiente fabricando o produto errado. Padrão de desempenho é o objetivo específico contra o qual o sistema é medido, como produzir no máximo 1% de peças com defeito.",
+      "ordem": 6,
+      "evidencia": [
+        "Julga um sistema como eficiente ou eficaz e justifica cada julgamento em separado",
+        "Escreve um padrão de desempenho verificável para um sistema dado"
+      ],
+      "checagem": "Um sistema pode ser eficiente e ineficaz ao mesmo tempo? Explique com um exemplo.",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/SistemasSISection.tsx"
+    },
+    {
+      "id": "mt_FUSI_07",
+      "nome": "Os seis componentes do CBIS",
+      "tipo": "CONCEITUAL",
+      "unidade": "Sistemas, CBIS e Tipos de SI",
+      "descricao": "Um CBIS, Sistema de Informação Baseado em Computador, é o conjunto único de seis componentes configurados para coletar, manipular, armazenar e processar dados em informação: hardware, software, banco de dados, telecomunicações e redes, pessoas e procedimentos. As pessoas são o elemento mais importante na maioria dos CBIS, e procedimentos são as estratégias, políticas, métodos e regras de uso do sistema. Esses recursos compartilhados formam a infraestrutura de tecnologia.",
+      "ordem": 7,
+      "evidencia": [
+        "Lista os seis componentes sem tratar banco de dados e telecomunicações como um só",
+        "Justifica por que pessoas e procedimentos não são acessórios do sistema"
+      ],
+      "checagem": "Quais são os seis componentes do CBIS e qual deles o material aponta como o mais importante?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SistemasSISection.tsx"
+    },
+    {
+      "id": "mt_FUSI_08",
+      "nome": "Os tipos de SI nas empresas: TPS, ERP, MIS e DSS",
+      "tipo": "CONCEITUAL",
+      "unidade": "Sistemas, CBIS e Tipos de SI",
+      "descricao": "O TPS registra e processa o grande volume de transações rotineiras do dia a dia, sendo transação qualquer intercâmbio relacionado a negócios, e é a base que alimenta os demais sistemas. O ERP é o conjunto de programas integrados que gerencia as operações vitais da organização, integrando fabricação e finanças. O MIS ou SIG entrega informações de rotina em relatórios padrão, com foco na eficiência operacional. O DSS apoia a decisão específica de um problema complexo, com foco na eficácia da decisão: o MIS responde quanto vendemos por filial no mês, o DSS responde se vale a pena abrir uma filial nesta cidade.",
+      "ordem": 8,
+      "evidencia": [
+        "Escolhe entre TPS, ERP, MIS e DSS a partir do tipo de problema descrito",
+        "Diz de onde o MIS tira os dados que usa nos relatórios",
+        "Separa MIS de DSS por tipo de problema, foco e formato da saída"
+      ],
+      "checagem": "Que critérios separam MIS de DSS, e qual sistema alimenta os dois com os dados da operação?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios",
+        "Sistemas de Apoio à Decisão",
+        "Tomada de Decisão estratégica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_09",
+      "nome": "Sistemas especializados: SGC, IA, sistemas especialistas e realidade virtual",
+      "tipo": "CONCEITUAL",
+      "unidade": "Sistemas, CBIS e Tipos de SI",
+      "descricao": "Os SGC criam, armazenam, compartilham e usam o conhecimento e a experiência acumulados pela organização. A IA é o sistema que assume características da inteligência humana e abrange robótica, sistemas de visão, processamento de linguagem natural, sistemas de aprendizagem e redes neurais. Sistemas especialistas dão sugestões e funcionam como um especialista de determinada área, apoiados numa base de conhecimento com dados, regras, procedimentos e relações. Realidade virtual é a simulação de um ambiente real ou imaginado, vivenciado em três dimensões.",
+      "ordem": 9,
+      "evidencia": [
+        "Separa IA de sistema especialista pelo que cada um entrega",
+        "Diz o que sustenta a resposta de um sistema especialista",
+        "Reconhece redes neurais e sistemas de aprendizagem como subáreas da IA"
+      ],
+      "checagem": "O que é a base de conhecimento de um sistema especialista, e o que a IA abrange além dele?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas Especialistas"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_10",
+      "nome": "As cinco etapas do desenvolvimento de sistemas",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Sistemas, CBIS e Tipos de SI",
+      "descricao": "Desenvolvimento de sistemas é a atividade de criar ou modificar sistemas empresariais existentes, em cinco etapas: investigação (entender o problema a resolver ou a oportunidade), análise (definir problemas e oportunidades do sistema atual), projeto (determinar como o novo sistema vai funcionar), implementação (criar ou adquirir os componentes, reuni-los e colocar o sistema em operação) e manutenção e revisão (verificar e ajustar conforme o negócio muda).",
+      "ordem": 10,
+      "evidencia": [
+        "Ordena as cinco etapas e diz o que cada uma entrega",
+        "Distingue a análise, que define o problema, do projeto, que define o como"
+      ],
+      "checagem": "Quais são as cinco etapas do desenvolvimento de sistemas e qual delas responde como o sistema vai funcionar?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_11",
+      "nome": "A organização como sistema, cadeia de suprimentos e CRM",
+      "tipo": "CONCEITUAL",
+      "unidade": "SI nas Organizações e Vantagem Competitiva",
+      "descricao": "Organização é uma coleção formal de pessoas e outros recursos estabelecida para alcançar metas, e ela própria é um sistema, com entradas, mecanismo de transformação e saídas, consumindo dinheiro, pessoas, materiais, máquinas, dados, informações e decisões. Dois processos de valor agregado organizam essa transformação: a gestão da cadeia de suprimentos, que determina quais suprimentos são necessários, em que quantidade, como serão processados em bens e serviços e como o envio será agendado, monitorado e controlado; e o CRM, que gerencia todos os aspectos dos encontros com o cliente, de marketing e vendas a atendimento e retenção.",
+      "ordem": 11,
+      "evidencia": [
+        "Descreve uma empresa concreta como sistema, nomeando entradas, transformação e saídas",
+        "Separa o que é responsabilidade da gestão da cadeia de suprimentos do que é do CRM"
+      ],
+      "checagem": "Por que a organização é ela mesma um sistema, e o que a cadeia de suprimentos decide que o CRM não decide?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/OrganizacoesSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_12",
+      "nome": "Estruturas organizacionais",
+      "tipo": "CONCEITUAL",
+      "unidade": "SI nas Organizações e Vantagem Competitiva",
+      "descricao": "A estrutura tradicional é a hierarquia de decisão e o fluxo de autoridade que desce da gestão estratégica até a operacional e os funcionários; a plana é a variante que empurra a decisão para os níveis inferiores, com empoderamento. A de projeto é centrada nos principais produtos ou serviços, com equipes muitas vezes temporárias; a de equipe é centrada no trabalho de grupos; e a virtual emprega pessoas, grupos ou unidades em áreas geograficamente dispersas, reduzindo custos e viabilizando trabalho colaborativo entre países diferentes.",
+      "ordem": 12,
+      "evidencia": [
+        "Identifica a estrutura de uma empresa a partir de onde a decisão é tomada",
+        "Explica o que o empoderamento muda na estrutura plana"
+      ],
+      "checagem": "O que diferencia a estrutura tradicional da plana, e o que caracteriza a organização virtual?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_13",
+      "nome": "Cultura, modelo de mudança, reengenharia e melhoria contínua",
+      "tipo": "CONCEITUAL",
+      "unidade": "SI nas Organizações e Vantagem Competitiva",
+      "descricao": "Cultura organizacional é o conjunto dos principais entendimentos e suposições compartilhados por um grupo, e implantar um sistema quase sempre exige mudá-la. O modelo de mudança tem três fases: descongelamento (interromper velhos hábitos e criar clima receptivo), movimento (aprender novos métodos, comportamentos e sistemas) e recongelamento (reforçar a mudança até virar parte natural do trabalho). Reengenharia é a revisão radical de processos, estruturas, sistemas e valores para alcançar novo patamar de resultados; melhoria contínua busca aperfeiçoamentos incrementais. O TAM especifica os fatores que levam a melhores atitudes sobre um SI, a difusão mede o quanto a tecnologia se espalhou pela organização e a infusão mede o quanto ela permeia um departamento.",
+      "ordem": 13,
+      "evidencia": [
+        "Classifica uma iniciativa como reengenharia ou melhoria contínua e justifica pelo grau de ruptura",
+        "Nomeia a fase do modelo de mudança em que uma equipe está",
+        "Explica uma tecnologia muito difundida e pouco infundida"
+      ],
+      "checagem": "Quais são as três fases do modelo de mudança, e o que separa reengenharia de melhoria contínua?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/OrganizacoesSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_14",
+      "nome": "Vantagem competitiva, as cinco forças e a medição do desempenho do SI",
+      "tipo": "CONCEITUAL",
+      "unidade": "SI nas Organizações e Vantagem Competitiva",
+      "descricao": "Vantagem competitiva é o benefício significativo e, idealmente, de longo prazo de uma empresa sobre seus concorrentes. Cinco forças levam as empresas a persegui-la: rivalidade entre concorrentes existentes, ameaça de novos concorrentes, ameaça de produtos e serviços substitutos, poder de negociação dos compradores e poder de negociação dos fornecedores. As estratégias citadas incluem liderança em custo, diferenciação, nicho, alterar a estrutura do setor, criar novos produtos e ser o primeiro no mercado. O desempenho do SI é medido por produtividade, que é a saída dividida pela entrada vezes 100%, ROI, crescimento nos ganhos, participação de mercado, satisfação do cliente e custo total de propriedade.",
+      "ordem": 14,
+      "evidencia": [
+        "Nomeia as cinco forças e diz o que aumenta a ameaça de novos concorrentes",
+        "Calcula a produtividade a partir de saída e entrada",
+        "Explica por que o custo total de propriedade não é o preço de compra"
+      ],
+      "checagem": "Quais são as cinco forças competitivas e como se calcula a produtividade de um sistema?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Tomada de Decisão estratégica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/OrganizacoesSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_15",
+      "nome": "CPU, ciclo de máquina, velocidade e paralelismo",
+      "tipo": "CONCEITUAL",
+      "unidade": "Hardware",
+      "descricao": "A CPU tem três partes: a ULA, que faz cálculos matemáticos e comparações lógicas; a unidade de controle, que acessa sequencialmente as instruções, decodifica-as e coordena o fluxo de dados; e os registradores, áreas de altíssima velocidade dentro da própria CPU. O ciclo de máquina tem quatro etapas: buscar, decodificar, executar e armazenar o resultado. O tempo de ciclo é medido em nanossegundos e picossegundos, o desempenho em MIPS e a velocidade do relógio em MHz e GHz, e a Lei de Moore é a hipótese de que a densidade de transistores num chip dobra a cada dois anos. Multiprocessamento é a execução simultânea de duas ou mais instruções, o multicore combina processadores independentes num só chip, a GPU assume as tarefas de gráficos 3D e a computação paralela executa a mesma tarefa em múltiplos processadores.",
+      "ordem": 15,
+      "evidencia": [
+        "Diz qual parte da CPU faz o cálculo e qual coordena o fluxo de dados",
+        "Ordena as quatro etapas do ciclo de máquina",
+        "Explica por que a Lei de Moore é hipótese e não lei física"
+      ],
+      "checagem": "Quais são as três partes da CPU, as quatro etapas do ciclo de máquina e o que a Lei de Moore afirma?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/HardwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_16",
+      "nome": "RAM volátil, ROM não volátil e memória cache",
+      "tipo": "CONCEITUAL",
+      "unidade": "Hardware",
+      "descricao": "A RAM é temporária e volátil, perde todo o conteúdo ao desligar, aceita leitura e escrita livres e tem variantes DRAM, SRAM e DDR SDRAM. A ROM é não volátil e guarda permanentemente dados e instruções que não mudam, em regime somente de leitura. Entre a CPU e a memória principal fica a memória cache, de alta velocidade, que o processador acessa mais rapidamente que a memória principal. Oito bits formam um byte.",
+      "ordem": 16,
+      "evidencia": [
+        "Diz qual memória perde o conteúdo ao desligar e qual mantém",
+        "Situa a cache entre o processador e a memória principal, sem confundi-la com registrador"
+      ],
+      "checagem": "Qual das duas memórias é volátil, e o que a cache faz de diferente da memória principal?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/HardwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_17",
+      "nome": "Armazenamento secundário: acesso sequencial contra acesso direto",
+      "tipo": "CONCEITUAL",
+      "unidade": "Hardware",
+      "descricao": "Comparado à memória, o armazenamento secundário é não volátil, tem maior capacidade e é bem mais barato por megabyte. São dois os métodos de acesso: sequencial, em que os dados devem ser recuperados na ordem em que foram armazenados, caso da fita magnética e dos equipamentos SASD; e direto, em que os registros podem ser recuperados em qualquer ordem, caso do disco magnético e dos DASD. Os dispositivos citados incluem fita para backup, disco, RAID com tolerância a falhas, ópticos (CD, DVD e Blu-ray), SSD em chips e as opções corporativas NAS e SAN.",
+      "ordem": 17,
+      "evidencia": [
+        "Classifica um dispositivo como SASD ou DASD e justifica pelo método de acesso",
+        "Explica por que o SSD é menos frágil e ainda assim custa mais por gigabyte",
+        "Diz o que o RAID acrescenta a um conjunto de discos"
+      ],
+      "checagem": "Qual método de acesso a fita usa e qual o disco usa, e como se chamam os equipamentos de cada um?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/HardwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_18",
+      "nome": "Classes de computador, escalabilidade e informática verde",
+      "tipo": "CONCEITUAL",
+      "unidade": "Hardware",
+      "descricao": "As classes se dividem em portáteis (handheld, smartphone, laptop, notebook, netbook e tablet), não portáteis de usuário único (thin client, desktop, nettop e estação de trabalho) e multiusuário (servidor, servidor blade, mainframe e supercomputador). Escalabilidade é a habilidade de aumentar a capacidade de processamento para atender mais usuários, mais dados ou mais transações. Informática verde é o programa de eficiência e responsabilidade ambiental no projeto, na fabricação, na operação e no descarte dos produtos de TI, com as metas de reduzir materiais perigosos, reduzir custos de energia e permitir descarte seguro ou reciclagem.",
+      "ordem": 18,
+      "evidencia": [
+        "Enquadra um equipamento na classe certa entre portátil, usuário único e multiusuário",
+        "Explica escalabilidade como capacidade de crescer para atender mais carga",
+        "Cita as três metas da informática verde"
+      ],
+      "checagem": "Quais são as três grandes classes de sistemas de computador e o que significa escalabilidade?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/HardwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_19",
+      "nome": "Software de sistemas, aplicativo, utilitários, middleware e SOA",
+      "tipo": "CONCEITUAL",
+      "unidade": "Software",
+      "descricao": "Programa de computador é uma sequência de instruções para o computador, e a documentação descreve suas funções. Software de sistemas é o conjunto de programas que coordena as atividades e funções do hardware e de outros programas, e a combinação de uma configuração de hardware com o software de sistemas forma a plataforma. Software aplicativo ajuda o usuário a resolver determinados problemas, e é classificado por esfera de influência em pessoal, de grupo de trabalho (groupware) e de empreendimento. Também são software de sistemas os programas utilitários e o middleware, que permite a comunicação entre sistemas diferentes e serve de interface entre a internet e sistemas legados, enquanto a SOA usa serviços modulares para que os sistemas interajam.",
+      "ordem": 19,
+      "evidencia": [
+        "Classifica um programa como software de sistemas ou aplicativo",
+        "Diz o que o middleware resolve que um aplicativo comum não resolve",
+        "Enquadra um software na esfera pessoal, de grupo de trabalho ou de empreendimento"
+      ],
+      "checagem": "O que separa software de sistemas de software aplicativo, e para que serve o middleware?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Softwares de sistemas e de aplicação"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SoftwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_20",
+      "nome": "Sistema operacional, núcleo, API e as atividades do SO",
+      "tipo": "CONCEITUAL",
+      "unidade": "Software",
+      "descricao": "O sistema operacional é o conjunto de programas que controla o hardware e atua como interface com os aplicativos, e seu núcleo (kernel) interliga seus componentes e regula os outros programas. Suas atividades são executar funções comuns de hardware, fornecer interface de usuário e gestão de entrada e saída, dar independência do hardware, gerenciar memória, gerenciar o processamento de tarefas, fornecer capacidade de rede, controlar acesso e segurança e gerenciar arquivos. As interfaces podem ser por comando, gráficas (GUI) ou naturais. A API é o que dá independência do hardware, pois permite construir aplicativos sem conhecer os detalhes internos do SO nem do equipamento. Multitarefa é executar mais de um programa ao mesmo tempo e compartilhamento de tempo é mais de uma pessoa usar o sistema ao mesmo tempo.",
+      "ordem": 20,
+      "evidencia": [
+        "Explica o papel do núcleo dentro do sistema operacional",
+        "Diz por que a API dá independência do hardware ao desenvolvedor",
+        "Separa multitarefa de compartilhamento de tempo"
+      ],
+      "checagem": "O que a API permite que o desenvolvedor ignore, e qual a diferença entre multitarefa e compartilhamento de tempo?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Softwares de sistemas e de aplicação"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SoftwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_21",
+      "nome": "Aquisição de software: proprietário, pronto, SaaS, nuvem e código aberto",
+      "tipo": "CONCEITUAL",
+      "unidade": "Software",
+      "descricao": "São três as abordagens para obter software aplicativo: construir um software proprietário, comprar um programa comercialmente disponível ou combinar as duas. O proprietário é feito para uma necessidade específica, custa mais, demora mais e pode gerar vantagem competitiva por ser exclusivo; o comercialmente disponível é mais barato e imediato, mas pode exigir adaptar o processo ao software. O SaaS permite assinar um aplicativo entregue pela web por taxa mensal ou por uso, o ASP fornece software, suporte e hardware por uma rede e a computação em nuvem usa recursos de computação na internet em vez de máquinas locais. Freeware é distribuído de graça sem necessariamente abrir o código, e o software de código-fonte aberto vem com o código, sendo que a licença GPL garante executar, estudar, adaptar, redistribuir e liberar melhorias.",
+      "ordem": 21,
+      "evidencia": [
+        "Escolhe entre software proprietário e pronto a partir dos requisitos do negócio",
+        "Explica por que só o proprietário tende a gerar vantagem competitiva",
+        "Separa freeware de software de código-fonte aberto"
+      ],
+      "checagem": "Quando compensa encomendar software proprietário em vez de comprar um pronto, e por quê?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Softwares de sistemas e de aplicação"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SoftwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_22",
+      "nome": "Linguagens de programação, sintaxe e compilador",
+      "tipo": "LINGUAGEM",
+      "unidade": "Software",
+      "descricao": "Linguagens de programação são conjuntos de palavras-chave, símbolos e regras para construir afirmações pelas quais as pessoas comunicam instruções ao computador. O código do programa é o conjunto dessas instruções e a sintaxe é o conjunto de regras associadas à linguagem. O compilador converte o código-fonte escrito pelo programador em instruções de linguagem de máquina. As gerações vão da linguagem de máquina até as 5GLs, usadas em inteligência artificial e sistemas especialistas, passando pela programação visual e pelas linguagens orientadas a objetos. Bug é o defeito que impede o programa de funcionar como deveria.",
+      "ordem": 22,
+      "evidencia": [
+        "Diz o que o compilador recebe e o que ele produz",
+        "Define sintaxe como o conjunto de regras da linguagem",
+        "Situa as 5GLs entre as gerações e diz para que servem"
+      ],
+      "checagem": "O que o compilador converte, e o que exatamente é a sintaxe de uma linguagem?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Softwares de sistemas e de aplicação"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SoftwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_23",
+      "nome": "Banco de dados, SGBD, DBA e a abordagem de banco de dados",
+      "tipo": "CONCEITUAL",
+      "unidade": "Banco de Dados e Inteligência de Negócios",
+      "descricao": "Banco de dados é uma coleção organizada de dados, o SGBD ou DBMS é o grupo de programas que o manipula e fornece a interface entre ele, os usuários e os aplicativos, e o DBA é o profissional que dirige todas as atividades relacionadas ao banco: o banco é o conteúdo, o SGBD é o software e o DBA é a pessoa. Na abordagem tradicional cada sistema usava arquivos dedicados, o que gera redundância e inconsistência quando uma cópia é atualizada e a outra não. Na abordagem de banco de dados um grupo de dados relacionados é compartilhado por diversos aplicativos, e é essa partilha que elimina a duplicação.",
+      "ordem": 23,
+      "evidencia": [
+        "Separa banco de dados, SGBD e DBA sem trocar conteúdo, software e pessoa",
+        "Explica de onde vem a redundância na abordagem tradicional"
+      ],
+      "checagem": "Qual é a diferença entre banco de dados, SGBD e DBA, e o que a abordagem de banco de dados elimina?",
+      "avaliacoes": [
+        "p2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Sistemas de Banco de dados e inteligência de negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/BancoDadosSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_24",
+      "nome": "A hierarquia dos dados",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Banco de Dados e Inteligência de Negócios",
+      "descricao": "Do menor elemento para o maior: bit (dígito binário, circuito ligado ou desligado), byte (normalmente oito bits), caractere (bloco básico de construção da informação), campo (nome, número ou combinação de caracteres que descreve um aspecto de um objeto), registro (coleção de campos relacionados), arquivo (coleção de registros relacionados) e banco de dados (coleção de arquivos integrados e relacionados).",
+      "ordem": 24,
+      "evidencia": [
+        "Escreve a hierarquia na ordem correta, do bit ao banco de dados",
+        "Dá um exemplo concreto de campo, registro e arquivo na mesma tabela"
+      ],
+      "checagem": "Coloque bit, byte, caractere, campo, registro, arquivo e banco de dados na ordem do menor para o maior.",
+      "avaliacoes": [
+        "p2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Sistemas de Banco de dados e inteligência de negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_25",
+      "nome": "Entidade, atributo, chave primária e o modelo relacional",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Banco de Dados e Inteligência de Negócios",
+      "descricao": "Entidade é a pessoa, o lugar ou a coisa sobre a qual os dados são coletados, atributo é uma característica dessa entidade, item de dados é o valor específico de um atributo e chave é o campo ou conjunto de campos usado para identificar um registro, sendo a chave principal a que identifica o registro de forma única. No modelo relacional os dados aparecem em formato tabular: cada linha é um registro, ou entidade, e cada coluna é um atributo, ou campo, sendo o domínio o intervalo de valores permitidos para um atributo. O modelo de dados é o diagrama das entidades e de suas relações, e o diagrama Entidade-Relacionamento usa símbolos gráficos para mostrar essa organização.",
+      "ordem": 25,
+      "evidencia": [
+        "Aponta entidade, atributo, item de dados e chave primária numa tabela concreta",
+        "Diz o que a linha e o que a coluna representam numa tabela relacional",
+        "Explica para que serve o domínio de um atributo"
+      ],
+      "checagem": "Numa tabela de alunos, o que é entidade, o que é atributo e o que é chave primária?",
+      "avaliacoes": [
+        "p2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Sistemas de Banco de dados e inteligência de negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/BancoDadosSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_26",
+      "nome": "Seleção, projeção, junção e vinculação",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Banco de Dados e Inteligência de Negócios",
+      "descricao": "As manipulações do modelo relacional: a seleção elimina linhas de acordo com um critério, como ficar só com os alunos do 1º período; a projeção elimina colunas, como ficar só com nome e matrícula; a junção combina duas ou mais tabelas em um resultado único; e a vinculação manipula tabelas que compartilham pelo menos um atributo em comum. O par seleção e projeção é o mais cobrado justamente porque é fácil trocar um pelo outro: quem corta linha é a seleção, quem corta coluna é a projeção.",
+      "ordem": 26,
+      "evidencia": [
+        "Nomeia a operação certa a partir do resultado pedido numa consulta",
+        "Explica por que projeção mantém todas as linhas"
+      ],
+      "checagem": "Qual operação elimina linhas e qual elimina colunas, e o que a junção faz?",
+      "avaliacoes": [
+        "p2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Sistemas de Banco de dados e inteligência de negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_27",
+      "nome": "As funções de um SGBD: esquema, DDL, DML, SQL e simultaneidade",
+      "tipo": "CONCEITUAL",
+      "unidade": "Banco de Dados e Inteligência de Negócios",
+      "descricao": "O SGBD fornece uma visão ao usuário, pois o esquema descreve todo o banco de dados e é consultado para localizar onde acessar os dados pedidos; cria e modifica o banco pela DDL, que descreve os dados e as relações, apoiada no dicionário de dados, que detalha todos os dados usados; armazena e recupera dados, e nessa função o controle de simultaneidade resolve o caso de dois usuários precisarem do mesmo registro ao mesmo tempo; e manipula dados e gera relatórios pela DML e pela SQL, adotada pelo ANSI como linguagem-padrão de consulta dos bancos relacionais, tendo o QBE como alternativa visual.",
+      "ordem": 27,
+      "evidencia": [
+        "Diz qual função do SGBD resolve o acesso concorrente ao mesmo registro",
+        "Separa a DDL, que define a estrutura, da DML, que manipula os dados",
+        "Explica o que o esquema descreve"
+      ],
+      "checagem": "Que recurso do SGBD impede que duas atualizações simultâneas se sobrescrevam, e qual a diferença entre DDL e DML?",
+      "avaliacoes": [
+        "p2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Sistemas de Banco de dados e inteligência de negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_28",
+      "nome": "Inteligência de negócios: datawarehouse, data mining e análise preditiva",
+      "tipo": "CONCEITUAL",
+      "unidade": "Banco de Dados e Inteligência de Negócios",
+      "descricao": "O datawarehouse é o banco que reúne informações comerciais de muitas fontes da empresa para apoiar a decisão, e o data mart é um subconjunto dele, recortado para uma área específica. Data mining é a descoberta automatizada de padrões e relações dentro do datawarehouse, e a análise preditiva combina dados históricos com suposições sobre o futuro para prever resultados. Inteligência empresarial é reunir a informação certa, no momento oportuno e de forma útil, e analisá-la para impactar estratégia, tática ou operações; a inteligência competitiva limita-se a informações sobre concorrentes e a contrainteligência protege as próprias informações. O OLAP permite explorar os dados sob múltiplas perspectivas e o NoSQL lida com dados que não se ajustam a tabelas.",
+      "ordem": 28,
+      "evidencia": [
+        "Separa datawarehouse de banco transacional pelo propósito de cada um",
+        "Reconhece data mining pela descoberta automatizada, sem hipótese formulada antes",
+        "Separa inteligência competitiva de contrainteligência"
+      ],
+      "checagem": "O que caracteriza o data mining, e em que o datawarehouse difere do banco que registra as vendas?",
+      "avaliacoes": [
+        "p2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Sistemas de Banco de dados e inteligência de negócios",
+        "Tomada de Decisão estratégica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_29",
+      "nome": "Telecomunicações, meios, canais e comutação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Telecomunicações e Redes",
+      "descricao": "Telecomunicações é a transmissão eletrônica de sinais para comunicação, o meio é a substância material que carrega o sinal e o protocolo de rede é o conjunto de regras, algoritmos e mensagens que permite que os dispositivos se comuniquem. Na comunicação síncrona o receptor recebe instantaneamente, na assíncrona recebe após atraso. Os canais são simplex (uma direção), half-duplex (duas direções, uma de cada vez) e full-duplex (duas direções ao mesmo tempo), e a largura de banda é a taxa de troca de dados em bits por segundo. A comutação de circuitos estabelece um circuito antes da comunicação e a de pacotes não cria caminho fixo. Os meios guiados são par trançado, coaxial e fibra óptica, e os sem fio vão de NFC, Bluetooth e Zigbee ao Wi-Fi, micro-ondas, satélite, 3G, 4G, LTE e WiMAX.",
+      "ordem": 29,
+      "evidencia": [
+        "Classifica um canal como simplex, half-duplex ou full-duplex a partir do uso descrito",
+        "Diz o que a comutação de pacotes não faz que a de circuitos faz",
+        "Ordena os meios guiados por qualidade de transmissão"
+      ],
+      "checagem": "O que é um protocolo de rede, e o que diferencia half-duplex de full-duplex?",
+      "avaliacoes": [
+        "atividades"
+      ],
+      "ementaPPC": [
+        "Telecomunicações e redes"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/RedesSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_30",
+      "nome": "Alcances de rede e alternativas de processamento",
+      "tipo": "CONCEITUAL",
+      "unidade": "Telecomunicações e Redes",
+      "descricao": "Por área de cobertura, as redes são PAN (área pessoal, cerca de 10 m), LAN (área local, escritório ou casa), MAN (área metropolitana, campus ou cidade) e WAN (área expandida, grandes regiões). Quanto ao processamento, o centralizado ocorre em um único local, o descentralizado usa dispositivos em vários locais remotos sem conexão entre si e o distribuído usa locais remotos conectados por uma rede, e é a conexão que separa os dois últimos. Na arquitetura cliente e servidor, o cliente requisita serviços e o servidor de banco de dados envia apenas os dados que satisfazem a consulta, não o arquivo inteiro.",
+      "ordem": 30,
+      "evidencia": [
+        "Classifica uma rede como PAN, LAN, MAN ou WAN pelo alcance descrito",
+        "Distingue processamento descentralizado de distribuído pela existência de rede",
+        "Explica o que o servidor de banco de dados devolve ao cliente"
+      ],
+      "checagem": "O que separa o processamento distribuído do descentralizado, e o que é uma MAN?",
+      "avaliacoes": [
+        "atividades"
+      ],
+      "ementaPPC": [
+        "Telecomunicações e redes"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/RedesSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_31",
+      "nome": "Hardware de rede: do modem ao gateway",
+      "tipo": "CONCEITUAL",
+      "unidade": "Telecomunicações e Redes",
+      "descricao": "O modem faz modulação e demodulação do sinal, o multiplexador combina dados de várias fontes num único sinal de saída, o comutador usa o endereço físico do dispositivo em cada mensagem que entra na rede, a ponte conecta duas LANs que usam o mesmo protocolo de telecomunicações, o roteador encaminha pacotes através de duas ou mais redes distintas até o destino e o gateway atua como a entrada para outra rede. A criptografia converte a mensagem numa forma que só o receptor pretendido entende, usando uma chave, o WEP foi superado pelo WPA e war driving é procurar pontos de acesso sem fio desprotegidos.",
+      "ordem": 31,
+      "evidencia": [
+        "Distingue ponte de roteador pelo que cada um atravessa",
+        "Atribui a função certa a modem, multiplexador e comutador",
+        "Explica o risco que o war driving explora numa rede sem fio"
+      ],
+      "checagem": "O que a ponte conecta e o que o roteador atravessa?",
+      "avaliacoes": [
+        "atividades"
+      ],
+      "ementaPPC": [
+        "Telecomunicações e redes"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_32",
+      "nome": "Origem e infraestrutura da internet: ARPANET, TCP/IP, backbone, URL e ICANN",
+      "tipo": "CONCEITUAL",
+      "unidade": "Internet, Intranet e Extranet",
+      "descricao": "A internet descende da ARPANET, projeto iniciado pelo Departamento de Defesa dos Estados Unidos em 1969. O protocolo IP possibilita que os computadores encaminhem tráfego de uma rede para outra e o TCP é o protocolo da camada de transporte usado com ele, formando o TCP/IP. O backbone é uma das conexões de longa distância e alta velocidade, a URL é o endereço que especifica a localização de uma página e a ICANN é a corporação responsável por gerenciar endereços IP e nomes de domínio, com autoridade para resolver disputas por nomes. O acesso se dá por servidor LAN ou por provedor (ISP), com enlaces discado, cabo, DSL, satélite e sem fio.",
+      "ordem": 32,
+      "evidencia": [
+        "Diz o que cabe ao IP e o que cabe ao TCP na pilha TCP/IP",
+        "Atribui à ICANN a gestão de endereços IP e nomes de domínio",
+        "Situa a ARPANET como origem da internet e a data de início"
+      ],
+      "checagem": "Qual é a função do IP, qual é a do TCP e o que a ICANN administra?",
+      "avaliacoes": [
+        "p2"
+      ],
+      "ementaPPC": [
+        "Internet, Intranet e Extranet"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/InternetSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_33",
+      "nome": "Internet como infraestrutura, web como serviço e as linguagens da web",
+      "tipo": "CONCEITUAL",
+      "unidade": "Internet, Intranet e Extranet",
+      "descricao": "A internet é a infraestrutura: computadores, hardware de rede, cabos, software e os protocolos TCP/IP. A web é um serviço que roda sobre ela, formado pelo software de servidor e cliente, pelo protocolo HTTP e pelas linguagens de marcação, e foi desenvolvida por Tim Berners-Lee no CERN, originalmente como sistema interno de gerenciamento de documentos. Não são sinônimos: e-mail, FTP e Telnet também são serviços da internet e não fazem parte da web. O HTML é a linguagem-padrão de descrição das páginas, com tags de formatação, o CSS define o aspecto visual, o XML estrutura documentos e é a chave dos serviços web (SOAP, WSDL e UDDI), e a Web 2.0 é a web bidirecional, em que o usuário também contribui com conteúdo. As ferramentas de busca localizam informações por palavras-chave usando spiders.",
+      "ordem": 33,
+      "evidencia": [
+        "Explica por que a web depende da internet e não o contrário",
+        "Cita serviços da internet que não são a web",
+        "Diz o que cada linguagem faz na página: HTML, CSS e XML"
+      ],
+      "checagem": "Qual afirmação distingue corretamente a internet da web, e onde entra o HTTP nessa distinção?",
+      "avaliacoes": [
+        "p2"
+      ],
+      "ementaPPC": [
+        "Internet, Intranet e Extranet"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/InternetSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_34",
+      "nome": "Internet, intranet e extranet, VPN e tunelamento",
+      "tipo": "CONCEITUAL",
+      "unidade": "Internet, Intranet e Extranet",
+      "descricao": "As três usam os mesmos padrões e tecnologias da internet e da web, e o que as separa é quem tem acesso: a internet é pública e mundial, a intranet é a rede corporativa interna, restrita aos membros da organização, e a extranet conecta recursos selecionados da intranet a usuários externos autorizados, como clientes, fornecedores e parceiros de negócios. A VPN é a rede privada que usa uma rede pública para conectar locais remotos com conexão criptografada, e o tunelamento é o processo de encapsular o tráfego em pacotes IP para transportá-lo.",
+      "ordem": 34,
+      "evidencia": [
+        "Escolhe entre intranet e extranet a partir de quem precisa acessar",
+        "Explica que a VPN é o mecanismo de conexão segura, não um tipo de rede por público",
+        "Define tunelamento como encapsulamento do tráfego em pacotes IP"
+      ],
+      "checagem": "Que rede atende um fornecedor externo que precisa consultar apenas o nível de estoque, e por quê?",
+      "avaliacoes": [
+        "p2"
+      ],
+      "ementaPPC": [
+        "Internet, Intranet e Extranet"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/InternetSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_35",
+      "nome": "Comércio eletrônico, m-commerce, e-procurement e e-business",
+      "tipo": "CONCEITUAL",
+      "unidade": "Comércio Eletrônico e Móvel",
+      "descricao": "Comércio eletrônico é realizar atividades comerciais eletronicamente por redes de computadores, e as atividades mais fortes candidatas à conversão são as baseadas em papel, demoradas e inconvenientes para o cliente. O e-procurement é o uso de SI e internet para adquirir peças e suprimentos; o m-commerce é o uso de celulares e dispositivos sem fio para fazer pedidos e conduzir negócios, limitado por telas pequenas, entrada limitada, menos processamento e menos largura de banda, com o WAP como padrão de especificações; e o e-business é mais amplo que todos, pois usa SI e internet para realizar todas as tarefas e funções relacionadas ao comércio.",
+      "ordem": 35,
+      "evidencia": [
+        "Ordena e-commerce, e-procurement e e-business do mais restrito ao mais amplo",
+        "Lista as limitações que o m-commerce enfrenta no dispositivo móvel",
+        "Reconhece quais atividades são melhores candidatas à conversão eletrônica"
+      ],
+      "checagem": "Por que o e-business é mais amplo que o comércio eletrônico, e o que limita o m-commerce?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "E-Business"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/ComercioEletronicoSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_36",
+      "nome": "Categorias B2B, B2C, C2C, governo eletrônico e desintermediação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Comércio Eletrônico e Móvel",
+      "descricao": "No B2B todos os participantes são organizações, e ele conecta parceiros na cadeia de suprimentos, reduzindo tempo de reabastecimento e custos. No B2C o cliente trata diretamente com a organização e evita intermediários. No C2C clientes vendem diretamente a outros clientes, em leilões e classificados on-line. O governo eletrônico aparece nas formas G2C, G2B e G2G. Desintermediação é a eliminação das organizações intermediárias entre o produtor e o consumidor, o efeito característico do B2C, que faz muitos bens saírem mais baratos on-line.",
+      "ordem": 36,
+      "evidencia": [
+        "Classifica uma transação em B2B, B2C, C2C ou governo eletrônico a partir de quem são as partes",
+        "Reconhece a desintermediação num caso de fabricante que passa a vender direto",
+        "Percebe que um site pode prestar serviço B2C e hospedar transações C2C"
+      ],
+      "checagem": "Que categoria descreve pessoas físicas vendendo objetos usados entre si, e o que é desintermediação?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "E-Business"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_37",
+      "nome": "O modelo de multiestágio e a estratégia do site",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Comércio Eletrônico e Móvel",
+      "descricao": "O modelo de multiestágio da compra eletrônica tem cinco etapas: busca e identificação, seleção e negociação, aquisição eletrônica de produtos e serviços, entrega, e serviços pós-venda, e um sistema bem-sucedido precisa atender a todas elas, pois falhar no pós-venda derruba a experiência inteira. As vantagens são redução de custos, aceleração do fluxo de bens e informações, aumento de precisão e melhora do atendimento; os desafios são privacidade do cliente, falta de confiança no vendedor e questões globais de cultura, idioma, moeda e legislação. O modelo de sucesso tem três componentes, comunidade, conteúdo e comércio, e o site precisa ser fácil de usar, cumprir as metas da empresa, ser seguro e acessível de manter. A personalização explícita captura o que o usuário fornece e a implícita captura dados das sessões dele.",
+      "ordem": 37,
+      "evidencia": [
+        "Ordena os cinco estágios e diz em qual deles um caso concreto falhou",
+        "Cita os três componentes do modelo de sucesso de um site",
+        "Separa personalização explícita de implícita pela origem do dado"
+      ],
+      "checagem": "Quais são os cinco estágios da compra eletrônica e os três componentes de um modelo de sucesso?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "E-Business"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/ComercioEletronicoSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_38",
+      "nome": "Pagamento eletrônico: certificado digital, autoridade certificadora e SSL",
+      "tipo": "CONCEITUAL",
+      "unidade": "Comércio Eletrônico e Móvel",
+      "descricao": "O certificado digital é o anexo a uma mensagem, ou o dado embutido em um site, que verifica a identidade de um remetente ou de um site, e é emitido por uma autoridade certificadora, organização terceirizada de confiança. O SSL é o protocolo usado para proteger dados sensíveis em trânsito. Somam-se o dinheiro eletrônico, quantia computadorizada usada à vista nas transações, o cartão inteligente, do tamanho de um cartão de crédito e com microchip embutido que fornece memória e capacidade de processamento, e o P-Card, que simplifica compras e pagamento de faturas.",
+      "ordem": 38,
+      "evidencia": [
+        "Diz quem emite o certificado digital e o que ele comprova",
+        "Separa o papel do SSL do papel do certificado digital",
+        "Explica o que o microchip acrescenta ao cartão inteligente"
+      ],
+      "checagem": "O que o certificado digital verifica, quem o emite e qual o papel do SSL?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "E-Business"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_39",
+      "nome": "Notação posicional, peso, as quatro bases, LSB e MSB",
+      "tipo": "CONCEITUAL",
+      "unidade": "Sistemas Numéricos e Conversões",
+      "descricao": "Na notação posicional, a posição de cada algarismo indica sua magnitude, também chamada de peso, e no decimal os pesos são potências de 10, o que faz 1328 valer 1x1000 mais 3x100 mais 2x10 mais 8x1. A mesma lógica vale para qualquer base, só muda a potência. As quatro bases da disciplina são decimal (0 a 9), binária (0 e 1, algarismos chamados bits), octal (0 a 7) e hexadecimal (0 a 9 e A a F, com A igual a 10 até F igual a 15). O LSB é o bit mais à direita, de menor peso, e o MSB é o mais à esquerda, de maior peso. Um grupo de 4 bits é um nibble e um de 8 bits é um byte, e com N bits representam-se 2 elevado a N valores, de 0 até 2 elevado a N menos 1.",
+      "ordem": 39,
+      "evidencia": [
+        "Escreve os pesos de cada posição em qualquer uma das quatro bases",
+        "Aponta o LSB e o MSB de um número binário",
+        "Calcula quantos valores 8 bits representam e qual é o maior deles"
+      ],
+      "checagem": "O que é o peso de uma posição, e quantos valores distintos 8 bits representam, sendo qual o maior?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "Conversão Numérica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SistemasNumericosSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_40",
+      "nome": "De qualquer base para decimal",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Sistemas Numéricos e Conversões",
+      "descricao": "Para converter de qualquer base para decimal, aplica-se a notação posicional: multiplica-se cada algarismo pelo peso da sua posição e somam-se os produtos. Exemplos do material: 100111 em binário dá 1x32 mais 1x4 mais 1x2 mais 1x1 igual a 39; 527 em octal dá 5x64 mais 2x8 mais 7x1 igual a 343; e 19C em hexadecimal dá 1x256 mais 9x16 mais 12x1 igual a 412, com C valendo 12.",
+      "ordem": 40,
+      "evidencia": [
+        "Converte um número binário, octal ou hexadecimal para decimal sem desalinhar os pesos",
+        "Substitui corretamente as letras do hexadecimal pelos valores de 10 a 15"
+      ],
+      "checagem": "Converta 101101 em binário e 19C em hexadecimal para decimal, mostrando os pesos usados.",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "Conversão Numérica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/ConversaoExemplos.tsx"
+    },
+    {
+      "id": "mt_FUSI_41",
+      "nome": "De decimal para qualquer base por divisões sucessivas",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Sistemas Numéricos e Conversões",
+      "descricao": "Para converter decimal em qualquer base, divide-se sucessivamente pela base até o quociente chegar a zero e monta-se a resposta com o último quociente seguido dos restos, lidos de baixo para cima. Exemplos: 39 dividido por 2 sucessivamente dá 100111 em binário; 343 dividido por 8 dá 527 em octal; e 412 dividido por 16 dá 19C em hexadecimal, com o resto 12 escrito como C.",
+      "ordem": 41,
+      "evidencia": [
+        "Monta a cadeia de divisões e lê os restos na ordem correta",
+        "Converte um resto maior que 9 no algarismo hexadecimal correspondente"
+      ],
+      "checagem": "Como se monta a resposta na conversão por divisões sucessivas, e em que ordem os restos entram?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "Conversão Numérica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/ConversaoExemplos.tsx"
+    },
+    {
+      "id": "mt_FUSI_42",
+      "nome": "Binário para octal e para hexadecimal por agrupamento",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Sistemas Numéricos e Conversões",
+      "descricao": "Para octal, agrupam-se os bits de 3 em 3 a partir do LSB e troca-se cada grupo pelo octal equivalente; no sentido inverso, cada algarismo octal vira 3 bits. Para hexadecimal, agrupa-se de 4 em 4 a partir do LSB, completando com zeros à esquerda quando faltar bit; no inverso, cada algarismo hexa vira 4 bits. Não há caminho direto entre octal e hexadecimal: passa-se pelo binário, porque 8 é 2 ao cubo e 16 é 2 à quarta, mas não há relação de grupos inteiros entre 8 e 16. É por isso que octal e hexadecimal existem em computação, para representar binário de forma compacta.",
+      "ordem": 42,
+      "evidencia": [
+        "Agrupa a partir do LSB e completa com zeros à esquerda quando o total de bits não fecha o grupo",
+        "Converte octal em hexadecimal passando pelo binário",
+        "Explica por que grupos de 3 bits dão octal e de 4 bits dão hexadecimal"
+      ],
+      "checagem": "Como se converte 110110110 em binário direto para hexadecimal, e por que octal e hexa não se convertem entre si diretamente?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "Conversão Numérica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/ConversaoExemplos.tsx"
+    },
+    {
+      "id": "mt_FUSI_43",
+      "nome": "Números fracionários: pesos negativos, multiplicações sucessivas e dízima binária",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Sistemas Numéricos e Conversões",
+      "descricao": "Depois da vírgula os pesos são potências negativas da base: em binário, 0,5 depois 0,25 depois 0,125 e depois 0,0625, então 0,101 em binário vale 0,625 em decimal. No sentido inverso, o decimal fracionário vira binário por multiplicações sucessivas por 2, anotando a parte inteira de cada produto na ordem em que aparece, e 0,625 dá 0,101. A conversão pode não terminar: 0,8 gera a dízima 0,11001100 e assim por diante, o que explica os erros de arredondamento em ponto flutuante. No fracionário, o agrupamento de 3 em 3 ou de 4 em 4 parte da vírgula para a direita, completando com zeros à direita.",
+      "ordem": 43,
+      "evidencia": [
+        "Converte um binário fracionário em decimal usando os pesos negativos",
+        "Aplica as multiplicações sucessivas e reconhece quando o processo entra em ciclo",
+        "Agrupa bits fracionários a partir da vírgula para a direita"
+      ],
+      "checagem": "Quanto vale 0,101 em binário, e o que acontece ao converter 0,8 decimal para binário?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "Conversão Numérica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/ConversaoExemplos.tsx"
+    },
+    {
+      "id": "mt_FUSI_44",
+      "nome": "Soma binária: as regras da adição e o transporte",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Soma e Subtração de Binários",
+      "descricao": "Somar em binário funciona como somar em decimal: alinha-se pela direita, opera-se coluna a coluna e leva-se o excedente para a coluna seguinte, só que o vai-um acontece ao chegar a 2, porque existem apenas os algarismos 0 e 1. As regras são 0 mais 0 igual a 0, 0 mais 1 igual a 1, 1 mais 0 igual a 1, 1 mais 1 igual a 10 (escreve 0 e leva 1) e 1 mais 1 mais 1 igual a 11 (escreve 1 e leva 1). Em 1011 mais 110, o transporte se propaga e o resultado é 10001, conferido em decimal por 11 mais 6 igual a 17.",
+      "ordem": 44,
+      "evidencia": [
+        "Aplica as cinco regras da adição binária propagando o transporte até o fim",
+        "Completa com zero à esquerda para alinhar operandos de tamanhos diferentes",
+        "Confere o resultado convertendo os operandos e a soma para decimal"
+      ],
+      "checagem": "Quanto é 1011 mais 110 em binário, e o que se escreve e o que se transporta quando 1 mais 1 aparece?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/AritmeticaBinariaSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_45",
+      "nome": "Subtração binária: o empréstimo e a conferência em decimal",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Soma e Subtração de Binários",
+      "descricao": "Na subtração, quando o bit de cima é menor que o de baixo, pega-se emprestado da coluna à esquerda: no decimal o empréstimo vale 10, no binário vale 2. As quatro combinações são 0 menos 0 igual a 0, 1 menos 0 igual a 1, 1 menos 1 igual a 0 e 0 menos 1 igual a 1 com empréstimo. Quando as colunas vizinhas são todas zero, o empréstimo se propaga até achar um 1, que é consumido, e cada zero atravessado vira 1: 10000 menos 1 dá 1111. Toda operação binária se verifica em três passos, convertendo os operandos para decimal, fazendo a conta em decimal e convertendo o resultado de volta para binário.",
+      "ordem": 45,
+      "evidencia": [
+        "Resolve uma subtração binária com empréstimo em cadeia sobre uma sequência de zeros",
+        "Diz quanto vale o empréstimo em binário e por quê",
+        "Verifica o resultado pelos três passos da conferência em decimal"
+      ],
+      "checagem": "Quanto é 10000 menos 1 em binário, e como o empréstimo se propaga sobre os zeros?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/AritmeticaBinariaSection.tsx"
+    }
+  ],
+  "arestas": [
+    {
+      "topicoId": "mt_FUSI_03",
+      "prerequisitoId": "mt_FUSI_02",
+      "forca": "hard",
+      "razao": "Conhecimento é definido como compreensão de um conjunto de informações, então sem a noção de informação a definição não fecha.",
+      "origem": "texto",
+      "trecho": "Conhecimento é a consciência e compreensão de um conjunto de informações e de como elas podem ser úteis para apoiar uma tarefa ou decisão."
+    },
+    {
+      "topicoId": "mt_FUSI_04",
+      "prerequisitoId": "mt_FUSI_02",
+      "forca": "hard",
+      "razao": "Os onze atributos qualificam a informação, logo pressupõem que o aluno já saiba o que é informação e como ela se distingue do dado bruto.",
+      "origem": "texto",
+      "trecho": "CARACTERÍSTICAS DA INFORMAÇÃO VALIOSA: precisa (livre de erro), completa (contém todos os fatos importantes)"
+    },
+    {
+      "topicoId": "mt_FUSI_05",
+      "prerequisitoId": "mt_FUSI_02",
+      "forca": "hard",
+      "razao": "Os componentes do sistema são descritos em termos de dados que entram e informação que sai, então a distinção dado e informação vem antes.",
+      "origem": "texto",
+      "trecho": "ENTRADA (captar e reunir dados brutos), PROCESSAMENTO (converter ou transformar dados em saídas úteis), SAÍDA (produzir informação útil, normalmente documentos e relatórios)"
+    },
+    {
+      "topicoId": "mt_FUSI_06",
+      "prerequisitoId": "mt_FUSI_05",
+      "forca": "hard",
+      "razao": "Eficiência e eficácia são medidas do desempenho de um sistema, então só fazem sentido depois de saber o que é sistema e o que ele produz.",
+      "origem": "texto",
+      "trecho": "DESEMPENHO DO SISTEMA: eficiência é a medida do que é produzido dividido pelo que é consumido (fazer certo, com menos recurso)"
+    },
+    {
+      "topicoId": "mt_FUSI_07",
+      "prerequisitoId": "mt_FUSI_05",
+      "forca": "hard",
+      "razao": "O CBIS é apresentado como um caso particular de sistema de informação, o baseado em computador, e repete a mesma finalidade de coletar, manipular, armazenar e processar dados em informação.",
+      "origem": "texto",
+      "trecho": "Um CBIS (Sistema de Informação Baseado em Computador) é o conjunto único desses seis componentes, configurados para coletar, manipular, armazenar e processar os dados em informação."
+    },
+    {
+      "topicoId": "mt_FUSI_08",
+      "prerequisitoId": "mt_FUSI_06",
+      "forca": "hard",
+      "razao": "A distinção mais cobrada entre MIS e DSS é escrita justamente com os termos eficiência e eficácia, então sem esse par o aluno não separa os dois sistemas.",
+      "origem": "texto",
+      "trecho": "Distinção-chave de prova: MIS = rotina + eficiência + relatórios padrão; DSS = problema específico + eficácia + decisão complexa."
+    },
+    {
+      "topicoId": "mt_FUSI_09",
+      "prerequisitoId": "mt_FUSI_03",
+      "forca": "hard",
+      "razao": "O SGC é definido pelo que faz com o conhecimento da organização, e o sistema especialista se apoia numa base de conhecimento, então o conceito de conhecimento precisa estar firme antes.",
+      "origem": "texto",
+      "trecho": "SISTEMAS ESPECIALIZADOS: SGC (gestão do conhecimento) cria, armazena, compartilha e usa o conhecimento da organização"
+    },
+    {
+      "topicoId": "mt_FUSI_10",
+      "prerequisitoId": "mt_FUSI_05",
+      "forca": "soft",
+      "razao": "As cinco etapas descrevem como se cria ou modifica um sistema, então a noção de sistema ajuda a ler o que cada etapa entrega.",
+      "origem": "texto",
+      "trecho": "DESENVOLVIMENTO DE SISTEMAS: atividade de criar ou modificar sistemas empresariais existentes"
+    },
+    {
+      "topicoId": "mt_FUSI_11",
+      "prerequisitoId": "mt_FUSI_05",
+      "forca": "hard",
+      "razao": "O capítulo trata a própria organização como um sistema, com entradas, transformação e saídas, o que só se entende com os componentes de sistema já vistos.",
+      "origem": "texto",
+      "trecho": "Organização é uma coleção formal de pessoas e outros recursos estabelecida para alcançar um conjunto de metas; é ela própria um sistema, com entradas, mecanismo de transformação e saídas."
+    },
+    {
+      "topicoId": "mt_FUSI_12",
+      "prerequisitoId": "mt_FUSI_11",
+      "forca": "hard",
+      "razao": "As estruturas descrevem como a organização distribui decisão e autoridade, então sem o conceito de organização não há o que estruturar.",
+      "origem": "texto",
+      "trecho": "ESTRUTURAS ORGANIZACIONAIS: tradicional (hierarquia de decisão e fluxo de autoridade do topo à base)"
+    },
+    {
+      "topicoId": "mt_FUSI_13",
+      "prerequisitoId": "mt_FUSI_12",
+      "forca": "soft",
+      "razao": "A reengenharia é definida como revisão radical que inclui as estruturas organizacionais, então conhecer as estruturas ajuda a medir o tamanho da ruptura.",
+      "origem": "texto",
+      "trecho": "Reengenharia é a revisão radical dos processos comerciais, das estruturas organizacionais, dos sistemas de informação e dos valores da organização, para alcançar um novo patamar de resultados"
+    },
+    {
+      "topicoId": "mt_FUSI_14",
+      "prerequisitoId": "mt_FUSI_06",
+      "forca": "soft",
+      "razao": "A produtividade é a mesma razão entre saída e entrada que define eficiência, agora escrita como percentual, então o par eficiência e eficácia prepara a medição.",
+      "origem": "texto",
+      "trecho": "MEDINDO O DESEMPENHO DO SI: PRODUTIVIDADE = (Saída/Entrada) × 100%"
+    },
+    {
+      "topicoId": "mt_FUSI_14",
+      "prerequisitoId": "mt_FUSI_11",
+      "forca": "soft",
+      "razao": "Vantagem competitiva é benefício de uma empresa sobre concorrentes, então pressupõe a organização como unidade de análise.",
+      "origem": "texto",
+      "trecho": "VANTAGEM COMPETITIVA: benefício significativo e, idealmente, de longo prazo de uma empresa sobre seus concorrentes."
+    },
+    {
+      "topicoId": "mt_FUSI_15",
+      "prerequisitoId": "mt_FUSI_07",
+      "forca": "soft",
+      "razao": "O capítulo de hardware detalha um dos seis componentes já nomeados no CBIS, o dos equipamentos que fazem entrada, processamento, armazenamento e saída.",
+      "origem": "texto",
+      "trecho": "Os equipamentos que realizam entrada, processamento, armazenamento e saída."
+    },
+    {
+      "topicoId": "mt_FUSI_16",
+      "prerequisitoId": "mt_FUSI_15",
+      "forca": "soft",
+      "razao": "A memória cache é definida pela relação com o processador, que a acessa mais rápido que a memória principal, então a CPU precisa estar apresentada antes.",
+      "origem": "texto",
+      "trecho": "a memória CACHE é de alta velocidade e é acessada pelo processador mais rapidamente que a memória principal"
+    },
+    {
+      "topicoId": "mt_FUSI_17",
+      "prerequisitoId": "mt_FUSI_16",
+      "forca": "hard",
+      "razao": "O armazenamento secundário é apresentado por contraste com a memória, em volatilidade, capacidade e custo, então sem RAM e ROM o contraste não existe.",
+      "origem": "texto",
+      "trecho": "Comparado à memória, o armazenamento secundário é NÃO VOLÁTIL, tem maior capacidade e é bem mais barato por megabyte."
+    },
+    {
+      "topicoId": "mt_FUSI_18",
+      "prerequisitoId": "mt_FUSI_15",
+      "forca": "soft",
+      "razao": "As classes se separam por poder de processamento e número de usuários, e escalabilidade é definida como aumentar esse poder, o que exige a noção de processador.",
+      "origem": "texto",
+      "trecho": "Escalabilidade é a capacidade de aumentar o poder de processamento para atender mais usuários, dados ou transações."
+    },
+    {
+      "topicoId": "mt_FUSI_19",
+      "prerequisitoId": "mt_FUSI_15",
+      "forca": "hard",
+      "razao": "Software de sistemas é definido como o que coordena as atividades e funções do hardware, então o capítulo de hardware vem antes por definição.",
+      "origem": "texto",
+      "trecho": "Software de sistemas é o conjunto de programas que coordena as atividades e funções do hardware e de outros programas."
+    },
+    {
+      "topicoId": "mt_FUSI_20",
+      "prerequisitoId": "mt_FUSI_19",
+      "forca": "hard",
+      "razao": "O sistema operacional é o principal software de sistemas e se define por controlar o hardware e servir de interface com os aplicativos, as duas categorias vistas antes.",
+      "origem": "texto",
+      "trecho": "O sistema operacional é o conjunto de programas que controla o hardware e atua como interface com os programas aplicativos."
+    },
+    {
+      "topicoId": "mt_FUSI_21",
+      "prerequisitoId": "mt_FUSI_19",
+      "forca": "soft",
+      "razao": "As três abordagens de aquisição tratam especificamente do software aplicativo, categoria apresentada no tópico anterior.",
+      "origem": "texto",
+      "trecho": "São três as abordagens para obter software aplicativo: construir um software proprietário, comprar um programa comercialmente disponível ou combinar as duas coisas."
+    },
+    {
+      "topicoId": "mt_FUSI_21",
+      "prerequisitoId": "mt_FUSI_14",
+      "forca": "soft",
+      "razao": "O argumento a favor do software proprietário é que ele pode gerar vantagem competitiva, conceito que vem do capítulo de organizações.",
+      "origem": "texto",
+      "trecho": "software PROPRIETÁRIO (programa único desenvolvido para um aplicativo específico, geralmente sob encomenda, que pode gerar vantagem competitiva)"
+    },
+    {
+      "topicoId": "mt_FUSI_22",
+      "prerequisitoId": "mt_FUSI_19",
+      "forca": "soft",
+      "razao": "A linguagem é o meio pelo qual o programa é escrito, então a noção de programa de computador e de suas categorias precede o estudo das linguagens.",
+      "origem": "texto",
+      "trecho": "Um programa de computador é uma sequência de instruções para o computador, e a documentação descreve suas funções para auxiliar quem opera o sistema."
+    },
+    {
+      "topicoId": "mt_FUSI_23",
+      "prerequisitoId": "mt_FUSI_07",
+      "forca": "soft",
+      "razao": "O banco de dados já aparece como um dos seis componentes do CBIS, e o capítulo apenas abre esse componente.",
+      "origem": "texto",
+      "trecho": "Coleção organizada de fatos e informações, com dois ou mais arquivos de dados relacionados."
+    },
+    {
+      "topicoId": "mt_FUSI_24",
+      "prerequisitoId": "mt_FUSI_23",
+      "forca": "soft",
+      "razao": "A hierarquia termina exatamente no conceito de banco de dados como coleção de arquivos integrados, apresentado no tópico anterior.",
+      "origem": "texto",
+      "trecho": "ARQUIVO (coleção de registros relacionados) → BANCO DE DADOS (coleção de arquivos integrados e relacionados)"
+    },
+    {
+      "topicoId": "mt_FUSI_25",
+      "prerequisitoId": "mt_FUSI_24",
+      "forca": "hard",
+      "razao": "No modelo relacional a linha é um registro e a coluna é um campo, dois níveis da hierarquia dos dados, então sem a hierarquia a tabela não se lê.",
+      "origem": "texto",
+      "trecho": "MODELO RELACIONAL descreve os dados em formato tabular: cada LINHA é um registro (entidade) e cada COLUNA é um atributo (campo)"
+    },
+    {
+      "topicoId": "mt_FUSI_26",
+      "prerequisitoId": "mt_FUSI_25",
+      "forca": "hard",
+      "razao": "As operações são descritas como eliminar linhas ou colunas e combinar tabelas, o que só faz sentido depois do formato tabular do modelo relacional.",
+      "origem": "texto",
+      "trecho": "Manipulações: SELEÇÃO elimina LINHAS conforme um critério, PROJEÇÃO elimina COLUNAS, JUNÇÃO combina duas ou mais tabelas"
+    },
+    {
+      "topicoId": "mt_FUSI_27",
+      "prerequisitoId": "mt_FUSI_23",
+      "forca": "hard",
+      "razao": "As funções detalhadas são funções do SGBD, cuja definição como grupo de programas que manipula o banco vem antes.",
+      "origem": "texto",
+      "trecho": "SGBD/DBMS é o grupo de programas que manipula o banco de dados e fornece a interface entre ele, os usuários e os aplicativos."
+    },
+    {
+      "topicoId": "mt_FUSI_27",
+      "prerequisitoId": "mt_FUSI_25",
+      "forca": "soft",
+      "razao": "A DDL define dados e relações, e o esquema descreve o banco todo, então ajuda ter em mãos entidade, atributo e o formato tabular.",
+      "origem": "texto",
+      "trecho": "DDL (linguagem de definição de dados) define e descreve os dados e relações"
+    },
+    {
+      "topicoId": "mt_FUSI_28",
+      "prerequisitoId": "mt_FUSI_23",
+      "forca": "hard",
+      "razao": "O datawarehouse é ele mesmo um banco de dados, distinto do banco que registra a operação, então a definição de banco de dados vem primeiro.",
+      "origem": "texto",
+      "trecho": "DATAWAREHOUSE é o banco que reúne informações de muitas fontes da empresa para apoiar decisão; DATA MART é um subconjunto do datawarehouse"
+    },
+    {
+      "topicoId": "mt_FUSI_28",
+      "prerequisitoId": "mt_FUSI_04",
+      "forca": "soft",
+      "razao": "A definição de inteligência empresarial repete os atributos da informação valiosa, a informação certa, no momento oportuno e de forma útil.",
+      "origem": "texto",
+      "trecho": "INTELIGÊNCIA EMPRESARIAL (BI) é reunir a informação certa, no momento oportuno e de forma útil, e analisá-la para impactar positivamente a estratégia, a tática ou as operações"
+    },
+    {
+      "topicoId": "mt_FUSI_30",
+      "prerequisitoId": "mt_FUSI_29",
+      "forca": "hard",
+      "razao": "A diferença entre processamento distribuído e descentralizado é a existência de rede ligando os locais, então o conceito de rede precisa estar dado.",
+      "origem": "texto",
+      "trecho": "O que separa o distribuído do descentralizado é justamente a conexão: nos dois casos o processamento ocorre em locais remotos, mas no distribuído esses locais estão ligados por uma rede."
+    },
+    {
+      "topicoId": "mt_FUSI_31",
+      "prerequisitoId": "mt_FUSI_29",
+      "forca": "hard",
+      "razao": "Ponte, roteador e gateway são descritos pelo protocolo e pelas redes que atravessam, então o conceito de protocolo de rede é pré-requisito direto.",
+      "origem": "texto",
+      "trecho": "O protocolo de rede é o conjunto de regras, algoritmos, mensagens e mecanismos que permite que softwares e hardwares conectados se comuniquem de forma eficaz."
+    },
+    {
+      "topicoId": "mt_FUSI_31",
+      "prerequisitoId": "mt_FUSI_30",
+      "forca": "hard",
+      "razao": "A ponte é definida como o equipamento que conecta duas LANs, sigla apresentada na classificação de redes por alcance.",
+      "origem": "texto",
+      "trecho": "Conecta duas LANs que usam o mesmo protocolo de telecomunicações."
+    },
+    {
+      "topicoId": "mt_FUSI_32",
+      "prerequisitoId": "mt_FUSI_29",
+      "forca": "hard",
+      "razao": "TCP e IP são protocolos que encaminham tráfego de uma rede para outra, então sem o conceito de protocolo e de rede a pilha TCP/IP fica sem sentido.",
+      "origem": "texto",
+      "trecho": "O PROTOCOLO IP possibilita que os computadores encaminhem tráfego de uma rede para outra, e o TCP é o protocolo da camada de transporte usado com o IP"
+    },
+    {
+      "topicoId": "mt_FUSI_33",
+      "prerequisitoId": "mt_FUSI_32",
+      "forca": "hard",
+      "razao": "A web é definida como serviço que roda sobre a infraestrutura da internet, logo a infraestrutura e o TCP/IP vêm antes.",
+      "origem": "texto",
+      "trecho": "A internet é a infraestrutura de redes e protocolos TCP/IP; a web é um serviço que roda sobre ela, com HTTP e linguagens de marcação"
+    },
+    {
+      "topicoId": "mt_FUSI_34",
+      "prerequisitoId": "mt_FUSI_33",
+      "forca": "hard",
+      "razao": "Intranet e extranet são construídas com os padrões e as tecnologias da internet e da web, então essas tecnologias precisam estar apresentadas.",
+      "origem": "texto",
+      "trecho": "INTRANET é a rede corporativa INTERNA construída com padrões e tecnologias da internet e da web, restrita aos membros da organização"
+    },
+    {
+      "topicoId": "mt_FUSI_35",
+      "prerequisitoId": "mt_FUSI_29",
+      "forca": "soft",
+      "razao": "Comércio eletrônico é definido como atividade comercial conduzida por redes de computadores, então o vocabulário de rede sustenta o capítulo.",
+      "origem": "texto",
+      "trecho": "Comércio eletrônico é realizar atividades comerciais eletronicamente por redes de computadores"
+    },
+    {
+      "topicoId": "mt_FUSI_35",
+      "prerequisitoId": "mt_FUSI_32",
+      "forca": "soft",
+      "razao": "E-business e e-procurement são definidos pelo uso de SI e da internet, então a internet precisa estar entendida como infraestrutura antes.",
+      "origem": "texto",
+      "trecho": "e-business usa SI e internet para realizar TODAS as tarefas e funções relacionadas ao comércio, sendo portanto mais amplo que o e-commerce"
+    },
+    {
+      "topicoId": "mt_FUSI_36",
+      "prerequisitoId": "mt_FUSI_35",
+      "forca": "hard",
+      "razao": "As categorias classificam transações de comércio eletrônico por quem são as partes, então a definição de comércio eletrônico é pré-requisito direto.",
+      "origem": "texto",
+      "trecho": "B2B ocorre quando todos os participantes são organizações; B2C quando a empresa vende ao consumidor final; e G2C é uma forma de governo eletrônico, do governo para o cidadão."
+    },
+    {
+      "topicoId": "mt_FUSI_36",
+      "prerequisitoId": "mt_FUSI_11",
+      "forca": "soft",
+      "razao": "O B2B é apresentado como o que conecta parceiros na cadeia de suprimentos, conceito visto no capítulo de organizações.",
+      "origem": "texto",
+      "trecho": "Conecta parceiros na cadeia de suprimentos virtual, reduzindo tempo de reabastecimento e custos."
+    },
+    {
+      "topicoId": "mt_FUSI_37",
+      "prerequisitoId": "mt_FUSI_35",
+      "forca": "hard",
+      "razao": "Os cinco estágios descrevem a compra eletrônica, então dependem da definição de comércio eletrônico e do seu escopo.",
+      "origem": "texto",
+      "trecho": "MODELO DE MULTIESTÁGIO da compra eletrônica, em cinco etapas: (1) busca e identificação, (2) seleção e negociação, (3) aquisição eletrônica de produtos e serviços, (4) entrega e (5) serviços pós-venda."
+    },
+    {
+      "topicoId": "mt_FUSI_38",
+      "prerequisitoId": "mt_FUSI_35",
+      "forca": "soft",
+      "razao": "Os meios de pagamento eletrônico existem para viabilizar a transação comercial eletrônica, então o capítulo os apresenta depois de definir o comércio eletrônico.",
+      "origem": "texto",
+      "trecho": "PAGAMENTO ELETRÔNICO: certificado digital verifica a identidade de um remetente ou site e é emitido por uma autoridade certificadora (CA), terceiro confiável; SSL protege dados sensíveis"
+    },
+    {
+      "topicoId": "mt_FUSI_39",
+      "prerequisitoId": "mt_FUSI_24",
+      "forca": "soft",
+      "razao": "Bit e byte já foram definidos na hierarquia dos dados, e o bloco numérico retoma exatamente esses termos ao tratar de nibble, byte e faixa de N bits.",
+      "origem": "texto",
+      "trecho": "BIT (dígito binário, circuito ligado ou desligado) → BYTE (normalmente oito bits)"
+    },
+    {
+      "topicoId": "mt_FUSI_40",
+      "prerequisitoId": "mt_FUSI_39",
+      "forca": "hard",
+      "razao": "Converter qualquer base para decimal é literalmente aplicar a notação posicional, multiplicando cada algarismo pelo peso da posição.",
+      "origem": "texto",
+      "trecho": "QUALQUER BASE → DECIMAL: aplicar notação posicional, multiplicando cada algarismo pelo peso da sua posição e somando."
+    },
+    {
+      "topicoId": "mt_FUSI_41",
+      "prerequisitoId": "mt_FUSI_39",
+      "forca": "hard",
+      "razao": "As divisões sucessivas são feitas pela base de destino e os restos precisam ser lidos como algarismos daquela base, incluindo as letras do hexadecimal.",
+      "origem": "texto",
+      "trecho": "DECIMAL → QUALQUER BASE: divisões sucessivas pela base, tomando o último quociente e os restos das divisões na ordem inversa."
+    },
+    {
+      "topicoId": "mt_FUSI_42",
+      "prerequisitoId": "mt_FUSI_39",
+      "forca": "hard",
+      "razao": "O agrupamento parte do LSB e troca grupos de bits por algarismos de octal ou hexa, o que exige a notação posicional e o vocabulário LSB e MSB.",
+      "origem": "texto",
+      "trecho": "BINÁRIO ↔ OCTAL: agrupar os bits de 3 EM 3 a partir do LSB e substituir cada grupo pelo octal equivalente"
+    },
+    {
+      "topicoId": "mt_FUSI_43",
+      "prerequisitoId": "mt_FUSI_40",
+      "forca": "hard",
+      "razao": "O fracionário para decimal é a mesma notação posicional do tópico anterior, agora com pesos negativos.",
+      "origem": "texto",
+      "trecho": "FRACIONÁRIOS: binário fracionário → decimal aplica notação posicional com pesos negativos (2⁻¹ = 0,5; 2⁻² = 0,25; 2⁻³ = 0,125)."
+    },
+    {
+      "topicoId": "mt_FUSI_43",
+      "prerequisitoId": "mt_FUSI_41",
+      "forca": "soft",
+      "razao": "O material contrasta explicitamente os dois métodos: multiplicações sucessivas para a parte fracionária e divisões sucessivas para a parte inteira.",
+      "origem": "texto",
+      "trecho": "o método correto para a parte fracionária é mesmo o das multiplicações sucessivas (as divisões sucessivas servem para a parte inteira)"
+    },
+    {
+      "topicoId": "mt_FUSI_43",
+      "prerequisitoId": "mt_FUSI_42",
+      "forca": "soft",
+      "razao": "No fracionário o agrupamento de 3 em 3 e de 4 em 4 inverte o sentido, partindo da vírgula para a direita, o que só se percebe conhecendo o agrupamento da parte inteira.",
+      "origem": "texto",
+      "trecho": "No fracionário, o agrupamento de 3 em 3 (octal) ou de 4 em 4 (hexa) parte da VÍRGULA para a direita, completando com zeros à direita se faltar bit."
+    },
+    {
+      "topicoId": "mt_FUSI_44",
+      "prerequisitoId": "mt_FUSI_39",
+      "forca": "hard",
+      "razao": "A soma binária alinha pelo bit menos significativo e depende de a base 2 ter apenas os algarismos 0 e 1, conteúdo do tópico de notação posicional e bases.",
+      "origem": "texto",
+      "trecho": "Somar em binário funciona exatamente como somar em decimal: alinha-se pela direita, opera-se coluna a coluna e leva-se o excedente para a coluna seguinte."
+    },
+    {
+      "topicoId": "mt_FUSI_44",
+      "prerequisitoId": "mt_FUSI_40",
+      "forca": "soft",
+      "razao": "A conferência do resultado da soma passa por converter os operandos e o total para decimal, procedimento do tópico de conversão para decimal.",
+      "origem": "texto",
+      "trecho": "Conferindo em decimal, 11 + 6 = 17 = 10001₂."
+    },
+    {
+      "topicoId": "mt_FUSI_45",
+      "prerequisitoId": "mt_FUSI_44",
+      "forca": "hard",
+      "razao": "O empréstimo é o espelho do transporte da adição, e o material apresenta a subtração depois de fixar o mecanismo coluna a coluna da soma.",
+      "origem": "texto",
+      "trecho": "No decimal, o empréstimo vale 10; no binário, vale 2."
+    },
+    {
+      "topicoId": "mt_FUSI_45",
+      "prerequisitoId": "mt_FUSI_41",
+      "forca": "soft",
+      "razao": "A verificação em três passos exige converter o resultado decimal de volta para binário, o que é o método das divisões sucessivas.",
+      "origem": "texto",
+      "trecho": "Toda operação binária pode ser verificada em três passos: converta os dois operandos para decimal, faça a conta em decimal e converta o resultado de volta para binário."
+    }
+  ]
+}

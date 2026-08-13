@@ -1,6 +1,6 @@
 {
   "versao": "v1",
-  "totalTopicos": 462,
+  "totalTopicos": 597,
   "topicos": [
     {
       "id": "mt_ALPG_01",
@@ -3769,6 +3769,1072 @@
       "fonte": "src/content/comportamento-organizacional/ComportamentoOrganizacionalSections.tsx"
     },
     {
+      "id": "mt_EMPD_01",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Fundamentos e escolas",
+      "nome": "Empreender é explorar oportunidade sob incerteza",
+      "descricao": "Empreender é identificar, construir e explorar uma oportunidade sob incerteza, mobilizando recursos para gerar valor. Abrir uma empresa pode ser consequência desse processo, mas não é a definição completa, e confundir as duas coisas é o erro que mais custa ponto. A palavra vem do francês entreprendre, e a linhagem econômica já tratava o tema: Cantillon via o lucro como compensação por comprar recursos a preços conhecidos e vender em condições incertas, e Say destacava a combinação e a coordenação dos fatores de produção.",
+      "ordem": 1,
+      "centralidade": 0.4,
+      "evidencia": [
+        "Define empreender em uma frase sem reduzir a definição a abrir empresa",
+        "Aponta oportunidade e incerteza como o par que sustenta a definição",
+        "Diz o que Cantillon e Say acrescentam: lucro pela incerteza e coordenação de recursos"
+      ],
+      "checagem": "O que é empreender, e por que abrir uma empresa não serve como definição?",
+      "avaliacoes": [],
+      "ementaPPC": [
+        "Conceito de empreendedorismo e empreendimento"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/FundamentosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_02",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Fundamentos e escolas",
+      "nome": "Risco não é incerteza",
+      "descricao": "Na formulação de Frank Knight, risco admite probabilidades estimáveis, como a operadora que sabe estatisticamente quantos sinistros terá no ano, e incerteza envolve eventos cuja distribuição não se conhece, como a demanda por um produto inédito, seu preço e seu comportamento de uso. A distinção é sobre o conhecimento da distribuição, não sobre o tipo de perda. É por isso que uma startup não pode ser administrada apenas por previsão rígida: o plano precisaria de dados que ainda não existem.",
+      "ordem": 2,
+      "centralidade": 0.3182,
+      "evidencia": [
+        "Classifica uma situação concreta como risco ou como incerteza e justifica pela distribuição conhecida",
+        "Dá um exemplo de risco e um de incerteza dentro do mesmo negócio digital",
+        "Explica por que previsão rígida falha em uma startup"
+      ],
+      "checagem": "Qual é a diferença entre risco e incerteza, e qual das duas descreve a demanda por um produto inédito?",
+      "avaliacoes": [],
+      "ementaPPC": [
+        "Conceito de empreendedorismo e empreendimento"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/FundamentosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_03",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Fundamentos e escolas",
+      "nome": "De onde vem a oportunidade: inovação e desequilíbrio",
+      "descricao": "Schumpeter coloca a inovação no centro: o empreendedor introduz novas combinações de produtos, processos, mercados, fontes de recursos ou formas de organização, e a destruição criativa ocorre quando essas combinações tornam estruturas anteriores menos relevantes. Kirzner descreve o empreendedor alerta a desequilíbrios: a oportunidade existe porque preços, necessidades, informações e recursos ainda não estão perfeitamente coordenados, o que explica negócios que não criam tecnologia radical e apenas conectam oferta e demanda melhor do que os existentes.",
+      "ordem": 3,
+      "centralidade": 0,
+      "evidencia": [
+        "Separa a oportunidade como nova combinação (Schumpeter) da oportunidade como desequilíbrio ainda não explorado (Kirzner)",
+        "Classifica um negócio digital conhecido em uma das duas leituras e defende a escolha",
+        "Explica por que a maior parte dos negócios digitais bem sucedidos cabe na leitura de Kirzner"
+      ],
+      "checagem": "Um aplicativo que só conecta oferta e demanda já existentes ilustra melhor Schumpeter ou Kirzner, e por quê?",
+      "avaliacoes": [],
+      "ementaPPC": [
+        "Conceito de empreendedorismo e empreendimento"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/FundamentosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_04",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Fundamentos e escolas",
+      "nome": "Intenção e perfil de quem empreende",
+      "descricao": "Na Teoria do Comportamento Planejado, de Icek Ajzen, a intenção de empreender depende de três fatores: atitude diante do comportamento, normas subjetivas e controle comportamental percebido. Por isso alguém pode valorizar o empreendedorismo e não agir, se o ambiente ao redor desaprova ou se não acredita ter recursos e capacidade. David McClelland acrescenta a necessidade de realização: metas desafiadoras, responsabilidade pessoal, busca de feedback e riscos moderados, ou seja, risco calculado quando se pode influenciar o resultado, e não gosto por perigo.",
+      "ordem": 4,
+      "centralidade": 0,
+      "evidencia": [
+        "Nomeia os três fatores de Ajzen e aplica cada um ao caso de alguém que admira empreender e não empreende",
+        "Distingue risco calculado de gosto por perigo na leitura de McClelland",
+        "Explica por que capital e rede de contatos não são componentes do modelo de Ajzen"
+      ],
+      "checagem": "Quais são os três fatores da intenção em Ajzen, e o que McClelland chama de necessidade de realização?",
+      "avaliacoes": [],
+      "ementaPPC": [
+        "Perfil do empreendedor"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/FundamentosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_05",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Fundamentos e escolas",
+      "nome": "O empreendedor de SI: cientista, engenheiro e líder",
+      "descricao": "Em uma startup, o profissional de Sistemas de Informação atua nos três papéis ao mesmo tempo: como cientista formula hipóteses e mede resultados, como engenheiro constrói sistemas confiáveis e como líder alinha pessoas e decisões. O erro frequente é deixar a identidade de engenheiro dominar e desenvolver muito antes de descobrir se alguém precisa da solução. Man e Lau organizam as competências em oportunidade, relacionamento, conceitual, estratégica, comprometimento e organização, e as hard skills técnicas não substituem as soft skills que absorvem evidência e corrigem a rota.",
+      "ordem": 5,
+      "centralidade": 0,
+      "evidencia": [
+        "Nomeia os três papéis e diz qual decisão cada um sustenta em uma semana de trabalho",
+        "Aponta o sintoma de o papel de engenheiro dominar a equipe",
+        "Explica por que domínio técnico permite construir mas não diz o que construir"
+      ],
+      "checagem": "Quais são os três papéis do empreendedor de SI, e que erro aparece quando o de engenheiro domina?",
+      "avaliacoes": [],
+      "ementaPPC": [
+        "Perfil do empreendedor"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/FundamentosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_06",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Startups e ecossistema digital",
+      "nome": "Startup: os quatro elementos da definição",
+      "descricao": "Startup é uma organização temporária em busca de um modelo de negócio repetível, escalável e sustentável sob condições de extrema incerteza, e o modelo de negócio explica como a organização cria, entrega e captura valor. Temporária porque, quando o modelo é encontrado, a organização deixa de ser equipe de busca e passa a executar. Ser digital não torna um negócio startup: um pequeno comércio pode ser excelente sem ser startup, e a diferença entre o empreendedorismo clássico e o contemporâneo está no lugar da tecnologia, que no contemporâneo integra a própria proposta de valor.",
+      "ordem": 6,
+      "centralidade": 0.2455,
+      "evidencia": [
+        "Enuncia os quatro elementos e diz qual deles falta em um negócio digital que não é startup",
+        "Explica por que a organização é chamada de temporária",
+        "Defende que ser digital não basta, usando o critério do modelo ainda não comprovado"
+      ],
+      "checagem": "Quais são os quatro elementos da definição de startup, e por que a organização é temporária?",
+      "avaliacoes": [
+        "Canvas",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startups",
+        "Empreendedorismo digital"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/StartupsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_07",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Startups e ecossistema digital",
+      "nome": "Escalabilidade: software sob encomenda contra SaaS multitenant",
+      "descricao": "Repetibilidade é entregar valor sem reinvenção completa a cada cliente, e escalabilidade é receita e impacto crescendo em velocidade superior aos custos. Uma fábrica de software sob encomenda pode ser muito lucrativa e não ser escalável, porque cada projeto exige trabalho proporcional e dobrar a receita exige praticamente dobrar a equipe. Um SaaS multitenant serve milhares de clientes com a mesma base tecnológica, desde que aquisição, suporte e infraestrutura permaneçam controlados. O critério é a relação entre crescimento de receita e crescimento de custo, não o faturamento nem o alcance geográfico.",
+      "ordem": 7,
+      "centralidade": 0.0727,
+      "evidencia": [
+        "Justifica por que software sob encomenda lucrativo não é startup",
+        "Separa repetibilidade de escalabilidade com um exemplo de cada",
+        "Rejeita faturamento baixo e atuação regional como critérios de descaracterização"
+      ],
+      "checagem": "Por que uma fábrica de software sob encomenda lucrativa pode não ser escalável, e o que muda no SaaS multitenant?",
+      "avaliacoes": [
+        "Canvas",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startups"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/StartupsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_08",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Startups e ecossistema digital",
+      "nome": "Product-market fit e a ordem do ciclo de vida",
+      "descricao": "O ciclo de vida vai de ideação a validação, operação e escala, e a escala só deve começar depois da evidência de product-market fit, que é a situação em que um mercado relevante demonstra demanda consistente pela solução. Os sinais são retenção, uso recorrente, recomendação, crescimento orgânico e disposição para pagar, sendo a retenção o mais difícil de falsificar. Investir em aquisição antes disso é pagar para levar pessoas a um produto que elas não vão manter: o CAC é gasto, a retenção não aparece e o crescimento apenas amplifica o desperdício.",
+      "ordem": 8,
+      "centralidade": 0.1273,
+      "evidencia": [
+        "Lista os cinco sinais de product-market fit e diz qual é o mais difícil de falsificar",
+        "Explica por que crescer antes do ajuste não corrige o modelo",
+        "Coloca a escala na posição correta do ciclo de vida e justifica"
+      ],
+      "checagem": "Que sinais indicam product-market fit, e por que investir em aquisição antes dele é perigoso?",
+      "avaliacoes": [
+        "Canvas",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startups",
+        "Gestão do empreendimento"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/StartupsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_09",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Identificação e validação de oportunidades",
+      "nome": "Ideia vira oportunidade: as cinco condições",
+      "descricao": "O mercado não remunera esforço, remunera a solução de problemas relevantes para quem está disposto e é capaz de adotar ou pagar. Uma ideia vira oportunidade quando combina problema relevante, público identificável, solução possível, momento adequado e mecanismo econômico, e faltando qualquer um dos cinco o que existe é boa intenção. Founder-market fit reduz o custo de aprender e melhora as hipóteses iniciais sem substituir validação, e o momento adequado conversa com o time-to-market: o pioneiro cria vantagem mas educa o mercado a custo próprio, e o fast follower aprende com ele e executa melhor.",
+      "ordem": 9,
+      "centralidade": 0.1273,
+      "evidencia": [
+        "Testa uma ideia própria contra as cinco condições e nomeia a que falta",
+        "Diz por que founder-market fit não substitui validação",
+        "Compara pioneiro e fast follower sem eleger um vencedor em abstrato"
+      ],
+      "checagem": "Quais são as cinco condições que transformam uma ideia em oportunidade?",
+      "avaliacoes": [
+        "Canvas",
+        "Cust. Dev."
+      ],
+      "ementaPPC": [
+        "Geração de idéias"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/OportunidadesSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_10",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Identificação e validação de oportunidades",
+      "nome": "Investigar a causa antes de construir",
+      "descricao": "O entusiasmo do fundador não é evidência: procuram-se dados que confirmem ou refutem as hipóteses, ao contrário do viés de confirmação, que seleciona só o que agrada. O método dos 5 Porquês investiga causas mas precisa ser confrontado com observação e entrevistas. A fila em uma UBS pode vir de demanda acima da capacidade, triagem inadequada, ausência de previsão, chegada simultânea, sistemas desconectados ou incentivos administrativos. Se a causa dominante é chegada simultânea, agendar resolve; se é demanda acima da capacidade, o aplicativo apenas transfere a espera de lugar.",
+      "ordem": 10,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Levanta causas alternativas para um mesmo sintoma antes de propor solução",
+        "Mostra qual causa a solução proposta resolve e qual ela não resolve",
+        "Aponta o viés de confirmação em uma coleta de dados feita para agradar a hipótese"
+      ],
+      "checagem": "Diante de uma fila longa em uma UBS, que causas concorrentes precisam ser descartadas antes de digitalizar o agendamento?",
+      "avaliacoes": [
+        "Canvas",
+        "Cust. Dev."
+      ],
+      "ementaPPC": [
+        "Geração de idéias",
+        "Busca de informações"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/OportunidadesSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_11",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Identificação e validação de oportunidades",
+      "nome": "Segmentação e papéis na decisão",
+      "descricao": "Segmenta-se por demografia (idade, renda, escolaridade, ocupação, localização), por psicografia (valores, estilo de vida, motivações, atitudes), por comportamento (frequência, ocasião, benefícios procurados, lealdade) e por papel. No recorte por papel, usuário, pagador, decisor, influenciador e beneficiário podem ser pessoas diferentes: no FilaZero o paciente usa e se beneficia, a gestão da unidade ou a secretaria municipal decide e paga, e os profissionais de saúde influenciam a adoção sem decidir formalmente. Desenhar tudo pensando só no usuário produz uma solução atraente que ninguém pode comprar.",
+      "ordem": 11,
+      "centralidade": 0.1,
+      "evidencia": [
+        "Classifica um mesmo público pelos quatro tipos de segmentação",
+        "Mapeia usuário, beneficiário, decisor, pagador e influenciador em uma venda ao setor público",
+        "Explica por que a segmentação comportamental prevê adoção melhor que a demográfica"
+      ],
+      "checagem": "Em uma solução vendida a municípios, quem é usuário, quem decide e quem paga?",
+      "avaliacoes": [
+        "Canvas",
+        "Cust. Dev."
+      ],
+      "ementaPPC": [
+        "Geração de idéias",
+        "Busca de informações"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/OportunidadesSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_12",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Identificação e validação de oportunidades",
+      "nome": "Benchmarking competitivo, funcional e global",
+      "descricao": "O benchmarking competitivo compara concorrentes diretos em preço, funcionalidades, posicionamento e canais, mostrando a régua imediata do mercado. O funcional busca boas práticas em setores distintos que resolvem um problema análogo, como estudar o check-in de companhias aéreas para repensar a recepção de uma unidade de saúde, e é onde aparecem as ideias que a concorrência direta não tem. O global amplia a observação para outros mercados e países. O objetivo não é copiar interfaces, é entender padrões de valor, custos, canais, barreiras e escolhas arquiteturais.",
+      "ordem": 12,
+      "centralidade": 0,
+      "evidencia": [
+        "Classifica um estudo de referência como competitivo, funcional ou global",
+        "Extrai de um caso de outro setor um padrão de valor aplicável ao problema em análise",
+        "Diz o que buscar além da interface ao observar um concorrente"
+      ],
+      "checagem": "Estudar o check-in de companhias aéreas para redesenhar a recepção de uma UBS é que tipo de benchmarking?",
+      "avaliacoes": [
+        "Canvas",
+        "Cust. Dev."
+      ],
+      "ementaPPC": [
+        "Busca de informações"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/OportunidadesSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_13",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Business Model Canvas",
+      "nome": "Os nove blocos do Canvas como mapa de hipóteses",
+      "descricao": "O Canvas é um mapa visual de hipóteses sobre criação, entrega e captura de valor, e deve mudar sempre que os experimentos gerarem evidência nova. Os nove blocos são segmentos de clientes, proposta de valor, canais, relacionamento, fontes de receita, recursos-chave, atividades-chave, parcerias-chave e estrutura de custos. Canais criam consciência, permitem avaliação, viabilizam compra, entregam valor e oferecem pós-venda; as fontes de receita exigem dizer quem paga, pelo quê, com que frequência e sob quais condições. A armadilha mais comum é preencher os blocos óbvios e deixar canais e atividades-chave implícitos.",
+      "ordem": 13,
+      "centralidade": 0.0545,
+      "evidencia": [
+        "Preenche os nove blocos de um negócio real sem deixar canais e atividades-chave vazios",
+        "Trata cada bloco como hipótese e diz que evidência o confirmaria",
+        "Nomeia as opções de fonte de receita e identifica quem paga em cada uma"
+      ],
+      "checagem": "Quais são os nove blocos do Canvas, e por que ele é lido como conjunto de hipóteses?",
+      "avaliacoes": [
+        "Canvas"
+      ],
+      "ementaPPC": [
+        "Modelo de negócios."
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/CanvasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_14",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Business Model Canvas",
+      "nome": "Proposta de valor não é lista de funcionalidades",
+      "descricao": "A proposta de valor reúne os benefícios que resolvem dores e geram ganhos: novidade, desempenho, personalização, execução de uma tarefa, design, marca, preço, redução de custo ou de risco, acesso e usabilidade. Ela é formulada do ponto de vista do cliente. Agendamento online, senha digital e notificação por SMS é lista de funcionalidades; saber a que horas serei atendido, sem precisar chegar de madrugada, é proposta de valor. O teste é direto: a funcionalidade responde o que o sistema faz, a proposta de valor responde que dor deixa de existir.",
+      "ordem": 14,
+      "centralidade": 0,
+      "evidencia": [
+        "Reescreve uma lista de funcionalidades como proposta de valor na voz do cliente",
+        "Aplica o teste que distingue mecanismo de mudança na vida do cliente",
+        "Nomeia o tipo de benefício que a proposta entrega, entre os elementos do bloco"
+      ],
+      "checagem": "Qual é o teste que separa proposta de valor de lista de funcionalidades?",
+      "avaliacoes": [
+        "Canvas"
+      ],
+      "ementaPPC": [
+        "Modelo de negócios."
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/CanvasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_15",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Business Model Canvas",
+      "nome": "Recurso-chave e atividade-chave",
+      "descricao": "Recurso é o que a empresa utiliza e cabe na frase nós temos: plataforma, base de dados, integrações prontas, equipe, conhecimento regulatório, segurança e capital de giro, nas categorias física, intelectual, humana e financeira. Atividade é o que a empresa faz e cabe na frase nós fazemos: desenvolver, operar, vender, implantar, integrar, suportar, monitorar, analisar dados e garantir conformidade. Os erros frequentes são listar a equipe como se fosse a atividade que ela executa e tratar ter um bom software como atividade.",
+      "ordem": 15,
+      "centralidade": 0,
+      "evidencia": [
+        "Classifica itens de uma healthtech entre recursos e atividades usando o teste temos e fazemos",
+        "Corrige uma classificação invertida e explica a inversão",
+        "Nomeia as quatro categorias de recurso-chave"
+      ],
+      "checagem": "Conhecimento regulatório e garantir conformidade caem em qual bloco cada um, e por qual teste?",
+      "avaliacoes": [
+        "Canvas"
+      ],
+      "ementaPPC": [
+        "Modelo de negócios."
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/CanvasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_16",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Business Model Canvas",
+      "nome": "Coerência interna: mudar um bloco força revisar os outros",
+      "descricao": "Os blocos não são independentes. Uma proposta voltada a população vulnerável exige canais acessíveis e baixo consumo de dados, o que descarta um aplicativo pesado antes mesmo de discuti-lo. Se o pagador passa a ser o governo, o ciclo de vendas se alonga, o que eleva o CAC, a necessidade de capital de giro e a dependência de contratos. Se a receita é recorrente, relacionamento, suporte e retenção precisam sustentar a renovação, e não apenas a primeira venda. É essa cadeia que a banca cobra quando pede para explicar como a escolha do segmento altera canais e relacionamento.",
+      "ordem": 16,
+      "centralidade": 0,
+      "evidencia": [
+        "Percorre a cadeia de efeitos quando o pagador deixa de ser o consumidor e passa a ser o governo",
+        "Mostra como a escolha do segmento restringe canais e relacionamento",
+        "Explica o que a receita recorrente exige do bloco de relacionamento"
+      ],
+      "checagem": "Trocar o pagador de consumidor para governo produz que efeitos em cadeia no Canvas?",
+      "avaliacoes": [
+        "Canvas"
+      ],
+      "ementaPPC": [
+        "Modelo de negócios."
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/CanvasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_17",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Customer Development",
+      "nome": "As quatro fases: duas buscam, duas executam",
+      "descricao": "O Customer Development organiza a procura de um modelo em quatro fases. Customer Discovery e Customer Validation são busca: descobrir se o problema existe e importa para alguém identificável, e verificar se existe um processo de venda repetível para ele. Customer Creation e Company Building são execução: ampliar demanda no canal certo, ao custo certo, e formalizar departamentos, processos, metas, liderança e governança. Se a pergunta de uma fase ainda não tem resposta apoiada em comportamento observado, a fase seguinte não deveria começar; se as hipóteses não se sustentam, faz-se um pivot e volta-se à descoberta.",
+      "ordem": 17,
+      "centralidade": 0.0364,
+      "evidencia": [
+        "Ordena as quatro fases e diz quais pertencem à busca e quais à execução",
+        "Enuncia a pergunta que cada fase responde",
+        "Explica por que inverter a fronteira é a definição operacional de escala prematura"
+      ],
+      "checagem": "Quais fases do Customer Development pertencem à busca de um modelo de negócio, e por quê?",
+      "avaliacoes": [
+        "Cust. Dev."
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/CustomerDevelopmentSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_18",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Customer Development",
+      "nome": "Elogio não é evidência",
+      "descricao": "Na descoberta, as perguntas exploram comportamento passado, o que a pessoa fez da última vez que teve o problema, e não intenção futura, que é barata de declarar e cara de acreditar. Uma frase como eu usaria vale pouco sem contexto, frequência, custo atual e comprometimento. Em vendas complexas mapeiam-se usuário, decisor econômico, influenciador técnico, aprovador jurídico e bloqueadores. Na validação, o que conta é contrato assinado, piloto pago, pré-venda, uso recorrente e carta de intenção de quem tem autoridade orçamentária; elogio, cadastro e reportagem não custam nada a quem os oferece.",
+      "ordem": 18,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Reescreve uma pergunta de intenção futura como pergunta sobre comportamento passado",
+        "Ordena evidências da mais forte à mais fraca em uma venda a prefeituras",
+        "Diz por que uma carta de intenção sem autoridade orçamentária vale pouco"
+      ],
+      "checagem": "Em uma venda ao setor público, qual evidência é mais forte na validação: elogio do secretário, cadastros na landing page ou piloto com orçamento alocado?",
+      "avaliacoes": [
+        "Cust. Dev."
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/CustomerDevelopmentSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_19",
+      "tipo": "META",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Customer Development",
+      "nome": "As cinco patologias da busca",
+      "descricao": "Escala prematura é contratar, automatizar ou investir em aquisição antes de comprovar problema, solução e economia. Dissonância de invalidação é rejeitar evidência negativa para proteger a ideia, e o sinal aparece quando toda entrevista contrária vira esse não é nosso público. Métricas de vaidade é celebrar cadastros ou visualizações sem relação com valor. Repertório técnico insuficiente é escolher experimento inadequado à hipótese ou ler dados sem rigor. Teto epistemológico é o feedback atual revelar apenas melhorias incrementais, o que exige visão e teoria de valor e é também o limite do Lean.",
+      "ordem": 19,
+      "centralidade": 0,
+      "evidencia": [
+        "Diagnostica em um caso qual das cinco patologias está operando",
+        "Nomeia o sinal observável da dissonância de invalidação",
+        "Explica por que o teto epistemológico não se resolve com mais entrevistas"
+      ],
+      "checagem": "Quais são as cinco patologias do Customer Development, e qual delas descreve rejeitar evidência negativa?",
+      "avaliacoes": [
+        "Cust. Dev."
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/CustomerDevelopmentSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_20",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Lean Startup e MVP",
+      "nome": "Construir-Medir-Aprender planejado de trás para frente",
+      "descricao": "O Lean substitui ciclos longos baseados em previsão por ciclos curtos de construir, medir e aprender. A ordem de execução é construir, medir, aprender, mas a ordem de planejamento é a inversa: primeiro define-se o aprendizado necessário, depois a métrica que o revela e só então o MVP capaz de produzi-la. Sem essa lógica a equipe constrói algo pequeno, rápido e incapaz de responder à pergunta estratégica. O objetivo não é lançar depressa, é reduzir incerteza por unidade de tempo e recurso.",
+      "ordem": 20,
+      "centralidade": 0.0636,
+      "evidencia": [
+        "Desenha um ciclo completo começando pelo aprendizado necessário e terminando no MVP",
+        "Distingue a ordem de execução da ordem de planejamento",
+        "Corrige um ciclo que começou pela construção e não responde a pergunta nenhuma"
+      ],
+      "checagem": "Em que ordem se planeja um ciclo Construir-Medir-Aprender, e por que ela é inversa à de execução?",
+      "avaliacoes": [
+        "Lean e MVP",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startup enxuta (Lean)"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/LeanMvpSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_21",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Lean Startup e MVP",
+      "nome": "Contabilidade da inovação: métrica acionável, A/B, coorte e funil",
+      "descricao": "A métrica acionável exibe relação causal entre uma mudança e um comportamento e sustenta a decisão de perseverar, ajustar ou pivotar; a métrica de vaidade cresce sem provar melhoria, como o total acumulado de cadastros, que nunca desce, ou seguidores e visualizações. O teste A/B compara grupos equivalentes divididos aleatoriamente, mudando uma variável de cada vez, e é o que permite atribuir a diferença à mudança feita. A análise de coorte acompanha pessoas que começaram em períodos semelhantes e separa melhora real de mudança na composição da base. O funil por etapa mostra onde as pessoas se perdem.",
+      "ordem": 21,
+      "centralidade": 0.0364,
+      "evidencia": [
+        "Separa métricas acionáveis de métricas de vaidade em um painel real",
+        "Escolhe entre teste A/B, coorte e funil conforme a pergunta a responder",
+        "Explica por que a divisão aleatória entre controle e tratamento é o que torna o teste conclusivo"
+      ],
+      "checagem": "Por que conversão no grupo de tratamento contra o de controle é acionável e total acumulado de cadastros não é?",
+      "avaliacoes": [
+        "Lean e MVP",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startup enxuta (Lean)"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/LeanMvpSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_22",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Lean Startup e MVP",
+      "nome": "Os seis pivots",
+      "descricao": "Pivot é mudança estruturada que preserva o aprendizado e altera uma hipótese fundamental, não fracasso aleatório. No zoom-in, uma funcionalidade isolada se revela mais valiosa que o produto inteiro e passa a ser o produto. No zoom-out, o produto atual vira apenas funcionalidade de uma solução mais ampla. No de segmento de clientes, mantém-se o produto e troca-se o público. No de necessidade do cliente, o público tem um problema diferente e mais relevante. No de plataforma, passa-se de aplicação a plataforma, ou o contrário. No de tecnologia, outra base técnica entrega o mesmo valor com custo menor ou desempenho superior.",
+      "ordem": 22,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Classifica um caso real em um dos seis pivots e descarta os vizinhos",
+        "Distingue zoom-in de zoom-out em um mesmo produto",
+        "Explica o que o pivot preserva e o que ele muda"
+      ],
+      "checagem": "Quando uma funcionalidade se torna o produto principal, que tipo de pivot ocorreu?",
+      "avaliacoes": [
+        "Lean e MVP",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startup enxuta (Lean)"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/LeanMvpSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_23",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Lean Startup e MVP",
+      "nome": "MVP: mínimo não é precário, e os seis tipos",
+      "descricao": "MVP é a versão ou experimento com o menor esforço capaz de completar um ciclo de aprendizagem validada, e mínimo significa suficiente para testar a hipótese central, não malfeito: um protótipo confuso gera ruído, não aprendizado. Os seis tipos são vídeo, que demonstra a experiência antes de construir a infraestrutura, como o Dropbox fez com sincronização; landing page, que mede interesse, conversão, preço ou mensagem; Wizard of Oz, em que o usuário percebe automação e a operação é manual nos bastidores; concierge, em que a equipe entrega o serviço pessoalmente; piecemeal, que combina ferramentas existentes; e protótipo, que testa fluxo, compreensão e usabilidade.",
+      "ordem": 23,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Nomeia os seis tipos e descreve a experiência que cada um cria para o usuário",
+        "Justifica que mínimo é suficiente para testar a hipótese, não precário",
+        "Diferencia Wizard of Oz de concierge pelo que o usuário percebe"
+      ],
+      "checagem": "O que é um MVP, e qual a diferença entre Wizard of Oz e concierge?",
+      "avaliacoes": [
+        "Lean e MVP",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startup enxuta (Lean)",
+        "Prototipação de projeto"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/LeanMvpSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_24",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Lean Startup e MVP",
+      "nome": "Casar hipótese e experimento, e nomear o que ele não prova",
+      "descricao": "A escolha do experimento sai da hipótese: demanda pede landing page ou vídeo, medindo cadastros e pedidos de contato; compreensão de interface pede protótipo navegável, medindo conclusão da tarefa sem ajuda; processo operacional pede Wizard of Oz ou concierge, medindo tempo por atendimento, retrabalho e exceções; disposição a pagar pede pré-venda ou piloto pago, medindo pagamentos efetivados. Cada experimento responde a uma pergunta e cala sobre as outras: o protótipo elogiado não valida pagamento nem operação, a landing page não prova operação, o Wizard of Oz não prova escala e a pré-venda não prova retenção.",
+      "ordem": 24,
+      "centralidade": 0,
+      "evidencia": [
+        "Escolhe o experimento adequado a uma hipótese dada e diz o que vai medir",
+        "Enuncia o que aquele experimento não prova, antes de interpretar o resultado",
+        "Rejeita a conclusão de que um protótipo elogiado indica disposição a pagar"
+      ],
+      "checagem": "Para testar se as pessoas pagariam pela solução, qual experimento serve, e o que ele deixa em aberto?",
+      "avaliacoes": [
+        "Lean e MVP",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startup enxuta (Lean)",
+        "Prototipação de projeto"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/LeanMvpSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_25",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Arquiteturas digitais e comércio eletrônico",
+      "nome": "Pipeline e plataforma",
+      "descricao": "No pipeline o valor flui por uma cadeia relativamente linear: insumos entram, são transformados e distribuídos, e o ativo principal é o processo de produção e a eficiência da cadeia. Na plataforma o valor vem das interações entre grupos distintos, como compradores e vendedores, criadores e espectadores, motoristas e passageiros, e o ativo principal é a qualidade e a frequência dessas interações. A distinção é sobre como o valor flui, não sobre infraestrutura, público ou forma de cobrança: uma plataforma pode rodar em servidor próprio e cobrar por transação sem deixar de ser plataforma.",
+      "ordem": 25,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Classifica um negócio digital como pipeline ou plataforma pelo fluxo de valor",
+        "Rejeita nuvem, público e forma de cobrança como critérios de distinção",
+        "Diz como cada arquitetura cresce e qual risco típico corre"
+      ],
+      "checagem": "O que diferencia essencialmente uma plataforma de um pipeline?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Empreendedorismo digital"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/ArquiteturasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_26",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Arquiteturas digitais e comércio eletrônico",
+      "nome": "Efeitos de rede, liquidez e o que um marketplace precisa ter",
+      "descricao": "Os efeitos de rede diretos fazem o valor crescer com participantes do mesmo grupo; os indiretos fazem o valor de um lado crescer com o tamanho do outro; os negativos são congestionamento, fraude e queda de qualidade, e por isso a governança precisa definir entrada, reputação, regras e resolução de conflitos. Liquidez é a capacidade de encontrar contraparte adequada em tempo aceitável, então crescer usuários sem densidade de oferta e demanda piora a experiência, e é por isso que marketplaces crescem por cidade ou categoria antes de abrir tudo. Um marketplace exige inventário distribuído, catálogo, busca e matching, pagamento dividido, prevenção a fraude, reputação e tratamento de disputas.",
+      "ordem": 26,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Classifica um efeito de rede como direto, indireto ou negativo",
+        "Explica por que crescer usuários sem densidade reduz a liquidez percebida",
+        "Lista os requisitos de um marketplace e diz o que quebra sem cada um"
+      ],
+      "checagem": "O que significa liquidez em um marketplace, e por que ela não é o total de usuários cadastrados?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Empreendedorismo digital"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/ArquiteturasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_27",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Arquiteturas digitais e comércio eletrônico",
+      "nome": "Economia do SaaS e a Rule of 40",
+      "descricao": "O SaaS transforma a aquisição de software de CAPEX em OPEX com assinatura recorrente, o que reduz a barreira de entrada; a multitenancy permite que vários clientes usem a mesma infraestrutura com isolamento lógico; as APIs viabilizam ecossistema e elevam o custo de troca. A receita recorrente melhora a previsibilidade e cobra retenção, segurança, suporte e evolução contínua. A Rule of 40 soma crescimento percentual anual e margem operacional percentual e sugere resultado próximo de 40: crescer 50% com margem de menos 10% passa, crescer 32% com margem de 6% dá 38 e fica logo abaixo. É heurística, não lei universal.",
+      "ordem": 27,
+      "centralidade": 0,
+      "evidencia": [
+        "Calcula a Rule of 40 somando crescimento e margem, sem subtrair nem multiplicar",
+        "Explica o que a multitenancy permite em termos de custo por cliente",
+        "Diz o que a receita recorrente cobra em troca da previsibilidade"
+      ],
+      "checagem": "Uma empresa cresce 32% ao ano com margem operacional de 6%: qual é a Rule of 40 e como se interpreta?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Empreendedorismo digital"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/ArquiteturasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_28",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Arquiteturas digitais e comércio eletrônico",
+      "nome": "Comércio eletrônico: e-business, modalidades e adoção",
+      "descricao": "E-commerce é a transação comercial por meios digitais; e-business abrange processos, integração, relacionamento e gestão digital, como um ERP ou a integração com fornecedores, que são e-business sem serem e-commerce. As camadas são frente de loja, back office e logística, e nuvem, big data e IA sustentam recomendação, prevenção a fraude, previsão de demanda e precificação dinâmica. As características são ubiquidade, alcance global, padrões universais, densidade de informação, personalização, interatividade e tecnologia social. As modalidades dizem quem está em cada ponta: B2C, B2B, C2C, C2B, B2G, G2B e G2C, com os recortes de m-commerce e social commerce. O TAM explica a adoção por utilidade e facilidade percebidas, e o ECM explica a continuidade pela confirmação de expectativas.",
+      "ordem": 28,
+      "centralidade": 0,
+      "evidencia": [
+        "Separa e-commerce de e-business com um exemplo de cada",
+        "Classifica uma transação nas modalidades, olhando quem oferece e quem recebe",
+        "Diz qual modelo explica a primeira adoção e qual explica a recompra"
+      ],
+      "checagem": "Qual é a diferença entre e-commerce e e-business, e o que o ECM explica que o TAM não explica?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Empreendedorismo digital"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/ArquiteturasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_29",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Aquisição, retenção e unit economics",
+      "nome": "Retenção: Customer Success, os três churns, expansão e referral",
+      "descricao": "Customer Success é proativo e trabalha para que o cliente alcance o resultado que o levou a contratar, acompanhando onboarding, adoção, valor percebido e renovação; o suporte é reativo e resolve incidentes; o CRM organiza dados, interações e oportunidades. O churn voluntário é a decisão de cancelar por preço, valor percebido ou experiência; o involuntário é falha de pagamento ou cartão expirado, e parte dele se recupera com processo; o passivo é desengajamento sem cancelamento, que antecipa o cancelamento de amanhã. A expansão vem de upsell, cross-sell e aumento de uso, sem CAC novo, e o referral reduz o CAC por recomendação e prova social.",
+      "ordem": 29,
+      "centralidade": 0.0364,
+      "evidencia": [
+        "Classifica um cancelamento como voluntário, involuntário ou passivo e indica a resposta adequada",
+        "Distingue Customer Success de suporte pela postura e pelo que cada um acompanha",
+        "Explica por que expansão eleva receita sem CAC novo"
+      ],
+      "checagem": "Quais são os três tipos de churn, e qual deles não aparece na receita de hoje?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Gestão do empreendimento",
+        "Negócio sustentável"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/UnitEconomicsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_30",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Aquisição, retenção e unit economics",
+      "nome": "CAC: como se calcula e por que a média engana",
+      "descricao": "CAC é as despesas de vendas e marketing do período divididas pelos novos clientes adquiridos no período. O numerador inclui salários, comissões, mídia, ferramentas, eventos e custos diretamente relacionados à aquisição, então limitar a conta à mídia paga subestima o CAC de forma sistemática. A média esconde diferenças entre canais e segmentos, por isso calcula-se por coorte, canal e perfil. Mídia paga entrega tráfego enquanto há investimento e sofre inflação de CAC; conteúdo e SEO demoram e criam ativo com custo marginal decrescente, com intenção informacional, comercial ou transacional, e o GEO adapta o conteúdo a mecanismos de resposta generativa.",
+      "ordem": 30,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Calcula o CAC de um período e diz o que entra no numerador",
+        "Aponta o erro de considerar apenas mídia paga no cálculo",
+        "Explica por que um canal a R$ 200 e outro a R$ 1.400 desaparecem na média"
+      ],
+      "checagem": "Uma startup gastou R$ 90.000 e conquistou 150 clientes: qual é o CAC e o que deve compor esse gasto?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Negócio sustentável"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/UnitEconomicsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_31",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Aquisição, retenção e unit economics",
+      "nome": "LTV simplificado: ARPU, margem bruta e churn",
+      "descricao": "O LTV simplificado é ARPU multiplicado pela margem bruta e dividido pelo churn mensal. ARPU é a receita média por usuário, a margem bruta exclui os custos diretamente associados ao serviço e o churn precisa usar a mesma periodicidade do ARPU. Com ARPU de R$ 200, margem de 75% e churn de 5%, o LTV é 200 vezes 0,75, resultando em 150, dividido por 0,05, o que dá R$ 3.000: a margem entra antes da divisão pelo churn. A fórmula pressupõe comportamento estável, então um LTV projetado com poucos meses de operação é extrapolação, não medição.",
+      "ordem": 31,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Calcula o LTV aplicando a margem antes de dividir pelo churn",
+        "Reconhece os erros clássicos: esquecer a margem, parar na margem ou multiplicar pelo churn",
+        "Diz por que o churn tem de usar a mesma periodicidade do ARPU"
+      ],
+      "checagem": "Com ARPU de R$ 200, margem bruta de 75% e churn mensal de 5%, quanto vale o LTV simplificado?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Negócio sustentável"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/UnitEconomicsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_32",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Aquisição, retenção e unit economics",
+      "nome": "LTV/CAC, payback e NRR: ler a unidade",
+      "descricao": "LTV/CAC diz quantas vezes o cliente devolve o custo de conquistá-lo: perto de 3 para 1 é referência de equilíbrio saudável, abaixo de 1 para 1 o cliente destrói valor antes dos custos fixos, e acima de 5 para 1 pode indicar eficiência ou subinvestimento em crescimento. Payback é CAC dividido pela margem de contribuição mensal por cliente, não pelo ARPU cheio: com CAC de R$ 600 e margem de R$ 120, são 5 meses, sendo abaixo de 12 meses confortável em SaaS e acima de 18 meses um risco de caixa. NRR é receita inicial menos churn menos contração mais expansão, dividida pela receita inicial e multiplicada por 100, e acima de 100% indica churn líquido de receita negativo. A leitura não para no resultado positivo: verifique concentração, maturidade das coortes, custos de suporte e inadimplência.",
+      "ordem": 32,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Calcula LTV/CAC, payback e NRR em um mesmo cenário e interpreta cada número",
+        "Usa a margem de contribuição, e não o ARPU cheio, no denominador do payback",
+        "Lista o que verificar antes de comemorar um LTV/CAC alto"
+      ],
+      "checagem": "Com CAC de R$ 600, ARPU de R$ 150 e margem bruta de 80%, qual é o payback, e o que um NRR de 105% indica?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Negócio sustentável"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/UnitEconomicsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_33",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Financiamento de startups",
+      "nome": "As quatro fontes de capital e a adequação ao estágio",
+      "descricao": "A fonte de capital altera velocidade, controle, governança, risco e expectativa de saída, e não existe fonte universalmente melhor. Bootstrapping cresce com recursos dos fundadores e com a receita, preserva participação e disciplina de custos, limita velocidade e expõe o fundador. O investidor-anjo é pessoa física com capital próprio em estágio inicial, e o smart money agrega rede, experiência e credibilidade. O venture capital acelera infraestrutura, contratação e expansão e traz governança, metas, direitos preferenciais e pressão por liquidez, e não serve a negócios lucrativos sem escala compatível com o retorno do fundo. O crowdfunding capta junto a muitas pessoas. Por estágio: descoberta usa recursos próprios, bolsas, editais e incubação; MVP e validação usam bootstrapping, anjo, pré-venda e aceleração; tração usa seed e fundos especializados; escala usa rodadas maiores.",
+      "ordem": 33,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Compara as quatro fontes em controle, velocidade, governança e risco para o fundador",
+        "Escolhe a fonte adequada a um estágio dado e justifica pela incerteza restante",
+        "Explica por que uma empresa lucrativa de crescimento moderado é péssimo ativo de venture capital"
+      ],
+      "checagem": "Que fonte de capital corresponde ao estágio de descoberta, e por que venture capital pode não servir a uma empresa lucrativa?",
+      "avaliacoes": [
+        "Financiamento"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/FinanciamentoSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_34",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Financiamento de startups",
+      "nome": "Diluição em números e instrumentos conversíveis",
+      "descricao": "Diluição é a redução percentual da participação dos sócios quando novas quotas ou ações são emitidas. Se dois sócios detêm 100% de uma empresa avaliada em R$ 1.000.000 e um investidor aporta R$ 250.000 por 20% do capital, a empresa passa a valer R$ 1.250.000 e cada sócio vai de 50% para 40%, mantendo R$ 500.000 em valor: no momento do aporte empata-se, e o ganho só existe se o capital fizer a empresa valer mais que R$ 1,25 milhão. O risco não é diluir, é ceder participação e controle sem clareza sobre uso do capital e marcos. Instrumentos conversíveis postergam a definição do valuation, convertendo o aporte em participação numa rodada futura por desconto ou teto.",
+      "ordem": 34,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Calcula o valuation pós-aporte e a nova participação de cada sócio",
+        "Mostra em valor, e não só em percentual, o efeito da diluição no momento do aporte",
+        "Diz quando um instrumento conversível é preferível a precificar a empresa hoje"
+      ],
+      "checagem": "Um aporte de R$ 250.000 por 20% em uma empresa de R$ 1.000.000 leva cada sócio de 50% a quanto, e o valor da fatia sobe, cai ou empata?",
+      "avaliacoes": [
+        "Financiamento"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/FinanciamentoSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_35",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Financiamento de startups",
+      "nome": "Crowdfunding: recompensa, dívida e equity",
+      "descricao": "Na modalidade de recompensa ou pré-venda o apoiador recebe produto, experiência ou benefício, o que valida demanda real e financia produção, e o atraso na entrega vira dano reputacional público. Na modalidade de dívida ou P2P há empréstimo com juros, e a obrigação financeira permanece mesmo se o negócio não decolar. No equity crowdfunding o apoiador recebe participação societária, o que exige conformidade com as regras da CVM e cria um número grande de sócios. Além de capital, a campanha produz marketing e comunidade, e na mesma medida expõe a ideia e cria obrigação com muitos apoiadores.",
+      "ordem": 35,
+      "centralidade": 0,
+      "evidencia": [
+        "Identifica qual modalidade entrega participação societária e aciona a CVM",
+        "Diz o que cada modalidade valida e qual é o risco principal de cada uma",
+        "Explica por que produto complexo ou difícil de explicar não combina com campanha"
+      ],
+      "checagem": "Qual modalidade de crowdfunding entrega participação societária e exige conformidade com a CVM?",
+      "avaliacoes": [
+        "Financiamento"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/FinanciamentoSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_36",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Plano de negócio e Pitch Deck",
+      "nome": "O plano de negócio, o sumário executivo e a SWOT que decide",
+      "descricao": "O plano organiza escolhas estratégicas e financeiras com mais detalhamento operacional e projeções do que o Canvas, que o antecede e alimenta. As seções são sumário executivo; empreendimento e equipe, com competências dos sócios, responsabilidades, missão, forma jurídica, regime tributário e capital social; análise de mercado; plano de marketing, com produto, preço, promoção, canais e localização; plano financeiro; e análise estratégica. O sumário executivo aparece primeiro e é escrito por último, porque só depois de fechar mercado, modelo, equipe e finanças é possível resumi-los. Na SWOT, forças e fraquezas são internas e oportunidades e ameaças são externas, e a utilidade está em gerar decisão, inclusive o gatilho de reação a uma ameaça.",
+      "ordem": 36,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Nomeia as seções do plano e o que cada uma resolve",
+        "Justifica escrever o sumário executivo por último",
+        "Transforma um quadrante da SWOT em decisão com dono e gatilho"
+      ],
+      "checagem": "Por que o sumário executivo é escrito por último, e o que torna uma SWOT útil em vez de decorativa?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Gestão do empreendimento",
+        "Mecanismos e procedimentos para criação de empresas"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/PlanoPitchSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_37",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Plano de negócio e Pitch Deck",
+      "nome": "Indicadores do plano financeiro",
+      "descricao": "O plano financeiro reúne investimentos fixos, capital de giro, despesas pré-operacionais, receitas, custos variáveis e diretos, custos fixos e depreciação. Margem de contribuição é receita menos custos e despesas variáveis. Ponto de equilíbrio é custos fixos divididos pela margem de contribuição percentual: com R$ 50.000 de custos fixos e margem de 40%, são R$ 125.000 de receita, e dividir por 0,60 é o erro mais comum. Lucratividade é lucro líquido sobre receita total vezes 100 e mede desempenho sobre vendas; rentabilidade é lucro líquido sobre investimento total vezes 100 e mede retorno do capital investido. Payback simples é investimento inicial dividido pela geração média de caixa por período e não considera o valor do dinheiro no tempo.",
+      "ordem": 37,
+      "centralidade": 0,
+      "evidencia": [
+        "Calcula o ponto de equilíbrio dividindo custos fixos pela margem percentual",
+        "Separa lucratividade de rentabilidade dizendo que pergunta cada uma responde",
+        "Aponta a limitação do payback simples"
+      ],
+      "checagem": "Com custos fixos de R$ 50.000 e margem de contribuição de 40%, qual é o ponto de equilíbrio?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Gestão do empreendimento",
+        "Negócio sustentável"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/PlanoPitchSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_38",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Plano de negócio e Pitch Deck",
+      "nome": "TAM, SAM, SOM e a estimativa bottom-up",
+      "descricao": "TAM é o mercado total teórico, todo mundo que tem o problema, sem restrição de modelo ou geografia, e serve para dimensionar ambição, não para projetar receita. SAM é a parcela atendível pelo modelo e pela geografia escolhidos, já considerando canal, idioma, regulação e forma de contratação. SOM é a participação realisticamente alcançável no horizonte analisado, dada a capacidade de aquisição e entrega da equipe. A estimativa bottom-up parte do número de clientes potenciais, do preço e da capacidade de aquisição, e por isso é mais defensável do que aplicar um percentual arbitrário sobre um relatório amplo: no FilaZero, quantos municípios têm UBS elegíveis, quanto se cobraria por unidade e quantas unidades a equipe implanta por trimestre.",
+      "ordem": 38,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Monta TAM, SAM e SOM de um negócio concreto e explicita o método de cada um",
+        "Constrói uma estimativa bottom-up com clientes, preço e capacidade de implantação",
+        "Recusa o percentual arbitrário sobre um mercado de bilhões e diz por quê"
+      ],
+      "checagem": "Qual é a diferença entre TAM, SAM e SOM, e por que uma estimativa bottom-up é mais defensável?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/PlanoPitchSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_39",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Plano de negócio e Pitch Deck",
+      "nome": "Pitch deck: narrativa, evidência e o pedido",
+      "descricao": "O pitch é uma narrativa visual cujo objetivo é conquistar a próxima conversa ou decisão, com abertura e propósito, problema, solução, por que agora, mercado, produto e tração, modelo de negócio, concorrência e moat, go-to-market, equipe e pedido. Investidores observam CAC, LTV, payback, margem, churn, MRR e crescimento, com LTV acima de três vezes o CAC e payback abaixo de doze meses como referências, não garantias. São 10 a 15 slides, fontes grandes, uma ideia por tela e gráficos legíveis, e métricas ainda não observadas precisam ser rotuladas como metas. Moat é a capacidade de defender a posição, por efeitos de rede, custo de troca, dados proprietários, integrações profundas, marca ou vantagem regulatória, e não uma lista de funcionalidades.",
+      "ordem": 39,
+      "centralidade": 0,
+      "evidencia": [
+        "Ordena os slides do pitch e diz o que cada um precisa provar",
+        "Rotula como meta a métrica que ainda não foi observada",
+        "Responde o que sustenta o moat, sem apelar para a interface"
+      ],
+      "checagem": "Que blocos compõem a narrativa de um pitch, e o que precisa acontecer com métricas ainda não observadas?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/PlanoPitchSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_40",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Intraempreendedorismo, impacto social e GEM 2024",
+      "nome": "Intraempreendedorismo: inovar dentro de uma organização",
+      "descricao": "O intraempreendedorismo cria inovação dentro de organizações existentes, e o termo foi difundido por Gifford Pinchot III: o intraempreendedor usa recursos e infraestrutura da organização mas age com iniciativa, criatividade, visão estratégica e risco calculado. Favorecem a prática segurança para experimentar, critérios claros de seleção, mentoria, reconhecimento e integração da iniciativa à estratégia; travam burocracia, cultura avessa ao erro, falta de autonomia, falta de tempo e recursos e ausência de apoio da liderança. Gmail, botão Curtir, PlayStation e Post-it costumam ser contados como histórias de indivíduos geniais, mas só existiram porque havia essas condições institucionais.",
+      "ordem": 40,
+      "centralidade": 0,
+      "evidencia": [
+        "Distingue o intraempreendedor do empreendedor independente pelo uso de recursos e pelo risco assumido",
+        "Aponta, em um caso, qual condição institucional faltou para a iniciativa avançar",
+        "Reinterpreta os exemplos conhecidos como resultado de condições, não só de talento"
+      ],
+      "checagem": "O que caracteriza o intraempreendedorismo, e que condições precisam existir para que ele aconteça?",
+      "avaliacoes": [],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/ContextosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_41",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Intraempreendedorismo, impacto social e GEM 2024",
+      "nome": "Empreendedorismo social e teoria da mudança",
+      "descricao": "No empreendedorismo social o impacto positivo é o propósito central, com ou sem fins lucrativos, equilibrando missão, sustentabilidade financeira e governança, e a inovação social precisa envolver a comunidade em vez de tratar beneficiários como receptores passivos. A teoria da mudança encadeia recursos e atividades em resultados imediatos, intermediários e impacto de longo prazo. Output é a entrega, como o número de atendimentos agendados; outcome é a mudança de comportamento ou condição, como a redução consistente do tempo de espera e das faltas; impacto é a transformação de longo prazo, como a melhoria de acesso à atenção básica.",
+      "ordem": 41,
+      "centralidade": 0,
+      "evidencia": [
+        "Classifica indicadores de um projeto social em output, outcome e impacto",
+        "Monta a cadeia da teoria da mudança de recursos até impacto",
+        "Rejeita indicadores financeiros como medida de transformação social"
+      ],
+      "checagem": "Em uma solução como o FilaZero, o que é output, o que é outcome e o que é impacto?",
+      "avaliacoes": [],
+      "ementaPPC": [
+        "Negócio sustentável"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/ContextosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_42",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Intraempreendedorismo, impacto social e GEM 2024",
+      "nome": "GEM 2024: os números e o que eles não provam",
+      "descricao": "Em 2024 a taxa total de empreendedorismo chegou a 33,4%, contra 30,1% em 2023, com aproximadamente 46,9 milhões de brasileiros de 18 a 64 anos envolvidos, taxa inicial de 20,3% e de estabelecidos de 13,2%. Empreendedor nascente está estruturando ou operando por muito pouco tempo, novo empreendedor tem negócio em fase inicial e estabelecido superou o período definido pelo estudo. As motivações coexistem: fazer diferença no mundo 74,6%, escassez de empregos 73,9%, riqueza ou renda elevada 69,3% e tradição familiar 35,4%. Apenas 38,6% tinham CNPJ, cerca de 800 mil novos negócios indicaram inovação ou clientes nacionais e cerca de 130 mil alcance internacional, e entre os iniciais 96,2% usavam tecnologias digitais para vender: digitalização virou infraestrutura básica e não prova inovação nem transformação de modelo.",
+      "ordem": 42,
+      "centralidade": 0,
+      "evidencia": [
+        "Cita os indicadores principais do GEM 2024 sem confundir taxa inicial com taxa de estabelecidos",
+        "Interpreta os 96,2% de uso de tecnologia digital sem concluir alta inovação",
+        "Explica por que empreender por necessidade não implica ausência de inovação"
+      ],
+      "checagem": "O que os 96,2% de empreendedores iniciais usando tecnologia digital permitem, e o que não permitem, concluir?",
+      "avaliacoes": [],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/ContextosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_43",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Estudos de caso",
+      "nome": "FilaZero Saúde: os pontos cegos de uma hipótese B2G",
+      "descricao": "O FilaZero é uma healthtech B2G para a espera excessiva e imprevisível em UBS, com recorte em consultas simples, população dependente do SUS e usuários com celulares básicos, combinando agendamento, senha online e previsão de horário. A hipótese precisa enfrentar capacidade da unidade, triagem clínica, faltas, urgências, integração com prontuário e regulação, LGPD para dado sensível, acessibilidade e pessoas sem conectividade. Os experimentos indicados começam por mapear o fluxo real de duas UBS, testar reserva manual assistida, comparar lembretes contra um grupo de controle, medir satisfação, espera, não comparecimento e carga administrativa, e validar disposição institucional com piloto formal. Espera de 30 minutos, 500 atendimentos, 85% de comparecimento e satisfação 4,5 são metas, não resultados observados.",
+      "ordem": 43,
+      "centralidade": 0,
+      "evidencia": [
+        "Lista os pontos cegos que o agendamento digital não resolve por si só",
+        "Desenha a sequência de experimentos começando pela linha de base",
+        "Apresenta os números do projeto como metas, distinguindo meta, projeção e resultado observado"
+      ],
+      "checagem": "Quais pontos cegos a hipótese do FilaZero precisa enfrentar, e como devem ser apresentados os números divulgados?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/CasosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_44",
+      "tipo": "CONCEITUAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Estudos de caso",
+      "nome": "Twitch: pivot, plataforma e receitas múltiplas",
+      "descricao": "A Twitch nasceu do Justin.tv, uma experiência ampla de transmissão ao vivo, e o excesso de conteúdo e a falta de foco revelaram que jogos concentravam o interesse, levando ao pivot de 2011; a Amazon adquiriu a empresa por cerca de US$ 970 milhões. O modelo reúne publicidade, assinaturas, doações e Bits, distribuindo risco entre fontes diferentes. É repetível porque cada novo criador segue a mesma lógica de transmissão, audiência e monetização, e escalável porque a plataforma cresce sem produção centralizada proporcional, com efeitos de rede em que mais criadores atraem mais espectadores, que atraem mais criadores, e o chat ao vivo diferenciando a experiência do vídeo sob demanda.",
+      "ordem": 44,
+      "centralidade": 0,
+      "evidencia": [
+        "Justifica por que a Twitch atende à definição de startup em repetibilidade, escalabilidade e incerteza",
+        "Explica o pivot de 2011 a partir do que o Justin.tv revelou",
+        "Mostra o ciclo de efeitos de rede entre criadores e espectadores"
+      ],
+      "checagem": "O que torna a Twitch um modelo repetível e escalável com efeitos de rede?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/CasosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_45",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "EMPD",
+      "periodo": 6,
+      "unidade": "Estudos de caso",
+      "nome": "TechNova: de Concluído a Validado, e o pivot zoom-in",
+      "descricao": "A TechNova construiu por um longo período um produto tecnicamente sólido, mas sem tração. Um MVP em vídeo captou milhares de e-mails, um Wizard of Oz simulou o onboarding manualmente e o fluxo de desenvolvimento passou a exigir o estado Validado depois de Concluído, porque uma história tecnicamente concluída não é necessariamente valiosa: a funcionalidade precisa produzir o comportamento esperado no usuário. Integração contínua, pequenos lotes, implantação contínua e rollback baixaram o custo de experimentar. As análises mostraram que a descoberta social gerava mais valor que o fluxo completo de compra, o que levou a um pivot zoom-in, e o teste do agendamento de retirada usou divisão aleatória entre controle e tratamento, medindo conversão em transações concluídas, e não cliques.",
+      "ordem": 45,
+      "centralidade": 0,
+      "evidencia": [
+        "Explica o que o estado Validado acrescenta ao Concluído no fluxo de desenvolvimento",
+        "Escolhe conversão em transações concluídas como métrica central do teste, e descarta cliques",
+        "Identifica o pivot como zoom-in e diz o que ele preservou"
+      ],
+      "checagem": "Por que a TechNova acrescentou o estado Validado depois de Concluído, e qual métrica central usou no teste A/B?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/CasosSection.tsx"
+    },
+    {
       "id": "mt_ESTD_01",
       "tipo": "LINGUAGEM",
       "disciplina": "ESTD",
@@ -5151,6 +6217,2117 @@
         "Árvores"
       ],
       "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresBuscaSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_01",
+      "tipo": "META",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Introdução à Disciplina",
+      "nome": "Panorama da disciplina e o negócio antes da tecnologia",
+      "descricao": "FUSI é a porta de entrada do curso: dá a visão panorâmica de como uma organização usa tecnologia para transformar dados em decisão, sem esgotar nenhum tema, e cada capítulo dela vira uma disciplina inteira mais adiante. O fio condutor é o valor que o SI gera para a organização, então a tecnologia aparece sempre respondendo a uma necessidade de negócio, nunca como fim em si mesma.",
+      "ordem": 1,
+      "centralidade": 0,
+      "evidencia": [
+        "Explica por que a disciplina passa por todas as camadas de um sistema de informação sem aprofundar nenhuma",
+        "Aponta em que disciplina posterior cada bloco desta é retomado, como TPS, MIS, DSS e ERP em APSI e SIGE"
+      ],
+      "checagem": "Qual é o fio condutor que liga os capítulos da disciplina, e por que a tecnologia nunca aparece como fim em si mesma?",
+      "avaliacoes": [],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/IntroSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_02",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Dados, Informação e Conhecimento",
+      "nome": "Dado, processo e informação",
+      "descricao": "Dados são fatos brutos, sem contexto: o número 42 sozinho pode ser idade, temperatura ou quantidade em estoque. Informação é uma coleção de fatos organizados de modo que tenham valor além dos fatos em si, e nasce quando um processo, conjunto de tarefas organizadas de forma lógica para obter um resultado definido, agrupa, ordena, soma, compara ou contextualiza esses dados.",
+      "ordem": 2,
+      "centralidade": 0.3091,
+      "evidencia": [
+        "Classifica um item concreto como dado ou como informação e justifica pelo contexto",
+        "Aponta qual foi o processo que transformou os dados em informação num caso dado"
+      ],
+      "checagem": "O que separa dado de informação, e qual é o papel do processo nessa passagem?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/DadosInformacaoSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_03",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Dados, Informação e Conhecimento",
+      "nome": "Conhecimento como compreensão que orienta a ação",
+      "descricao": "Conhecimento é a consciência e a compreensão de um conjunto de informações e de como elas podem ser úteis para apoiar uma tarefa ou uma decisão. No exemplo da papelaria, a lista de vendas ordenada é a informação; perceber que borrachas encalham e reduzir a compra do próximo lote é o conhecimento em uso. A cadeia completa é dado, processo, informação e conhecimento.",
+      "ordem": 3,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Numa mesma situação, separa o que é informação do que é conhecimento",
+        "Descreve a cadeia dado, processo, informação e conhecimento sem inverter etapas"
+      ],
+      "checagem": "Numa mesma situação de trabalho, o que é a informação e o que é o conhecimento?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/DadosInformacaoSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_04",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Dados, Informação e Conhecimento",
+      "nome": "As onze características da informação valiosa",
+      "descricao": "Nem toda informação serve. O material lista onze atributos: precisa, completa, econômica, flexível, confiável, relevante, simples, no prazo, verificável, acessível e segura. Alguns competem entre si: informação perfeita que chega depois da decisão não vale nada, e informação rápida e errada custa caro. Boa parte do projeto de um SI é equilibrar esses atributos.",
+      "ordem": 4,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Diz qual atributo falhou quando uma decisão deu errado por causa da informação",
+        "Explica por que precisão e pontualidade competem entre si"
+      ],
+      "checagem": "Cite os atributos da informação valiosa e explique o conflito entre ser precisa e chegar no prazo.",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_05",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Sistemas, CBIS e Tipos de SI",
+      "nome": "Sistema, seus quatro componentes e o Sistema de Informação",
+      "descricao": "Sistema é um conjunto de elementos que interagem para realizar objetivos, e tem quatro componentes: entrada (captar e reunir dados brutos), processamento (converter dados em saídas úteis), saída (produzir informação útil, em geral documentos e relatórios) e realimentação (informação originada no próprio sistema, usada para mudar a entrada ou o processamento). O feedback fecha o ciclo e permite a correção. Um Sistema de Informação é o conjunto de componentes inter-relacionados que coleta, manipula, armazena e dissemina dados e informações, oferecendo esse mecanismo de realimentação para atender a um objetivo.",
+      "ordem": 5,
+      "centralidade": 0.2727,
+      "evidencia": [
+        "Aponta entrada, processamento, saída e realimentação num sistema concreto",
+        "Explica o que o sistema deixa de fazer quando não existe realimentação"
+      ],
+      "checagem": "Quais são os quatro componentes de um sistema e o que a realimentação faz que os outros três não fazem?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SistemasSISection.tsx"
+    },
+    {
+      "id": "mt_FUSI_06",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Sistemas, CBIS e Tipos de SI",
+      "nome": "Eficiência, eficácia e padrão de desempenho",
+      "descricao": "Eficiência é a medida do que é produzido dividido pelo que é consumido, ou seja, fazer com menos recurso. Eficácia é a medida do grau em que o sistema alcança suas metas, ou seja, fazer a coisa certa. As duas são independentes: dá para ser muito eficiente fabricando o produto errado. Padrão de desempenho é o objetivo específico contra o qual o sistema é medido, como produzir no máximo 1% de peças com defeito.",
+      "ordem": 6,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Julga um sistema como eficiente ou eficaz e justifica cada julgamento em separado",
+        "Escreve um padrão de desempenho verificável para um sistema dado"
+      ],
+      "checagem": "Um sistema pode ser eficiente e ineficaz ao mesmo tempo? Explique com um exemplo.",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/SistemasSISection.tsx"
+    },
+    {
+      "id": "mt_FUSI_07",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Sistemas, CBIS e Tipos de SI",
+      "nome": "Os seis componentes do CBIS",
+      "descricao": "Um CBIS, Sistema de Informação Baseado em Computador, é o conjunto único de seis componentes configurados para coletar, manipular, armazenar e processar dados em informação: hardware, software, banco de dados, telecomunicações e redes, pessoas e procedimentos. As pessoas são o elemento mais importante na maioria dos CBIS, e procedimentos são as estratégias, políticas, métodos e regras de uso do sistema. Esses recursos compartilhados formam a infraestrutura de tecnologia.",
+      "ordem": 7,
+      "centralidade": 0.1909,
+      "evidencia": [
+        "Lista os seis componentes sem tratar banco de dados e telecomunicações como um só",
+        "Justifica por que pessoas e procedimentos não são acessórios do sistema"
+      ],
+      "checagem": "Quais são os seis componentes do CBIS e qual deles o material aponta como o mais importante?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SistemasSISection.tsx"
+    },
+    {
+      "id": "mt_FUSI_08",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Sistemas, CBIS e Tipos de SI",
+      "nome": "Os tipos de SI nas empresas: TPS, ERP, MIS e DSS",
+      "descricao": "O TPS registra e processa o grande volume de transações rotineiras do dia a dia, sendo transação qualquer intercâmbio relacionado a negócios, e é a base que alimenta os demais sistemas. O ERP é o conjunto de programas integrados que gerencia as operações vitais da organização, integrando fabricação e finanças. O MIS ou SIG entrega informações de rotina em relatórios padrão, com foco na eficiência operacional. O DSS apoia a decisão específica de um problema complexo, com foco na eficácia da decisão: o MIS responde quanto vendemos por filial no mês, o DSS responde se vale a pena abrir uma filial nesta cidade.",
+      "ordem": 8,
+      "centralidade": 0,
+      "evidencia": [
+        "Escolhe entre TPS, ERP, MIS e DSS a partir do tipo de problema descrito",
+        "Diz de onde o MIS tira os dados que usa nos relatórios",
+        "Separa MIS de DSS por tipo de problema, foco e formato da saída"
+      ],
+      "checagem": "Que critérios separam MIS de DSS, e qual sistema alimenta os dois com os dados da operação?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios",
+        "Sistemas de Apoio à Decisão",
+        "Tomada de Decisão estratégica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_09",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Sistemas, CBIS e Tipos de SI",
+      "nome": "Sistemas especializados: SGC, IA, sistemas especialistas e realidade virtual",
+      "descricao": "Os SGC criam, armazenam, compartilham e usam o conhecimento e a experiência acumulados pela organização. A IA é o sistema que assume características da inteligência humana e abrange robótica, sistemas de visão, processamento de linguagem natural, sistemas de aprendizagem e redes neurais. Sistemas especialistas dão sugestões e funcionam como um especialista de determinada área, apoiados numa base de conhecimento com dados, regras, procedimentos e relações. Realidade virtual é a simulação de um ambiente real ou imaginado, vivenciado em três dimensões.",
+      "ordem": 9,
+      "centralidade": 0,
+      "evidencia": [
+        "Separa IA de sistema especialista pelo que cada um entrega",
+        "Diz o que sustenta a resposta de um sistema especialista",
+        "Reconhece redes neurais e sistemas de aprendizagem como subáreas da IA"
+      ],
+      "checagem": "O que é a base de conhecimento de um sistema especialista, e o que a IA abrange além dele?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas Especialistas"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_10",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Sistemas, CBIS e Tipos de SI",
+      "nome": "As cinco etapas do desenvolvimento de sistemas",
+      "descricao": "Desenvolvimento de sistemas é a atividade de criar ou modificar sistemas empresariais existentes, em cinco etapas: investigação (entender o problema a resolver ou a oportunidade), análise (definir problemas e oportunidades do sistema atual), projeto (determinar como o novo sistema vai funcionar), implementação (criar ou adquirir os componentes, reuni-los e colocar o sistema em operação) e manutenção e revisão (verificar e ajustar conforme o negócio muda).",
+      "ordem": 10,
+      "centralidade": 0,
+      "evidencia": [
+        "Ordena as cinco etapas e diz o que cada uma entrega",
+        "Distingue a análise, que define o problema, do projeto, que define o como"
+      ],
+      "checagem": "Quais são as cinco etapas do desenvolvimento de sistemas e qual delas responde como o sistema vai funcionar?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_11",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "SI nas Organizações e Vantagem Competitiva",
+      "nome": "A organização como sistema, cadeia de suprimentos e CRM",
+      "descricao": "Organização é uma coleção formal de pessoas e outros recursos estabelecida para alcançar metas, e ela própria é um sistema, com entradas, mecanismo de transformação e saídas, consumindo dinheiro, pessoas, materiais, máquinas, dados, informações e decisões. Dois processos de valor agregado organizam essa transformação: a gestão da cadeia de suprimentos, que determina quais suprimentos são necessários, em que quantidade, como serão processados em bens e serviços e como o envio será agendado, monitorado e controlado; e o CRM, que gerencia todos os aspectos dos encontros com o cliente, de marketing e vendas a atendimento e retenção.",
+      "ordem": 11,
+      "centralidade": 0.0455,
+      "evidencia": [
+        "Descreve uma empresa concreta como sistema, nomeando entradas, transformação e saídas",
+        "Separa o que é responsabilidade da gestão da cadeia de suprimentos do que é do CRM"
+      ],
+      "checagem": "Por que a organização é ela mesma um sistema, e o que a cadeia de suprimentos decide que o CRM não decide?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/OrganizacoesSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_12",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "SI nas Organizações e Vantagem Competitiva",
+      "nome": "Estruturas organizacionais",
+      "descricao": "A estrutura tradicional é a hierarquia de decisão e o fluxo de autoridade que desce da gestão estratégica até a operacional e os funcionários; a plana é a variante que empurra a decisão para os níveis inferiores, com empoderamento. A de projeto é centrada nos principais produtos ou serviços, com equipes muitas vezes temporárias; a de equipe é centrada no trabalho de grupos; e a virtual emprega pessoas, grupos ou unidades em áreas geograficamente dispersas, reduzindo custos e viabilizando trabalho colaborativo entre países diferentes.",
+      "ordem": 12,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Identifica a estrutura de uma empresa a partir de onde a decisão é tomada",
+        "Explica o que o empoderamento muda na estrutura plana"
+      ],
+      "checagem": "O que diferencia a estrutura tradicional da plana, e o que caracteriza a organização virtual?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Sistemas de Informação nos negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_13",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "SI nas Organizações e Vantagem Competitiva",
+      "nome": "Cultura, modelo de mudança, reengenharia e melhoria contínua",
+      "descricao": "Cultura organizacional é o conjunto dos principais entendimentos e suposições compartilhados por um grupo, e implantar um sistema quase sempre exige mudá-la. O modelo de mudança tem três fases: descongelamento (interromper velhos hábitos e criar clima receptivo), movimento (aprender novos métodos, comportamentos e sistemas) e recongelamento (reforçar a mudança até virar parte natural do trabalho). Reengenharia é a revisão radical de processos, estruturas, sistemas e valores para alcançar novo patamar de resultados; melhoria contínua busca aperfeiçoamentos incrementais. O TAM especifica os fatores que levam a melhores atitudes sobre um SI, a difusão mede o quanto a tecnologia se espalhou pela organização e a infusão mede o quanto ela permeia um departamento.",
+      "ordem": 13,
+      "centralidade": 0,
+      "evidencia": [
+        "Classifica uma iniciativa como reengenharia ou melhoria contínua e justifica pelo grau de ruptura",
+        "Nomeia a fase do modelo de mudança em que uma equipe está",
+        "Explica uma tecnologia muito difundida e pouco infundida"
+      ],
+      "checagem": "Quais são as três fases do modelo de mudança, e o que separa reengenharia de melhoria contínua?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/OrganizacoesSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_14",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "SI nas Organizações e Vantagem Competitiva",
+      "nome": "Vantagem competitiva, as cinco forças e a medição do desempenho do SI",
+      "descricao": "Vantagem competitiva é o benefício significativo e, idealmente, de longo prazo de uma empresa sobre seus concorrentes. Cinco forças levam as empresas a persegui-la: rivalidade entre concorrentes existentes, ameaça de novos concorrentes, ameaça de produtos e serviços substitutos, poder de negociação dos compradores e poder de negociação dos fornecedores. As estratégias citadas incluem liderança em custo, diferenciação, nicho, alterar a estrutura do setor, criar novos produtos e ser o primeiro no mercado. O desempenho do SI é medido por produtividade, que é a saída dividida pela entrada vezes 100%, ROI, crescimento nos ganhos, participação de mercado, satisfação do cliente e custo total de propriedade.",
+      "ordem": 14,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Nomeia as cinco forças e diz o que aumenta a ameaça de novos concorrentes",
+        "Calcula a produtividade a partir de saída e entrada",
+        "Explica por que o custo total de propriedade não é o preço de compra"
+      ],
+      "checagem": "Quais são as cinco forças competitivas e como se calcula a produtividade de um sistema?",
+      "avaliacoes": [
+        "p1"
+      ],
+      "ementaPPC": [
+        "Tomada de Decisão estratégica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/OrganizacoesSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_15",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Hardware",
+      "nome": "CPU, ciclo de máquina, velocidade e paralelismo",
+      "descricao": "A CPU tem três partes: a ULA, que faz cálculos matemáticos e comparações lógicas; a unidade de controle, que acessa sequencialmente as instruções, decodifica-as e coordena o fluxo de dados; e os registradores, áreas de altíssima velocidade dentro da própria CPU. O ciclo de máquina tem quatro etapas: buscar, decodificar, executar e armazenar o resultado. O tempo de ciclo é medido em nanossegundos e picossegundos, o desempenho em MIPS e a velocidade do relógio em MHz e GHz, e a Lei de Moore é a hipótese de que a densidade de transistores num chip dobra a cada dois anos. Multiprocessamento é a execução simultânea de duas ou mais instruções, o multicore combina processadores independentes num só chip, a GPU assume as tarefas de gráficos 3D e a computação paralela executa a mesma tarefa em múltiplos processadores.",
+      "ordem": 15,
+      "centralidade": 0.0636,
+      "evidencia": [
+        "Diz qual parte da CPU faz o cálculo e qual coordena o fluxo de dados",
+        "Ordena as quatro etapas do ciclo de máquina",
+        "Explica por que a Lei de Moore é hipótese e não lei física"
+      ],
+      "checagem": "Quais são as três partes da CPU, as quatro etapas do ciclo de máquina e o que a Lei de Moore afirma?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/HardwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_16",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Hardware",
+      "nome": "RAM volátil, ROM não volátil e memória cache",
+      "descricao": "A RAM é temporária e volátil, perde todo o conteúdo ao desligar, aceita leitura e escrita livres e tem variantes DRAM, SRAM e DDR SDRAM. A ROM é não volátil e guarda permanentemente dados e instruções que não mudam, em regime somente de leitura. Entre a CPU e a memória principal fica a memória cache, de alta velocidade, que o processador acessa mais rapidamente que a memória principal. Oito bits formam um byte.",
+      "ordem": 16,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Diz qual memória perde o conteúdo ao desligar e qual mantém",
+        "Situa a cache entre o processador e a memória principal, sem confundi-la com registrador"
+      ],
+      "checagem": "Qual das duas memórias é volátil, e o que a cache faz de diferente da memória principal?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/HardwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_17",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Hardware",
+      "nome": "Armazenamento secundário: acesso sequencial contra acesso direto",
+      "descricao": "Comparado à memória, o armazenamento secundário é não volátil, tem maior capacidade e é bem mais barato por megabyte. São dois os métodos de acesso: sequencial, em que os dados devem ser recuperados na ordem em que foram armazenados, caso da fita magnética e dos equipamentos SASD; e direto, em que os registros podem ser recuperados em qualquer ordem, caso do disco magnético e dos DASD. Os dispositivos citados incluem fita para backup, disco, RAID com tolerância a falhas, ópticos (CD, DVD e Blu-ray), SSD em chips e as opções corporativas NAS e SAN.",
+      "ordem": 17,
+      "centralidade": 0,
+      "evidencia": [
+        "Classifica um dispositivo como SASD ou DASD e justifica pelo método de acesso",
+        "Explica por que o SSD é menos frágil e ainda assim custa mais por gigabyte",
+        "Diz o que o RAID acrescenta a um conjunto de discos"
+      ],
+      "checagem": "Qual método de acesso a fita usa e qual o disco usa, e como se chamam os equipamentos de cada um?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/HardwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_18",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Hardware",
+      "nome": "Classes de computador, escalabilidade e informática verde",
+      "descricao": "As classes se dividem em portáteis (handheld, smartphone, laptop, notebook, netbook e tablet), não portáteis de usuário único (thin client, desktop, nettop e estação de trabalho) e multiusuário (servidor, servidor blade, mainframe e supercomputador). Escalabilidade é a habilidade de aumentar a capacidade de processamento para atender mais usuários, mais dados ou mais transações. Informática verde é o programa de eficiência e responsabilidade ambiental no projeto, na fabricação, na operação e no descarte dos produtos de TI, com as metas de reduzir materiais perigosos, reduzir custos de energia e permitir descarte seguro ou reciclagem.",
+      "ordem": 18,
+      "centralidade": 0,
+      "evidencia": [
+        "Enquadra um equipamento na classe certa entre portátil, usuário único e multiusuário",
+        "Explica escalabilidade como capacidade de crescer para atender mais carga",
+        "Cita as três metas da informática verde"
+      ],
+      "checagem": "Quais são as três grandes classes de sistemas de computador e o que significa escalabilidade?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/HardwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_19",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Software",
+      "nome": "Software de sistemas, aplicativo, utilitários, middleware e SOA",
+      "descricao": "Programa de computador é uma sequência de instruções para o computador, e a documentação descreve suas funções. Software de sistemas é o conjunto de programas que coordena as atividades e funções do hardware e de outros programas, e a combinação de uma configuração de hardware com o software de sistemas forma a plataforma. Software aplicativo ajuda o usuário a resolver determinados problemas, e é classificado por esfera de influência em pessoal, de grupo de trabalho (groupware) e de empreendimento. Também são software de sistemas os programas utilitários e o middleware, que permite a comunicação entre sistemas diferentes e serve de interface entre a internet e sistemas legados, enquanto a SOA usa serviços modulares para que os sistemas interajam.",
+      "ordem": 19,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Classifica um programa como software de sistemas ou aplicativo",
+        "Diz o que o middleware resolve que um aplicativo comum não resolve",
+        "Enquadra um software na esfera pessoal, de grupo de trabalho ou de empreendimento"
+      ],
+      "checagem": "O que separa software de sistemas de software aplicativo, e para que serve o middleware?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Softwares de sistemas e de aplicação"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SoftwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_20",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Software",
+      "nome": "Sistema operacional, núcleo, API e as atividades do SO",
+      "descricao": "O sistema operacional é o conjunto de programas que controla o hardware e atua como interface com os aplicativos, e seu núcleo (kernel) interliga seus componentes e regula os outros programas. Suas atividades são executar funções comuns de hardware, fornecer interface de usuário e gestão de entrada e saída, dar independência do hardware, gerenciar memória, gerenciar o processamento de tarefas, fornecer capacidade de rede, controlar acesso e segurança e gerenciar arquivos. As interfaces podem ser por comando, gráficas (GUI) ou naturais. A API é o que dá independência do hardware, pois permite construir aplicativos sem conhecer os detalhes internos do SO nem do equipamento. Multitarefa é executar mais de um programa ao mesmo tempo e compartilhamento de tempo é mais de uma pessoa usar o sistema ao mesmo tempo.",
+      "ordem": 20,
+      "centralidade": 0,
+      "evidencia": [
+        "Explica o papel do núcleo dentro do sistema operacional",
+        "Diz por que a API dá independência do hardware ao desenvolvedor",
+        "Separa multitarefa de compartilhamento de tempo"
+      ],
+      "checagem": "O que a API permite que o desenvolvedor ignore, e qual a diferença entre multitarefa e compartilhamento de tempo?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Softwares de sistemas e de aplicação"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SoftwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_21",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Software",
+      "nome": "Aquisição de software: proprietário, pronto, SaaS, nuvem e código aberto",
+      "descricao": "São três as abordagens para obter software aplicativo: construir um software proprietário, comprar um programa comercialmente disponível ou combinar as duas. O proprietário é feito para uma necessidade específica, custa mais, demora mais e pode gerar vantagem competitiva por ser exclusivo; o comercialmente disponível é mais barato e imediato, mas pode exigir adaptar o processo ao software. O SaaS permite assinar um aplicativo entregue pela web por taxa mensal ou por uso, o ASP fornece software, suporte e hardware por uma rede e a computação em nuvem usa recursos de computação na internet em vez de máquinas locais. Freeware é distribuído de graça sem necessariamente abrir o código, e o software de código-fonte aberto vem com o código, sendo que a licença GPL garante executar, estudar, adaptar, redistribuir e liberar melhorias.",
+      "ordem": 21,
+      "centralidade": 0,
+      "evidencia": [
+        "Escolhe entre software proprietário e pronto a partir dos requisitos do negócio",
+        "Explica por que só o proprietário tende a gerar vantagem competitiva",
+        "Separa freeware de software de código-fonte aberto"
+      ],
+      "checagem": "Quando compensa encomendar software proprietário em vez de comprar um pronto, e por quê?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Softwares de sistemas e de aplicação"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SoftwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_22",
+      "tipo": "LINGUAGEM",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Software",
+      "nome": "Linguagens de programação, sintaxe e compilador",
+      "descricao": "Linguagens de programação são conjuntos de palavras-chave, símbolos e regras para construir afirmações pelas quais as pessoas comunicam instruções ao computador. O código do programa é o conjunto dessas instruções e a sintaxe é o conjunto de regras associadas à linguagem. O compilador converte o código-fonte escrito pelo programador em instruções de linguagem de máquina. As gerações vão da linguagem de máquina até as 5GLs, usadas em inteligência artificial e sistemas especialistas, passando pela programação visual e pelas linguagens orientadas a objetos. Bug é o defeito que impede o programa de funcionar como deveria.",
+      "ordem": 22,
+      "centralidade": 0,
+      "evidencia": [
+        "Diz o que o compilador recebe e o que ele produz",
+        "Define sintaxe como o conjunto de regras da linguagem",
+        "Situa as 5GLs entre as gerações e diz para que servem"
+      ],
+      "checagem": "O que o compilador converte, e o que exatamente é a sintaxe de uma linguagem?",
+      "avaliacoes": [
+        "p1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Softwares de sistemas e de aplicação"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SoftwareSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_23",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Banco de Dados e Inteligência de Negócios",
+      "nome": "Banco de dados, SGBD, DBA e a abordagem de banco de dados",
+      "descricao": "Banco de dados é uma coleção organizada de dados, o SGBD ou DBMS é o grupo de programas que o manipula e fornece a interface entre ele, os usuários e os aplicativos, e o DBA é o profissional que dirige todas as atividades relacionadas ao banco: o banco é o conteúdo, o SGBD é o software e o DBA é a pessoa. Na abordagem tradicional cada sistema usava arquivos dedicados, o que gera redundância e inconsistência quando uma cópia é atualizada e a outra não. Na abordagem de banco de dados um grupo de dados relacionados é compartilhado por diversos aplicativos, e é essa partilha que elimina a duplicação.",
+      "ordem": 23,
+      "centralidade": 0.1091,
+      "evidencia": [
+        "Separa banco de dados, SGBD e DBA sem trocar conteúdo, software e pessoa",
+        "Explica de onde vem a redundância na abordagem tradicional"
+      ],
+      "checagem": "Qual é a diferença entre banco de dados, SGBD e DBA, e o que a abordagem de banco de dados elimina?",
+      "avaliacoes": [
+        "p2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Sistemas de Banco de dados e inteligência de negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/BancoDadosSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_24",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Banco de Dados e Inteligência de Negócios",
+      "nome": "A hierarquia dos dados",
+      "descricao": "Do menor elemento para o maior: bit (dígito binário, circuito ligado ou desligado), byte (normalmente oito bits), caractere (bloco básico de construção da informação), campo (nome, número ou combinação de caracteres que descreve um aspecto de um objeto), registro (coleção de campos relacionados), arquivo (coleção de registros relacionados) e banco de dados (coleção de arquivos integrados e relacionados).",
+      "ordem": 24,
+      "centralidade": 0.0909,
+      "evidencia": [
+        "Escreve a hierarquia na ordem correta, do bit ao banco de dados",
+        "Dá um exemplo concreto de campo, registro e arquivo na mesma tabela"
+      ],
+      "checagem": "Coloque bit, byte, caractere, campo, registro, arquivo e banco de dados na ordem do menor para o maior.",
+      "avaliacoes": [
+        "p2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Sistemas de Banco de dados e inteligência de negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_25",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Banco de Dados e Inteligência de Negócios",
+      "nome": "Entidade, atributo, chave primária e o modelo relacional",
+      "descricao": "Entidade é a pessoa, o lugar ou a coisa sobre a qual os dados são coletados, atributo é uma característica dessa entidade, item de dados é o valor específico de um atributo e chave é o campo ou conjunto de campos usado para identificar um registro, sendo a chave principal a que identifica o registro de forma única. No modelo relacional os dados aparecem em formato tabular: cada linha é um registro, ou entidade, e cada coluna é um atributo, ou campo, sendo o domínio o intervalo de valores permitidos para um atributo. O modelo de dados é o diagrama das entidades e de suas relações, e o diagrama Entidade-Relacionamento usa símbolos gráficos para mostrar essa organização.",
+      "ordem": 25,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Aponta entidade, atributo, item de dados e chave primária numa tabela concreta",
+        "Diz o que a linha e o que a coluna representam numa tabela relacional",
+        "Explica para que serve o domínio de um atributo"
+      ],
+      "checagem": "Numa tabela de alunos, o que é entidade, o que é atributo e o que é chave primária?",
+      "avaliacoes": [
+        "p2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Sistemas de Banco de dados e inteligência de negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/BancoDadosSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_26",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Banco de Dados e Inteligência de Negócios",
+      "nome": "Seleção, projeção, junção e vinculação",
+      "descricao": "As manipulações do modelo relacional: a seleção elimina linhas de acordo com um critério, como ficar só com os alunos do 1º período; a projeção elimina colunas, como ficar só com nome e matrícula; a junção combina duas ou mais tabelas em um resultado único; e a vinculação manipula tabelas que compartilham pelo menos um atributo em comum. O par seleção e projeção é o mais cobrado justamente porque é fácil trocar um pelo outro: quem corta linha é a seleção, quem corta coluna é a projeção.",
+      "ordem": 26,
+      "centralidade": 0,
+      "evidencia": [
+        "Nomeia a operação certa a partir do resultado pedido numa consulta",
+        "Explica por que projeção mantém todas as linhas"
+      ],
+      "checagem": "Qual operação elimina linhas e qual elimina colunas, e o que a junção faz?",
+      "avaliacoes": [
+        "p2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Sistemas de Banco de dados e inteligência de negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_27",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Banco de Dados e Inteligência de Negócios",
+      "nome": "As funções de um SGBD: esquema, DDL, DML, SQL e simultaneidade",
+      "descricao": "O SGBD fornece uma visão ao usuário, pois o esquema descreve todo o banco de dados e é consultado para localizar onde acessar os dados pedidos; cria e modifica o banco pela DDL, que descreve os dados e as relações, apoiada no dicionário de dados, que detalha todos os dados usados; armazena e recupera dados, e nessa função o controle de simultaneidade resolve o caso de dois usuários precisarem do mesmo registro ao mesmo tempo; e manipula dados e gera relatórios pela DML e pela SQL, adotada pelo ANSI como linguagem-padrão de consulta dos bancos relacionais, tendo o QBE como alternativa visual.",
+      "ordem": 27,
+      "centralidade": 0,
+      "evidencia": [
+        "Diz qual função do SGBD resolve o acesso concorrente ao mesmo registro",
+        "Separa a DDL, que define a estrutura, da DML, que manipula os dados",
+        "Explica o que o esquema descreve"
+      ],
+      "checagem": "Que recurso do SGBD impede que duas atualizações simultâneas se sobrescrevam, e qual a diferença entre DDL e DML?",
+      "avaliacoes": [
+        "p2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Sistemas de Banco de dados e inteligência de negócios"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_28",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Banco de Dados e Inteligência de Negócios",
+      "nome": "Inteligência de negócios: datawarehouse, data mining e análise preditiva",
+      "descricao": "O datawarehouse é o banco que reúne informações comerciais de muitas fontes da empresa para apoiar a decisão, e o data mart é um subconjunto dele, recortado para uma área específica. Data mining é a descoberta automatizada de padrões e relações dentro do datawarehouse, e a análise preditiva combina dados históricos com suposições sobre o futuro para prever resultados. Inteligência empresarial é reunir a informação certa, no momento oportuno e de forma útil, e analisá-la para impactar estratégia, tática ou operações; a inteligência competitiva limita-se a informações sobre concorrentes e a contrainteligência protege as próprias informações. O OLAP permite explorar os dados sob múltiplas perspectivas e o NoSQL lida com dados que não se ajustam a tabelas.",
+      "ordem": 28,
+      "centralidade": 0,
+      "evidencia": [
+        "Separa datawarehouse de banco transacional pelo propósito de cada um",
+        "Reconhece data mining pela descoberta automatizada, sem hipótese formulada antes",
+        "Separa inteligência competitiva de contrainteligência"
+      ],
+      "checagem": "O que caracteriza o data mining, e em que o datawarehouse difere do banco que registra as vendas?",
+      "avaliacoes": [
+        "p2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Sistemas de Banco de dados e inteligência de negócios",
+        "Tomada de Decisão estratégica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_29",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Telecomunicações e Redes",
+      "nome": "Telecomunicações, meios, canais e comutação",
+      "descricao": "Telecomunicações é a transmissão eletrônica de sinais para comunicação, o meio é a substância material que carrega o sinal e o protocolo de rede é o conjunto de regras, algoritmos e mensagens que permite que os dispositivos se comuniquem. Na comunicação síncrona o receptor recebe instantaneamente, na assíncrona recebe após atraso. Os canais são simplex (uma direção), half-duplex (duas direções, uma de cada vez) e full-duplex (duas direções ao mesmo tempo), e a largura de banda é a taxa de troca de dados em bits por segundo. A comutação de circuitos estabelece um circuito antes da comunicação e a de pacotes não cria caminho fixo. Os meios guiados são par trançado, coaxial e fibra óptica, e os sem fio vão de NFC, Bluetooth e Zigbee ao Wi-Fi, micro-ondas, satélite, 3G, 4G, LTE e WiMAX.",
+      "ordem": 29,
+      "centralidade": 0.0818,
+      "evidencia": [
+        "Classifica um canal como simplex, half-duplex ou full-duplex a partir do uso descrito",
+        "Diz o que a comutação de pacotes não faz que a de circuitos faz",
+        "Ordena os meios guiados por qualidade de transmissão"
+      ],
+      "checagem": "O que é um protocolo de rede, e o que diferencia half-duplex de full-duplex?",
+      "avaliacoes": [
+        "atividades"
+      ],
+      "ementaPPC": [
+        "Telecomunicações e redes"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/RedesSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_30",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Telecomunicações e Redes",
+      "nome": "Alcances de rede e alternativas de processamento",
+      "descricao": "Por área de cobertura, as redes são PAN (área pessoal, cerca de 10 m), LAN (área local, escritório ou casa), MAN (área metropolitana, campus ou cidade) e WAN (área expandida, grandes regiões). Quanto ao processamento, o centralizado ocorre em um único local, o descentralizado usa dispositivos em vários locais remotos sem conexão entre si e o distribuído usa locais remotos conectados por uma rede, e é a conexão que separa os dois últimos. Na arquitetura cliente e servidor, o cliente requisita serviços e o servidor de banco de dados envia apenas os dados que satisfazem a consulta, não o arquivo inteiro.",
+      "ordem": 30,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Classifica uma rede como PAN, LAN, MAN ou WAN pelo alcance descrito",
+        "Distingue processamento descentralizado de distribuído pela existência de rede",
+        "Explica o que o servidor de banco de dados devolve ao cliente"
+      ],
+      "checagem": "O que separa o processamento distribuído do descentralizado, e o que é uma MAN?",
+      "avaliacoes": [
+        "atividades"
+      ],
+      "ementaPPC": [
+        "Telecomunicações e redes"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/RedesSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_31",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Telecomunicações e Redes",
+      "nome": "Hardware de rede: do modem ao gateway",
+      "descricao": "O modem faz modulação e demodulação do sinal, o multiplexador combina dados de várias fontes num único sinal de saída, o comutador usa o endereço físico do dispositivo em cada mensagem que entra na rede, a ponte conecta duas LANs que usam o mesmo protocolo de telecomunicações, o roteador encaminha pacotes através de duas ou mais redes distintas até o destino e o gateway atua como a entrada para outra rede. A criptografia converte a mensagem numa forma que só o receptor pretendido entende, usando uma chave, o WEP foi superado pelo WPA e war driving é procurar pontos de acesso sem fio desprotegidos.",
+      "ordem": 31,
+      "centralidade": 0,
+      "evidencia": [
+        "Distingue ponte de roteador pelo que cada um atravessa",
+        "Atribui a função certa a modem, multiplexador e comutador",
+        "Explica o risco que o war driving explora numa rede sem fio"
+      ],
+      "checagem": "O que a ponte conecta e o que o roteador atravessa?",
+      "avaliacoes": [
+        "atividades"
+      ],
+      "ementaPPC": [
+        "Telecomunicações e redes"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_32",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Internet, Intranet e Extranet",
+      "nome": "Origem e infraestrutura da internet: ARPANET, TCP/IP, backbone, URL e ICANN",
+      "descricao": "A internet descende da ARPANET, projeto iniciado pelo Departamento de Defesa dos Estados Unidos em 1969. O protocolo IP possibilita que os computadores encaminhem tráfego de uma rede para outra e o TCP é o protocolo da camada de transporte usado com ele, formando o TCP/IP. O backbone é uma das conexões de longa distância e alta velocidade, a URL é o endereço que especifica a localização de uma página e a ICANN é a corporação responsável por gerenciar endereços IP e nomes de domínio, com autoridade para resolver disputas por nomes. O acesso se dá por servidor LAN ou por provedor (ISP), com enlaces discado, cabo, DSL, satélite e sem fio.",
+      "ordem": 32,
+      "centralidade": 0.0545,
+      "evidencia": [
+        "Diz o que cabe ao IP e o que cabe ao TCP na pilha TCP/IP",
+        "Atribui à ICANN a gestão de endereços IP e nomes de domínio",
+        "Situa a ARPANET como origem da internet e a data de início"
+      ],
+      "checagem": "Qual é a função do IP, qual é a do TCP e o que a ICANN administra?",
+      "avaliacoes": [
+        "p2"
+      ],
+      "ementaPPC": [
+        "Internet, Intranet e Extranet"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/InternetSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_33",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Internet, Intranet e Extranet",
+      "nome": "Internet como infraestrutura, web como serviço e as linguagens da web",
+      "descricao": "A internet é a infraestrutura: computadores, hardware de rede, cabos, software e os protocolos TCP/IP. A web é um serviço que roda sobre ela, formado pelo software de servidor e cliente, pelo protocolo HTTP e pelas linguagens de marcação, e foi desenvolvida por Tim Berners-Lee no CERN, originalmente como sistema interno de gerenciamento de documentos. Não são sinônimos: e-mail, FTP e Telnet também são serviços da internet e não fazem parte da web. O HTML é a linguagem-padrão de descrição das páginas, com tags de formatação, o CSS define o aspecto visual, o XML estrutura documentos e é a chave dos serviços web (SOAP, WSDL e UDDI), e a Web 2.0 é a web bidirecional, em que o usuário também contribui com conteúdo. As ferramentas de busca localizam informações por palavras-chave usando spiders.",
+      "ordem": 33,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Explica por que a web depende da internet e não o contrário",
+        "Cita serviços da internet que não são a web",
+        "Diz o que cada linguagem faz na página: HTML, CSS e XML"
+      ],
+      "checagem": "Qual afirmação distingue corretamente a internet da web, e onde entra o HTTP nessa distinção?",
+      "avaliacoes": [
+        "p2"
+      ],
+      "ementaPPC": [
+        "Internet, Intranet e Extranet"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/InternetSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_34",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Internet, Intranet e Extranet",
+      "nome": "Internet, intranet e extranet, VPN e tunelamento",
+      "descricao": "As três usam os mesmos padrões e tecnologias da internet e da web, e o que as separa é quem tem acesso: a internet é pública e mundial, a intranet é a rede corporativa interna, restrita aos membros da organização, e a extranet conecta recursos selecionados da intranet a usuários externos autorizados, como clientes, fornecedores e parceiros de negócios. A VPN é a rede privada que usa uma rede pública para conectar locais remotos com conexão criptografada, e o tunelamento é o processo de encapsular o tráfego em pacotes IP para transportá-lo.",
+      "ordem": 34,
+      "centralidade": 0,
+      "evidencia": [
+        "Escolhe entre intranet e extranet a partir de quem precisa acessar",
+        "Explica que a VPN é o mecanismo de conexão segura, não um tipo de rede por público",
+        "Define tunelamento como encapsulamento do tráfego em pacotes IP"
+      ],
+      "checagem": "Que rede atende um fornecedor externo que precisa consultar apenas o nível de estoque, e por quê?",
+      "avaliacoes": [
+        "p2"
+      ],
+      "ementaPPC": [
+        "Internet, Intranet e Extranet"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/InternetSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_35",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Comércio Eletrônico e Móvel",
+      "nome": "Comércio eletrônico, m-commerce, e-procurement e e-business",
+      "descricao": "Comércio eletrônico é realizar atividades comerciais eletronicamente por redes de computadores, e as atividades mais fortes candidatas à conversão são as baseadas em papel, demoradas e inconvenientes para o cliente. O e-procurement é o uso de SI e internet para adquirir peças e suprimentos; o m-commerce é o uso de celulares e dispositivos sem fio para fazer pedidos e conduzir negócios, limitado por telas pequenas, entrada limitada, menos processamento e menos largura de banda, com o WAP como padrão de especificações; e o e-business é mais amplo que todos, pois usa SI e internet para realizar todas as tarefas e funções relacionadas ao comércio.",
+      "ordem": 35,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Ordena e-commerce, e-procurement e e-business do mais restrito ao mais amplo",
+        "Lista as limitações que o m-commerce enfrenta no dispositivo móvel",
+        "Reconhece quais atividades são melhores candidatas à conversão eletrônica"
+      ],
+      "checagem": "Por que o e-business é mais amplo que o comércio eletrônico, e o que limita o m-commerce?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "E-Business"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/ComercioEletronicoSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_36",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Comércio Eletrônico e Móvel",
+      "nome": "Categorias B2B, B2C, C2C, governo eletrônico e desintermediação",
+      "descricao": "No B2B todos os participantes são organizações, e ele conecta parceiros na cadeia de suprimentos, reduzindo tempo de reabastecimento e custos. No B2C o cliente trata diretamente com a organização e evita intermediários. No C2C clientes vendem diretamente a outros clientes, em leilões e classificados on-line. O governo eletrônico aparece nas formas G2C, G2B e G2G. Desintermediação é a eliminação das organizações intermediárias entre o produtor e o consumidor, o efeito característico do B2C, que faz muitos bens saírem mais baratos on-line.",
+      "ordem": 36,
+      "centralidade": 0,
+      "evidencia": [
+        "Classifica uma transação em B2B, B2C, C2C ou governo eletrônico a partir de quem são as partes",
+        "Reconhece a desintermediação num caso de fabricante que passa a vender direto",
+        "Percebe que um site pode prestar serviço B2C e hospedar transações C2C"
+      ],
+      "checagem": "Que categoria descreve pessoas físicas vendendo objetos usados entre si, e o que é desintermediação?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "E-Business"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_37",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Comércio Eletrônico e Móvel",
+      "nome": "O modelo de multiestágio e a estratégia do site",
+      "descricao": "O modelo de multiestágio da compra eletrônica tem cinco etapas: busca e identificação, seleção e negociação, aquisição eletrônica de produtos e serviços, entrega, e serviços pós-venda, e um sistema bem-sucedido precisa atender a todas elas, pois falhar no pós-venda derruba a experiência inteira. As vantagens são redução de custos, aceleração do fluxo de bens e informações, aumento de precisão e melhora do atendimento; os desafios são privacidade do cliente, falta de confiança no vendedor e questões globais de cultura, idioma, moeda e legislação. O modelo de sucesso tem três componentes, comunidade, conteúdo e comércio, e o site precisa ser fácil de usar, cumprir as metas da empresa, ser seguro e acessível de manter. A personalização explícita captura o que o usuário fornece e a implícita captura dados das sessões dele.",
+      "ordem": 37,
+      "centralidade": 0,
+      "evidencia": [
+        "Ordena os cinco estágios e diz em qual deles um caso concreto falhou",
+        "Cita os três componentes do modelo de sucesso de um site",
+        "Separa personalização explícita de implícita pela origem do dado"
+      ],
+      "checagem": "Quais são os cinco estágios da compra eletrônica e os três componentes de um modelo de sucesso?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "E-Business"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/ComercioEletronicoSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_38",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Comércio Eletrônico e Móvel",
+      "nome": "Pagamento eletrônico: certificado digital, autoridade certificadora e SSL",
+      "descricao": "O certificado digital é o anexo a uma mensagem, ou o dado embutido em um site, que verifica a identidade de um remetente ou de um site, e é emitido por uma autoridade certificadora, organização terceirizada de confiança. O SSL é o protocolo usado para proteger dados sensíveis em trânsito. Somam-se o dinheiro eletrônico, quantia computadorizada usada à vista nas transações, o cartão inteligente, do tamanho de um cartão de crédito e com microchip embutido que fornece memória e capacidade de processamento, e o P-Card, que simplifica compras e pagamento de faturas.",
+      "ordem": 38,
+      "centralidade": 0,
+      "evidencia": [
+        "Diz quem emite o certificado digital e o que ele comprova",
+        "Separa o papel do SSL do papel do certificado digital",
+        "Explica o que o microchip acrescenta ao cartão inteligente"
+      ],
+      "checagem": "O que o certificado digital verifica, quem o emite e qual o papel do SSL?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "E-Business"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/blocks.ts"
+    },
+    {
+      "id": "mt_FUSI_39",
+      "tipo": "CONCEITUAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Sistemas Numéricos e Conversões",
+      "nome": "Notação posicional, peso, as quatro bases, LSB e MSB",
+      "descricao": "Na notação posicional, a posição de cada algarismo indica sua magnitude, também chamada de peso, e no decimal os pesos são potências de 10, o que faz 1328 valer 1x1000 mais 3x100 mais 2x10 mais 8x1. A mesma lógica vale para qualquer base, só muda a potência. As quatro bases da disciplina são decimal (0 a 9), binária (0 e 1, algarismos chamados bits), octal (0 a 7) e hexadecimal (0 a 9 e A a F, com A igual a 10 até F igual a 15). O LSB é o bit mais à direita, de menor peso, e o MSB é o mais à esquerda, de maior peso. Um grupo de 4 bits é um nibble e um de 8 bits é um byte, e com N bits representam-se 2 elevado a N valores, de 0 até 2 elevado a N menos 1.",
+      "ordem": 39,
+      "centralidade": 0.0545,
+      "evidencia": [
+        "Escreve os pesos de cada posição em qualquer uma das quatro bases",
+        "Aponta o LSB e o MSB de um número binário",
+        "Calcula quantos valores 8 bits representam e qual é o maior deles"
+      ],
+      "checagem": "O que é o peso de uma posição, e quantos valores distintos 8 bits representam, sendo qual o maior?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "Conversão Numérica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/SistemasNumericosSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_40",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Sistemas Numéricos e Conversões",
+      "nome": "De qualquer base para decimal",
+      "descricao": "Para converter de qualquer base para decimal, aplica-se a notação posicional: multiplica-se cada algarismo pelo peso da sua posição e somam-se os produtos. Exemplos do material: 100111 em binário dá 1x32 mais 1x4 mais 1x2 mais 1x1 igual a 39; 527 em octal dá 5x64 mais 2x8 mais 7x1 igual a 343; e 19C em hexadecimal dá 1x256 mais 9x16 mais 12x1 igual a 412, com C valendo 12.",
+      "ordem": 40,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Converte um número binário, octal ou hexadecimal para decimal sem desalinhar os pesos",
+        "Substitui corretamente as letras do hexadecimal pelos valores de 10 a 15"
+      ],
+      "checagem": "Converta 101101 em binário e 19C em hexadecimal para decimal, mostrando os pesos usados.",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "Conversão Numérica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/ConversaoExemplos.tsx"
+    },
+    {
+      "id": "mt_FUSI_41",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Sistemas Numéricos e Conversões",
+      "nome": "De decimal para qualquer base por divisões sucessivas",
+      "descricao": "Para converter decimal em qualquer base, divide-se sucessivamente pela base até o quociente chegar a zero e monta-se a resposta com o último quociente seguido dos restos, lidos de baixo para cima. Exemplos: 39 dividido por 2 sucessivamente dá 100111 em binário; 343 dividido por 8 dá 527 em octal; e 412 dividido por 16 dá 19C em hexadecimal, com o resto 12 escrito como C.",
+      "ordem": 41,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Monta a cadeia de divisões e lê os restos na ordem correta",
+        "Converte um resto maior que 9 no algarismo hexadecimal correspondente"
+      ],
+      "checagem": "Como se monta a resposta na conversão por divisões sucessivas, e em que ordem os restos entram?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "Conversão Numérica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/ConversaoExemplos.tsx"
+    },
+    {
+      "id": "mt_FUSI_42",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Sistemas Numéricos e Conversões",
+      "nome": "Binário para octal e para hexadecimal por agrupamento",
+      "descricao": "Para octal, agrupam-se os bits de 3 em 3 a partir do LSB e troca-se cada grupo pelo octal equivalente; no sentido inverso, cada algarismo octal vira 3 bits. Para hexadecimal, agrupa-se de 4 em 4 a partir do LSB, completando com zeros à esquerda quando faltar bit; no inverso, cada algarismo hexa vira 4 bits. Não há caminho direto entre octal e hexadecimal: passa-se pelo binário, porque 8 é 2 ao cubo e 16 é 2 à quarta, mas não há relação de grupos inteiros entre 8 e 16. É por isso que octal e hexadecimal existem em computação, para representar binário de forma compacta.",
+      "ordem": 42,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Agrupa a partir do LSB e completa com zeros à esquerda quando o total de bits não fecha o grupo",
+        "Converte octal em hexadecimal passando pelo binário",
+        "Explica por que grupos de 3 bits dão octal e de 4 bits dão hexadecimal"
+      ],
+      "checagem": "Como se converte 110110110 em binário direto para hexadecimal, e por que octal e hexa não se convertem entre si diretamente?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "Conversão Numérica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/ConversaoExemplos.tsx"
+    },
+    {
+      "id": "mt_FUSI_43",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Sistemas Numéricos e Conversões",
+      "nome": "Números fracionários: pesos negativos, multiplicações sucessivas e dízima binária",
+      "descricao": "Depois da vírgula os pesos são potências negativas da base: em binário, 0,5 depois 0,25 depois 0,125 e depois 0,0625, então 0,101 em binário vale 0,625 em decimal. No sentido inverso, o decimal fracionário vira binário por multiplicações sucessivas por 2, anotando a parte inteira de cada produto na ordem em que aparece, e 0,625 dá 0,101. A conversão pode não terminar: 0,8 gera a dízima 0,11001100 e assim por diante, o que explica os erros de arredondamento em ponto flutuante. No fracionário, o agrupamento de 3 em 3 ou de 4 em 4 parte da vírgula para a direita, completando com zeros à direita.",
+      "ordem": 43,
+      "centralidade": 0,
+      "evidencia": [
+        "Converte um binário fracionário em decimal usando os pesos negativos",
+        "Aplica as multiplicações sucessivas e reconhece quando o processo entra em ciclo",
+        "Agrupa bits fracionários a partir da vírgula para a direita"
+      ],
+      "checagem": "Quanto vale 0,101 em binário, e o que acontece ao converter 0,8 decimal para binário?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [
+        "Conversão Numérica"
+      ],
+      "fonte": "src/content/fundamentos-si/sections/ConversaoExemplos.tsx"
+    },
+    {
+      "id": "mt_FUSI_44",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Soma e Subtração de Binários",
+      "nome": "Soma binária: as regras da adição e o transporte",
+      "descricao": "Somar em binário funciona como somar em decimal: alinha-se pela direita, opera-se coluna a coluna e leva-se o excedente para a coluna seguinte, só que o vai-um acontece ao chegar a 2, porque existem apenas os algarismos 0 e 1. As regras são 0 mais 0 igual a 0, 0 mais 1 igual a 1, 1 mais 0 igual a 1, 1 mais 1 igual a 10 (escreve 0 e leva 1) e 1 mais 1 mais 1 igual a 11 (escreve 1 e leva 1). Em 1011 mais 110, o transporte se propaga e o resultado é 10001, conferido em decimal por 11 mais 6 igual a 17.",
+      "ordem": 44,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Aplica as cinco regras da adição binária propagando o transporte até o fim",
+        "Completa com zero à esquerda para alinhar operandos de tamanhos diferentes",
+        "Confere o resultado convertendo os operandos e a soma para decimal"
+      ],
+      "checagem": "Quanto é 1011 mais 110 em binário, e o que se escreve e o que se transporta quando 1 mais 1 aparece?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/AritmeticaBinariaSection.tsx"
+    },
+    {
+      "id": "mt_FUSI_45",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "FUSI",
+      "periodo": 1,
+      "unidade": "Soma e Subtração de Binários",
+      "nome": "Subtração binária: o empréstimo e a conferência em decimal",
+      "descricao": "Na subtração, quando o bit de cima é menor que o de baixo, pega-se emprestado da coluna à esquerda: no decimal o empréstimo vale 10, no binário vale 2. As quatro combinações são 0 menos 0 igual a 0, 1 menos 0 igual a 1, 1 menos 1 igual a 0 e 0 menos 1 igual a 1 com empréstimo. Quando as colunas vizinhas são todas zero, o empréstimo se propaga até achar um 1, que é consumido, e cada zero atravessado vira 1: 10000 menos 1 dá 1111. Toda operação binária se verifica em três passos, convertendo os operandos para decimal, fazendo a conta em decimal e convertendo o resultado de volta para binário.",
+      "ordem": 45,
+      "centralidade": 0,
+      "evidencia": [
+        "Resolve uma subtração binária com empréstimo em cadeia sobre uma sequência de zeros",
+        "Diz quanto vale o empréstimo em binário e por quê",
+        "Verifica o resultado pelos três passos da conferência em decimal"
+      ],
+      "checagem": "Quanto é 10000 menos 1 em binário, e como o empréstimo se propaga sobre os zeros?",
+      "avaliacoes": [
+        "p3",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/fundamentos-si/sections/AritmeticaBinariaSection.tsx"
+    },
+    {
+      "id": "mt_INTW_01",
+      "tipo": "META",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "As três camadas da página",
+      "nome": "As três camadas da página",
+      "descricao": "A disciplina se organiza em três camadas: o HTML marca o que a informação é, o CSS diz como ela aparece e o JavaScript diz como ela reage. Cada atividade da turma isola uma camada, e é o projeto final que cobra as três juntas.",
+      "ordem": 1,
+      "centralidade": 0.1545,
+      "evidencia": [
+        "Classifica uma decisão de página como estrutura, apresentação ou comportamento",
+        "Aponta qual das três camadas resolve o problema antes de escrever código"
+      ],
+      "checagem": "Qual camada responde por o texto mudar quando o botão é clicado, e qual responde por o texto estar em negrito?",
+      "avaliacoes": [
+        "AV1",
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML",
+        "Folhas de Estilos",
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/IntroSection.tsx"
+    },
+    {
+      "id": "mt_INTW_02",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "TIC e sociedade",
+      "nome": "TIC: o que são e onde já estão",
+      "descricao": "TIC são o conjunto de tecnologias que permitem produzir, armazenar, transmitir e acessar informação. A primeira aula percorre comércio e bancos (autoatendimento, QR Code, internet banking, PIX), saúde (prontuário eletrônico, laudos de imagem), transporte (itinerário e bilhetagem), educação, meios de comunicação, entretenimento e política (urna eletrônica, consulta pública legislativa).",
+      "ordem": 2,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Dá um exemplo de TIC em cada área percorrida na aula",
+        "Explica por que praticamente nenhuma área da vida fica de fora"
+      ],
+      "checagem": "Quais são os quatro verbos que definem uma TIC, e um exemplo de TIC no transporte público?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Introdução a Tecnologias da Informação e Comunicação"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_03",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "TIC e sociedade",
+      "nome": "A responsabilidade de quem desenvolve TIC",
+      "descricao": "Quem desenvolve TIC precisa estar ciente de que o trabalho afeta a vida das pessoas, prever os impactos para encaminhar boas soluções, diminuir os impactos negativos previstos e fornecer salvaguardas para os imprevistos. A terceira parte admite que nem tudo é previsível, e é justamente por isso que existe a salvaguarda: formas de desfazer, de corrigir e de pedir ajuda.",
+      "ordem": 3,
+      "centralidade": 0,
+      "evidencia": [
+        "Enumera a tríade de prever, reduzir e criar salvaguarda diante de um sistema concreto",
+        "Explica por que prometer ausência de falhas não é a resposta esperada"
+      ],
+      "checagem": "Além de entregar o sistema funcionando, o que se espera de quem desenvolve uma TIC de serviço público?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Introdução a Tecnologias da Informação e Comunicação"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_04",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "TIC e sociedade",
+      "nome": "Sistemas interativos e a evolução das interfaces",
+      "descricao": "Sistemas interativos são um subconjunto das TIC: o caixa automático é interativo, o sistema em lote que processa as informações bancárias na madrugada não é. Na situação típica de uso, um usuário com um objetivo interage com um sistema por meio de uma interface, dentro de um contexto que inclui o tempo e o ambiente físico, social e cultural. A interface foi de painéis eletromecânicos (1940 a 1950) a interface de programação (COBOL, FORTRAN), terminais com linguagens de comando, diálogo com GUI e multimídia (1980), trabalho em rede (1990) e computação onipresente a partir de 2000.",
+      "ordem": 4,
+      "centralidade": 0,
+      "evidencia": [
+        "Separa um exemplo de sistema interativo de um exemplo de processamento em lote",
+        "Situa uma etapa da evolução das interfaces na década certa"
+      ],
+      "checagem": "O que faz do caixa automático um sistema interativo e do processamento em lote não, e o que o modelo chama de contexto de uso?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Introdução a Tecnologias da Informação e Comunicação"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/TicSection.tsx"
+    },
+    {
+      "id": "mt_INTW_05",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Internet, Web e HTTP",
+      "nome": "Internet e Web não são a mesma coisa",
+      "descricao": "A Internet é uma rede global de redes, ou seja, a infraestrutura. A Web (World Wide Web) é uma coleção de informações acessada por meio dessa infraestrutura. A analogia da aula: a Internet é a livraria e a Web é a coleção de livros daquela livraria; em alto nível, a Internet é o hardware e a Web é o software.",
+      "ordem": 5,
+      "centralidade": 0.3636,
+      "evidencia": [
+        "Corrige quem trata Internet e Web como sinônimos",
+        "Diz qual das duas é a infraestrutura e qual é servida em cima dela"
+      ],
+      "checagem": "Qual das duas é a infraestrutura, e que analogia a aula usa para separar Internet de Web?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Internet e Protocolo HTTP"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/InternetWebSection.tsx"
+    },
+    {
+      "id": "mt_INTW_06",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Internet, Web e HTTP",
+      "nome": "HTTP: uma camada sobre o TCP",
+      "descricao": "As aplicações da Web usam o HTTP, que é uma camada sobre o TCP e tradicionalmente ocupa a porta 80 (443 quando cifrado com TLS). Aplicações de Internet em geral podem usar TCP ou UDP em qualquer porta, então abrir um socket numa porta arbitrária e enviar dados a outro computador é usar a Internet sem usar a Web.",
+      "ordem": 6,
+      "centralidade": 0.3545,
+      "evidencia": [
+        "Julga se um programa que troca mensagens por socket numa porta qualquer usa a Web",
+        "Identifica o protocolo que caracteriza uma aplicação web"
+      ],
+      "checagem": "Um programa que troca mensagens por socket na porta 9000 usa a Web? Por quê?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Internet e Protocolo HTTP"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/InternetWebSection.tsx"
+    },
+    {
+      "id": "mt_INTW_07",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Internet, Web e HTTP",
+      "nome": "Os três pilares da Web segundo o W3C",
+      "descricao": "Para o W3C a Web se apoia em três pilares: um esquema de nomes para localizar as fontes de informação (a URI), um protocolo de acesso a essas fontes (hoje o HTTP) e uma linguagem de hipertexto para navegar entre elas (o HTML). Não confundir com o trio client-side HTML, CSS e JavaScript, que é outra divisão, nem com os protocolos de rede TCP, UDP e IP, que estão na camada abaixo.",
+      "ordem": 7,
+      "centralidade": 0.3455,
+      "evidencia": [
+        "Lista URI, HTTP e HTML e diz o papel de cada um",
+        "Distingue os pilares do W3C do trio HTML, CSS e JavaScript"
+      ],
+      "checagem": "Quais são os três pilares da Web segundo o W3C, e qual é o papel de cada um?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Internet e Protocolo HTTP"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_08",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Internet, Web e HTTP",
+      "nome": "Hipertexto: uma rede de nós, não um livro",
+      "descricao": "HTML é a sigla de HyperText Markup Language, linguagem de marcação de hipertexto, criada para publicar texto, imagem, vídeo e áudio na Web. Hipertexto é um conjunto de elementos, ou nós, ligados por conexões, que formam uma rede de informação em vez da sequência linear das páginas de um livro. Desde o começo o HTML foi projetado para ser independente de plataforma, navegador e meio de acesso, e essa interoperabilidade é o que reduz custo: um mesmo código é lido por diversos meios.",
+      "ordem": 8,
+      "centralidade": 0.3364,
+      "evidencia": [
+        "Explica por que o hipertexto não é linear como um livro",
+        "Justifica a interoperabilidade do HTML em termos de custo de manutenção"
+      ],
+      "checagem": "O que significa a sigla HTML e o que diferencia um hipertexto das páginas de um livro?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/InternetWebSection.tsx"
+    },
+    {
+      "id": "mt_INTW_09",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Internet, Web e HTTP",
+      "nome": "Padronização do HTML e compatibilidade entre navegadores",
+      "descricao": "Tim Berners-Lee criou o HTML e o navegador Mosaic, de Marc Andreessen, o popularizou nos anos 1990. Entre 1993 e 1995 vieram HTML+, HTML 2.0 e HTML 3.0 sem status de padrão, e só em 1997 o grupo do W3C produziu a versão 3.2. Em 2004 desenvolvedores de Mozilla, Apple e Opera fundaram o WHATWG, em 2006 o W3C reconheceu o grupo e o HTML5 avançou em detrimento do XHTML 2, mantendo retrocompatibilidade. Cada navegador processa a página com um motor (Webkit, Gecko, Trident, Presto), e o desenvolvimento modular do HTML5 e do CSS3 acelera as novidades ao custo de mais incompatibilidade.",
+      "ordem": 9,
+      "centralidade": 0.3273,
+      "evidencia": [
+        "Situa WHATWG, W3C e HTML5 na linha do tempo",
+        "Explica por que focar a compatibilidade no motor alcança mais meios de acesso que focar em cada navegador"
+      ],
+      "checagem": "Quem fundou o WHATWG e em que ano, e por que testar por motor de renderização cobre mais que testar por navegador?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_10",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "HTML5: estrutura do documento",
+      "nome": "A estrutura mínima de um documento HTML5",
+      "descricao": "Escrever o esqueleto que toda página tem: o Doctype na primeira linha, antes da tag html, que não é tag e sim uma instrução informando ao navegador qual especificação usar (no HTML5 basta o <!DOCTYPE html>, sem referenciar o DTD); o elemento html como raiz da árvore de elementos, com o atributo lang; o head com os metadados e o title; e o body com o conteúdo visível. O playground da seção executa exatamente esse documento.",
+      "ordem": 10,
+      "centralidade": 0.3182,
+      "evidencia": [
+        "Escreve de memória um documento HTML5 válido com Doctype, lang, head, title e body",
+        "Explica por que o Doctype não se fecha e não fica dentro do head"
+      ],
+      "checagem": "O Doctype é uma tag? O que ele informa ao navegador e em que posição do arquivo ele fica?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_11",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "HTML5: estrutura do documento",
+      "nome": "meta charset e a tabela Unicode",
+      "descricao": "A metatag charset define a tabela de caracteres que o navegador usa para interpretar os bytes do arquivo, e a forma do HTML5 é meta charset utf-8, que substitui a declaração antiga com http-equiv. A tabela Unicode suporta cerca de um milhão de caracteres e dá um número único a cada um, independentemente de plataforma, programa ou língua. Sem a declaração, cada navegador adivinha, e é daí que vêm os caracteres corrompidos.",
+      "ordem": 11,
+      "centralidade": 0,
+      "evidencia": [
+        "Resolve acento corrompido declarando o charset na origem",
+        "Distingue o papel do charset do papel do atributo lang"
+      ],
+      "checagem": "Que linha do head resolve caracteres corrompidos, e por que o atributo lang não resolve isso?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/HtmlEstruturaSection.tsx"
+    },
+    {
+      "id": "mt_INTW_12",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "HTML5: estrutura do documento",
+      "nome": "A tag a e a tag link: dois tipos de link",
+      "descricao": "O HTML tem dois tipos de link com propósitos distintos. A tag a é navegação: leva o usuário a outro documento, a uma âncora da mesma página ou a um endereço externo. A tag link referencia fontes externas que o próprio documento usa e que o navegador resolve sozinho, como em link rel stylesheet href estilo.css.",
+      "ordem": 12,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Escolhe entre a e link conforme o link ser navegação ou recurso do documento",
+        "Diz onde cada uma das duas costuma aparecer no arquivo"
+      ],
+      "checagem": "Qual é a diferença entre a tag a e a tag link, e em que parte do documento cada uma aparece?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_13",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "HTML5: estrutura do documento",
+      "nome": "Elementos de linha, de bloco e as categorias de conteúdo",
+      "descricao": "Elementos de linha marcam na maioria das vezes texto (a, strong, em, img, input, abbr, span) e nunca podem conter elementos de bloco. Elementos de bloco são caixas que dividem o conteúdo em seções do layout e sempre podem conter elementos de linha; conter outro bloco depende da categoria, e o caso clássico é o parágrafo, que não pode conter um div ainda que o div possa conter um parágrafo. O HTML5 formaliza isso nos modelos de conteúdo: metadata, flow, sectioning, heading, phrasing, embedded e interactive content.",
+      "ordem": 13,
+      "centralidade": 0.0727,
+      "evidencia": [
+        "Julga se um aninhamento de tags é válido antes de escrevê-lo",
+        "Diz a que categoria de conteúdo pertence um elemento como nav, img ou meta"
+      ],
+      "checagem": "Por que um parágrafo com um div dentro é inválido, e qual categoria reúne article, aside, nav e section?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/HtmlEstruturaSection.tsx"
+    },
+    {
+      "id": "mt_INTW_14",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Semântica e formatação de texto",
+      "nome": "A semântica diz que tipo de informação a página exibe",
+      "descricao": "Ao ler um livro, a pessoa distingue um título de um parágrafo pelo tamanho e pelo peso da letra. Robôs de busca e leitores de tela não têm essa pista visual, e por isso a função do HTML é indicar que tipo de informação a página exibe, para que ela seja interpretada por dispositivos diferentes. Antes do HTML5 não havia padrão para marcar rodapé, cabeçalho, sidebar e menu, e a diferenciação era apenas visual.",
+      "ordem": 14,
+      "centralidade": 0.0636,
+      "evidencia": [
+        "Explica por que marcar significado vale mais que marcar aparência",
+        "Identifica o que se perde quando a diferença entre dois blocos é só visual"
+      ],
+      "checagem": "Que informação um leitor de tela obtém da marcação e não obtém do tamanho da letra?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/HtmlSemanticaSection.tsx"
+    },
+    {
+      "id": "mt_INTW_15",
+      "tipo": "LINGUAGEM",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Semântica e formatação de texto",
+      "nome": "As tags semânticas do HTML5 e onde cada uma cabe",
+      "descricao": "header é grupo de introdução ou de elementos de navegação; nav é a seção com links para outras partes do site, e nem todo grupo de links é um nav, só os importantes, como o menu principal; article é a parte da página que pode ser distribuída e reutilizada de forma independente, como um post; section é seção genérica; aside referencia o conteúdo ao redor, como sidebar e publicidade; footer é o rodapé, que não precisa estar no fim da página; hgroup agrupa título e subtítulos e time marca data ou horário preciso.",
+      "ordem": 15,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Escolhe nav para o menu e article para a notícia em vez de div com classe",
+        "Justifica por que um bloco de links secundário não é um nav"
+      ],
+      "checagem": "Que tag marca o menu principal e que tag marca uma notícia que pode ser redistribuída?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_16",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Semântica e formatação de texto",
+      "nome": "Formatar texto: títulos, parágrafos, listas, links e imagens",
+      "descricao": "A formatação cobrada na AV1: títulos de h1 a h6 em ordem de importância, p para parágrafos, ul com li quando a ordem dos itens não importa, ol com li quando a ordem é parte da informação (o atributo reversed inverte a numeração), a com href para links e img com src e alt para imagens. O playground da seção pede trocar ul por ol e apagar o alt para o aluno ver o efeito de cada mudança.",
+      "ordem": 16,
+      "centralidade": 0.0455,
+      "evidencia": [
+        "Monta uma página com títulos em ordem, parágrafos, as duas listas, link e imagem",
+        "Escolhe entre ul e ol conforme a ordem fazer parte da informação"
+      ],
+      "checagem": "Quando usar ol em vez de ul, e quais atributos a tag img sempre leva?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_17",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Semântica e formatação de texto",
+      "nome": "Semântico contra visual: strong, em, b, i e os descontinuados",
+      "descricao": "strong indica importância forte e em indica ênfase: os dois carregam significado e são interpretados por leitores de tela e buscadores. No HTML5 o b passou a ter o mesmo nível semântico de um span, mantendo o negrito sem atribuir importância, e o i virou span com o itálico servindo para termos técnicos ou frases em outros idiomas. Por terem efeito apenas visual saíram basefont, big, center, font, s, strike, tt e u, além de atributos como align, bgcolor, border, cellpadding e cellspacing, cujo trabalho é do CSS; frame, frameset e noframes saíram por ferir acessibilidade e usabilidade.",
+      "ordem": 17,
+      "centralidade": 0,
+      "evidencia": [
+        "Escolhe strong em vez de b quando o texto tem importância destacada",
+        "Separa os elementos descontinuados por serem visuais dos descontinuados por acessibilidade"
+      ],
+      "checagem": "Por que center e font foram descontinuados por um motivo e frameset por outro?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_18",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Semântica e formatação de texto",
+      "nome": "Escrever o alt de uma imagem",
+      "descricao": "A pergunta certa é: se a imagem sumisse, que texto ocuparia o lugar dela sem perda de informação? Um alt igual a imagem ou a foto1.jpg é inútil, porque anuncia o que o leitor de tela já sabe e não descreve conteúdo. Um alt descritivo diz o que a imagem mostra na medida em que isso importa ao texto ao redor. O alt vazio, mas presente, é o correto para imagem puramente decorativa, porque instrui o leitor de tela a pular o elemento; omitir o atributo não é equivalente, já que sem alt alguns leitores anunciam o nome do arquivo.",
+      "ordem": 18,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Escreve o alt de uma imagem informativa e o de uma imagem decorativa",
+        "Explica por que omitir o alt é pior que deixá-lo vazio"
+      ],
+      "checagem": "Que alt uma imagem puramente decorativa recebe, e por que não basta omitir o atributo?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/HtmlSemanticaSection.tsx"
+    },
+    {
+      "id": "mt_INTW_19",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Tabelas",
+      "nome": "Montar uma tabela de dados",
+      "descricao": "table delimita a tabela inteira, caption dá o título e aparece uma vez só, thead, tbody e tfoot agrupam cabeçalho, corpo e rodapé, tr define a linha, th a célula de cabeçalho e td a célula de dados. colspan faz a célula ocupar várias colunas e rowspan várias linhas. A atividade da AV2 pedia a tabela de resultados no modelo da consulta de turmas do SIGAA, com a captura da tela real anexa ao enunciado.",
+      "ordem": 19,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Monta a tabela de resultados com caption, thead e tbody",
+        "Escolhe entre colspan e rowspan para a célula que precisa se estender"
+      ],
+      "checagem": "Qual atributo estende a célula por duas colunas, e qual estende por duas linhas?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_20",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Tabelas",
+      "nome": "th com scope: a tabela para quem usa leitor de tela",
+      "descricao": "Um td em negrito parece um cabeçalho, mas não é: a informação semântica se perde para quem navega com leitor de tela. O th marca a célula como cabeçalho e o atributo scope diz a quem ele se refere, com scope col para a coluna e scope row para a linha. É isso que resolve a ambiguidade quando a tabela tem cabeçalho nos dois sentidos, e é a diferença entre uma tabela navegável e uma sequência de números soltos.",
+      "ordem": 20,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Marca a primeira célula de cada linha como th com scope row",
+        "Explica o que se perde quando o cabeçalho é um td em negrito"
+      ],
+      "checagem": "Como indicar que a primeira célula de cada linha é cabeçalho daquela linha, e não da coluna?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/TabelasSection.tsx"
+    },
+    {
+      "id": "mt_INTW_21",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Tabelas",
+      "nome": "Tabela é para dados tabulares, não para layout",
+      "descricao": "Houve uma época em que sites inteiros eram diagramados com tabelas aninhadas, e isso acabou. A tag table serve para conteúdo com linhas e colunas de verdade, como notas, horários e a listagem de turmas; dividir a página em colunas e posicionar blocos é responsabilidade do CSS, hoje com flexbox. Acrescentar th e scope numa tabela de layout piora a situação, porque passa a anunciar cabeçalhos de uma tabela que não existe conceitualmente.",
+      "ordem": 21,
+      "centralidade": 0,
+      "evidencia": [
+        "Recusa a tabela para colocar foto ao lado de dados e resolve o caso no CSS",
+        "Identifica quando o conteúdo é realmente tabular"
+      ],
+      "checagem": "Foto do aluno à esquerda e dados à direita: uma tabela de duas colunas resolve? Por quê?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/TabelasSection.tsx"
+    },
+    {
+      "id": "mt_INTW_22",
+      "tipo": "LINGUAGEM",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Formulários e validação",
+      "nome": "Os elementos de um formulário",
+      "descricao": "form envolve os campos, com action indicando para onde os dados vão e method definindo GET ou POST. input é o campo genérico, controlado pelo atributo type; select com option monta a lista de seleção, e uma option de value vazio serve de instrução; textarea é o campo de várias linhas; button type submit envia o formulário e dispara a validação. Radios com o mesmo name formam um grupo e admitem uma escolha, checkboxes admitem várias, e fieldset com legend agrupa e nomeia campos relacionados.",
+      "ordem": 22,
+      "centralidade": 0.0545,
+      "evidencia": [
+        "Monta o formulário de inscrição com select, textarea, radio, checkbox e fieldset",
+        "Usa o mesmo name para fechar um grupo de radios"
+      ],
+      "checagem": "O que faz dois radios pertencerem ao mesmo grupo, e para que servem fieldset e legend?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_23",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Formulários e validação",
+      "nome": "label com for apontando para o id do campo",
+      "descricao": "O for do label precisa apontar para o id do campo, e não para o name. Feita a associação, clicar no rótulo foca o campo, o que ajuda muito no celular, e o leitor de tela anuncia o rótulo junto com o campo em vez de anunciar só caixa de edição. Texto solto antes do campo não cria nenhuma dessas ligações, e um placeholder não substitui o label, porque desaparece assim que a pessoa começa a digitar.",
+      "ordem": 23,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Liga cada rótulo ao campo certo pelo par for e id",
+        "Explica por que texto solto antes do campo não cumpre o papel do label"
+      ],
+      "checagem": "Para que valor o for do label aponta, e por que o placeholder não substitui o label?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/FormulariosSection.tsx"
+    },
+    {
+      "id": "mt_INTW_24",
+      "tipo": "LINGUAGEM",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Formulários e validação",
+      "nome": "Os novos tipos de input do HTML5",
+      "descricao": "O atributo type do input ganhou valores novos: email e url trazem formatação e validação prontas; tel não tem máscara nem validação de propósito, porque não existe padrão mundial para números de telefone, e o caminho para restringir o formato é o pattern; search pode mudar de aparência conforme o agente de usuário; datetime, date, month, week, time e datetime-local são validados e formatados pelo navegador, que pode abrir calendário ou seletor de horário; number e range são o mesmo dado com apresentações diferentes e aceitam min, max e step, sendo step a diferença mínima entre dois valores; color devolve a cor no formato hexadecimal.",
+      "ordem": 24,
+      "centralidade": 0.0273,
+      "evidencia": [
+        "Escolhe o type adequado para e-mail, telefone, data e quantidade",
+        "Usa min, max e step para restringir um campo numérico"
+      ],
+      "checagem": "Como expressar que um número deve ficar entre 10 e 30 variando de 5 em 5, e por que o tel não valida nada?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_25",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Formulários e validação",
+      "nome": "Validação pelo próprio HTML",
+      "descricao": "Antes do HTML5 validar formulário era tarefa de JavaScript. required torna o preenchimento obrigatório e o navegador bloqueia o envio; placeholder mostra texto de exemplo dentro do campo, o que antes era gambiarra com onfocus e onblur; autofocus foca o campo assim que ele é criado, e não ao fim do carregamento, o que evita roubar o foco de quem já começou a digitar; maxlength limita caracteres e no HTML5 passou a valer também para textarea; pattern define uma expressão regular sem JavaScript. novalidate no form e formnovalidate no botão desligam a validação, caso clássico do botão de salvar rascunho.",
+      "ordem": 25,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Deixa o navegador validar campo obrigatório e formato sem escrever JavaScript",
+        "Usa formnovalidate no botão que não deve validar, mantendo a validação no envio"
+      ],
+      "checagem": "Como um botão de salvar rascunho escapa da validação sem desligá-la para o botão de enviar?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_26",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Formulários e validação",
+      "nome": "Validação customizada com oninput e setCustomValidity",
+      "descricao": "Para regras próprias o HTML5 oferece dois ganchos. O evento oninput dispara a cada modificação do valor, diferente de onchange, que só dispara ao final da edição, e de onkeyup, porque o oninput captura alteração feita por teclado, mouse ou outra interface. O método setCustomValidity recebe uma string: vazia marca o campo como válido, qualquer outra o marca como inválido e vira a mensagem exibida.",
+      "ordem": 26,
+      "centralidade": 0,
+      "evidencia": [
+        "Liga uma regra própria ao oninput e marca o campo com setCustomValidity",
+        "Escolhe entre oninput e onchange conforme o momento do disparo"
+      ],
+      "checagem": "O que setCustomValidity faz ao receber string vazia, e qual é a diferença entre oninput e onchange?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML",
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/FormulariosSection.tsx"
+    },
+    {
+      "id": "mt_INTW_27",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "CSS: seletores e box model",
+      "nome": "O que o CSS faz e a sintaxe da regra",
+      "descricao": "O CSS formata a informação entregue pelo HTML, e essa informação pode ser imagem, texto, vídeo ou áudio. A formatação é quase sempre visual, mas não necessariamente: no CSS Aural manipula-se o áudio entregue por sistemas de leitura de tela, controlando volume, profundidade e tipo de voz. A separação entre estrutura (HTML) e apresentação (CSS) é o princípio central, e a sintaxe é sempre seletor, propriedade e valor.",
+      "ordem": 27,
+      "centralidade": 0.0727,
+      "evidencia": [
+        "Escreve uma regra completa com seletor, propriedade e valor",
+        "Explica por que a apresentação não pertence ao HTML"
+      ],
+      "checagem": "Qual é a sintaxe de uma regra CSS, e por que a formatação nem sempre é visual?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/CssFundamentosSection.tsx"
+    },
+    {
+      "id": "mt_INTW_28",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "CSS: seletores e box model",
+      "nome": "Onde escrever o CSS: inline, interno e externo",
+      "descricao": "Inline é o atributo style no próprio elemento: não precisa de arquivo nem de seletor, mas mistura apresentação com estrutura e não reaproveita nada. Interno é a tag style dentro do head: serve a uma página isolada e o estilo morre naquele documento. Externo é um arquivo .css referenciado por link rel stylesheet: separa apresentação de estrutura, vale para o site inteiro e é a forma recomendada, cobrada na atividade em dois arquivos, form.html e style.css.",
+      "ordem": 28,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Escolhe a folha externa quando o estilo precisa valer para várias páginas",
+        "Aponta o que se perde ao espalhar style inline pelo documento"
+      ],
+      "checagem": "Qual das três formas de aplicar CSS é a recomendada, e por quê?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_29",
+      "tipo": "LINGUAGEM",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "CSS: seletores e box model",
+      "nome": "Os tipos de seletor do CSS",
+      "descricao": "O seletor é a estrutura usada como condição para determinar quais elementos serão formatados, e é a alma do CSS. O de tag atinge todos os elementos daquele tipo, o de classe vale para vários elementos e o de id identifica um único elemento na página. O encadeado (descendente) usa espaço e formata o elemento dentro de outro; o agrupado usa vírgula para compartilhar a mesma formatação; os complexos alcançam o que antes exigiria marcar classe via JavaScript, com E maior que F pegando os filhos diretos e E mais F o elemento imediatamente adjacente, como h1 seguido de p. Há ainda seletores de atributo e pseudo-classes como :root, :nth-child, :empty, :enabled, :disabled e :checked.",
+      "ordem": 29,
+      "centralidade": 0.0455,
+      "evidencia": [
+        "Escreve o seletor que atinge só os parágrafos dentro de um elemento com id",
+        "Diferencia o efeito do espaço e o da vírgula entre dois seletores"
+      ],
+      "checagem": "O que muda entre um seletor com espaço e o mesmo par de seletores separados por vírgula?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_30",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "CSS: seletores e box model",
+      "nome": "Especificidade: id vence classe, classe vence tag",
+      "descricao": "Quando várias regras atingem o mesmo elemento, a mais específica vence, e a especificidade cresce de tag para classe e de classe para id. É por isso que o id deve identificar um único elemento na página, enquanto a classe vale para vários e o seletor de tag atinge todos daquele tipo. A ordem no arquivo só desempata entre seletores de mesma especificidade, e nesse caso ganha o que está escrito depois.",
+      "ordem": 30,
+      "centralidade": 0,
+      "evidencia": [
+        "Prevê qual das regras em conflito colore o elemento",
+        "Recorre à ordem do arquivo apenas quando a especificidade empata"
+      ],
+      "checagem": "Com um seletor de id, um de classe e um de tag apontando cores diferentes para o mesmo parágrafo, qual vence?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/CssFundamentosSection.tsx"
+    },
+    {
+      "id": "mt_INTW_31",
+      "tipo": "REPRESENTACIONAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "CSS: seletores e box model",
+      "nome": "O modelo de caixa",
+      "descricao": "Toda caixa tem quatro partes, de dentro para fora: o conteúdo (width e height), o padding, que é o espaço interno entre conteúdo e borda, o border, que é a borda em si, e o margin, que é o espaço externo entre a borda e os elementos vizinhos. Aumentar o padding afasta o texto da borda; aumentar a margin afasta a caixa das outras caixas. Se o fundo colorido cresceu junto, era padding.",
+      "ordem": 31,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Nomeia as quatro partes da caixa de dentro para fora",
+        "Decide entre padding e margin diante de um espaçamento que precisa mudar"
+      ],
+      "checagem": "Num botão com width, padding e border definidos, o que exatamente a margin controla?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/CssFundamentosSection.tsx"
+    },
+    {
+      "id": "mt_INTW_32",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "CSS: seletores e box model",
+      "nome": "As propriedades de estilo cobradas na atividade",
+      "descricao": "O enunciado da atividade de CSS é uma lista fechada e verificável: background-image, background-color, box-shadow, border-radius, margin, padding, align-items, width, height, font e color, mais os três tipos de seletor (id, class e tag) e o display flex no container. border-radius arredonda os cantos e box-shadow projeta sombra; as cores podem vir em hexadecimal, por nome ou em RGBA.",
+      "ordem": 32,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Aplica as onze propriedades pedidas num único arquivo de estilo",
+        "Confere a entrega item por item contra a lista do enunciado"
+      ],
+      "checagem": "Que propriedades e que tipos de seletor o enunciado do cadastro de estágio exige?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_33",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "CSS: flexbox e CSS3",
+      "nome": "display flex vai no elemento pai",
+      "descricao": "Flexbox é um modelo de layout em uma dimensão, ativado com display flex no elemento pai, que passa a ser o container; os filhos diretos dele viram itens flexíveis e passam a se comportar de forma diferente. Aplicar o display flex no próprio elemento que se quer mover não produz efeito nenhum sobre ele. Layout em duas dimensões é o grid, que fica fora do escopo da disciplina.",
+      "ordem": 33,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Aplica display flex no container certo, e não no item que quer mover",
+        "Identifica quais elementos se tornam itens flexíveis"
+      ],
+      "checagem": "Em que elemento vai o display flex, e o que acontece com os filhos diretos dele?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/CssLayoutSection.tsx"
+    },
+    {
+      "id": "mt_INTW_34",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "CSS: flexbox e CSS3",
+      "nome": "Os dois eixos do flexbox",
+      "descricao": "flex-direction define o eixo principal: row (padrão) deixa horizontal e column deixa vertical. justify-content sempre alinha ao longo do eixo principal, com flex-start, center, space-between e space-around; align-items sempre alinha no eixo transversal, perpendicular a ele. gap dá espaçamento entre os itens sem precisar de margin nos filhos e flex-wrap permite quebrar em várias linhas. Trocar justify-content por align-items é o erro mais comum de quem começa.",
+      "ordem": 34,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Move os itens no eixo desejado escolhendo entre justify-content e align-items",
+        "Prevê o efeito de trocar flex-direction para column mantendo o mesmo justify-content"
+      ],
+      "checagem": "Qual propriedade alinha no eixo principal, e o que muda quando flex-direction passa a column?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_35",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "CSS: flexbox e CSS3",
+      "nome": "Recursos modulares do CSS3, RGBA e opacity",
+      "descricao": "O CSS3 é modular e cada grupo lança novidades quando fica pronto. Gradientes feitos só com CSS evitam uma requisição de imagem ao servidor e usam stops em porcentagem para dizer onde uma cor termina e a outra começa; columns divide texto com column-count, column-width e column-gap; transform 2D combina scale, skew, translation e rotate, com transform-origin no centro por padrão; transition anima a passagem entre dois estados e a regra keyframes descreve animações de vários passos. No RGBA o quarto valor é o alfa e afeta somente aquela cor, enquanto a opacity afeta o elemento inteiro e todos os seus filhos.",
+      "ordem": 35,
+      "centralidade": 0,
+      "evidencia": [
+        "Usa rgba quando só o fundo deve ficar translúcido e o texto precisa continuar opaco",
+        "Justifica o gradiente em CSS pela requisição de imagem que ele economiza"
+      ],
+      "checagem": "Por que o texto desbota junto quando se aplica opacity ao card, e qual é a correção?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_36",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "JavaScript e o DOM",
+      "nome": "JavaScript como client-side script",
+      "descricao": "O JavaScript é executado no navegador, do lado do cliente, e é o terceiro pilar do desenvolvimento web ao lado do HTML (estrutura) e do CSS (apresentação): ele cuida do comportamento. Não é preciso instalar nada para começar, porque o próprio navegador executa. O código pode ficar dentro da tag script ou num arquivo .js externo, e o console do navegador mostra os erros e permite testar comandos.",
+      "ordem": 36,
+      "centralidade": 0.0727,
+      "evidencia": [
+        "Diz onde o código JavaScript roda e o que basta ter para executá-lo",
+        "Abre o console do navegador para ver erro e testar comando"
+      ],
+      "checagem": "Onde o JavaScript desta disciplina é executado, e onde os erros dele aparecem?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/JavaScriptSection.tsx"
+    },
+    {
+      "id": "mt_INTW_37",
+      "tipo": "LINGUAGEM",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "JavaScript e o DOM",
+      "nome": "Variáveis, tipos e operadores em JavaScript",
+      "descricao": "Variáveis guardam dados e são declaradas com let (valor que muda), const (valor que não é reatribuído) ou o antigo var. Os tipos básicos são number, string e boolean, além de null e undefined. A concatenação de texto usa o operador de soma e os template literals usam crase com chaves; os operadores aritméticos são soma, subtração, multiplicação, divisão e o resto.",
+      "ordem": 37,
+      "centralidade": 0.0545,
+      "evidencia": [
+        "Escolhe entre let e const conforme o valor ser reatribuído",
+        "Calcula o resto de uma divisão com o operador de resto"
+      ],
+      "checagem": "Qual é a diferença entre let e const, e o que o operador de resto devolve?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_38",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "JavaScript e o DOM",
+      "nome": "Comparação estrita: três iguais contra dois iguais",
+      "descricao": "A comparação com três sinais de igual confere valor e tipo; a com dois sinais converte o tipo antes de comparar, de modo que a string cinco é igual ao número cinco na comparação frouxa e diferente na estrita. Como a conversão automática produz resultados surpreendentes e esconde bugs, a recomendação da disciplina é usar sempre a comparação estrita.",
+      "ordem": 38,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Prevê o resultado de comparar string com número em cada um dos dois operadores",
+        "Justifica a preferência pela comparação estrita em termos de conversão silenciosa"
+      ],
+      "checagem": "Por que a comparação frouxa entre a string cinco e o número cinco dá verdadeiro e a estrita dá falso?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/JavaScriptSection.tsx"
+    },
+    {
+      "id": "mt_INTW_39",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "JavaScript e o DOM",
+      "nome": "Condicionais, laços e funções",
+      "descricao": "if, else if e else executam trechos diferentes conforme a condição. while repete enquanto a condição for verdadeira e for reúne inicialização, condição e incremento na mesma linha. Funções são declaradas com function, recebem parâmetros e devolvem valor com return, e servem para não repetir o mesmo código, como no exemplo que calcula a média percorrendo as notas com um for.",
+      "ordem": 39,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Escreve uma função que percorre valores com for e devolve o resultado com return",
+        "Escolhe entre while e for conforme a contagem ser conhecida de antemão"
+      ],
+      "checagem": "Que três partes o for reúne na mesma linha, e para que serve o return de uma função?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_40",
+      "tipo": "LINGUAGEM",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "JavaScript e o DOM",
+      "nome": "Arrays e a indexação a partir de zero",
+      "descricao": "Arrays guardam vários dados numa mesma variável, são indexados a partir de zero, têm a propriedade length e métodos como push. O length é a quantidade de itens, então o primeiro elemento está no índice zero e o último em length menos um. Confundir quantidade com último índice é a origem do erro de passar do fim do array.",
+      "ordem": 40,
+      "centralidade": 0,
+      "evidencia": [
+        "Acessa o primeiro e o último elemento de um array sem estourar o limite",
+        "Distingue a quantidade de itens do índice do último item"
+      ],
+      "checagem": "Num array de três notas, quanto vale length e qual é o índice do último elemento?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_41",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "JavaScript e o DOM",
+      "nome": "alert, prompt e console.log",
+      "descricao": "alert exibe uma mensagem em caixa de diálogo e interrompe a página até o usuário fechar, o que é bom para aprender e ruim em produção. prompt pede um valor e devolve sempre string, mesmo quando a pessoa digita um número, então somar um ao valor concatena em vez de somar, e é preciso converter com Number ou parseInt antes de calcular. console.log escreve no console e é a ferramenta de depuração, porque mostra valores sem atrapalhar quem usa a página.",
+      "ordem": 41,
+      "centralidade": 0,
+      "evidencia": [
+        "Converte o retorno de prompt antes de fazer conta",
+        "Escolhe console.log em vez de alert para depurar"
+      ],
+      "checagem": "Por que somar um ao resultado de prompt pode produzir 251 em vez de 26, e como corrigir?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_42",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "JavaScript e o DOM",
+      "nome": "O DOM: a página vista como objetos",
+      "descricao": "Quando o navegador carrega a página, ele constrói uma coleção de objetos que representam os elementos HTML: o DOM (Document Object Model). Cada elemento do código vira um objeto, com propriedades em comum e algumas específicas, e é por meio do DOM que o JavaScript lê e altera a página já carregada, sem recarregar nada. O DOM não é somente leitura: alterá-lo é justamente o papel do JavaScript.",
+      "ordem": 42,
+      "centralidade": 0.0182,
+      "evidencia": [
+        "Explica de onde vem o objeto que o JavaScript manipula",
+        "Descarta a ideia de que alterar a página exige reeditar o arquivo HTML"
+      ],
+      "checagem": "O que o navegador constrói ao carregar a página, e o que isso permite ao JavaScript fazer?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/JavaScriptSection.tsx"
+    },
+    {
+      "id": "mt_INTW_43",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "JavaScript e o DOM",
+      "nome": "Buscar o elemento, ligar o evento e trocar o conteúdo",
+      "descricao": "document.getElementById busca pelo id, getElementsByClassName (acrescentado pelo HTML5) busca por classe e a Selector API traz querySelector e querySelectorAll, que aceitam seletores CSS, devolvendo o primeiro elemento e todos, respectivamente. innerHTML lê ou substitui o conteúdo do elemento, e os eventos ligam a ação do usuário ao código: onclick no clique, oninput a cada modificação de campo e onchange ao final da edição. O script vem depois do HTML que ele manipula, senão o getElementById procura um elemento que o navegador ainda não criou.",
+      "ordem": 43,
+      "centralidade": 0.0091,
+      "evidencia": [
+        "Troca o texto de um parágrafo no clique de um botão, usando id e innerHTML",
+        "Posiciona o script depois do markup que ele manipula"
+      ],
+      "checagem": "Que combinação troca o texto de um parágrafo pelo id quando o botão é clicado, e por que a posição do script importa?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_44",
+      "tipo": "PROCEDIMENTAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Projeto final e acessibilidade",
+      "nome": "Integrar as três camadas num site publicado",
+      "descricao": "O projeto previsto no cronograma reúne as três camadas num site publicado: HTML semântico com Doctype, lang e charset em todas as páginas, links relativos entre elas, imagens com alt descritivo, formulário com label for e validação pelo próprio HTML, folha de estilo externa reaproveitada por todas as páginas, layout organizado com flexbox e ao menos uma interação real pelo DOM. O valor didático está nos problemas de integração, e o erro mais comum ao publicar é o href da folha de estilo apontar para um caminho que existia na máquina local e não existe no servidor, então a página abre sem estilo nenhum. As plataformas indicadas são Replit e CodePen.",
+      "ordem": 44,
+      "centralidade": 0,
+      "evidencia": [
+        "Publica um site que usa as três camadas e o testa pelo link, não só localmente",
+        "Diagnostica a página que abre sem estilo depois de publicada"
+      ],
+      "checagem": "O site foi publicado e abriu sem estilo nenhum, com o HTML correto. Qual é a causa mais provável?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML",
+        "Folhas de Estilos",
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/ProjetoFinalSection.tsx"
+    },
+    {
+      "id": "mt_INTW_45",
+      "tipo": "CONCEITUAL",
+      "disciplina": "INTW",
+      "periodo": 1,
+      "unidade": "Projeto final e acessibilidade",
+      "nome": "Acessibilidade acontece na marcação",
+      "descricao": "As decisões de acessibilidade que a disciplina cobre atuam na marcação, não na aparência: as tags semânticas dizem o que cada bloco é, o alt descreve a imagem, o label com for liga o rótulo ao campo e o th com scope diz a que linha ou coluna cada dado pertence. Aumentar fonte e contraste ajuda quem enxerga com dificuldade, mas não altera nada do que é anunciado por um leitor de tela.",
+      "ordem": 45,
+      "centralidade": 0,
+      "evidencia": [
+        "Escolhe o conjunto de decisões que muda o que o leitor de tela anuncia",
+        "Separa ajuste visual de ajuste de marcação ao avaliar uma página"
+      ],
+      "checagem": "Quais quatro decisões de marcação a disciplina cobra para quem navega com leitor de tela?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/data.ts"
     },
     {
       "id": "mt_LPGM_01",

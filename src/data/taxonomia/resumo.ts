@@ -16,11 +16,23 @@ export interface ResumoDisciplina {
 }
 
 export const resumoPorDisciplina: Record<string, ResumoDisciplina> = {
+  FUSI: {
+    conceitos: 45,
+    dependenciasInternas: 53,
+    dependenciasDeFora: 0,
+    conceitoMaisCentral: "Dado, processo e informação",
+  },
   ALPG: {
     conceitos: 45,
     dependenciasInternas: 72,
     dependenciasDeFora: 0,
     conceitoMaisCentral: "Modelo entrada, processamento e saída",
+  },
+  INTW: {
+    conceitos: 45,
+    dependenciasInternas: 70,
+    dependenciasDeFora: 0,
+    conceitoMaisCentral: "Internet e Web não são a mesma coisa",
   },
   LPGM: {
     conceitos: 60,
@@ -57,6 +69,12 @@ export const resumoPorDisciplina: Record<string, ResumoDisciplina> = {
     dependenciasInternas: 72,
     dependenciasDeFora: 3,
     conceitoMaisCentral: "Natureza do software",
+  },
+  EMPD: {
+    conceitos: 45,
+    dependenciasInternas: 64,
+    dependenciasDeFora: 0,
+    conceitoMaisCentral: "Empreender é explorar oportunidade sob incerteza",
   },
   CORG: {
     conceitos: 60,

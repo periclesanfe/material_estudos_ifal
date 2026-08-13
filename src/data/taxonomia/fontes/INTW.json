@@ -1,0 +1,1478 @@
+{
+  "disciplina": {
+    "codigo": "INTW",
+    "codigoPPC": "INTW",
+    "nome": "Introdução às Tecnologias Web",
+    "periodo": 1
+  },
+  "topicos": [
+    {
+      "id": "mt_INTW_01",
+      "nome": "As três camadas da página",
+      "tipo": "META",
+      "unidade": "As três camadas da página",
+      "descricao": "A disciplina se organiza em três camadas: o HTML marca o que a informação é, o CSS diz como ela aparece e o JavaScript diz como ela reage. Cada atividade da turma isola uma camada, e é o projeto final que cobra as três juntas.",
+      "ordem": 1,
+      "evidencia": [
+        "classifica uma decisão de página como estrutura, apresentação ou comportamento",
+        "aponta qual das três camadas resolve o problema antes de escrever código"
+      ],
+      "checagem": "Qual camada responde por o texto mudar quando o botão é clicado, e qual responde por o texto estar em negrito?",
+      "avaliacoes": [
+        "AV1",
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML",
+        "Folhas de Estilos",
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/IntroSection.tsx"
+    },
+    {
+      "id": "mt_INTW_02",
+      "nome": "TIC: o que são e onde já estão",
+      "tipo": "CONCEITUAL",
+      "unidade": "TIC e sociedade",
+      "descricao": "TIC são o conjunto de tecnologias que permitem produzir, armazenar, transmitir e acessar informação. A primeira aula percorre comércio e bancos (autoatendimento, QR Code, internet banking, PIX), saúde (prontuário eletrônico, laudos de imagem), transporte (itinerário e bilhetagem), educação, meios de comunicação, entretenimento e política (urna eletrônica, consulta pública legislativa).",
+      "ordem": 2,
+      "evidencia": [
+        "dá um exemplo de TIC em cada área percorrida na aula",
+        "explica por que praticamente nenhuma área da vida fica de fora"
+      ],
+      "checagem": "Quais são os quatro verbos que definem uma TIC, e um exemplo de TIC no transporte público?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Introdução a Tecnologias da Informação e Comunicação"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_03",
+      "nome": "A responsabilidade de quem desenvolve TIC",
+      "tipo": "CONCEITUAL",
+      "unidade": "TIC e sociedade",
+      "descricao": "Quem desenvolve TIC precisa estar ciente de que o trabalho afeta a vida das pessoas, prever os impactos para encaminhar boas soluções, diminuir os impactos negativos previstos e fornecer salvaguardas para os imprevistos. A terceira parte admite que nem tudo é previsível, e é justamente por isso que existe a salvaguarda: formas de desfazer, de corrigir e de pedir ajuda.",
+      "ordem": 3,
+      "evidencia": [
+        "enumera a tríade de prever, reduzir e criar salvaguarda diante de um sistema concreto",
+        "explica por que prometer ausência de falhas não é a resposta esperada"
+      ],
+      "checagem": "Além de entregar o sistema funcionando, o que se espera de quem desenvolve uma TIC de serviço público?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Introdução a Tecnologias da Informação e Comunicação"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_04",
+      "nome": "Sistemas interativos e a evolução das interfaces",
+      "tipo": "CONCEITUAL",
+      "unidade": "TIC e sociedade",
+      "descricao": "Sistemas interativos são um subconjunto das TIC: o caixa automático é interativo, o sistema em lote que processa as informações bancárias na madrugada não é. Na situação típica de uso, um usuário com um objetivo interage com um sistema por meio de uma interface, dentro de um contexto que inclui o tempo e o ambiente físico, social e cultural. A interface foi de painéis eletromecânicos (1940 a 1950) a interface de programação (COBOL, FORTRAN), terminais com linguagens de comando, diálogo com GUI e multimídia (1980), trabalho em rede (1990) e computação onipresente a partir de 2000.",
+      "ordem": 4,
+      "evidencia": [
+        "separa um exemplo de sistema interativo de um exemplo de processamento em lote",
+        "situa uma etapa da evolução das interfaces na década certa"
+      ],
+      "checagem": "O que faz do caixa automático um sistema interativo e do processamento em lote não, e o que o modelo chama de contexto de uso?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Introdução a Tecnologias da Informação e Comunicação"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/TicSection.tsx"
+    },
+    {
+      "id": "mt_INTW_05",
+      "nome": "Internet e Web não são a mesma coisa",
+      "tipo": "CONCEITUAL",
+      "unidade": "Internet, Web e HTTP",
+      "descricao": "A Internet é uma rede global de redes, ou seja, a infraestrutura. A Web (World Wide Web) é uma coleção de informações acessada por meio dessa infraestrutura. A analogia da aula: a Internet é a livraria e a Web é a coleção de livros daquela livraria; em alto nível, a Internet é o hardware e a Web é o software.",
+      "ordem": 5,
+      "evidencia": [
+        "corrige quem trata Internet e Web como sinônimos",
+        "diz qual das duas é a infraestrutura e qual é servida em cima dela"
+      ],
+      "checagem": "Qual das duas é a infraestrutura, e que analogia a aula usa para separar Internet de Web?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Internet e Protocolo HTTP"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/InternetWebSection.tsx"
+    },
+    {
+      "id": "mt_INTW_06",
+      "nome": "HTTP: uma camada sobre o TCP",
+      "tipo": "CONCEITUAL",
+      "unidade": "Internet, Web e HTTP",
+      "descricao": "As aplicações da Web usam o HTTP, que é uma camada sobre o TCP e tradicionalmente ocupa a porta 80 (443 quando cifrado com TLS). Aplicações de Internet em geral podem usar TCP ou UDP em qualquer porta, então abrir um socket numa porta arbitrária e enviar dados a outro computador é usar a Internet sem usar a Web.",
+      "ordem": 6,
+      "evidencia": [
+        "julga se um programa que troca mensagens por socket numa porta qualquer usa a Web",
+        "identifica o protocolo que caracteriza uma aplicação web"
+      ],
+      "checagem": "Um programa que troca mensagens por socket na porta 9000 usa a Web? Por quê?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Internet e Protocolo HTTP"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/InternetWebSection.tsx"
+    },
+    {
+      "id": "mt_INTW_07",
+      "nome": "Os três pilares da Web segundo o W3C",
+      "tipo": "CONCEITUAL",
+      "unidade": "Internet, Web e HTTP",
+      "descricao": "Para o W3C a Web se apoia em três pilares: um esquema de nomes para localizar as fontes de informação (a URI), um protocolo de acesso a essas fontes (hoje o HTTP) e uma linguagem de hipertexto para navegar entre elas (o HTML). Não confundir com o trio client-side HTML, CSS e JavaScript, que é outra divisão, nem com os protocolos de rede TCP, UDP e IP, que estão na camada abaixo.",
+      "ordem": 7,
+      "evidencia": [
+        "lista URI, HTTP e HTML e diz o papel de cada um",
+        "distingue os pilares do W3C do trio HTML, CSS e JavaScript"
+      ],
+      "checagem": "Quais são os três pilares da Web segundo o W3C, e qual é o papel de cada um?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Internet e Protocolo HTTP"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_08",
+      "nome": "Hipertexto: uma rede de nós, não um livro",
+      "tipo": "CONCEITUAL",
+      "unidade": "Internet, Web e HTTP",
+      "descricao": "HTML é a sigla de HyperText Markup Language, linguagem de marcação de hipertexto, criada para publicar texto, imagem, vídeo e áudio na Web. Hipertexto é um conjunto de elementos, ou nós, ligados por conexões, que formam uma rede de informação em vez da sequência linear das páginas de um livro. Desde o começo o HTML foi projetado para ser independente de plataforma, navegador e meio de acesso, e essa interoperabilidade é o que reduz custo: um mesmo código é lido por diversos meios.",
+      "ordem": 8,
+      "evidencia": [
+        "explica por que o hipertexto não é linear como um livro",
+        "justifica a interoperabilidade do HTML em termos de custo de manutenção"
+      ],
+      "checagem": "O que significa a sigla HTML e o que diferencia um hipertexto das páginas de um livro?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/InternetWebSection.tsx"
+    },
+    {
+      "id": "mt_INTW_09",
+      "nome": "Padronização do HTML e compatibilidade entre navegadores",
+      "tipo": "CONCEITUAL",
+      "unidade": "Internet, Web e HTTP",
+      "descricao": "Tim Berners-Lee criou o HTML e o navegador Mosaic, de Marc Andreessen, o popularizou nos anos 1990. Entre 1993 e 1995 vieram HTML+, HTML 2.0 e HTML 3.0 sem status de padrão, e só em 1997 o grupo do W3C produziu a versão 3.2. Em 2004 desenvolvedores de Mozilla, Apple e Opera fundaram o WHATWG, em 2006 o W3C reconheceu o grupo e o HTML5 avançou em detrimento do XHTML 2, mantendo retrocompatibilidade. Cada navegador processa a página com um motor (Webkit, Gecko, Trident, Presto), e o desenvolvimento modular do HTML5 e do CSS3 acelera as novidades ao custo de mais incompatibilidade.",
+      "ordem": 9,
+      "evidencia": [
+        "situa WHATWG, W3C e HTML5 na linha do tempo",
+        "explica por que focar a compatibilidade no motor alcança mais meios de acesso que focar em cada navegador"
+      ],
+      "checagem": "Quem fundou o WHATWG e em que ano, e por que testar por motor de renderização cobre mais que testar por navegador?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_10",
+      "nome": "A estrutura mínima de um documento HTML5",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "HTML5: estrutura do documento",
+      "descricao": "Escrever o esqueleto que toda página tem: o Doctype na primeira linha, antes da tag html, que não é tag e sim uma instrução informando ao navegador qual especificação usar (no HTML5 basta o <!DOCTYPE html>, sem referenciar o DTD); o elemento html como raiz da árvore de elementos, com o atributo lang; o head com os metadados e o title; e o body com o conteúdo visível. O playground da seção executa exatamente esse documento.",
+      "ordem": 10,
+      "evidencia": [
+        "escreve de memória um documento HTML5 válido com Doctype, lang, head, title e body",
+        "explica por que o Doctype não se fecha e não fica dentro do head"
+      ],
+      "checagem": "O Doctype é uma tag? O que ele informa ao navegador e em que posição do arquivo ele fica?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_11",
+      "nome": "meta charset e a tabela Unicode",
+      "tipo": "CONCEITUAL",
+      "unidade": "HTML5: estrutura do documento",
+      "descricao": "A metatag charset define a tabela de caracteres que o navegador usa para interpretar os bytes do arquivo, e a forma do HTML5 é meta charset utf-8, que substitui a declaração antiga com http-equiv. A tabela Unicode suporta cerca de um milhão de caracteres e dá um número único a cada um, independentemente de plataforma, programa ou língua. Sem a declaração, cada navegador adivinha, e é daí que vêm os caracteres corrompidos.",
+      "ordem": 11,
+      "evidencia": [
+        "resolve acento corrompido declarando o charset na origem",
+        "distingue o papel do charset do papel do atributo lang"
+      ],
+      "checagem": "Que linha do head resolve caracteres corrompidos, e por que o atributo lang não resolve isso?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/HtmlEstruturaSection.tsx"
+    },
+    {
+      "id": "mt_INTW_12",
+      "nome": "A tag a e a tag link: dois tipos de link",
+      "tipo": "CONCEITUAL",
+      "unidade": "HTML5: estrutura do documento",
+      "descricao": "O HTML tem dois tipos de link com propósitos distintos. A tag a é navegação: leva o usuário a outro documento, a uma âncora da mesma página ou a um endereço externo. A tag link referencia fontes externas que o próprio documento usa e que o navegador resolve sozinho, como em link rel stylesheet href estilo.css.",
+      "ordem": 12,
+      "evidencia": [
+        "escolhe entre a e link conforme o link ser navegação ou recurso do documento",
+        "diz onde cada uma das duas costuma aparecer no arquivo"
+      ],
+      "checagem": "Qual é a diferença entre a tag a e a tag link, e em que parte do documento cada uma aparece?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_13",
+      "nome": "Elementos de linha, de bloco e as categorias de conteúdo",
+      "tipo": "CONCEITUAL",
+      "unidade": "HTML5: estrutura do documento",
+      "descricao": "Elementos de linha marcam na maioria das vezes texto (a, strong, em, img, input, abbr, span) e nunca podem conter elementos de bloco. Elementos de bloco são caixas que dividem o conteúdo em seções do layout e sempre podem conter elementos de linha; conter outro bloco depende da categoria, e o caso clássico é o parágrafo, que não pode conter um div ainda que o div possa conter um parágrafo. O HTML5 formaliza isso nos modelos de conteúdo: metadata, flow, sectioning, heading, phrasing, embedded e interactive content.",
+      "ordem": 13,
+      "evidencia": [
+        "julga se um aninhamento de tags é válido antes de escrevê-lo",
+        "diz a que categoria de conteúdo pertence um elemento como nav, img ou meta"
+      ],
+      "checagem": "Por que um parágrafo com um div dentro é inválido, e qual categoria reúne article, aside, nav e section?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/HtmlEstruturaSection.tsx"
+    },
+    {
+      "id": "mt_INTW_14",
+      "nome": "A semântica diz que tipo de informação a página exibe",
+      "tipo": "CONCEITUAL",
+      "unidade": "Semântica e formatação de texto",
+      "descricao": "Ao ler um livro, a pessoa distingue um título de um parágrafo pelo tamanho e pelo peso da letra. Robôs de busca e leitores de tela não têm essa pista visual, e por isso a função do HTML é indicar que tipo de informação a página exibe, para que ela seja interpretada por dispositivos diferentes. Antes do HTML5 não havia padrão para marcar rodapé, cabeçalho, sidebar e menu, e a diferenciação era apenas visual.",
+      "ordem": 14,
+      "evidencia": [
+        "explica por que marcar significado vale mais que marcar aparência",
+        "identifica o que se perde quando a diferença entre dois blocos é só visual"
+      ],
+      "checagem": "Que informação um leitor de tela obtém da marcação e não obtém do tamanho da letra?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/HtmlSemanticaSection.tsx"
+    },
+    {
+      "id": "mt_INTW_15",
+      "nome": "As tags semânticas do HTML5 e onde cada uma cabe",
+      "tipo": "LINGUAGEM",
+      "unidade": "Semântica e formatação de texto",
+      "descricao": "header é grupo de introdução ou de elementos de navegação; nav é a seção com links para outras partes do site, e nem todo grupo de links é um nav, só os importantes, como o menu principal; article é a parte da página que pode ser distribuída e reutilizada de forma independente, como um post; section é seção genérica; aside referencia o conteúdo ao redor, como sidebar e publicidade; footer é o rodapé, que não precisa estar no fim da página; hgroup agrupa título e subtítulos e time marca data ou horário preciso.",
+      "ordem": 15,
+      "evidencia": [
+        "escolhe nav para o menu e article para a notícia em vez de div com classe",
+        "justifica por que um bloco de links secundário não é um nav"
+      ],
+      "checagem": "Que tag marca o menu principal e que tag marca uma notícia que pode ser redistribuída?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_16",
+      "nome": "Formatar texto: títulos, parágrafos, listas, links e imagens",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Semântica e formatação de texto",
+      "descricao": "A formatação cobrada na AV1: títulos de h1 a h6 em ordem de importância, p para parágrafos, ul com li quando a ordem dos itens não importa, ol com li quando a ordem é parte da informação (o atributo reversed inverte a numeração), a com href para links e img com src e alt para imagens. O playground da seção pede trocar ul por ol e apagar o alt para o aluno ver o efeito de cada mudança.",
+      "ordem": 16,
+      "evidencia": [
+        "monta uma página com títulos em ordem, parágrafos, as duas listas, link e imagem",
+        "escolhe entre ul e ol conforme a ordem fazer parte da informação"
+      ],
+      "checagem": "Quando usar ol em vez de ul, e quais atributos a tag img sempre leva?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_17",
+      "nome": "Semântico contra visual: strong, em, b, i e os descontinuados",
+      "tipo": "CONCEITUAL",
+      "unidade": "Semântica e formatação de texto",
+      "descricao": "strong indica importância forte e em indica ênfase: os dois carregam significado e são interpretados por leitores de tela e buscadores. No HTML5 o b passou a ter o mesmo nível semântico de um span, mantendo o negrito sem atribuir importância, e o i virou span com o itálico servindo para termos técnicos ou frases em outros idiomas. Por terem efeito apenas visual saíram basefont, big, center, font, s, strike, tt e u, além de atributos como align, bgcolor, border, cellpadding e cellspacing, cujo trabalho é do CSS; frame, frameset e noframes saíram por ferir acessibilidade e usabilidade.",
+      "ordem": 17,
+      "evidencia": [
+        "escolhe strong em vez de b quando o texto tem importância destacada",
+        "separa os elementos descontinuados por serem visuais dos descontinuados por acessibilidade"
+      ],
+      "checagem": "Por que center e font foram descontinuados por um motivo e frameset por outro?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_18",
+      "nome": "Escrever o alt de uma imagem",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Semântica e formatação de texto",
+      "descricao": "A pergunta certa é: se a imagem sumisse, que texto ocuparia o lugar dela sem perda de informação? Um alt igual a imagem ou a foto1.jpg é inútil, porque anuncia o que o leitor de tela já sabe e não descreve conteúdo. Um alt descritivo diz o que a imagem mostra na medida em que isso importa ao texto ao redor. O alt vazio, mas presente, é o correto para imagem puramente decorativa, porque instrui o leitor de tela a pular o elemento; omitir o atributo não é equivalente, já que sem alt alguns leitores anunciam o nome do arquivo.",
+      "ordem": 18,
+      "evidencia": [
+        "escreve o alt de uma imagem informativa e o de uma imagem decorativa",
+        "explica por que omitir o alt é pior que deixá-lo vazio"
+      ],
+      "checagem": "Que alt uma imagem puramente decorativa recebe, e por que não basta omitir o atributo?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/HtmlSemanticaSection.tsx"
+    },
+    {
+      "id": "mt_INTW_19",
+      "nome": "Montar uma tabela de dados",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Tabelas",
+      "descricao": "table delimita a tabela inteira, caption dá o título e aparece uma vez só, thead, tbody e tfoot agrupam cabeçalho, corpo e rodapé, tr define a linha, th a célula de cabeçalho e td a célula de dados. colspan faz a célula ocupar várias colunas e rowspan várias linhas. A atividade da AV2 pedia a tabela de resultados no modelo da consulta de turmas do SIGAA, com a captura da tela real anexa ao enunciado.",
+      "ordem": 19,
+      "evidencia": [
+        "monta a tabela de resultados com caption, thead e tbody",
+        "escolhe entre colspan e rowspan para a célula que precisa se estender"
+      ],
+      "checagem": "Qual atributo estende a célula por duas colunas, e qual estende por duas linhas?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_20",
+      "nome": "th com scope: a tabela para quem usa leitor de tela",
+      "tipo": "CONCEITUAL",
+      "unidade": "Tabelas",
+      "descricao": "Um td em negrito parece um cabeçalho, mas não é: a informação semântica se perde para quem navega com leitor de tela. O th marca a célula como cabeçalho e o atributo scope diz a quem ele se refere, com scope col para a coluna e scope row para a linha. É isso que resolve a ambiguidade quando a tabela tem cabeçalho nos dois sentidos, e é a diferença entre uma tabela navegável e uma sequência de números soltos.",
+      "ordem": 20,
+      "evidencia": [
+        "marca a primeira célula de cada linha como th com scope row",
+        "explica o que se perde quando o cabeçalho é um td em negrito"
+      ],
+      "checagem": "Como indicar que a primeira célula de cada linha é cabeçalho daquela linha, e não da coluna?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/TabelasSection.tsx"
+    },
+    {
+      "id": "mt_INTW_21",
+      "nome": "Tabela é para dados tabulares, não para layout",
+      "tipo": "CONCEITUAL",
+      "unidade": "Tabelas",
+      "descricao": "Houve uma época em que sites inteiros eram diagramados com tabelas aninhadas, e isso acabou. A tag table serve para conteúdo com linhas e colunas de verdade, como notas, horários e a listagem de turmas; dividir a página em colunas e posicionar blocos é responsabilidade do CSS, hoje com flexbox. Acrescentar th e scope numa tabela de layout piora a situação, porque passa a anunciar cabeçalhos de uma tabela que não existe conceitualmente.",
+      "ordem": 21,
+      "evidencia": [
+        "recusa a tabela para colocar foto ao lado de dados e resolve o caso no CSS",
+        "identifica quando o conteúdo é realmente tabular"
+      ],
+      "checagem": "Foto do aluno à esquerda e dados à direita: uma tabela de duas colunas resolve? Por quê?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/TabelasSection.tsx"
+    },
+    {
+      "id": "mt_INTW_22",
+      "nome": "Os elementos de um formulário",
+      "tipo": "LINGUAGEM",
+      "unidade": "Formulários e validação",
+      "descricao": "form envolve os campos, com action indicando para onde os dados vão e method definindo GET ou POST. input é o campo genérico, controlado pelo atributo type; select com option monta a lista de seleção, e uma option de value vazio serve de instrução; textarea é o campo de várias linhas; button type submit envia o formulário e dispara a validação. Radios com o mesmo name formam um grupo e admitem uma escolha, checkboxes admitem várias, e fieldset com legend agrupa e nomeia campos relacionados.",
+      "ordem": 22,
+      "evidencia": [
+        "monta o formulário de inscrição com select, textarea, radio, checkbox e fieldset",
+        "usa o mesmo name para fechar um grupo de radios"
+      ],
+      "checagem": "O que faz dois radios pertencerem ao mesmo grupo, e para que servem fieldset e legend?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_23",
+      "nome": "label com for apontando para o id do campo",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Formulários e validação",
+      "descricao": "O for do label precisa apontar para o id do campo, e não para o name. Feita a associação, clicar no rótulo foca o campo, o que ajuda muito no celular, e o leitor de tela anuncia o rótulo junto com o campo em vez de anunciar só caixa de edição. Texto solto antes do campo não cria nenhuma dessas ligações, e um placeholder não substitui o label, porque desaparece assim que a pessoa começa a digitar.",
+      "ordem": 23,
+      "evidencia": [
+        "liga cada rótulo ao campo certo pelo par for e id",
+        "explica por que texto solto antes do campo não cumpre o papel do label"
+      ],
+      "checagem": "Para que valor o for do label aponta, e por que o placeholder não substitui o label?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/FormulariosSection.tsx"
+    },
+    {
+      "id": "mt_INTW_24",
+      "nome": "Os novos tipos de input do HTML5",
+      "tipo": "LINGUAGEM",
+      "unidade": "Formulários e validação",
+      "descricao": "O atributo type do input ganhou valores novos: email e url trazem formatação e validação prontas; tel não tem máscara nem validação de propósito, porque não existe padrão mundial para números de telefone, e o caminho para restringir o formato é o pattern; search pode mudar de aparência conforme o agente de usuário; datetime, date, month, week, time e datetime-local são validados e formatados pelo navegador, que pode abrir calendário ou seletor de horário; number e range são o mesmo dado com apresentações diferentes e aceitam min, max e step, sendo step a diferença mínima entre dois valores; color devolve a cor no formato hexadecimal.",
+      "ordem": 24,
+      "evidencia": [
+        "escolhe o type adequado para e-mail, telefone, data e quantidade",
+        "usa min, max e step para restringir um campo numérico"
+      ],
+      "checagem": "Como expressar que um número deve ficar entre 10 e 30 variando de 5 em 5, e por que o tel não valida nada?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_25",
+      "nome": "Validação pelo próprio HTML",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Formulários e validação",
+      "descricao": "Antes do HTML5 validar formulário era tarefa de JavaScript. required torna o preenchimento obrigatório e o navegador bloqueia o envio; placeholder mostra texto de exemplo dentro do campo, o que antes era gambiarra com onfocus e onblur; autofocus foca o campo assim que ele é criado, e não ao fim do carregamento, o que evita roubar o foco de quem já começou a digitar; maxlength limita caracteres e no HTML5 passou a valer também para textarea; pattern define uma expressão regular sem JavaScript. novalidate no form e formnovalidate no botão desligam a validação, caso clássico do botão de salvar rascunho.",
+      "ordem": 25,
+      "evidencia": [
+        "deixa o navegador validar campo obrigatório e formato sem escrever JavaScript",
+        "usa formnovalidate no botão que não deve validar, mantendo a validação no envio"
+      ],
+      "checagem": "Como um botão de salvar rascunho escapa da validação sem desligá-la para o botão de enviar?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_26",
+      "nome": "Validação customizada com oninput e setCustomValidity",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Formulários e validação",
+      "descricao": "Para regras próprias o HTML5 oferece dois ganchos. O evento oninput dispara a cada modificação do valor, diferente de onchange, que só dispara ao final da edição, e de onkeyup, porque o oninput captura alteração feita por teclado, mouse ou outra interface. O método setCustomValidity recebe uma string: vazia marca o campo como válido, qualquer outra o marca como inválido e vira a mensagem exibida.",
+      "ordem": 26,
+      "evidencia": [
+        "liga uma regra própria ao oninput e marca o campo com setCustomValidity",
+        "escolhe entre oninput e onchange conforme o momento do disparo"
+      ],
+      "checagem": "O que setCustomValidity faz ao receber string vazia, e qual é a diferença entre oninput e onchange?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML",
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/FormulariosSection.tsx"
+    },
+    {
+      "id": "mt_INTW_27",
+      "nome": "O que o CSS faz e a sintaxe da regra",
+      "tipo": "CONCEITUAL",
+      "unidade": "CSS: seletores e box model",
+      "descricao": "O CSS formata a informação entregue pelo HTML, e essa informação pode ser imagem, texto, vídeo ou áudio. A formatação é quase sempre visual, mas não necessariamente: no CSS Aural manipula-se o áudio entregue por sistemas de leitura de tela, controlando volume, profundidade e tipo de voz. A separação entre estrutura (HTML) e apresentação (CSS) é o princípio central, e a sintaxe é sempre seletor, propriedade e valor.",
+      "ordem": 27,
+      "evidencia": [
+        "escreve uma regra completa com seletor, propriedade e valor",
+        "explica por que a apresentação não pertence ao HTML"
+      ],
+      "checagem": "Qual é a sintaxe de uma regra CSS, e por que a formatação nem sempre é visual?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/CssFundamentosSection.tsx"
+    },
+    {
+      "id": "mt_INTW_28",
+      "nome": "Onde escrever o CSS: inline, interno e externo",
+      "tipo": "CONCEITUAL",
+      "unidade": "CSS: seletores e box model",
+      "descricao": "Inline é o atributo style no próprio elemento: não precisa de arquivo nem de seletor, mas mistura apresentação com estrutura e não reaproveita nada. Interno é a tag style dentro do head: serve a uma página isolada e o estilo morre naquele documento. Externo é um arquivo .css referenciado por link rel stylesheet: separa apresentação de estrutura, vale para o site inteiro e é a forma recomendada, cobrada na atividade em dois arquivos, form.html e style.css.",
+      "ordem": 28,
+      "evidencia": [
+        "escolhe a folha externa quando o estilo precisa valer para várias páginas",
+        "aponta o que se perde ao espalhar style inline pelo documento"
+      ],
+      "checagem": "Qual das três formas de aplicar CSS é a recomendada, e por quê?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_29",
+      "nome": "Os tipos de seletor do CSS",
+      "tipo": "LINGUAGEM",
+      "unidade": "CSS: seletores e box model",
+      "descricao": "O seletor é a estrutura usada como condição para determinar quais elementos serão formatados, e é a alma do CSS. O de tag atinge todos os elementos daquele tipo, o de classe vale para vários elementos e o de id identifica um único elemento na página. O encadeado (descendente) usa espaço e formata o elemento dentro de outro; o agrupado usa vírgula para compartilhar a mesma formatação; os complexos alcançam o que antes exigiria marcar classe via JavaScript, com E maior que F pegando os filhos diretos e E mais F o elemento imediatamente adjacente, como h1 seguido de p. Há ainda seletores de atributo e pseudo-classes como :root, :nth-child, :empty, :enabled, :disabled e :checked.",
+      "ordem": 29,
+      "evidencia": [
+        "escreve o seletor que atinge só os parágrafos dentro de um elemento com id",
+        "diferencia o efeito do espaço e o da vírgula entre dois seletores"
+      ],
+      "checagem": "O que muda entre um seletor com espaço e o mesmo par de seletores separados por vírgula?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_30",
+      "nome": "Especificidade: id vence classe, classe vence tag",
+      "tipo": "CONCEITUAL",
+      "unidade": "CSS: seletores e box model",
+      "descricao": "Quando várias regras atingem o mesmo elemento, a mais específica vence, e a especificidade cresce de tag para classe e de classe para id. É por isso que o id deve identificar um único elemento na página, enquanto a classe vale para vários e o seletor de tag atinge todos daquele tipo. A ordem no arquivo só desempata entre seletores de mesma especificidade, e nesse caso ganha o que está escrito depois.",
+      "ordem": 30,
+      "evidencia": [
+        "prevê qual das regras em conflito colore o elemento",
+        "recorre à ordem do arquivo apenas quando a especificidade empata"
+      ],
+      "checagem": "Com um seletor de id, um de classe e um de tag apontando cores diferentes para o mesmo parágrafo, qual vence?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/CssFundamentosSection.tsx"
+    },
+    {
+      "id": "mt_INTW_31",
+      "nome": "O modelo de caixa",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "CSS: seletores e box model",
+      "descricao": "Toda caixa tem quatro partes, de dentro para fora: o conteúdo (width e height), o padding, que é o espaço interno entre conteúdo e borda, o border, que é a borda em si, e o margin, que é o espaço externo entre a borda e os elementos vizinhos. Aumentar o padding afasta o texto da borda; aumentar a margin afasta a caixa das outras caixas. Se o fundo colorido cresceu junto, era padding.",
+      "ordem": 31,
+      "evidencia": [
+        "nomeia as quatro partes da caixa de dentro para fora",
+        "decide entre padding e margin diante de um espaçamento que precisa mudar"
+      ],
+      "checagem": "Num botão com width, padding e border definidos, o que exatamente a margin controla?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/CssFundamentosSection.tsx"
+    },
+    {
+      "id": "mt_INTW_32",
+      "nome": "As propriedades de estilo cobradas na atividade",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "CSS: seletores e box model",
+      "descricao": "O enunciado da atividade de CSS é uma lista fechada e verificável: background-image, background-color, box-shadow, border-radius, margin, padding, align-items, width, height, font e color, mais os três tipos de seletor (id, class e tag) e o display flex no container. border-radius arredonda os cantos e box-shadow projeta sombra; as cores podem vir em hexadecimal, por nome ou em RGBA.",
+      "ordem": 32,
+      "evidencia": [
+        "aplica as onze propriedades pedidas num único arquivo de estilo",
+        "confere a entrega item por item contra a lista do enunciado"
+      ],
+      "checagem": "Que propriedades e que tipos de seletor o enunciado do cadastro de estágio exige?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_33",
+      "nome": "display flex vai no elemento pai",
+      "tipo": "CONCEITUAL",
+      "unidade": "CSS: flexbox e CSS3",
+      "descricao": "Flexbox é um modelo de layout em uma dimensão, ativado com display flex no elemento pai, que passa a ser o container; os filhos diretos dele viram itens flexíveis e passam a se comportar de forma diferente. Aplicar o display flex no próprio elemento que se quer mover não produz efeito nenhum sobre ele. Layout em duas dimensões é o grid, que fica fora do escopo da disciplina.",
+      "ordem": 33,
+      "evidencia": [
+        "aplica display flex no container certo, e não no item que quer mover",
+        "identifica quais elementos se tornam itens flexíveis"
+      ],
+      "checagem": "Em que elemento vai o display flex, e o que acontece com os filhos diretos dele?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/CssLayoutSection.tsx"
+    },
+    {
+      "id": "mt_INTW_34",
+      "nome": "Os dois eixos do flexbox",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "CSS: flexbox e CSS3",
+      "descricao": "flex-direction define o eixo principal: row (padrão) deixa horizontal e column deixa vertical. justify-content sempre alinha ao longo do eixo principal, com flex-start, center, space-between e space-around; align-items sempre alinha no eixo transversal, perpendicular a ele. gap dá espaçamento entre os itens sem precisar de margin nos filhos e flex-wrap permite quebrar em várias linhas. Trocar justify-content por align-items é o erro mais comum de quem começa.",
+      "ordem": 34,
+      "evidencia": [
+        "move os itens no eixo desejado escolhendo entre justify-content e align-items",
+        "prevê o efeito de trocar flex-direction para column mantendo o mesmo justify-content"
+      ],
+      "checagem": "Qual propriedade alinha no eixo principal, e o que muda quando flex-direction passa a column?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_35",
+      "nome": "Recursos modulares do CSS3, RGBA e opacity",
+      "tipo": "CONCEITUAL",
+      "unidade": "CSS: flexbox e CSS3",
+      "descricao": "O CSS3 é modular e cada grupo lança novidades quando fica pronto. Gradientes feitos só com CSS evitam uma requisição de imagem ao servidor e usam stops em porcentagem para dizer onde uma cor termina e a outra começa; columns divide texto com column-count, column-width e column-gap; transform 2D combina scale, skew, translation e rotate, com transform-origin no centro por padrão; transition anima a passagem entre dois estados e a regra keyframes descreve animações de vários passos. No RGBA o quarto valor é o alfa e afeta somente aquela cor, enquanto a opacity afeta o elemento inteiro e todos os seus filhos.",
+      "ordem": 35,
+      "evidencia": [
+        "usa rgba quando só o fundo deve ficar translúcido e o texto precisa continuar opaco",
+        "justifica o gradiente em CSS pela requisição de imagem que ele economiza"
+      ],
+      "checagem": "Por que o texto desbota junto quando se aplica opacity ao card, e qual é a correção?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Folhas de Estilos"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_36",
+      "nome": "JavaScript como client-side script",
+      "tipo": "CONCEITUAL",
+      "unidade": "JavaScript e o DOM",
+      "descricao": "O JavaScript é executado no navegador, do lado do cliente, e é o terceiro pilar do desenvolvimento web ao lado do HTML (estrutura) e do CSS (apresentação): ele cuida do comportamento. Não é preciso instalar nada para começar, porque o próprio navegador executa. O código pode ficar dentro da tag script ou num arquivo .js externo, e o console do navegador mostra os erros e permite testar comandos.",
+      "ordem": 36,
+      "evidencia": [
+        "diz onde o código JavaScript roda e o que basta ter para executá-lo",
+        "abre o console do navegador para ver erro e testar comando"
+      ],
+      "checagem": "Onde o JavaScript desta disciplina é executado, e onde os erros dele aparecem?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/JavaScriptSection.tsx"
+    },
+    {
+      "id": "mt_INTW_37",
+      "nome": "Variáveis, tipos e operadores em JavaScript",
+      "tipo": "LINGUAGEM",
+      "unidade": "JavaScript e o DOM",
+      "descricao": "Variáveis guardam dados e são declaradas com let (valor que muda), const (valor que não é reatribuído) ou o antigo var. Os tipos básicos são number, string e boolean, além de null e undefined. A concatenação de texto usa o operador de soma e os template literals usam crase com chaves; os operadores aritméticos são soma, subtração, multiplicação, divisão e o resto.",
+      "ordem": 37,
+      "evidencia": [
+        "escolhe entre let e const conforme o valor ser reatribuído",
+        "calcula o resto de uma divisão com o operador de resto"
+      ],
+      "checagem": "Qual é a diferença entre let e const, e o que o operador de resto devolve?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_38",
+      "nome": "Comparação estrita: três iguais contra dois iguais",
+      "tipo": "CONCEITUAL",
+      "unidade": "JavaScript e o DOM",
+      "descricao": "A comparação com três sinais de igual confere valor e tipo; a com dois sinais converte o tipo antes de comparar, de modo que a string cinco é igual ao número cinco na comparação frouxa e diferente na estrita. Como a conversão automática produz resultados surpreendentes e esconde bugs, a recomendação da disciplina é usar sempre a comparação estrita.",
+      "ordem": 38,
+      "evidencia": [
+        "prevê o resultado de comparar string com número em cada um dos dois operadores",
+        "justifica a preferência pela comparação estrita em termos de conversão silenciosa"
+      ],
+      "checagem": "Por que a comparação frouxa entre a string cinco e o número cinco dá verdadeiro e a estrita dá falso?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/JavaScriptSection.tsx"
+    },
+    {
+      "id": "mt_INTW_39",
+      "nome": "Condicionais, laços e funções",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "JavaScript e o DOM",
+      "descricao": "if, else if e else executam trechos diferentes conforme a condição. while repete enquanto a condição for verdadeira e for reúne inicialização, condição e incremento na mesma linha. Funções são declaradas com function, recebem parâmetros e devolvem valor com return, e servem para não repetir o mesmo código, como no exemplo que calcula a média percorrendo as notas com um for.",
+      "ordem": 39,
+      "evidencia": [
+        "escreve uma função que percorre valores com for e devolve o resultado com return",
+        "escolhe entre while e for conforme a contagem ser conhecida de antemão"
+      ],
+      "checagem": "Que três partes o for reúne na mesma linha, e para que serve o return de uma função?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_40",
+      "nome": "Arrays e a indexação a partir de zero",
+      "tipo": "LINGUAGEM",
+      "unidade": "JavaScript e o DOM",
+      "descricao": "Arrays guardam vários dados numa mesma variável, são indexados a partir de zero, têm a propriedade length e métodos como push. O length é a quantidade de itens, então o primeiro elemento está no índice zero e o último em length menos um. Confundir quantidade com último índice é a origem do erro de passar do fim do array.",
+      "ordem": 40,
+      "evidencia": [
+        "acessa o primeiro e o último elemento de um array sem estourar o limite",
+        "distingue a quantidade de itens do índice do último item"
+      ],
+      "checagem": "Num array de três notas, quanto vale length e qual é o índice do último elemento?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_41",
+      "nome": "alert, prompt e console.log",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "JavaScript e o DOM",
+      "descricao": "alert exibe uma mensagem em caixa de diálogo e interrompe a página até o usuário fechar, o que é bom para aprender e ruim em produção. prompt pede um valor e devolve sempre string, mesmo quando a pessoa digita um número, então somar um ao valor concatena em vez de somar, e é preciso converter com Number ou parseInt antes de calcular. console.log escreve no console e é a ferramenta de depuração, porque mostra valores sem atrapalhar quem usa a página.",
+      "ordem": 41,
+      "evidencia": [
+        "converte o retorno de prompt antes de fazer conta",
+        "escolhe console.log em vez de alert para depurar"
+      ],
+      "checagem": "Por que somar um ao resultado de prompt pode produzir 251 em vez de 26, e como corrigir?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/blocks.ts"
+    },
+    {
+      "id": "mt_INTW_42",
+      "nome": "O DOM: a página vista como objetos",
+      "tipo": "CONCEITUAL",
+      "unidade": "JavaScript e o DOM",
+      "descricao": "Quando o navegador carrega a página, ele constrói uma coleção de objetos que representam os elementos HTML: o DOM (Document Object Model). Cada elemento do código vira um objeto, com propriedades em comum e algumas específicas, e é por meio do DOM que o JavaScript lê e altera a página já carregada, sem recarregar nada. O DOM não é somente leitura: alterá-lo é justamente o papel do JavaScript.",
+      "ordem": 42,
+      "evidencia": [
+        "explica de onde vem o objeto que o JavaScript manipula",
+        "descarta a ideia de que alterar a página exige reeditar o arquivo HTML"
+      ],
+      "checagem": "O que o navegador constrói ao carregar a página, e o que isso permite ao JavaScript fazer?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/JavaScriptSection.tsx"
+    },
+    {
+      "id": "mt_INTW_43",
+      "nome": "Buscar o elemento, ligar o evento e trocar o conteúdo",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "JavaScript e o DOM",
+      "descricao": "document.getElementById busca pelo id, getElementsByClassName (acrescentado pelo HTML5) busca por classe e a Selector API traz querySelector e querySelectorAll, que aceitam seletores CSS, devolvendo o primeiro elemento e todos, respectivamente. innerHTML lê ou substitui o conteúdo do elemento, e os eventos ligam a ação do usuário ao código: onclick no clique, oninput a cada modificação de campo e onchange ao final da edição. O script vem depois do HTML que ele manipula, senão o getElementById procura um elemento que o navegador ainda não criou.",
+      "ordem": 43,
+      "evidencia": [
+        "troca o texto de um parágrafo no clique de um botão, usando id e innerHTML",
+        "posiciona o script depois do markup que ele manipula"
+      ],
+      "checagem": "Que combinação troca o texto de um parágrafo pelo id quando o botão é clicado, e por que a posição do script importa?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/snippets.ts"
+    },
+    {
+      "id": "mt_INTW_44",
+      "nome": "Integrar as três camadas num site publicado",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Projeto final e acessibilidade",
+      "descricao": "O projeto previsto no cronograma reúne as três camadas num site publicado: HTML semântico com Doctype, lang e charset em todas as páginas, links relativos entre elas, imagens com alt descritivo, formulário com label for e validação pelo próprio HTML, folha de estilo externa reaproveitada por todas as páginas, layout organizado com flexbox e ao menos uma interação real pelo DOM. O valor didático está nos problemas de integração, e o erro mais comum ao publicar é o href da folha de estilo apontar para um caminho que existia na máquina local e não existe no servidor, então a página abre sem estilo nenhum. As plataformas indicadas são Replit e CodePen.",
+      "ordem": 44,
+      "evidencia": [
+        "publica um site que usa as três camadas e o testa pelo link, não só localmente",
+        "diagnostica a página que abre sem estilo depois de publicada"
+      ],
+      "checagem": "O site foi publicado e abriu sem estilo nenhum, com o HTML correto. Qual é a causa mais provável?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML",
+        "Folhas de Estilos",
+        "Client-Side Script"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/sections/ProjetoFinalSection.tsx"
+    },
+    {
+      "id": "mt_INTW_45",
+      "nome": "Acessibilidade acontece na marcação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Projeto final e acessibilidade",
+      "descricao": "As decisões de acessibilidade que a disciplina cobre atuam na marcação, não na aparência: as tags semânticas dizem o que cada bloco é, o alt descreve a imagem, o label com for liga o rótulo ao campo e o th com scope diz a que linha ou coluna cada dado pertence. Aumentar fonte e contraste ajuda quem enxerga com dificuldade, mas não altera nada do que é anunciado por um leitor de tela.",
+      "ordem": 45,
+      "evidencia": [
+        "escolhe o conjunto de decisões que muda o que o leitor de tela anuncia",
+        "separa ajuste visual de ajuste de marcação ao avaliar uma página"
+      ],
+      "checagem": "Quais quatro decisões de marcação a disciplina cobra para quem navega com leitor de tela?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Documentos HTML"
+      ],
+      "fonte": "ifal/src/content/introducao-tecnologias-web/data.ts"
+    }
+  ],
+  "arestas": [
+    {
+      "topicoId": "mt_INTW_03",
+      "prerequisitoId": "mt_INTW_02",
+      "forca": "hard",
+      "razao": "A responsabilidade discutida é a de quem desenvolve TIC, então é preciso saber o que uma TIC é e em que áreas da vida ela já está.",
+      "origem": "texto",
+      "trecho": "TICs são o conjunto de tecnologias que permitem produzir, armazenar, transmitir e acessar informação."
+    },
+    {
+      "topicoId": "mt_INTW_04",
+      "prerequisitoId": "mt_INTW_02",
+      "forca": "hard",
+      "razao": "O material define sistema interativo como subconjunto das TIC, e um subconjunto não se entende sem o conjunto.",
+      "origem": "texto",
+      "trecho": "Sistemas interativos são um subconjunto das TICs: o caixa automático é interativo, o sistema em batch que processa informações bancárias não é."
+    },
+    {
+      "topicoId": "mt_INTW_06",
+      "prerequisitoId": "mt_INTW_05",
+      "forca": "hard",
+      "razao": "O HTTP é apresentado como o que distingue aplicação web de aplicação de Internet em geral, distinção que só existe depois de separar Internet de Web.",
+      "origem": "texto",
+      "trecho": "Aplicações web usam o protocolo HTTP, que é uma camada sobre o TCP; aplicações de Internet em geral podem usar TCP ou UDP e qualquer porta, enquanto o HTTP tradicionalmente usa a porta 80."
+    },
+    {
+      "topicoId": "mt_INTW_07",
+      "prerequisitoId": "mt_INTW_05",
+      "forca": "hard",
+      "razao": "Os pilares são a definição do que sustenta a Web, então é preciso ter claro o que é a Web que eles sustentam.",
+      "origem": "texto",
+      "trecho": "(1) um esquema de nomes para localizar fontes de informação, a URI; (2) um protocolo de acesso a essas fontes, hoje o HTTP; (3) uma linguagem de hipertexto para navegar entre as fontes, o HTML."
+    },
+    {
+      "topicoId": "mt_INTW_07",
+      "prerequisitoId": "mt_INTW_06",
+      "forca": "soft",
+      "razao": "O segundo pilar é exatamente o protocolo de acesso já apresentado, com a mesma descrição de camada sobre o TCP e porta 80.",
+      "origem": "texto",
+      "trecho": "O protocolo usado para acessar essas fontes. É uma camada sobre o TCP e usa tradicionalmente a porta 80 (443 com TLS)."
+    },
+    {
+      "topicoId": "mt_INTW_08",
+      "prerequisitoId": "mt_INTW_07",
+      "forca": "soft",
+      "razao": "O terceiro pilar é a linguagem de hipertexto, e o tópico de hipertexto abre justamente esse pilar.",
+      "origem": "texto",
+      "trecho": "A linguagem que permite navegar com facilidade entre as fontes de informação, ligando documentos por conexões."
+    },
+    {
+      "topicoId": "mt_INTW_09",
+      "prerequisitoId": "mt_INTW_08",
+      "forca": "soft",
+      "razao": "A história da padronização é a história dessa linguagem de marcação, então ela vem depois de saber o que a linguagem é e para que serve.",
+      "origem": "texto",
+      "trecho": "HTML é a sigla de HyperText Markup Language, Linguagem de Marcação de Hipertexto. É uma linguagem para publicação de conteúdo (texto, imagem, vídeo, áudio) na Web."
+    },
+    {
+      "topicoId": "mt_INTW_10",
+      "prerequisitoId": "mt_INTW_08",
+      "forca": "hard",
+      "razao": "Sem saber que o HTML é uma linguagem de marcação de hipertexto, escrever o documento é copiar símbolos sem entender o que se marca.",
+      "origem": "texto",
+      "trecho": "HTML é a sigla de HyperText Markup Language, Linguagem de Marcação de Hipertexto."
+    },
+    {
+      "topicoId": "mt_INTW_10",
+      "prerequisitoId": "mt_INTW_09",
+      "forca": "soft",
+      "razao": "O Doctype curto e a estrutura mínima do HTML5 são resultado da convergência com o WHATWG e da opção pela retrocompatibilidade.",
+      "origem": "texto",
+      "trecho": "O HTML5 mantém foco em retrocompatibilidade: nenhum site precisa ser refeito para se adequar aos novos conceitos."
+    },
+    {
+      "topicoId": "mt_INTW_11",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "A metatag charset é uma linha do head, então depende de já existir o esqueleto do documento onde ela é declarada.",
+      "origem": "texto",
+      "trecho": "A metatag charset define a tabela de caracteres: <meta charset=\"utf-8\">"
+    },
+    {
+      "topicoId": "mt_INTW_12",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "soft",
+      "razao": "A tag link aparece no head do documento mínimo, e é ali que a comparação com a tag a começa a fazer sentido.",
+      "origem": "texto",
+      "trecho": "Há dois tipos de link no HTML: a tag a, que leva o usuário a outros documentos, e a tag link, que referencia fontes externas usadas pelo documento"
+    },
+    {
+      "topicoId": "mt_INTW_13",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "A regra de quem pode conter quem opera sobre a árvore de elementos, que é apresentada com a estrutura mínima do documento.",
+      "origem": "texto",
+      "trecho": "O elemento html é a raiz da árvore de elementos e leva o atributo lang"
+    },
+    {
+      "topicoId": "mt_INTW_14",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "soft",
+      "razao": "A ideia de que a marcação carrega significado só aparece depois de o aluno ter visto tags de verdade num documento.",
+      "origem": "texto",
+      "trecho": "a função do HTML é indicar que tipo de informação a página exibe"
+    },
+    {
+      "topicoId": "mt_INTW_15",
+      "prerequisitoId": "mt_INTW_14",
+      "forca": "hard",
+      "razao": "As tags semânticas existem para resolver a falta de padrão que o tópico de semântica expõe; sem essa motivação elas viram uma lista decorada.",
+      "origem": "texto",
+      "trecho": "Antes do HTML5 não havia padrão para marcar rodapé, cabeçalho, sidebar e menus, e a diferenciação era apenas visual."
+    },
+    {
+      "topicoId": "mt_INTW_15",
+      "prerequisitoId": "mt_INTW_13",
+      "forca": "soft",
+      "razao": "As tags semânticas são elementos de bloco que o HTML5 classifica como sectioning content, categoria vista no tópico de modelos de conteúdo.",
+      "origem": "texto",
+      "trecho": "Sectioning content define grupos de cabeçalhos e rodapés: article, aside, nav e section."
+    },
+    {
+      "topicoId": "mt_INTW_16",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "Títulos, parágrafos, listas, links e imagens são escritos dentro do body do documento mínimo.",
+      "origem": "texto",
+      "trecho": "os títulos vão de h1 a h6, em ordem de importância. p marca parágrafos."
+    },
+    {
+      "topicoId": "mt_INTW_17",
+      "prerequisitoId": "mt_INTW_14",
+      "forca": "hard",
+      "razao": "A distinção entre par semântico e par visual é a aplicação direta do princípio de que a marcação comunica significado.",
+      "origem": "texto",
+      "trecho": "O b mantém o negrito mas não dá importância ao texto; o i mantém o itálico e serve para indicar ênfase, termos técnicos ou frases em outros idiomas."
+    },
+    {
+      "topicoId": "mt_INTW_17",
+      "prerequisitoId": "mt_INTW_16",
+      "forca": "soft",
+      "razao": "strong, em, b e i são elementos de linha que marcam texto, já usados na formatação básica antes de a comparação semântica ser feita.",
+      "origem": "texto",
+      "trecho": "elementos de linha marcam na maioria das vezes texto (a, strong, em, img, input, abbr, span)"
+    },
+    {
+      "topicoId": "mt_INTW_18",
+      "prerequisitoId": "mt_INTW_16",
+      "forca": "hard",
+      "razao": "O alt é atributo da tag img, apresentada na formatação básica; sem a imagem no documento não há alt a escrever.",
+      "origem": "texto",
+      "trecho": "Imagens usam img com src e o atributo alt, que descreve a imagem para leitores de tela"
+    },
+    {
+      "topicoId": "mt_INTW_18",
+      "prerequisitoId": "mt_INTW_14",
+      "forca": "soft",
+      "razao": "Escolher um alt útil é decidir o que a marcação comunica, e não como a página aparece, que é o princípio do tópico de semântica.",
+      "origem": "texto",
+      "trecho": "as decisões de acessibilidade que a disciplina cobre atuam na marcação, não na aparência"
+    },
+    {
+      "topicoId": "mt_INTW_19",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "A tabela é um bloco escrito no body e depende da mesma sintaxe de tags aninhadas do documento mínimo.",
+      "origem": "texto",
+      "trecho": "table delimita a tabela; tr define uma linha; th define uma célula de cabeçalho; td define uma célula de dados."
+    },
+    {
+      "topicoId": "mt_INTW_20",
+      "prerequisitoId": "mt_INTW_19",
+      "forca": "hard",
+      "razao": "O scope é atributo do th, então só se discute depois de a tabela existir com cabeçalho e células de dados.",
+      "origem": "texto",
+      "trecho": "O atributo scope em th indica se o cabeçalho vale para a coluna ou para a linha, o que ajuda leitores de tela."
+    },
+    {
+      "topicoId": "mt_INTW_20",
+      "prerequisitoId": "mt_INTW_18",
+      "forca": "soft",
+      "razao": "O th com scope pertence à mesma família de decisões de acessibilidade na marcação que o alt, e o material lista os dois juntos.",
+      "origem": "texto",
+      "trecho": "Tags semânticas dizem o que cada bloco é; o alt descreve a imagem; o label com for liga o rótulo ao campo; o th com scope diz a que linha ou coluna cada dado pertence."
+    },
+    {
+      "topicoId": "mt_INTW_21",
+      "prerequisitoId": "mt_INTW_19",
+      "forca": "hard",
+      "razao": "Para julgar que um conteúdo não é tabular é preciso saber o que uma tabela é e para que serve.",
+      "origem": "texto",
+      "trecho": "Tabelas devem ser usadas para dados tabulares, não para diagramar layout"
+    },
+    {
+      "topicoId": "mt_INTW_21",
+      "prerequisitoId": "mt_INTW_01",
+      "forca": "soft",
+      "razao": "A regra deriva da separação entre camadas: diagramar é apresentação, e apresentação é trabalho do CSS.",
+      "origem": "texto",
+      "trecho": "Formata a informação entregue pelo HTML: cores, espaçamentos, tipografia e layout. Separado da estrutura, de propósito."
+    },
+    {
+      "topicoId": "mt_INTW_22",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "O formulário é escrito no body do documento e segue as mesmas regras de tags e atributos vistas na estrutura mínima.",
+      "origem": "texto",
+      "trecho": "form envolve os campos e tem os atributos action (para onde os dados vão) e method (GET ou POST)."
+    },
+    {
+      "topicoId": "mt_INTW_23",
+      "prerequisitoId": "mt_INTW_22",
+      "forca": "hard",
+      "razao": "O for do label aponta para o id de um campo, então os campos precisam existir antes de a associação ser feita.",
+      "origem": "texto",
+      "trecho": "label associa um rótulo a um campo pelo atributo for, que aponta para o id do campo"
+    },
+    {
+      "topicoId": "mt_INTW_23",
+      "prerequisitoId": "mt_INTW_18",
+      "forca": "soft",
+      "razao": "O label com for é a mesma classe de decisão do alt: acessibilidade resolvida na marcação, e o material apresenta os dois na mesma lista.",
+      "origem": "texto",
+      "trecho": "o label com for liga o rótulo ao campo"
+    },
+    {
+      "topicoId": "mt_INTW_24",
+      "prerequisitoId": "mt_INTW_22",
+      "forca": "hard",
+      "razao": "Os tipos novos são valores do atributo type do input, elemento apresentado no tópico dos elementos do formulário.",
+      "origem": "texto",
+      "trecho": "input é o campo genérico, controlado pelo atributo type."
+    },
+    {
+      "topicoId": "mt_INTW_25",
+      "prerequisitoId": "mt_INTW_24",
+      "forca": "hard",
+      "razao": "Boa parte da validação automática vem do type escolhido, então a validação sem JavaScript depende de conhecer os tipos de campo.",
+      "origem": "texto",
+      "trecho": "email com formatação e validação. url para endereço web, também com validação."
+    },
+    {
+      "topicoId": "mt_INTW_26",
+      "prerequisitoId": "mt_INTW_25",
+      "forca": "hard",
+      "razao": "A validação customizada é o recurso para quando a validação pronta do HTML5 não basta, então pressupõe conhecer o que ela já faz.",
+      "origem": "texto",
+      "trecho": "Para validação customizada, o evento oninput é disparado a cada modificação do valor"
+    },
+    {
+      "topicoId": "mt_INTW_27",
+      "prerequisitoId": "mt_INTW_01",
+      "forca": "soft",
+      "razao": "O CSS é a camada de apresentação da divisão que abre a disciplina, e o princípio da separação é o que dá sentido à existência da folha de estilo.",
+      "origem": "texto",
+      "trecho": "A separação entre estrutura (HTML) e apresentação (CSS) é o princípio central. A sintaxe é seletor { propriedade: valor; }."
+    },
+    {
+      "topicoId": "mt_INTW_27",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "O CSS formata a informação entregue pelo HTML, então sem um documento HTML não há nada para formatar.",
+      "origem": "texto",
+      "trecho": "Marca o significado do conteúdo: o que é título, parágrafo, lista, tabela, formulário. Sem HTML não existe página."
+    },
+    {
+      "topicoId": "mt_INTW_28",
+      "prerequisitoId": "mt_INTW_27",
+      "forca": "hard",
+      "razao": "Decidir onde escrever o CSS pressupõe saber o que é uma regra de CSS e o que ela faz.",
+      "origem": "texto",
+      "trecho": "inline pelo atributo style no próprio elemento, interno com a tag style dentro do head, e externo com um arquivo .css referenciado por <link rel=\"stylesheet\" href=\"estilo.css\">"
+    },
+    {
+      "topicoId": "mt_INTW_28",
+      "prerequisitoId": "mt_INTW_12",
+      "forca": "soft",
+      "razao": "A folha externa entra na página pela tag link, cuja função de importar recurso já foi distinguida da tag a.",
+      "origem": "texto",
+      "trecho": "Referencia fontes externas usadas pelo documento."
+    },
+    {
+      "topicoId": "mt_INTW_29",
+      "prerequisitoId": "mt_INTW_27",
+      "forca": "hard",
+      "razao": "O seletor é a primeira parte da regra, então a sintaxe da regra precisa estar clara antes de estudar os tipos de seletor.",
+      "origem": "texto",
+      "trecho": "A sintaxe é seletor { propriedade: valor; }."
+    },
+    {
+      "topicoId": "mt_INTW_29",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "soft",
+      "razao": "O seletor escolhe elementos do documento pela tag, pela classe ou pelo id, então depende de conhecer a marcação que está sendo selecionada.",
+      "origem": "texto",
+      "trecho": "Seletor de tag/elemento aplica a todos os elementos daquele tipo (p { })."
+    },
+    {
+      "topicoId": "mt_INTW_30",
+      "prerequisitoId": "mt_INTW_29",
+      "forca": "hard",
+      "razao": "A especificidade compara os tipos de seletor entre si, então só se discute depois de os três tipos serem conhecidos.",
+      "origem": "texto",
+      "trecho": "#cabecalho { } identifica um único elemento na página. É o mais específico dos três."
+    },
+    {
+      "topicoId": "mt_INTW_31",
+      "prerequisitoId": "mt_INTW_27",
+      "forca": "hard",
+      "razao": "A caixa é o que as propriedades de CSS dimensionam, então o modelo de caixa depende de saber o que uma propriedade faz.",
+      "origem": "texto",
+      "trecho": "Toda caixa tem conteúdo, padding (espaço interno, entre conteúdo e borda), border (a borda) e margin (espaço externo, entre a borda e os outros elementos)."
+    },
+    {
+      "topicoId": "mt_INTW_31",
+      "prerequisitoId": "mt_INTW_13",
+      "forca": "soft",
+      "razao": "A caixa do modelo é o elemento de bloco apresentado no HTML, e é essa identificação que faz o modelo parar de ser abstrato.",
+      "origem": "texto",
+      "trecho": "Elementos de bloco são caixas que dividem o conteúdo em seções do layout."
+    },
+    {
+      "topicoId": "mt_INTW_32",
+      "prerequisitoId": "mt_INTW_31",
+      "forca": "hard",
+      "razao": "A lista cobrada na atividade inclui margin, padding, width e height, que são as partes da caixa; sem o modelo o aluno aplica valores sem prever o efeito.",
+      "origem": "texto",
+      "trecho": "Propriedades cobradas nas atividades da turma: background-image, background-color, box-shadow, border-radius, margin, padding, width, height, font e color."
+    },
+    {
+      "topicoId": "mt_INTW_32",
+      "prerequisitoId": "mt_INTW_29",
+      "forca": "hard",
+      "razao": "O enunciado exige as propriedades aplicadas pelos três tipos de seletor, então não há como cumprir a atividade sem saber selecionar o elemento.",
+      "origem": "texto",
+      "trecho": "Usar seletores de id, de class e de tag no mesmo arquivo"
+    },
+    {
+      "topicoId": "mt_INTW_33",
+      "prerequisitoId": "mt_INTW_13",
+      "forca": "hard",
+      "razao": "O display flex vai no pai e transforma os filhos diretos, então sem enxergar a relação de aninhamento no HTML o aluno aplica a propriedade no elemento errado.",
+      "origem": "texto",
+      "trecho": "Vai no elemento PAI, que vira o container. Os filhos diretos passam a ser itens flexíveis."
+    },
+    {
+      "topicoId": "mt_INTW_34",
+      "prerequisitoId": "mt_INTW_33",
+      "forca": "hard",
+      "razao": "Os eixos existem a partir do container, então alinhar itens depende de o display flex já ter sido aplicado no pai.",
+      "origem": "texto",
+      "trecho": "flex-direction define o eixo principal (row ou column). justify-content alinha os itens ao longo do eixo principal."
+    },
+    {
+      "topicoId": "mt_INTW_35",
+      "prerequisitoId": "mt_INTW_27",
+      "forca": "soft",
+      "razao": "Os recursos do CSS3 são propriedades novas escritas na mesma sintaxe de regra, então dependem de saber como uma regra é montada.",
+      "origem": "texto",
+      "trecho": "gradientes criados só com CSS evitam uma requisição de imagem ao servidor, deixando o site mais rápido"
+    },
+    {
+      "topicoId": "mt_INTW_35",
+      "prerequisitoId": "mt_INTW_32",
+      "forca": "soft",
+      "razao": "A diferença entre RGBA e opacity é discutida sobre background-color e box-shadow, propriedades já usadas na atividade de CSS.",
+      "origem": "texto",
+      "trecho": "Cores podem ser escritas em hexadecimal, por nome ou em RGBA, em que o quarto valor é o alfa (transparência)"
+    },
+    {
+      "topicoId": "mt_INTW_36",
+      "prerequisitoId": "mt_INTW_01",
+      "forca": "hard",
+      "razao": "O JavaScript é apresentado como a camada de comportamento, definida por contraste com estrutura e apresentação.",
+      "origem": "texto",
+      "trecho": "Roda no navegador (client-side) e reage ao usuário: valida campos, altera a página pelo DOM, responde a cliques."
+    },
+    {
+      "topicoId": "mt_INTW_36",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "soft",
+      "razao": "O script é escrito dentro da tag script do documento ou referenciado por ele, então depende de saber montar a página.",
+      "origem": "texto",
+      "trecho": "O código pode ser escrito dentro da tag script ou em um arquivo .js externo."
+    },
+    {
+      "topicoId": "mt_INTW_37",
+      "prerequisitoId": "mt_INTW_36",
+      "forca": "hard",
+      "razao": "As variáveis são escritas no script que o navegador executa, então a natureza client-side vem antes da sintaxe.",
+      "origem": "texto",
+      "trecho": "variáveis guardam dados e são declaradas com let (valor que muda), const (valor que não é reatribuído) ou o antigo var."
+    },
+    {
+      "topicoId": "mt_INTW_38",
+      "prerequisitoId": "mt_INTW_37",
+      "forca": "hard",
+      "razao": "A comparação estrita confere valor e tipo, então depende de conhecer os tipos básicos e os operadores da linguagem.",
+      "origem": "texto",
+      "trecho": "Comparação: === compara valor e tipo (estrito) e == faz conversão de tipo antes de comparar, por isso o === é o recomendado."
+    },
+    {
+      "topicoId": "mt_INTW_39",
+      "prerequisitoId": "mt_INTW_37",
+      "forca": "hard",
+      "razao": "Condicionais e laços operam sobre variáveis e condições, e a função recebe e devolve valores desses mesmos tipos.",
+      "origem": "texto",
+      "trecho": "Estruturas condicionais: if, else if e else. Estruturas de repetição: while, que repete enquanto a condição for verdadeira"
+    },
+    {
+      "topicoId": "mt_INTW_39",
+      "prerequisitoId": "mt_INTW_38",
+      "forca": "soft",
+      "razao": "A condição do if costuma ser uma comparação, e o operador escolhido decide o caminho que o programa toma.",
+      "origem": "texto",
+      "trecho": "if, else if e else executam trechos diferentes conforme a condição."
+    },
+    {
+      "topicoId": "mt_INTW_40",
+      "prerequisitoId": "mt_INTW_37",
+      "forca": "hard",
+      "razao": "O array é um valor guardado numa variável, então a declaração e os tipos vêm antes da estrutura que agrupa vários dados.",
+      "origem": "texto",
+      "trecho": "Arrays guardam vários dados numa mesma variável, são indexados a partir de 0, têm a propriedade length e métodos como push."
+    },
+    {
+      "topicoId": "mt_INTW_40",
+      "prerequisitoId": "mt_INTW_39",
+      "forca": "soft",
+      "razao": "O exemplo da disciplina percorre o array com um for e usa o length como limite, então o laço aparece antes da indexação ser explorada.",
+      "origem": "texto",
+      "trecho": "for (let i = 0; i < notas.length; i++)"
+    },
+    {
+      "topicoId": "mt_INTW_41",
+      "prerequisitoId": "mt_INTW_37",
+      "forca": "hard",
+      "razao": "A armadilha do prompt é de tipo: ele devolve string e precisa ser convertido antes de entrar numa conta.",
+      "origem": "texto",
+      "trecho": "prompt pede um valor ao usuário e sempre devolve string (por isso é preciso converter com Number ou parseInt para fazer contas)"
+    },
+    {
+      "topicoId": "mt_INTW_42",
+      "prerequisitoId": "mt_INTW_36",
+      "forca": "hard",
+      "razao": "O DOM é construído pelo navegador que executa o script, então a ideia de execução no cliente precede a de árvore de objetos.",
+      "origem": "texto",
+      "trecho": "quando o navegador carrega a página, ele constrói uma coleção de objetos que representam os elementos HTML"
+    },
+    {
+      "topicoId": "mt_INTW_42",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "Cada objeto do DOM corresponde a um elemento do documento, então é preciso conhecer os elementos para saber o que se está manipulando.",
+      "origem": "texto",
+      "trecho": "Cada elemento vira um objeto. É pelo DOM que o JavaScript lê e altera a página."
+    },
+    {
+      "topicoId": "mt_INTW_43",
+      "prerequisitoId": "mt_INTW_42",
+      "forca": "hard",
+      "razao": "Buscar elemento, ligar evento e trocar conteúdo são operações sobre o DOM, que precisa existir como conceito antes dos métodos.",
+      "origem": "texto",
+      "trecho": "document.getElementById busca um elemento pelo id."
+    },
+    {
+      "topicoId": "mt_INTW_43",
+      "prerequisitoId": "mt_INTW_29",
+      "forca": "soft",
+      "razao": "querySelector e querySelectorAll recebem seletores CSS, então quem não domina seletor não usa a Selector API.",
+      "origem": "texto",
+      "trecho": "a Selector API com querySelector e querySelectorAll, que aceitam seletores CSS"
+    },
+    {
+      "topicoId": "mt_INTW_43",
+      "prerequisitoId": "mt_INTW_37",
+      "forca": "soft",
+      "razao": "O elemento encontrado é guardado numa variável antes de ser usado, como no exemplo do playground de DOM.",
+      "origem": "texto",
+      "trecho": "const botao = document.getElementById(\"botao\");"
+    },
+    {
+      "topicoId": "mt_INTW_44",
+      "prerequisitoId": "mt_INTW_01",
+      "forca": "hard",
+      "razao": "O projeto final é definido como a reunião das três camadas, então a divisão em camadas é o que ele integra.",
+      "origem": "texto",
+      "trecho": "O projeto integra as três camadas num site publicado"
+    },
+    {
+      "topicoId": "mt_INTW_44",
+      "prerequisitoId": "mt_INTW_15",
+      "forca": "hard",
+      "razao": "O checklist do projeto exige HTML semântico em todas as páginas, com as tags semânticas em vez de div genérica.",
+      "origem": "texto",
+      "trecho": "HTML semântico com Doctype, lang e charset em todas as páginas, links relativos entre elas, imagens com alt descritivo"
+    },
+    {
+      "topicoId": "mt_INTW_44",
+      "prerequisitoId": "mt_INTW_28",
+      "forca": "hard",
+      "razao": "O projeto exige folha de estilo externa reaproveitada por todas as páginas, e é dessa escolha que vem o erro de caminho ao publicar.",
+      "origem": "texto",
+      "trecho": "folha de estilo externa reaproveitada por todas as páginas"
+    },
+    {
+      "topicoId": "mt_INTW_44",
+      "prerequisitoId": "mt_INTW_34",
+      "forca": "hard",
+      "razao": "O layout do site precisa ser organizado com flexbox, o que exige o container e o alinhamento nos dois eixos.",
+      "origem": "texto",
+      "trecho": "layout organizado com flexbox e pelo menos uma interação real pelo DOM"
+    },
+    {
+      "topicoId": "mt_INTW_44",
+      "prerequisitoId": "mt_INTW_43",
+      "forca": "hard",
+      "razao": "O projeto pede ao menos uma interação real pelo DOM, com busca do elemento, evento e alteração de conteúdo.",
+      "origem": "texto",
+      "trecho": "Pelo menos uma interação real pelo DOM: getElementById ou querySelector para achar o elemento, innerHTML ou value para ler e alterar, e um evento (onclick, oninput) ligando a ação do usuário"
+    },
+    {
+      "topicoId": "mt_INTW_44",
+      "prerequisitoId": "mt_INTW_25",
+      "forca": "soft",
+      "razao": "O site do projeto inclui um formulário validado pelo próprio HTML, com label associado a cada campo.",
+      "origem": "texto",
+      "trecho": "formulário com label for e validação pelo próprio HTML"
+    },
+    {
+      "topicoId": "mt_INTW_45",
+      "prerequisitoId": "mt_INTW_18",
+      "forca": "hard",
+      "razao": "O conjunto de decisões de acessibilidade cobrado é formado por alt, semântica, label for e th com scope, e o alt é uma das quatro.",
+      "origem": "texto",
+      "trecho": "Usar tags semânticas, alt descritivo nas imagens, label for nos campos e th com scope nas tabelas."
+    },
+    {
+      "topicoId": "mt_INTW_45",
+      "prerequisitoId": "mt_INTW_20",
+      "forca": "hard",
+      "razao": "O th com scope é uma das quatro decisões que mudam o que o leitor de tela anuncia numa tabela.",
+      "origem": "texto",
+      "trecho": "o th com scope diz a que linha ou coluna cada dado pertence"
+    },
+    {
+      "topicoId": "mt_INTW_45",
+      "prerequisitoId": "mt_INTW_23",
+      "forca": "hard",
+      "razao": "O label com for é uma das quatro decisões de acessibilidade da lista, aplicada aos campos do formulário.",
+      "origem": "texto",
+      "trecho": "o label com for liga o rótulo ao campo"
+    },
+    {
+      "topicoId": "mt_INTW_45",
+      "prerequisitoId": "mt_INTW_15",
+      "forca": "soft",
+      "razao": "A semântica é a primeira das quatro decisões, porque é ela que diz ao leitor de tela o que cada bloco da página é.",
+      "origem": "texto",
+      "trecho": "Tags semânticas dizem o que cada bloco é"
+    }
+  ]
+}

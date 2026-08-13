@@ -3,12 +3,15 @@
   "versao": "v0.1-rascunho",
   "geradoEm": null,
   "contagens": {
-    "topicos": 462,
+    "topicos": 597,
     "topicosPorDisciplina": {
       "ALPG": 45,
       "APBD": 60,
       "CORG": 60,
+      "EMPD": 45,
       "ESTD": 60,
+      "FUSI": 45,
+      "INTW": 45,
       "LPGM": 60,
       "METC": 45,
       "MKCE": 42,
@@ -16,30 +19,30 @@
       "TABD": 45
     },
     "topicosPorTipo": {
-      "CONCEITUAL": 231,
-      "REPRESENTACIONAL": 41,
-      "PROCEDIMENTAL": 125,
-      "LINGUAGEM": 50,
-      "META": 15
+      "CONCEITUAL": 314,
+      "REPRESENTACIONAL": 46,
+      "PROCEDIMENTAL": 162,
+      "LINGUAGEM": 57,
+      "META": 18
     },
-    "dependencias": 641,
-    "dependenciasDuras": 390,
+    "dependencias": 828,
+    "dependenciasDuras": 495,
     "dependenciasCruzadas": 35,
-    "disciplinas": 9,
+    "disciplinas": 12,
     "disciplinasNaGrade": 65
   },
   "arquivos": {
     "topicos.json": {
-      "bytes": 472607,
-      "sha256": "0794b07473ed73f95a3daeec5eba13d5d7541d4ca21008192a605d3d28643fd4"
+      "bytes": 665035,
+      "sha256": "e809f17a8c1e8cdae0deaa1ca9ca74989de37b64a88eb3af857f8393af6898f6"
     },
     "dependencias.json": {
-      "bytes": 267054,
-      "sha256": "0355f73507aae6ea3ab07fdb84ace54d1742ee6e1246b701029495e42ee9b065"
+      "bytes": 348740,
+      "sha256": "f78d8e3ea84ae2c0784830c7a11230713a0a8594513e6f00be8c1420db98c236"
     },
     "disciplinas.json": {
-      "bytes": 8284,
-      "sha256": "232f54f1e7de2969be1b777183495c78811b74a500dcfa324ac2cfd6b3605178"
+      "bytes": 11270,
+      "sha256": "6efec29fc3294ead23b49e0d0cae85c7e160f5e82725ca01d503e57ed139ab8d"
     }
   },
   "excluido": [

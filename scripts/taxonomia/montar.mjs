@@ -33,7 +33,14 @@ const TAX = resolve(DS, 'fontes');
  * (ver src/index.css), então mexer aqui muda a cor de todas as seguintes.
  * Matéria nova entra no fim para não repintar o que já está publicado.
  */
-const ORDEM = ['ALPG', 'LMMD', 'LPGM', 'ESTD', 'METC', 'APBD', 'TABD', 'PDSW', 'CORG', 'MKCE'];
+const ORDEM = [
+  // 1º e 2º período
+  'FUSI', 'ALPG', 'INTW', 'LMMD', 'LPGM',
+  // 3º ao 6º
+  'ESTD', 'METC', 'APBD', 'TABD', 'PDSW', 'EMPD',
+  // optativas
+  'CORG', 'MKCE',
+];
 
 /**
  * Cor de referência por matéria, espelhando --color-taxo-1..10 do tema escuro.

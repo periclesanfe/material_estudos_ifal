@@ -1,6 +1,6 @@
 {
   "versao": "v1",
-  "totalArestas": 641,
+  "totalArestas": 828,
   "dependencias": [
     {
       "topicoId": "mt_ALPG_03",
@@ -1974,6 +1974,582 @@
       "escopo": "interna"
     },
     {
+      "topicoId": "mt_EMPD_02",
+      "prerequisitoId": "mt_EMPD_01",
+      "forca": "soft",
+      "razao": "A distinção entre risco e incerteza refina a incerteza que já aparece na definição de empreender, então o aluno precisa ter a definição antes de dividi-la.",
+      "origem": "texto",
+      "trecho": "empreender é identificar, construir e explorar uma oportunidade sob incerteza, mobilizando recursos para gerar valor",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_03",
+      "prerequisitoId": "mt_EMPD_01",
+      "forca": "soft",
+      "razao": "Schumpeter e Kirzner explicam de onde vem a oportunidade que a definição de empreender pressupõe, e sem ela as duas escolas viram nomes soltos.",
+      "origem": "texto",
+      "trecho": "a oportunidade existe porque preços, necessidades, informações e recursos ainda não estão perfeitamente coordenados",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_04",
+      "prerequisitoId": "mt_EMPD_01",
+      "forca": "soft",
+      "razao": "Estudar a intenção de empreender exige saber antes o que é o comportamento cuja intenção se está explicando.",
+      "origem": "inferido",
+      "trecho": "",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_05",
+      "prerequisitoId": "mt_EMPD_02",
+      "forca": "soft",
+      "razao": "O papel de cientista, que formula hipóteses e mede, só se justifica porque a incerteza impede administrar por previsão, e é isso que separa esse papel do de engenheiro.",
+      "origem": "texto",
+      "trecho": "por isso uma startup não pode ser administrada só por previsão rígida",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_06",
+      "prerequisitoId": "mt_EMPD_02",
+      "forca": "hard",
+      "razao": "A incerteza extrema é um dos quatro elementos da definição de startup, e sem separar risco de incerteza o elemento fica vazio.",
+      "origem": "texto",
+      "trecho": "Problema, solução, canal, preço ou mercado ainda não estão plenamente comprovados. É o que distingue a startup da pequena empresa tradicional.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_07",
+      "prerequisitoId": "mt_EMPD_06",
+      "forca": "hard",
+      "razao": "O contraste entre encomenda e SaaS multitenant é a aplicação dos elementos repetibilidade e escalabilidade, que só existem depois da definição.",
+      "origem": "texto",
+      "trecho": "Receita e impacto podem crescer em velocidade superior aos custos. Um SaaS multitenant serve milhares de clientes com a mesma base tecnológica.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_08",
+      "prerequisitoId": "mt_EMPD_06",
+      "forca": "hard",
+      "razao": "O ciclo de vida descreve a passagem da busca para a execução, que é justamente o que a definição de organização temporária estabelece.",
+      "origem": "texto",
+      "trecho": "CICLO DE VIDA: ideação, validação, operação e escala.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_09",
+      "prerequisitoId": "mt_EMPD_01",
+      "forca": "soft",
+      "razao": "As cinco condições operacionalizam a oportunidade que a definição de empreender apenas nomeia.",
+      "origem": "texto",
+      "trecho": "Uma ideia vira OPORTUNIDADE quando combina problema relevante, público identificável, solução possível, momento adequado e mecanismo econômico.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_10",
+      "prerequisitoId": "mt_EMPD_09",
+      "forca": "soft",
+      "razao": "A investigação de causa serve para verificar a primeira condição, o problema relevante, então ela vem depois de saber que condição está sendo testada.",
+      "origem": "texto",
+      "trecho": "O método dos 5 Porquês investiga causas, mas precisa ser confrontado com observação e entrevistas.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_11",
+      "prerequisitoId": "mt_EMPD_09",
+      "forca": "soft",
+      "razao": "Segmentar e mapear papéis é como se cumpre a condição de público identificável, que precisa estar posta antes.",
+      "origem": "texto",
+      "trecho": "É preciso saber quem sente a dor, onde encontrá-lo e como falar com ele",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_12",
+      "prerequisitoId": "mt_EMPD_09",
+      "forca": "soft",
+      "razao": "O benchmarking alimenta as condições de solução possível e momento adequado, porque procura padrões de valor, custos, canais e barreiras já observados em outros mercados.",
+      "origem": "texto",
+      "trecho": "o objetivo não é copiar interfaces, é entender padrões de valor, custos, canais, barreiras e escolhas arquiteturais.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_13",
+      "prerequisitoId": "mt_EMPD_06",
+      "forca": "hard",
+      "razao": "O Canvas é o mapa do modelo de negócio, então sem a noção de criar, entregar e capturar valor os nove blocos não têm o que organizar.",
+      "origem": "texto",
+      "trecho": "Modelo de negócio explica como se cria, entrega e captura valor.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_13",
+      "prerequisitoId": "mt_EMPD_11",
+      "forca": "soft",
+      "razao": "O primeiro bloco do Canvas é segmentos de clientes, e ele reaproveita diretamente os critérios de segmentação já estudados.",
+      "origem": "texto",
+      "trecho": "A segmentação deve distinguir necessidades, disposição a pagar, canais e relacionamento.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_14",
+      "prerequisitoId": "mt_EMPD_13",
+      "forca": "hard",
+      "razao": "A proposta de valor é um dos nove blocos, e o erro de trocá-la por funcionalidades só se percebe olhando o bloco no lugar dele.",
+      "origem": "texto",
+      "trecho": "Formule do ponto de vista do cliente, não como lista de funcionalidades.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_15",
+      "prerequisitoId": "mt_EMPD_13",
+      "forca": "hard",
+      "razao": "Recursos-chave e atividades-chave são dois dos nove blocos, e a confusão entre eles só aparece quando os dois já estão na mesa.",
+      "origem": "texto",
+      "trecho": "Atividade é o que se faz; recurso é o que se usa.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_16",
+      "prerequisitoId": "mt_EMPD_13",
+      "forca": "hard",
+      "razao": "A coerência interna é uma propriedade do conjunto dos nove blocos: sem os blocos preenchidos não há cadeia de efeitos para revisar.",
+      "origem": "texto",
+      "trecho": "Mudar um bloco força a revisão dos outros.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_16",
+      "prerequisitoId": "mt_EMPD_11",
+      "forca": "soft",
+      "razao": "A cadeia de efeitos mais cobrada parte da troca do pagador, e quem não distinguiu pagador de usuário não enxerga a mudança em canais, custos e receita.",
+      "origem": "texto",
+      "trecho": "se o pagador é governo o ciclo de vendas é mais longo, elevando CAC, capital de giro e dependência de contratos",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_17",
+      "prerequisitoId": "mt_EMPD_06",
+      "forca": "hard",
+      "razao": "As quatro fases organizam justamente a busca pelo modelo de negócio que define a startup, e a fronteira busca contra execução repete a passagem de organização temporária para execução.",
+      "origem": "texto",
+      "trecho": "organiza a busca por um modelo em QUATRO FASES. As duas primeiras são BUSCA, as duas últimas são EXECUÇÃO.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_17",
+      "prerequisitoId": "mt_EMPD_08",
+      "forca": "soft",
+      "razao": "A fase de validação encerra a busca procurando sinais de product-market fit, então ela pressupõe saber que sinais são esses.",
+      "origem": "texto",
+      "trecho": "busca-se processo de venda repetível e sinais de PMF",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_18",
+      "prerequisitoId": "mt_EMPD_17",
+      "forca": "hard",
+      "razao": "A régua de evidência muda conforme a fase: comportamento passado na descoberta, compromisso formal na validação, e sem as fases não há onde aplicar a régua.",
+      "origem": "texto",
+      "trecho": "As perguntas exploram comportamento passado, não intenção futura.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_18",
+      "prerequisitoId": "mt_EMPD_11",
+      "forca": "soft",
+      "razao": "Em venda complexa a entrevista precisa alcançar cada papel da decisão, então o mapa de papéis vem antes de escolher com quem falar.",
+      "origem": "texto",
+      "trecho": "em vendas complexas mapear usuário, decisor econômico, influenciador técnico, aprovador jurídico e bloqueadores",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_19",
+      "prerequisitoId": "mt_EMPD_17",
+      "forca": "hard",
+      "razao": "As patologias são desvios da ordem das fases, e a escala prematura é definida exatamente como executar antes de validar.",
+      "origem": "texto",
+      "trecho": "Contratar, automatizar ou investir em aquisição antes de comprovar problema, solução e economia. Crescer sem ajuste apenas amplifica o desperdício.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_19",
+      "prerequisitoId": "mt_EMPD_08",
+      "forca": "soft",
+      "razao": "A escala prematura só é reconhecida como patologia por quem já sabe que a escala deveria vir depois da evidência de product-market fit.",
+      "origem": "texto",
+      "trecho": "Crescer antes do PMF apenas amplifica desperdício.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_20",
+      "prerequisitoId": "mt_EMPD_02",
+      "forca": "soft",
+      "razao": "O ciclo curto existe porque a incerteza impede planejar por previsão, então a troca de ciclos longos por experimentos depende dessa distinção.",
+      "origem": "texto",
+      "trecho": "substitui ciclos longos baseados em previsão por ciclos curtos de CONSTRUIR, MEDIR e APRENDER",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_21",
+      "prerequisitoId": "mt_EMPD_20",
+      "forca": "hard",
+      "razao": "A métrica é o segundo passo do planejamento invertido do ciclo, definida depois do aprendizado necessário e antes do MVP.",
+      "origem": "texto",
+      "trecho": "primeiro define-se o aprendizado necessário, depois a métrica, só então o MVP",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_22",
+      "prerequisitoId": "mt_EMPD_21",
+      "forca": "soft",
+      "razao": "A decisão de pivotar é uma das três saídas que a métrica acionável sustenta, então sem métrica acionável o pivot vira palpite.",
+      "origem": "texto",
+      "trecho": "Perseverar, ajustar ou pivotar, com base em evidência.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_23",
+      "prerequisitoId": "mt_EMPD_20",
+      "forca": "hard",
+      "razao": "O MVP é definido pelo ciclo de aprendizagem validada que ele precisa fechar, e é o último item do planejamento invertido.",
+      "origem": "texto",
+      "trecho": "MVP é a versão ou experimento com o MENOR ESFORÇO capaz de completar um ciclo de aprendizagem validada",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_24",
+      "prerequisitoId": "mt_EMPD_23",
+      "forca": "hard",
+      "razao": "Só quem conhece os seis tipos pode escolher entre eles pela hipótese e dizer o que cada um deixa em aberto.",
+      "origem": "texto",
+      "trecho": "cada experimento responde a uma pergunta e cala sobre as outras.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_24",
+      "prerequisitoId": "mt_EMPD_18",
+      "forca": "soft",
+      "razao": "Pré-venda e piloto pago são os mesmos instrumentos de evidência da validação de clientes, agora escolhidos a partir da hipótese a testar.",
+      "origem": "inferido",
+      "trecho": "",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_25",
+      "prerequisitoId": "mt_EMPD_06",
+      "forca": "soft",
+      "razao": "Pipeline e plataforma são duas formas de organizar a criação, entrega e captura de valor, ou seja, dois desenhos do modelo de negócio.",
+      "origem": "texto",
+      "trecho": "Explica como a organização cria, entrega e captura valor. Enquanto ele não estiver comprovado, a empresa está em busca, não em execução.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_25",
+      "prerequisitoId": "mt_EMPD_07",
+      "forca": "soft",
+      "razao": "O exemplo canônico de pipeline no material é a fábrica de software sob encomenda, o mesmo caso usado para discutir escalabilidade.",
+      "origem": "texto",
+      "trecho": "Uma fábrica de software sob encomenda, ou um varejo próprio.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_26",
+      "prerequisitoId": "mt_EMPD_25",
+      "forca": "hard",
+      "razao": "Efeitos de rede e liquidez são propriedades da plataforma e não do pipeline, então a distinção precisa estar feita antes.",
+      "origem": "texto",
+      "trecho": "é por isso que efeitos de rede aparecem numa e não na outra.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_27",
+      "prerequisitoId": "mt_EMPD_07",
+      "forca": "hard",
+      "razao": "A economia do SaaS desenvolve o mesmo exemplo de multitenancy que sustentou a ideia de escalabilidade, agora com CAPEX, OPEX e retenção.",
+      "origem": "texto",
+      "trecho": "Vários clientes usam a mesma infraestrutura com isolamento lógico. É o que permite servir milhares sem multiplicar o custo na mesma proporção.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_28",
+      "prerequisitoId": "mt_EMPD_26",
+      "forca": "soft",
+      "razao": "As modalidades do comércio eletrônico incluem casos em que a plataforma intermedeia a transação, o que exige a noção de plataforma e liquidez.",
+      "origem": "texto",
+      "trecho": "Marketplace de usados, com a plataforma intermediando.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_29",
+      "prerequisitoId": "mt_EMPD_08",
+      "forca": "soft",
+      "razao": "A retenção é o principal sinal de product-market fit, então o trabalho de Customer Success e a leitura do churn continuam esse fio.",
+      "origem": "texto",
+      "trecho": "As pessoas continuam usando depois da novidade passar. É o sinal mais difícil de falsificar.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_30",
+      "prerequisitoId": "mt_EMPD_08",
+      "forca": "soft",
+      "razao": "O CAC só ganha sentido econômico junto com a retenção: sem ela o gasto de aquisição não retorna, que é o argumento contra escalar cedo.",
+      "origem": "texto",
+      "trecho": "Sem retenção, o CAC é gasto e não retorna.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_31",
+      "prerequisitoId": "mt_EMPD_29",
+      "forca": "hard",
+      "razao": "O churn é o denominador do LTV simplificado, então quem não domina os tipos de churn e sua periodicidade calcula a fórmula sem saber o que divide.",
+      "origem": "texto",
+      "trecho": "o churn precisa usar a mesma periodicidade",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_32",
+      "prerequisitoId": "mt_EMPD_30",
+      "forca": "hard",
+      "razao": "A razão LTV/CAC e o payback têm o CAC no cálculo, então sem o CAC calculado não há o que comparar nem o que recuperar.",
+      "origem": "texto",
+      "trecho": "Quantas vezes o cliente devolve o custo de conquistá-lo. É a razão que resume se crescer faz sentido financeiro.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_32",
+      "prerequisitoId": "mt_EMPD_31",
+      "forca": "hard",
+      "razao": "A razão usa o LTV no numerador e o payback usa a margem de contribuição, que é o mesmo produto de ARPU por margem bruta calculado no LTV.",
+      "origem": "texto",
+      "trecho": "Note que o denominador é a margem, não o ARPU cheio",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_32",
+      "prerequisitoId": "mt_EMPD_29",
+      "forca": "hard",
+      "razao": "O NRR é composto por churn, contração e expansão, que são exatamente as alavancas de retenção estudadas antes.",
+      "origem": "texto",
+      "trecho": "Retenção líquida de receita da base existente. Acima de 100% indica que a expansão supera as perdas.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_33",
+      "prerequisitoId": "mt_EMPD_07",
+      "forca": "soft",
+      "razao": "A inadequação do venture capital a um negócio lucrativo se explica pela falta de escala compatível com o fundo, ou seja, pela escalabilidade do modelo.",
+      "origem": "texto",
+      "trecho": "Negócios lucrativos sem escala compatível com o retorno esperado pelo fundo.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_33",
+      "prerequisitoId": "mt_EMPD_08",
+      "forca": "soft",
+      "razao": "A escolha da fonte segue o estágio do negócio, e o estágio é definido pela evidência já obtida, de descoberta a tração e escala.",
+      "origem": "texto",
+      "trecho": "Existem métricas e uso claro do capital; o risco agora é de execução, não de existência do problema.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_34",
+      "prerequisitoId": "mt_EMPD_33",
+      "forca": "hard",
+      "razao": "A diluição só ocorre nas fontes que trocam capital por participação, então ela pressupõe saber quais fontes fazem isso.",
+      "origem": "texto",
+      "trecho": "DILUIÇÃO é a redução percentual da participação dos sócios quando novas quotas ou ações são emitidas",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_35",
+      "prerequisitoId": "mt_EMPD_33",
+      "forca": "hard",
+      "razao": "O crowdfunding é uma das quatro fontes comparadas, e as três modalidades detalham o que ali aparece como uma coluna só.",
+      "origem": "texto",
+      "trecho": "Captação junto a muitas pessoas, por recompensa, dívida ou participação.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_35",
+      "prerequisitoId": "mt_EMPD_34",
+      "forca": "soft",
+      "razao": "Só a modalidade de participação dilui os sócios, então a diferença entre as três modalidades exige entender diluição.",
+      "origem": "texto",
+      "trecho": "Depende da modalidade: recompensa não dilui, equity dilui.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_36",
+      "prerequisitoId": "mt_EMPD_13",
+      "forca": "soft",
+      "razao": "O plano detalha em números, prazos e responsáveis as hipóteses que o Canvas levanta, e o material coloca o Canvas antes do plano.",
+      "origem": "texto",
+      "trecho": "o Canvas antecede e alimenta o plano.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_37",
+      "prerequisitoId": "mt_EMPD_36",
+      "forca": "hard",
+      "razao": "Os indicadores calculam o plano financeiro, que é uma das seções do plano de negócio, então a estrutura vem antes das contas.",
+      "origem": "texto",
+      "trecho": "Investimentos, capital de giro, despesas pré-operacionais, receitas, custos e depreciação, com as projeções que sustentam a operação.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_37",
+      "prerequisitoId": "mt_EMPD_32",
+      "forca": "soft",
+      "razao": "São dois paybacks diferentes no mesmo semestre, o do CAC e o do investimento inicial, e o aluno só evita confundi-los tendo visto o primeiro.",
+      "origem": "texto",
+      "trecho": "Tempo de recuperação do investimento. Não considera o valor do dinheiro no tempo nem os fluxos posteriores ao retorno.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_38",
+      "prerequisitoId": "mt_EMPD_11",
+      "forca": "soft",
+      "razao": "O recorte de SAM e SOM depende de saber quem é o público e por qual canal ele é alcançado, que é o resultado da segmentação.",
+      "origem": "texto",
+      "trecho": "A parcela atendível pelo modelo e pela geografia escolhidos. Já considera canal, idioma, regulação e forma de contratação.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_39",
+      "prerequisitoId": "mt_EMPD_38",
+      "forca": "hard",
+      "razao": "O slide de mercado do pitch é feito de TAM, SAM e SOM com o método explícito, então a estimativa precisa estar pronta antes da narrativa.",
+      "origem": "texto",
+      "trecho": "TAM, SAM e SOM com o método explícito. Estimativa sem método não é dado.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_39",
+      "prerequisitoId": "mt_EMPD_32",
+      "forca": "hard",
+      "razao": "O slide de tração e modelo apresenta exatamente as contas de unidade, e o investidor pergunta pelas premissas de cada uma.",
+      "origem": "texto",
+      "trecho": "Investidores observam CAC, LTV, payback, margem, churn, MRR e crescimento",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_39",
+      "prerequisitoId": "mt_EMPD_36",
+      "forca": "soft",
+      "razao": "O pitch é a versão de cinco minutos do mesmo negócio que o plano organiza em detalhe, e resumir exige ter fechado as escolhas antes.",
+      "origem": "texto",
+      "trecho": "O mesmo negócio em dois formatos: a versão longa que organiza operação e finanças, e a de cinco minutos que busca a próxima decisão",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_40",
+      "prerequisitoId": "mt_EMPD_01",
+      "forca": "soft",
+      "razao": "O intraempreendedorismo é a mesma ação empreendedora exercida com recursos de uma organização existente, então depende da definição de empreender.",
+      "origem": "texto",
+      "trecho": "o intraempreendedor usa recursos e infraestrutura da organização mas age com iniciativa, criatividade, visão estratégica e risco calculado",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_41",
+      "prerequisitoId": "mt_EMPD_21",
+      "forca": "soft",
+      "razao": "Output, outcome e impacto aplicam ao campo social a mesma régua que separa número que só cresce de mudança de comportamento observada.",
+      "origem": "texto",
+      "trecho": "Indicadores devem distinguir entrega de transformação. Número de atendimentos é entrega; melhoria de acesso é transformação.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_42",
+      "prerequisitoId": "mt_EMPD_06",
+      "forca": "soft",
+      "razao": "A leitura correta dos números de digitalização do GEM exige o critério que separa usar ferramenta digital de ter um modelo de negócio novo.",
+      "origem": "texto",
+      "trecho": "digitalização virou infraestrutura básica, mas usar aplicativo não garante transformação de modelo, produtividade nem vantagem competitiva",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_43",
+      "prerequisitoId": "mt_EMPD_11",
+      "forca": "hard",
+      "razao": "O caso é uma venda B2G em que usuário, decisor e pagador são pessoas diferentes, e sem o mapa de papéis os pontos cegos não aparecem.",
+      "origem": "texto",
+      "trecho": "No B2G, normalmente o município, não o usuário final.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_43",
+      "prerequisitoId": "mt_EMPD_10",
+      "forca": "soft",
+      "razao": "Os pontos cegos do caso são as causas da fila que o agendamento não resolve, ou seja, o resultado da análise de causa aplicada à UBS.",
+      "origem": "texto",
+      "trecho": "Organizar a fila não cria vagas. Se a demanda excede a capacidade, o agendamento apenas redistribui a espera.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_43",
+      "prerequisitoId": "mt_EMPD_18",
+      "forca": "soft",
+      "razao": "O experimento que fecha a sequência do caso é o piloto formal com compromisso do decisor, que é a régua de evidência já estabelecida.",
+      "origem": "texto",
+      "trecho": "Um piloto formal com compromisso do decisor. É a evidência que separa interesse de contrato.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_44",
+      "prerequisitoId": "mt_EMPD_25",
+      "forca": "hard",
+      "razao": "A Twitch é analisada como plataforma, com criadores de um lado e espectadores do outro, o que exige a distinção entre pipeline e plataforma.",
+      "origem": "texto",
+      "trecho": "Escalável porque a plataforma cresce sem produção centralizada proporcional.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_44",
+      "prerequisitoId": "mt_EMPD_26",
+      "forca": "soft",
+      "razao": "O crescimento da Twitch é explicado por efeitos de rede indiretos entre os dois lados da plataforma.",
+      "origem": "texto",
+      "trecho": "Mais criadores atraem mais espectadores, que atraem mais criadores.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_44",
+      "prerequisitoId": "mt_EMPD_22",
+      "forca": "hard",
+      "razao": "O caso é usado como exemplo de pivot, e a mudança do Justin.tv para a Twitch só se lê como aprendizagem estratégica com a tipologia de pivots na mão.",
+      "origem": "texto",
+      "trecho": "O excesso de conteúdo e a falta de foco revelaram que jogos concentravam o interesse; em 2011 o projeto pivotou para a Twitch.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_45",
+      "prerequisitoId": "mt_EMPD_22",
+      "forca": "hard",
+      "razao": "O caso termina em um pivot zoom-in, que precisa estar nomeado e distinguido do zoom-out para ser reconhecido.",
+      "origem": "texto",
+      "trecho": "análises revelaram que a descoberta social gerava mais valor que a compra, conduzindo a um pivot zoom-in",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_45",
+      "prerequisitoId": "mt_EMPD_23",
+      "forca": "hard",
+      "razao": "A virada da empresa é feita com dois tipos de MVP em sequência, vídeo e Wizard of Oz, então o caso pressupõe a tipologia.",
+      "origem": "texto",
+      "trecho": "um MVP em vídeo captou milhares de e-mails, um Wizard of Oz simulou onboarding manual",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_EMPD_45",
+      "prerequisitoId": "mt_EMPD_21",
+      "forca": "hard",
+      "razao": "O teste do caso é um experimento com divisão aleatória cuja métrica central é conversão em transações concluídas, e não cliques.",
+      "origem": "texto",
+      "trecho": "o teste da funcionalidade de agendamento de retirada usou divisão aleatória entre controle e tratamento, com a conversão em transações concluídas como métrica central",
+      "escopo": "interna"
+    },
+    {
       "topicoId": "mt_ESTD_03",
       "prerequisitoId": "mt_ESTD_01",
       "forca": "soft",
@@ -2853,6 +3429,1113 @@
       "razao": "O heap sort é posicionado ao lado do merge sort como garantia de O(n log n) no pior caso.",
       "origem": "texto",
       "trecho": "é O(n log n) mesmo no pior caso, ao lado do merge sort, enquanto o quick sort só garante O(n log n) no caso médio",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_03",
+      "prerequisitoId": "mt_FUSI_02",
+      "forca": "hard",
+      "razao": "Conhecimento é definido como compreensão de um conjunto de informações, então sem a noção de informação a definição não fecha.",
+      "origem": "texto",
+      "trecho": "Conhecimento é a consciência e compreensão de um conjunto de informações e de como elas podem ser úteis para apoiar uma tarefa ou decisão.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_04",
+      "prerequisitoId": "mt_FUSI_02",
+      "forca": "hard",
+      "razao": "Os onze atributos qualificam a informação, logo pressupõem que o aluno já saiba o que é informação e como ela se distingue do dado bruto.",
+      "origem": "texto",
+      "trecho": "CARACTERÍSTICAS DA INFORMAÇÃO VALIOSA: precisa (livre de erro), completa (contém todos os fatos importantes)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_05",
+      "prerequisitoId": "mt_FUSI_02",
+      "forca": "hard",
+      "razao": "Os componentes do sistema são descritos em termos de dados que entram e informação que sai, então a distinção dado e informação vem antes.",
+      "origem": "texto",
+      "trecho": "ENTRADA (captar e reunir dados brutos), PROCESSAMENTO (converter ou transformar dados em saídas úteis), SAÍDA (produzir informação útil, normalmente documentos e relatórios)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_06",
+      "prerequisitoId": "mt_FUSI_05",
+      "forca": "hard",
+      "razao": "Eficiência e eficácia são medidas do desempenho de um sistema, então só fazem sentido depois de saber o que é sistema e o que ele produz.",
+      "origem": "texto",
+      "trecho": "DESEMPENHO DO SISTEMA: eficiência é a medida do que é produzido dividido pelo que é consumido (fazer certo, com menos recurso)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_07",
+      "prerequisitoId": "mt_FUSI_05",
+      "forca": "hard",
+      "razao": "O CBIS é apresentado como um caso particular de sistema de informação, o baseado em computador, e repete a mesma finalidade de coletar, manipular, armazenar e processar dados em informação.",
+      "origem": "texto",
+      "trecho": "Um CBIS (Sistema de Informação Baseado em Computador) é o conjunto único desses seis componentes, configurados para coletar, manipular, armazenar e processar os dados em informação.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_08",
+      "prerequisitoId": "mt_FUSI_06",
+      "forca": "hard",
+      "razao": "A distinção mais cobrada entre MIS e DSS é escrita justamente com os termos eficiência e eficácia, então sem esse par o aluno não separa os dois sistemas.",
+      "origem": "texto",
+      "trecho": "Distinção-chave de prova: MIS = rotina + eficiência + relatórios padrão; DSS = problema específico + eficácia + decisão complexa.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_09",
+      "prerequisitoId": "mt_FUSI_03",
+      "forca": "hard",
+      "razao": "O SGC é definido pelo que faz com o conhecimento da organização, e o sistema especialista se apoia numa base de conhecimento, então o conceito de conhecimento precisa estar firme antes.",
+      "origem": "texto",
+      "trecho": "SISTEMAS ESPECIALIZADOS: SGC (gestão do conhecimento) cria, armazena, compartilha e usa o conhecimento da organização",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_10",
+      "prerequisitoId": "mt_FUSI_05",
+      "forca": "soft",
+      "razao": "As cinco etapas descrevem como se cria ou modifica um sistema, então a noção de sistema ajuda a ler o que cada etapa entrega.",
+      "origem": "texto",
+      "trecho": "DESENVOLVIMENTO DE SISTEMAS: atividade de criar ou modificar sistemas empresariais existentes",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_11",
+      "prerequisitoId": "mt_FUSI_05",
+      "forca": "hard",
+      "razao": "O capítulo trata a própria organização como um sistema, com entradas, transformação e saídas, o que só se entende com os componentes de sistema já vistos.",
+      "origem": "texto",
+      "trecho": "Organização é uma coleção formal de pessoas e outros recursos estabelecida para alcançar um conjunto de metas; é ela própria um sistema, com entradas, mecanismo de transformação e saídas.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_12",
+      "prerequisitoId": "mt_FUSI_11",
+      "forca": "hard",
+      "razao": "As estruturas descrevem como a organização distribui decisão e autoridade, então sem o conceito de organização não há o que estruturar.",
+      "origem": "texto",
+      "trecho": "ESTRUTURAS ORGANIZACIONAIS: tradicional (hierarquia de decisão e fluxo de autoridade do topo à base)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_13",
+      "prerequisitoId": "mt_FUSI_12",
+      "forca": "soft",
+      "razao": "A reengenharia é definida como revisão radical que inclui as estruturas organizacionais, então conhecer as estruturas ajuda a medir o tamanho da ruptura.",
+      "origem": "texto",
+      "trecho": "Reengenharia é a revisão radical dos processos comerciais, das estruturas organizacionais, dos sistemas de informação e dos valores da organização, para alcançar um novo patamar de resultados",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_14",
+      "prerequisitoId": "mt_FUSI_06",
+      "forca": "soft",
+      "razao": "A produtividade é a mesma razão entre saída e entrada que define eficiência, agora escrita como percentual, então o par eficiência e eficácia prepara a medição.",
+      "origem": "texto",
+      "trecho": "MEDINDO O DESEMPENHO DO SI: PRODUTIVIDADE = (Saída/Entrada) × 100%",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_14",
+      "prerequisitoId": "mt_FUSI_11",
+      "forca": "soft",
+      "razao": "Vantagem competitiva é benefício de uma empresa sobre concorrentes, então pressupõe a organização como unidade de análise.",
+      "origem": "texto",
+      "trecho": "VANTAGEM COMPETITIVA: benefício significativo e, idealmente, de longo prazo de uma empresa sobre seus concorrentes.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_15",
+      "prerequisitoId": "mt_FUSI_07",
+      "forca": "soft",
+      "razao": "O capítulo de hardware detalha um dos seis componentes já nomeados no CBIS, o dos equipamentos que fazem entrada, processamento, armazenamento e saída.",
+      "origem": "texto",
+      "trecho": "Os equipamentos que realizam entrada, processamento, armazenamento e saída.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_16",
+      "prerequisitoId": "mt_FUSI_15",
+      "forca": "soft",
+      "razao": "A memória cache é definida pela relação com o processador, que a acessa mais rápido que a memória principal, então a CPU precisa estar apresentada antes.",
+      "origem": "texto",
+      "trecho": "a memória CACHE é de alta velocidade e é acessada pelo processador mais rapidamente que a memória principal",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_17",
+      "prerequisitoId": "mt_FUSI_16",
+      "forca": "hard",
+      "razao": "O armazenamento secundário é apresentado por contraste com a memória, em volatilidade, capacidade e custo, então sem RAM e ROM o contraste não existe.",
+      "origem": "texto",
+      "trecho": "Comparado à memória, o armazenamento secundário é NÃO VOLÁTIL, tem maior capacidade e é bem mais barato por megabyte.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_18",
+      "prerequisitoId": "mt_FUSI_15",
+      "forca": "soft",
+      "razao": "As classes se separam por poder de processamento e número de usuários, e escalabilidade é definida como aumentar esse poder, o que exige a noção de processador.",
+      "origem": "texto",
+      "trecho": "Escalabilidade é a capacidade de aumentar o poder de processamento para atender mais usuários, dados ou transações.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_19",
+      "prerequisitoId": "mt_FUSI_15",
+      "forca": "hard",
+      "razao": "Software de sistemas é definido como o que coordena as atividades e funções do hardware, então o capítulo de hardware vem antes por definição.",
+      "origem": "texto",
+      "trecho": "Software de sistemas é o conjunto de programas que coordena as atividades e funções do hardware e de outros programas.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_20",
+      "prerequisitoId": "mt_FUSI_19",
+      "forca": "hard",
+      "razao": "O sistema operacional é o principal software de sistemas e se define por controlar o hardware e servir de interface com os aplicativos, as duas categorias vistas antes.",
+      "origem": "texto",
+      "trecho": "O sistema operacional é o conjunto de programas que controla o hardware e atua como interface com os programas aplicativos.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_21",
+      "prerequisitoId": "mt_FUSI_19",
+      "forca": "soft",
+      "razao": "As três abordagens de aquisição tratam especificamente do software aplicativo, categoria apresentada no tópico anterior.",
+      "origem": "texto",
+      "trecho": "São três as abordagens para obter software aplicativo: construir um software proprietário, comprar um programa comercialmente disponível ou combinar as duas coisas.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_21",
+      "prerequisitoId": "mt_FUSI_14",
+      "forca": "soft",
+      "razao": "O argumento a favor do software proprietário é que ele pode gerar vantagem competitiva, conceito que vem do capítulo de organizações.",
+      "origem": "texto",
+      "trecho": "software PROPRIETÁRIO (programa único desenvolvido para um aplicativo específico, geralmente sob encomenda, que pode gerar vantagem competitiva)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_22",
+      "prerequisitoId": "mt_FUSI_19",
+      "forca": "soft",
+      "razao": "A linguagem é o meio pelo qual o programa é escrito, então a noção de programa de computador e de suas categorias precede o estudo das linguagens.",
+      "origem": "texto",
+      "trecho": "Um programa de computador é uma sequência de instruções para o computador, e a documentação descreve suas funções para auxiliar quem opera o sistema.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_23",
+      "prerequisitoId": "mt_FUSI_07",
+      "forca": "soft",
+      "razao": "O banco de dados já aparece como um dos seis componentes do CBIS, e o capítulo apenas abre esse componente.",
+      "origem": "texto",
+      "trecho": "Coleção organizada de fatos e informações, com dois ou mais arquivos de dados relacionados.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_24",
+      "prerequisitoId": "mt_FUSI_23",
+      "forca": "soft",
+      "razao": "A hierarquia termina exatamente no conceito de banco de dados como coleção de arquivos integrados, apresentado no tópico anterior.",
+      "origem": "texto",
+      "trecho": "ARQUIVO (coleção de registros relacionados) → BANCO DE DADOS (coleção de arquivos integrados e relacionados)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_25",
+      "prerequisitoId": "mt_FUSI_24",
+      "forca": "hard",
+      "razao": "No modelo relacional a linha é um registro e a coluna é um campo, dois níveis da hierarquia dos dados, então sem a hierarquia a tabela não se lê.",
+      "origem": "texto",
+      "trecho": "MODELO RELACIONAL descreve os dados em formato tabular: cada LINHA é um registro (entidade) e cada COLUNA é um atributo (campo)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_26",
+      "prerequisitoId": "mt_FUSI_25",
+      "forca": "hard",
+      "razao": "As operações são descritas como eliminar linhas ou colunas e combinar tabelas, o que só faz sentido depois do formato tabular do modelo relacional.",
+      "origem": "texto",
+      "trecho": "Manipulações: SELEÇÃO elimina LINHAS conforme um critério, PROJEÇÃO elimina COLUNAS, JUNÇÃO combina duas ou mais tabelas",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_27",
+      "prerequisitoId": "mt_FUSI_23",
+      "forca": "hard",
+      "razao": "As funções detalhadas são funções do SGBD, cuja definição como grupo de programas que manipula o banco vem antes.",
+      "origem": "texto",
+      "trecho": "SGBD/DBMS é o grupo de programas que manipula o banco de dados e fornece a interface entre ele, os usuários e os aplicativos.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_27",
+      "prerequisitoId": "mt_FUSI_25",
+      "forca": "soft",
+      "razao": "A DDL define dados e relações, e o esquema descreve o banco todo, então ajuda ter em mãos entidade, atributo e o formato tabular.",
+      "origem": "texto",
+      "trecho": "DDL (linguagem de definição de dados) define e descreve os dados e relações",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_28",
+      "prerequisitoId": "mt_FUSI_23",
+      "forca": "hard",
+      "razao": "O datawarehouse é ele mesmo um banco de dados, distinto do banco que registra a operação, então a definição de banco de dados vem primeiro.",
+      "origem": "texto",
+      "trecho": "DATAWAREHOUSE é o banco que reúne informações de muitas fontes da empresa para apoiar decisão; DATA MART é um subconjunto do datawarehouse",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_28",
+      "prerequisitoId": "mt_FUSI_04",
+      "forca": "soft",
+      "razao": "A definição de inteligência empresarial repete os atributos da informação valiosa, a informação certa, no momento oportuno e de forma útil.",
+      "origem": "texto",
+      "trecho": "INTELIGÊNCIA EMPRESARIAL (BI) é reunir a informação certa, no momento oportuno e de forma útil, e analisá-la para impactar positivamente a estratégia, a tática ou as operações",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_30",
+      "prerequisitoId": "mt_FUSI_29",
+      "forca": "hard",
+      "razao": "A diferença entre processamento distribuído e descentralizado é a existência de rede ligando os locais, então o conceito de rede precisa estar dado.",
+      "origem": "texto",
+      "trecho": "O que separa o distribuído do descentralizado é justamente a conexão: nos dois casos o processamento ocorre em locais remotos, mas no distribuído esses locais estão ligados por uma rede.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_31",
+      "prerequisitoId": "mt_FUSI_29",
+      "forca": "hard",
+      "razao": "Ponte, roteador e gateway são descritos pelo protocolo e pelas redes que atravessam, então o conceito de protocolo de rede é pré-requisito direto.",
+      "origem": "texto",
+      "trecho": "O protocolo de rede é o conjunto de regras, algoritmos, mensagens e mecanismos que permite que softwares e hardwares conectados se comuniquem de forma eficaz.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_31",
+      "prerequisitoId": "mt_FUSI_30",
+      "forca": "hard",
+      "razao": "A ponte é definida como o equipamento que conecta duas LANs, sigla apresentada na classificação de redes por alcance.",
+      "origem": "texto",
+      "trecho": "Conecta duas LANs que usam o mesmo protocolo de telecomunicações.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_32",
+      "prerequisitoId": "mt_FUSI_29",
+      "forca": "hard",
+      "razao": "TCP e IP são protocolos que encaminham tráfego de uma rede para outra, então sem o conceito de protocolo e de rede a pilha TCP/IP fica sem sentido.",
+      "origem": "texto",
+      "trecho": "O PROTOCOLO IP possibilita que os computadores encaminhem tráfego de uma rede para outra, e o TCP é o protocolo da camada de transporte usado com o IP",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_33",
+      "prerequisitoId": "mt_FUSI_32",
+      "forca": "hard",
+      "razao": "A web é definida como serviço que roda sobre a infraestrutura da internet, logo a infraestrutura e o TCP/IP vêm antes.",
+      "origem": "texto",
+      "trecho": "A internet é a infraestrutura de redes e protocolos TCP/IP; a web é um serviço que roda sobre ela, com HTTP e linguagens de marcação",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_34",
+      "prerequisitoId": "mt_FUSI_33",
+      "forca": "hard",
+      "razao": "Intranet e extranet são construídas com os padrões e as tecnologias da internet e da web, então essas tecnologias precisam estar apresentadas.",
+      "origem": "texto",
+      "trecho": "INTRANET é a rede corporativa INTERNA construída com padrões e tecnologias da internet e da web, restrita aos membros da organização",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_35",
+      "prerequisitoId": "mt_FUSI_29",
+      "forca": "soft",
+      "razao": "Comércio eletrônico é definido como atividade comercial conduzida por redes de computadores, então o vocabulário de rede sustenta o capítulo.",
+      "origem": "texto",
+      "trecho": "Comércio eletrônico é realizar atividades comerciais eletronicamente por redes de computadores",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_35",
+      "prerequisitoId": "mt_FUSI_32",
+      "forca": "soft",
+      "razao": "E-business e e-procurement são definidos pelo uso de SI e da internet, então a internet precisa estar entendida como infraestrutura antes.",
+      "origem": "texto",
+      "trecho": "e-business usa SI e internet para realizar TODAS as tarefas e funções relacionadas ao comércio, sendo portanto mais amplo que o e-commerce",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_36",
+      "prerequisitoId": "mt_FUSI_35",
+      "forca": "hard",
+      "razao": "As categorias classificam transações de comércio eletrônico por quem são as partes, então a definição de comércio eletrônico é pré-requisito direto.",
+      "origem": "texto",
+      "trecho": "B2B ocorre quando todos os participantes são organizações; B2C quando a empresa vende ao consumidor final; e G2C é uma forma de governo eletrônico, do governo para o cidadão.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_36",
+      "prerequisitoId": "mt_FUSI_11",
+      "forca": "soft",
+      "razao": "O B2B é apresentado como o que conecta parceiros na cadeia de suprimentos, conceito visto no capítulo de organizações.",
+      "origem": "texto",
+      "trecho": "Conecta parceiros na cadeia de suprimentos virtual, reduzindo tempo de reabastecimento e custos.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_37",
+      "prerequisitoId": "mt_FUSI_35",
+      "forca": "hard",
+      "razao": "Os cinco estágios descrevem a compra eletrônica, então dependem da definição de comércio eletrônico e do seu escopo.",
+      "origem": "texto",
+      "trecho": "MODELO DE MULTIESTÁGIO da compra eletrônica, em cinco etapas: (1) busca e identificação, (2) seleção e negociação, (3) aquisição eletrônica de produtos e serviços, (4) entrega e (5) serviços pós-venda.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_38",
+      "prerequisitoId": "mt_FUSI_35",
+      "forca": "soft",
+      "razao": "Os meios de pagamento eletrônico existem para viabilizar a transação comercial eletrônica, então o capítulo os apresenta depois de definir o comércio eletrônico.",
+      "origem": "texto",
+      "trecho": "PAGAMENTO ELETRÔNICO: certificado digital verifica a identidade de um remetente ou site e é emitido por uma autoridade certificadora (CA), terceiro confiável; SSL protege dados sensíveis",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_39",
+      "prerequisitoId": "mt_FUSI_24",
+      "forca": "soft",
+      "razao": "Bit e byte já foram definidos na hierarquia dos dados, e o bloco numérico retoma exatamente esses termos ao tratar de nibble, byte e faixa de N bits.",
+      "origem": "texto",
+      "trecho": "BIT (dígito binário, circuito ligado ou desligado) → BYTE (normalmente oito bits)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_40",
+      "prerequisitoId": "mt_FUSI_39",
+      "forca": "hard",
+      "razao": "Converter qualquer base para decimal é literalmente aplicar a notação posicional, multiplicando cada algarismo pelo peso da posição.",
+      "origem": "texto",
+      "trecho": "QUALQUER BASE → DECIMAL: aplicar notação posicional, multiplicando cada algarismo pelo peso da sua posição e somando.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_41",
+      "prerequisitoId": "mt_FUSI_39",
+      "forca": "hard",
+      "razao": "As divisões sucessivas são feitas pela base de destino e os restos precisam ser lidos como algarismos daquela base, incluindo as letras do hexadecimal.",
+      "origem": "texto",
+      "trecho": "DECIMAL → QUALQUER BASE: divisões sucessivas pela base, tomando o último quociente e os restos das divisões na ordem inversa.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_42",
+      "prerequisitoId": "mt_FUSI_39",
+      "forca": "hard",
+      "razao": "O agrupamento parte do LSB e troca grupos de bits por algarismos de octal ou hexa, o que exige a notação posicional e o vocabulário LSB e MSB.",
+      "origem": "texto",
+      "trecho": "BINÁRIO ↔ OCTAL: agrupar os bits de 3 EM 3 a partir do LSB e substituir cada grupo pelo octal equivalente",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_43",
+      "prerequisitoId": "mt_FUSI_40",
+      "forca": "hard",
+      "razao": "O fracionário para decimal é a mesma notação posicional do tópico anterior, agora com pesos negativos.",
+      "origem": "texto",
+      "trecho": "FRACIONÁRIOS: binário fracionário → decimal aplica notação posicional com pesos negativos (2⁻¹ = 0,5; 2⁻² = 0,25; 2⁻³ = 0,125).",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_43",
+      "prerequisitoId": "mt_FUSI_41",
+      "forca": "soft",
+      "razao": "O material contrasta explicitamente os dois métodos: multiplicações sucessivas para a parte fracionária e divisões sucessivas para a parte inteira.",
+      "origem": "texto",
+      "trecho": "o método correto para a parte fracionária é mesmo o das multiplicações sucessivas (as divisões sucessivas servem para a parte inteira)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_43",
+      "prerequisitoId": "mt_FUSI_42",
+      "forca": "soft",
+      "razao": "No fracionário o agrupamento de 3 em 3 e de 4 em 4 inverte o sentido, partindo da vírgula para a direita, o que só se percebe conhecendo o agrupamento da parte inteira.",
+      "origem": "texto",
+      "trecho": "No fracionário, o agrupamento de 3 em 3 (octal) ou de 4 em 4 (hexa) parte da VÍRGULA para a direita, completando com zeros à direita se faltar bit.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_44",
+      "prerequisitoId": "mt_FUSI_39",
+      "forca": "hard",
+      "razao": "A soma binária alinha pelo bit menos significativo e depende de a base 2 ter apenas os algarismos 0 e 1, conteúdo do tópico de notação posicional e bases.",
+      "origem": "texto",
+      "trecho": "Somar em binário funciona exatamente como somar em decimal: alinha-se pela direita, opera-se coluna a coluna e leva-se o excedente para a coluna seguinte.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_44",
+      "prerequisitoId": "mt_FUSI_40",
+      "forca": "soft",
+      "razao": "A conferência do resultado da soma passa por converter os operandos e o total para decimal, procedimento do tópico de conversão para decimal.",
+      "origem": "texto",
+      "trecho": "Conferindo em decimal, 11 + 6 = 17 = 10001₂.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_45",
+      "prerequisitoId": "mt_FUSI_44",
+      "forca": "hard",
+      "razao": "O empréstimo é o espelho do transporte da adição, e o material apresenta a subtração depois de fixar o mecanismo coluna a coluna da soma.",
+      "origem": "texto",
+      "trecho": "No decimal, o empréstimo vale 10; no binário, vale 2.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_FUSI_45",
+      "prerequisitoId": "mt_FUSI_41",
+      "forca": "soft",
+      "razao": "A verificação em três passos exige converter o resultado decimal de volta para binário, o que é o método das divisões sucessivas.",
+      "origem": "texto",
+      "trecho": "Toda operação binária pode ser verificada em três passos: converta os dois operandos para decimal, faça a conta em decimal e converta o resultado de volta para binário.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_03",
+      "prerequisitoId": "mt_INTW_02",
+      "forca": "hard",
+      "razao": "A responsabilidade discutida é a de quem desenvolve TIC, então é preciso saber o que uma TIC é e em que áreas da vida ela já está.",
+      "origem": "texto",
+      "trecho": "TICs são o conjunto de tecnologias que permitem produzir, armazenar, transmitir e acessar informação.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_04",
+      "prerequisitoId": "mt_INTW_02",
+      "forca": "hard",
+      "razao": "O material define sistema interativo como subconjunto das TIC, e um subconjunto não se entende sem o conjunto.",
+      "origem": "texto",
+      "trecho": "Sistemas interativos são um subconjunto das TICs: o caixa automático é interativo, o sistema em batch que processa informações bancárias não é.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_06",
+      "prerequisitoId": "mt_INTW_05",
+      "forca": "hard",
+      "razao": "O HTTP é apresentado como o que distingue aplicação web de aplicação de Internet em geral, distinção que só existe depois de separar Internet de Web.",
+      "origem": "texto",
+      "trecho": "Aplicações web usam o protocolo HTTP, que é uma camada sobre o TCP; aplicações de Internet em geral podem usar TCP ou UDP e qualquer porta, enquanto o HTTP tradicionalmente usa a porta 80.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_07",
+      "prerequisitoId": "mt_INTW_05",
+      "forca": "hard",
+      "razao": "Os pilares são a definição do que sustenta a Web, então é preciso ter claro o que é a Web que eles sustentam.",
+      "origem": "texto",
+      "trecho": "(1) um esquema de nomes para localizar fontes de informação, a URI; (2) um protocolo de acesso a essas fontes, hoje o HTTP; (3) uma linguagem de hipertexto para navegar entre as fontes, o HTML.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_07",
+      "prerequisitoId": "mt_INTW_06",
+      "forca": "soft",
+      "razao": "O segundo pilar é exatamente o protocolo de acesso já apresentado, com a mesma descrição de camada sobre o TCP e porta 80.",
+      "origem": "texto",
+      "trecho": "O protocolo usado para acessar essas fontes. É uma camada sobre o TCP e usa tradicionalmente a porta 80 (443 com TLS).",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_08",
+      "prerequisitoId": "mt_INTW_07",
+      "forca": "soft",
+      "razao": "O terceiro pilar é a linguagem de hipertexto, e o tópico de hipertexto abre justamente esse pilar.",
+      "origem": "texto",
+      "trecho": "A linguagem que permite navegar com facilidade entre as fontes de informação, ligando documentos por conexões.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_09",
+      "prerequisitoId": "mt_INTW_08",
+      "forca": "soft",
+      "razao": "A história da padronização é a história dessa linguagem de marcação, então ela vem depois de saber o que a linguagem é e para que serve.",
+      "origem": "texto",
+      "trecho": "HTML é a sigla de HyperText Markup Language, Linguagem de Marcação de Hipertexto. É uma linguagem para publicação de conteúdo (texto, imagem, vídeo, áudio) na Web.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_10",
+      "prerequisitoId": "mt_INTW_08",
+      "forca": "hard",
+      "razao": "Sem saber que o HTML é uma linguagem de marcação de hipertexto, escrever o documento é copiar símbolos sem entender o que se marca.",
+      "origem": "texto",
+      "trecho": "HTML é a sigla de HyperText Markup Language, Linguagem de Marcação de Hipertexto.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_10",
+      "prerequisitoId": "mt_INTW_09",
+      "forca": "soft",
+      "razao": "O Doctype curto e a estrutura mínima do HTML5 são resultado da convergência com o WHATWG e da opção pela retrocompatibilidade.",
+      "origem": "texto",
+      "trecho": "O HTML5 mantém foco em retrocompatibilidade: nenhum site precisa ser refeito para se adequar aos novos conceitos.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_11",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "A metatag charset é uma linha do head, então depende de já existir o esqueleto do documento onde ela é declarada.",
+      "origem": "texto",
+      "trecho": "A metatag charset define a tabela de caracteres: <meta charset=\"utf-8\">",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_12",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "soft",
+      "razao": "A tag link aparece no head do documento mínimo, e é ali que a comparação com a tag a começa a fazer sentido.",
+      "origem": "texto",
+      "trecho": "Há dois tipos de link no HTML: a tag a, que leva o usuário a outros documentos, e a tag link, que referencia fontes externas usadas pelo documento",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_13",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "A regra de quem pode conter quem opera sobre a árvore de elementos, que é apresentada com a estrutura mínima do documento.",
+      "origem": "texto",
+      "trecho": "O elemento html é a raiz da árvore de elementos e leva o atributo lang",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_14",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "soft",
+      "razao": "A ideia de que a marcação carrega significado só aparece depois de o aluno ter visto tags de verdade num documento.",
+      "origem": "texto",
+      "trecho": "a função do HTML é indicar que tipo de informação a página exibe",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_15",
+      "prerequisitoId": "mt_INTW_14",
+      "forca": "hard",
+      "razao": "As tags semânticas existem para resolver a falta de padrão que o tópico de semântica expõe; sem essa motivação elas viram uma lista decorada.",
+      "origem": "texto",
+      "trecho": "Antes do HTML5 não havia padrão para marcar rodapé, cabeçalho, sidebar e menus, e a diferenciação era apenas visual.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_15",
+      "prerequisitoId": "mt_INTW_13",
+      "forca": "soft",
+      "razao": "As tags semânticas são elementos de bloco que o HTML5 classifica como sectioning content, categoria vista no tópico de modelos de conteúdo.",
+      "origem": "texto",
+      "trecho": "Sectioning content define grupos de cabeçalhos e rodapés: article, aside, nav e section.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_16",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "Títulos, parágrafos, listas, links e imagens são escritos dentro do body do documento mínimo.",
+      "origem": "texto",
+      "trecho": "os títulos vão de h1 a h6, em ordem de importância. p marca parágrafos.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_17",
+      "prerequisitoId": "mt_INTW_14",
+      "forca": "hard",
+      "razao": "A distinção entre par semântico e par visual é a aplicação direta do princípio de que a marcação comunica significado.",
+      "origem": "texto",
+      "trecho": "O b mantém o negrito mas não dá importância ao texto; o i mantém o itálico e serve para indicar ênfase, termos técnicos ou frases em outros idiomas.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_17",
+      "prerequisitoId": "mt_INTW_16",
+      "forca": "soft",
+      "razao": "strong, em, b e i são elementos de linha que marcam texto, já usados na formatação básica antes de a comparação semântica ser feita.",
+      "origem": "texto",
+      "trecho": "elementos de linha marcam na maioria das vezes texto (a, strong, em, img, input, abbr, span)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_18",
+      "prerequisitoId": "mt_INTW_16",
+      "forca": "hard",
+      "razao": "O alt é atributo da tag img, apresentada na formatação básica; sem a imagem no documento não há alt a escrever.",
+      "origem": "texto",
+      "trecho": "Imagens usam img com src e o atributo alt, que descreve a imagem para leitores de tela",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_18",
+      "prerequisitoId": "mt_INTW_14",
+      "forca": "soft",
+      "razao": "Escolher um alt útil é decidir o que a marcação comunica, e não como a página aparece, que é o princípio do tópico de semântica.",
+      "origem": "texto",
+      "trecho": "as decisões de acessibilidade que a disciplina cobre atuam na marcação, não na aparência",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_19",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "A tabela é um bloco escrito no body e depende da mesma sintaxe de tags aninhadas do documento mínimo.",
+      "origem": "texto",
+      "trecho": "table delimita a tabela; tr define uma linha; th define uma célula de cabeçalho; td define uma célula de dados.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_20",
+      "prerequisitoId": "mt_INTW_19",
+      "forca": "hard",
+      "razao": "O scope é atributo do th, então só se discute depois de a tabela existir com cabeçalho e células de dados.",
+      "origem": "texto",
+      "trecho": "O atributo scope em th indica se o cabeçalho vale para a coluna ou para a linha, o que ajuda leitores de tela.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_20",
+      "prerequisitoId": "mt_INTW_18",
+      "forca": "soft",
+      "razao": "O th com scope pertence à mesma família de decisões de acessibilidade na marcação que o alt, e o material lista os dois juntos.",
+      "origem": "texto",
+      "trecho": "Tags semânticas dizem o que cada bloco é; o alt descreve a imagem; o label com for liga o rótulo ao campo; o th com scope diz a que linha ou coluna cada dado pertence.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_21",
+      "prerequisitoId": "mt_INTW_19",
+      "forca": "hard",
+      "razao": "Para julgar que um conteúdo não é tabular é preciso saber o que uma tabela é e para que serve.",
+      "origem": "texto",
+      "trecho": "Tabelas devem ser usadas para dados tabulares, não para diagramar layout",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_21",
+      "prerequisitoId": "mt_INTW_01",
+      "forca": "soft",
+      "razao": "A regra deriva da separação entre camadas: diagramar é apresentação, e apresentação é trabalho do CSS.",
+      "origem": "texto",
+      "trecho": "Formata a informação entregue pelo HTML: cores, espaçamentos, tipografia e layout. Separado da estrutura, de propósito.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_22",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "O formulário é escrito no body do documento e segue as mesmas regras de tags e atributos vistas na estrutura mínima.",
+      "origem": "texto",
+      "trecho": "form envolve os campos e tem os atributos action (para onde os dados vão) e method (GET ou POST).",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_23",
+      "prerequisitoId": "mt_INTW_22",
+      "forca": "hard",
+      "razao": "O for do label aponta para o id de um campo, então os campos precisam existir antes de a associação ser feita.",
+      "origem": "texto",
+      "trecho": "label associa um rótulo a um campo pelo atributo for, que aponta para o id do campo",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_23",
+      "prerequisitoId": "mt_INTW_18",
+      "forca": "soft",
+      "razao": "O label com for é a mesma classe de decisão do alt: acessibilidade resolvida na marcação, e o material apresenta os dois na mesma lista.",
+      "origem": "texto",
+      "trecho": "o label com for liga o rótulo ao campo",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_24",
+      "prerequisitoId": "mt_INTW_22",
+      "forca": "hard",
+      "razao": "Os tipos novos são valores do atributo type do input, elemento apresentado no tópico dos elementos do formulário.",
+      "origem": "texto",
+      "trecho": "input é o campo genérico, controlado pelo atributo type.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_25",
+      "prerequisitoId": "mt_INTW_24",
+      "forca": "hard",
+      "razao": "Boa parte da validação automática vem do type escolhido, então a validação sem JavaScript depende de conhecer os tipos de campo.",
+      "origem": "texto",
+      "trecho": "email com formatação e validação. url para endereço web, também com validação.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_26",
+      "prerequisitoId": "mt_INTW_25",
+      "forca": "hard",
+      "razao": "A validação customizada é o recurso para quando a validação pronta do HTML5 não basta, então pressupõe conhecer o que ela já faz.",
+      "origem": "texto",
+      "trecho": "Para validação customizada, o evento oninput é disparado a cada modificação do valor",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_27",
+      "prerequisitoId": "mt_INTW_01",
+      "forca": "soft",
+      "razao": "O CSS é a camada de apresentação da divisão que abre a disciplina, e o princípio da separação é o que dá sentido à existência da folha de estilo.",
+      "origem": "texto",
+      "trecho": "A separação entre estrutura (HTML) e apresentação (CSS) é o princípio central. A sintaxe é seletor { propriedade: valor; }.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_27",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "O CSS formata a informação entregue pelo HTML, então sem um documento HTML não há nada para formatar.",
+      "origem": "texto",
+      "trecho": "Marca o significado do conteúdo: o que é título, parágrafo, lista, tabela, formulário. Sem HTML não existe página.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_28",
+      "prerequisitoId": "mt_INTW_27",
+      "forca": "hard",
+      "razao": "Decidir onde escrever o CSS pressupõe saber o que é uma regra de CSS e o que ela faz.",
+      "origem": "texto",
+      "trecho": "inline pelo atributo style no próprio elemento, interno com a tag style dentro do head, e externo com um arquivo .css referenciado por <link rel=\"stylesheet\" href=\"estilo.css\">",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_28",
+      "prerequisitoId": "mt_INTW_12",
+      "forca": "soft",
+      "razao": "A folha externa entra na página pela tag link, cuja função de importar recurso já foi distinguida da tag a.",
+      "origem": "texto",
+      "trecho": "Referencia fontes externas usadas pelo documento.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_29",
+      "prerequisitoId": "mt_INTW_27",
+      "forca": "hard",
+      "razao": "O seletor é a primeira parte da regra, então a sintaxe da regra precisa estar clara antes de estudar os tipos de seletor.",
+      "origem": "texto",
+      "trecho": "A sintaxe é seletor { propriedade: valor; }.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_29",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "soft",
+      "razao": "O seletor escolhe elementos do documento pela tag, pela classe ou pelo id, então depende de conhecer a marcação que está sendo selecionada.",
+      "origem": "texto",
+      "trecho": "Seletor de tag/elemento aplica a todos os elementos daquele tipo (p { }).",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_30",
+      "prerequisitoId": "mt_INTW_29",
+      "forca": "hard",
+      "razao": "A especificidade compara os tipos de seletor entre si, então só se discute depois de os três tipos serem conhecidos.",
+      "origem": "texto",
+      "trecho": "#cabecalho { } identifica um único elemento na página. É o mais específico dos três.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_31",
+      "prerequisitoId": "mt_INTW_27",
+      "forca": "hard",
+      "razao": "A caixa é o que as propriedades de CSS dimensionam, então o modelo de caixa depende de saber o que uma propriedade faz.",
+      "origem": "texto",
+      "trecho": "Toda caixa tem conteúdo, padding (espaço interno, entre conteúdo e borda), border (a borda) e margin (espaço externo, entre a borda e os outros elementos).",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_31",
+      "prerequisitoId": "mt_INTW_13",
+      "forca": "soft",
+      "razao": "A caixa do modelo é o elemento de bloco apresentado no HTML, e é essa identificação que faz o modelo parar de ser abstrato.",
+      "origem": "texto",
+      "trecho": "Elementos de bloco são caixas que dividem o conteúdo em seções do layout.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_32",
+      "prerequisitoId": "mt_INTW_31",
+      "forca": "hard",
+      "razao": "A lista cobrada na atividade inclui margin, padding, width e height, que são as partes da caixa; sem o modelo o aluno aplica valores sem prever o efeito.",
+      "origem": "texto",
+      "trecho": "Propriedades cobradas nas atividades da turma: background-image, background-color, box-shadow, border-radius, margin, padding, width, height, font e color.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_32",
+      "prerequisitoId": "mt_INTW_29",
+      "forca": "hard",
+      "razao": "O enunciado exige as propriedades aplicadas pelos três tipos de seletor, então não há como cumprir a atividade sem saber selecionar o elemento.",
+      "origem": "texto",
+      "trecho": "Usar seletores de id, de class e de tag no mesmo arquivo",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_33",
+      "prerequisitoId": "mt_INTW_13",
+      "forca": "hard",
+      "razao": "O display flex vai no pai e transforma os filhos diretos, então sem enxergar a relação de aninhamento no HTML o aluno aplica a propriedade no elemento errado.",
+      "origem": "texto",
+      "trecho": "Vai no elemento PAI, que vira o container. Os filhos diretos passam a ser itens flexíveis.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_34",
+      "prerequisitoId": "mt_INTW_33",
+      "forca": "hard",
+      "razao": "Os eixos existem a partir do container, então alinhar itens depende de o display flex já ter sido aplicado no pai.",
+      "origem": "texto",
+      "trecho": "flex-direction define o eixo principal (row ou column). justify-content alinha os itens ao longo do eixo principal.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_35",
+      "prerequisitoId": "mt_INTW_27",
+      "forca": "soft",
+      "razao": "Os recursos do CSS3 são propriedades novas escritas na mesma sintaxe de regra, então dependem de saber como uma regra é montada.",
+      "origem": "texto",
+      "trecho": "gradientes criados só com CSS evitam uma requisição de imagem ao servidor, deixando o site mais rápido",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_35",
+      "prerequisitoId": "mt_INTW_32",
+      "forca": "soft",
+      "razao": "A diferença entre RGBA e opacity é discutida sobre background-color e box-shadow, propriedades já usadas na atividade de CSS.",
+      "origem": "texto",
+      "trecho": "Cores podem ser escritas em hexadecimal, por nome ou em RGBA, em que o quarto valor é o alfa (transparência)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_36",
+      "prerequisitoId": "mt_INTW_01",
+      "forca": "hard",
+      "razao": "O JavaScript é apresentado como a camada de comportamento, definida por contraste com estrutura e apresentação.",
+      "origem": "texto",
+      "trecho": "Roda no navegador (client-side) e reage ao usuário: valida campos, altera a página pelo DOM, responde a cliques.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_36",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "soft",
+      "razao": "O script é escrito dentro da tag script do documento ou referenciado por ele, então depende de saber montar a página.",
+      "origem": "texto",
+      "trecho": "O código pode ser escrito dentro da tag script ou em um arquivo .js externo.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_37",
+      "prerequisitoId": "mt_INTW_36",
+      "forca": "hard",
+      "razao": "As variáveis são escritas no script que o navegador executa, então a natureza client-side vem antes da sintaxe.",
+      "origem": "texto",
+      "trecho": "variáveis guardam dados e são declaradas com let (valor que muda), const (valor que não é reatribuído) ou o antigo var.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_38",
+      "prerequisitoId": "mt_INTW_37",
+      "forca": "hard",
+      "razao": "A comparação estrita confere valor e tipo, então depende de conhecer os tipos básicos e os operadores da linguagem.",
+      "origem": "texto",
+      "trecho": "Comparação: === compara valor e tipo (estrito) e == faz conversão de tipo antes de comparar, por isso o === é o recomendado.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_39",
+      "prerequisitoId": "mt_INTW_37",
+      "forca": "hard",
+      "razao": "Condicionais e laços operam sobre variáveis e condições, e a função recebe e devolve valores desses mesmos tipos.",
+      "origem": "texto",
+      "trecho": "Estruturas condicionais: if, else if e else. Estruturas de repetição: while, que repete enquanto a condição for verdadeira",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_39",
+      "prerequisitoId": "mt_INTW_38",
+      "forca": "soft",
+      "razao": "A condição do if costuma ser uma comparação, e o operador escolhido decide o caminho que o programa toma.",
+      "origem": "texto",
+      "trecho": "if, else if e else executam trechos diferentes conforme a condição.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_40",
+      "prerequisitoId": "mt_INTW_37",
+      "forca": "hard",
+      "razao": "O array é um valor guardado numa variável, então a declaração e os tipos vêm antes da estrutura que agrupa vários dados.",
+      "origem": "texto",
+      "trecho": "Arrays guardam vários dados numa mesma variável, são indexados a partir de 0, têm a propriedade length e métodos como push.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_40",
+      "prerequisitoId": "mt_INTW_39",
+      "forca": "soft",
+      "razao": "O exemplo da disciplina percorre o array com um for e usa o length como limite, então o laço aparece antes da indexação ser explorada.",
+      "origem": "texto",
+      "trecho": "for (let i = 0; i < notas.length; i++)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_41",
+      "prerequisitoId": "mt_INTW_37",
+      "forca": "hard",
+      "razao": "A armadilha do prompt é de tipo: ele devolve string e precisa ser convertido antes de entrar numa conta.",
+      "origem": "texto",
+      "trecho": "prompt pede um valor ao usuário e sempre devolve string (por isso é preciso converter com Number ou parseInt para fazer contas)",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_42",
+      "prerequisitoId": "mt_INTW_36",
+      "forca": "hard",
+      "razao": "O DOM é construído pelo navegador que executa o script, então a ideia de execução no cliente precede a de árvore de objetos.",
+      "origem": "texto",
+      "trecho": "quando o navegador carrega a página, ele constrói uma coleção de objetos que representam os elementos HTML",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_42",
+      "prerequisitoId": "mt_INTW_10",
+      "forca": "hard",
+      "razao": "Cada objeto do DOM corresponde a um elemento do documento, então é preciso conhecer os elementos para saber o que se está manipulando.",
+      "origem": "texto",
+      "trecho": "Cada elemento vira um objeto. É pelo DOM que o JavaScript lê e altera a página.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_43",
+      "prerequisitoId": "mt_INTW_42",
+      "forca": "hard",
+      "razao": "Buscar elemento, ligar evento e trocar conteúdo são operações sobre o DOM, que precisa existir como conceito antes dos métodos.",
+      "origem": "texto",
+      "trecho": "document.getElementById busca um elemento pelo id.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_43",
+      "prerequisitoId": "mt_INTW_29",
+      "forca": "soft",
+      "razao": "querySelector e querySelectorAll recebem seletores CSS, então quem não domina seletor não usa a Selector API.",
+      "origem": "texto",
+      "trecho": "a Selector API com querySelector e querySelectorAll, que aceitam seletores CSS",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_43",
+      "prerequisitoId": "mt_INTW_37",
+      "forca": "soft",
+      "razao": "O elemento encontrado é guardado numa variável antes de ser usado, como no exemplo do playground de DOM.",
+      "origem": "texto",
+      "trecho": "const botao = document.getElementById(\"botao\");",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_44",
+      "prerequisitoId": "mt_INTW_01",
+      "forca": "hard",
+      "razao": "O projeto final é definido como a reunião das três camadas, então a divisão em camadas é o que ele integra.",
+      "origem": "texto",
+      "trecho": "O projeto integra as três camadas num site publicado",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_44",
+      "prerequisitoId": "mt_INTW_15",
+      "forca": "hard",
+      "razao": "O checklist do projeto exige HTML semântico em todas as páginas, com as tags semânticas em vez de div genérica.",
+      "origem": "texto",
+      "trecho": "HTML semântico com Doctype, lang e charset em todas as páginas, links relativos entre elas, imagens com alt descritivo",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_44",
+      "prerequisitoId": "mt_INTW_28",
+      "forca": "hard",
+      "razao": "O projeto exige folha de estilo externa reaproveitada por todas as páginas, e é dessa escolha que vem o erro de caminho ao publicar.",
+      "origem": "texto",
+      "trecho": "folha de estilo externa reaproveitada por todas as páginas",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_44",
+      "prerequisitoId": "mt_INTW_34",
+      "forca": "hard",
+      "razao": "O layout do site precisa ser organizado com flexbox, o que exige o container e o alinhamento nos dois eixos.",
+      "origem": "texto",
+      "trecho": "layout organizado com flexbox e pelo menos uma interação real pelo DOM",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_44",
+      "prerequisitoId": "mt_INTW_43",
+      "forca": "hard",
+      "razao": "O projeto pede ao menos uma interação real pelo DOM, com busca do elemento, evento e alteração de conteúdo.",
+      "origem": "texto",
+      "trecho": "Pelo menos uma interação real pelo DOM: getElementById ou querySelector para achar o elemento, innerHTML ou value para ler e alterar, e um evento (onclick, oninput) ligando a ação do usuário",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_44",
+      "prerequisitoId": "mt_INTW_25",
+      "forca": "soft",
+      "razao": "O site do projeto inclui um formulário validado pelo próprio HTML, com label associado a cada campo.",
+      "origem": "texto",
+      "trecho": "formulário com label for e validação pelo próprio HTML",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_45",
+      "prerequisitoId": "mt_INTW_18",
+      "forca": "hard",
+      "razao": "O conjunto de decisões de acessibilidade cobrado é formado por alt, semântica, label for e th com scope, e o alt é uma das quatro.",
+      "origem": "texto",
+      "trecho": "Usar tags semânticas, alt descritivo nas imagens, label for nos campos e th com scope nas tabelas.",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_45",
+      "prerequisitoId": "mt_INTW_20",
+      "forca": "hard",
+      "razao": "O th com scope é uma das quatro decisões que mudam o que o leitor de tela anuncia numa tabela.",
+      "origem": "texto",
+      "trecho": "o th com scope diz a que linha ou coluna cada dado pertence",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_45",
+      "prerequisitoId": "mt_INTW_23",
+      "forca": "hard",
+      "razao": "O label com for é uma das quatro decisões de acessibilidade da lista, aplicada aos campos do formulário.",
+      "origem": "texto",
+      "trecho": "o label com for liga o rótulo ao campo",
+      "escopo": "interna"
+    },
+    {
+      "topicoId": "mt_INTW_45",
+      "prerequisitoId": "mt_INTW_15",
+      "forca": "soft",
+      "razao": "A semântica é a primeira das quatro decisões, porque é ela que diz ao leitor de tela o que cada bloco da página é.",
+      "origem": "texto",
+      "trecho": "Tags semânticas dizem o que cada bloco é",
       "escopo": "interna"
     },
     {

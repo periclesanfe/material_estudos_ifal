@@ -1,0 +1,1455 @@
+{
+  "disciplina": {
+    "codigo": "EMPD",
+    "codigoPPC": "EMPD",
+    "nome": "Empreendedorismo Digital",
+    "periodo": 6
+  },
+  "topicos": [
+    {
+      "id": "mt_EMPD_01",
+      "nome": "Empreender é explorar oportunidade sob incerteza",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos e escolas",
+      "descricao": "Empreender é identificar, construir e explorar uma oportunidade sob incerteza, mobilizando recursos para gerar valor. Abrir uma empresa pode ser consequência desse processo, mas não é a definição completa, e confundir as duas coisas é o erro que mais custa ponto. A palavra vem do francês entreprendre, e a linhagem econômica já tratava o tema: Cantillon via o lucro como compensação por comprar recursos a preços conhecidos e vender em condições incertas, e Say destacava a combinação e a coordenação dos fatores de produção.",
+      "ordem": 1,
+      "evidencia": [
+        "Define empreender em uma frase sem reduzir a definição a abrir empresa",
+        "Aponta oportunidade e incerteza como o par que sustenta a definição",
+        "Diz o que Cantillon e Say acrescentam: lucro pela incerteza e coordenação de recursos"
+      ],
+      "checagem": "O que é empreender, e por que abrir uma empresa não serve como definição?",
+      "avaliacoes": [],
+      "ementaPPC": [
+        "Conceito de empreendedorismo e empreendimento"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/FundamentosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_02",
+      "nome": "Risco não é incerteza",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos e escolas",
+      "descricao": "Na formulação de Frank Knight, risco admite probabilidades estimáveis, como a operadora que sabe estatisticamente quantos sinistros terá no ano, e incerteza envolve eventos cuja distribuição não se conhece, como a demanda por um produto inédito, seu preço e seu comportamento de uso. A distinção é sobre o conhecimento da distribuição, não sobre o tipo de perda. É por isso que uma startup não pode ser administrada apenas por previsão rígida: o plano precisaria de dados que ainda não existem.",
+      "ordem": 2,
+      "evidencia": [
+        "Classifica uma situação concreta como risco ou como incerteza e justifica pela distribuição conhecida",
+        "Dá um exemplo de risco e um de incerteza dentro do mesmo negócio digital",
+        "Explica por que previsão rígida falha em uma startup"
+      ],
+      "checagem": "Qual é a diferença entre risco e incerteza, e qual das duas descreve a demanda por um produto inédito?",
+      "avaliacoes": [],
+      "ementaPPC": [
+        "Conceito de empreendedorismo e empreendimento"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/FundamentosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_03",
+      "nome": "De onde vem a oportunidade: inovação e desequilíbrio",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos e escolas",
+      "descricao": "Schumpeter coloca a inovação no centro: o empreendedor introduz novas combinações de produtos, processos, mercados, fontes de recursos ou formas de organização, e a destruição criativa ocorre quando essas combinações tornam estruturas anteriores menos relevantes. Kirzner descreve o empreendedor alerta a desequilíbrios: a oportunidade existe porque preços, necessidades, informações e recursos ainda não estão perfeitamente coordenados, o que explica negócios que não criam tecnologia radical e apenas conectam oferta e demanda melhor do que os existentes.",
+      "ordem": 3,
+      "evidencia": [
+        "Separa a oportunidade como nova combinação (Schumpeter) da oportunidade como desequilíbrio ainda não explorado (Kirzner)",
+        "Classifica um negócio digital conhecido em uma das duas leituras e defende a escolha",
+        "Explica por que a maior parte dos negócios digitais bem sucedidos cabe na leitura de Kirzner"
+      ],
+      "checagem": "Um aplicativo que só conecta oferta e demanda já existentes ilustra melhor Schumpeter ou Kirzner, e por quê?",
+      "avaliacoes": [],
+      "ementaPPC": [
+        "Conceito de empreendedorismo e empreendimento"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/FundamentosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_04",
+      "nome": "Intenção e perfil de quem empreende",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos e escolas",
+      "descricao": "Na Teoria do Comportamento Planejado, de Icek Ajzen, a intenção de empreender depende de três fatores: atitude diante do comportamento, normas subjetivas e controle comportamental percebido. Por isso alguém pode valorizar o empreendedorismo e não agir, se o ambiente ao redor desaprova ou se não acredita ter recursos e capacidade. David McClelland acrescenta a necessidade de realização: metas desafiadoras, responsabilidade pessoal, busca de feedback e riscos moderados, ou seja, risco calculado quando se pode influenciar o resultado, e não gosto por perigo.",
+      "ordem": 4,
+      "evidencia": [
+        "Nomeia os três fatores de Ajzen e aplica cada um ao caso de alguém que admira empreender e não empreende",
+        "Distingue risco calculado de gosto por perigo na leitura de McClelland",
+        "Explica por que capital e rede de contatos não são componentes do modelo de Ajzen"
+      ],
+      "checagem": "Quais são os três fatores da intenção em Ajzen, e o que McClelland chama de necessidade de realização?",
+      "avaliacoes": [],
+      "ementaPPC": [
+        "Perfil do empreendedor"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/FundamentosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_05",
+      "nome": "O empreendedor de SI: cientista, engenheiro e líder",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos e escolas",
+      "descricao": "Em uma startup, o profissional de Sistemas de Informação atua nos três papéis ao mesmo tempo: como cientista formula hipóteses e mede resultados, como engenheiro constrói sistemas confiáveis e como líder alinha pessoas e decisões. O erro frequente é deixar a identidade de engenheiro dominar e desenvolver muito antes de descobrir se alguém precisa da solução. Man e Lau organizam as competências em oportunidade, relacionamento, conceitual, estratégica, comprometimento e organização, e as hard skills técnicas não substituem as soft skills que absorvem evidência e corrigem a rota.",
+      "ordem": 5,
+      "evidencia": [
+        "Nomeia os três papéis e diz qual decisão cada um sustenta em uma semana de trabalho",
+        "Aponta o sintoma de o papel de engenheiro dominar a equipe",
+        "Explica por que domínio técnico permite construir mas não diz o que construir"
+      ],
+      "checagem": "Quais são os três papéis do empreendedor de SI, e que erro aparece quando o de engenheiro domina?",
+      "avaliacoes": [],
+      "ementaPPC": [
+        "Perfil do empreendedor"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/FundamentosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_06",
+      "nome": "Startup: os quatro elementos da definição",
+      "tipo": "CONCEITUAL",
+      "unidade": "Startups e ecossistema digital",
+      "descricao": "Startup é uma organização temporária em busca de um modelo de negócio repetível, escalável e sustentável sob condições de extrema incerteza, e o modelo de negócio explica como a organização cria, entrega e captura valor. Temporária porque, quando o modelo é encontrado, a organização deixa de ser equipe de busca e passa a executar. Ser digital não torna um negócio startup: um pequeno comércio pode ser excelente sem ser startup, e a diferença entre o empreendedorismo clássico e o contemporâneo está no lugar da tecnologia, que no contemporâneo integra a própria proposta de valor.",
+      "ordem": 6,
+      "evidencia": [
+        "Enuncia os quatro elementos e diz qual deles falta em um negócio digital que não é startup",
+        "Explica por que a organização é chamada de temporária",
+        "Defende que ser digital não basta, usando o critério do modelo ainda não comprovado"
+      ],
+      "checagem": "Quais são os quatro elementos da definição de startup, e por que a organização é temporária?",
+      "avaliacoes": [
+        "Canvas",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startups",
+        "Empreendedorismo digital"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/StartupsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_07",
+      "nome": "Escalabilidade: software sob encomenda contra SaaS multitenant",
+      "tipo": "CONCEITUAL",
+      "unidade": "Startups e ecossistema digital",
+      "descricao": "Repetibilidade é entregar valor sem reinvenção completa a cada cliente, e escalabilidade é receita e impacto crescendo em velocidade superior aos custos. Uma fábrica de software sob encomenda pode ser muito lucrativa e não ser escalável, porque cada projeto exige trabalho proporcional e dobrar a receita exige praticamente dobrar a equipe. Um SaaS multitenant serve milhares de clientes com a mesma base tecnológica, desde que aquisição, suporte e infraestrutura permaneçam controlados. O critério é a relação entre crescimento de receita e crescimento de custo, não o faturamento nem o alcance geográfico.",
+      "ordem": 7,
+      "evidencia": [
+        "Justifica por que software sob encomenda lucrativo não é startup",
+        "Separa repetibilidade de escalabilidade com um exemplo de cada",
+        "Rejeita faturamento baixo e atuação regional como critérios de descaracterização"
+      ],
+      "checagem": "Por que uma fábrica de software sob encomenda lucrativa pode não ser escalável, e o que muda no SaaS multitenant?",
+      "avaliacoes": [
+        "Canvas",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startups"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/StartupsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_08",
+      "nome": "Product-market fit e a ordem do ciclo de vida",
+      "tipo": "CONCEITUAL",
+      "unidade": "Startups e ecossistema digital",
+      "descricao": "O ciclo de vida vai de ideação a validação, operação e escala, e a escala só deve começar depois da evidência de product-market fit, que é a situação em que um mercado relevante demonstra demanda consistente pela solução. Os sinais são retenção, uso recorrente, recomendação, crescimento orgânico e disposição para pagar, sendo a retenção o mais difícil de falsificar. Investir em aquisição antes disso é pagar para levar pessoas a um produto que elas não vão manter: o CAC é gasto, a retenção não aparece e o crescimento apenas amplifica o desperdício.",
+      "ordem": 8,
+      "evidencia": [
+        "Lista os cinco sinais de product-market fit e diz qual é o mais difícil de falsificar",
+        "Explica por que crescer antes do ajuste não corrige o modelo",
+        "Coloca a escala na posição correta do ciclo de vida e justifica"
+      ],
+      "checagem": "Que sinais indicam product-market fit, e por que investir em aquisição antes dele é perigoso?",
+      "avaliacoes": [
+        "Canvas",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startups",
+        "Gestão do empreendimento"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/StartupsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_09",
+      "nome": "Ideia vira oportunidade: as cinco condições",
+      "tipo": "CONCEITUAL",
+      "unidade": "Identificação e validação de oportunidades",
+      "descricao": "O mercado não remunera esforço, remunera a solução de problemas relevantes para quem está disposto e é capaz de adotar ou pagar. Uma ideia vira oportunidade quando combina problema relevante, público identificável, solução possível, momento adequado e mecanismo econômico, e faltando qualquer um dos cinco o que existe é boa intenção. Founder-market fit reduz o custo de aprender e melhora as hipóteses iniciais sem substituir validação, e o momento adequado conversa com o time-to-market: o pioneiro cria vantagem mas educa o mercado a custo próprio, e o fast follower aprende com ele e executa melhor.",
+      "ordem": 9,
+      "evidencia": [
+        "Testa uma ideia própria contra as cinco condições e nomeia a que falta",
+        "Diz por que founder-market fit não substitui validação",
+        "Compara pioneiro e fast follower sem eleger um vencedor em abstrato"
+      ],
+      "checagem": "Quais são as cinco condições que transformam uma ideia em oportunidade?",
+      "avaliacoes": [
+        "Canvas",
+        "Cust. Dev."
+      ],
+      "ementaPPC": [
+        "Geração de idéias"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/OportunidadesSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_10",
+      "nome": "Investigar a causa antes de construir",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Identificação e validação de oportunidades",
+      "descricao": "O entusiasmo do fundador não é evidência: procuram-se dados que confirmem ou refutem as hipóteses, ao contrário do viés de confirmação, que seleciona só o que agrada. O método dos 5 Porquês investiga causas mas precisa ser confrontado com observação e entrevistas. A fila em uma UBS pode vir de demanda acima da capacidade, triagem inadequada, ausência de previsão, chegada simultânea, sistemas desconectados ou incentivos administrativos. Se a causa dominante é chegada simultânea, agendar resolve; se é demanda acima da capacidade, o aplicativo apenas transfere a espera de lugar.",
+      "ordem": 10,
+      "evidencia": [
+        "Levanta causas alternativas para um mesmo sintoma antes de propor solução",
+        "Mostra qual causa a solução proposta resolve e qual ela não resolve",
+        "Aponta o viés de confirmação em uma coleta de dados feita para agradar a hipótese"
+      ],
+      "checagem": "Diante de uma fila longa em uma UBS, que causas concorrentes precisam ser descartadas antes de digitalizar o agendamento?",
+      "avaliacoes": [
+        "Canvas",
+        "Cust. Dev."
+      ],
+      "ementaPPC": [
+        "Geração de idéias",
+        "Busca de informações"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/OportunidadesSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_11",
+      "nome": "Segmentação e papéis na decisão",
+      "tipo": "CONCEITUAL",
+      "unidade": "Identificação e validação de oportunidades",
+      "descricao": "Segmenta-se por demografia (idade, renda, escolaridade, ocupação, localização), por psicografia (valores, estilo de vida, motivações, atitudes), por comportamento (frequência, ocasião, benefícios procurados, lealdade) e por papel. No recorte por papel, usuário, pagador, decisor, influenciador e beneficiário podem ser pessoas diferentes: no FilaZero o paciente usa e se beneficia, a gestão da unidade ou a secretaria municipal decide e paga, e os profissionais de saúde influenciam a adoção sem decidir formalmente. Desenhar tudo pensando só no usuário produz uma solução atraente que ninguém pode comprar.",
+      "ordem": 11,
+      "evidencia": [
+        "Classifica um mesmo público pelos quatro tipos de segmentação",
+        "Mapeia usuário, beneficiário, decisor, pagador e influenciador em uma venda ao setor público",
+        "Explica por que a segmentação comportamental prevê adoção melhor que a demográfica"
+      ],
+      "checagem": "Em uma solução vendida a municípios, quem é usuário, quem decide e quem paga?",
+      "avaliacoes": [
+        "Canvas",
+        "Cust. Dev."
+      ],
+      "ementaPPC": [
+        "Geração de idéias",
+        "Busca de informações"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/OportunidadesSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_12",
+      "nome": "Benchmarking competitivo, funcional e global",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Identificação e validação de oportunidades",
+      "descricao": "O benchmarking competitivo compara concorrentes diretos em preço, funcionalidades, posicionamento e canais, mostrando a régua imediata do mercado. O funcional busca boas práticas em setores distintos que resolvem um problema análogo, como estudar o check-in de companhias aéreas para repensar a recepção de uma unidade de saúde, e é onde aparecem as ideias que a concorrência direta não tem. O global amplia a observação para outros mercados e países. O objetivo não é copiar interfaces, é entender padrões de valor, custos, canais, barreiras e escolhas arquiteturais.",
+      "ordem": 12,
+      "evidencia": [
+        "Classifica um estudo de referência como competitivo, funcional ou global",
+        "Extrai de um caso de outro setor um padrão de valor aplicável ao problema em análise",
+        "Diz o que buscar além da interface ao observar um concorrente"
+      ],
+      "checagem": "Estudar o check-in de companhias aéreas para redesenhar a recepção de uma UBS é que tipo de benchmarking?",
+      "avaliacoes": [
+        "Canvas",
+        "Cust. Dev."
+      ],
+      "ementaPPC": [
+        "Busca de informações"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/OportunidadesSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_13",
+      "nome": "Os nove blocos do Canvas como mapa de hipóteses",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Business Model Canvas",
+      "descricao": "O Canvas é um mapa visual de hipóteses sobre criação, entrega e captura de valor, e deve mudar sempre que os experimentos gerarem evidência nova. Os nove blocos são segmentos de clientes, proposta de valor, canais, relacionamento, fontes de receita, recursos-chave, atividades-chave, parcerias-chave e estrutura de custos. Canais criam consciência, permitem avaliação, viabilizam compra, entregam valor e oferecem pós-venda; as fontes de receita exigem dizer quem paga, pelo quê, com que frequência e sob quais condições. A armadilha mais comum é preencher os blocos óbvios e deixar canais e atividades-chave implícitos.",
+      "ordem": 13,
+      "evidencia": [
+        "Preenche os nove blocos de um negócio real sem deixar canais e atividades-chave vazios",
+        "Trata cada bloco como hipótese e diz que evidência o confirmaria",
+        "Nomeia as opções de fonte de receita e identifica quem paga em cada uma"
+      ],
+      "checagem": "Quais são os nove blocos do Canvas, e por que ele é lido como conjunto de hipóteses?",
+      "avaliacoes": [
+        "Canvas"
+      ],
+      "ementaPPC": [
+        "Modelo de negócios."
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/CanvasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_14",
+      "nome": "Proposta de valor não é lista de funcionalidades",
+      "tipo": "CONCEITUAL",
+      "unidade": "Business Model Canvas",
+      "descricao": "A proposta de valor reúne os benefícios que resolvem dores e geram ganhos: novidade, desempenho, personalização, execução de uma tarefa, design, marca, preço, redução de custo ou de risco, acesso e usabilidade. Ela é formulada do ponto de vista do cliente. Agendamento online, senha digital e notificação por SMS é lista de funcionalidades; saber a que horas serei atendido, sem precisar chegar de madrugada, é proposta de valor. O teste é direto: a funcionalidade responde o que o sistema faz, a proposta de valor responde que dor deixa de existir.",
+      "ordem": 14,
+      "evidencia": [
+        "Reescreve uma lista de funcionalidades como proposta de valor na voz do cliente",
+        "Aplica o teste que distingue mecanismo de mudança na vida do cliente",
+        "Nomeia o tipo de benefício que a proposta entrega, entre os elementos do bloco"
+      ],
+      "checagem": "Qual é o teste que separa proposta de valor de lista de funcionalidades?",
+      "avaliacoes": [
+        "Canvas"
+      ],
+      "ementaPPC": [
+        "Modelo de negócios."
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/CanvasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_15",
+      "nome": "Recurso-chave e atividade-chave",
+      "tipo": "CONCEITUAL",
+      "unidade": "Business Model Canvas",
+      "descricao": "Recurso é o que a empresa utiliza e cabe na frase nós temos: plataforma, base de dados, integrações prontas, equipe, conhecimento regulatório, segurança e capital de giro, nas categorias física, intelectual, humana e financeira. Atividade é o que a empresa faz e cabe na frase nós fazemos: desenvolver, operar, vender, implantar, integrar, suportar, monitorar, analisar dados e garantir conformidade. Os erros frequentes são listar a equipe como se fosse a atividade que ela executa e tratar ter um bom software como atividade.",
+      "ordem": 15,
+      "evidencia": [
+        "Classifica itens de uma healthtech entre recursos e atividades usando o teste temos e fazemos",
+        "Corrige uma classificação invertida e explica a inversão",
+        "Nomeia as quatro categorias de recurso-chave"
+      ],
+      "checagem": "Conhecimento regulatório e garantir conformidade caem em qual bloco cada um, e por qual teste?",
+      "avaliacoes": [
+        "Canvas"
+      ],
+      "ementaPPC": [
+        "Modelo de negócios."
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/CanvasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_16",
+      "nome": "Coerência interna: mudar um bloco força revisar os outros",
+      "tipo": "CONCEITUAL",
+      "unidade": "Business Model Canvas",
+      "descricao": "Os blocos não são independentes. Uma proposta voltada a população vulnerável exige canais acessíveis e baixo consumo de dados, o que descarta um aplicativo pesado antes mesmo de discuti-lo. Se o pagador passa a ser o governo, o ciclo de vendas se alonga, o que eleva o CAC, a necessidade de capital de giro e a dependência de contratos. Se a receita é recorrente, relacionamento, suporte e retenção precisam sustentar a renovação, e não apenas a primeira venda. É essa cadeia que a banca cobra quando pede para explicar como a escolha do segmento altera canais e relacionamento.",
+      "ordem": 16,
+      "evidencia": [
+        "Percorre a cadeia de efeitos quando o pagador deixa de ser o consumidor e passa a ser o governo",
+        "Mostra como a escolha do segmento restringe canais e relacionamento",
+        "Explica o que a receita recorrente exige do bloco de relacionamento"
+      ],
+      "checagem": "Trocar o pagador de consumidor para governo produz que efeitos em cadeia no Canvas?",
+      "avaliacoes": [
+        "Canvas"
+      ],
+      "ementaPPC": [
+        "Modelo de negócios."
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/CanvasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_17",
+      "nome": "As quatro fases: duas buscam, duas executam",
+      "tipo": "CONCEITUAL",
+      "unidade": "Customer Development",
+      "descricao": "O Customer Development organiza a procura de um modelo em quatro fases. Customer Discovery e Customer Validation são busca: descobrir se o problema existe e importa para alguém identificável, e verificar se existe um processo de venda repetível para ele. Customer Creation e Company Building são execução: ampliar demanda no canal certo, ao custo certo, e formalizar departamentos, processos, metas, liderança e governança. Se a pergunta de uma fase ainda não tem resposta apoiada em comportamento observado, a fase seguinte não deveria começar; se as hipóteses não se sustentam, faz-se um pivot e volta-se à descoberta.",
+      "ordem": 17,
+      "evidencia": [
+        "Ordena as quatro fases e diz quais pertencem à busca e quais à execução",
+        "Enuncia a pergunta que cada fase responde",
+        "Explica por que inverter a fronteira é a definição operacional de escala prematura"
+      ],
+      "checagem": "Quais fases do Customer Development pertencem à busca de um modelo de negócio, e por quê?",
+      "avaliacoes": [
+        "Cust. Dev."
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/CustomerDevelopmentSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_18",
+      "nome": "Elogio não é evidência",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Customer Development",
+      "descricao": "Na descoberta, as perguntas exploram comportamento passado, o que a pessoa fez da última vez que teve o problema, e não intenção futura, que é barata de declarar e cara de acreditar. Uma frase como eu usaria vale pouco sem contexto, frequência, custo atual e comprometimento. Em vendas complexas mapeiam-se usuário, decisor econômico, influenciador técnico, aprovador jurídico e bloqueadores. Na validação, o que conta é contrato assinado, piloto pago, pré-venda, uso recorrente e carta de intenção de quem tem autoridade orçamentária; elogio, cadastro e reportagem não custam nada a quem os oferece.",
+      "ordem": 18,
+      "evidencia": [
+        "Reescreve uma pergunta de intenção futura como pergunta sobre comportamento passado",
+        "Ordena evidências da mais forte à mais fraca em uma venda a prefeituras",
+        "Diz por que uma carta de intenção sem autoridade orçamentária vale pouco"
+      ],
+      "checagem": "Em uma venda ao setor público, qual evidência é mais forte na validação: elogio do secretário, cadastros na landing page ou piloto com orçamento alocado?",
+      "avaliacoes": [
+        "Cust. Dev."
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/CustomerDevelopmentSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_19",
+      "nome": "As cinco patologias da busca",
+      "tipo": "META",
+      "unidade": "Customer Development",
+      "descricao": "Escala prematura é contratar, automatizar ou investir em aquisição antes de comprovar problema, solução e economia. Dissonância de invalidação é rejeitar evidência negativa para proteger a ideia, e o sinal aparece quando toda entrevista contrária vira esse não é nosso público. Métricas de vaidade é celebrar cadastros ou visualizações sem relação com valor. Repertório técnico insuficiente é escolher experimento inadequado à hipótese ou ler dados sem rigor. Teto epistemológico é o feedback atual revelar apenas melhorias incrementais, o que exige visão e teoria de valor e é também o limite do Lean.",
+      "ordem": 19,
+      "evidencia": [
+        "Diagnostica em um caso qual das cinco patologias está operando",
+        "Nomeia o sinal observável da dissonância de invalidação",
+        "Explica por que o teto epistemológico não se resolve com mais entrevistas"
+      ],
+      "checagem": "Quais são as cinco patologias do Customer Development, e qual delas descreve rejeitar evidência negativa?",
+      "avaliacoes": [
+        "Cust. Dev."
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/CustomerDevelopmentSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_20",
+      "nome": "Construir-Medir-Aprender planejado de trás para frente",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Lean Startup e MVP",
+      "descricao": "O Lean substitui ciclos longos baseados em previsão por ciclos curtos de construir, medir e aprender. A ordem de execução é construir, medir, aprender, mas a ordem de planejamento é a inversa: primeiro define-se o aprendizado necessário, depois a métrica que o revela e só então o MVP capaz de produzi-la. Sem essa lógica a equipe constrói algo pequeno, rápido e incapaz de responder à pergunta estratégica. O objetivo não é lançar depressa, é reduzir incerteza por unidade de tempo e recurso.",
+      "ordem": 20,
+      "evidencia": [
+        "Desenha um ciclo completo começando pelo aprendizado necessário e terminando no MVP",
+        "Distingue a ordem de execução da ordem de planejamento",
+        "Corrige um ciclo que começou pela construção e não responde a pergunta nenhuma"
+      ],
+      "checagem": "Em que ordem se planeja um ciclo Construir-Medir-Aprender, e por que ela é inversa à de execução?",
+      "avaliacoes": [
+        "Lean e MVP",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startup enxuta (Lean)"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/LeanMvpSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_21",
+      "nome": "Contabilidade da inovação: métrica acionável, A/B, coorte e funil",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Lean Startup e MVP",
+      "descricao": "A métrica acionável exibe relação causal entre uma mudança e um comportamento e sustenta a decisão de perseverar, ajustar ou pivotar; a métrica de vaidade cresce sem provar melhoria, como o total acumulado de cadastros, que nunca desce, ou seguidores e visualizações. O teste A/B compara grupos equivalentes divididos aleatoriamente, mudando uma variável de cada vez, e é o que permite atribuir a diferença à mudança feita. A análise de coorte acompanha pessoas que começaram em períodos semelhantes e separa melhora real de mudança na composição da base. O funil por etapa mostra onde as pessoas se perdem.",
+      "ordem": 21,
+      "evidencia": [
+        "Separa métricas acionáveis de métricas de vaidade em um painel real",
+        "Escolhe entre teste A/B, coorte e funil conforme a pergunta a responder",
+        "Explica por que a divisão aleatória entre controle e tratamento é o que torna o teste conclusivo"
+      ],
+      "checagem": "Por que conversão no grupo de tratamento contra o de controle é acionável e total acumulado de cadastros não é?",
+      "avaliacoes": [
+        "Lean e MVP",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startup enxuta (Lean)"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/LeanMvpSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_22",
+      "nome": "Os seis pivots",
+      "tipo": "CONCEITUAL",
+      "unidade": "Lean Startup e MVP",
+      "descricao": "Pivot é mudança estruturada que preserva o aprendizado e altera uma hipótese fundamental, não fracasso aleatório. No zoom-in, uma funcionalidade isolada se revela mais valiosa que o produto inteiro e passa a ser o produto. No zoom-out, o produto atual vira apenas funcionalidade de uma solução mais ampla. No de segmento de clientes, mantém-se o produto e troca-se o público. No de necessidade do cliente, o público tem um problema diferente e mais relevante. No de plataforma, passa-se de aplicação a plataforma, ou o contrário. No de tecnologia, outra base técnica entrega o mesmo valor com custo menor ou desempenho superior.",
+      "ordem": 22,
+      "evidencia": [
+        "Classifica um caso real em um dos seis pivots e descarta os vizinhos",
+        "Distingue zoom-in de zoom-out em um mesmo produto",
+        "Explica o que o pivot preserva e o que ele muda"
+      ],
+      "checagem": "Quando uma funcionalidade se torna o produto principal, que tipo de pivot ocorreu?",
+      "avaliacoes": [
+        "Lean e MVP",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startup enxuta (Lean)"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/LeanMvpSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_23",
+      "nome": "MVP: mínimo não é precário, e os seis tipos",
+      "tipo": "CONCEITUAL",
+      "unidade": "Lean Startup e MVP",
+      "descricao": "MVP é a versão ou experimento com o menor esforço capaz de completar um ciclo de aprendizagem validada, e mínimo significa suficiente para testar a hipótese central, não malfeito: um protótipo confuso gera ruído, não aprendizado. Os seis tipos são vídeo, que demonstra a experiência antes de construir a infraestrutura, como o Dropbox fez com sincronização; landing page, que mede interesse, conversão, preço ou mensagem; Wizard of Oz, em que o usuário percebe automação e a operação é manual nos bastidores; concierge, em que a equipe entrega o serviço pessoalmente; piecemeal, que combina ferramentas existentes; e protótipo, que testa fluxo, compreensão e usabilidade.",
+      "ordem": 23,
+      "evidencia": [
+        "Nomeia os seis tipos e descreve a experiência que cada um cria para o usuário",
+        "Justifica que mínimo é suficiente para testar a hipótese, não precário",
+        "Diferencia Wizard of Oz de concierge pelo que o usuário percebe"
+      ],
+      "checagem": "O que é um MVP, e qual a diferença entre Wizard of Oz e concierge?",
+      "avaliacoes": [
+        "Lean e MVP",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startup enxuta (Lean)",
+        "Prototipação de projeto"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/LeanMvpSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_24",
+      "nome": "Casar hipótese e experimento, e nomear o que ele não prova",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Lean Startup e MVP",
+      "descricao": "A escolha do experimento sai da hipótese: demanda pede landing page ou vídeo, medindo cadastros e pedidos de contato; compreensão de interface pede protótipo navegável, medindo conclusão da tarefa sem ajuda; processo operacional pede Wizard of Oz ou concierge, medindo tempo por atendimento, retrabalho e exceções; disposição a pagar pede pré-venda ou piloto pago, medindo pagamentos efetivados. Cada experimento responde a uma pergunta e cala sobre as outras: o protótipo elogiado não valida pagamento nem operação, a landing page não prova operação, o Wizard of Oz não prova escala e a pré-venda não prova retenção.",
+      "ordem": 24,
+      "evidencia": [
+        "Escolhe o experimento adequado a uma hipótese dada e diz o que vai medir",
+        "Enuncia o que aquele experimento não prova, antes de interpretar o resultado",
+        "Rejeita a conclusão de que um protótipo elogiado indica disposição a pagar"
+      ],
+      "checagem": "Para testar se as pessoas pagariam pela solução, qual experimento serve, e o que ele deixa em aberto?",
+      "avaliacoes": [
+        "Lean e MVP",
+        "Estudo de caso"
+      ],
+      "ementaPPC": [
+        "Startup enxuta (Lean)",
+        "Prototipação de projeto"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/LeanMvpSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_25",
+      "nome": "Pipeline e plataforma",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquiteturas digitais e comércio eletrônico",
+      "descricao": "No pipeline o valor flui por uma cadeia relativamente linear: insumos entram, são transformados e distribuídos, e o ativo principal é o processo de produção e a eficiência da cadeia. Na plataforma o valor vem das interações entre grupos distintos, como compradores e vendedores, criadores e espectadores, motoristas e passageiros, e o ativo principal é a qualidade e a frequência dessas interações. A distinção é sobre como o valor flui, não sobre infraestrutura, público ou forma de cobrança: uma plataforma pode rodar em servidor próprio e cobrar por transação sem deixar de ser plataforma.",
+      "ordem": 25,
+      "evidencia": [
+        "Classifica um negócio digital como pipeline ou plataforma pelo fluxo de valor",
+        "Rejeita nuvem, público e forma de cobrança como critérios de distinção",
+        "Diz como cada arquitetura cresce e qual risco típico corre"
+      ],
+      "checagem": "O que diferencia essencialmente uma plataforma de um pipeline?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Empreendedorismo digital"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/ArquiteturasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_26",
+      "nome": "Efeitos de rede, liquidez e o que um marketplace precisa ter",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquiteturas digitais e comércio eletrônico",
+      "descricao": "Os efeitos de rede diretos fazem o valor crescer com participantes do mesmo grupo; os indiretos fazem o valor de um lado crescer com o tamanho do outro; os negativos são congestionamento, fraude e queda de qualidade, e por isso a governança precisa definir entrada, reputação, regras e resolução de conflitos. Liquidez é a capacidade de encontrar contraparte adequada em tempo aceitável, então crescer usuários sem densidade de oferta e demanda piora a experiência, e é por isso que marketplaces crescem por cidade ou categoria antes de abrir tudo. Um marketplace exige inventário distribuído, catálogo, busca e matching, pagamento dividido, prevenção a fraude, reputação e tratamento de disputas.",
+      "ordem": 26,
+      "evidencia": [
+        "Classifica um efeito de rede como direto, indireto ou negativo",
+        "Explica por que crescer usuários sem densidade reduz a liquidez percebida",
+        "Lista os requisitos de um marketplace e diz o que quebra sem cada um"
+      ],
+      "checagem": "O que significa liquidez em um marketplace, e por que ela não é o total de usuários cadastrados?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Empreendedorismo digital"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/ArquiteturasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_27",
+      "nome": "Economia do SaaS e a Rule of 40",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquiteturas digitais e comércio eletrônico",
+      "descricao": "O SaaS transforma a aquisição de software de CAPEX em OPEX com assinatura recorrente, o que reduz a barreira de entrada; a multitenancy permite que vários clientes usem a mesma infraestrutura com isolamento lógico; as APIs viabilizam ecossistema e elevam o custo de troca. A receita recorrente melhora a previsibilidade e cobra retenção, segurança, suporte e evolução contínua. A Rule of 40 soma crescimento percentual anual e margem operacional percentual e sugere resultado próximo de 40: crescer 50% com margem de menos 10% passa, crescer 32% com margem de 6% dá 38 e fica logo abaixo. É heurística, não lei universal.",
+      "ordem": 27,
+      "evidencia": [
+        "Calcula a Rule of 40 somando crescimento e margem, sem subtrair nem multiplicar",
+        "Explica o que a multitenancy permite em termos de custo por cliente",
+        "Diz o que a receita recorrente cobra em troca da previsibilidade"
+      ],
+      "checagem": "Uma empresa cresce 32% ao ano com margem operacional de 6%: qual é a Rule of 40 e como se interpreta?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Empreendedorismo digital"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/ArquiteturasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_28",
+      "nome": "Comércio eletrônico: e-business, modalidades e adoção",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquiteturas digitais e comércio eletrônico",
+      "descricao": "E-commerce é a transação comercial por meios digitais; e-business abrange processos, integração, relacionamento e gestão digital, como um ERP ou a integração com fornecedores, que são e-business sem serem e-commerce. As camadas são frente de loja, back office e logística, e nuvem, big data e IA sustentam recomendação, prevenção a fraude, previsão de demanda e precificação dinâmica. As características são ubiquidade, alcance global, padrões universais, densidade de informação, personalização, interatividade e tecnologia social. As modalidades dizem quem está em cada ponta: B2C, B2B, C2C, C2B, B2G, G2B e G2C, com os recortes de m-commerce e social commerce. O TAM explica a adoção por utilidade e facilidade percebidas, e o ECM explica a continuidade pela confirmação de expectativas.",
+      "ordem": 28,
+      "evidencia": [
+        "Separa e-commerce de e-business com um exemplo de cada",
+        "Classifica uma transação nas modalidades, olhando quem oferece e quem recebe",
+        "Diz qual modelo explica a primeira adoção e qual explica a recompra"
+      ],
+      "checagem": "Qual é a diferença entre e-commerce e e-business, e o que o ECM explica que o TAM não explica?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Empreendedorismo digital"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/ArquiteturasSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_29",
+      "nome": "Retenção: Customer Success, os três churns, expansão e referral",
+      "tipo": "CONCEITUAL",
+      "unidade": "Aquisição, retenção e unit economics",
+      "descricao": "Customer Success é proativo e trabalha para que o cliente alcance o resultado que o levou a contratar, acompanhando onboarding, adoção, valor percebido e renovação; o suporte é reativo e resolve incidentes; o CRM organiza dados, interações e oportunidades. O churn voluntário é a decisão de cancelar por preço, valor percebido ou experiência; o involuntário é falha de pagamento ou cartão expirado, e parte dele se recupera com processo; o passivo é desengajamento sem cancelamento, que antecipa o cancelamento de amanhã. A expansão vem de upsell, cross-sell e aumento de uso, sem CAC novo, e o referral reduz o CAC por recomendação e prova social.",
+      "ordem": 29,
+      "evidencia": [
+        "Classifica um cancelamento como voluntário, involuntário ou passivo e indica a resposta adequada",
+        "Distingue Customer Success de suporte pela postura e pelo que cada um acompanha",
+        "Explica por que expansão eleva receita sem CAC novo"
+      ],
+      "checagem": "Quais são os três tipos de churn, e qual deles não aparece na receita de hoje?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Gestão do empreendimento",
+        "Negócio sustentável"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/UnitEconomicsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_30",
+      "nome": "CAC: como se calcula e por que a média engana",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Aquisição, retenção e unit economics",
+      "descricao": "CAC é as despesas de vendas e marketing do período divididas pelos novos clientes adquiridos no período. O numerador inclui salários, comissões, mídia, ferramentas, eventos e custos diretamente relacionados à aquisição, então limitar a conta à mídia paga subestima o CAC de forma sistemática. A média esconde diferenças entre canais e segmentos, por isso calcula-se por coorte, canal e perfil. Mídia paga entrega tráfego enquanto há investimento e sofre inflação de CAC; conteúdo e SEO demoram e criam ativo com custo marginal decrescente, com intenção informacional, comercial ou transacional, e o GEO adapta o conteúdo a mecanismos de resposta generativa.",
+      "ordem": 30,
+      "evidencia": [
+        "Calcula o CAC de um período e diz o que entra no numerador",
+        "Aponta o erro de considerar apenas mídia paga no cálculo",
+        "Explica por que um canal a R$ 200 e outro a R$ 1.400 desaparecem na média"
+      ],
+      "checagem": "Uma startup gastou R$ 90.000 e conquistou 150 clientes: qual é o CAC e o que deve compor esse gasto?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Negócio sustentável"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/UnitEconomicsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_31",
+      "nome": "LTV simplificado: ARPU, margem bruta e churn",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Aquisição, retenção e unit economics",
+      "descricao": "O LTV simplificado é ARPU multiplicado pela margem bruta e dividido pelo churn mensal. ARPU é a receita média por usuário, a margem bruta exclui os custos diretamente associados ao serviço e o churn precisa usar a mesma periodicidade do ARPU. Com ARPU de R$ 200, margem de 75% e churn de 5%, o LTV é 200 vezes 0,75, resultando em 150, dividido por 0,05, o que dá R$ 3.000: a margem entra antes da divisão pelo churn. A fórmula pressupõe comportamento estável, então um LTV projetado com poucos meses de operação é extrapolação, não medição.",
+      "ordem": 31,
+      "evidencia": [
+        "Calcula o LTV aplicando a margem antes de dividir pelo churn",
+        "Reconhece os erros clássicos: esquecer a margem, parar na margem ou multiplicar pelo churn",
+        "Diz por que o churn tem de usar a mesma periodicidade do ARPU"
+      ],
+      "checagem": "Com ARPU de R$ 200, margem bruta de 75% e churn mensal de 5%, quanto vale o LTV simplificado?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Negócio sustentável"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/UnitEconomicsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_32",
+      "nome": "LTV/CAC, payback e NRR: ler a unidade",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Aquisição, retenção e unit economics",
+      "descricao": "LTV/CAC diz quantas vezes o cliente devolve o custo de conquistá-lo: perto de 3 para 1 é referência de equilíbrio saudável, abaixo de 1 para 1 o cliente destrói valor antes dos custos fixos, e acima de 5 para 1 pode indicar eficiência ou subinvestimento em crescimento. Payback é CAC dividido pela margem de contribuição mensal por cliente, não pelo ARPU cheio: com CAC de R$ 600 e margem de R$ 120, são 5 meses, sendo abaixo de 12 meses confortável em SaaS e acima de 18 meses um risco de caixa. NRR é receita inicial menos churn menos contração mais expansão, dividida pela receita inicial e multiplicada por 100, e acima de 100% indica churn líquido de receita negativo. A leitura não para no resultado positivo: verifique concentração, maturidade das coortes, custos de suporte e inadimplência.",
+      "ordem": 32,
+      "evidencia": [
+        "Calcula LTV/CAC, payback e NRR em um mesmo cenário e interpreta cada número",
+        "Usa a margem de contribuição, e não o ARPU cheio, no denominador do payback",
+        "Lista o que verificar antes de comemorar um LTV/CAC alto"
+      ],
+      "checagem": "Com CAC de R$ 600, ARPU de R$ 150 e margem bruta de 80%, qual é o payback, e o que um NRR de 105% indica?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Negócio sustentável"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/UnitEconomicsSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_33",
+      "nome": "As quatro fontes de capital e a adequação ao estágio",
+      "tipo": "CONCEITUAL",
+      "unidade": "Financiamento de startups",
+      "descricao": "A fonte de capital altera velocidade, controle, governança, risco e expectativa de saída, e não existe fonte universalmente melhor. Bootstrapping cresce com recursos dos fundadores e com a receita, preserva participação e disciplina de custos, limita velocidade e expõe o fundador. O investidor-anjo é pessoa física com capital próprio em estágio inicial, e o smart money agrega rede, experiência e credibilidade. O venture capital acelera infraestrutura, contratação e expansão e traz governança, metas, direitos preferenciais e pressão por liquidez, e não serve a negócios lucrativos sem escala compatível com o retorno do fundo. O crowdfunding capta junto a muitas pessoas. Por estágio: descoberta usa recursos próprios, bolsas, editais e incubação; MVP e validação usam bootstrapping, anjo, pré-venda e aceleração; tração usa seed e fundos especializados; escala usa rodadas maiores.",
+      "ordem": 33,
+      "evidencia": [
+        "Compara as quatro fontes em controle, velocidade, governança e risco para o fundador",
+        "Escolhe a fonte adequada a um estágio dado e justifica pela incerteza restante",
+        "Explica por que uma empresa lucrativa de crescimento moderado é péssimo ativo de venture capital"
+      ],
+      "checagem": "Que fonte de capital corresponde ao estágio de descoberta, e por que venture capital pode não servir a uma empresa lucrativa?",
+      "avaliacoes": [
+        "Financiamento"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/FinanciamentoSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_34",
+      "nome": "Diluição em números e instrumentos conversíveis",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Financiamento de startups",
+      "descricao": "Diluição é a redução percentual da participação dos sócios quando novas quotas ou ações são emitidas. Se dois sócios detêm 100% de uma empresa avaliada em R$ 1.000.000 e um investidor aporta R$ 250.000 por 20% do capital, a empresa passa a valer R$ 1.250.000 e cada sócio vai de 50% para 40%, mantendo R$ 500.000 em valor: no momento do aporte empata-se, e o ganho só existe se o capital fizer a empresa valer mais que R$ 1,25 milhão. O risco não é diluir, é ceder participação e controle sem clareza sobre uso do capital e marcos. Instrumentos conversíveis postergam a definição do valuation, convertendo o aporte em participação numa rodada futura por desconto ou teto.",
+      "ordem": 34,
+      "evidencia": [
+        "Calcula o valuation pós-aporte e a nova participação de cada sócio",
+        "Mostra em valor, e não só em percentual, o efeito da diluição no momento do aporte",
+        "Diz quando um instrumento conversível é preferível a precificar a empresa hoje"
+      ],
+      "checagem": "Um aporte de R$ 250.000 por 20% em uma empresa de R$ 1.000.000 leva cada sócio de 50% a quanto, e o valor da fatia sobe, cai ou empata?",
+      "avaliacoes": [
+        "Financiamento"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/FinanciamentoSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_35",
+      "nome": "Crowdfunding: recompensa, dívida e equity",
+      "tipo": "CONCEITUAL",
+      "unidade": "Financiamento de startups",
+      "descricao": "Na modalidade de recompensa ou pré-venda o apoiador recebe produto, experiência ou benefício, o que valida demanda real e financia produção, e o atraso na entrega vira dano reputacional público. Na modalidade de dívida ou P2P há empréstimo com juros, e a obrigação financeira permanece mesmo se o negócio não decolar. No equity crowdfunding o apoiador recebe participação societária, o que exige conformidade com as regras da CVM e cria um número grande de sócios. Além de capital, a campanha produz marketing e comunidade, e na mesma medida expõe a ideia e cria obrigação com muitos apoiadores.",
+      "ordem": 35,
+      "evidencia": [
+        "Identifica qual modalidade entrega participação societária e aciona a CVM",
+        "Diz o que cada modalidade valida e qual é o risco principal de cada uma",
+        "Explica por que produto complexo ou difícil de explicar não combina com campanha"
+      ],
+      "checagem": "Qual modalidade de crowdfunding entrega participação societária e exige conformidade com a CVM?",
+      "avaliacoes": [
+        "Financiamento"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/FinanciamentoSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_36",
+      "nome": "O plano de negócio, o sumário executivo e a SWOT que decide",
+      "tipo": "CONCEITUAL",
+      "unidade": "Plano de negócio e Pitch Deck",
+      "descricao": "O plano organiza escolhas estratégicas e financeiras com mais detalhamento operacional e projeções do que o Canvas, que o antecede e alimenta. As seções são sumário executivo; empreendimento e equipe, com competências dos sócios, responsabilidades, missão, forma jurídica, regime tributário e capital social; análise de mercado; plano de marketing, com produto, preço, promoção, canais e localização; plano financeiro; e análise estratégica. O sumário executivo aparece primeiro e é escrito por último, porque só depois de fechar mercado, modelo, equipe e finanças é possível resumi-los. Na SWOT, forças e fraquezas são internas e oportunidades e ameaças são externas, e a utilidade está em gerar decisão, inclusive o gatilho de reação a uma ameaça.",
+      "ordem": 36,
+      "evidencia": [
+        "Nomeia as seções do plano e o que cada uma resolve",
+        "Justifica escrever o sumário executivo por último",
+        "Transforma um quadrante da SWOT em decisão com dono e gatilho"
+      ],
+      "checagem": "Por que o sumário executivo é escrito por último, e o que torna uma SWOT útil em vez de decorativa?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Gestão do empreendimento",
+        "Mecanismos e procedimentos para criação de empresas"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/PlanoPitchSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_37",
+      "nome": "Indicadores do plano financeiro",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Plano de negócio e Pitch Deck",
+      "descricao": "O plano financeiro reúne investimentos fixos, capital de giro, despesas pré-operacionais, receitas, custos variáveis e diretos, custos fixos e depreciação. Margem de contribuição é receita menos custos e despesas variáveis. Ponto de equilíbrio é custos fixos divididos pela margem de contribuição percentual: com R$ 50.000 de custos fixos e margem de 40%, são R$ 125.000 de receita, e dividir por 0,60 é o erro mais comum. Lucratividade é lucro líquido sobre receita total vezes 100 e mede desempenho sobre vendas; rentabilidade é lucro líquido sobre investimento total vezes 100 e mede retorno do capital investido. Payback simples é investimento inicial dividido pela geração média de caixa por período e não considera o valor do dinheiro no tempo.",
+      "ordem": 37,
+      "evidencia": [
+        "Calcula o ponto de equilíbrio dividindo custos fixos pela margem percentual",
+        "Separa lucratividade de rentabilidade dizendo que pergunta cada uma responde",
+        "Aponta a limitação do payback simples"
+      ],
+      "checagem": "Com custos fixos de R$ 50.000 e margem de contribuição de 40%, qual é o ponto de equilíbrio?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [
+        "Gestão do empreendimento",
+        "Negócio sustentável"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/PlanoPitchSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_38",
+      "nome": "TAM, SAM, SOM e a estimativa bottom-up",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Plano de negócio e Pitch Deck",
+      "descricao": "TAM é o mercado total teórico, todo mundo que tem o problema, sem restrição de modelo ou geografia, e serve para dimensionar ambição, não para projetar receita. SAM é a parcela atendível pelo modelo e pela geografia escolhidos, já considerando canal, idioma, regulação e forma de contratação. SOM é a participação realisticamente alcançável no horizonte analisado, dada a capacidade de aquisição e entrega da equipe. A estimativa bottom-up parte do número de clientes potenciais, do preço e da capacidade de aquisição, e por isso é mais defensável do que aplicar um percentual arbitrário sobre um relatório amplo: no FilaZero, quantos municípios têm UBS elegíveis, quanto se cobraria por unidade e quantas unidades a equipe implanta por trimestre.",
+      "ordem": 38,
+      "evidencia": [
+        "Monta TAM, SAM e SOM de um negócio concreto e explicita o método de cada um",
+        "Constrói uma estimativa bottom-up com clientes, preço e capacidade de implantação",
+        "Recusa o percentual arbitrário sobre um mercado de bilhões e diz por quê"
+      ],
+      "checagem": "Qual é a diferença entre TAM, SAM e SOM, e por que uma estimativa bottom-up é mais defensável?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/PlanoPitchSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_39",
+      "nome": "Pitch deck: narrativa, evidência e o pedido",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Plano de negócio e Pitch Deck",
+      "descricao": "O pitch é uma narrativa visual cujo objetivo é conquistar a próxima conversa ou decisão, com abertura e propósito, problema, solução, por que agora, mercado, produto e tração, modelo de negócio, concorrência e moat, go-to-market, equipe e pedido. Investidores observam CAC, LTV, payback, margem, churn, MRR e crescimento, com LTV acima de três vezes o CAC e payback abaixo de doze meses como referências, não garantias. São 10 a 15 slides, fontes grandes, uma ideia por tela e gráficos legíveis, e métricas ainda não observadas precisam ser rotuladas como metas. Moat é a capacidade de defender a posição, por efeitos de rede, custo de troca, dados proprietários, integrações profundas, marca ou vantagem regulatória, e não uma lista de funcionalidades.",
+      "ordem": 39,
+      "evidencia": [
+        "Ordena os slides do pitch e diz o que cada um precisa provar",
+        "Rotula como meta a métrica que ainda não foi observada",
+        "Responde o que sustenta o moat, sem apelar para a interface"
+      ],
+      "checagem": "Que blocos compõem a narrativa de um pitch, e o que precisa acontecer com métricas ainda não observadas?",
+      "avaliacoes": [
+        "Pitch Deck"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/PlanoPitchSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_40",
+      "nome": "Intraempreendedorismo: inovar dentro de uma organização",
+      "tipo": "CONCEITUAL",
+      "unidade": "Intraempreendedorismo, impacto social e GEM 2024",
+      "descricao": "O intraempreendedorismo cria inovação dentro de organizações existentes, e o termo foi difundido por Gifford Pinchot III: o intraempreendedor usa recursos e infraestrutura da organização mas age com iniciativa, criatividade, visão estratégica e risco calculado. Favorecem a prática segurança para experimentar, critérios claros de seleção, mentoria, reconhecimento e integração da iniciativa à estratégia; travam burocracia, cultura avessa ao erro, falta de autonomia, falta de tempo e recursos e ausência de apoio da liderança. Gmail, botão Curtir, PlayStation e Post-it costumam ser contados como histórias de indivíduos geniais, mas só existiram porque havia essas condições institucionais.",
+      "ordem": 40,
+      "evidencia": [
+        "Distingue o intraempreendedor do empreendedor independente pelo uso de recursos e pelo risco assumido",
+        "Aponta, em um caso, qual condição institucional faltou para a iniciativa avançar",
+        "Reinterpreta os exemplos conhecidos como resultado de condições, não só de talento"
+      ],
+      "checagem": "O que caracteriza o intraempreendedorismo, e que condições precisam existir para que ele aconteça?",
+      "avaliacoes": [],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/ContextosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_41",
+      "nome": "Empreendedorismo social e teoria da mudança",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Intraempreendedorismo, impacto social e GEM 2024",
+      "descricao": "No empreendedorismo social o impacto positivo é o propósito central, com ou sem fins lucrativos, equilibrando missão, sustentabilidade financeira e governança, e a inovação social precisa envolver a comunidade em vez de tratar beneficiários como receptores passivos. A teoria da mudança encadeia recursos e atividades em resultados imediatos, intermediários e impacto de longo prazo. Output é a entrega, como o número de atendimentos agendados; outcome é a mudança de comportamento ou condição, como a redução consistente do tempo de espera e das faltas; impacto é a transformação de longo prazo, como a melhoria de acesso à atenção básica.",
+      "ordem": 41,
+      "evidencia": [
+        "Classifica indicadores de um projeto social em output, outcome e impacto",
+        "Monta a cadeia da teoria da mudança de recursos até impacto",
+        "Rejeita indicadores financeiros como medida de transformação social"
+      ],
+      "checagem": "Em uma solução como o FilaZero, o que é output, o que é outcome e o que é impacto?",
+      "avaliacoes": [],
+      "ementaPPC": [
+        "Negócio sustentável"
+      ],
+      "fonte": "src/content/empreendedorismo-digital/sections/ContextosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_42",
+      "nome": "GEM 2024: os números e o que eles não provam",
+      "tipo": "CONCEITUAL",
+      "unidade": "Intraempreendedorismo, impacto social e GEM 2024",
+      "descricao": "Em 2024 a taxa total de empreendedorismo chegou a 33,4%, contra 30,1% em 2023, com aproximadamente 46,9 milhões de brasileiros de 18 a 64 anos envolvidos, taxa inicial de 20,3% e de estabelecidos de 13,2%. Empreendedor nascente está estruturando ou operando por muito pouco tempo, novo empreendedor tem negócio em fase inicial e estabelecido superou o período definido pelo estudo. As motivações coexistem: fazer diferença no mundo 74,6%, escassez de empregos 73,9%, riqueza ou renda elevada 69,3% e tradição familiar 35,4%. Apenas 38,6% tinham CNPJ, cerca de 800 mil novos negócios indicaram inovação ou clientes nacionais e cerca de 130 mil alcance internacional, e entre os iniciais 96,2% usavam tecnologias digitais para vender: digitalização virou infraestrutura básica e não prova inovação nem transformação de modelo.",
+      "ordem": 42,
+      "evidencia": [
+        "Cita os indicadores principais do GEM 2024 sem confundir taxa inicial com taxa de estabelecidos",
+        "Interpreta os 96,2% de uso de tecnologia digital sem concluir alta inovação",
+        "Explica por que empreender por necessidade não implica ausência de inovação"
+      ],
+      "checagem": "O que os 96,2% de empreendedores iniciais usando tecnologia digital permitem, e o que não permitem, concluir?",
+      "avaliacoes": [],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/ContextosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_43",
+      "nome": "FilaZero Saúde: os pontos cegos de uma hipótese B2G",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Estudos de caso",
+      "descricao": "O FilaZero é uma healthtech B2G para a espera excessiva e imprevisível em UBS, com recorte em consultas simples, população dependente do SUS e usuários com celulares básicos, combinando agendamento, senha online e previsão de horário. A hipótese precisa enfrentar capacidade da unidade, triagem clínica, faltas, urgências, integração com prontuário e regulação, LGPD para dado sensível, acessibilidade e pessoas sem conectividade. Os experimentos indicados começam por mapear o fluxo real de duas UBS, testar reserva manual assistida, comparar lembretes contra um grupo de controle, medir satisfação, espera, não comparecimento e carga administrativa, e validar disposição institucional com piloto formal. Espera de 30 minutos, 500 atendimentos, 85% de comparecimento e satisfação 4,5 são metas, não resultados observados.",
+      "ordem": 43,
+      "evidencia": [
+        "Lista os pontos cegos que o agendamento digital não resolve por si só",
+        "Desenha a sequência de experimentos começando pela linha de base",
+        "Apresenta os números do projeto como metas, distinguindo meta, projeção e resultado observado"
+      ],
+      "checagem": "Quais pontos cegos a hipótese do FilaZero precisa enfrentar, e como devem ser apresentados os números divulgados?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/CasosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_44",
+      "nome": "Twitch: pivot, plataforma e receitas múltiplas",
+      "tipo": "CONCEITUAL",
+      "unidade": "Estudos de caso",
+      "descricao": "A Twitch nasceu do Justin.tv, uma experiência ampla de transmissão ao vivo, e o excesso de conteúdo e a falta de foco revelaram que jogos concentravam o interesse, levando ao pivot de 2011; a Amazon adquiriu a empresa por cerca de US$ 970 milhões. O modelo reúne publicidade, assinaturas, doações e Bits, distribuindo risco entre fontes diferentes. É repetível porque cada novo criador segue a mesma lógica de transmissão, audiência e monetização, e escalável porque a plataforma cresce sem produção centralizada proporcional, com efeitos de rede em que mais criadores atraem mais espectadores, que atraem mais criadores, e o chat ao vivo diferenciando a experiência do vídeo sob demanda.",
+      "ordem": 44,
+      "evidencia": [
+        "Justifica por que a Twitch atende à definição de startup em repetibilidade, escalabilidade e incerteza",
+        "Explica o pivot de 2011 a partir do que o Justin.tv revelou",
+        "Mostra o ciclo de efeitos de rede entre criadores e espectadores"
+      ],
+      "checagem": "O que torna a Twitch um modelo repetível e escalável com efeitos de rede?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/CasosSection.tsx"
+    },
+    {
+      "id": "mt_EMPD_45",
+      "nome": "TechNova: de Concluído a Validado, e o pivot zoom-in",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Estudos de caso",
+      "descricao": "A TechNova construiu por um longo período um produto tecnicamente sólido, mas sem tração. Um MVP em vídeo captou milhares de e-mails, um Wizard of Oz simulou o onboarding manualmente e o fluxo de desenvolvimento passou a exigir o estado Validado depois de Concluído, porque uma história tecnicamente concluída não é necessariamente valiosa: a funcionalidade precisa produzir o comportamento esperado no usuário. Integração contínua, pequenos lotes, implantação contínua e rollback baixaram o custo de experimentar. As análises mostraram que a descoberta social gerava mais valor que o fluxo completo de compra, o que levou a um pivot zoom-in, e o teste do agendamento de retirada usou divisão aleatória entre controle e tratamento, medindo conversão em transações concluídas, e não cliques.",
+      "ordem": 45,
+      "evidencia": [
+        "Explica o que o estado Validado acrescenta ao Concluído no fluxo de desenvolvimento",
+        "Escolhe conversão em transações concluídas como métrica central do teste, e descarta cliques",
+        "Identifica o pivot como zoom-in e diz o que ele preservou"
+      ],
+      "checagem": "Por que a TechNova acrescentou o estado Validado depois de Concluído, e qual métrica central usou no teste A/B?",
+      "avaliacoes": [
+        "Estudo de caso",
+        "Pitch Deck"
+      ],
+      "ementaPPC": [],
+      "fonte": "src/content/empreendedorismo-digital/sections/CasosSection.tsx"
+    }
+  ],
+  "arestas": [
+    {
+      "topicoId": "mt_EMPD_02",
+      "prerequisitoId": "mt_EMPD_01",
+      "forca": "soft",
+      "razao": "A distinção entre risco e incerteza refina a incerteza que já aparece na definição de empreender, então o aluno precisa ter a definição antes de dividi-la.",
+      "origem": "texto",
+      "trecho": "empreender é identificar, construir e explorar uma oportunidade sob incerteza, mobilizando recursos para gerar valor"
+    },
+    {
+      "topicoId": "mt_EMPD_03",
+      "prerequisitoId": "mt_EMPD_01",
+      "forca": "soft",
+      "razao": "Schumpeter e Kirzner explicam de onde vem a oportunidade que a definição de empreender pressupõe, e sem ela as duas escolas viram nomes soltos.",
+      "origem": "texto",
+      "trecho": "a oportunidade existe porque preços, necessidades, informações e recursos ainda não estão perfeitamente coordenados"
+    },
+    {
+      "topicoId": "mt_EMPD_04",
+      "prerequisitoId": "mt_EMPD_01",
+      "forca": "soft",
+      "razao": "Estudar a intenção de empreender exige saber antes o que é o comportamento cuja intenção se está explicando.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_EMPD_05",
+      "prerequisitoId": "mt_EMPD_02",
+      "forca": "soft",
+      "razao": "O papel de cientista, que formula hipóteses e mede, só se justifica porque a incerteza impede administrar por previsão, e é isso que separa esse papel do de engenheiro.",
+      "origem": "texto",
+      "trecho": "por isso uma startup não pode ser administrada só por previsão rígida"
+    },
+    {
+      "topicoId": "mt_EMPD_06",
+      "prerequisitoId": "mt_EMPD_02",
+      "forca": "hard",
+      "razao": "A incerteza extrema é um dos quatro elementos da definição de startup, e sem separar risco de incerteza o elemento fica vazio.",
+      "origem": "texto",
+      "trecho": "Problema, solução, canal, preço ou mercado ainda não estão plenamente comprovados. É o que distingue a startup da pequena empresa tradicional."
+    },
+    {
+      "topicoId": "mt_EMPD_07",
+      "prerequisitoId": "mt_EMPD_06",
+      "forca": "hard",
+      "razao": "O contraste entre encomenda e SaaS multitenant é a aplicação dos elementos repetibilidade e escalabilidade, que só existem depois da definição.",
+      "origem": "texto",
+      "trecho": "Receita e impacto podem crescer em velocidade superior aos custos. Um SaaS multitenant serve milhares de clientes com a mesma base tecnológica."
+    },
+    {
+      "topicoId": "mt_EMPD_08",
+      "prerequisitoId": "mt_EMPD_06",
+      "forca": "hard",
+      "razao": "O ciclo de vida descreve a passagem da busca para a execução, que é justamente o que a definição de organização temporária estabelece.",
+      "origem": "texto",
+      "trecho": "CICLO DE VIDA: ideação, validação, operação e escala."
+    },
+    {
+      "topicoId": "mt_EMPD_09",
+      "prerequisitoId": "mt_EMPD_01",
+      "forca": "soft",
+      "razao": "As cinco condições operacionalizam a oportunidade que a definição de empreender apenas nomeia.",
+      "origem": "texto",
+      "trecho": "Uma ideia vira OPORTUNIDADE quando combina problema relevante, público identificável, solução possível, momento adequado e mecanismo econômico."
+    },
+    {
+      "topicoId": "mt_EMPD_10",
+      "prerequisitoId": "mt_EMPD_09",
+      "forca": "soft",
+      "razao": "A investigação de causa serve para verificar a primeira condição, o problema relevante, então ela vem depois de saber que condição está sendo testada.",
+      "origem": "texto",
+      "trecho": "O método dos 5 Porquês investiga causas, mas precisa ser confrontado com observação e entrevistas."
+    },
+    {
+      "topicoId": "mt_EMPD_11",
+      "prerequisitoId": "mt_EMPD_09",
+      "forca": "soft",
+      "razao": "Segmentar e mapear papéis é como se cumpre a condição de público identificável, que precisa estar posta antes.",
+      "origem": "texto",
+      "trecho": "É preciso saber quem sente a dor, onde encontrá-lo e como falar com ele"
+    },
+    {
+      "topicoId": "mt_EMPD_12",
+      "prerequisitoId": "mt_EMPD_09",
+      "forca": "soft",
+      "razao": "O benchmarking alimenta as condições de solução possível e momento adequado, porque procura padrões de valor, custos, canais e barreiras já observados em outros mercados.",
+      "origem": "texto",
+      "trecho": "o objetivo não é copiar interfaces, é entender padrões de valor, custos, canais, barreiras e escolhas arquiteturais."
+    },
+    {
+      "topicoId": "mt_EMPD_13",
+      "prerequisitoId": "mt_EMPD_06",
+      "forca": "hard",
+      "razao": "O Canvas é o mapa do modelo de negócio, então sem a noção de criar, entregar e capturar valor os nove blocos não têm o que organizar.",
+      "origem": "texto",
+      "trecho": "Modelo de negócio explica como se cria, entrega e captura valor."
+    },
+    {
+      "topicoId": "mt_EMPD_13",
+      "prerequisitoId": "mt_EMPD_11",
+      "forca": "soft",
+      "razao": "O primeiro bloco do Canvas é segmentos de clientes, e ele reaproveita diretamente os critérios de segmentação já estudados.",
+      "origem": "texto",
+      "trecho": "A segmentação deve distinguir necessidades, disposição a pagar, canais e relacionamento."
+    },
+    {
+      "topicoId": "mt_EMPD_14",
+      "prerequisitoId": "mt_EMPD_13",
+      "forca": "hard",
+      "razao": "A proposta de valor é um dos nove blocos, e o erro de trocá-la por funcionalidades só se percebe olhando o bloco no lugar dele.",
+      "origem": "texto",
+      "trecho": "Formule do ponto de vista do cliente, não como lista de funcionalidades."
+    },
+    {
+      "topicoId": "mt_EMPD_15",
+      "prerequisitoId": "mt_EMPD_13",
+      "forca": "hard",
+      "razao": "Recursos-chave e atividades-chave são dois dos nove blocos, e a confusão entre eles só aparece quando os dois já estão na mesa.",
+      "origem": "texto",
+      "trecho": "Atividade é o que se faz; recurso é o que se usa."
+    },
+    {
+      "topicoId": "mt_EMPD_16",
+      "prerequisitoId": "mt_EMPD_13",
+      "forca": "hard",
+      "razao": "A coerência interna é uma propriedade do conjunto dos nove blocos: sem os blocos preenchidos não há cadeia de efeitos para revisar.",
+      "origem": "texto",
+      "trecho": "Mudar um bloco força a revisão dos outros."
+    },
+    {
+      "topicoId": "mt_EMPD_16",
+      "prerequisitoId": "mt_EMPD_11",
+      "forca": "soft",
+      "razao": "A cadeia de efeitos mais cobrada parte da troca do pagador, e quem não distinguiu pagador de usuário não enxerga a mudança em canais, custos e receita.",
+      "origem": "texto",
+      "trecho": "se o pagador é governo o ciclo de vendas é mais longo, elevando CAC, capital de giro e dependência de contratos"
+    },
+    {
+      "topicoId": "mt_EMPD_17",
+      "prerequisitoId": "mt_EMPD_06",
+      "forca": "hard",
+      "razao": "As quatro fases organizam justamente a busca pelo modelo de negócio que define a startup, e a fronteira busca contra execução repete a passagem de organização temporária para execução.",
+      "origem": "texto",
+      "trecho": "organiza a busca por um modelo em QUATRO FASES. As duas primeiras são BUSCA, as duas últimas são EXECUÇÃO."
+    },
+    {
+      "topicoId": "mt_EMPD_17",
+      "prerequisitoId": "mt_EMPD_08",
+      "forca": "soft",
+      "razao": "A fase de validação encerra a busca procurando sinais de product-market fit, então ela pressupõe saber que sinais são esses.",
+      "origem": "texto",
+      "trecho": "busca-se processo de venda repetível e sinais de PMF"
+    },
+    {
+      "topicoId": "mt_EMPD_18",
+      "prerequisitoId": "mt_EMPD_17",
+      "forca": "hard",
+      "razao": "A régua de evidência muda conforme a fase: comportamento passado na descoberta, compromisso formal na validação, e sem as fases não há onde aplicar a régua.",
+      "origem": "texto",
+      "trecho": "As perguntas exploram comportamento passado, não intenção futura."
+    },
+    {
+      "topicoId": "mt_EMPD_18",
+      "prerequisitoId": "mt_EMPD_11",
+      "forca": "soft",
+      "razao": "Em venda complexa a entrevista precisa alcançar cada papel da decisão, então o mapa de papéis vem antes de escolher com quem falar.",
+      "origem": "texto",
+      "trecho": "em vendas complexas mapear usuário, decisor econômico, influenciador técnico, aprovador jurídico e bloqueadores"
+    },
+    {
+      "topicoId": "mt_EMPD_19",
+      "prerequisitoId": "mt_EMPD_17",
+      "forca": "hard",
+      "razao": "As patologias são desvios da ordem das fases, e a escala prematura é definida exatamente como executar antes de validar.",
+      "origem": "texto",
+      "trecho": "Contratar, automatizar ou investir em aquisição antes de comprovar problema, solução e economia. Crescer sem ajuste apenas amplifica o desperdício."
+    },
+    {
+      "topicoId": "mt_EMPD_19",
+      "prerequisitoId": "mt_EMPD_08",
+      "forca": "soft",
+      "razao": "A escala prematura só é reconhecida como patologia por quem já sabe que a escala deveria vir depois da evidência de product-market fit.",
+      "origem": "texto",
+      "trecho": "Crescer antes do PMF apenas amplifica desperdício."
+    },
+    {
+      "topicoId": "mt_EMPD_20",
+      "prerequisitoId": "mt_EMPD_02",
+      "forca": "soft",
+      "razao": "O ciclo curto existe porque a incerteza impede planejar por previsão, então a troca de ciclos longos por experimentos depende dessa distinção.",
+      "origem": "texto",
+      "trecho": "substitui ciclos longos baseados em previsão por ciclos curtos de CONSTRUIR, MEDIR e APRENDER"
+    },
+    {
+      "topicoId": "mt_EMPD_21",
+      "prerequisitoId": "mt_EMPD_20",
+      "forca": "hard",
+      "razao": "A métrica é o segundo passo do planejamento invertido do ciclo, definida depois do aprendizado necessário e antes do MVP.",
+      "origem": "texto",
+      "trecho": "primeiro define-se o aprendizado necessário, depois a métrica, só então o MVP"
+    },
+    {
+      "topicoId": "mt_EMPD_22",
+      "prerequisitoId": "mt_EMPD_21",
+      "forca": "soft",
+      "razao": "A decisão de pivotar é uma das três saídas que a métrica acionável sustenta, então sem métrica acionável o pivot vira palpite.",
+      "origem": "texto",
+      "trecho": "Perseverar, ajustar ou pivotar, com base em evidência."
+    },
+    {
+      "topicoId": "mt_EMPD_23",
+      "prerequisitoId": "mt_EMPD_20",
+      "forca": "hard",
+      "razao": "O MVP é definido pelo ciclo de aprendizagem validada que ele precisa fechar, e é o último item do planejamento invertido.",
+      "origem": "texto",
+      "trecho": "MVP é a versão ou experimento com o MENOR ESFORÇO capaz de completar um ciclo de aprendizagem validada"
+    },
+    {
+      "topicoId": "mt_EMPD_24",
+      "prerequisitoId": "mt_EMPD_23",
+      "forca": "hard",
+      "razao": "Só quem conhece os seis tipos pode escolher entre eles pela hipótese e dizer o que cada um deixa em aberto.",
+      "origem": "texto",
+      "trecho": "cada experimento responde a uma pergunta e cala sobre as outras."
+    },
+    {
+      "topicoId": "mt_EMPD_24",
+      "prerequisitoId": "mt_EMPD_18",
+      "forca": "soft",
+      "razao": "Pré-venda e piloto pago são os mesmos instrumentos de evidência da validação de clientes, agora escolhidos a partir da hipótese a testar.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_EMPD_25",
+      "prerequisitoId": "mt_EMPD_06",
+      "forca": "soft",
+      "razao": "Pipeline e plataforma são duas formas de organizar a criação, entrega e captura de valor, ou seja, dois desenhos do modelo de negócio.",
+      "origem": "texto",
+      "trecho": "Explica como a organização cria, entrega e captura valor. Enquanto ele não estiver comprovado, a empresa está em busca, não em execução."
+    },
+    {
+      "topicoId": "mt_EMPD_25",
+      "prerequisitoId": "mt_EMPD_07",
+      "forca": "soft",
+      "razao": "O exemplo canônico de pipeline no material é a fábrica de software sob encomenda, o mesmo caso usado para discutir escalabilidade.",
+      "origem": "texto",
+      "trecho": "Uma fábrica de software sob encomenda, ou um varejo próprio."
+    },
+    {
+      "topicoId": "mt_EMPD_26",
+      "prerequisitoId": "mt_EMPD_25",
+      "forca": "hard",
+      "razao": "Efeitos de rede e liquidez são propriedades da plataforma e não do pipeline, então a distinção precisa estar feita antes.",
+      "origem": "texto",
+      "trecho": "é por isso que efeitos de rede aparecem numa e não na outra."
+    },
+    {
+      "topicoId": "mt_EMPD_27",
+      "prerequisitoId": "mt_EMPD_07",
+      "forca": "hard",
+      "razao": "A economia do SaaS desenvolve o mesmo exemplo de multitenancy que sustentou a ideia de escalabilidade, agora com CAPEX, OPEX e retenção.",
+      "origem": "texto",
+      "trecho": "Vários clientes usam a mesma infraestrutura com isolamento lógico. É o que permite servir milhares sem multiplicar o custo na mesma proporção."
+    },
+    {
+      "topicoId": "mt_EMPD_28",
+      "prerequisitoId": "mt_EMPD_26",
+      "forca": "soft",
+      "razao": "As modalidades do comércio eletrônico incluem casos em que a plataforma intermedeia a transação, o que exige a noção de plataforma e liquidez.",
+      "origem": "texto",
+      "trecho": "Marketplace de usados, com a plataforma intermediando."
+    },
+    {
+      "topicoId": "mt_EMPD_29",
+      "prerequisitoId": "mt_EMPD_08",
+      "forca": "soft",
+      "razao": "A retenção é o principal sinal de product-market fit, então o trabalho de Customer Success e a leitura do churn continuam esse fio.",
+      "origem": "texto",
+      "trecho": "As pessoas continuam usando depois da novidade passar. É o sinal mais difícil de falsificar."
+    },
+    {
+      "topicoId": "mt_EMPD_30",
+      "prerequisitoId": "mt_EMPD_08",
+      "forca": "soft",
+      "razao": "O CAC só ganha sentido econômico junto com a retenção: sem ela o gasto de aquisição não retorna, que é o argumento contra escalar cedo.",
+      "origem": "texto",
+      "trecho": "Sem retenção, o CAC é gasto e não retorna."
+    },
+    {
+      "topicoId": "mt_EMPD_31",
+      "prerequisitoId": "mt_EMPD_29",
+      "forca": "hard",
+      "razao": "O churn é o denominador do LTV simplificado, então quem não domina os tipos de churn e sua periodicidade calcula a fórmula sem saber o que divide.",
+      "origem": "texto",
+      "trecho": "o churn precisa usar a mesma periodicidade"
+    },
+    {
+      "topicoId": "mt_EMPD_32",
+      "prerequisitoId": "mt_EMPD_30",
+      "forca": "hard",
+      "razao": "A razão LTV/CAC e o payback têm o CAC no cálculo, então sem o CAC calculado não há o que comparar nem o que recuperar.",
+      "origem": "texto",
+      "trecho": "Quantas vezes o cliente devolve o custo de conquistá-lo. É a razão que resume se crescer faz sentido financeiro."
+    },
+    {
+      "topicoId": "mt_EMPD_32",
+      "prerequisitoId": "mt_EMPD_31",
+      "forca": "hard",
+      "razao": "A razão usa o LTV no numerador e o payback usa a margem de contribuição, que é o mesmo produto de ARPU por margem bruta calculado no LTV.",
+      "origem": "texto",
+      "trecho": "Note que o denominador é a margem, não o ARPU cheio"
+    },
+    {
+      "topicoId": "mt_EMPD_32",
+      "prerequisitoId": "mt_EMPD_29",
+      "forca": "hard",
+      "razao": "O NRR é composto por churn, contração e expansão, que são exatamente as alavancas de retenção estudadas antes.",
+      "origem": "texto",
+      "trecho": "Retenção líquida de receita da base existente. Acima de 100% indica que a expansão supera as perdas."
+    },
+    {
+      "topicoId": "mt_EMPD_33",
+      "prerequisitoId": "mt_EMPD_07",
+      "forca": "soft",
+      "razao": "A inadequação do venture capital a um negócio lucrativo se explica pela falta de escala compatível com o fundo, ou seja, pela escalabilidade do modelo.",
+      "origem": "texto",
+      "trecho": "Negócios lucrativos sem escala compatível com o retorno esperado pelo fundo."
+    },
+    {
+      "topicoId": "mt_EMPD_33",
+      "prerequisitoId": "mt_EMPD_08",
+      "forca": "soft",
+      "razao": "A escolha da fonte segue o estágio do negócio, e o estágio é definido pela evidência já obtida, de descoberta a tração e escala.",
+      "origem": "texto",
+      "trecho": "Existem métricas e uso claro do capital; o risco agora é de execução, não de existência do problema."
+    },
+    {
+      "topicoId": "mt_EMPD_34",
+      "prerequisitoId": "mt_EMPD_33",
+      "forca": "hard",
+      "razao": "A diluição só ocorre nas fontes que trocam capital por participação, então ela pressupõe saber quais fontes fazem isso.",
+      "origem": "texto",
+      "trecho": "DILUIÇÃO é a redução percentual da participação dos sócios quando novas quotas ou ações são emitidas"
+    },
+    {
+      "topicoId": "mt_EMPD_35",
+      "prerequisitoId": "mt_EMPD_33",
+      "forca": "hard",
+      "razao": "O crowdfunding é uma das quatro fontes comparadas, e as três modalidades detalham o que ali aparece como uma coluna só.",
+      "origem": "texto",
+      "trecho": "Captação junto a muitas pessoas, por recompensa, dívida ou participação."
+    },
+    {
+      "topicoId": "mt_EMPD_35",
+      "prerequisitoId": "mt_EMPD_34",
+      "forca": "soft",
+      "razao": "Só a modalidade de participação dilui os sócios, então a diferença entre as três modalidades exige entender diluição.",
+      "origem": "texto",
+      "trecho": "Depende da modalidade: recompensa não dilui, equity dilui."
+    },
+    {
+      "topicoId": "mt_EMPD_36",
+      "prerequisitoId": "mt_EMPD_13",
+      "forca": "soft",
+      "razao": "O plano detalha em números, prazos e responsáveis as hipóteses que o Canvas levanta, e o material coloca o Canvas antes do plano.",
+      "origem": "texto",
+      "trecho": "o Canvas antecede e alimenta o plano."
+    },
+    {
+      "topicoId": "mt_EMPD_37",
+      "prerequisitoId": "mt_EMPD_36",
+      "forca": "hard",
+      "razao": "Os indicadores calculam o plano financeiro, que é uma das seções do plano de negócio, então a estrutura vem antes das contas.",
+      "origem": "texto",
+      "trecho": "Investimentos, capital de giro, despesas pré-operacionais, receitas, custos e depreciação, com as projeções que sustentam a operação."
+    },
+    {
+      "topicoId": "mt_EMPD_37",
+      "prerequisitoId": "mt_EMPD_32",
+      "forca": "soft",
+      "razao": "São dois paybacks diferentes no mesmo semestre, o do CAC e o do investimento inicial, e o aluno só evita confundi-los tendo visto o primeiro.",
+      "origem": "texto",
+      "trecho": "Tempo de recuperação do investimento. Não considera o valor do dinheiro no tempo nem os fluxos posteriores ao retorno."
+    },
+    {
+      "topicoId": "mt_EMPD_38",
+      "prerequisitoId": "mt_EMPD_11",
+      "forca": "soft",
+      "razao": "O recorte de SAM e SOM depende de saber quem é o público e por qual canal ele é alcançado, que é o resultado da segmentação.",
+      "origem": "texto",
+      "trecho": "A parcela atendível pelo modelo e pela geografia escolhidos. Já considera canal, idioma, regulação e forma de contratação."
+    },
+    {
+      "topicoId": "mt_EMPD_39",
+      "prerequisitoId": "mt_EMPD_38",
+      "forca": "hard",
+      "razao": "O slide de mercado do pitch é feito de TAM, SAM e SOM com o método explícito, então a estimativa precisa estar pronta antes da narrativa.",
+      "origem": "texto",
+      "trecho": "TAM, SAM e SOM com o método explícito. Estimativa sem método não é dado."
+    },
+    {
+      "topicoId": "mt_EMPD_39",
+      "prerequisitoId": "mt_EMPD_32",
+      "forca": "hard",
+      "razao": "O slide de tração e modelo apresenta exatamente as contas de unidade, e o investidor pergunta pelas premissas de cada uma.",
+      "origem": "texto",
+      "trecho": "Investidores observam CAC, LTV, payback, margem, churn, MRR e crescimento"
+    },
+    {
+      "topicoId": "mt_EMPD_39",
+      "prerequisitoId": "mt_EMPD_36",
+      "forca": "soft",
+      "razao": "O pitch é a versão de cinco minutos do mesmo negócio que o plano organiza em detalhe, e resumir exige ter fechado as escolhas antes.",
+      "origem": "texto",
+      "trecho": "O mesmo negócio em dois formatos: a versão longa que organiza operação e finanças, e a de cinco minutos que busca a próxima decisão"
+    },
+    {
+      "topicoId": "mt_EMPD_40",
+      "prerequisitoId": "mt_EMPD_01",
+      "forca": "soft",
+      "razao": "O intraempreendedorismo é a mesma ação empreendedora exercida com recursos de uma organização existente, então depende da definição de empreender.",
+      "origem": "texto",
+      "trecho": "o intraempreendedor usa recursos e infraestrutura da organização mas age com iniciativa, criatividade, visão estratégica e risco calculado"
+    },
+    {
+      "topicoId": "mt_EMPD_41",
+      "prerequisitoId": "mt_EMPD_21",
+      "forca": "soft",
+      "razao": "Output, outcome e impacto aplicam ao campo social a mesma régua que separa número que só cresce de mudança de comportamento observada.",
+      "origem": "texto",
+      "trecho": "Indicadores devem distinguir entrega de transformação. Número de atendimentos é entrega; melhoria de acesso é transformação."
+    },
+    {
+      "topicoId": "mt_EMPD_42",
+      "prerequisitoId": "mt_EMPD_06",
+      "forca": "soft",
+      "razao": "A leitura correta dos números de digitalização do GEM exige o critério que separa usar ferramenta digital de ter um modelo de negócio novo.",
+      "origem": "texto",
+      "trecho": "digitalização virou infraestrutura básica, mas usar aplicativo não garante transformação de modelo, produtividade nem vantagem competitiva"
+    },
+    {
+      "topicoId": "mt_EMPD_43",
+      "prerequisitoId": "mt_EMPD_11",
+      "forca": "hard",
+      "razao": "O caso é uma venda B2G em que usuário, decisor e pagador são pessoas diferentes, e sem o mapa de papéis os pontos cegos não aparecem.",
+      "origem": "texto",
+      "trecho": "No B2G, normalmente o município, não o usuário final."
+    },
+    {
+      "topicoId": "mt_EMPD_43",
+      "prerequisitoId": "mt_EMPD_10",
+      "forca": "soft",
+      "razao": "Os pontos cegos do caso são as causas da fila que o agendamento não resolve, ou seja, o resultado da análise de causa aplicada à UBS.",
+      "origem": "texto",
+      "trecho": "Organizar a fila não cria vagas. Se a demanda excede a capacidade, o agendamento apenas redistribui a espera."
+    },
+    {
+      "topicoId": "mt_EMPD_43",
+      "prerequisitoId": "mt_EMPD_18",
+      "forca": "soft",
+      "razao": "O experimento que fecha a sequência do caso é o piloto formal com compromisso do decisor, que é a régua de evidência já estabelecida.",
+      "origem": "texto",
+      "trecho": "Um piloto formal com compromisso do decisor. É a evidência que separa interesse de contrato."
+    },
+    {
+      "topicoId": "mt_EMPD_44",
+      "prerequisitoId": "mt_EMPD_25",
+      "forca": "hard",
+      "razao": "A Twitch é analisada como plataforma, com criadores de um lado e espectadores do outro, o que exige a distinção entre pipeline e plataforma.",
+      "origem": "texto",
+      "trecho": "Escalável porque a plataforma cresce sem produção centralizada proporcional."
+    },
+    {
+      "topicoId": "mt_EMPD_44",
+      "prerequisitoId": "mt_EMPD_26",
+      "forca": "soft",
+      "razao": "O crescimento da Twitch é explicado por efeitos de rede indiretos entre os dois lados da plataforma.",
+      "origem": "texto",
+      "trecho": "Mais criadores atraem mais espectadores, que atraem mais criadores."
+    },
+    {
+      "topicoId": "mt_EMPD_44",
+      "prerequisitoId": "mt_EMPD_22",
+      "forca": "hard",
+      "razao": "O caso é usado como exemplo de pivot, e a mudança do Justin.tv para a Twitch só se lê como aprendizagem estratégica com a tipologia de pivots na mão.",
+      "origem": "texto",
+      "trecho": "O excesso de conteúdo e a falta de foco revelaram que jogos concentravam o interesse; em 2011 o projeto pivotou para a Twitch."
+    },
+    {
+      "topicoId": "mt_EMPD_45",
+      "prerequisitoId": "mt_EMPD_22",
+      "forca": "hard",
+      "razao": "O caso termina em um pivot zoom-in, que precisa estar nomeado e distinguido do zoom-out para ser reconhecido.",
+      "origem": "texto",
+      "trecho": "análises revelaram que a descoberta social gerava mais valor que a compra, conduzindo a um pivot zoom-in"
+    },
+    {
+      "topicoId": "mt_EMPD_45",
+      "prerequisitoId": "mt_EMPD_23",
+      "forca": "hard",
+      "razao": "A virada da empresa é feita com dois tipos de MVP em sequência, vídeo e Wizard of Oz, então o caso pressupõe a tipologia.",
+      "origem": "texto",
+      "trecho": "um MVP em vídeo captou milhares de e-mails, um Wizard of Oz simulou onboarding manual"
+    },
+    {
+      "topicoId": "mt_EMPD_45",
+      "prerequisitoId": "mt_EMPD_21",
+      "forca": "hard",
+      "razao": "O teste do caso é um experimento com divisão aleatória cuja métrica central é conversão em transações concluídas, e não cliques.",
+      "origem": "texto",
+      "trecho": "o teste da funcionalidade de agendamento de retirada usou divisão aleatória entre controle e tratamento, com a conversão em transações concluídas como métrica central"
+    }
+  ]
+}
