@@ -1,0 +1,1549 @@
+{
+  "disciplina": {
+    "codigo": "LPGM",
+    "codigoPPC": "LNPG",
+    "nome": "Linguagem de Programação",
+    "periodo": 2
+  },
+  "topicos": [
+    {
+      "id": "mt_LPGM_01",
+      "nome": "Do código-fonte à execução",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos de linguagens",
+      "descricao": "Você escreve o código-fonte, um tradutor converte esse texto para linguagem de máquina e o processador executa. Esse tradutor é um compilador ou um interpretador.",
+      "ordem": 1,
+      "evidencia": [
+        "você domina se consegue nomear a cadeia inteira: código-fonte, tradutor, linguagem de máquina",
+        "você domina se consegue dizer qual software traduz o que você escreveu para o que a máquina entende"
+      ],
+      "checagem": "Como se chama o software que traduz o código-fonte para linguagem de máquina, e qual é o texto que você de fato escreve?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Conceitos básicos de linguagens de programação"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_02",
+      "nome": "Linguagem compilada e interpretada",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos de linguagens",
+      "descricao": "A compilada traduz o programa inteiro antes de executar e gera um artefato. A interpretada traduz e executa linha a linha, direto do código-fonte.",
+      "ordem": 2,
+      "evidencia": [
+        "você domina se consegue classificar C, C++ e Java como compiladas e Python, JavaScript e PHP como interpretadas",
+        "você domina se consegue explicar por que na compilada muitos erros aparecem antes de o programa rodar"
+      ],
+      "checagem": "Qual a diferença entre uma linguagem compilada e uma interpretada, e em qual dos dois grupos está o Python?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Histórico, classificação e principais paradigmas de linguagens de programação"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_03",
+      "nome": "Casos híbridos: bytecode e JIT",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos de linguagens",
+      "descricao": "Java compila para bytecode, que a JVM executa depois, e os motores modernos de JavaScript compilam em tempo de execução (JIT). A fronteira entre compilada e interpretada é menos nítida do que a tabela sugere.",
+      "ordem": 3,
+      "evidencia": [
+        "você domina se consegue explicar por que Java é chamada de híbrida",
+        "você domina se consegue dizer o que JIT significa e por que ele embaralha a classificação"
+      ],
+      "checagem": "Por que dizer apenas que Java é compilada e JavaScript é interpretada conta só metade da história?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Histórico, classificação e principais paradigmas de linguagens de programação"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_04",
+      "nome": "Gerações de linguagens",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos de linguagens",
+      "descricao": "A classificação por gerações mede a distância até o hardware: 1ª linguagem de máquina, 2ª Assembly, 3ª alto nível (C, Python, Java), 4ª específicas de domínio como SQL.",
+      "ordem": 4,
+      "evidencia": [
+        "você domina se consegue encaixar Assembly, Python e SQL em suas gerações",
+        "você domina se consegue explicar o que significa nível de abstração mais alto"
+      ],
+      "checagem": "Em que geração está o SQL e por que ele não é considerado alto nível de terceira geração?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Histórico, classificação e principais paradigmas de linguagens de programação"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_05",
+      "nome": "O que é um paradigma",
+      "tipo": "CONCEITUAL",
+      "unidade": "Paradigmas de programação",
+      "descricao": "Paradigma é um estilo de estruturar o raciocínio e o código. Uma mesma linguagem pode dar suporte a vários, e aí se diz que ela é multiparadigma.",
+      "ordem": 5,
+      "evidencia": [
+        "você domina se consegue definir paradigma sem citar sintaxe",
+        "você domina se consegue dar um exemplo de linguagem multiparadigma"
+      ],
+      "checagem": "O que é um paradigma de programação e o que quer dizer chamar Python de multiparadigma?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Histórico, classificação e principais paradigmas de linguagens de programação"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_06",
+      "nome": "Paradigma imperativo",
+      "tipo": "CONCEITUAL",
+      "unidade": "Paradigmas de programação",
+      "descricao": "Descreve o passo a passo com comandos que alteram o estado do programa (atribuições, laços). É a base das linguagens usadas no curso.",
+      "ordem": 6,
+      "evidencia": [
+        "você domina se consegue reconhecer um trecho imperativo pelo acúmulo em variável dentro de um laço",
+        "você domina se consegue dizer o que significa alterar o estado do programa"
+      ],
+      "checagem": "O que caracteriza um programa escrito no estilo imperativo?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Histórico, classificação e principais paradigmas de linguagens de programação"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_07",
+      "nome": "Paradigma procedural",
+      "tipo": "CONCEITUAL",
+      "unidade": "Paradigmas de programação",
+      "descricao": "Organiza o código em procedimentos e funções reutilizáveis. É uma evolução do imperativo e foi o estilo do projeto em C da turma.",
+      "ordem": 7,
+      "evidencia": [
+        "você domina se consegue explicar o que o procedural acrescenta ao imperativo",
+        "você domina se consegue apontar por que o projeto em C é procedural"
+      ],
+      "checagem": "Em que o paradigma procedural avança em relação ao imperativo puro?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Histórico, classificação e principais paradigmas de linguagens de programação"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_08",
+      "nome": "Paradigma orientado a objetos",
+      "tipo": "CONCEITUAL",
+      "unidade": "Paradigmas de programação",
+      "descricao": "Organiza o programa em objetos que reúnem dados e comportamento. Nesta disciplina ele é apenas nomeado e comparado, porque é o foco da disciplina seguinte.",
+      "ordem": 8,
+      "evidencia": [
+        "você domina se consegue dizer o que um objeto junta que um procedimento solto não junta",
+        "você domina se consegue identificar o paradigma pela frase dados mais comportamento"
+      ],
+      "checagem": "O paradigma que organiza o programa em objetos reúne quais duas coisas num mesmo lugar?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Histórico, classificação e principais paradigmas de linguagens de programação"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_09",
+      "nome": "Paradigma funcional",
+      "tipo": "CONCEITUAL",
+      "unidade": "Paradigmas de programação",
+      "descricao": "Trata a computação como avaliação de funções e evita estado mutável. No imperativo você descreve o percurso, no funcional descreve a transformação e deixa a linguagem percorrer.",
+      "ordem": 9,
+      "evidencia": [
+        "você domina se consegue ler a soma dos pares escrita com filter e sum e explicar o que ela faz",
+        "você domina se consegue contrastar acumular num total com descrever a transformação"
+      ],
+      "checagem": "Somando os pares de uma lista, qual a diferença entre a versão imperativa e a versão funcional?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Histórico, classificação e principais paradigmas de linguagens de programação"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_10",
+      "nome": "O conceito por baixo da sintaxe",
+      "tipo": "META",
+      "unidade": "Fundamentos de linguagens",
+      "descricao": "Cada grupo apresentou uma linguagem seguindo o mesmo roteiro (histórico, Hello World, variáveis, controle e modularização). A lição do método é que o conceito é o mesmo e só a grafia muda.",
+      "ordem": 10,
+      "evidencia": [
+        "você domina se consegue reconhecer o mesmo conceito em duas linguagens com sintaxes diferentes",
+        "você domina se consegue montar o roteiro de apresentação de uma linguagem nova"
+      ],
+      "checagem": "Ao ver um mesmo programa em Python e em C, o que muda de fato e o que continua igual?",
+      "avaliacoes": ["seminario"],
+      "ementaPPC": ["Histórico, classificação e principais paradigmas de linguagens de programação"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_11",
+      "nome": "Variável, identificador e atribuição",
+      "tipo": "CONCEITUAL",
+      "unidade": "Tipos, variáveis e constantes",
+      "descricao": "Variável é um espaço na memória que guarda um valor. O nome dela é o identificador e a atribuição, com o operador igual, coloca um valor nesse espaço.",
+      "ordem": 11,
+      "evidencia": [
+        "você domina se consegue definir variável sem dizer apenas que é uma letra",
+        "você domina se consegue apontar identificador, operador de atribuição e valor numa linha de código"
+      ],
+      "checagem": "O que é uma variável e qual o papel do operador igual numa linha como idade = 20?",
+      "avaliacoes": ["AV1", "AV2"],
+      "ementaPPC": ["Identificadores, valores, tipos de dados", "Constantes e variáveis"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_12",
+      "nome": "Tipos primitivos",
+      "tipo": "CONCEITUAL",
+      "unidade": "Tipos, variáveis e constantes",
+      "descricao": "Os quatro tipos básicos são inteiro, real, texto e booleano. Em C puro o booleano é representado por inteiro, com zero valendo falso.",
+      "ordem": 12,
+      "evidencia": [
+        "você domina se consegue separar tipos primitivos de estruturas como lista e dicionário",
+        "você domina se consegue escolher o tipo certo para idade, altura, nome e maioridade"
+      ],
+      "checagem": "Quais são os tipos primitivos e qual deles o C puro representa com um inteiro?",
+      "avaliacoes": ["AV1", "AV2"],
+      "ementaPPC": ["Identificadores, valores, tipos de dados"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_13",
+      "nome": "Tipagem estática e dinâmica",
+      "tipo": "CONCEITUAL",
+      "unidade": "Tipos, variáveis e constantes",
+      "descricao": "Na tipagem estática você declara o tipo e ele é verificado em tempo de compilação (C, C++, Java). Na dinâmica o tipo é inferido pela atribuição e verificado em tempo de execução (Python, JavaScript, PHP).",
+      "ordem": 13,
+      "evidencia": [
+        "você domina se consegue dizer quando o tipo é conferido em cada uma das duas famílias",
+        "você domina se consegue citar uma vantagem de cada abordagem"
+      ],
+      "checagem": "Em tipagem estática, em que momento o tipo de uma variável é verificado, e por quê isso muda no Python?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Identificadores, valores, tipos de dados"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_14",
+      "nome": "Constantes em cada linguagem",
+      "tipo": "LINGUAGEM",
+      "unidade": "Tipos, variáveis e constantes",
+      "descricao": "Constante é um identificador cujo valor é fixado uma vez e não pode ser reatribuído. Python não tem constante real, só a convenção do nome em maiúsculas, enquanto C usa define e const, Java static final e JavaScript const.",
+      "ordem": 14,
+      "evidencia": [
+        "você domina se consegue escrever uma constante em C e em Java",
+        "você domina se consegue explicar por que PI = 3 continua funcionando em Python"
+      ],
+      "checagem": "Como se declara em C uma constante que o compilador impede de reatribuir, e o que o Python oferece no lugar disso?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Constantes e variáveis"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_15",
+      "nome": "Expressão e precedência",
+      "tipo": "CONCEITUAL",
+      "unidade": "Tipos, variáveis e constantes",
+      "descricao": "Expressão é a combinação de valores, operadores, constantes, variáveis e funções, avaliada segundo uma regra de precedência. A multiplicação vem antes da soma, então 1 + 2 * 3 dá 7, e parênteses mudam a ordem.",
+      "ordem": 15,
+      "evidencia": [
+        "você domina se consegue calcular 1 + 2 * 3 e (1 + 2) * 3 sem rodar o código",
+        "você domina se consegue listar os operadores aritméticos e o que cada um faz"
+      ],
+      "checagem": "Quanto vale 1 + 2 * 3 e o que você escreveria para obter 9?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Conceitos básicos de linguagens de programação"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_16",
+      "nome": "Divisão inteira e resto",
+      "tipo": "LINGUAGEM",
+      "unidade": "Tipos, variáveis e constantes",
+      "descricao": "Em Python 3, 7/2 dá 3.5 e 7//2 dá 3, a divisão inteira. Em C, C++ e Java a divisão de dois inteiros trunca, e o operador % devolve o resto.",
+      "ordem": 16,
+      "evidencia": [
+        "você domina se consegue prever o resultado de 7/2 e 7//2 em Python e de 7/2 em C",
+        "você domina se consegue usar % para testar se um número é par ou múltiplo de outro"
+      ],
+      "checagem": "Em Python 3, quanto valem 7/2, 7//2 e 7%2, e o que muda quando a mesma conta é feita em C?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Identificadores, valores, tipos de dados"],
+      "fonte": "src/content/linguagem-programacao/data.ts"
+    },
+    {
+      "id": "mt_LPGM_17",
+      "nome": "Ler entrada e mostrar saída",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Entrada e saída",
+      "descricao": "Todo programa lê dados e produz saída. Em Python usa-se input e print, em C scanf com o endereço da variável, em C++ cin e em Java Scanner.",
+      "ordem": 17,
+      "evidencia": [
+        "você domina se consegue escrever um programa que lê um número e imprime o dobro",
+        "você domina se consegue explicar por que o scanf do C precisa do e comercial antes da variável"
+      ],
+      "checagem": "Escreva o programa que pede um número ao usuário e mostra o dobro dele.",
+      "avaliacoes": ["AV1", "AV2"],
+      "ementaPPC": ["Entrada e saída de dados."],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_18",
+      "nome": "Conversão da entrada (casting)",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Entrada e saída",
+      "descricao": "A leitura devolve texto, então é preciso converter para número antes de calcular, com int ou float em Python. Sem a conversão, o valor 5 vezes 2 devolve 55, porque o operador repete o texto.",
+      "ordem": 18,
+      "evidencia": [
+        "você domina se consegue prever a saída 55 num programa que esqueceu o int",
+        "você domina se consegue corrigir o programa colocando a conversão no lugar certo"
+      ],
+      "checagem": "Se o usuário digita 5 e o programa imprime entrada * 2 sem converter, o que aparece na tela e por quê?",
+      "avaliacoes": ["AV1", "AV2"],
+      "ementaPPC": ["Entrada e saída de dados.", "Identificadores, valores, tipos de dados"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_19",
+      "nome": "Saída exata no juiz automático",
+      "tipo": "META",
+      "unidade": "Entrada e saída",
+      "descricao": "O The Huxley compara a saída caractere por caractere, então não se fornece nada a mais nem a menos do que ele pede. Na prática isso significa ler com input vazio, sem mensagem dentro dos parênteses.",
+      "ordem": 19,
+      "evidencia": [
+        "você domina se consegue apontar por que int(input('digite: ')) reprova no juiz",
+        "você domina se consegue conferir uma saída contra o enunciado sem acrescentar texto próprio"
+      ],
+      "checagem": "Por que a mensagem dentro do input faz o juiz automático reprovar um programa que calcula certo?",
+      "avaliacoes": [],
+      "ementaPPC": ["Ferramentas de desenvolvimento"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_20",
+      "nome": "Blocos: chaves ou indentação",
+      "tipo": "LINGUAGEM",
+      "unidade": "Estruturas de controle",
+      "descricao": "Bloco é um grupo de comandos. C, C++, Java, JavaScript e PHP delimitam com chaves, o Python delimita pelo recuo, e um espaço a mais ou a menos gera IndentationError.",
+      "ordem": 20,
+      "evidencia": [
+        "você domina se consegue reconhecer a mensagem IndentationError: expected an indented block",
+        "você domina se consegue dizer o que delimita o bloco em cada linguagem"
+      ],
+      "checagem": "Que erro o Python acusa quando o recuo de um bloco está errado, e como se marca bloco em C?",
+      "avaliacoes": ["AV1", "AV2"],
+      "ementaPPC": ["Comandos de estruturação do fluxo de controle"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_21",
+      "nome": "Operadores relacionais e lógicos",
+      "tipo": "CONCEITUAL",
+      "unidade": "Estruturas de controle",
+      "descricao": "Os relacionais comparam valores e resultam em verdadeiro ou falso. Os lógicos combinam ou negam condições: and, or e not em Python, e os símbolos correspondentes nas linguagens de chaves.",
+      "ordem": 21,
+      "evidencia": [
+        "você domina se consegue separar relacionais de lógicos e de aritméticos numa lista de operadores",
+        "você domina se consegue escrever uma condição composta com and e not"
+      ],
+      "checagem": "Qual grupo tem só operadores lógicos, e o que uma comparação como media >= 6 devolve?",
+      "avaliacoes": ["AV1", "AV2"],
+      "ementaPPC": ["Comandos de estruturação do fluxo de controle"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_22",
+      "nome": "Condicional if, else e elif",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Estruturas de controle",
+      "descricao": "O if executa o bloco uma vez se a condição for verdadeira e o else cobre o caso contrário. Com mais de dois caminhos, encadeia-se com elif no Python ou else if nas linguagens de chaves, e o primeiro teste verdadeiro vence.",
+      "ordem": 22,
+      "evidencia": [
+        "você domina se consegue escrever a faixa de conceitos A, B, C e reprovado a partir da média",
+        "você domina se consegue explicar por que os testes seguintes não são avaliados depois de um verdadeiro"
+      ],
+      "checagem": "Escreva o trecho que imprime Conceito A, B, C ou Reprovado conforme a média.",
+      "avaliacoes": ["AV1", "AV2"],
+      "ementaPPC": ["Comandos de estruturação do fluxo de controle"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_23",
+      "nome": "switch e o break",
+      "tipo": "LINGUAGEM",
+      "unidade": "Estruturas de controle",
+      "descricao": "O switch das linguagens de chaves compara um valor exato contra constantes e cada caso precisa de break para não vazar para o seguinte. Python não tem switch clássico, só match a partir da versão 3.10.",
+      "ordem": 23,
+      "evidencia": [
+        "você domina se consegue escrever um menu com switch em C e o equivalente em Python",
+        "você domina se consegue dizer o que acontece quando o break é esquecido num case"
+      ],
+      "checagem": "Para que serve o break ao fim de cada case, e o que o Python usa no lugar do switch?",
+      "avaliacoes": ["AV1", "seminario"],
+      "ementaPPC": ["Comandos de estruturação do fluxo de controle"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_24",
+      "nome": "Laço while",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Estruturas de controle",
+      "descricao": "O while executa o bloco e volta a testar a condição, repetindo enquanto ela for verdadeira. Sem alterar a variável de controle o laço nunca termina, e a forma while True com break é o padrão de menu do curso.",
+      "ordem": 24,
+      "evidencia": [
+        "você domina se consegue contar de 1 a 5 com while sem cair em laço infinito",
+        "você domina se consegue montar um menu que repete até o usuário escolher sair"
+      ],
+      "checagem": "Qual estrutura repete um bloco enquanto a condição for verdadeira, e o que falta num while que nunca termina?",
+      "avaliacoes": ["AV1", "AV2"],
+      "ementaPPC": ["Comandos de estruturação do fluxo de controle"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_25",
+      "nome": "Laço for e range",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Estruturas de controle",
+      "descricao": "O for repete um número conhecido de vezes ou percorre os elementos de uma sequência. Em Python usa-se range, cujo limite final não entra, e nas linguagens de chaves a forma é início, condição e incremento.",
+      "ordem": 25,
+      "evidencia": [
+        "você domina se consegue contar de 1 a 5 com for em Python e em C",
+        "você domina se consegue explicar por que range(1, 6) para no 5"
+      ],
+      "checagem": "Escreva o for que imprime de 1 a 5 e diga por que o segundo argumento do range é 6.",
+      "avaliacoes": ["AV1", "AV2"],
+      "ementaPPC": ["Comandos de estruturação do fluxo de controle"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_26",
+      "nome": "Escolher entre while e for",
+      "tipo": "CONCEITUAL",
+      "unidade": "Estruturas de controle",
+      "descricao": "O while serve quando não se sabe de antemão quantas voltas serão precisas, como num menu. O for serve quando se percorre uma sequência ou um número conhecido de vezes.",
+      "ordem": 26,
+      "evidencia": [
+        "você domina se consegue escolher o laço certo para um menu e para percorrer uma lista",
+        "você domina se consegue reescrever um while contado como for"
+      ],
+      "checagem": "Diante de um menu que repete até o usuário sair, qual laço você usa e por quê?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Comandos de estruturação do fluxo de controle"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_27",
+      "nome": "Laço com condicional dentro",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Estruturas de controle",
+      "descricao": "É o padrão mais cobrado: percorrer uma faixa de números e decidir algo a cada volta. O exercício da turma imprime de 1 a 100 e avisa quando o número é múltiplo de 9, usando o resto da divisão.",
+      "ordem": 27,
+      "evidencia": [
+        "você domina se consegue escrever o programa dos múltiplos de 9 de 1 a 100",
+        "você domina se consegue trocar o teste para pares, ímpares ou múltiplos de outro número"
+      ],
+      "checagem": "Escreva o laço que imprime de 1 a 100 e sinaliza os múltiplos de 9.",
+      "avaliacoes": ["AV1", "AV2"],
+      "ementaPPC": ["Comandos de estruturação do fluxo de controle"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_28",
+      "nome": "Lista e acesso por índice",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Listas, tuplas e dicionários",
+      "descricao": "A lista guarda muitos valores em ordem numa só variável, acessados por índice que começa em zero. Ela é mutável, ou seja, dá para adicionar, alterar e remover elementos.",
+      "ordem": 28,
+      "evidencia": [
+        "você domina se consegue dizer o índice do primeiro e do último elemento",
+        "você domina se consegue criar uma lista, ler um item pelo índice e medir o tamanho com len"
+      ],
+      "checagem": "Numa lista de quatro frutas, qual índice devolve a primeira e qual devolve a última?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_29",
+      "nome": "Métodos de lista",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Listas, tuplas e dicionários",
+      "descricao": "Os métodos usados na turma foram append, insert, remove, count, extend e reverse, além de len e do fatiamento. O remove apaga pelo valor, não pela posição.",
+      "ordem": 29,
+      "evidencia": [
+        "você domina se consegue prever a lista resultante de uma sequência de append, insert e remove",
+        "você domina se consegue dizer a diferença entre append e extend"
+      ],
+      "checagem": "Depois de append(40), insert(1, 15) e remove(30) sobre [10, 20, 30], como fica a lista?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_30",
+      "nome": "Lista muda entre linguagens",
+      "tipo": "LINGUAGEM",
+      "unidade": "Listas, tuplas e dicionários",
+      "descricao": "A palavra lista não nomeia a mesma coisa em toda linguagem. O array de C e o String[] de Java têm tamanho fixo, quem cresce em Java é o ArrayList, e em C++ o equivalente é o vector.",
+      "ordem": 30,
+      "evidencia": [
+        "você domina se consegue apontar qual estrutura de Java equivale à lista do Python",
+        "você domina se consegue explicar o que você mesmo precisa controlar num array de C"
+      ],
+      "checagem": "Em Java, qual estrutura é o equivalente real da lista do Python capaz de crescer, e por que o array não é?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_31",
+      "nome": "Tupla como registro imutável",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Listas, tuplas e dicionários",
+      "descricao": "A tupla usa parênteses e é imutável: não se adiciona, altera nem remove elemento, e tentar reatribuir gera TypeError. Ela representa o que outras linguagens chamam de registro, como os dados de uma pessoa ou um pedido fechado.",
+      "ordem": 31,
+      "evidencia": [
+        "você domina se consegue dizer a diferença central entre lista e tupla",
+        "você domina se consegue prever o TypeError ao tentar t[0] = 5 numa tupla"
+      ],
+      "checagem": "O que acontece ao executar t = (1, 2, 3) e depois t[0] = 5, e por quê?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_32",
+      "nome": "Lista de tuplas",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Listas, tuplas e dicionários",
+      "descricao": "É o padrão de dados da disciplina: cada registro é uma tupla e todos os registros ficam numa lista. O acesso é duplo, lista[0][0] pega a posição na lista e depois a posição dentro da tupla, e o percurso é feito com for, inclusive desempacotando os campos.",
+      "ordem": 32,
+      "evidencia": [
+        "você domina se consegue dizer o que alunos[0][0] devolve",
+        "você domina se consegue somar um campo de todos os registros percorrendo a lista com for",
+        "você domina se consegue modelar o pedido da lanchonete como tupla (mesa, sanduíche, bebida, valor) numa lista"
+      ],
+      "checagem": "Numa lista de tuplas chamada alunos, o que alunos[0][0] devolve e como você imprimiria a cidade de cada um?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_33",
+      "nome": "Dicionário de chave e valor",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Listas, tuplas e dicionários",
+      "descricao": "O dicionário guarda pares de chave e valor. Diferente de lista e tupla, o acesso não é pela posição, é pela chave, que é única.",
+      "ordem": 33,
+      "evidencia": [
+        "você domina se consegue ler e acrescentar um par num dicionário",
+        "você domina se consegue percorrer chaves e valores com items"
+      ],
+      "checagem": "Num dicionário, como você acessa um valor, e o que garante que esse acesso é único?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_34",
+      "nome": "Definir e chamar função",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Funções e modularização",
+      "descricao": "Uma função agrupa instruções de uma tarefa no modelo entrada, processamento e retorno: recebe parâmetros e devolve um valor com return. Definir não executa, quem executa é a chamada.",
+      "ordem": 34,
+      "evidencia": [
+        "você domina se consegue escrever e chamar uma função que soma dois números",
+        "você domina se consegue apontar parâmetro, corpo e retorno numa definição"
+      ],
+      "checagem": "Escreva uma função que recebe dois números e devolve a soma, e mostre a linha que a chama.",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Modularização"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_35",
+      "nome": "Da repetição à função",
+      "tipo": "META",
+      "unidade": "Funções e modularização",
+      "descricao": "Em aula a função apareceu como solução para um incômodo, na sequência código repetido, função sem parâmetro e função com parâmetro. O ganho é reuso, organização, teste e manutenção.",
+      "ordem": 35,
+      "evidencia": [
+        "você domina se consegue transformar três linhas repetidas numa função com parâmetro",
+        "você domina se consegue explicar por que a função sem parâmetro resolve só um caso"
+      ],
+      "checagem": "Diante de três contas de área escritas à mão, que função com parâmetro você escreveria e por quê?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Modularização"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_36",
+      "nome": "Retorno múltiplo em tupla",
+      "tipo": "LINGUAGEM",
+      "unidade": "Funções e modularização",
+      "descricao": "Em Python, separar valores por vírgula no return devolve uma tupla. É assim que uma função lê uma pessoa inteira de uma vez, e quem chama pode guardar a tupla ou desempacotar em variáveis.",
+      "ordem": 36,
+      "evidencia": [
+        "você domina se consegue escrever uma função que devolve nome, cpf e endereço num só return",
+        "você domina se consegue desempacotar o retorno em variáveis separadas"
+      ],
+      "checagem": "Em Python, o que uma função devolve quando o return traz quatro valores separados por vírgula?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Modularização"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_37",
+      "nome": "Módulo próprio e import",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Funções e modularização",
+      "descricao": "Modularizar é separar o programa em arquivos reutilizáveis. Em Python salvam-se as funções num arquivo e importa-se de outro, inclusive com apelido, na forma import meu_modulo as apelido.",
+      "ordem": 37,
+      "evidencia": [
+        "você domina se consegue criar um arquivo de funções e usá-lo de outro programa",
+        "você domina se consegue escrever a importação com apelido e chamar apelido.funcao"
+      ],
+      "checagem": "Como se importa um módulo próprio chamado turtle_grafico.py usando um apelido?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Modularização"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_38",
+      "nome": "Cabeçalho e implementação em C",
+      "tipo": "LINGUAGEM",
+      "unidade": "Funções e modularização",
+      "descricao": "Em C e C++ separa-se o cabeçalho (.h), que traz só as assinaturas, da implementação (.c), que traz o corpo. Quem usa a função inclui o cabeçalho com aspas e os dois arquivos são compilados juntos.",
+      "ordem": 38,
+      "evidencia": [
+        "você domina se consegue dizer o que vai no .h e o que vai no .c",
+        "você domina se consegue explicar a diferença entre include com aspas e com sinais de menor e maior"
+      ],
+      "checagem": "Por que em C se separa o arquivo de cabeçalho do arquivo de implementação?",
+      "avaliacoes": ["AV2", "projeto"],
+      "ementaPPC": ["Modularização"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_39",
+      "nome": "Escopo local e global",
+      "tipo": "CONCEITUAL",
+      "unidade": "Escopo e passagem de parâmetros",
+      "descricao": "Escopo define onde uma variável é válida: local dentro da função ou global no programa todo. O tempo de vida acompanha o escopo, a local nasce na chamada e é esquecida no fim da função, a global vive enquanto o programa roda.",
+      "ordem": 39,
+      "evidencia": [
+        "você domina se consegue dizer onde uma variável criada dentro da função é válida",
+        "você domina se consegue explicar quando cada variável deixa de existir"
+      ],
+      "checagem": "Uma variável criada dentro de uma função vale onde, e até quando ela existe?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Escopo de nomes e tempo de vida de variáveis"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_40",
+      "nome": "Parâmetro fora da função",
+      "tipo": "CONCEITUAL",
+      "unidade": "Escopo e passagem de parâmetros",
+      "descricao": "Um parâmetro não pode ser usado fora da função: ele nasce na chamada e morre no return. Ler esse nome de fora não devolve valor errado, gera erro de nome, o NameError em Python.",
+      "ordem": 40,
+      "evidencia": [
+        "você domina se consegue prever o NameError ao imprimir o parâmetro fora da função",
+        "você domina se consegue dizer como levar esse valor para fora, pelo return"
+      ],
+      "checagem": "O que acontece ao imprimir, fora da função, o nome de um parâmetro dela?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Escopo de nomes e tempo de vida de variáveis"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_41",
+      "nome": "A palavra global do Python",
+      "tipo": "LINGUAGEM",
+      "unidade": "Escopo e passagem de parâmetros",
+      "descricao": "Em Python, atribuir a um nome dentro da função cria uma variável local, e a tentativa de somar sobre a de fora gera UnboundLocalError. Para alterar a global é preciso declarar global antes, enquanto em C e Java basta a variável estar num escopo externo visível.",
+      "ordem": 41,
+      "evidencia": [
+        "você domina se consegue explicar por que contador = contador + 1 falha dentro da função",
+        "você domina se consegue corrigir o código com a declaração global"
+      ],
+      "checagem": "O que é preciso fazer para uma função em Python alterar o valor de uma variável global?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Escopo de nomes e tempo de vida de variáveis"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_42",
+      "nome": "Passagem por valor e referência",
+      "tipo": "CONCEITUAL",
+      "unidade": "Escopo e passagem de parâmetros",
+      "descricao": "Por valor a função recebe uma cópia, e alterar o parâmetro não muda o original. Por referência a função acessa o próprio dado, e a alteração reflete fora dela.",
+      "ordem": 42,
+      "evidencia": [
+        "você domina se consegue dizer o que a função recebe em cada uma das duas formas",
+        "você domina se consegue prever se o valor de quem chamou muda ou não"
+      ],
+      "checagem": "Na passagem por valor, o que a função recebe, e por que isso protege a variável original?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Passagem de parâmetros"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_43",
+      "nome": "Ponteiro em C",
+      "tipo": "LINGUAGEM",
+      "unidade": "Escopo e passagem de parâmetros",
+      "descricao": "Em C a passagem por referência é simulada com ponteiro: o e comercial pega o endereço da variável e o asterisco acessa o valor apontado. C++ dispensa isso e usa o e comercial na própria assinatura.",
+      "ordem": 43,
+      "evidencia": [
+        "você domina se consegue escrever a função que incrementa de verdade a variável de quem chamou",
+        "você domina se consegue explicar o papel do e comercial e do asterisco"
+      ],
+      "checagem": "Em C, como você escreve uma função capaz de alterar a variável de quem a chamou?",
+      "avaliacoes": ["AV2", "projeto"],
+      "ementaPPC": ["Passagem de parâmetros"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_44",
+      "nome": "Mutar ou reatribuir o parâmetro",
+      "tipo": "CONCEITUAL",
+      "unidade": "Escopo e passagem de parâmetros",
+      "descricao": "Mexer no objeto recebido é diferente de apontar o parâmetro para outro objeto. Em Python, dar append numa lista altera o original e somar num inteiro não, e Java é sempre por valor, mas o valor de um objeto é uma referência.",
+      "ordem": 44,
+      "evidencia": [
+        "você domina se consegue prever a saída de uma função que faz append e de outra que reatribui",
+        "você domina se consegue explicar por que Java é sempre por valor e ainda assim a lista muda"
+      ],
+      "checagem": "Por que alterar o conteúdo de uma lista dentro da função afeta o original, mas reatribuir o parâmetro não?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Passagem de parâmetros"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_45",
+      "nome": "String como sequência indexada",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Strings",
+      "descricao": "Uma string é uma sequência de caracteres indexada a partir de zero, e em Python o índice negativo conta do fim. Cada caractere tem uma posição, que é o que permite ler letra por letra.",
+      "ordem": 45,
+      "evidencia": [
+        "você domina se consegue dizer qual caractere está numa posição dada",
+        "você domina se consegue usar índice negativo para pegar o último caractere"
+      ],
+      "checagem": "Na string jose da silva jr, o que devolvem as posições 0 e menos 1?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_46",
+      "nome": "Tamanho, concatenação e caixa",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Strings",
+      "descricao": "As operações mais usadas são medir o tamanho com len, juntar textos com o operador de soma e trocar a caixa com upper e lower. Entre strings o operador de soma concatena, não soma.",
+      "ordem": 46,
+      "evidencia": [
+        "você domina se consegue prever o resultado de nome + ' Silva' e de nome.upper()",
+        "você domina se consegue explicar por que o mesmo operador muda de comportamento conforme o tipo"
+      ],
+      "checagem": "O que o operador de soma faz entre duas strings, e como se mede o tamanho de um texto?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_47",
+      "nome": "Fatiamento de string",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Strings",
+      "descricao": "O fatiamento extrai um pedaço da string por posições, e em Python o índice final não entra. A armadilha é generalizar isso: em PHP e C++ o segundo argumento de substr é o tamanho, não o índice final.",
+      "ordem": 47,
+      "evidencia": [
+        "você domina se consegue dizer o que palavra[0:4], palavra[4:] e palavra[-3:] devolvem",
+        "você domina se consegue apontar por que substr de PHP e C++ não é a mesma coisa que o slice"
+      ],
+      "checagem": "Para palavra = programação, o que palavra[0:4] devolve, e por que o resultado surpreende quem espera cinco letras?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_48",
+      "nome": "strlen conta bytes",
+      "tipo": "LINGUAGEM",
+      "unidade": "Strings",
+      "descricao": "O strlen do PHP e do C conta bytes, não caracteres, então strlen de maçã devolve 6 porque em UTF-8 cada acentuado ocupa dois bytes. O equivalente correto de len é mb_strlen, e em Python 3 o len já conta caracteres.",
+      "ordem": 48,
+      "evidencia": [
+        "você domina se consegue prever 6 em vez de 4 para uma palavra com dois acentos",
+        "você domina se consegue escolher mb_strlen quando o texto tem acento"
+      ],
+      "checagem": "Em PHP, quanto devolve strlen de maçã, e qual função devolve o número de caracteres?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_49",
+      "nome": "replace, split e join",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Strings",
+      "descricao": "O replace substitui trechos do texto, o split divide a string e devolve uma lista de partes, e o join volta a juntar as partes com um separador. É a dupla que transforma texto em campos e campos em texto.",
+      "ordem": 49,
+      "evidencia": [
+        "você domina se consegue quebrar uma frase em palavras e ler a primeira pelo índice",
+        "você domina se consegue reunir as partes de novo com um separador escolhido"
+      ],
+      "checagem": "O que frase.split(' ') devolve, e como você juntaria essas partes com um traço no meio?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_50",
+      "nome": "Por que criar um tipo",
+      "tipo": "CONCEITUAL",
+      "unidade": "Tipos de dados definidos pelo usuário",
+      "descricao": "Os tipos primitivos descrevem um valor só, mas os dados do mundo real vêm em conjunto: uma pessoa tem nome e idade. Um tipo definido pelo usuário agrupa esses campos sob um nome só, para o programa falar a linguagem do problema.",
+      "ordem": 50,
+      "evidencia": [
+        "você domina se consegue justificar por que pessoa é melhor que um vetor de char e um int soltos",
+        "você domina se consegue listar os campos de um tipo próprio para um pedido de lanchonete"
+      ],
+      "checagem": "Por que criar um tipo pessoa em vez de manter nome e idade como duas variáveis separadas?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Tipos de dados definidos pelo usuário"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_51",
+      "nome": "typedef struct em C",
+      "tipo": "LINGUAGEM",
+      "unidade": "Tipos de dados definidos pelo usuário",
+      "descricao": "Em C o typedef struct dá nome ao agrupamento de campos, e o ponto acessa cada campo. Com o tipo pronto dá para declarar um vetor de registros do mesmo tipo, como uma turma de 50 pessoas.",
+      "ordem": 51,
+      "evidencia": [
+        "você domina se consegue escrever o typedef struct de pessoa com nome e idade",
+        "você domina se consegue preencher e ler turma[2].nome num vetor de registros"
+      ],
+      "checagem": "O que a construção typedef struct { char nome[100]; int idade; } pessoa; cria, e como se acessam os campos?",
+      "avaliacoes": ["AV2", "projeto"],
+      "ementaPPC": ["Tipos de dados definidos pelo usuário"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_52",
+      "nome": "Da struct à classe",
+      "tipo": "LINGUAGEM",
+      "unidade": "Tipos de dados definidos pelo usuário",
+      "descricao": "O mesmo agrupamento tem nomes diferentes: struct em C e C++, record ou classe em Java, dataclass ou dicionário em Python, objeto literal ou classe em JavaScript. Em C a struct guarda só dados, e a classe é esse agrupamento acrescido de comportamento.",
+      "ordem": 52,
+      "evidencia": [
+        "você domina se consegue escrever o tipo pessoa em C, em Python e em Java",
+        "você domina se consegue dizer o que a classe tem que a struct não tem"
+      ],
+      "checagem": "Qual a diferença entre a struct do C e a classe de Java ou Python quando ambas agrupam nome e idade?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Tipos de dados definidos pelo usuário"],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_53",
+      "nome": "Memória e persistência",
+      "tipo": "CONCEITUAL",
+      "unidade": "Persistência em arquivo",
+      "descricao": "Tudo que está em variável vive na memória e desaparece quando o programa termina. Para os dados continuarem existindo é preciso gravá-los num arquivo, que foi o ponto de dor do projeto final da turma.",
+      "ordem": 53,
+      "evidencia": [
+        "você domina se consegue explicar por que os cadastros somem ao fechar o programa",
+        "você domina se consegue dizer o que precisa acontecer para o dado sobreviver"
+      ],
+      "checagem": "Por que um cadastro guardado só numa lista desaparece quando o programa termina?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_54",
+      "nome": "Abrir e fechar arquivo",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Persistência em arquivo",
+      "descricao": "Em Python o open recebe três argumentos principais: nome do arquivo com o caminho, modo e encoding. Todo arquivo deve ser fechado depois de ler ou escrever, e o with faz isso sozinho ao sair do bloco.",
+      "ordem": 54,
+      "evidencia": [
+        "você domina se consegue nomear os três argumentos do open",
+        "você domina se consegue justificar o uso do with em vez do close manual"
+      ],
+      "checagem": "Quais são os três argumentos principais do open e quem fecha o arquivo quando você usa with?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_55",
+      "nome": "Modos r, w e a",
+      "tipo": "LINGUAGEM",
+      "unidade": "Persistência em arquivo",
+      "descricao": "O modo r abre para leitura, o w apaga o que existia e escreve do início, e o a mantém o conteúdo e escreve ao final. Em qualquer modo de escrita o arquivo é criado se não existir.",
+      "ordem": 55,
+      "evidencia": [
+        "você domina se consegue escolher o modo que preserva o conteúdo já gravado",
+        "você domina se consegue prever a perda de dados ao abrir em w por engano"
+      ],
+      "checagem": "Qual modo do open mantém o conteúdo existente e escreve ao final do arquivo?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_56",
+      "nome": "Encoding: caracteres e bytes",
+      "tipo": "CONCEITUAL",
+      "unidade": "Persistência em arquivo",
+      "descricao": "A string é uma sequência de caracteres e o arquivo em disco é uma sequência de bytes. O encoding é a regra que converte um no outro, e gravar em uma codificação e ler em outra estraga os acentos, por isso se declara utf-8.",
+      "ordem": 56,
+      "evidencia": [
+        "você domina se consegue explicar o que o encoding converte em quê",
+        "você domina se consegue diagnosticar acentos quebrados como problema de codificação"
+      ],
+      "checagem": "Para que serve o encoding informado ao abrir um arquivo, e o que acontece se ele não bater na leitura?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_57",
+      "nome": "Escrever e ler texto",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Persistência em arquivo",
+      "descricao": "Grava-se linha por linha com write e lê-se percorrendo o arquivo linha a linha. Para recuperar os campos, tira-se o fim de linha e divide-se a linha pelo separador escolhido, por exemplo o ponto e vírgula.",
+      "ordem": 57,
+      "evidencia": [
+        "você domina se consegue gravar dois registros e ler de volta separando nome e idade",
+        "você domina se consegue anexar um registro novo sem apagar os anteriores"
+      ],
+      "checagem": "Escreva o trecho que grava Ana;20 num arquivo e depois o lê separando nome e idade.",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_58",
+      "nome": "Arquivos em C",
+      "tipo": "LINGUAGEM",
+      "unidade": "Persistência em arquivo",
+      "descricao": "Em C abre-se com fopen e fecha-se com fclose, escrevendo texto com fprintf e lendo com fscanf. O retorno do fopen precisa ser testado, porque o arquivo pode não abrir.",
+      "ordem": 58,
+      "evidencia": [
+        "você domina se consegue gravar e ler um arquivo de texto em C testando se o fopen falhou",
+        "você domina se consegue relacionar fopen e fclose ao open e ao with do Python"
+      ],
+      "checagem": "Em C, quais funções abrem, escrevem, leem e fecham um arquivo de texto?",
+      "avaliacoes": ["AV2", "projeto"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_59",
+      "nome": "Arquivo binário em C",
+      "tipo": "LINGUAGEM",
+      "unidade": "Persistência em arquivo",
+      "descricao": "No modo binário grava-se a imagem exata dos bytes do registro: o exemplo da turma escreve 50 pessoas de uma vez com fwrite e as lê com fread. O fseek, o ftell e o rewind servem para contar registros e voltar ao início.",
+      "ordem": 59,
+      "evidencia": [
+        "você domina se consegue gravar um vetor de structs com fwrite e ler de volta com fread",
+        "você domina se consegue contar quantos registros o arquivo tem usando ftell e o tamanho do tipo"
+      ],
+      "checagem": "Como o exemplo em C descobre quantos registros existem no arquivo binário antes de lê-los?",
+      "avaliacoes": ["AV2", "projeto"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    },
+    {
+      "id": "mt_LPGM_60",
+      "nome": "Texto ou binário",
+      "tipo": "CONCEITUAL",
+      "unidade": "Persistência em arquivo",
+      "descricao": "O arquivo de texto é legível em qualquer editor, mas precisa ser interpretado na leitura. O binário grava os bytes exatos e devolve o registro pronto, com o custo de ser ilegível fora do programa que o gravou.",
+      "ordem": 60,
+      "evidencia": [
+        "você domina se consegue escolher o formato certo para um log e para registros de tamanho fixo",
+        "você domina se consegue dizer o que cada formato exige na hora de ler de volta"
+      ],
+      "checagem": "Quando vale gravar em texto e quando vale gravar em binário, e o que você perde em cada escolha?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "src/content/linguagem-programacao/LPGMSections.tsx"
+    }
+  ],
+  "arestas": [
+    {
+      "topicoId": "mt_LPGM_02",
+      "prerequisitoId": "mt_LPGM_01",
+      "forca": "hard",
+      "razao": "Compilar e interpretar são os dois modos de fazer a tradução, então sem a ideia de tradutor a distinção não tem sobre o que falar.",
+      "origem": "texto",
+      "trecho": "Você escreve o código-fonte. Um tradutor (compilador ou interpretador) o converte para a linguagem de máquina, que o computador executa."
+    },
+    {
+      "topicoId": "mt_LPGM_03",
+      "prerequisitoId": "mt_LPGM_02",
+      "forca": "hard",
+      "razao": "O caso híbrido só faz sentido como ressalva à separação entre compilada e interpretada.",
+      "origem": "texto",
+      "trecho": "Java é um caso híbrido: compila para bytecode, que é depois executado por uma máquina virtual (JVM)."
+    },
+    {
+      "topicoId": "mt_LPGM_04",
+      "prerequisitoId": "mt_LPGM_01",
+      "forca": "hard",
+      "razao": "A escala de gerações mede a distância até a linguagem de máquina, que é o alvo da tradução.",
+      "origem": "texto",
+      "trecho": "Os próprios códigos binários que o processador executa. Escrever nela é inviável para um humano; é o alvo final de toda tradução."
+    },
+    {
+      "topicoId": "mt_LPGM_06",
+      "prerequisitoId": "mt_LPGM_05",
+      "forca": "hard",
+      "razao": "O imperativo é um caso do conceito de paradigma, e sem o conceito ele fica sendo apenas jeito de escrever código.",
+      "origem": "texto",
+      "trecho": "Um paradigma é um estilo de estruturar o raciocínio e o código. Uma mesma linguagem pode dar suporte a vários (é multiparadigma)"
+    },
+    {
+      "topicoId": "mt_LPGM_07",
+      "prerequisitoId": "mt_LPGM_06",
+      "forca": "hard",
+      "razao": "O material define o procedural como evolução do imperativo, então é preciso ter o imperativo antes.",
+      "origem": "texto",
+      "trecho": "Organiza o código em procedimentos/funções reutilizáveis. Uma evolução do imperativo"
+    },
+    {
+      "topicoId": "mt_LPGM_08",
+      "prerequisitoId": "mt_LPGM_07",
+      "forca": "soft",
+      "razao": "O material apresenta a orientação a objetos como a passagem seguinte a partir do procedural, o que dá contexto mas não é indispensável.",
+      "origem": "texto",
+      "trecho": "Essa é a passagem do paradigma procedural para o orientado a objetos"
+    },
+    {
+      "topicoId": "mt_LPGM_09",
+      "prerequisitoId": "mt_LPGM_06",
+      "forca": "soft",
+      "razao": "O funcional é ensinado por contraste com o percurso passo a passo do imperativo, no mesmo exemplo da soma dos pares.",
+      "origem": "texto",
+      "trecho": "No estilo imperativo você descreve o passo a passo e vai acumulando; no estilo funcional você descreve a transformação e deixa a linguagem percorrer."
+    },
+    {
+      "topicoId": "mt_LPGM_10",
+      "prerequisitoId": "mt_LPGM_05",
+      "forca": "soft",
+      "razao": "Reconhecer o conceito por baixo da sintaxe é justamente o que o material chama de classificação e paradigmas, então o conceito de paradigma dá o vocabulário da comparação.",
+      "origem": "texto",
+      "trecho": "servem para você reconhecer o conceito por baixo da sintaxe, que é justamente o que a ementa chama de classificação e principais paradigmas"
+    },
+    {
+      "topicoId": "mt_LPGM_12",
+      "prerequisitoId": "mt_LPGM_11",
+      "forca": "hard",
+      "razao": "O tipo é atributo do valor guardado numa variável, então a variável vem primeiro.",
+      "origem": "texto",
+      "trecho": "Uma variável é um espaço na memória que guarda um valor de um tipo."
+    },
+    {
+      "topicoId": "mt_LPGM_13",
+      "prerequisitoId": "mt_LPGM_12",
+      "forca": "hard",
+      "razao": "Só se discute quando o tipo é verificado depois de saber que existem tipos e quais são.",
+      "origem": "texto",
+      "trecho": "em C, C++ e Java você declara o tipo (tipagem estática); em Python, JS e PHP o tipo é inferido em tempo de execução (tipagem dinâmica)"
+    },
+    {
+      "topicoId": "mt_LPGM_13",
+      "prerequisitoId": "mt_LPGM_02",
+      "forca": "hard",
+      "razao": "A expressão tempo de compilação não significa nada para quem ainda não sabe o que um compilador faz.",
+      "origem": "texto",
+      "trecho": "Tipagem estática (o tipo é verificado em tempo de compilação: C, C++, Java) vs dinâmica (em tempo de execução: Python, JavaScript, PHP)."
+    },
+    {
+      "topicoId": "mt_LPGM_14",
+      "prerequisitoId": "mt_LPGM_11",
+      "forca": "hard",
+      "razao": "A constante é definida como identificador que não aceita reatribuição, o que exige antes a ideia de identificador e de atribuição.",
+      "origem": "texto",
+      "trecho": "Uma constante é um identificador cujo valor é fixado uma vez e não pode ser reatribuído"
+    },
+    {
+      "topicoId": "mt_LPGM_15",
+      "prerequisitoId": "mt_LPGM_11",
+      "forca": "hard",
+      "razao": "A definição de expressão inclui variáveis entre os elementos combinados.",
+      "origem": "texto",
+      "trecho": "Uma expressão é a combinação de valores, operadores, constantes, variáveis e funções, avaliada segundo regras de precedência (1 + 2 * 3 = 7; (1 + 2) * 3 = 9)."
+    },
+    {
+      "topicoId": "mt_LPGM_16",
+      "prerequisitoId": "mt_LPGM_12",
+      "forca": "hard",
+      "razao": "O truncamento só é compreensível para quem distingue inteiro de real.",
+      "origem": "texto",
+      "trecho": "em C, C++ e Java, dividir dois inteiros trunca (7/2 = 3), sendo preciso 7/2.0 para obter 3.5"
+    },
+    {
+      "topicoId": "mt_LPGM_18",
+      "prerequisitoId": "mt_LPGM_17",
+      "forca": "hard",
+      "razao": "A conversão se aplica ao que a leitura devolveu, então é preciso saber ler a entrada antes.",
+      "origem": "texto",
+      "trecho": "A leitura de entrada costuma retornar texto, exigindo conversão (casting) para número quando necessário"
+    },
+    {
+      "topicoId": "mt_LPGM_18",
+      "prerequisitoId": "mt_LPGM_12",
+      "forca": "hard",
+      "razao": "Sem distinguir texto de número não há como perceber que 5 vezes 2 virou 55 nem por que a conversão é necessária.",
+      "origem": "texto",
+      "trecho": "Sem a conversão, \"5\" * 2 devolve \"55\" (repetição de texto) em vez de 10."
+    },
+    {
+      "topicoId": "mt_LPGM_19",
+      "prerequisitoId": "mt_LPGM_17",
+      "forca": "hard",
+      "razao": "A regra do juiz é uma regra sobre como escrever a leitura e a saída, então pressupõe saber ler e imprimir.",
+      "origem": "texto",
+      "trecho": "Em juiz automático (The Huxley) não se deve colocar mensagem dentro do input(): o correto é numero = int(input())."
+    },
+    {
+      "topicoId": "mt_LPGM_21",
+      "prerequisitoId": "mt_LPGM_12",
+      "forca": "hard",
+      "razao": "Uma comparação devolve verdadeiro ou falso, e isso só significa algo para quem já tem o tipo booleano.",
+      "origem": "texto",
+      "trecho": "== igual, != diferente, > maior, < menor, >= e <=. Resultam em verdadeiro/falso."
+    },
+    {
+      "topicoId": "mt_LPGM_22",
+      "prerequisitoId": "mt_LPGM_20",
+      "forca": "hard",
+      "razao": "O if governa um bloco, e sem saber como o bloco é delimitado o código nem roda em Python.",
+      "origem": "texto",
+      "trecho": "A maioria das linguagens (C, C++, Java, JS, PHP) delimita blocos com chaves { }. O Python é a exceção: usa a indentação (o recuo) para marcar o bloco."
+    },
+    {
+      "topicoId": "mt_LPGM_22",
+      "prerequisitoId": "mt_LPGM_21",
+      "forca": "hard",
+      "razao": "A condição de um if é uma expressão relacional ou lógica, logo sem os operadores de comparação não existe nada para testar.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_LPGM_23",
+      "prerequisitoId": "mt_LPGM_22",
+      "forca": "hard",
+      "razao": "O switch é ensinado como alternativa restrita ao if encadeado, e o material o define pelo que ele não substitui.",
+      "origem": "texto",
+      "trecho": "Ele não substitui o if: só serve para igualdade contra valores constantes, e cada caso precisa de break para não vazar para o seguinte."
+    },
+    {
+      "topicoId": "mt_LPGM_23",
+      "prerequisitoId": "mt_LPGM_14",
+      "forca": "soft",
+      "razao": "O switch compara o valor contra constantes, então a noção de constante esclarece o limite da estrutura.",
+      "origem": "texto",
+      "trecho": "só serve para igualdade contra valores constantes"
+    },
+    {
+      "topicoId": "mt_LPGM_24",
+      "prerequisitoId": "mt_LPGM_22",
+      "forca": "hard",
+      "razao": "O professor apresenta a repetição por contraste direto com a condicional, trocando o SE pelo ENQUANTO.",
+      "origem": "texto",
+      "trecho": "Na estrutura condicional perguntamos: 'SE isso for True, então…'. E o programa executava o bloco UMA vez. Na repetição, perguntamos: 'ENQUANTO isso for True, então…'"
+    },
+    {
+      "topicoId": "mt_LPGM_25",
+      "prerequisitoId": "mt_LPGM_24",
+      "forca": "soft",
+      "razao": "O material apresenta o while primeiro de propósito, porque nele o raciocínio de repetição fica explícito, mas o for se sustenta sozinho.",
+      "origem": "texto",
+      "trecho": "Esta é a estrutura que o professor apresenta primeiro, porque é nela que o raciocínio de repetição fica explícito."
+    },
+    {
+      "topicoId": "mt_LPGM_26",
+      "prerequisitoId": "mt_LPGM_24",
+      "forca": "hard",
+      "razao": "A escolha compara os dois laços, então é impossível decidir sem conhecer o while.",
+      "origem": "texto",
+      "trecho": "O while é indicado quando não se sabe de antemão quantas repetições serão precisas; o for, quando se percorre uma sequência ou um número conhecido de vezes"
+    },
+    {
+      "topicoId": "mt_LPGM_26",
+      "prerequisitoId": "mt_LPGM_25",
+      "forca": "hard",
+      "razao": "A escolha compara os dois laços, então é impossível decidir sem conhecer o for.",
+      "origem": "texto",
+      "trecho": "O while é indicado quando não se sabe de antemão quantas repetições serão precisas; o for, quando se percorre uma sequência ou um número conhecido de vezes"
+    },
+    {
+      "topicoId": "mt_LPGM_27",
+      "prerequisitoId": "mt_LPGM_25",
+      "forca": "hard",
+      "razao": "O padrão é uma varredura de 1 a 100, ou seja, um for sobre uma faixa conhecida.",
+      "origem": "texto",
+      "trecho": "Faça um programa que imprima os números inteiros de 1 a 100. Para melhorar, sempre que ele encontrar um múltiplo de 9, deve imprimir: 'Esse número é múltiplo de 9'"
+    },
+    {
+      "topicoId": "mt_LPGM_27",
+      "prerequisitoId": "mt_LPGM_22",
+      "forca": "hard",
+      "razao": "O padrão é exatamente um condicional dentro do laço, então sem o if não há decisão a cada volta.",
+      "origem": "texto",
+      "trecho": "for n in range(1, 101):\n    if n % 9 == 0:\n        print(n, \"- Esse número é múltiplo de 9\")"
+    },
+    {
+      "topicoId": "mt_LPGM_27",
+      "prerequisitoId": "mt_LPGM_16",
+      "forca": "hard",
+      "razao": "O teste de múltiplo é feito com o resto da divisão, conforme a dica dada em aula.",
+      "origem": "texto",
+      "trecho": "A dica dada em aula é usar o operador %, o resto da divisão."
+    },
+    {
+      "topicoId": "mt_LPGM_28",
+      "prerequisitoId": "mt_LPGM_11",
+      "forca": "hard",
+      "razao": "A lista é apresentada como uma variável que guarda muitos valores, logo depende da ideia de variável.",
+      "origem": "texto",
+      "trecho": "Guardar muitos valores numa só variável"
+    },
+    {
+      "topicoId": "mt_LPGM_29",
+      "prerequisitoId": "mt_LPGM_28",
+      "forca": "hard",
+      "razao": "Os métodos existem porque a lista é mutável e acessada por índice, o que é o conteúdo do tópico anterior.",
+      "origem": "texto",
+      "trecho": "Guarda vários valores em ordem, acessados por índice (começa em 0). É mutável: dá para adicionar, alterar e remover."
+    },
+    {
+      "topicoId": "mt_LPGM_30",
+      "prerequisitoId": "mt_LPGM_28",
+      "forca": "hard",
+      "razao": "A comparação entre linguagens toma a lista do Python como referência do que deveria crescer.",
+      "origem": "texto",
+      "trecho": "o String[] tem tamanho fixo e não é o equivalente de uma lista de Python"
+    },
+    {
+      "topicoId": "mt_LPGM_31",
+      "prerequisitoId": "mt_LPGM_28",
+      "forca": "hard",
+      "razao": "A tupla é ensinada pela diferença central em relação à lista, que é a imutabilidade.",
+      "origem": "texto",
+      "trecho": "são imutáveis, ou seja, você não pode adicionar, alterar nem remover um elemento de uma Tupla"
+    },
+    {
+      "topicoId": "mt_LPGM_32",
+      "prerequisitoId": "mt_LPGM_31",
+      "forca": "hard",
+      "razao": "Cada elemento da estrutura é uma tupla, então sem a tupla não existe o segundo índice do acesso duplo.",
+      "origem": "texto",
+      "trecho": "cada registro é uma tupla, e todos os registros ficam numa lista"
+    },
+    {
+      "topicoId": "mt_LPGM_32",
+      "prerequisitoId": "mt_LPGM_25",
+      "forca": "hard",
+      "razao": "Metade do tópico é percorrer os registros, e o percurso é feito com for sobre a sequência.",
+      "origem": "texto",
+      "trecho": "Toda sequência pode ser usada no for"
+    },
+    {
+      "topicoId": "mt_LPGM_33",
+      "prerequisitoId": "mt_LPGM_28",
+      "forca": "soft",
+      "razao": "O dicionário é apresentado por contraste com o acesso por posição da lista, mas se entende sozinho.",
+      "origem": "texto",
+      "trecho": "Diferente de listas e tuplas, o acesso não usa a posição: usa a chave, que é única."
+    },
+    {
+      "topicoId": "mt_LPGM_34",
+      "prerequisitoId": "mt_LPGM_20",
+      "forca": "hard",
+      "razao": "O corpo da função é um bloco, e em Python quem delimita o bloco é a indentação, então sem isso a definição nem executa.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_LPGM_35",
+      "prerequisitoId": "mt_LPGM_34",
+      "forca": "hard",
+      "razao": "A sequência didática vai de código repetido para função e depois para função com parâmetro, o que exige já saber definir e chamar.",
+      "origem": "texto",
+      "trecho": "Em aula, a função não apareceu pronta: apareceu como solução para um incômodo. A sequência foi código repetido → função → função com parâmetro."
+    },
+    {
+      "topicoId": "mt_LPGM_36",
+      "prerequisitoId": "mt_LPGM_34",
+      "forca": "hard",
+      "razao": "O assunto é o que sai no return de uma função, então depende de saber definir função e retorno.",
+      "origem": "texto",
+      "trecho": "Em Python uma função devolve uma tupla ao separar valores por vírgula no return"
+    },
+    {
+      "topicoId": "mt_LPGM_36",
+      "prerequisitoId": "mt_LPGM_31",
+      "forca": "hard",
+      "razao": "O valor devolvido é uma tupla, e sem saber o que é tupla o retorno múltiplo não se entende.",
+      "origem": "texto",
+      "trecho": "Em Python uma função devolve uma tupla ao separar valores por vírgula no return"
+    },
+    {
+      "topicoId": "mt_LPGM_37",
+      "prerequisitoId": "mt_LPGM_34",
+      "forca": "hard",
+      "razao": "O que se separa em módulo são as funções, então não há o que importar antes de saber escrever função.",
+      "origem": "texto",
+      "trecho": "Modularizar é separar o programa em arquivos reutilizáveis. Em aula o passo foi prático: salvar as funções num arquivo e importá-las de outro, inclusive com apelido"
+    },
+    {
+      "topicoId": "mt_LPGM_38",
+      "prerequisitoId": "mt_LPGM_37",
+      "forca": "hard",
+      "razao": "A separação entre cabeçalho e implementação é a forma que a modularização assume em C, logo pressupõe a ideia de módulo importável.",
+      "origem": "texto",
+      "trecho": "por que C e C++ separam cabeçalho (.h, as assinaturas) de implementação (.c): quem usa a função precisa saber a forma dela, não o corpo."
+    },
+    {
+      "topicoId": "mt_LPGM_39",
+      "prerequisitoId": "mt_LPGM_34",
+      "forca": "hard",
+      "razao": "O escopo local é definido em relação ao interior da função, então a função precisa existir antes.",
+      "origem": "texto",
+      "trecho": "Escopo define onde uma variável é válida (local dentro da função vs global)."
+    },
+    {
+      "topicoId": "mt_LPGM_40",
+      "prerequisitoId": "mt_LPGM_39",
+      "forca": "hard",
+      "razao": "O erro de nome ao ler o parâmetro de fora é uma consequência direta da regra de escopo local.",
+      "origem": "texto",
+      "trecho": "um parâmetro não pode ser usado fora da função. Ele nasce na chamada e morre no return."
+    },
+    {
+      "topicoId": "mt_LPGM_41",
+      "prerequisitoId": "mt_LPGM_39",
+      "forca": "hard",
+      "razao": "A palavra global só faz sentido para quem já distingue variável local de global.",
+      "origem": "texto",
+      "trecho": "Em Python, atribuir a um nome dentro da função cria uma variável local, sendo preciso declarar global para alterar a de fora (senão ocorre UnboundLocalError)."
+    },
+    {
+      "topicoId": "mt_LPGM_42",
+      "prerequisitoId": "mt_LPGM_34",
+      "forca": "hard",
+      "razao": "Passagem de parâmetro descreve o que acontece na chamada de uma função, então depende de saber chamar função com argumentos.",
+      "origem": "texto",
+      "trecho": "Passagem de parâmetros: por valor (cópia) ou por referência."
+    },
+    {
+      "topicoId": "mt_LPGM_43",
+      "prerequisitoId": "mt_LPGM_42",
+      "forca": "hard",
+      "razao": "O ponteiro é apresentado como a forma de simular passagem por referência em C, logo o conceito vem antes do mecanismo.",
+      "origem": "texto",
+      "trecho": "Em C simula-se referência com ponteiros (&variavel e *ponteiro); C++ usa &."
+    },
+    {
+      "topicoId": "mt_LPGM_44",
+      "prerequisitoId": "mt_LPGM_42",
+      "forca": "hard",
+      "razao": "A distinção entre mexer no objeto e apontar para outro é um refinamento da dicotomia valor e referência.",
+      "origem": "texto",
+      "trecho": "Java é sempre por valor, mas o valor de um objeto é uma referência"
+    },
+    {
+      "topicoId": "mt_LPGM_44",
+      "prerequisitoId": "mt_LPGM_28",
+      "forca": "hard",
+      "razao": "A demonstração inteira é feita mutando uma lista dentro da função, então sem lista não há o caso que ensina.",
+      "origem": "texto",
+      "trecho": "alterar o conteúdo de uma lista dentro da função afeta o original, enquanto reatribuir o parâmetro a um novo objeto não afeta"
+    },
+    {
+      "topicoId": "mt_LPGM_45",
+      "prerequisitoId": "mt_LPGM_28",
+      "forca": "soft",
+      "razao": "O índice que começa em zero e o acesso por posição foram aprendidos na lista, e a string reaplica a mesma ideia aos caracteres.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_LPGM_46",
+      "prerequisitoId": "mt_LPGM_45",
+      "forca": "hard",
+      "razao": "Medir, concatenar e trocar a caixa são operações sobre a sequência de caracteres, que é a definição do tópico anterior.",
+      "origem": "texto",
+      "trecho": "Operações: tamanho (len), concatenação (+), acesso por índice, fatiamento (substring) e métodos de maiúsculas (upper), minúsculas (lower)"
+    },
+    {
+      "topicoId": "mt_LPGM_47",
+      "prerequisitoId": "mt_LPGM_45",
+      "forca": "hard",
+      "razao": "O fatiamento é definido por posições de início e fim, logo depende do índice da string.",
+      "origem": "texto",
+      "trecho": "Fatiamento em Python: palavra[0:4] pega do índice 0 ao 3 (o fim não entra), palavra[:4] do início, palavra[4:] até o fim, palavra[-3:] os três últimos."
+    },
+    {
+      "topicoId": "mt_LPGM_48",
+      "prerequisitoId": "mt_LPGM_46",
+      "forca": "hard",
+      "razao": "A armadilha é sobre a função de tamanho, então só aparece para quem já usa len e seus equivalentes.",
+      "origem": "texto",
+      "trecho": "O strlen do PHP e do C conta BYTES, não caracteres: strlen(\"maçã\") devolve 6 e não 4"
+    },
+    {
+      "topicoId": "mt_LPGM_49",
+      "prerequisitoId": "mt_LPGM_45",
+      "forca": "hard",
+      "razao": "replace e split são operações aplicadas a uma string, e sem a noção de string como sequência de caracteres não há sobre o que operar.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_LPGM_49",
+      "prerequisitoId": "mt_LPGM_28",
+      "forca": "hard",
+      "razao": "O split devolve uma lista, e o resultado é lido por índice, então a lista precisa estar dominada.",
+      "origem": "texto",
+      "trecho": "partes = frase.split(\" \")\nprint(partes)        # ['banana', 'com', 'banana']"
+    },
+    {
+      "topicoId": "mt_LPGM_50",
+      "prerequisitoId": "mt_LPGM_12",
+      "forca": "hard",
+      "razao": "A motivação do tipo próprio é a insuficiência do tipo primitivo, que descreve um valor só.",
+      "origem": "texto",
+      "trecho": "Os tipos primitivos descrevem um valor. Mas os dados do mundo real vêm em conjunto: uma pessoa tem nome e idade"
+    },
+    {
+      "topicoId": "mt_LPGM_50",
+      "prerequisitoId": "mt_LPGM_31",
+      "forca": "soft",
+      "razao": "A tupla já cumpria o papel de registro em Python, e o material apresenta struct e record como o que a substitui nas outras linguagens.",
+      "origem": "texto",
+      "trecho": "C e C++ suprem a tupla com struct e std::tuple, Java com record"
+    },
+    {
+      "topicoId": "mt_LPGM_51",
+      "prerequisitoId": "mt_LPGM_50",
+      "forca": "hard",
+      "razao": "O typedef struct é a escrita concreta do agrupamento de campos motivado no tópico anterior.",
+      "origem": "texto",
+      "trecho": "typedef struct: dá o nome \"pessoa\" ao agrupamento"
+    },
+    {
+      "topicoId": "mt_LPGM_52",
+      "prerequisitoId": "mt_LPGM_51",
+      "forca": "hard",
+      "razao": "A comparação parte da struct do C para mostrar o que muda nas outras linguagens.",
+      "origem": "texto",
+      "trecho": "em C o struct guarda só dados; em Java, Python e PHP o mesmo agrupamento já vem numa class, que pode ter métodos"
+    },
+    {
+      "topicoId": "mt_LPGM_52",
+      "prerequisitoId": "mt_LPGM_08",
+      "forca": "soft",
+      "razao": "A leitura da diferença entre struct e classe é apresentada como a passagem para o paradigma orientado a objetos.",
+      "origem": "texto",
+      "trecho": "Essa é a passagem do paradigma procedural para o orientado a objetos"
+    },
+    {
+      "topicoId": "mt_LPGM_53",
+      "prerequisitoId": "mt_LPGM_11",
+      "forca": "hard",
+      "razao": "O problema é justamente que o dado guardado em variável vive na memória e se perde, o que exige a noção de variável.",
+      "origem": "texto",
+      "trecho": "Tudo que está em variável vive na memória e desaparece quando o programa termina."
+    },
+    {
+      "topicoId": "mt_LPGM_54",
+      "prerequisitoId": "mt_LPGM_53",
+      "forca": "hard",
+      "razao": "Abrir um arquivo só tem sentido depois de entender que gravar em disco é a única forma de o dado sobreviver.",
+      "origem": "texto",
+      "trecho": "Para que os dados continuem existindo é preciso gravá-los num arquivo."
+    },
+    {
+      "topicoId": "mt_LPGM_55",
+      "prerequisitoId": "mt_LPGM_54",
+      "forca": "hard",
+      "razao": "O modo é um dos argumentos do open, logo não se escolhe modo sem saber abrir o arquivo.",
+      "origem": "texto",
+      "trecho": "Modos: r (read/leitura), w (write/escrita, apaga o que existia) e a (append/anexo, mantém e escreve ao final)"
+    },
+    {
+      "topicoId": "mt_LPGM_56",
+      "prerequisitoId": "mt_LPGM_54",
+      "forca": "hard",
+      "razao": "O encoding é o terceiro argumento do open, então entra junto com a abertura do arquivo.",
+      "origem": "texto",
+      "trecho": "Encoding é a regra que converte a sequência de caracteres da string na sequência de bytes do disco (use utf-8 para não corromper acentos)."
+    },
+    {
+      "topicoId": "mt_LPGM_56",
+      "prerequisitoId": "mt_LPGM_45",
+      "forca": "hard",
+      "razao": "A regra converte a sequência de caracteres da string em bytes, o que exige antes a ideia de string como sequência de caracteres.",
+      "origem": "texto",
+      "trecho": "uma string é uma sequência de caracteres, mas um arquivo em disco é uma sequência de bytes. O encoding é a regra que converte um no outro."
+    },
+    {
+      "topicoId": "mt_LPGM_57",
+      "prerequisitoId": "mt_LPGM_55",
+      "forca": "hard",
+      "razao": "Escrever ou anexar depende de escolher o modo certo, e abrir em w por engano apaga o que já existia.",
+      "origem": "texto",
+      "trecho": "with open(\"alunos.txt\", \"w\", encoding=\"utf-8\") as f:"
+    },
+    {
+      "topicoId": "mt_LPGM_57",
+      "prerequisitoId": "mt_LPGM_49",
+      "forca": "hard",
+      "razao": "Recuperar os campos de uma linha lida é feito com strip e split, então a manipulação de string vem antes.",
+      "origem": "texto",
+      "trecho": "nome, idade = linha.strip().split(\";\")"
+    },
+    {
+      "topicoId": "mt_LPGM_58",
+      "prerequisitoId": "mt_LPGM_57",
+      "forca": "soft",
+      "razao": "O material apresenta as funções do C como a outra aba da mesma operação já vista em Python, o que ajuda mas não é indispensável.",
+      "origem": "texto",
+      "trecho": "Em C, usa-se fopen/fclose com fprintf/fscanf para texto e fwrite/fread para binário"
+    },
+    {
+      "topicoId": "mt_LPGM_59",
+      "prerequisitoId": "mt_LPGM_58",
+      "forca": "hard",
+      "razao": "O modo binário é uma variação do mesmo fopen e fclose usados no arquivo de texto em C.",
+      "origem": "texto",
+      "trecho": "FILE *f = fopen(\"pessoas.bin\", \"wb\");"
+    },
+    {
+      "topicoId": "mt_LPGM_59",
+      "prerequisitoId": "mt_LPGM_51",
+      "forca": "hard",
+      "razao": "O que se grava e se lê em bloco é o registro do tipo definido pelo usuário, e o tamanho do struct é o que permite contar registros.",
+      "origem": "texto",
+      "trecho": "grava 50 pessoa de uma vez com fwrite e as lê de volta com fread"
+    },
+    {
+      "topicoId": "mt_LPGM_60",
+      "prerequisitoId": "mt_LPGM_57",
+      "forca": "hard",
+      "razao": "A comparação exige ter escrito e lido um arquivo de texto para sentir o custo de interpretar o conteúdo.",
+      "origem": "texto",
+      "trecho": "Arquivo de texto é legível e precisa ser interpretado; arquivo binário grava os bytes exatos do registro e volta pronto, mas é ilegível fora do programa."
+    },
+    {
+      "topicoId": "mt_LPGM_60",
+      "prerequisitoId": "mt_LPGM_59",
+      "forca": "hard",
+      "razao": "A comparação exige ter visto o registro voltar pronto do arquivo binário, sem interpretação de texto.",
+      "origem": "texto",
+      "trecho": "Arquivo de texto é legível e precisa ser interpretado; arquivo binário grava os bytes exatos do registro e volta pronto, mas é ilegível fora do programa."
+    }
+  ]
+}

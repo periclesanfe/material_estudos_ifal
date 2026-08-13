@@ -44,6 +44,14 @@ Apostila_*.pdf
 # Pareceres dos agentes criticos — artefato de processo, nao conteudo do site
 .reviews/
 
+# Pesquisa de design de sistemas de terceiros — artefato de decisao nossa, nao
+# conteudo do site. Mesma logica de .reviews/
+.docs/duolingo/
+
+# Páginas de laboratório visual — servem para comparar protótipos durante o
+# desenvolvimento e não fazem parte do site
+src/pages/*Lab.tsx
+
 # Segredos OAuth do coletor do Classroom — NUNCA comitar
 scripts/classroom/credentials.json
 scripts/classroom/token.json

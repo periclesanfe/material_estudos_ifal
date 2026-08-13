@@ -7,7 +7,7 @@ interface HighlightBoxProps {
 }
 
 export default function HighlightBox({ title, children, accent }: HighlightBoxProps) {
-  const borderColor = accent || 'rgba(108, 99, 255, 0.3)';
+  const borderColor = accent || 'rgba(99, 102, 241, 0.3)';
   const titleColor = accent || 'var(--color-accent)';
 
   return (

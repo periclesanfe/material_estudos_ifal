@@ -31,7 +31,11 @@ jobs:
         run: npm ci
 
       - name: Type checking
-        run: npx tsc --noEmit
+        # `tsc --noEmit` compilava ZERO arquivos: o tsconfig.json da raiz tem
+        # "files": [] e só aponta references, então o comando não enxergava src/.
+        # O gate passava sempre, inclusive com erro de tipo no código. `tsc -b`
+        # constrói os projetos referenciados, que é o que de fato checa.
+        run: npx tsc -b
 
       - name: Run ESLint
         run: npm run lint

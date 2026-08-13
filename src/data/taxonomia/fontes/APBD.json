@@ -1,0 +1,1589 @@
+{
+  "disciplina": {
+    "codigo": "APBD",
+    "codigoPPC": "APBD",
+    "nome": "Administração e Projeto de Banco de Dados",
+    "periodo": 4
+  },
+  "topicos": [
+    {
+      "id": "mt_APBD_01",
+      "nome": "Projeto e administração de BD",
+      "tipo": "CONCEITUAL",
+      "unidade": "Introdução à disciplina",
+      "descricao": "Projeto define a estrutura do banco (objetos, relacionamentos, regras e acesso). Administração mantém essa estrutura viva em ambiente real, com usuários, instância, segurança, backup e desempenho. A disciplina junta os dois porque um modelo mal feito gera SQL difícil e administração que trata sintoma.",
+      "ordem": 1,
+      "evidencia": [
+        "voce domina se consegue dizer o que é decisão de projeto e o que é tarefa de administração em uma mesma situação",
+        "voce domina se consegue explicar por que o DBA precisa entender o modelo para não ficar só apagando incêndio"
+      ],
+      "checagem": "Diante de um banco lento em produção, qual parte do problema pode vir do projeto e qual parte vem da administração?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": [
+        "Desenvolvimento de projeto de banco de dados utilizando a linguagem SQL",
+        "Atividades do Administrador de Banco de Dados"
+      ],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_02",
+      "nome": "Formato e avaliação da disciplina",
+      "tipo": "META",
+      "unidade": "Introdução à disciplina",
+      "descricao": "A disciplina roda em laboratório com Oracle Database, SQL Developer, Data Modeler, VirtualBox e Live SQL. A nota 1 soma projeto fase 1 e 2 (2 pts cada) mais prova 1 em duas partes (3 pts cada). A nota 2 soma fases 3, 4 e 5 (2 pts cada) mais prova 2 (4 pts). O projeto em grupo é avaliado por correção técnica, inovação, complexidade e aderência à realidade.",
+      "ordem": 2,
+      "evidencia": [
+        "voce domina se consegue dizer quanto vale cada entrega e o que o professor cobra em cada critério do projeto",
+        "voce domina se consegue escolher a ferramenta certa (Data Modeler, SQL Developer ou Live SQL) para cada tarefa"
+      ],
+      "checagem": "Quais entregas compõem a nota 1 e quais critérios são usados para avaliar o projeto em grupo?",
+      "avaliacoes": ["projeto"],
+      "ementaPPC": [],
+      "fonte": "src/content/administracao-projeto-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_APBD_03",
+      "nome": "Esquema como fronteira lógica",
+      "tipo": "CONCEITUAL",
+      "unidade": "Modelagem e projeto físico",
+      "descricao": "O esquema agrupa os objetos de uma mesma aplicação: tabelas, visões, índices e demais estruturas. Ele funciona como fronteira do domínio e facilita leitura, permissões, manutenção e evolução do banco.",
+      "ordem": 3,
+      "evidencia": [
+        "voce domina se consegue justificar por que objetos de vendas e de financeiro podem ficar em esquemas separados",
+        "voce domina se consegue listar quais objetos pertencem ao esquema de uma aplicação"
+      ],
+      "checagem": "O que é o esquema em um projeto de banco de dados e que problema ele resolve na manutenção?",
+      "avaliacoes": ["AV1", "projeto"],
+      "ementaPPC": ["Desenvolvimento de projeto de banco de dados utilizando a linguagem SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_04",
+      "nome": "Configuração do Data Modeler",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Modelagem e projeto físico",
+      "descricao": "Antes de desenhar objetos, o Data Modeler precisa ser configurado: versão do SGBD, colunas obrigatórias, índices de chave estrangeira, estilo de relacionamento, tipos e domínios. A versão escolhida muda recursos disponíveis, tipos aceitos e o formato do SQL gerado.",
+      "ordem": 4,
+      "evidencia": [
+        "voce domina se consegue ajustar a versão do banco na ferramenta antes de gerar o DDL",
+        "voce domina se consegue explicar por que um SQL gerado pode não rodar na versão instalada"
+      ],
+      "checagem": "Por que configurar a versão do SGBD no Data Modeler antes de gerar o SQL evita retrabalho?",
+      "avaliacoes": ["AV1", "projeto"],
+      "ementaPPC": ["Desenvolvimento de projeto de banco de dados utilizando a linguagem SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_05",
+      "nome": "Padronização de nomes de objetos",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Modelagem e projeto físico",
+      "descricao": "A nomenclatura física é decisão de projeto. Convenções comuns: PK_{tabela}, FK_{pai}_{filho}, AK/UK para unicidade, IDX para índice, CK para validação e NN para obrigatoriedade. Abreviações como Cod, Dta, Nom, Des, Qtd, Val e Id mantêm nomes curtos e previsíveis.",
+      "ordem": 5,
+      "evidencia": [
+        "voce domina se consegue olhar um nome de constraint e dizer que tipo de objeto ele é",
+        "voce domina se consegue nomear PK, FK, unique, índice e check de uma tabela sem inventar padrão novo"
+      ],
+      "checagem": "Qual desses nomes pertence a uma chave estrangeira: PK_CLIENTE, FK_CLIENTE_PEDIDO, IDX_PEDIDO_DATA?",
+      "avaliacoes": ["AV1", "projeto"],
+      "ementaPPC": ["Desenvolvimento de projeto de banco de dados utilizando a linguagem SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_06",
+      "nome": "Tipos e domínios reutilizáveis",
+      "tipo": "CONCEITUAL",
+      "unidade": "Modelagem e projeto físico",
+      "descricao": "Tipos e domínios transformam definições repetidas em padrões reutilizáveis, centralizando tipo, validação e regra recorrente. Sem eles, colunas parecidas (data, valor, quantidade, código) acabam definidas de formas diferentes por repetição manual.",
+      "ordem": 6,
+      "evidencia": [
+        "voce domina se consegue criar um domínio para valor monetário e reusá-lo em várias tabelas",
+        "voce domina se consegue apontar a inconsistência que aparece quando cada coluna é definida à mão"
+      ],
+      "checagem": "Qual é a vantagem prática de usar domínio em vez de repetir tipo e validação em cada coluna?",
+      "avaliacoes": ["AV1", "projeto"],
+      "ementaPPC": ["Desenvolvimento de projeto de banco de dados utilizando a linguagem SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_07",
+      "nome": "Constraints de integridade",
+      "tipo": "CONCEITUAL",
+      "unidade": "Objetos SQL",
+      "descricao": "A tabela é ponto de defesa dos dados. Chave primária evita identificação ambígua, chave estrangeira evita relacionamento quebrado, unique evita duplicidade, not null evita registro incompleto e check valida conteúdo. As regras continuam valendo mesmo se outro sistema ou script acessar o banco.",
+      "ordem": 7,
+      "evidencia": [
+        "voce domina se consegue dizer qual constraint impede cada tipo de dado errado",
+        "voce domina se consegue defender por que a regra no banco é mais forte que a regra só na aplicação"
+      ],
+      "checagem": "Além das colunas, o que uma tabela precisa ter para proteger a integridade dos dados?",
+      "avaliacoes": ["AV1", "projeto"],
+      "ementaPPC": [
+        "Desenvolvimento de projeto de banco de dados utilizando a linguagem SQL",
+        "Comandos DDL, DML, DCL e comandos de controle de transações"
+      ],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_08",
+      "nome": "CREATE TABLE no Oracle",
+      "tipo": "LINGUAGEM",
+      "unidade": "Objetos SQL",
+      "descricao": "Escrever o DDL da tabela já com colunas, tipos e constraints nomeadas: NOT NULL de coluna, PRIMARY KEY, UNIQUE e FOREIGN KEY com REFERENCES. A tabela nasce com as regras, não recebe regras depois.",
+      "ordem": 8,
+      "evidencia": [
+        "voce domina se consegue escrever um CREATE TABLE com PK, FK, unique e not null nomeados",
+        "voce domina se consegue ler o DDL de uma tabela e dizer quais regras ela impõe"
+      ],
+      "checagem": "Escreva o CREATE TABLE de departamento com PK, uma coluna unique e uma FK para empregado.",
+      "avaliacoes": ["AV1", "projeto"],
+      "ementaPPC": ["Comandos DDL, DML, DCL e comandos de controle de transações"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_09",
+      "nome": "ALTER TABLE e comentários",
+      "tipo": "LINGUAGEM",
+      "unidade": "Objetos SQL",
+      "descricao": "ALTER TABLE evolui a estrutura com ADD (nova coluna), MODIFY (tipo, padrão ou obrigatoriedade) e DROP COLUMN (remoção). Comentários documentam tabela e coluna dentro do próprio banco. A alteração precisa preservar a coerência do modelo e das constraints.",
+      "ordem": 9,
+      "evidencia": [
+        "voce domina se consegue escolher entre ADD, MODIFY e DROP COLUMN para uma nova regra de negócio",
+        "voce domina se consegue alterar uma coluna sem quebrar constraint ou documentação existente"
+      ],
+      "checagem": "Qual comando altera a definição de uma tabela já existente e quais operações ele aceita?",
+      "avaliacoes": ["AV1", "projeto"],
+      "ementaPPC": ["Comandos DDL, DML, DCL e comandos de controle de transações"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_10",
+      "nome": "Visões como consulta salva",
+      "tipo": "CONCEITUAL",
+      "unidade": "Objetos SQL",
+      "descricao": "Visão é consulta salva que cria uma camada lógica sobre as tabelas: filtra, simplifica, protege ou reorganiza o acesso sem armazenar os dados de novo. Alterações costumam usar CREATE OR REPLACE.",
+      "ordem": 10,
+      "evidencia": [
+        "voce domina se consegue criar uma visão que expõe só parte das colunas ou das linhas",
+        "voce domina se consegue explicar por que a visão não substitui a tabela"
+      ],
+      "checagem": "O que é uma visão e em que situação ela é melhor do que dar acesso direto à tabela?",
+      "avaliacoes": ["AV1", "projeto"],
+      "ementaPPC": ["Comandos DDL, DML, DCL e comandos de controle de transações"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_11",
+      "nome": "Sequences, NEXTVAL e CURRVAL",
+      "tipo": "LINGUAGEM",
+      "unidade": "Objetos SQL",
+      "descricao": "Sequence gera números automaticamente para chaves artificiais, com INCREMENT BY, START WITH, NOMAXVALUE, NOCYCLE e CACHE. NEXTVAL devolve o próximo valor e CURRVAL recupera o valor atual da sessão.",
+      "ordem": 11,
+      "evidencia": [
+        "voce domina se consegue criar uma sequence e usá-la em um insert",
+        "voce domina se consegue dizer a diferença entre NEXTVAL e CURRVAL"
+      ],
+      "checagem": "Para que serve uma sequence no Oracle e qual pseudocoluna devolve o próximo valor?",
+      "avaliacoes": ["AV1", "projeto"],
+      "ementaPPC": ["Comandos DDL, DML, DCL e comandos de controle de transações"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_12",
+      "nome": "Índice como troca de custo",
+      "tipo": "CONCEITUAL",
+      "unidade": "Índices e particionamento",
+      "descricao": "Índice acelera leitura porque oferece caminho de acesso alternativo, mas ocupa espaço e custa manutenção em cada escrita. Por isso índice em toda coluna é má prática: precisa ser monitorado para verificar se ainda traz ganho real.",
+      "ordem": 12,
+      "evidencia": [
+        "voce domina se consegue decidir se vale criar índice olhando as consultas e as escritas da tabela",
+        "voce domina se consegue argumentar quando um índice existente deve ser removido"
+      ],
+      "checagem": "Por que criar índice em toda coluna piora o banco em vez de melhorar?",
+      "avaliacoes": ["AV1", "projeto"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_13",
+      "nome": "Índice B-tree e bitmap",
+      "tipo": "CONCEITUAL",
+      "unidade": "Índices e particionamento",
+      "descricao": "B-tree é o padrão em busca por chave, filtro seletivo, junção e ambiente transacional com muita escrita. Bitmap serve a colunas de baixa cardinalidade e consultas analíticas que combinam filtros, mas se comporta mal com muitas atualizações.",
+      "ordem": 13,
+      "evidencia": [
+        "voce domina se consegue escolher entre B-tree e bitmap a partir da cardinalidade e da carga de escrita",
+        "voce domina se consegue dizer por que bitmap em tabela transacional é problema"
+      ],
+      "checagem": "Em que cenário um índice bitmap é mais adequado que um B-tree?",
+      "avaliacoes": ["AV1", "projeto"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_14",
+      "nome": "Índice por expressão",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Índices e particionamento",
+      "descricao": "Quando a consulta aplica função na coluna, o índice comum não é usado. O índice baseado em expressão, como indexar UPPER(last_name), permite otimizar essa busca. Índices também podem ser compostos por mais de uma coluna.",
+      "ordem": 14,
+      "evidencia": [
+        "voce domina se consegue criar índice por expressão para uma busca que ignora caixa",
+        "voce domina se consegue reconhecer uma consulta que só ganha com índice composto"
+      ],
+      "checagem": "Como indexar uma coluna que é sempre consultada dentro de uma função como UPPER?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_15",
+      "nome": "Particionamento de tabelas e índices",
+      "tipo": "CONCEITUAL",
+      "unidade": "Índices e particionamento",
+      "descricao": "Particionamento divide tabela grande em partes menores por faixa (datas, intervalos), lista (estados, categorias) ou hash (distribuição equilibrada). A aplicação continua vendo uma tabela única. Índices também podem ser particionados, seguindo a lógica da tabela ou uma própria.",
+      "ordem": 15,
+      "evidencia": [
+        "voce domina se consegue escolher faixa, lista ou hash a partir do significado dos dados",
+        "voce domina se consegue explicar por que a aplicação não precisa mudar quando a tabela é particionada"
+      ],
+      "checagem": "Uma tabela de pedidos com 10 anos de histórico deve ser particionada por qual estratégia e por quê?",
+      "avaliacoes": ["AV1", "projeto"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_16",
+      "nome": "Armazenamento lógico e físico",
+      "tipo": "CONCEITUAL",
+      "unidade": "Armazenamento Oracle",
+      "descricao": "O Oracle separa como organiza os dados (tablespaces, segmentos, extents e blocos) de onde eles são gravados (datafiles do sistema operacional). Assim o DBA reorganiza arquivos sem mudar como a aplicação enxerga os objetos.",
+      "ordem": 16,
+      "evidencia": [
+        "voce domina se consegue dizer o que é lógico e o que é físico em uma lista de estruturas Oracle",
+        "voce domina se consegue explicar por que mover um datafile não muda a consulta da aplicação"
+      ],
+      "checagem": "Qual é a diferença entre armazenamento lógico e físico no Oracle?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_17",
+      "nome": "Hierarquia de armazenamento",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Armazenamento Oracle",
+      "descricao": "A hierarquia lógica vai de DATABASE para TABLESPACE, SEGMENTO, EXTENT e ORACLE DATA BLOCK. Saber desenhar essa pilha na ordem certa é o mapa que organiza todo o resto do assunto.",
+      "ordem": 17,
+      "evidencia": [
+        "voce domina se consegue desenhar a pilha do database até o bloco sem trocar níveis",
+        "voce domina se consegue dizer o que contém o quê em cada nível"
+      ],
+      "checagem": "Coloque em ordem: extent, tablespace, bloco, database e segmento.",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_18",
+      "nome": "Oracle data block",
+      "tipo": "CONCEITUAL",
+      "unidade": "Armazenamento Oracle",
+      "descricao": "O bloco é a menor unidade que o Oracle lê e grava, em múltiplos definidos por DB_BLOCK_SIZE (4KB, 8KB, 16KB). Dentro dele há cabeçalho com metadados e informação transacional, área de dados com linhas ou entradas de índice, e espaço livre.",
+      "ordem": 18,
+      "evidencia": [
+        "voce domina se consegue nomear as três áreas internas de um bloco",
+        "voce domina se consegue explicar por que o Oracle não grava um byte solto de uma linha"
+      ],
+      "checagem": "Qual é a menor unidade de armazenamento gerenciada pelo Oracle e o que existe dentro dela?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_19",
+      "nome": "PCTFREE e PCTUSED",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Armazenamento Oracle",
+      "descricao": "PCTFREE reserva parte do bloco para updates que aumentam linhas já existentes: com PCTFREE 20, o bloco para de receber inserts perto de 80% de ocupação. PCTUSED define quando o bloco volta a aceitar inserts depois de deleções: com PCTUSED 40, só quando a ocupação cai abaixo de 40%.",
+      "ordem": 19,
+      "evidencia": [
+        "voce domina se consegue simular a ocupação de um bloco com PCTFREE 20 e PCTUSED 40",
+        "voce domina se consegue dizer qual parâmetro protege update e qual controla o retorno do bloco"
+      ],
+      "checagem": "Em um bloco com PCTFREE = 20, quando o Oracle deixa de inserir novas linhas nesse bloco?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_20",
+      "nome": "Extent e segmento",
+      "tipo": "CONCEITUAL",
+      "unidade": "Armazenamento Oracle",
+      "descricao": "Quando um objeto precisa crescer, o Oracle aloca um extent, que é um conjunto contíguo de blocos, e não um bloco isolado. O segmento é o conjunto de extents de um objeto: existem segmentos de dados, de índice, temporários (ORDER BY, GROUP BY, joins) e de UNDO.",
+      "ordem": 20,
+      "evidencia": [
+        "voce domina se consegue explicar como uma tabela cresce em disco",
+        "voce domina se consegue classificar um segmento como dados, índice, temporário ou UNDO"
+      ],
+      "checagem": "O que é um extent e qual a relação dele com o segmento de uma tabela?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_21",
+      "nome": "Tablespace e datafile",
+      "tipo": "CONCEITUAL",
+      "unidade": "Armazenamento Oracle",
+      "descricao": "Tablespace é lógico: agrupa segmentos por finalidade, como TBS_FROTA_DD para dados e TBS_FROTA_IX para índices. Datafile é físico: o arquivo real no sistema operacional. Um tablespace pode ter um ou mais datafiles, o que ajuda desempenho, manutenção e controle de espaço.",
+      "ordem": 21,
+      "evidencia": [
+        "voce domina se consegue justificar separar tablespace de dados e de índices",
+        "voce domina se consegue dizer o que a aplicação enxerga e o que o sistema operacional enxerga"
+      ],
+      "checagem": "Qual a diferença entre tablespace e datafile, e por que separar dados de índices pode ajudar?",
+      "avaliacoes": ["AV1", "projeto"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_22",
+      "nome": "PROFILE e perfil DEFAULT",
+      "tipo": "CONCEITUAL",
+      "unidade": "Segurança e recuperação",
+      "descricao": "PROFILE é um conjunto nomeado de regras de senha e de consumo de recursos, aplicado no CREATE USER ou no ALTER USER. O perfil DEFAULT sempre existe, não pode ser eliminado e vale para quem não recebeu outro. Role concede privilégio, profile impõe limite: são coisas diferentes.",
+      "ordem": 22,
+      "evidencia": [
+        "voce domina se consegue criar um profile e ligá-lo a um usuário",
+        "voce domina se consegue dizer por que profile não substitui role"
+      ],
+      "checagem": "Qual é o papel de um PROFILE no Oracle e o que acontece com um usuário criado sem profile explícito?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_23",
+      "nome": "Política de senha no profile",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Segurança e recuperação",
+      "descricao": "FAILED_LOGIN_ATTEMPTS e PASSWORD_LOCK_TIME travam tentativa repetida (1/24 vale cerca de uma hora). PASSWORD_LIFE_TIME e PASSWORD_GRACE_TIME controlam validade e tolerância. PASSWORD_REUSE_TIME e PASSWORD_REUSE_MAX barram reuso. PASSWORD_VERIFY_FUNCTION é uma função que valida complexidade antes da troca.",
+      "ordem": 23,
+      "evidencia": [
+        "voce domina se consegue montar um CREATE PROFILE que bloqueia conta após 3 falhas por uma hora",
+        "voce domina se consegue dizer qual parâmetro impede o usuário de voltar para a senha antiga"
+      ],
+      "checagem": "Qual combinação de parâmetros trata excesso de tentativas de login e por quanto tempo a conta fica bloqueada?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_24",
+      "nome": "Limites de recursos e RESOURCE_LIMIT",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Segurança e recuperação",
+      "descricao": "Limites por sessão (SESSIONS_PER_USER, CONNECT_TIME, IDLE_TIME, CPU_PER_SESSION, LOGICAL_READS_PER_SESSION, COMPOSITE_LIMIT) olham a conexão inteira, e limites por chamada (CPU_PER_CALL, LOGICAL_READS_PER_CALL) olham cada comando. Nada disso é aplicado se RESOURCE_LIMIT não estiver habilitado.",
+      "ordem": 24,
+      "evidencia": [
+        "voce domina se consegue escolher o limite certo para um usuário que abre conexões demais",
+        "voce domina se consegue lembrar de ligar RESOURCE_LIMIT antes de esperar enforcement"
+      ],
+      "checagem": "Qual parâmetro global precisa estar ativo para que os limites de recurso do profile realmente valham?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_25",
+      "nome": "Falha lógica e falha física",
+      "tipo": "CONCEITUAL",
+      "unidade": "Segurança e recuperação",
+      "descricao": "Falha lógica é erro no dado: UPDATE sem WHERE, DELETE indevido, TRUNCATE acidental. Falha física é arquivo perdido ou corrompido. Restaurar o banco inteiro por causa de um erro lógico costuma ser mais caro e perigoso do que recuperar só o dado afetado.",
+      "ordem": 25,
+      "evidencia": [
+        "voce domina se consegue classificar um incidente como lógico ou físico antes de escolher a ferramenta",
+        "voce domina se consegue explicar por que restore completo não é a primeira resposta para um update errado"
+      ],
+      "checagem": "Um DELETE indevido em uma tabela é falha lógica ou física, e o que isso muda na resposta?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_26",
+      "nome": "LogMiner e redo logs",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Segurança e recuperação",
+      "descricao": "LogMiner lê os redo logs e reconstrói a história das alterações. O roteiro é habilitar supplemental logging, preparar dicionário, adicionar redo logs, iniciar a sessão, consultar V$LOGMNR_CONTENTS (SQL_REDO e SQL_UNDO) e encerrar.",
+      "ordem": 26,
+      "evidencia": [
+        "voce domina se consegue seguir a sequência do LogMiner até consultar V$LOGMNR_CONTENTS",
+        "voce domina se consegue dizer o que é SQL_REDO e o que é SQL_UNDO"
+      ],
+      "checagem": "Em que situação o LogMiner é a ferramenta certa e o que ele devolve ao final?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_27",
+      "nome": "Flashback Query",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Segurança e recuperação",
+      "descricao": "Flashback Query consulta os dados como estavam em um SCN ou timestamp anterior, com AS OF TIMESTAMP, sem restaurar o banco. Serve para comparar o estado atual com o de antes do erro.",
+      "ordem": 27,
+      "evidencia": [
+        "voce domina se consegue escrever um SELECT com AS OF TIMESTAMP para ver o dado de 20 minutos atrás",
+        "voce domina se consegue usar a consulta antiga para provar o que mudou"
+      ],
+      "checagem": "Qual recurso permite consultar uma tabela como ela estava em um timestamp anterior sem restore?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_28",
+      "nome": "Flashback Table e Flashback Drop",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Segurança e recuperação",
+      "descricao": "Flashback Table devolve uma tabela a um ponto anterior no tempo e normalmente exige ENABLE ROW MOVEMENT. Flashback Drop recupera tabela apagada com TO BEFORE DROP, enquanto ela ainda está no recycle bin. Flashback Data Archive guarda histórico longo e Flashback Transaction desfaz transações.",
+      "ordem": 28,
+      "evidencia": [
+        "voce domina se consegue voltar uma tabela no tempo depois de habilitar row movement",
+        "voce domina se consegue recuperar uma tabela dropada que ainda está no recycle bin"
+      ],
+      "checagem": "Quando Flashback Table é boa escolha e qual pré-condição a tabela precisa ter?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_29",
+      "nome": "Data Pump",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Segurança e recuperação",
+      "descricao": "Data Pump é backup lógico com expdp e impdp, no nível de schema, tabela, tablespace ou banco completo. Usa DIRECTORY, DUMPFILE, LOGFILE, SCHEMAS, TABLES, REMAP_SCHEMA, QUERY e EXCLUDE. Antes é preciso criar o DIRECTORY no Oracle e conceder leitura e escrita.",
+      "ordem": 29,
+      "evidencia": [
+        "voce domina se consegue exportar um schema e importá-lo com outro nome usando REMAP_SCHEMA",
+        "voce domina se consegue dizer por que o DIRECTORY precisa existir antes do expdp"
+      ],
+      "checagem": "Como migrar o schema FROTA para um ambiente de homologação com outro nome?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_30",
+      "nome": "RMAN e backup físico",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Segurança e recuperação",
+      "descricao": "RMAN faz backup físico e recovery de datafiles, archived redo logs, control file, SPFILE e Flash Recovery Area, com política de retenção e backup full ou incremental. É o caminho para arquivo perdido ou corrompido.",
+      "ordem": 30,
+      "evidencia": [
+        "voce domina se consegue dizer quais arquivos entram em um backup RMAN",
+        "voce domina se consegue distinguir quando usar RMAN em vez de Data Pump"
+      ],
+      "checagem": "Qual afirmação diferencia Data Pump de RMAN em termos de nível de atuação?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_31",
+      "nome": "RESTORE e RECOVER",
+      "tipo": "CONCEITUAL",
+      "unidade": "Segurança e recuperação",
+      "descricao": "São duas etapas diferentes: RESTORE traz o arquivo de volta do backup, RECOVER aplica os redo logs para deixar esse arquivo consistente até o ponto necessário. Recuperação incompleta usa UNTIL TIME e depois ALTER DATABASE OPEN RESETLOGS.",
+      "ordem": 31,
+      "evidencia": [
+        "voce domina se consegue explicar por que restore sozinho não resolve",
+        "voce domina se consegue montar a sequência restore, recover e open para um datafile perdido"
+      ],
+      "checagem": "Qual é a diferença entre RESTORE e RECOVER no RMAN?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_32",
+      "nome": "RTO e RPO",
+      "tipo": "CONCEITUAL",
+      "unidade": "Segurança e recuperação",
+      "descricao": "RTO é o tempo máximo aceitável para voltar a operar. RPO é a perda máxima de dados aceitável. RTO baixo puxa alta disponibilidade e failover, RPO baixo puxa backup frequente, archived logs e replicação. Continuidade se liga aos pilares confidencialidade, integridade e disponibilidade.",
+      "ordem": 32,
+      "evidencia": [
+        "voce domina se consegue traduzir uma exigência do negócio em RTO e RPO",
+        "voce domina se consegue dizer qual das duas métricas muda a frequência de backup"
+      ],
+      "checagem": "Se a prioridade é reduzir a perda máxima de dados em um desastre, qual métrica está em foco?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_33",
+      "nome": "Tipos de falha e continuidade",
+      "tipo": "CONCEITUAL",
+      "unidade": "Segurança e recuperação",
+      "descricao": "Falha de instância pede recuperação automática (SMON). Avaria de software ou hardware pede diagnóstico da camada e restore com recover. Perda de mídia pede RMAN. Catástrofe pede site alternativo, redundância e replicação, com Data Guard, Active Data Guard, RAC e TDE compondo o plano.",
+      "ordem": 33,
+      "evidencia": [
+        "voce domina se consegue ligar cada tipo de falha à resposta esperada",
+        "voce domina se consegue dizer o que Data Guard e RAC resolvem que RMAN sozinho não resolve"
+      ],
+      "checagem": "O data center inteiro ficou indisponível: quais soluções Oracle entram na resposta e por quê?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_34",
+      "nome": "Escolha da ferramenta por incidente",
+      "tipo": "META",
+      "unidade": "Segurança e recuperação",
+      "descricao": "Em vez de decorar siglas, parta do cenário: update errado aponta para Flashback ou LogMiner, usuário sobrecarregando aponta para PROFILE e limites, migrar schema aponta para Data Pump, arquivo físico perdido aponta para RMAN e perda do site aponta para DRP com Data Guard e RAC.",
+      "ordem": 34,
+      "evidencia": [
+        "voce domina se consegue receber um incidente descrito em uma frase e nomear a ferramenta certa",
+        "voce domina se consegue justificar a escolha por impacto, granularidade e tempo de recuperação"
+      ],
+      "checagem": "Alguém rodou um UPDATE sem WHERE há 15 minutos: qual caminho você escolhe e por quê?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_APBD_35",
+      "nome": "Instância, banco e sessão",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "Instância é memória mais processos em execução. Banco de dados é o conjunto de arquivos físicos. Na conexão existe o User Process no cliente e o Server Process no servidor, que usa a SGA compartilhada e mantém uma PGA privada com contexto de sessão, binds e ordenações.",
+      "ordem": 35,
+      "evidencia": [
+        "voce domina se consegue dizer o que é instância e o que é banco sem misturar os dois",
+        "voce domina se consegue apontar o que fica na PGA e o que fica na SGA"
+      ],
+      "checagem": "Qual a diferença entre instância Oracle e banco de dados, e onde entra a PGA?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_36",
+      "nome": "Componentes da SGA",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "A SGA é memória compartilhada da instância. Shared Pool guarda SQL e PL/SQL interpretados, planos, Library Cache e Dictionary Cache. Database Buffer Cache guarda blocos lidos dos datafiles. Redo Log Buffer registra as alterações antes do LGWR. Java, Large e Streams Pool são opcionais.",
+      "ordem": 36,
+      "evidencia": [
+        "voce domina se consegue dizer em qual componente cai cada tipo de conteúdo",
+        "voce domina se consegue explicar por que a segunda execução do mesmo SELECT custa menos"
+      ],
+      "checagem": "Qual componente da SGA armazena blocos de dados lidos do disco?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_37",
+      "nome": "Estados do bloco e COMMIT",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "Um bloco clean pode ser reutilizado, dirty foi alterado e ainda espera o DBWn, pinned está em uso ativo. O COMMIT é confirmado quando o LGWR grava o redo em disco, mesmo que o bloco alterado só chegue ao datafile depois. Por isso o Oracle posterga a gravação de dados, mas nunca a do redo.",
+      "ordem": 37,
+      "evidencia": [
+        "voce domina se consegue explicar por que o COMMIT não espera o bloco chegar ao datafile",
+        "voce domina se consegue dizer o que acontece se o banco cair logo depois do commit"
+      ],
+      "checagem": "Por que o Oracle pode confirmar um COMMIT antes de o bloco alterado ser gravado no datafile?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_38",
+      "nome": "Background processes",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "SMON faz crash recovery e manutenção de espaço. PMON limpa sessão quebrada e libera locks. DBWn grava dirty blocks em lote. LGWR grava redo no commit, por tempo, por volume ou antes do checkpoint. CKPT atualiza cabeçalho de datafiles e control file. ARCn arquiva redo, MMAN cuida da memória e RVWR apoia Flashback Database.",
+      "ordem": 38,
+      "evidencia": [
+        "voce domina se consegue apontar qual processo é responsável por um sintoma descrito",
+        "voce domina se consegue diferenciar o papel de DBWn, LGWR e CKPT"
+      ],
+      "checagem": "Qual processo limpa recursos quando uma sessão cai abruptamente?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_39",
+      "nome": "Arquivos do Oracle",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "Arquivos principais: control file (estrutura física, deve ser multiplexado), datafiles e redo log files (em grupos circulares, também multiplexados). Associados: PFILE (texto, exige restart) e SPFILE (binário, alterado por ALTER SYSTEM), password file, archived redo logs, trace files e alert log.",
+      "ordem": 39,
+      "evidencia": [
+        "voce domina se consegue dizer qual arquivo é indispensável para montar o banco",
+        "voce domina se consegue escolher entre PFILE e SPFILE e explicar o efeito da escolha"
+      ],
+      "checagem": "Qual arquivo é indispensável para a instância saber a estrutura física do banco, e por que ele é multiplexado?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_40",
+      "nome": "Multitenant CDB e PDB",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "No Oracle 12c em diante, um CDB contém CDB$ROOT (metadados comuns), PDB$SEED (template somente leitura) e PDBs de usuário, onde ficam as aplicações. Antes de criar objeto é preciso confirmar o container com SHOW CON_NAME e V$PDBS, senão o objeto nasce no escopo errado.",
+      "ordem": 40,
+      "evidencia": [
+        "voce domina se consegue confirmar em qual container está antes de criar um objeto",
+        "voce domina se consegue explicar para que serve o PDB$SEED"
+      ],
+      "checagem": "Em arquitetura Multitenant, qual é o papel do PDB$SEED e como você confirma o container atual?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_41",
+      "nome": "Dicionário de dados",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "O dicionário é o catálogo interno do Oracle: objetos, usuários, privilégios, constraints, tablespaces e espaço. Ele pertence ao SYS, fica na tablespace SYSTEM, é atualizado pelo servidor no DDL e deve ser consultado, não alterado. DBA_xxx mostra tudo, ALL_xxx o acessível e USER_xxx o do usuário atual.",
+      "ordem": 41,
+      "evidencia": [
+        "voce domina se consegue escolher entre DBA_, ALL_ e USER_ conforme o escopo e o privilégio",
+        "voce domina se consegue dizer por que não se altera o dicionário na mão"
+      ],
+      "checagem": "Qual família de visões do dicionário mostra apenas objetos do usuário atual?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_42",
+      "nome": "Visões dinâmicas V$",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "As visões V$ mostram o estado atual da instância, não os metadados: V$INSTANCE, V$DATABASE, V$SESSION, V$TABLESPACE, V$SPPARAMETER, V$VERSION, V$LOGFILE, V$CONTROLFILE e V$DIAG_INFO são as usadas no dia a dia de diagnóstico.",
+      "ordem": 42,
+      "evidencia": [
+        "voce domina se consegue escolher a visão V$ certa para responder a uma pergunta operacional",
+        "voce domina se consegue localizar o diretório do alert log pelo V$DIAG_INFO"
+      ],
+      "checagem": "Você precisa saber quais sessões estão conectadas agora: consulta o dicionário estático ou uma visão V$?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_43",
+      "nome": "Monitoramento operacional",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "Rotina do DBA: coletar estatísticas com DBMS_STATS, achar objetos INVALID e índices UNUSABLE, olhar sessões bloqueadas em V$SESSION por blocking_session, SID e SERIAL#, ler eventos de espera e acompanhar operações longas em V$SESSION_LONGOPS. Matar sessão é último recurso.",
+      "ordem": 43,
+      "evidencia": [
+        "voce domina se consegue montar as consultas que revelam objeto inválido, índice inutilizável e bloqueio",
+        "voce domina se consegue decidir esperar em vez de matar sessão quando a operação é longa mas saudável"
+      ],
+      "checagem": "Como você descobre se um backup demorado está progredindo em vez de estar travado?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_44",
+      "nome": "AWR, ADDM e advisors",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "AWR guarda snapshots históricos de estatísticas, coletados por MMON e MMNL, com STATISTICS_LEVEL e CONTROL_MANAGEMENT_PACK_ACCESS controlando disponibilidade. ADDM analisa esses snapshots e recomenda ações para reduzir DB Time. Advisors especializam: SQL Tuning, SQL Access, MTTR, Memory, Segment e Undo.",
+      "ordem": 44,
+      "evidencia": [
+        "voce domina se consegue dizer qual advisor atende cada tipo de problema",
+        "voce domina se consegue ler resultados em DBA_ADVISOR_FINDINGS e DBA_ADVISOR_RECOMMENDATIONS"
+      ],
+      "checagem": "Qual ferramenta analisa snapshots do AWR e gera recomendações para reduzir DB Time?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_45",
+      "nome": "Listener e Oracle Net",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "Oracle Net conecta cliente e servidor. O Listener escuta conexões remotas na porta 1521 e é gerenciado por lsnrctl. O nome pode ser resolvido por tnsnames.ora (Local Naming), por EZCONNECT (usuario/senha@host:porta/servicename) ou por regras de sqlnet.ora. O diagnóstico começa na instância e no listener, depois vai para ping, tnsping, rota e TNS_ADMIN.",
+      "ordem": 45,
+      "evidencia": [
+        "voce domina se consegue subir, consultar e parar o listener com lsnrctl",
+        "voce domina se consegue seguir a ordem de diagnóstico do servidor até o cliente"
+      ],
+      "checagem": "Um cliente não conecta no banco: qual é a ordem de verificação antes de culpar a rede?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_46",
+      "nome": "Estágios do STARTUP",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "NOMOUNT lê SPFILE ou PFILE, aloca SGA e inicia processos (serve para criar banco). MOUNT abre os control files e associa a instância ao banco (serve para restore). OPEN abre datafiles e redo logs, o estado normal. Variantes: STARTUP FORCE, OPEN READ ONLY, RESTRICT e PFILE.",
+      "ordem": 46,
+      "evidencia": [
+        "voce domina se consegue dizer o que já está disponível em cada estágio",
+        "voce domina se consegue escolher o estágio certo para uma tarefa administrativa"
+      ],
+      "checagem": "Em qual estágio do STARTUP os control files são abertos, mas datafiles e redo logs ainda não?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_47",
+      "nome": "Modos de SHUTDOWN",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "NORMAL espera todos os usuários saírem. TRANSACTIONAL não aceita nova transação e espera as atuais terminarem. IMMEDIATE faz rollback das transações abertas e encerra limpo. ABORT derruba abruptamente e obriga crash recovery pelo SMON na próxima abertura.",
+      "ordem": 47,
+      "evidencia": [
+        "voce domina se consegue escolher o modo de shutdown pelo custo de espera e de recovery",
+        "voce domina se consegue prever o que acontece na próxima inicialização depois de um ABORT"
+      ],
+      "checagem": "Qual modo de shutdown faz rollback das transações abertas e encerra sem exigir recovery?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_48",
+      "nome": "Abertura de PDBs",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Arquitetura e administração Oracle",
+      "descricao": "Em CDB/PDB, o STARTUP sobe o CDB, mas os PDBs de usuário podem ficar em MOUNTED. É preciso ALTER PLUGGABLE DATABASE ALL OPEN ou abrir um a um, e usar SAVE STATE para que o PDB volte a abrir depois de restart.",
+      "ordem": 48,
+      "evidencia": [
+        "voce domina se consegue abrir todos os PDBs depois de um startup e conferir em V$PDBS",
+        "voce domina se consegue usar SAVE STATE para não repetir a abertura manual"
+      ],
+      "checagem": "Depois do STARTUP em ambiente Multitenant, o que normalmente acontece com os PDBs de usuário?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Atividades do Administrador de Banco de Dados"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_49",
+      "nome": "PL/SQL no lado servidor",
+      "tipo": "CONCEITUAL",
+      "unidade": "PL/SQL no Oracle",
+      "descricao": "PL/SQL é a extensão procedural do SQL no Oracle: permite decidir, repetir, tratar erro, encapsular rotina e reagir a evento. Concentra regra de negócio, validação e auditoria no servidor, o que reduz divergência entre clientes e diminui tráfego quando o processamento é intensivo sobre dados.",
+      "ordem": 49,
+      "evidencia": [
+        "voce domina se consegue justificar quando uma regra deve morar no banco e não na aplicação",
+        "voce domina se consegue dizer o que PL/SQL faz que SQL puro não faz"
+      ],
+      "checagem": "O que PL/SQL acrescenta ao SQL e por que isso interessa a um projetista de banco?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Programação em SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_50",
+      "nome": "Bloco PL/SQL e declarações",
+      "tipo": "LINGUAGEM",
+      "unidade": "PL/SQL no Oracle",
+      "descricao": "Todo código vive em bloco: DECLARE (opcional), BEGIN (obrigatório), EXCEPTION (opcional) e END. Variáveis e constantes são declaradas antes do uso. Em blocos aninhados, o interno vê o externo, e o nome mais interno prevalece, a menos que se qualifique por label. Blocos podem ser anônimos ou armazenados.",
+      "ordem": 50,
+      "evidencia": [
+        "voce domina se consegue escrever um bloco anônimo que declara, executa e trata erro",
+        "voce domina se consegue dizer qual variável vale quando o nome se repete em blocos aninhados"
+      ],
+      "checagem": "Qual é a estrutura básica de um bloco PL/SQL e qual parte é obrigatória?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Programação em SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_51",
+      "nome": "%TYPE e %ROWTYPE",
+      "tipo": "LINGUAGEM",
+      "unidade": "PL/SQL no Oracle",
+      "descricao": "%TYPE copia o tipo de uma coluna ou variável já existente. %ROWTYPE monta um registro com a estrutura inteira de uma tabela. Os dois reduzem acoplamento com detalhes físicos que podem mudar e evitam inconsistência entre código e modelo.",
+      "ordem": 51,
+      "evidencia": [
+        "voce domina se consegue declarar variável herdando o tipo de emp.empno",
+        "voce domina se consegue usar %ROWTYPE para receber uma linha inteira"
+      ],
+      "checagem": "Qual é a vantagem de declarar uma variável com %TYPE em vez de repetir o tipo?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Programação em SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_52",
+      "nome": "Controle de fluxo em PL/SQL",
+      "tipo": "LINGUAGEM",
+      "unidade": "PL/SQL no Oracle",
+      "descricao": "IF, CASE, LOOP, WHILE, FOR, EXIT e labels cercam o SQL com decisão e repetição. É esse envelope procedural que transforma um comando isolado em rotina.",
+      "ordem": 52,
+      "evidencia": [
+        "voce domina se consegue escolher entre IF e CASE para um conjunto de faixas",
+        "voce domina se consegue escrever um FOR de 1 a N e sair dele com EXIT quando preciso"
+      ],
+      "checagem": "Escreva um bloco que define desconto por categoria com CASE e imprime três parcelas com FOR.",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Programação em SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_53",
+      "nome": "SELECT INTO de linha única",
+      "tipo": "LINGUAGEM",
+      "unidade": "PL/SQL no Oracle",
+      "descricao": "Dentro de PL/SQL, o SELECT exige INTO e precisa devolver exatamente uma linha. Zero linhas levanta NO_DATA_FOUND e mais de uma levanta TOO_MANY_ROWS. Serve para registro já esperado pela regra de negócio, não para resultado incerto.",
+      "ordem": 53,
+      "evidencia": [
+        "voce domina se consegue escrever um SELECT INTO para buscar um empregado por matrícula",
+        "voce domina se consegue prever qual exceção aparece quando o filtro não é único"
+      ],
+      "checagem": "Quando SELECT INTO é uma escolha segura e o que acontece se a consulta trouxer duas linhas?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Programação em SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_54",
+      "nome": "Cursores explícitos e FOR loop",
+      "tipo": "LINGUAGEM",
+      "unidade": "PL/SQL no Oracle",
+      "descricao": "Quando a consulta pode devolver várias linhas, declare cursor explícito e use OPEN, FETCH e CLOSE, ou deixe o cursor FOR loop fazer isso automaticamente. Cursores implícitos existem para DML e SELECT INTO, com SQL%ROWCOUNT, SQL%FOUND e SQL%NOTFOUND. FOR UPDATE bloqueia as linhas lidas e casa com WHERE CURRENT OF.",
+      "ordem": 54,
+      "evidencia": [
+        "voce domina se consegue percorrer um resultado com cursor FOR loop sem escrever OPEN e CLOSE",
+        "voce domina se consegue atualizar a linha corrente com FOR UPDATE e WHERE CURRENT OF"
+      ],
+      "checagem": "Por que o cursor FOR loop costuma ser preferido ao ciclo manual OPEN, FETCH e CLOSE?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Programação em SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_55",
+      "nome": "Records e arrays associativos",
+      "tipo": "LINGUAGEM",
+      "unidade": "PL/SQL no Oracle",
+      "descricao": "RECORD representa uma linha coerente na memória. Array associativo (TABLE OF ... INDEX BY) acumula resultados, compara estados ou prepara lote antes do DML final, sem precisar de tabela temporária. Métodos como EXISTS ajudam a testar posições.",
+      "ordem": 55,
+      "evidencia": [
+        "voce domina se consegue declarar uma coleção indexada e preencher posições",
+        "voce domina se consegue explicar por que isso reduz ida e volta ao banco"
+      ],
+      "checagem": "Para que servem RECORD e array associativo em uma rotina de importação ou validação?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Programação em SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_56",
+      "nome": "Exceções e handlers",
+      "tipo": "LINGUAGEM",
+      "unidade": "PL/SQL no Oracle",
+      "descricao": "A seção EXCEPTION responde à falha de modo controlado. Predefinidas incluem NO_DATA_FOUND, TOO_MANY_ROWS, ZERO_DIVIDE e DUP_VAL_ON_INDEX. WHEN OTHERS é último recurso e deve registrar SQLCODE e SQLERRM. Se o bloco não trata, a exceção sobe para o chamador e o fluxo não volta ao ponto do erro.",
+      "ordem": 56,
+      "evidencia": [
+        "voce domina se consegue tratar NO_DATA_FOUND de forma específica em vez de usar WHEN OTHERS",
+        "voce domina se consegue prever para onde a exceção sobe quando não há handler"
+      ],
+      "checagem": "O que acontece com o fluxo depois que um handler trata a exceção, e por que WHEN OTHERS é último recurso?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Programação em SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_57",
+      "nome": "Exceções nomeadas e erro de aplicação",
+      "tipo": "LINGUAGEM",
+      "unidade": "PL/SQL no Oracle",
+      "descricao": "PRAGMA EXCEPTION_INIT dá nome legível a um erro Oracle específico, como ORA-02291 de violação de chave estrangeira. Exceções do usuário são declaradas e disparadas com RAISE. RAISE_APPLICATION_ERROR devolve ao cliente um erro de negócio com código entre -20000 e -20999 e mensagem controlada.",
+      "ordem": 57,
+      "evidencia": [
+        "voce domina se consegue nomear um erro ORA e tratá-lo em um handler próprio",
+        "voce domina se consegue interromper uma operação inválida com mensagem de negócio clara"
+      ],
+      "checagem": "Como tratar especificamente o erro ORA-02291 e como devolver uma mensagem de negócio ao cliente?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Programação em SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_58",
+      "nome": "Procedure e function",
+      "tipo": "LINGUAGEM",
+      "unidade": "PL/SQL no Oracle",
+      "descricao": "Procedure executa ação e pode ter parâmetros IN, OUT e IN OUT, sem retorno obrigatório. Function sempre retorna valor com RETURN e pode ser chamada dentro de expressão. Objetos armazenados podem ser criados inválidos: SHOW ERRORS, ALL_ERRORS e USER_SOURCE ajudam a achar o problema.",
+      "ordem": 58,
+      "evidencia": [
+        "voce domina se consegue decidir entre procedure e function para um requisito",
+        "voce domina se consegue criar as duas com CREATE OR REPLACE e localizar erro de compilação"
+      ],
+      "checagem": "O que diferencia uma function de uma procedure no Oracle?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Programação em SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_59",
+      "nome": "Package e transação autônoma",
+      "tipo": "LINGUAGEM",
+      "unidade": "PL/SQL no Oracle",
+      "descricao": "Package separa interface pública (spec) de implementação privada (body), organiza reuso e permite overloading quando a assinatura muda de verdade. PRAGMA AUTONOMOUS_TRANSACTION isola a rotina do contexto transacional do chamador, o que é clássico para log e auditoria que devem sobreviver a um rollback.",
+      "ordem": 59,
+      "evidencia": [
+        "voce domina se consegue escrever spec e body de um package de auditoria",
+        "voce domina se consegue explicar por que o log gravado em transação autônoma permanece após rollback"
+      ],
+      "checagem": "Em qual cenário PRAGMA AUTONOMOUS_TRANSACTION faz mais sentido?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [
+        "Programação em SQL",
+        "comandos de controle de transações"
+      ],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    },
+    {
+      "id": "mt_APBD_60",
+      "nome": "Triggers e :OLD e :NEW",
+      "tipo": "LINGUAGEM",
+      "unidade": "PL/SQL no Oracle",
+      "descricao": "Trigger é código armazenado que dispara automaticamente em eventos DML (INSERT, UPDATE, DELETE) ou DDL, por instrução ou por linha (FOR EACH ROW). Em triggers de linha, :OLD e :NEW representam o estado anterior e o novo. Como escondem efeito automático, devem ser curtas, específicas e justificadas.",
+      "ordem": 60,
+      "evidencia": [
+        "voce domina se consegue escrever uma trigger BEFORE UPDATE que grava log de alteração salarial",
+        "voce domina se consegue dizer quando uma trigger atrapalha mais do que ajuda"
+      ],
+      "checagem": "Qual é o papel de uma trigger e o que :OLD e :NEW representam em uma trigger por linha?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Programação em SQL"],
+      "fonte": "src/content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosSections.tsx"
+    }
+  ],
+  "arestas": [
+    {
+      "topicoId": "mt_APBD_03",
+      "prerequisitoId": "mt_APBD_01",
+      "forca": "soft",
+      "razao": "O esquema só aparece como decisão de projeto quando o aluno já entende que projetar o banco é definir estrutura antes de operar.",
+      "origem": "texto",
+      "trecho": "Um projeto de banco de dados comeca pela definicao clara do esquema, que agrupa tabelas, visoes, indices e outros objetos de uma mesma aplicacao."
+    },
+    {
+      "topicoId": "mt_APBD_04",
+      "prerequisitoId": "mt_APBD_02",
+      "forca": "soft",
+      "razao": "Não se configura uma ferramenta que o aluno ainda não sabe que existe: é preciso saber que o Data Modeler é a ferramenta de modelagem do ambiente da disciplina.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_APBD_06",
+      "prerequisitoId": "mt_APBD_04",
+      "forca": "soft",
+      "razao": "Tipos e domínios são recursos definidos dentro da própria ferramenta de modelagem, então dependem de saber onde essas definições ficam.",
+      "origem": "texto",
+      "trecho": "O Oracle SQL Developer Data Modeler permite configurar versao do banco, colunas obrigatorias, indices de chaves estrangeiras, estilo de relacionamentos, tipos e dominios."
+    },
+    {
+      "topicoId": "mt_APBD_08",
+      "prerequisitoId": "mt_APBD_07",
+      "forca": "hard",
+      "razao": "O DDL da tabela é escrito junto com as constraints; sem saber o que PK, FK, unique e not null garantem, o comando vira decoreba de sintaxe.",
+      "origem": "texto",
+      "trecho": "Tabelas devem ser criadas com colunas, chave primaria, restricoes unicas, chaves estrangeiras, obrigatoriedade e validacoes para preservar integridade."
+    },
+    {
+      "topicoId": "mt_APBD_08",
+      "prerequisitoId": "mt_APBD_05",
+      "forca": "soft",
+      "razao": "O exemplo de tabela da disciplina nomeia todas as constraints seguindo a convenção, então o padrão de nomes precisa vir antes para o DDL ficar legível.",
+      "origem": "texto",
+      "trecho": "Nomes consistentes tornam o DDL mais legivel e ajudam a reconhecer o tipo de objeto em scripts, diagramas e mensagens do SGBD."
+    },
+    {
+      "topicoId": "mt_APBD_08",
+      "prerequisitoId": "mt_APBD_04",
+      "forca": "soft",
+      "razao": "O material manda configurar a ferramenta antes de criar objetos, porque a versão escolhida muda tipos e o SQL gerado para a tabela.",
+      "origem": "texto",
+      "trecho": "Antes de criar objetos, a ferramenta de modelagem deve ser configurada para a versao do SGBD e para os padroes esperados, pois isso influencia tipos, comportamento padrao e SQL gerado."
+    },
+    {
+      "topicoId": "mt_APBD_09",
+      "prerequisitoId": "mt_APBD_08",
+      "forca": "hard",
+      "razao": "ALTER TABLE evolui uma estrutura existente, logo é impossível entender ADD, MODIFY e DROP COLUMN sem antes saber como a tabela foi criada.",
+      "origem": "texto",
+      "trecho": "ALTER TABLE usa ADD, MODIFY e DROP COLUMN para evoluir a estrutura conforme novas regras de negocio."
+    },
+    {
+      "topicoId": "mt_APBD_09",
+      "prerequisitoId": "mt_APBD_07",
+      "forca": "soft",
+      "razao": "Alterar coluna sem entender as constraints existentes quebra a integridade que a tabela deveria proteger.",
+      "origem": "texto",
+      "trecho": "Adicionar, modificar ou remover colunas deve preservar a coerência do modelo, a documentação e as constraints."
+    },
+    {
+      "topicoId": "mt_APBD_10",
+      "prerequisitoId": "mt_APBD_08",
+      "forca": "hard",
+      "razao": "A visão é uma consulta salva sobre tabelas: sem a tabela criada não existe o que a visão apresente.",
+      "origem": "texto",
+      "trecho": "Visões criam uma camada lógica sobre as tabelas."
+    },
+    {
+      "topicoId": "mt_APBD_11",
+      "prerequisitoId": "mt_APBD_07",
+      "forca": "soft",
+      "razao": "A sequence resolve o preenchimento de chave artificial, e isso só faz sentido depois de entender que a chave precisa de valor único.",
+      "origem": "texto",
+      "trecho": "Sequences geram identificadores automaticamente e reduzem preenchimento manual de chaves."
+    },
+    {
+      "topicoId": "mt_APBD_12",
+      "prerequisitoId": "mt_APBD_08",
+      "forca": "soft",
+      "razao": "O índice é criado sobre colunas de uma tabela já existente, então a discussão de custo e benefício pressupõe saber criar a tabela.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_APBD_13",
+      "prerequisitoId": "mt_APBD_12",
+      "forca": "hard",
+      "razao": "A escolha entre B-tree e bitmap é justamente onde a troca entre ganho de leitura e custo de atualização pesa, então sem a noção de troca a comparação não se sustenta.",
+      "origem": "texto",
+      "trecho": "B-tree e comum em buscas seletivas e ambientes transacionais; bitmap e melhor para baixa cardinalidade e analise com muitos filtros, mas e menos adequado a muitas atualizacoes."
+    },
+    {
+      "topicoId": "mt_APBD_14",
+      "prerequisitoId": "mt_APBD_13",
+      "forca": "soft",
+      "razao": "Índice por expressão e índice composto são variações do índice comum, apresentadas depois de o aluno já reconhecer os tipos básicos.",
+      "origem": "texto",
+      "trecho": "Indices podem ser compostos, baseados em expressao, reconstruidos e monitorados para verificar se ainda trazem ganho real."
+    },
+    {
+      "topicoId": "mt_APBD_15",
+      "prerequisitoId": "mt_APBD_13",
+      "forca": "soft",
+      "razao": "O material apresenta índice particionado como extensão do particionamento, o que exige antes saber o que é índice.",
+      "origem": "texto",
+      "trecho": "Indices tambem podem ser particionados para equilibrar desempenho e manutencao."
+    },
+    {
+      "topicoId": "mt_APBD_16",
+      "prerequisitoId": "mt_APBD_08",
+      "forca": "soft",
+      "razao": "A separação só fica visível quando o aluno já criou objetos que a aplicação enxerga, para então descobrir que embaixo deles existem arquivos.",
+      "origem": "texto",
+      "trecho": "A aplicacao enxerga objetos e tablespaces; o sistema operacional enxerga datafiles."
+    },
+    {
+      "topicoId": "mt_APBD_17",
+      "prerequisitoId": "mt_APBD_16",
+      "forca": "hard",
+      "razao": "A hierarquia é exatamente o lado lógico da separação lógico e físico: sem essa distinção os níveis se misturam com arquivos.",
+      "origem": "texto",
+      "trecho": "O Oracle separa a organizacao logica dos dados da ocupacao fisica em disco."
+    },
+    {
+      "topicoId": "mt_APBD_18",
+      "prerequisitoId": "mt_APBD_17",
+      "forca": "hard",
+      "razao": "O bloco é o piso da hierarquia; sem o mapa dos níveis, dizer que ele é a menor unidade não significa nada.",
+      "origem": "texto",
+      "trecho": "O bloco e a menor unidade gerenciada pelo Oracle; leituras e gravacoes acontecem em multiplos de blocos definidos por DB_BLOCK_SIZE."
+    },
+    {
+      "topicoId": "mt_APBD_19",
+      "prerequisitoId": "mt_APBD_18",
+      "forca": "hard",
+      "razao": "PCTFREE e PCTUSED controlam o espaço livre interno do bloco, então sem a anatomia do bloco os dois parâmetros ficam sem referência.",
+      "origem": "texto",
+      "trecho": "O bloco possui cabecalho com metadados e informacoes transacionais, area de dados e espaco livre controlado por PCTFREE e PCTUSED."
+    },
+    {
+      "topicoId": "mt_APBD_20",
+      "prerequisitoId": "mt_APBD_18",
+      "forca": "hard",
+      "razao": "Extent é definido como conjunto contíguo de blocos, logo o conceito de bloco precede o de extent e o de segmento.",
+      "origem": "texto",
+      "trecho": "Extent e um conjunto contiguo de blocos alocado quando um objeto precisa crescer. Segmento e o conjunto de extents de um objeto, como tabela, indice, temporario ou UNDO."
+    },
+    {
+      "topicoId": "mt_APBD_20",
+      "prerequisitoId": "mt_APBD_13",
+      "forca": "soft",
+      "razao": "Entre os tipos de segmento está o de índice, que só é compreensível para quem já sabe o que um índice armazena.",
+      "origem": "texto",
+      "trecho": "Armazenam estruturas de índice. Eles também ocupam espaço e devem ser planejados como parte do armazenamento."
+    },
+    {
+      "topicoId": "mt_APBD_21",
+      "prerequisitoId": "mt_APBD_20",
+      "forca": "hard",
+      "razao": "Tablespace é definido como coleção de segmentos, então não há como entendê-lo sem antes ter segmento e extent.",
+      "origem": "texto",
+      "trecho": "Tablespace agrupa segmentos e ajuda organizacao, desempenho, manutencao e controle de espaco."
+    },
+    {
+      "topicoId": "mt_APBD_21",
+      "prerequisitoId": "mt_APBD_13",
+      "forca": "soft",
+      "razao": "A decisão clássica de projeto é separar tablespace de dados e de índices, o que exige saber o que o índice custa em espaço e I/O.",
+      "origem": "texto",
+      "trecho": "Separar dados e índices em tablespaces diferentes pode ajudar a distribuir carga de I/O quando a infraestrutura permite."
+    },
+    {
+      "topicoId": "mt_APBD_23",
+      "prerequisitoId": "mt_APBD_22",
+      "forca": "hard",
+      "razao": "Os parâmetros de senha só existem dentro de um profile, que é o objeto que os agrupa e é atribuído ao usuário.",
+      "origem": "texto",
+      "trecho": "PROFILE agrupa politicas de senha e limites de recurso, podendo ser atribuido no CREATE USER ou ALTER USER."
+    },
+    {
+      "topicoId": "mt_APBD_24",
+      "prerequisitoId": "mt_APBD_22",
+      "forca": "hard",
+      "razao": "Os limites de recurso são cláusulas do mesmo profile, portanto não se aprende o limite sem o objeto que o carrega.",
+      "origem": "texto",
+      "trecho": "Perfis tambem controlam recursos por sessao ou por chamada, como SESSIONS_PER_USER, CONNECT_TIME, IDLE_TIME, CPU_PER_SESSION, CPU_PER_CALL"
+    },
+    {
+      "topicoId": "mt_APBD_26",
+      "prerequisitoId": "mt_APBD_25",
+      "forca": "soft",
+      "razao": "LogMiner é a resposta para falha lógica: sem separar erro no dado de arquivo corrompido, o aluno usa a ferramenta no incidente errado.",
+      "origem": "texto",
+      "trecho": "O LogMiner ajuda na investigação porque lê redo logs e reconstrói a história das alterações."
+    },
+    {
+      "topicoId": "mt_APBD_27",
+      "prerequisitoId": "mt_APBD_25",
+      "forca": "hard",
+      "razao": "Flashback é apresentado como correção de falha lógica; sem esse enquadramento ele parece uma alternativa ao backup físico.",
+      "origem": "texto",
+      "trecho": "Flashback corrige falhas logicas: Flashback Query consulta dados antigos por SCN/timestamp, Flashback Table volta uma tabela no tempo, Flashback Drop recupera objetos do recycle bin"
+    },
+    {
+      "topicoId": "mt_APBD_28",
+      "prerequisitoId": "mt_APBD_27",
+      "forca": "soft",
+      "razao": "Primeiro se aprende a olhar o passado do dado por SCN ou timestamp, depois a usar esse mesmo ponto no tempo para trazer a tabela de volta.",
+      "origem": "texto",
+      "trecho": "Consulta dados como estavam em um SCN ou timestamp anterior, sem restaurar o banco inteiro."
+    },
+    {
+      "topicoId": "mt_APBD_29",
+      "prerequisitoId": "mt_APBD_03",
+      "forca": "soft",
+      "razao": "O objeto exportado pelo Data Pump é o schema; sem entender esquema, parâmetros como SCHEMAS e REMAP_SCHEMA não significam nada.",
+      "origem": "texto",
+      "trecho": "Data Pump faz backup logico com expdp/impdp para schemas, tabelas, tablespaces ou banco completo, usando DIRECTORY, DUMPFILE, LOGFILE, SCHEMAS, TABLES, REMAP_SCHEMA, QUERY e EXCLUDE."
+    },
+    {
+      "topicoId": "mt_APBD_30",
+      "prerequisitoId": "mt_APBD_21",
+      "forca": "hard",
+      "razao": "RMAN trabalha no nível de datafile e demais arquivos físicos, então sem saber o que é datafile o backup físico não tem objeto.",
+      "origem": "texto",
+      "trecho": "RMAN faz backup fisico de datafiles, archived redo logs, control file, SPFILE e FRA, com politicas de retencao, backup full e incremental."
+    },
+    {
+      "topicoId": "mt_APBD_30",
+      "prerequisitoId": "mt_APBD_25",
+      "forca": "soft",
+      "razao": "RMAN é a resposta para falha física, e essa escolha depende de já ter classificado o incidente.",
+      "origem": "texto",
+      "trecho": "Datafile corrompido ou perdido costuma apontar para backup físico, RMAN, restore e aplicação de redo logs."
+    },
+    {
+      "topicoId": "mt_APBD_31",
+      "prerequisitoId": "mt_APBD_30",
+      "forca": "hard",
+      "razao": "RESTORE e RECOVER são as duas etapas do próprio RMAN, logo só fazem sentido depois de saber o que ele faz backup.",
+      "origem": "texto",
+      "trecho": "RESTORE recupera arquivos; RECOVER aplica logs para consistencia."
+    },
+    {
+      "topicoId": "mt_APBD_33",
+      "prerequisitoId": "mt_APBD_32",
+      "forca": "hard",
+      "razao": "A resposta escolhida para cada tipo de falha é definida pelas metas de tempo e de perda aceitável, ou seja, por RTO e RPO.",
+      "origem": "texto",
+      "trecho": "RTO mede o tempo maximo aceitavel para voltar a operar; RPO mede a perda maxima aceitavel de dados."
+    },
+    {
+      "topicoId": "mt_APBD_33",
+      "prerequisitoId": "mt_APBD_30",
+      "forca": "soft",
+      "razao": "No plano de continuidade, perda de mídia é resolvida com restore e recover, camada que precisa estar entendida antes de somar site alternativo e replicação.",
+      "origem": "texto",
+      "trecho": "Falha de instancia pode ser tratada por recuperacao automatica, perda de midia por restore/recover, e catastrofe por site alternativo, redundancia e replicacao remota."
+    },
+    {
+      "topicoId": "mt_APBD_34",
+      "prerequisitoId": "mt_APBD_26",
+      "forca": "hard",
+      "razao": "A escolha por cenário só funciona se o aluno já souber o que o LogMiner entrega, senão o mapa incidente para ferramenta vira lista decorada.",
+      "origem": "texto",
+      "trecho": "Para fixar o conteudo, associe incidente a ferramenta. Atualizacao errada aponta para Flashback Query, Flashback Table ou LogMiner."
+    },
+    {
+      "topicoId": "mt_APBD_34",
+      "prerequisitoId": "mt_APBD_27",
+      "forca": "hard",
+      "razao": "O cenário de atualização errada aponta para Flashback, então é preciso dominar o recurso antes de escolher entre ele e as alternativas.",
+      "origem": "texto",
+      "trecho": "Para fixar o conteudo, associe incidente a ferramenta. Atualizacao errada aponta para Flashback Query, Flashback Table ou LogMiner."
+    },
+    {
+      "topicoId": "mt_APBD_34",
+      "prerequisitoId": "mt_APBD_29",
+      "forca": "hard",
+      "razao": "O cenário de migração de schema resolve com Data Pump, logo a decisão exige conhecer a ferramenta lógica.",
+      "origem": "texto",
+      "trecho": "Migrar um schema aponta para Data Pump."
+    },
+    {
+      "topicoId": "mt_APBD_34",
+      "prerequisitoId": "mt_APBD_30",
+      "forca": "hard",
+      "razao": "O cenário de arquivo físico perdido resolve com RMAN, então a escolha depende de já ter esse recurso claro.",
+      "origem": "texto",
+      "trecho": "Perda de arquivo fisico aponta para RMAN."
+    },
+    {
+      "topicoId": "mt_APBD_34",
+      "prerequisitoId": "mt_APBD_33",
+      "forca": "soft",
+      "razao": "O cenário mais grave, perda do site, só é decidido por quem já conhece as camadas de continuidade do DRP.",
+      "origem": "texto",
+      "trecho": "Perda do site inteiro aponta para DRP com Data Guard, RAC e site remoto."
+    },
+    {
+      "topicoId": "mt_APBD_36",
+      "prerequisitoId": "mt_APBD_35",
+      "forca": "hard",
+      "razao": "A SGA é a memória compartilhada da instância; sem a distinção entre instância e banco não há onde encaixar esses componentes.",
+      "origem": "texto",
+      "trecho": "A SGA e memoria compartilhada da instancia e inclui Shared Pool, Database Buffer Cache e Redo Log Buffer."
+    },
+    {
+      "topicoId": "mt_APBD_37",
+      "prerequisitoId": "mt_APBD_36",
+      "forca": "hard",
+      "razao": "Dirty block e redo pendente são estados de estruturas da SGA, então a explicação do COMMIT depende de conhecer Buffer Cache e Redo Log Buffer.",
+      "origem": "texto",
+      "trecho": "Buffer Cache guarda blocos lidos do disco e blocos sujos; Redo Log Buffer registra alteracoes antes do LGWR gravar nos redo logs."
+    },
+    {
+      "topicoId": "mt_APBD_37",
+      "prerequisitoId": "mt_APBD_18",
+      "forca": "soft",
+      "razao": "O que fica clean, dirty ou pinned em memória é o bloco de dados do armazenamento, conceito visto na unidade anterior.",
+      "origem": "texto",
+      "trecho": "Um `UPDATE` altera blocos no Database Buffer Cache e gera registros no Redo Log Buffer."
+    },
+    {
+      "topicoId": "mt_APBD_38",
+      "prerequisitoId": "mt_APBD_37",
+      "forca": "hard",
+      "razao": "Cada processo de background é definido pelo que faz com as estruturas de memória e com o redo, então o mecanismo do COMMIT vem antes dos nomes.",
+      "origem": "texto",
+      "trecho": "LGWR grava redo log buffer nos online redo logs em commit, a cada 3 segundos, com buffer cheio ou antes de checkpoint"
+    },
+    {
+      "topicoId": "mt_APBD_39",
+      "prerequisitoId": "mt_APBD_35",
+      "forca": "hard",
+      "razao": "O conjunto de arquivos é justamente o lado banco de dados da separação, então listar control file, datafiles e redo logs pressupõe essa distinção.",
+      "origem": "texto",
+      "trecho": "O banco em si não é esse processo. Ele é persistente: control files, datafiles, redo logs e arquivos associados."
+    },
+    {
+      "topicoId": "mt_APBD_39",
+      "prerequisitoId": "mt_APBD_21",
+      "forca": "soft",
+      "razao": "Datafile já foi apresentado como arquivo de tablespace no armazenamento, e é esse vínculo que dá sentido à lista de arquivos do banco.",
+      "origem": "texto",
+      "trecho": "Guardam os dados e pertencem a tablespaces permanentes, temporárias ou UNDO."
+    },
+    {
+      "topicoId": "mt_APBD_40",
+      "prerequisitoId": "mt_APBD_35",
+      "forca": "soft",
+      "razao": "CDB e PDB organizam vários bancos dentro de uma mesma instância, o que só se entende com a distinção entre instância e banco firme.",
+      "origem": "texto",
+      "trecho": "No Oracle 12c+, um CDB contem CDB$ROOT, PDB$SEED e PDBs de usuario; SHOW CON_NAME e V$PDBS ajudam a confirmar o container antes de criar objetos."
+    },
+    {
+      "topicoId": "mt_APBD_41",
+      "prerequisitoId": "mt_APBD_21",
+      "forca": "soft",
+      "razao": "O dicionário é descrito pelo dono e pelo lugar onde mora, a tablespace SYSTEM, conceito que vem do armazenamento.",
+      "origem": "texto",
+      "trecho": "Ele pertence ao usuário `SYS`, fica na tablespace `SYSTEM` e deve ser consultado, não alterado manualmente."
+    },
+    {
+      "topicoId": "mt_APBD_42",
+      "prerequisitoId": "mt_APBD_41",
+      "forca": "hard",
+      "razao": "As visões V$ são ensinadas por contraste com o dicionário estático: uma mostra metadados, a outra mostra o estado de agora.",
+      "origem": "texto",
+      "trecho": "As famílias `DBA_xxx`, `ALL_xxx` e `USER_xxx` mudam o escopo da consulta. Já as visões `V$` mostram o que está acontecendo agora na instância"
+    },
+    {
+      "topicoId": "mt_APBD_42",
+      "prerequisitoId": "mt_APBD_35",
+      "forca": "soft",
+      "razao": "O que as visões V$ expõem é o estado da instância, logo o aluno precisa saber o que é instância para ler V$INSTANCE ou V$SESSION.",
+      "origem": "texto",
+      "trecho": "Visoes V$ mostram estado dinamico da instancia, como V$INSTANCE, V$DATABASE, V$SESSION, V$TABLESPACE, V$SPPARAMETER, V$VERSION e V$DIAG_INFO."
+    },
+    {
+      "topicoId": "mt_APBD_43",
+      "prerequisitoId": "mt_APBD_42",
+      "forca": "hard",
+      "razao": "Todo o monitoramento é feito consultando dicionário e visões V$, então sem essas famílias não há como executar a rotina.",
+      "origem": "texto",
+      "trecho": "Monitoramento combina dicionario, V$, estatisticas, DBMS_STATS, objetos INVALID, indices UNUSABLE, bloqueios, eventos de espera, operacoes longas em V$SESSION_LONGOPS"
+    },
+    {
+      "topicoId": "mt_APBD_43",
+      "prerequisitoId": "mt_APBD_13",
+      "forca": "soft",
+      "razao": "Parte do monitoramento é detectar índice UNUSABLE, e o impacto disso só é claro para quem sabe o que o índice faria pela consulta.",
+      "origem": "texto",
+      "trecho": "Podem surgir após carga direta ou rebuild incompleto; consultas deixam de aproveitar o índice."
+    },
+    {
+      "topicoId": "mt_APBD_44",
+      "prerequisitoId": "mt_APBD_43",
+      "forca": "hard",
+      "razao": "AWR e ADDM trabalham sobre as mesmas estatísticas e esperas do monitoramento, só que em série histórica: sem a base, a recomendação é opaca.",
+      "origem": "texto",
+      "trecho": "O AWR é o repositório histórico de estatísticas do Oracle."
+    },
+    {
+      "topicoId": "mt_APBD_44",
+      "prerequisitoId": "mt_APBD_13",
+      "forca": "soft",
+      "razao": "As recomendações do SQL Access Advisor são índices e particionamento, então avaliar a sugestão exige conhecer esses recursos.",
+      "origem": "texto",
+      "trecho": "Recomenda índices, materialized views e particionamento para conjuntos de consultas."
+    },
+    {
+      "topicoId": "mt_APBD_45",
+      "prerequisitoId": "mt_APBD_35",
+      "forca": "soft",
+      "razao": "O Listener existe para ligar o processo do cliente ao processo servidor, papéis definidos na arquitetura de instância e sessão.",
+      "origem": "texto",
+      "trecho": "Oracle Net Services conecta cliente e servidor. Listener escuta conexoes na porta 1521 e e gerenciado por lsnrctl"
+    },
+    {
+      "topicoId": "mt_APBD_46",
+      "prerequisitoId": "mt_APBD_39",
+      "forca": "hard",
+      "razao": "Os estágios do STARTUP são definidos pelos arquivos que cada um abre, então control file, datafile e redo log precisam estar claros antes.",
+      "origem": "texto",
+      "trecho": "STARTUP passa por NOMOUNT, MOUNT e OPEN: NOMOUNT le parametros e cria SGA/processos; MOUNT abre control files; OPEN abre datafiles e redo logs."
+    },
+    {
+      "topicoId": "mt_APBD_46",
+      "prerequisitoId": "mt_APBD_36",
+      "forca": "soft",
+      "razao": "O primeiro estágio consiste em alocar a SGA e subir processos, logo saber o que é SGA ajuda a entender o que já existe em NOMOUNT.",
+      "origem": "texto",
+      "trecho": "Em `NOMOUNT`, o Oracle lê parâmetros, aloca SGA e inicia processos."
+    },
+    {
+      "topicoId": "mt_APBD_47",
+      "prerequisitoId": "mt_APBD_38",
+      "forca": "hard",
+      "razao": "A diferença entre encerrar limpo e derrubar a instância está no trabalho de rollback e no crash recovery feito pelo SMON.",
+      "origem": "texto",
+      "trecho": "Após `ABORT`, o SMON precisa executar crash recovery na próxima inicialização."
+    },
+    {
+      "topicoId": "mt_APBD_47",
+      "prerequisitoId": "mt_APBD_46",
+      "forca": "soft",
+      "razao": "Parar a instância de forma consciente pressupõe saber em que estados ela pode estar quando sobe.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_APBD_48",
+      "prerequisitoId": "mt_APBD_40",
+      "forca": "hard",
+      "razao": "Abrir PDB só faz sentido para quem já sabe o que é CDB, PDB de usuário e PDB$SEED.",
+      "origem": "texto",
+      "trecho": "Em multitenant, STARTUP abre o CDB e PDBs podem precisar de ALTER PLUGGABLE DATABASE ... OPEN ou SAVE STATE."
+    },
+    {
+      "topicoId": "mt_APBD_48",
+      "prerequisitoId": "mt_APBD_46",
+      "forca": "hard",
+      "razao": "O problema aparece depois do STARTUP do CDB: sem entender os estágios de abertura, o PDB em MOUNTED parece defeito.",
+      "origem": "texto",
+      "trecho": "Em ambientes CDB/PDB, `STARTUP` inicia o CDB, mas PDBs de usuário podem permanecer em `MOUNTED` até serem abertos explicitamente."
+    },
+    {
+      "topicoId": "mt_APBD_49",
+      "prerequisitoId": "mt_APBD_07",
+      "forca": "soft",
+      "razao": "O material apresenta PL/SQL como continuação da ideia de regra no banco, que começa nas constraints declarativas.",
+      "origem": "texto",
+      "trecho": "A disciplina já vinha mostrando que regras de integridade no banco sobrevivem mesmo quando a aplicação muda."
+    },
+    {
+      "topicoId": "mt_APBD_50",
+      "prerequisitoId": "mt_APBD_49",
+      "forca": "hard",
+      "razao": "O bloco é a forma como todo código PL/SQL é organizado, então ele só é ensinável depois de saber para que a linguagem serve.",
+      "origem": "texto",
+      "trecho": "Todo codigo e organizado em blocos com secoes DECLARE, BEGIN, EXCEPTION e END; blocos podem ser anonimos ou armazenados como procedures, functions, packages e triggers."
+    },
+    {
+      "topicoId": "mt_APBD_51",
+      "prerequisitoId": "mt_APBD_50",
+      "forca": "hard",
+      "razao": "%TYPE e %ROWTYPE são formas de declarar, e declaração acontece na seção DECLARE do bloco.",
+      "origem": "texto",
+      "trecho": "Variaveis, constantes, records, arrays associativos e cursores devem ser declarados antes do uso; %TYPE e %ROWTYPE reaproveitam tipos ja existentes para reduzir inconsistencias."
+    },
+    {
+      "topicoId": "mt_APBD_51",
+      "prerequisitoId": "mt_APBD_08",
+      "forca": "soft",
+      "razao": "O tipo herdado vem de uma coluna ou tabela existente, então é preciso saber como essa definição foi criada no DDL.",
+      "origem": "texto",
+      "trecho": "`%TYPE` copia o tipo de uma coluna ou variável já existente, enquanto `%ROWTYPE` monta um registro com a estrutura inteira de uma tabela."
+    },
+    {
+      "topicoId": "mt_APBD_52",
+      "prerequisitoId": "mt_APBD_50",
+      "forca": "hard",
+      "razao": "IF, CASE e os laços vivem dentro da seção executável do bloco, então a estrutura do bloco precede o controle de fluxo.",
+      "origem": "texto",
+      "trecho": "O ganho procedimental do PL/SQL aparece quando SQL é cercado por decisões e repetições."
+    },
+    {
+      "topicoId": "mt_APBD_53",
+      "prerequisitoId": "mt_APBD_50",
+      "forca": "hard",
+      "razao": "O INTO precisa de variável ou record declarado no bloco para receber a linha, logo depende da estrutura e das declarações.",
+      "origem": "texto",
+      "trecho": "SELECT em PL/SQL exige INTO e deve retornar exatamente uma linha; multiplas linhas pedem cursores explicitos ou cursor FOR loop."
+    },
+    {
+      "topicoId": "mt_APBD_54",
+      "prerequisitoId": "mt_APBD_53",
+      "forca": "hard",
+      "razao": "O material justifica o cursor exatamente como a saída para o caso em que o SELECT INTO quebra por trazer mais de uma linha.",
+      "origem": "texto",
+      "trecho": "SELECT em PL/SQL exige INTO e deve retornar exatamente uma linha; multiplas linhas pedem cursores explicitos ou cursor FOR loop."
+    },
+    {
+      "topicoId": "mt_APBD_54",
+      "prerequisitoId": "mt_APBD_52",
+      "forca": "soft",
+      "razao": "O cursor FOR loop é uma variação do laço FOR, então dominar repetição antes deixa o atalho compreensível.",
+      "origem": "texto",
+      "trecho": "Forma mais enxuta de percorrer resultados, porque o Oracle abre, busca e fecha o cursor automaticamente."
+    },
+    {
+      "topicoId": "mt_APBD_55",
+      "prerequisitoId": "mt_APBD_51",
+      "forca": "soft",
+      "razao": "%ROWTYPE já é um record derivado da tabela, e o record explícito com coleções generaliza essa ideia de estrutura em memória.",
+      "origem": "texto",
+      "trecho": "`RECORD` e arrays associativos resolvem um problema comum: tratar estrutura de dados na memória sem criar tabela temporária desnecessária."
+    },
+    {
+      "topicoId": "mt_APBD_56",
+      "prerequisitoId": "mt_APBD_50",
+      "forca": "hard",
+      "razao": "O handler é a seção EXCEPTION do bloco, portanto não existe tratamento de erro fora da estrutura do bloco.",
+      "origem": "texto",
+      "trecho": "Todo codigo e organizado em blocos com secoes DECLARE, BEGIN, EXCEPTION e END"
+    },
+    {
+      "topicoId": "mt_APBD_56",
+      "prerequisitoId": "mt_APBD_53",
+      "forca": "soft",
+      "razao": "As exceções predefinidas mais ensinadas, NO_DATA_FOUND e TOO_MANY_ROWS, nascem justamente do SELECT INTO.",
+      "origem": "texto",
+      "trecho": "Serve para consulta de linha única. Se não houver linha, ocorre NO_DATA_FOUND; se houver mais de uma, TOO_MANY_ROWS."
+    },
+    {
+      "topicoId": "mt_APBD_57",
+      "prerequisitoId": "mt_APBD_56",
+      "forca": "hard",
+      "razao": "Nomear erro Oracle, criar exceção própria e lançar erro de aplicação são refinamentos do mesmo mecanismo de tratamento já conhecido.",
+      "origem": "texto",
+      "trecho": "Excecoes podem ser predefinidas, nomeadas com PRAGMA EXCEPTION_INIT ou criadas pelo usuario; SQLCODE, SQLERRM e RAISE_APPLICATION_ERROR apoiam tratamento e mensagens."
+    },
+    {
+      "topicoId": "mt_APBD_57",
+      "prerequisitoId": "mt_APBD_07",
+      "forca": "soft",
+      "razao": "O exemplo nomeia o ORA-02291, que é violação de chave estrangeira: sem integridade referencial o erro nomeado não diz nada ao aluno.",
+      "origem": "texto",
+      "trecho": "PRAGMA EXCEPTION_INIT associa um nome legível a um código Oracle específico, como ORA-02291."
+    },
+    {
+      "topicoId": "mt_APBD_58",
+      "prerequisitoId": "mt_APBD_50",
+      "forca": "hard",
+      "razao": "Procedure e function são blocos armazenados, ou seja, a mesma estrutura de bloco com cabeçalho e nome no banco.",
+      "origem": "texto",
+      "trecho": "blocos podem ser anonimos ou armazenados como procedures, functions, packages e triggers."
+    },
+    {
+      "topicoId": "mt_APBD_59",
+      "prerequisitoId": "mt_APBD_58",
+      "forca": "hard",
+      "razao": "Package agrupa procedures e functions, então não há como organizá-las sem antes saber criá-las separadamente.",
+      "origem": "texto",
+      "trecho": "Procedures executam acoes, functions retornam valor, packages agrupam interface e implementacao, transacoes autonomas isolam logs e triggers executam automaticamente em eventos DML ou DDL"
+    },
+    {
+      "topicoId": "mt_APBD_60",
+      "prerequisitoId": "mt_APBD_58",
+      "forca": "hard",
+      "razao": "A trigger é ensinada por contraste com a procedure: mesmo tipo de código armazenado, mas chamado pelo evento e não pelo usuário.",
+      "origem": "texto",
+      "trecho": "A trigger executa quando o evento acontece; ela não é chamada manualmente pelo usuário como uma procedure comum."
+    },
+    {
+      "topicoId": "mt_APBD_60",
+      "prerequisitoId": "mt_APBD_57",
+      "forca": "soft",
+      "razao": "A trigger de validação recusa a operação lançando erro de aplicação, então depende de saber usar RAISE_APPLICATION_ERROR.",
+      "origem": "texto",
+      "trecho": "RAISE_APPLICATION_ERROR(-20512, 'Aumento abaixo do indice minimo permitido.');"
+    }
+  ]
+}

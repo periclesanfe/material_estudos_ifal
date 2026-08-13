@@ -1,0 +1,1112 @@
+{
+  "disciplina": { "codigo": "TABD", "codigoPPC": "TABD", "nome": "Topicos Avancados de Banco de Dados", "periodo": 5 },
+  "topicos": [
+    {
+      "id": "mt_TABD_01",
+      "nome": "Business Intelligence: definicao e origem",
+      "tipo": "CONCEITUAL",
+      "unidade": "Business Intelligence",
+      "descricao": "BI e o conjunto de tecnicas e ferramentas que transforma dados em informacao util para decidir: coletar, organizar, analisar, compartilhar e monitorar. O termo e do fim dos anos 1980, atribuido a Howard Dresner (Gartner). O problema que ele ataca e a empresa ser interligada enquanto os dados ficam fragmentados em varios sistemas.",
+      "ordem": 1,
+      "evidencia": ["consegue definir BI pelas cinco acoes sobre a informacao", "consegue explicar por que dado fragmentado atrapalha a decisao"],
+      "checagem": "O que e Business Intelligence, a quem se atribui o termo e qual problema da empresa ele resolve?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Business Intelligence"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_02",
+      "nome": "A cadeia OLTP, ETL, DW e OLAP",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Business Intelligence",
+      "descricao": "A arquitetura de BI vai das fontes (legado, ERP, CRM) para o ETL, dai para o Data Warehouse e os data marts com metadados, depois servidor e finalmente consulta, OLAP e mineracao. Essa cadeia e o fio que atravessa toda a disciplina.",
+      "ordem": 2,
+      "evidencia": ["consegue desenhar a arquitetura de ponta a ponta", "consegue dizer em que caixa entram Pentaho, Oracle, Power BI e Orange"],
+      "checagem": "Desenhe a arquitetura de um ambiente de BI e diga em que etapa cada ferramenta da disciplina entra.",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Business Intelligence"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_03",
+      "nome": "As quatro caracteristicas do DW",
+      "tipo": "CONCEITUAL",
+      "unidade": "Data Warehouse",
+      "descricao": "Inmon define o Data Warehouse como conjunto de dados orientado por assunto, integrado, variante no tempo e nao volatil, voltado ao suporte a decisao. Nao volatil quer dizer que a carga e planejada e o dado historico nao e atualizado depois.",
+      "ordem": 3,
+      "evidencia": ["consegue listar as quatro caracteristicas", "consegue explicar o que variante no tempo obriga em termos de historico"],
+      "checagem": "Quais sao as quatro caracteristicas do DW segundo Inmon e o que cada uma obriga ou proibe?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Data Warehouse"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_04",
+      "nome": "DW versus banco transacional",
+      "tipo": "CONCEITUAL",
+      "unidade": "Data Warehouse",
+      "descricao": "O OLTP e normalizado, transacional e atualizado a todo instante. O DW e desnormalizado, voltado a consulta e atualizado por cargas periodicas. Os dois convivem: o OLTP e a fonte, o DW e o destino.",
+      "ordem": 4,
+      "evidencia": ["consegue apontar tres diferencas entre OLTP e DW", "consegue justificar por que nao se faz analise histórica direto no transacional"],
+      "checagem": "Por que um relatorio historico consolidado nao deve ser feito direto no sistema transacional?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Data Warehouse"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_05",
+      "nome": "Componentes do ambiente de DW",
+      "tipo": "CONCEITUAL",
+      "unidade": "Data Warehouse",
+      "descricao": "A staging area e onde os dados sao integrados e transformados. O ODS e operacional e volatil. O data mart e a visao departamental do DW, e os metadados sao o catalogo que descreve o que existe dentro dele.",
+      "ordem": 5,
+      "evidencia": ["consegue situar staging, ODS, data mart e metadados no fluxo", "consegue dizer qual deles e volatil"],
+      "checagem": "Qual a diferenca entre staging area, ODS e data mart?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Data Warehouse"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_06",
+      "nome": "Esquema estrela e floco de neve",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Modelagem Dimensional",
+      "descricao": "A modelagem dimensional de Kimball apresenta o dado de forma padronizada e rapida de consultar. No star schema uma tabela fato central fica cercada por dimensoes desnormalizadas que respondem onde, quando, o que e quem. No snowflake as dimensoes sao normalizadas em hierarquias, o que reduz redundancia mas exige mais joins.",
+      "ordem": 6,
+      "evidencia": ["consegue desenhar um star schema a partir de um requisito", "consegue dizer o que muda no snowflake e o custo disso"],
+      "checagem": "Qual a diferenca essencial entre star schema e snowflake, e quando o snowflake se justifica?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_07",
+      "nome": "Tabela fato e seus tipos",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Modelagem Dimensional",
+      "descricao": "A fato guarda as metricas e tem PK composta por todas as FKs das dimensoes. Ha fatos de movimento, de snapshot e factless, que registram existencia sem metrica. Duas regras do professor: nao misture assuntos numa mesma fato e nao misture granularidades.",
+      "ordem": 7,
+      "evidencia": ["consegue montar a PK composta e a lista de metricas de uma fato", "consegue justificar por que linha de resumo nao entra na fato detalhada"],
+      "checagem": "O que vai dentro de uma tabela fato e por que ela nao pode misturar dois assuntos?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_08",
+      "nome": "Aditividade das metricas",
+      "tipo": "CONCEITUAL",
+      "unidade": "Modelagem Dimensional",
+      "descricao": "Metrica aditiva soma em todas as dimensoes. Semi-aditiva soma em algumas, como saldo e estoque, que nao fazem sentido somados ao longo do tempo. Nao-aditiva nunca soma, como percentual e temperatura.",
+      "ordem": 8,
+      "evidencia": ["consegue classificar uma metrica nos tres tipos", "consegue dizer que agregacao usar quando a soma nao vale"],
+      "checagem": "Somar as doze posicoes mensais de estoque faz sentido? Que tipo de metrica e essa?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_09",
+      "nome": "Dimensao, surrogate key e hierarquia",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Modelagem Dimensional",
+      "descricao": "A dimensao tem PK artificial (surrogate key, nunca o codigo do sistema de origem), atributos textuais usados como filtro e hierarquias 1 para N em cascata. A surrogate key isola o DW das regras da origem, sustenta o historico e melhora o desempenho.",
+      "ordem": 9,
+      "evidencia": ["consegue criar a surrogate key e separar atributos de filtro", "consegue montar a hierarquia de uma dimensao"],
+      "checagem": "Por que a dimensao usa surrogate key em vez do codigo vindo da origem?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_10",
+      "nome": "Granularidade e o grao",
+      "tipo": "CONCEITUAL",
+      "unidade": "Modelagem Dimensional",
+      "descricao": "Granularidade e o nivel de detalhe dos dados. O grao e o nivel mais detalhado da fato, e todas as metricas dela compartilham a mesma granularidade. Quanto menor o grao, mais detalhe e mais volume.",
+      "ordem": 10,
+      "evidencia": ["consegue declarar o grao de uma fato em uma frase", "consegue mostrar que o requisito e quem fixa o grao"],
+      "checagem": "O que e o grao de uma tabela fato e quem decide qual ele e?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_11",
+      "nome": "Os quatro passos da modelagem",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Modelagem Dimensional",
+      "descricao": "Para modelar, responda na ordem: o que avaliamos (metricas), como analisar (dimensoes), qual o menor detalhe (granularidade) e como agrupar (hierarquias). As quatro respostas saem do requisito do negocio, nao do gosto do modelador.",
+      "ordem": 11,
+      "evidencia": ["consegue transformar um requisito escrito em fato, dimensoes, grao e hierarquias", "consegue identificar a mesma dimensao em dois papeis no requisito"],
+      "checagem": "No pedido da empresa de taxi (km e valor por bairro de origem, bairro de destino, motorista e veiculo, com grao mensal), quais sao as metricas, as dimensoes e o grao?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_12",
+      "nome": "Dimensao Tempo e Hora-do-Dia",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Modelagem Dimensional",
+      "descricao": "A dimensao Tempo esta sempre presente e pode ser carregada antecipadamente, sem fonte de dados. Hora e minuto nao entram nela (um ano com segundos daria 31.536.000 linhas): usa-se uma dimensao Hora-do-Dia separada, ou a hora fica na propria fato quando nao ha descricoes sobre ela. Com fuso, guarde a data e hora local e a GMT.",
+      "ordem": 12,
+      "evidencia": ["consegue gerar a dimensao Tempo sem consultar a fonte", "consegue justificar a dimensao Hora-do-Dia pelo numero de linhas"],
+      "checagem": "Por que hora e minuto nao devem entrar na dimensao Tempo, e qual a alternativa?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_13",
+      "nome": "Slowly Changing Dimensions",
+      "tipo": "CONCEITUAL",
+      "unidade": "Modelagem Dimensional",
+      "descricao": "Tipo 1 sobrescreve e perde o historico, util quando o dado estava errado. Tipo 2 cria nova linha com nova surrogate key e marca a vigencia, preservando o historico ligado a cada fato. Tipo 3 acrescenta coluna com o valor original ao lado do atual, e a hibrida Tipo 6 combina nova linha com colunas de original e atual.",
+      "ordem": 13,
+      "evidencia": ["consegue escolher o tipo de SCD a partir do requisito de historico", "consegue mostrar o que cada tipo perde"],
+      "checagem": "O gestor quer que o relatorio de 2023 mostre a cidade antiga do cliente e o de 2024 a nova. Qual SCD atende e por que?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_14",
+      "nome": "Dimensoes especiais do modelo",
+      "tipo": "CONCEITUAL",
+      "unidade": "Modelagem Dimensional",
+      "descricao": "Degenerate e o identificador de documento que fica como atributo da propria fato, sem tabela (nota fiscal, pedido). Junk agrupa flags e indicadores de baixa cardinalidade. Role-playing e a mesma dimensao em papeis diferentes, via views, e bridge trata numero aberto de valores, como titulares de uma conta.",
+      "ordem": 14,
+      "evidencia": ["consegue reconhecer quando um atributo vira degenerate em vez de dimensao", "consegue resolver bairro de origem e destino com role-playing"],
+      "checagem": "Onde fica o numero da nota fiscal no modelo e por que ele nao vira tabela de dimensao?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_15",
+      "nome": "Fast Changing Dimensions e mini-dimensoes",
+      "tipo": "CONCEITUAL",
+      "unidade": "Modelagem Avancada e Projeto Fisico",
+      "descricao": "Quando uma dimensao grande tem atributos que mudam com frequencia, o SCD Tipo 2 explode a tabela em versoes. A saida e particionar a dimensao, separando os atributos volateis numa mini-dimensao com faixas de valores. Snowflaking nao resolve esse problema.",
+      "ordem": 15,
+      "evidencia": ["consegue identificar uma Fast Changing Dimension pelo tamanho e pela volatilidade", "consegue propor as faixas de valores da mini-dimensao"],
+      "checagem": "Dimensao Cliente com 2 milhoes de linhas e tres atributos volateis: qual a solucao e por que snowflaking nao serve?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_16",
+      "nome": "Tabelas agregadas e aggregate navigation",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Modelagem Avancada e Projeto Fisico",
+      "descricao": "Tabela agregada e um resumo calculado com SUM sobre atributos de uma hierarquia: ganha tempo de resposta e custa manutencao. A agregacao completa recria tudo a cada carga, a incremental atualiza e insere. O aggregate navigation e o software que intercepta a consulta SQL e a reescreve para usar a agregada disponivel.",
+      "ordem": 16,
+      "evidencia": ["consegue criar a agregada de um nivel de hierarquia", "consegue explicar por que o usuario nao precisa mudar a consulta"],
+      "checagem": "Para que serve uma tabela agregada e como o usuario a aproveita sem reescrever o SQL?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/TABDSections.tsx"
+    },
+    {
+      "id": "mt_TABD_17",
+      "nome": "ETL: extrair, transformar e carregar",
+      "tipo": "CONCEITUAL",
+      "unidade": "ETL e Pentaho",
+      "descricao": "ETL e extrair das fontes, transformar conforme as regras do negocio e carregar no destino. A teoria e simples e a pratica e complexa, porque as fontes tem convencoes, tipos, unidades e granularidades diferentes.",
+      "ordem": 17,
+      "evidencia": ["consegue separar as tres etapas num plano de carga", "consegue citar um conflito real entre duas fontes"],
+      "checagem": "O que acontece em cada uma das tres letras do ETL e por que a transformacao e a parte mais trabalhosa?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_18",
+      "nome": "Preparacao e limpeza dos dados",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "ETL e Pentaho",
+      "descricao": "Antes de carregar trate quatro frentes: limpeza (ausentes, ruido e outliers, duplicados), reducao (PCA, amostragem), transformacao (normalizacao, discretizacao) e integracao (redundancia entre fontes).",
+      "ordem": 18,
+      "evidencia": ["consegue apontar a frente certa para cada defeito do dado", "consegue tratar valor ausente sem inventar dado"],
+      "checagem": "Cite as quatro frentes da preparacao de dados e um problema tratado em cada uma.",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_19",
+      "nome": "Kettle: transformations, jobs e executaveis",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "ETL e Pentaho",
+      "descricao": "No Pentaho Data Integration uma transformation e um conjunto de steps ligados por hops, e cada hop e a saida de um step e a entrada de outro. O job agrupa e orquestra transformations, e seus hops carregam condicao. Spoon e a interface grafica, Pan roda transformations, Kitchen roda jobs e Carte e o servidor remoto.",
+      "ordem": 19,
+      "evidencia": ["consegue montar uma transformation ligando steps por hops", "consegue rodar a carga por linha de comando sem abrir o Spoon"],
+      "checagem": "Qual a diferenca entre transformation e job, e qual executavel roda cada um deles?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_20",
+      "nome": "Catalogo de steps do PDI",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "ETL e Pentaho",
+      "descricao": "Os steps se agrupam em input, output, lookup, transformacao de campos e de conjuntos. Database Lookup busca numa tabela do banco e Stream Lookup busca em dados vindos de outro step. Filter Rows produz dois fluxos, Unique Rows exige linhas ordenadas e Dummy serve para descartar um fluxo.",
+      "ordem": 20,
+      "evidencia": ["consegue escolher o step certo para cada necessidade do fluxo", "consegue ordenar antes do Unique Rows"],
+      "checagem": "Voce precisa buscar a cidade de um CEP que veio de um CSV ja carregado no fluxo. Qual step usa e por que nao o outro?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_21",
+      "nome": "Step Dimension Update/Lookup",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "ETL e Pentaho",
+      "descricao": "E o step que implementa SCD tipos 1 e 2 sozinho. Configura-se com technical key (a surrogate key), version field, inicio e fim do intervalo de vigencia, as chaves de negocio e os campos.",
+      "ordem": 21,
+      "evidencia": ["consegue carregar uma dimensao versionada sem escrever SQL", "consegue apontar qual campo do step e a surrogate key"],
+      "checagem": "Que step do Kettle versiona a dimensao automaticamente e o que e a technical key dentro dele?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_22",
+      "nome": "Estatistica descritiva, amostra e variaveis",
+      "tipo": "CONCEITUAL",
+      "unidade": "Analise Exploratoria de Dados",
+      "descricao": "A estatistica descritiva organiza e resume o que se tem, a inferencial usa uma amostra representativa para generalizar a populacao. No conjunto de dados, observacoes sao linhas e variaveis sao colunas. As variaveis sao qualitativas (nominal, ordinal) ou quantitativas (discreta, continua).",
+      "ordem": 22,
+      "evidencia": ["consegue classificar cada coluna de uma base", "consegue dizer o que a amostra permite e o que nao permite afirmar"],
+      "checagem": "Classifique as colunas de uma base em qualitativas e quantitativas e diga que analise cada tipo permite.",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_23",
+      "nome": "Tendencia central e dispersao",
+      "tipo": "CONCEITUAL",
+      "unidade": "Analise Exploratoria de Dados",
+      "descricao": "Media, mediana e moda resumem a posicao. Amplitude, desvio medio, variancia e desvio-padrao medem a dispersao. O coeficiente de variacao compara conjuntos com medias e unidades diferentes, e CV menor ou igual a 20 por cento indica conjunto homogeneo.",
+      "ordem": 23,
+      "evidencia": ["consegue calcular e interpretar desvio-padrao e CV", "consegue dizer quando a media engana"],
+      "checagem": "Como comparar a dispersao de duas variaveis medidas em unidades diferentes, e a partir de que valor o conjunto e homogeneo?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_24",
+      "nome": "As tres regras da assimetria",
+      "tipo": "CONCEITUAL",
+      "unidade": "Analise Exploratoria de Dados",
+      "descricao": "Na distribuicao simetrica, media igual a mediana igual a moda. Na assimetrica positiva, com cauda a direita, media maior que mediana maior que moda. Na negativa, o inverso. Curtose e o grau de achatamento em relacao a curva normal.",
+      "ordem": 24,
+      "evidencia": ["consegue deduzir a assimetria a partir das tres medidas", "consegue ler a assimetria no histograma"],
+      "checagem": "O histograma tem cauda alongada a direita. Que relacao existe entre media, mediana e moda?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_25",
+      "nome": "Quartis, box plot e outliers",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Analise Exploratoria de Dados",
+      "descricao": "Separatrizes dividem os dados ordenados: quartis em 4 partes, decis em 10 e percentis em 100, e a mediana e o percentil 50. O box plot usa minimo, Q1, mediana, Q3 e maximo, mostra posicao, dispersao e assimetria e evidencia outliers, que distorcem medias e conclusoes.",
+      "ordem": 25,
+      "evidencia": ["consegue montar um box plot com os cinco valores", "consegue decidir o que fazer com o outlier encontrado"],
+      "checagem": "Quais cinco valores montam um box plot e o que ele revela sobre outliers?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_26",
+      "nome": "Analise bidimensional",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Analise Exploratoria de Dados",
+      "descricao": "Estuda o comportamento conjunto de duas variaveis. Duas qualitativas: verifica se existe associacao. Duas quantitativas: coeficiente de correlacao. Uma de cada: analisa a quantitativa dentro de cada categoria, por medidas-resumo ou box plot por categoria.",
+      "ordem": 26,
+      "evidencia": ["consegue enquadrar o par de variaveis em um dos tres casos", "consegue escolher o recurso certo para cada caso"],
+      "checagem": "Cambio (manual ou automatico) e preco do veiculo: qual caso de analise bidimensional e que recurso o material sugere?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_27",
+      "nome": "O cubo: OLAP versus OLTP",
+      "tipo": "CONCEITUAL",
+      "unidade": "OLAP e Cubos",
+      "descricao": "OLAP e o conjunto de tecnologias de suporte a decisao com visao multidimensional dos dados: o cubo, feito de dimensoes, medidas e celulas. OLAP e analitico e multidimensional, OLTP e transacional e bidimensional.",
+      "ordem": 27,
+      "evidencia": ["consegue identificar dimensoes, medidas e celulas em um cubo", "consegue dizer por que a planilha do OLTP e bidimensional"],
+      "checagem": "O que compoe um cubo OLAP e em que ele difere da visao do sistema transacional?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_28",
+      "nome": "Operacoes sobre o cubo",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "OLAP e Cubos",
+      "descricao": "Drill-down vai do geral ao detalhe e roll-up faz o inverso. Slice fixa um membro de uma dimensao e dice seleciona varios membros de varias dimensoes, formando um sub-cubo: os dois sao formas de filtro. Pivoteamento gira o cubo, trocando a ordem de visualizacao das dimensoes.",
+      "ordem": 28,
+      "evidencia": ["consegue nomear a operacao a partir do que o analista fez", "consegue navegar uma hierarquia com drill-down e roll-up"],
+      "checagem": "O analista fixou 2024, restringiu as regioes a Norte e Nordeste e a categoria a Bebidas. Que operacao ele executou?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_29",
+      "nome": "Drill across e drill through",
+      "tipo": "CONCEITUAL",
+      "unidade": "OLAP e Cubos",
+      "descricao": "O professor deu duas definicoes para cada, e as duas podem cair na prova. Drill across: consultar varias tabelas fato e combinar os resultados, o que exige dimensoes conformadas, ou pular um nivel intermediario dentro da mesma dimensao. Drill through: passar de uma dimensao para outra, ou buscar detalhe alem do grao, fora do esquema dimensional.",
+      "ordem": 29,
+      "evidencia": ["consegue apresentar as duas leituras de cada operacao", "consegue explicar por que combinar fatos exige dimensoes conformadas"],
+      "checagem": "A fato guarda vendas no grao de produto e voce quer o detalhe por nota fiscal. Que operacao e essa, e qual a outra leitura dela no material?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_30",
+      "nome": "Tipos de OLAP e o servidor Mondrian",
+      "tipo": "CONCEITUAL",
+      "unidade": "OLAP e Cubos",
+      "descricao": "MOLAP guarda dados e agregacoes em estrutura multidimensional e responde mais rapido, ROLAP deixa tudo no banco relacional e traduz para SQL, HOLAP mistura os dois, e existem ainda DOLAP (desktop) e WOLAP (web). O Mondrian e um servidor ROLAP open source em Java que executa consultas MDX, com camadas de apresentacao, dimensional, estrela (cache de agregados) e armazenamento.",
+      "ordem": 30,
+      "evidencia": ["consegue escolher entre MOLAP e ROLAP justificando", "consegue dizer o que o Mondrian faz e o que o JPivot faz"],
+      "checagem": "O que muda entre MOLAP e ROLAP, e em qual dos dois o Mondrian se encaixa?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Banco de dados multidimensional"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_31",
+      "nome": "Power BI: versoes e os tres motores",
+      "tipo": "CONCEITUAL",
+      "unidade": "Power BI",
+      "descricao": "O Power BI vem em Desktop, Service e Mobile, e reune tres suplementos do Excel: Power Query (obter e limpar), Power Pivot (modelo e medidas) e Power View (visualizar). No Desktop ha os paineis Relatorio, Dados e Modelo, e o ciclo e obter dados, revisar o modelo, criar relatorios e paineis, publicar. A ferramenta sugere o visual pelo tipo de dado, e ha visuais inadequados para certos tipos.",
+      "ordem": 31,
+      "evidencia": ["consegue dizer em que motor cada tarefa acontece", "consegue percorrer o ciclo do obter dados ate publicar"],
+      "checagem": "Qual componente do Power BI obtem e limpa os dados, e qual cuida do modelo e das medidas?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Business Intelligence"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_32",
+      "nome": "Limpeza e outliers no Power BI",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Power BI",
+      "descricao": "No Power Query cada transformacao vira um passo em Etapas Aplicadas, que pode ser editado, reordenado ou removido: tipos, filtro por faixa, nulos, duplicadas, primeira linha como cabecalho e preenchimento. Como nao existe box plot nativo, os outliers saem de medidas DAX (MEDIAN, PERCENTILE.INC para Q1 e Q3, IQR e limites de 1,5 IQR) plotadas como linhas constantes num grafico de dispersao.",
+      "ordem": 32,
+      "evidencia": ["consegue limpar uma base no Power Query e refazer um passo errado", "consegue montar as medidas DAX do box plot e ler os outliers no grafico"],
+      "checagem": "Sem visual de box plot, como o material ensina a identificar outliers no Power BI?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Business Intelligence"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/TABDSections.tsx"
+    },
+    {
+      "id": "mt_TABD_33",
+      "nome": "Os 5 V's do Big Data",
+      "tipo": "CONCEITUAL",
+      "unidade": "Big Data",
+      "descricao": "Big Data e o conjunto de dados grande e complexo que o software tradicional nao consegue gerenciar. Os 5 V's sao Volume, Velocidade, Variedade, Veracidade (confiabilidade) e Valor (significancia para a organizacao). Os dados podem ser estruturados, semiestruturados ou nao estruturados.",
+      "ordem": 33,
+      "evidencia": ["consegue listar os cinco V's do material", "consegue classificar um dado em estruturado, semiestruturado ou nao estruturado"],
+      "checagem": "Quais sao os 5 V's do Big Data e o que Veracidade e Valor significam?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Bancos de Dados Emergentes."],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_34",
+      "nome": "Hadoop e o Data Lake",
+      "tipo": "CONCEITUAL",
+      "unidade": "Big Data",
+      "descricao": "O Hadoop traz o HDFS, sistema de arquivos distribuido, e o MapReduce, processamento distribuido, e viabiliza o Data Lake com hardware barato. Data Lake guarda dado bruto, Data Warehouse guarda dado processado e Lakehouse combina os dois.",
+      "ordem": 34,
+      "evidencia": ["consegue separar o papel do HDFS do papel do MapReduce", "consegue decidir entre Data Lake e DW para um caso"],
+      "checagem": "Qual a diferenca entre Data Lake, Data Warehouse e Lakehouse, e o que o HDFS faz no Hadoop?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Bancos de Dados Emergentes."],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_35",
+      "nome": "NoSQL e suas quatro categorias",
+      "tipo": "CONCEITUAL",
+      "unidade": "Big Data",
+      "descricao": "NoSQL e nao relacional e schemaless, e responde a variedade e ao volume dos dados. As quatro categorias do material sao chave e valor (Redis), documentos (MongoDB), grafos (Neo4j) e colunar (Cassandra).",
+      "ordem": 35,
+      "evidencia": ["consegue encaixar um banco na categoria certa", "consegue explicar o que schemaless muda na pratica"],
+      "checagem": "MongoDB pertence a qual das quatro categorias de NoSQL, e o que schemaless significa?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Bancos de Dados Emergentes."],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_36",
+      "nome": "KDD e suas etapas",
+      "tipo": "CONCEITUAL",
+      "unidade": "Mineracao de Dados",
+      "descricao": "KDD e o processo de descobrir padroes compreensiveis, validos, novos e uteis, e a mineracao e sua etapa principal. As etapas sao preparacao dos dados, mineracao (escolher a tarefa e depois o algoritmo que a atende) e avaliacao ou interpretacao. Vale o lema: dado sem qualidade resulta em mineracao sem qualidade.",
+      "ordem": 36,
+      "evidencia": ["consegue situar a mineracao dentro do KDD", "consegue escolher primeiro a tarefa e so depois o algoritmo"],
+      "checagem": "Quais sao as etapas do KDD e em que ordem se escolhe tarefa e algoritmo?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Mineração de dados"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_37",
+      "nome": "Classificacao",
+      "tipo": "CONCEITUAL",
+      "unidade": "Mineracao de Dados",
+      "descricao": "Classificacao e tarefa preditiva: constroi um modelo que classifica objetos novos a partir de atributos preditivos, que influenciam a decisao, e do atributo objetivo, que e a classe. Exemplo do material: aprovar ou nao credito usando cargo e tempo, com arvore de classificacao.",
+      "ordem": 37,
+      "evidencia": ["consegue separar atributos preditivos do atributo objetivo numa base", "consegue justificar por que a classificacao e preditiva"],
+      "checagem": "Qual a diferenca entre atributo preditivo e atributo objetivo, e por que classificacao e tarefa preditiva?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Mineração de dados"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_38",
+      "nome": "Associacao: suporte e confianca",
+      "tipo": "CONCEITUAL",
+      "unidade": "Mineracao de Dados",
+      "descricao": "Associacao e tarefa descritiva: encontra em dados historicos regras entre um antecedente e um consequente. O grau de certeza vem do suporte, percentual das transacoes em que a regra aparece, e da confianca, que considera apenas as transacoes com o antecedente. O algoritmo e o APRIORI e o caso classico e a cesta de compras.",
+      "ordem": 38,
+      "evidencia": ["consegue calcular suporte e confianca de uma regra", "consegue ler uma regra no formato antecedente e consequente"],
+      "checagem": "Numa regra de associacao, qual a diferenca entre suporte e confianca?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Mineração de dados"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_39",
+      "nome": "Agrupamento e K-Means",
+      "tipo": "CONCEITUAL",
+      "unidade": "Mineracao de Dados",
+      "descricao": "Agrupamento reune individuos semelhantes calculando distancias, em tecnicas hierarquicas e nao hierarquicas de particao, como o K-Means. A clusterizacao identifica os padroes, mas nao responde por que eles existem.",
+      "ordem": 39,
+      "evidencia": ["consegue escolher agrupamento quando nao ha classe-alvo", "consegue dizer o limite da resposta que o cluster da"],
+      "checagem": "Que pergunta a clusterizacao responde e qual ela nao responde?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Mineração de dados"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_40",
+      "nome": "Critérios de avaliacao do modelo",
+      "tipo": "CONCEITUAL",
+      "unidade": "Mineracao de Dados",
+      "descricao": "Na etapa 3 do KDD avaliam-se acuracia, desempenho (custo computacional para gerar e usar o modelo), robustez (atuar com atributos faltando ou ruido), escalabilidade e interpretabilidade. Diante de um resultado ruim ha apenas duas acoes: ajustar os parametros do algoritmo ou escolher outro algoritmo.",
+      "ordem": 40,
+      "evidencia": ["consegue nomear o critério violado num modelo ruim", "consegue apontar as duas acoes possiveis depois de um resultado ruim"],
+      "checagem": "Qual critério mede o comportamento do modelo em amostras com atributos faltando ou com ruido?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Mineração de dados"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_41",
+      "nome": "Data Mining versus OLAP",
+      "tipo": "CONCEITUAL",
+      "unidade": "Mineracao de Dados",
+      "descricao": "OLAP e verificacao: o analista conhece a questao, formula a hipotese e usa a ferramenta para confirmar ou refutar. Mineracao e descoberta: a questao e total ou parcialmente desconhecida e a ferramenta busca os padroes. O DW alimenta os dois, porque entrega dados integrados, consistentes e limpos.",
+      "ordem": 41,
+      "evidencia": ["consegue classificar uma pergunta de negocio como OLAP ou mineracao", "consegue explicar por que o DW facilita o KDD"],
+      "checagem": "Montar um cubo para responder se as vendas cairam e OLAP ou mineracao, e por que?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Mineração de dados"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_42",
+      "nome": "Orange: fluxo de widgets",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Orange e Machine Learning",
+      "descricao": "O Orange faz mineracao por programacao visual: widgets conectados em um fluxo de trabalho, sem escrever codigo. O fluxo vai de entrada, amostragem e visualizacao para pre-processamento, criacao do modelo, avaliacao e aplicacao. Aprendizado supervisionado tem classe-alvo (classificacao, regressao) e nao supervisionado nao tem (clusterizacao, associacao).",
+      "ordem": 42,
+      "evidencia": ["consegue montar o fluxo do CSV ate o valor previsto", "consegue dizer se um problema e supervisionado ou nao"],
+      "checagem": "Qual a ordem dos widgets no fluxo do Orange, e onde entra a diferenca entre supervisionado e nao supervisionado?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Mineração de dados"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_43",
+      "nome": "Discretizar, continuizar e normalizar",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Orange e Machine Learning",
+      "descricao": "Discretizar transforma valores continuos numa colecao finita de intervalos, porque alguns algoritmos nao aceitam coluna continua (Naive Bayes) e porque valores distintos demais escondem os padroes. Continuize transforma discretas em numericas e padroniza as numericas. Normalizar e essencial com atributos em escalas diferentes, senao o de escala menor perde relevancia.",
+      "ordem": 43,
+      "evidencia": ["consegue escolher o metodo de binning no widget Discretize", "consegue justificar a normalizacao pela escala dos atributos"],
+      "checagem": "Por que o material recomenda discretizar atributos continuos antes de certos algoritmos?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Mineração de dados"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_44",
+      "nome": "Test and Score: amostragem e metricas",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Orange e Machine Learning",
+      "descricao": "No widget Test and Score escolhe-se o metodo de amostragem: cross validation, cross validation by feature, random sampling, leave-one-out (muito preciso e confiavel, porem muito lento), test on train data e test on test data. As metricas de classificacao sao AUC, CA, F1, Precision, Recall e MCC, e as de regressao sao MSE, RMSE, MAE e R2. Os resultados se analisam em ROC, matriz de confusao e lift curve.",
+      "ordem": 44,
+      "evidencia": ["consegue escolher o metodo de amostragem e justificar o custo", "consegue ler a matriz de confusao e a curva lift"],
+      "checagem": "Qual metodo de amostragem separa uma amostra por vez, por que ele e confiavel e por que e lento?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Mineração de dados"],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    },
+    {
+      "id": "mt_TABD_45",
+      "nome": "A cadeia das quatro entregas",
+      "tipo": "META",
+      "unidade": "Projetos Praticos",
+      "descricao": "A avaliacao e 6 pontos de projeto em dupla e 4 pontos de prova escrita individual, nas duas notas: o projeto vale 60 por cento. As quatro entregas encadeiam modelagem do DW (com script SQL de implantacao em Oracle no anexo), integracao de dados (video das cargas e documentacao dos planos ETL), consultas analiticas (paineis, graficos e conclusoes) e mineracao (artigo com o workflow do Orange).",
+      "ordem": 45,
+      "evidencia": ["consegue dizer o que cada nota exige como entregavel", "consegue planejar o projeto sabendo que a prova e so 40 por cento"],
+      "checagem": "O que cada uma das quatro entregas exige, e quanto do total da nota vem do projeto?",
+      "avaliacoes": ["AV1", "AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/topicos-avancados-banco-dados/data.ts"
+    }
+  ],
+  "arestas": [
+    {
+      "topicoId": "mt_TABD_02",
+      "prerequisitoId": "mt_TABD_01",
+      "forca": "hard",
+      "razao": "A arquitetura e o desenho fisico do processo de BI: sem saber o que BI faz, as caixas do diagrama nao significam nada.",
+      "origem": "texto",
+      "trecho": "Arquitetura de BI: Fontes (Legado/ERP/CRM) → ETL e qualidade de dados → Data Warehouse e Data Marts (+ metadados) → Servidor → Query/Reporting, OLAP, Data Mining."
+    },
+    {
+      "topicoId": "mt_TABD_03",
+      "prerequisitoId": "mt_TABD_02",
+      "forca": "soft",
+      "razao": "O DW e a peca central da cadeia, e ver a cadeia primeiro explica de onde vem o dado que ele guarda e para quem ele serve.",
+      "origem": "texto",
+      "trecho": "Cadeia essencial: fonte OLTP → ETL → Data Warehouse → OLAP/análise."
+    },
+    {
+      "topicoId": "mt_TABD_04",
+      "prerequisitoId": "mt_TABD_03",
+      "forca": "hard",
+      "razao": "O contraste com o OLTP se faz sobre as quatro caracteristicas do DW: sem elas nao ha o que comparar.",
+      "origem": "texto",
+      "trecho": "DW vs OLTP: OLTP é normalizado e transacional; DW é desnormalizado, voltado à consulta e atualizado por cargas periódicas."
+    },
+    {
+      "topicoId": "mt_TABD_05",
+      "prerequisitoId": "mt_TABD_03",
+      "forca": "hard",
+      "razao": "Staging, ODS, data mart e metadados sao componentes do ambiente de DW: e preciso saber o que e o DW antes de dividi-lo em partes.",
+      "origem": "texto",
+      "trecho": "Componentes do ambiente: Staging Area (integração/transformação), ODS (Operational Data Store, volátil), Data Mart (visão departamental), Metadados (catálogo)."
+    },
+    {
+      "topicoId": "mt_TABD_06",
+      "prerequisitoId": "mt_TABD_03",
+      "forca": "hard",
+      "razao": "A modelagem dimensional e a tecnica de apresentar os dados do DW: sem o DW nao existe o problema que o star schema resolve.",
+      "origem": "texto",
+      "trecho": "MODELAGEM DIMENSIONAL: Técnica de Ralph Kimball para apresentar dados de forma padronizada e intuitiva, com alto desempenho de acesso."
+    },
+    {
+      "topicoId": "mt_TABD_06",
+      "prerequisitoId": "mt_TABD_04",
+      "forca": "soft",
+      "razao": "Desnormalizar a dimensao so faz sentido depois de entender que o DW e voltado a consulta e nao a transacao.",
+      "origem": "texto",
+      "trecho": "DW é desnormalizado, voltado à consulta e atualizado por cargas periódicas."
+    },
+    {
+      "topicoId": "mt_TABD_07",
+      "prerequisitoId": "mt_TABD_06",
+      "forca": "hard",
+      "razao": "A fato e definida pela posicao que ocupa no esquema estrela, cercada pelas dimensoes.",
+      "origem": "texto",
+      "trecho": "Star Schema (esquema estrela): tabela FATO central com as métricas/KPIs, cercada por tabelas DIMENSÃO que a detalham (respondem Onde? Quando? O quê? Quem?)."
+    },
+    {
+      "topicoId": "mt_TABD_08",
+      "prerequisitoId": "mt_TABD_07",
+      "forca": "hard",
+      "razao": "Aditividade e uma propriedade das metricas que moram na fato: sem a fato nao ha metrica para classificar.",
+      "origem": "texto",
+      "trecho": "TABELA FATO: PK composta (todas as FKs das dimensões) + métricas; tipos: movimento, snapshot e factless (existência sem métrica)."
+    },
+    {
+      "topicoId": "mt_TABD_09",
+      "prerequisitoId": "mt_TABD_07",
+      "forca": "hard",
+      "razao": "A dimensao existe para detalhar a fato, e sua PK e o que forma a PK composta da fato.",
+      "origem": "texto",
+      "trecho": "DIMENSÃO: PK (surrogate key artificial, não reusar código de origem) + atributos textuais (filtros) + hierarquias (1-N em cascata)."
+    },
+    {
+      "topicoId": "mt_TABD_10",
+      "prerequisitoId": "mt_TABD_07",
+      "forca": "hard",
+      "razao": "O grao e o nivel de detalhe de uma linha da fato: sem a fato o conceito nao tem onde se apoiar.",
+      "origem": "texto",
+      "trecho": "GRANULARIDADE: nível de detalhe; o grão é o nível mais detalhado; todas as métricas compartilham a mesma granularidade."
+    },
+    {
+      "topicoId": "mt_TABD_10",
+      "prerequisitoId": "mt_TABD_08",
+      "forca": "soft",
+      "razao": "A regra de que todas as metricas compartilham o mesmo grao so fica clara depois de entender como cada tipo de metrica agrega.",
+      "origem": "texto",
+      "trecho": "todas as métricas compartilham a mesma granularidade"
+    },
+    {
+      "topicoId": "mt_TABD_11",
+      "prerequisitoId": "mt_TABD_07",
+      "forca": "hard",
+      "razao": "O primeiro passo pede as metricas da fato, logo a fato precisa estar entendida antes do roteiro.",
+      "origem": "texto",
+      "trecho": "Etapas: 1) O que avaliamos? (fatos/métricas numéricas) 2) Como analisar? (dimensões) 3) Menor detalhe? (granularidade) 4) Como agrupar? (hierarquia)."
+    },
+    {
+      "topicoId": "mt_TABD_11",
+      "prerequisitoId": "mt_TABD_09",
+      "forca": "hard",
+      "razao": "O segundo e o quarto passo pedem dimensoes e hierarquias, que sao exatamente o conteudo da tabela dimensao.",
+      "origem": "texto",
+      "trecho": "2) Como analisar? (dimensões) 3) Menor detalhe? (granularidade) 4) Como agrupar? (hierarquia)"
+    },
+    {
+      "topicoId": "mt_TABD_11",
+      "prerequisitoId": "mt_TABD_10",
+      "forca": "hard",
+      "razao": "O terceiro passo e declarar a granularidade, que precisa estar compreendida antes de responder ao requisito.",
+      "origem": "texto",
+      "trecho": "3) Menor detalhe? (granularidade)"
+    },
+    {
+      "topicoId": "mt_TABD_12",
+      "prerequisitoId": "mt_TABD_09",
+      "forca": "hard",
+      "razao": "A dimensao Tempo e um caso particular de tabela dimensao, com PK e hierarquia proprias.",
+      "origem": "texto",
+      "trecho": "DIMENSÃO TEMPO: sempre presente, pode ser carregada antecipadamente sem fonte."
+    },
+    {
+      "topicoId": "mt_TABD_13",
+      "prerequisitoId": "mt_TABD_09",
+      "forca": "hard",
+      "razao": "O Tipo 2 versiona a dimensao criando nova surrogate key, logo a surrogate key precisa estar entendida antes.",
+      "origem": "texto",
+      "trecho": "Tipo 2 cria nova linha com nova surrogate key (mantém histórico, marcado por flag, versão ou data início/fim)"
+    },
+    {
+      "topicoId": "mt_TABD_14",
+      "prerequisitoId": "mt_TABD_09",
+      "forca": "hard",
+      "razao": "Cada dimensao especial e um desvio da dimensao padrao, que precisa estar conhecida para se perceber o desvio.",
+      "origem": "texto",
+      "trecho": "junk/garbage (agrupa flags e indicadores de baixa cardinalidade, carregada por preload do produto cartesiano ou em tempo de execução), role-playing (mesma dimensão em papéis diferentes via views)"
+    },
+    {
+      "topicoId": "mt_TABD_14",
+      "prerequisitoId": "mt_TABD_07",
+      "forca": "soft",
+      "razao": "A degenerate vira atributo da propria fato, e so aparece quando se sabe qual e o grao dessa fato.",
+      "origem": "texto",
+      "trecho": "degenerate (dimensão sem atributos, representada como atributo da própria fato, ex.: nº da nota fiscal"
+    },
+    {
+      "topicoId": "mt_TABD_15",
+      "prerequisitoId": "mt_TABD_13",
+      "forca": "hard",
+      "razao": "A Fast Changing Dimension e o caso em que o SCD Tipo 2 falha por excesso de versoes, logo o SCD vem antes.",
+      "origem": "texto",
+      "trecho": "Fast Changing (ou Rapidly Changing) Dimensions são dimensões grandes cujos atributos mudam com frequência"
+    },
+    {
+      "topicoId": "mt_TABD_16",
+      "prerequisitoId": "mt_TABD_10",
+      "forca": "hard",
+      "razao": "A tabela agregada e um resumo acima do grao da fato: sem o conceito de grao nao se sabe o que esta sendo resumido.",
+      "origem": "texto",
+      "trecho": "tabelas agregadas (resumos calculados com SUM sobre atributos de uma hierarquia; agregação completa recria tudo a cada carga, incremental atualiza e insere"
+    },
+    {
+      "topicoId": "mt_TABD_16",
+      "prerequisitoId": "mt_TABD_09",
+      "forca": "soft",
+      "razao": "A agregada e sempre construida sobre atributos de uma hierarquia da dimensao.",
+      "origem": "texto",
+      "trecho": "resumos calculados com SUM sobre atributos de uma hierarquia"
+    },
+    {
+      "topicoId": "mt_TABD_17",
+      "prerequisitoId": "mt_TABD_02",
+      "forca": "hard",
+      "razao": "O ETL e a etapa da cadeia entre a fonte e o DW: sem a cadeia nao se sabe de onde ele extrai nem para onde carrega.",
+      "origem": "texto",
+      "trecho": "Cadeia essencial: fonte OLTP → ETL → Data Warehouse → OLAP/análise."
+    },
+    {
+      "topicoId": "mt_TABD_18",
+      "prerequisitoId": "mt_TABD_17",
+      "forca": "hard",
+      "razao": "Limpeza, reducao, transformacao e integracao sao o detalhamento da letra T do ETL.",
+      "origem": "texto",
+      "trecho": "Preparação: limpeza (dados ausentes, ruído/outliers, duplicados), redução (PCA, amostragem), transformação (normalização, discretização) e integração (redundância)."
+    },
+    {
+      "topicoId": "mt_TABD_19",
+      "prerequisitoId": "mt_TABD_17",
+      "forca": "hard",
+      "razao": "O Kettle e a ferramenta que implementa o ETL, e cada peca dele so faz sentido sabendo qual etapa executa.",
+      "origem": "texto",
+      "trecho": "Ferramenta: Pentaho Data Integration (Kettle, acrônimo de"
+    },
+    {
+      "topicoId": "mt_TABD_20",
+      "prerequisitoId": "mt_TABD_19",
+      "forca": "hard",
+      "razao": "Os steps do catalogo sao as pecas de uma transformation, ligadas por hops: sem esse modelo o catalogo e uma lista solta.",
+      "origem": "texto",
+      "trecho": "Transformation = Steps ligados por Hops; cada hop é o output stream de um step e o input stream de outro"
+    },
+    {
+      "topicoId": "mt_TABD_21",
+      "prerequisitoId": "mt_TABD_20",
+      "forca": "hard",
+      "razao": "O Dimension Update/Lookup e um step do catalogo, usado dentro do fluxo junto com os steps de entrada e de select.",
+      "origem": "texto",
+      "trecho": "Lookup (Database Lookup busca numa tabela do banco com cache opcional; Stream Lookup busca em dados vindos de outro step; Dimension Update/Lookup)"
+    },
+    {
+      "topicoId": "mt_TABD_21",
+      "prerequisitoId": "mt_TABD_13",
+      "forca": "hard",
+      "razao": "O step implementa SCD tipos 1 e 2, e seus campos de configuracao sao os elementos do SCD: sem SCD nao se sabe o que configurar.",
+      "origem": "texto",
+      "trecho": "O step Dimension Update/Lookup implementa SCD tipos 1 e 2 e é configurado com technical key (a surrogate key), version field, start/end of date range, keys (as chaves de negócio) e fields."
+    },
+    {
+      "topicoId": "mt_TABD_23",
+      "prerequisitoId": "mt_TABD_22",
+      "forca": "hard",
+      "razao": "Media, desvio e CV so se calculam sobre variavel quantitativa, logo a classificacao das variaveis vem primeiro.",
+      "origem": "texto",
+      "trecho": "Observações = linhas; variáveis = colunas. Variáveis qualitativas (nominal/ordinal) e quantitativas (discreta/contínua)."
+    },
+    {
+      "topicoId": "mt_TABD_24",
+      "prerequisitoId": "mt_TABD_23",
+      "forca": "hard",
+      "razao": "As tres regras da assimetria sao escritas com media, mediana e moda: sem as tres medidas a regra e ilegivel.",
+      "origem": "texto",
+      "trecho": "ASSIMETRIA (regra do professor): distribuição simétrica tem média = mediana = moda; assimétrica positiva (à direita) tem média > mediana > moda"
+    },
+    {
+      "topicoId": "mt_TABD_25",
+      "prerequisitoId": "mt_TABD_23",
+      "forca": "hard",
+      "razao": "A mediana e o percentil 50 e o box plot depende dela e dos quartis, que sao medidas de posicao ja vistas.",
+      "origem": "texto",
+      "trecho": "Separatrizes: quartis (4 partes), decis (10) e percentis (100); a mediana é o percentil 50."
+    },
+    {
+      "topicoId": "mt_TABD_25",
+      "prerequisitoId": "mt_TABD_24",
+      "forca": "soft",
+      "razao": "O box plot e lido tambem como leitura visual da assimetria, o que exige a regra de assimetria antes.",
+      "origem": "texto",
+      "trecho": "Box Plot com 5 valores (mín, Q1, Q2, Q3, máx) dá ideia de posição, dispersão e assimetria e evidencia outliers"
+    },
+    {
+      "topicoId": "mt_TABD_26",
+      "prerequisitoId": "mt_TABD_22",
+      "forca": "hard",
+      "razao": "Os tres casos da analise bidimensional sao definidos pelo tipo das duas variaveis envolvidas.",
+      "origem": "texto",
+      "trecho": "Três casos: duas qualitativas (verifica-se se existe ou não associação), duas quantitativas (coeficientes de correlação) e uma qualitativa com uma quantitativa"
+    },
+    {
+      "topicoId": "mt_TABD_26",
+      "prerequisitoId": "mt_TABD_25",
+      "forca": "soft",
+      "razao": "O caso qualitativa com quantitativa se resolve com box plot por categoria, que precisa estar dominado antes.",
+      "origem": "texto",
+      "trecho": "analisa-se a quantitativa dentro de cada categoria, por medidas-resumo ou box plot por categoria"
+    },
+    {
+      "topicoId": "mt_TABD_27",
+      "prerequisitoId": "mt_TABD_06",
+      "forca": "hard",
+      "razao": "As dimensoes e medidas do cubo sao as dimensoes e metricas do modelo dimensional: o cubo e a leitura do star schema.",
+      "origem": "texto",
+      "trecho": "Tecnologias de suporte à decisão com visão multidimensional dos dados (o Cubo, composto de dimensões, medidas e células)"
+    },
+    {
+      "topicoId": "mt_TABD_27",
+      "prerequisitoId": "mt_TABD_04",
+      "forca": "soft",
+      "razao": "O contraste OLAP com OLTP repete e aprofunda a comparacao entre DW e banco transacional.",
+      "origem": "texto",
+      "trecho": "OLAP (analítico, multidimensional) vs OLTP (transacional, bidimensional)."
+    },
+    {
+      "topicoId": "mt_TABD_28",
+      "prerequisitoId": "mt_TABD_27",
+      "forca": "hard",
+      "razao": "Todas as operacoes agem sobre o cubo, suas dimensoes e celulas: sem o cubo nao ha o que fatiar nem girar.",
+      "origem": "texto",
+      "trecho": "Operações: Drill-Down (geral→detalhe, desagrupa), Roll-Up/Drill-Up (detalhe→geral, agrupa), Slice (uma fatia, um membro de uma dimensão), Dice (sub-cubo, vários membros de várias dimensões)"
+    },
+    {
+      "topicoId": "mt_TABD_28",
+      "prerequisitoId": "mt_TABD_09",
+      "forca": "hard",
+      "razao": "Drill-down e roll-up sobem e descem os niveis de uma hierarquia de dimensao: sem hierarquia definida no modelo nao existe caminho para navegar.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_TABD_29",
+      "prerequisitoId": "mt_TABD_28",
+      "forca": "hard",
+      "razao": "Drill across e drill through so se distinguem por comparacao com drill-down, roll-up, slice e dice.",
+      "origem": "texto",
+      "trecho": "ATENÇÃO: o professor deu DUAS definições para Drill Across e DUAS para Drill Through, e as duas leituras podem cair na prova."
+    },
+    {
+      "topicoId": "mt_TABD_29",
+      "prerequisitoId": "mt_TABD_10",
+      "forca": "hard",
+      "razao": "A segunda definicao de drill through e buscar detalhe alem do grao existente, o que exige saber o que e granularidade.",
+      "origem": "texto",
+      "trecho": "Drill Through (2ª): buscar além do nível de granularidade existente na estrutura dimensional"
+    },
+    {
+      "topicoId": "mt_TABD_30",
+      "prerequisitoId": "mt_TABD_27",
+      "forca": "hard",
+      "razao": "MOLAP, ROLAP e HOLAP sao formas de armazenar o mesmo cubo, logo o cubo precisa existir como conceito antes.",
+      "origem": "texto",
+      "trecho": "Tipos por armazenamento: MOLAP (multidimensional, cópia dos dados e agregações em estrutura multidimensional, melhor tempo de resposta e boa compressão), ROLAP (relacional, tudo no banco"
+    },
+    {
+      "topicoId": "mt_TABD_30",
+      "prerequisitoId": "mt_TABD_06",
+      "forca": "soft",
+      "razao": "O schema do Mondrian aponta medidas para colunas da fato e dimensoes para as tabelas de dimensao do modelo estrela.",
+      "origem": "texto",
+      "trecho": "No Mondrian Schema, um cubo é uma coleção de medidas e dimensões; a medida tem nome, coluna na fato e um agregador (sum, count, min)"
+    },
+    {
+      "topicoId": "mt_TABD_31",
+      "prerequisitoId": "mt_TABD_01",
+      "forca": "soft",
+      "razao": "O Power BI e apresentado como ferramenta de BI, e sem o conceito de BI a lista de versoes e motores nao tem finalidade.",
+      "origem": "texto",
+      "trecho": "POWER BI: Ferramenta de BI da Microsoft, em 3 versões: Desktop (desenvolvimento), Service (nuvem/compartilhamento) e Mobile."
+    },
+    {
+      "topicoId": "mt_TABD_32",
+      "prerequisitoId": "mt_TABD_31",
+      "forca": "hard",
+      "razao": "A limpeza acontece dentro do Power Query, um dos tres motores da ferramenta.",
+      "origem": "texto",
+      "trecho": "No Power Query: painel de Etapas Aplicadas (cada transformação vira um passo que pode ser editado, reordenado ou removido)"
+    },
+    {
+      "topicoId": "mt_TABD_32",
+      "prerequisitoId": "mt_TABD_25",
+      "forca": "hard",
+      "razao": "A receita de outlier no Power BI reproduz o box plot com Q1, Q3 e IQR: sem quartis nao se escreve a medida DAX.",
+      "origem": "texto",
+      "trecho": "mediana com MEDIAN, Q1 com PERCENTILE.INC(0,25), Q3 com PERCENTILE.INC(0,75), IQR = Q3 − Q1"
+    },
+    {
+      "topicoId": "mt_TABD_32",
+      "prerequisitoId": "mt_TABD_18",
+      "forca": "soft",
+      "razao": "Os defeitos tratados no Power Query sao os mesmos da preparacao de dados vista no ETL.",
+      "origem": "texto",
+      "trecho": "limpeza (dados ausentes, ruído/outliers, duplicados)"
+    },
+    {
+      "topicoId": "mt_TABD_34",
+      "prerequisitoId": "mt_TABD_33",
+      "forca": "hard",
+      "razao": "Hadoop e Data Lake sao a resposta tecnica ao volume e a variedade, que sao dois dos cinco V's.",
+      "origem": "texto",
+      "trecho": "Hadoop (Apache): HDFS (arquivos distribuídos), MapReduce (processamento distribuído); viabiliza o Data Lake com hardware barato."
+    },
+    {
+      "topicoId": "mt_TABD_34",
+      "prerequisitoId": "mt_TABD_03",
+      "forca": "hard",
+      "razao": "O Data Lake e definido por contraste com o Data Warehouse, que precisa estar entendido para a comparacao existir.",
+      "origem": "texto",
+      "trecho": "Data Lake (dados brutos) vs Data Warehouse (dados processados) vs Lakehouse (combina os dois)."
+    },
+    {
+      "topicoId": "mt_TABD_35",
+      "prerequisitoId": "mt_TABD_33",
+      "forca": "soft",
+      "razao": "O NoSQL aparece como resposta a variedade dos dados semiestruturados e nao estruturados descritos no Big Data.",
+      "origem": "texto",
+      "trecho": "Tipos de dados: estruturados (SGBD), semiestruturados (JSON/XML) e não estruturados (fotos, vídeos)."
+    },
+    {
+      "topicoId": "mt_TABD_36",
+      "prerequisitoId": "mt_TABD_18",
+      "forca": "hard",
+      "razao": "A primeira etapa do KDD e a preparacao dos dados, com as mesmas limpeza, transformacao e reducao do ETL.",
+      "origem": "texto",
+      "trecho": "dado sem qualidade resulta em mineração sem qualidade"
+    },
+    {
+      "topicoId": "mt_TABD_36",
+      "prerequisitoId": "mt_TABD_03",
+      "forca": "soft",
+      "razao": "O material justifica o DW como facilitador do KDD, o que exige entender o que o DW entrega.",
+      "origem": "texto",
+      "trecho": "O DW facilita o KDD porque já entrega os dados integrados, consistentes e limpos."
+    },
+    {
+      "topicoId": "mt_TABD_37",
+      "prerequisitoId": "mt_TABD_36",
+      "forca": "hard",
+      "razao": "Classificacao e uma das tarefas escolhidas na etapa de mineracao do KDD, e a escolha da tarefa vem antes do algoritmo.",
+      "origem": "texto",
+      "trecho": "a partir de atributos preditivos (que influenciam a decisão) e do atributo objetivo (a classe)"
+    },
+    {
+      "topicoId": "mt_TABD_38",
+      "prerequisitoId": "mt_TABD_36",
+      "forca": "hard",
+      "razao": "Associacao e outra tarefa do KDD, e o material a define por contraste com a tarefa preditiva dentro do processo.",
+      "origem": "texto",
+      "trecho": "o grau de certeza vem de dois fatores: suporte (percentual das transações em que a regra aparece) e confiança (considera apenas as transações que contêm o antecedente); algoritmo APRIORI"
+    },
+    {
+      "topicoId": "mt_TABD_39",
+      "prerequisitoId": "mt_TABD_36",
+      "forca": "hard",
+      "razao": "Agrupamento e a terceira tarefa do KDD, escolhida conforme o conhecimento que se espera extrair.",
+      "origem": "texto",
+      "trecho": "Agrupamento/clusterização reúne indivíduos semelhantes calculando distâncias, em técnicas hierárquicas e não hierárquicas (partição); ex.: K-Means"
+    },
+    {
+      "topicoId": "mt_TABD_40",
+      "prerequisitoId": "mt_TABD_37",
+      "forca": "hard",
+      "razao": "Os criterios avaliam um modelo ja construido, e o modelo do material e o preditivo da classificacao.",
+      "origem": "texto",
+      "trecho": "CRITÉRIOS DE AVALIAÇÃO DO MODELO (etapa 3): acurácia (predizer corretamente o comportamento de amostras desconhecidas), desempenho (custo computacional para gerar e usar o modelo), robustez"
+    },
+    {
+      "topicoId": "mt_TABD_41",
+      "prerequisitoId": "mt_TABD_36",
+      "forca": "hard",
+      "razao": "A comparacao precisa dos dois lados: sem saber o que e mineracao nao se entende o que e descoberta.",
+      "origem": "texto",
+      "trecho": "DM vs OLAP: OLAP é verificação (o analista conhece a questão, elabora a hipótese e usa a ferramenta para confirmá-la ou refutá-la); DM é descoberta"
+    },
+    {
+      "topicoId": "mt_TABD_41",
+      "prerequisitoId": "mt_TABD_28",
+      "forca": "hard",
+      "razao": "Verificacao de hipotese e feita navegando o cubo, logo as operacoes OLAP precisam estar dominadas para ver o contraste.",
+      "origem": "texto",
+      "trecho": "OLAP é verificação (o analista conhece a questão, elabora a hipótese e usa a ferramenta para confirmá-la ou refutá-la)"
+    },
+    {
+      "topicoId": "mt_TABD_42",
+      "prerequisitoId": "mt_TABD_36",
+      "forca": "hard",
+      "razao": "O fluxo de widgets do Orange e a execucao das etapas do KDD numa ferramenta: sem o KDD o fluxo e uma sequencia arbitraria.",
+      "origem": "texto",
+      "trecho": "Fluxo: entrada → amostragem → visualização → pré-processamento → criação do modelo → avaliação → aplicação."
+    },
+    {
+      "topicoId": "mt_TABD_43",
+      "prerequisitoId": "mt_TABD_42",
+      "forca": "hard",
+      "razao": "Discretize, Continuize e Normalize sao widgets da etapa de pre-processamento do fluxo do Orange.",
+      "origem": "texto",
+      "trecho": "PRÉ-PROCESSAMENTO: discretização transforma valores contínuos numa coleção finita de intervalos"
+    },
+    {
+      "topicoId": "mt_TABD_43",
+      "prerequisitoId": "mt_TABD_22",
+      "forca": "hard",
+      "razao": "Discretizar e continuizar sao conversoes entre variavel continua e discreta, logo a tipologia das variaveis vem antes.",
+      "origem": "texto",
+      "trecho": "Continuize transforma variáveis discretas em numéricas (first value as base, most frequent as base, one-hot encoding, treat as ordinal)"
+    },
+    {
+      "topicoId": "mt_TABD_44",
+      "prerequisitoId": "mt_TABD_42",
+      "forca": "hard",
+      "razao": "Test and Score e o widget da etapa de avaliacao do fluxo, e recebe o modelo criado na etapa anterior.",
+      "origem": "texto",
+      "trecho": "AVALIAÇÃO no widget Test and Score, cujos métodos de amostragem são Cross Validation, Cross Validation by feature, Random sampling, Leave-one-out (muito preciso e confiável, porém muito lento)"
+    },
+    {
+      "topicoId": "mt_TABD_44",
+      "prerequisitoId": "mt_TABD_40",
+      "forca": "soft",
+      "razao": "As metricas do widget medem os criterios de avaliacao do KDD, comecando pela acuracia.",
+      "origem": "texto",
+      "trecho": "Métricas de classificação: AUC (quanto mais perto de 1, mais preciso), CA (acurácia), F1 (média harmônica de precisão e recall, boa com classes desbalanceadas)"
+    },
+    {
+      "topicoId": "mt_TABD_45",
+      "prerequisitoId": "mt_TABD_11",
+      "forca": "hard",
+      "razao": "A primeira entrega e o modelo dimensional do DW, que sai dos quatro passos aplicados ao sistema escolhido.",
+      "origem": "texto",
+      "trecho": "modelo lógico/físico em star schema e, no anexo, o script SQL de implantação em Oracle (tabelas com constraints, tablespaces e sequências)"
+    },
+    {
+      "topicoId": "mt_TABD_45",
+      "prerequisitoId": "mt_TABD_19",
+      "forca": "hard",
+      "razao": "A segunda entrega e o video das cargas rodando com a documentacao dos planos ETL, feitos no Kettle.",
+      "origem": "texto",
+      "trecho": "vídeo demonstrando as cargas sendo executadas passo a passo, mais tudo o que constava na primeira parte já corrigido, a documentação dos planos ETL"
+    },
+    {
+      "topicoId": "mt_TABD_45",
+      "prerequisitoId": "mt_TABD_32",
+      "forca": "soft",
+      "razao": "A terceira entrega sao os paineis de consulta e graficos, construidos na ferramenta de visualizacao.",
+      "origem": "texto",
+      "trecho": "os painéis de consultas, gráficos e planilhas criados para apresentar a análise, e as conclusões e sugestões obtidas a partir deles"
+    },
+    {
+      "topicoId": "mt_TABD_45",
+      "prerequisitoId": "mt_TABD_42",
+      "forca": "hard",
+      "razao": "A quarta entrega exige detalhar o workflow do Orange com construcao e avaliacao dos modelos.",
+      "origem": "texto",
+      "trecho": "detalhamento de todas as etapas do workflow do Orange incluindo construção e avaliação dos modelos"
+    }
+  ]
+}

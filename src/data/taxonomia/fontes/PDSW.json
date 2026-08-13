@@ -1,0 +1,1303 @@
+{
+  "disciplina": { "codigo": "PDSW", "codigoPPC": "PDSW", "nome": "Processos de Desenvolvimento de Software", "periodo": 6 },
+  "topicos": [
+    {
+      "id": "mt_PDSW_01",
+      "nome": "Natureza do software",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos da Engenharia de Software",
+      "descricao": "Software é abstrato, maleável, invisível e muda continuamente. Essas características tornam requisitos, manutenção e qualidade mais difíceis de controlar do que em produtos físicos, e explicam por que a área precisa de método.",
+      "ordem": 1,
+      "evidencia": [
+        "cita as características do software e diz que problema prático cada uma causa",
+        "explica por que uma mudança pequena pode ter efeito indireto em um sistema real"
+      ],
+      "checagem": "Por que software é mais difícil de gerenciar do que um produto físico, e o que a invisibilidade dele obriga o time a fazer?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Visão geral da Engenharia de Software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_02",
+      "nome": "Dimensões da Engenharia de Software",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos da Engenharia de Software",
+      "descricao": "A disciplina se organiza em quatro frentes que andam juntas: produto (o que se entrega e para quem), processo (como o time trabalha), pessoas (comunicação e papéis) e qualidade (confiabilidade, manutenibilidade, segurança, desempenho e usabilidade pensadas desde cedo).",
+      "ordem": 2,
+      "evidencia": [
+        "classifica uma decisão de projeto como sendo de produto, processo, pessoas ou qualidade",
+        "cita atributos de qualidade que precisam ser decididos antes da implementação"
+      ],
+      "checagem": "Quais são as quatro frentes que a Engenharia de Software integra e por que o programador não decide sozinho?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Visão geral da Engenharia de Software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_03",
+      "nome": "Função do processo de software",
+      "tipo": "CONCEITUAL",
+      "unidade": "Processos de desenvolvimento",
+      "descricao": "Processo é a forma como o time organiza descoberta, planejamento, construção, validação, entrega e evolução. Ele existe para reduzir risco, criar feedback e entregar valor de maneira sustentável, não para gerar papelada.",
+      "ordem": 3,
+      "evidencia": [
+        "explica para que serve um processo de software em vez de só programar",
+        "aponta em qual etapa do processo um risco do projeto seria detectado"
+      ],
+      "checagem": "Um processo de software serve principalmente para o quê, e qual é o custo de não ter nenhum?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Modelos de processos de desenvolvimento de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_04",
+      "nome": "Modelo cascata",
+      "tipo": "CONCEITUAL",
+      "unidade": "Processos de desenvolvimento",
+      "descricao": "A cascata organiza o trabalho em fases sequenciais. Favorece previsibilidade quando escopo e tecnologia são estáveis, mas sofre quando o feedback real chega tarde, porque o aprendizado tardio custa caro.",
+      "ordem": 4,
+      "evidencia": [
+        "descreve as fases em sequência e diz quando esse arranjo é razoável",
+        "nomeia o risco principal de só ouvir o usuário no final"
+      ],
+      "checagem": "Em que situação a cascata ainda faz sentido e qual é o risco de o feedback do usuário chegar só no fim?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Modelos de processos de desenvolvimento de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_05",
+      "nome": "Iterativo e RUP",
+      "tipo": "CONCEITUAL",
+      "unidade": "Processos de desenvolvimento",
+      "descricao": "O modelo iterativo divide o desenvolvimento em ciclos para aprender e corrigir rumo durante o projeto. O RUP é um processo iterativo com fases, disciplinas, papéis e artefatos, ajustável ao porte do projeto.",
+      "ordem": 5,
+      "evidencia": [
+        "explica o que o time ganha ao dividir o projeto em ciclos",
+        "diferencia iteração de fase de cascata"
+      ],
+      "checagem": "O que muda no risco do projeto quando o trabalho passa de fases sequenciais para ciclos, e o que o RUP acrescenta a isso?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Modelos de processos de desenvolvimento de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_06",
+      "nome": "Métodos ágeis e XP",
+      "tipo": "CONCEITUAL",
+      "unidade": "Processos de desenvolvimento",
+      "descricao": "Agilidade não elimina processo: troca planos longos e pouco verificados por ciclos curtos, inspeção frequente e adaptação contínua. O XP concretiza isso com testes automatizados, integração contínua, programação em pares, design simples e feedback rápido.",
+      "ordem": 6,
+      "evidencia": [
+        "diferencia método ágil de abordagem prescritiva rígida sem dizer que ágil é ausência de processo",
+        "cita práticas técnicas do XP e o que cada uma protege"
+      ],
+      "checagem": "Qual característica separa métodos ágeis de abordagens prescritivas rígidas, e qual prática técnica do XP sustenta essa característica?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Métodos de Desenvolvimento de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_07",
+      "nome": "Scrum: sprint e backlog",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Processos de desenvolvimento",
+      "descricao": "O Scrum estrutura o trabalho com backlog priorizado, sprint de duração fixa, eventos de inspeção e um incremento potencialmente entregável ao fim de cada ciclo.",
+      "ordem": 7,
+      "evidencia": [
+        "monta o caminho de backlog até incremento com priorização e feedback",
+        "explica o que o sprint entrega ao final"
+      ],
+      "checagem": "O que o sprint representa no Scrum e o que precisa existir no fim dele?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Métodos de Desenvolvimento de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_08",
+      "nome": "Kanban e limite WIP",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Processos de desenvolvimento",
+      "descricao": "O Kanban visualiza o fluxo de trabalho, limita a quantidade de itens em progresso e assim evidencia gargalos operacionais em vez de esconder fila.",
+      "ordem": 8,
+      "evidencia": [
+        "explica o que o limite de WIP provoca no fluxo do time",
+        "lê um quadro e aponta onde está o gargalo"
+      ],
+      "checagem": "Para que serve limitar o trabalho em progresso no Kanban?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Métodos de Desenvolvimento de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_09",
+      "nome": "Requisitos funcionais",
+      "tipo": "CONCEITUAL",
+      "unidade": "Requisitos e especificação",
+      "descricao": "Requisito funcional define o que o sistema deve fazer: cadastrar, consultar, aprovar, autenticar, comprar ou gerar relatório. É comportamento observável do sistema.",
+      "ordem": 9,
+      "evidencia": [
+        "escreve requisitos funcionais de um sistema pequeno em forma de comportamento",
+        "separa comportamento de tecnologia usada"
+      ],
+      "checagem": "O que um requisito funcional descreve, e por que citar banco de dados ou framework não é requisito funcional?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Requisitos e especificação de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_10",
+      "nome": "Requisitos não funcionais",
+      "tipo": "CONCEITUAL",
+      "unidade": "Requisitos e especificação",
+      "descricao": "Requisito não funcional define qualidades esperadas: desempenho, segurança, disponibilidade, usabilidade, acessibilidade e compatibilidade. Não diz o que o sistema faz, diz o quão bem ele precisa fazer.",
+      "ordem": 10,
+      "evidencia": [
+        "classifica uma frase como requisito funcional ou não funcional e justifica",
+        "escreve um requisito não funcional com critério verificável"
+      ],
+      "checagem": "Dado o pedido de que a consulta responda em até dois segundos para mil usuários simultâneos, que tipo de requisito é esse e por quê?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Requisitos e especificação de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_11",
+      "nome": "Requisitos de domínio",
+      "tipo": "CONCEITUAL",
+      "unidade": "Requisitos e especificação",
+      "descricao": "Requisito de domínio expressa regra específica do negócio: políticas, cálculos, restrições legais ou vocabulário próprio da área. Ele costuma vir de quem conhece o negócio, não de quem usa a tela.",
+      "ordem": 11,
+      "evidencia": [
+        "identifica em um enunciado a regra que existe só por causa do negócio",
+        "distingue regra de domínio de preferência de interface"
+      ],
+      "checagem": "O que um requisito de domínio costuma representar, e de quem esse requisito normalmente vem?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Requisitos e especificação de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_12",
+      "nome": "Elicitação de requisitos",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Requisitos e especificação",
+      "descricao": "Elicitar é descobrir requisitos combinando entrevistas, workshops, observação, análise de documentos, prototipação e feedback de usuários. Requisitos nascem de conversa e observação, não de adivinhação.",
+      "ordem": 12,
+      "evidencia": [
+        "escolhe a técnica de elicitação adequada para um contexto dado",
+        "explica por que uma única entrevista não fecha o levantamento"
+      ],
+      "checagem": "Quais técnicas você combinaria para levantar requisitos de um setor que ninguém do time conhece, e por que mais de uma?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Requisitos e especificação de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_13",
+      "nome": "Histórias de usuário",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Requisitos e especificação",
+      "descricao": "A história de usuário expressa quem precisa de algo, o que essa pessoa deseja fazer e qual benefício espera obter. Serve para conversar e priorizar, não para substituir o detalhe técnico.",
+      "ordem": 13,
+      "evidencia": [
+        "escreve história com papel, desejo e benefício",
+        "aponta o que falta em uma história que só descreve tela"
+      ],
+      "checagem": "Quais três elementos uma história de usuário bem escrita deixa claros, e para que o time usa isso?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Requisitos e especificação de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_14",
+      "nome": "Casos de uso",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Requisitos e especificação",
+      "descricao": "Caso de uso detalha a interação entre ator e sistema, incluindo fluxo principal, variações e condições. Ele mostra o passo a passo que a história de usuário resume.",
+      "ordem": 14,
+      "evidencia": [
+        "escreve fluxo principal e ao menos uma variação de um caso de uso",
+        "identifica ator, pré-condição e resultado esperado"
+      ],
+      "checagem": "O que um caso de uso mostra que uma história de usuário não mostra?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Requisitos e especificação de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_15",
+      "nome": "MVP, protótipo e teste A/B",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Requisitos e especificação",
+      "descricao": "O MVP é a entrega mínima para testar uma hipótese de valor com usuários reais e reduzir desperdício. Protótipos e testes A/B comparam alternativas antes de consolidar investimento em implementação completa.",
+      "ordem": 15,
+      "evidencia": [
+        "transforma uma ideia de produto em hipótese verificável com MVP",
+        "escolhe entre protótipo e teste A/B conforme a dúvida que precisa resolver"
+      ],
+      "checagem": "Qual é a função principal de um MVP, e quando um protótipo resolve a dúvida melhor do que construir a versão completa?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Requisitos e especificação de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_16",
+      "nome": "UML como esboço",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Modelagem com UML",
+      "descricao": "Modelar é abstrair. Um bom modelo omite detalhes irrelevantes e deixa visível o que precisa ser discutido, validado ou decidido, servindo de linguagem de comunicação e não de retrato completo do sistema.",
+      "ordem": 16,
+      "evidencia": [
+        "decide o que deixar de fora de um diagrama e justifica",
+        "explica por que um modelo que tenta mostrar tudo perde utilidade"
+      ],
+      "checagem": "O que significa usar UML como esboço, e o que um bom modelo precisa omitir?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_17",
+      "nome": "Diagrama de classes e pacotes",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Modelagem com UML",
+      "descricao": "Diagramas estruturais mostram elementos e relações. Classes representam entidades, atributos, operações e relacionamentos do domínio; pacotes organizam dependências e fronteiras lógicas entre partes do sistema.",
+      "ordem": 17,
+      "evidencia": [
+        "desenha classes com atributos, operações e relacionamentos de um domínio pequeno",
+        "usa pacotes para mostrar fronteira e direção de dependência"
+      ],
+      "checagem": "O que um diagrama de classes ajuda a discutir, e o que os pacotes acrescentam a essa discussão?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_18",
+      "nome": "Sequência e atividades",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Modelagem com UML",
+      "descricao": "Diagramas comportamentais mostram fluxo, colaboração e mudança ao longo do tempo. Sequência mostra mensagens entre participantes em ordem temporal; atividades representa fluxo de trabalho, decisões, paralelismo e caminhos alternativos.",
+      "ordem": 18,
+      "evidencia": [
+        "escolhe entre sequência e atividades conforme a pergunta a responder",
+        "desenha a troca de mensagens de um fluxo de uso na ordem correta"
+      ],
+      "checagem": "Um diagrama de sequência enfatiza o quê, e em que caso o diagrama de atividades é a melhor escolha?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_19",
+      "nome": "Decomposição e abstração",
+      "tipo": "CONCEITUAL",
+      "unidade": "Princípios de projeto",
+      "descricao": "Projetar é dividir o problema em partes com responsabilidades claras. A decomposição quebra o sistema em módulos menores para reduzir carga cognitiva, e a abstração destaca o comportamento essencial escondendo detalhes de implementação.",
+      "ordem": 19,
+      "evidencia": [
+        "divide um requisito grande em módulos com responsabilidade nomeável",
+        "descreve um módulo pelo comportamento, sem citar implementação"
+      ],
+      "checagem": "Por que decompor um sistema em módulos menores facilita manutenção, e o que a abstração esconde nessa divisão?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_20",
+      "nome": "Ocultamento de informação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Princípios de projeto",
+      "descricao": "Ocultamento de informação é esconder do cliente do módulo os detalhes que ele não precisa conhecer, expondo só o necessário. Assim a decisão interna pode mudar sem quebrar quem usa o módulo.",
+      "ordem": 20,
+      "evidencia": [
+        "define a interface mínima de um módulo e diz o que fica privado",
+        "explica que mudança interna deixa de causar impacto ao esconder detalhe"
+      ],
+      "checagem": "O que o ocultamento de informação busca proteger, e o que acontece quando um módulo expõe sua estrutura interna?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_21",
+      "nome": "Coesão e acoplamento",
+      "tipo": "CONCEITUAL",
+      "unidade": "Princípios de projeto",
+      "descricao": "Alta coesão significa que os elementos de um módulo colaboram para uma responsabilidade bem definida. Baixo acoplamento significa que módulos conhecem pouco uns dos outros. Juntos, tornam as mudanças mais locais.",
+      "ordem": 21,
+      "evidencia": [
+        "avalia um módulo dado quanto a coesão e acoplamento e aponta o ponto fraco",
+        "explica por que baixo acoplamento reduz o custo de mudar"
+      ],
+      "checagem": "O que baixo acoplamento e alta coesão significam, e qual efeito prático eles têm quando uma regra do sistema muda?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_22",
+      "nome": "Princípios SOLID",
+      "tipo": "CONCEITUAL",
+      "unidade": "Princípios de projeto",
+      "descricao": "SOLID reúne cinco orientações recorrentes: responsabilidade única, extensão sem alteração, substituição, segregação de interfaces e inversão de dependência. São guias para decidir, não regras cegas.",
+      "ordem": 22,
+      "evidencia": [
+        "nomeia o princípio violado em um trecho de projeto ruim",
+        "explica responsabilidade única sem confundir com classe pequena"
+      ],
+      "checagem": "O que o princípio da responsabilidade única sugere sobre uma classe, e qual princípio do SOLID trata de depender de abstração em vez de implementação?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_23",
+      "nome": "Demeter e composição",
+      "tipo": "CONCEITUAL",
+      "unidade": "Princípios de projeto",
+      "descricao": "A Lei de Demeter reduz cadeias de dependência e a exposição excessiva de estrutura interna, evitando que um objeto navegue pelos objetos dos outros. Preferir composição a herança dá flexibilidade sem amarrar hierarquia.",
+      "ordem": 23,
+      "evidencia": [
+        "reescreve uma chamada em cadeia para respeitar a Lei de Demeter",
+        "justifica escolher composição em vez de herança em um caso dado"
+      ],
+      "checagem": "O que a Lei de Demeter recomenda evitar, e por que composição costuma ser preferível a herança?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_24",
+      "nome": "Padrão de projeto",
+      "tipo": "CONCEITUAL",
+      "unidade": "Padrões de projeto",
+      "descricao": "Padrão de projeto é solução recorrente para problema recorrente, usada como vocabulário técnico e não como receita automática. Cada padrão tem intenção, contexto e tradeoff, e aplicar padrão sem problema real aumenta complexidade e dificulta leitura.",
+      "ordem": 24,
+      "evidencia": [
+        "descreve intenção, contexto e custo de um padrão antes de usá-lo",
+        "reconhece um caso em que a solução simples é melhor que o padrão"
+      ],
+      "checagem": "O que se ganha ao chamar uma solução pelo nome do padrão, e o que acontece quando se aplica padrão sem problema real?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_25",
+      "nome": "Factory Method e Singleton",
+      "tipo": "CONCEITUAL",
+      "unidade": "Padrões de projeto",
+      "descricao": "Padrões criacionais controlam a criação de objetos. O Factory Method delega a criação e reduz dependência direta de classes concretas. O Singleton controla uma única instância, mas pode aumentar acoplamento global se usado sem critério.",
+      "ordem": 25,
+      "evidencia": [
+        "explica por que delegar a criação reduz acoplamento com classes concretas",
+        "aponta o risco do Singleton em teste e em manutenção"
+      ],
+      "checagem": "Por que o Factory Method reduz acoplamento, e qual é o risco comum do Singleton?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_26",
+      "nome": "Adapter e Facade",
+      "tipo": "CONCEITUAL",
+      "unidade": "Padrões de projeto",
+      "descricao": "Padrões estruturais organizam relações entre classes e objetos. O Adapter converte uma interface existente para outra esperada pelo cliente. O Facade oferece uma entrada simples para um subsistema complexo.",
+      "ordem": 26,
+      "evidencia": [
+        "escolhe Adapter quando a interface disponível não é a esperada",
+        "escolhe Facade para esconder a complexidade de um subsistema"
+      ],
+      "checagem": "Qual é a intenção do Facade, e em que situação você usaria Adapter em vez dele?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_27",
+      "nome": "Padrões comportamentais",
+      "tipo": "CONCEITUAL",
+      "unidade": "Padrões de projeto",
+      "descricao": "Padrões comportamentais distribuem responsabilidades de comunicação e de variação de comportamento. Strategy encapsula algoritmos intercambiáveis e evita condicionais repetidas, Observer notifica interessados quando um objeto muda de estado, e Template Method define o esqueleto de um algoritmo deixando passos para subclasses.",
+      "ordem": 27,
+      "evidencia": [
+        "substitui uma cadeia de condicionais por Strategy",
+        "identifica quando notificar interessados pede Observer"
+      ],
+      "checagem": "Quando o Strategy é mais adequado, e o que o Observer resolve que o Strategy não resolve?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_28",
+      "nome": "Arquitetura de software",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquitetura de software",
+      "descricao": "Arquitetura define componentes, responsabilidades, relações, comunicação e limites do sistema. Ela torna explícitas as decisões difíceis de mudar depois e por isso é escolhida a partir dos requisitos de qualidade.",
+      "ordem": 28,
+      "evidencia": [
+        "liga um estilo arquitetural ao atributo de qualidade que ele favorece",
+        "identifica em um cenário qual decisão é difícil de reverter"
+      ],
+      "checagem": "O que uma decisão arquitetural deve considerar principalmente, e por que ela custa mais para mudar do que uma decisão de código?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_29",
+      "nome": "Camadas e MVC",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquitetura de software",
+      "descricao": "A arquitetura em camadas separa apresentação, aplicação, domínio e infraestrutura para organizar dependências. O MVC divide responsabilidades entre Model, View e Controller, reduzindo a mistura entre regra de negócio e interface.",
+      "ordem": 29,
+      "evidencia": [
+        "distribui as partes de uma aplicação pequena entre camadas",
+        "diz o que é responsabilidade do Model e o que não é"
+      ],
+      "checagem": "Qual vantagem se espera de uma arquitetura em camadas, e qual é a responsabilidade do Model no MVC?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_30",
+      "nome": "Microsserviços e mensageria",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquitetura de software",
+      "descricao": "Microsserviços favorecem autonomia de deploy, mas aumentam complexidade distribuída: rede, falhas, consistência, contratos e observabilidade. Filas permitem processamento assíncrono e desacoplam produtores de consumidores, e publish/subscribe distribui eventos para vários interessados. Padrões como API Gateway, circuit breaker e saga lidam com falha e coordenação.",
+      "ordem": 30,
+      "evidencia": [
+        "nomeia o tradeoff de adotar microsserviços em um contexto dado",
+        "explica por que uma fila reduz acoplamento entre produtor e consumidor"
+      ],
+      "checagem": "Que tradeoff os microsserviços costumam trazer, e por que filas e publish/subscribe reduzem acoplamento?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_31",
+      "nome": "Antipadrões arquiteturais",
+      "tipo": "CONCEITUAL",
+      "unidade": "Arquitetura de software",
+      "descricao": "Big Ball of Mud, dependências cíclicas e microsserviços prematuros dificultam a evolução do sistema. Reconhecer o antipadrão é reconhecer que a estrutura passou a atrapalhar a mudança.",
+      "ordem": 31,
+      "evidencia": [
+        "identifica sintomas de Big Ball of Mud em um sistema descrito",
+        "explica por que dividir em serviços cedo demais piora a situação"
+      ],
+      "checagem": "O que um antipadrão como Big Ball of Mud indica sobre o sistema, e por que microsserviços prematuros entram na mesma lista?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Métodos de análise e projeto de software"],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_32",
+      "nome": "Papel dos testes",
+      "tipo": "CONCEITUAL",
+      "unidade": "Testes de software",
+      "descricao": "Testes não provam ausência de defeitos, mas aumentam a confiança para mudar o software e detectar regressões. Cada nível de teste equilibra custo, velocidade, isolamento e fidelidade.",
+      "ordem": 32,
+      "evidencia": [
+        "explica o que uma suíte verde garante e o que não garante",
+        "relaciona teste automatizado com liberdade de mudar código"
+      ],
+      "checagem": "Se todos os testes passam, o que ainda não está provado, e para que serve então testar?",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_33",
+      "nome": "Testes unitários",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Testes de software",
+      "descricao": "Teste unitário valida unidades pequenas do código, com feedback rápido e baixo custo de execução. É o nível mais barato de rodar e o que mais depende de o código estar bem decomposto.",
+      "ordem": 33,
+      "evidencia": [
+        "escreve teste unitário para uma função de regra de negócio",
+        "explica por que esse nível dá feedback mais rápido que os outros"
+      ],
+      "checagem": "O que um teste unitário verifica principalmente, e por que ele é o mais barato de manter rodando?",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_34",
+      "nome": "Testes de integração",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Testes de software",
+      "descricao": "Teste de integração verifica a colaboração entre módulos, serviços, banco ou APIs. Ele cobre justamente o que o teste unitário deixou de fora ao isolar as unidades.",
+      "ordem": 34,
+      "evidencia": [
+        "identifica que falha só apareceria em teste de integração",
+        "escolhe integração em vez de unitário quando o risco está na conversa entre partes"
+      ],
+      "checagem": "O que o teste de integração pega que o unitário não pega?",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_35",
+      "nome": "Sistema, aceitação e E2E",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Testes de software",
+      "descricao": "Testes de sistema e aceitação validam o produto integrado contra cenários e critérios de negócio. Testes E2E, como os escritos em Playwright, automatizam jornadas reais do usuário e servem para fluxos críticos e regressões de alto impacto.",
+      "ordem": 35,
+      "evidencia": [
+        "escreve um cenário E2E que percorre uma jornada de usuário",
+        "escolhe quais fluxos merecem cobertura E2E e quais não"
+      ],
+      "checagem": "Para que tipo de fluxo um teste E2E com Playwright é adequado, e por que não cobrir tudo nesse nível?",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_36",
+      "nome": "Pirâmide de testes",
+      "tipo": "CONCEITUAL",
+      "unidade": "Testes de software",
+      "descricao": "A pirâmide de testes orienta a proporção entre níveis: muitos testes rápidos e isolados na base, menos testes caros e lentos no topo. É consequência do equilíbrio entre custo, velocidade, isolamento e fidelidade.",
+      "ordem": 36,
+      "evidencia": [
+        "critica uma suíte concentrada em testes de ponta a ponta",
+        "propõe distribuição de níveis para um projeto dado"
+      ],
+      "checagem": "O que a pirâmide de testes sugere sobre a quantidade de testes de cada nível, e por qual motivo?",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_37",
+      "nome": "Testabilidade, mocks e FIRST",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Testes de software",
+      "descricao": "Código testável tem dependências explícitas, responsabilidades claras e pontos de observação. Mocks isolam dependências externas, e o princípio FIRST espera testes rápidos, isolados, repetíveis, auto verificáveis e escritos no momento oportuno.",
+      "ordem": 37,
+      "evidencia": [
+        "torna uma dependência explícita para permitir substituição no teste",
+        "aponta qual propriedade do FIRST um teste lento e dependente de rede viola"
+      ],
+      "checagem": "O que deixa um código testável, quando um mock é útil, e o que o FIRST espera de um bom teste?",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_38",
+      "nome": "Refactoring",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Refactoring e evolução",
+      "descricao": "Refatorar é melhorar a estrutura interna sem alterar o comportamento observável. Não é reescrever nem adicionar funcionalidade, e deve ser feito em passos pequenos apoiados por testes.",
+      "ordem": 38,
+      "evidencia": [
+        "extrai um passo de um método longo preservando o comportamento",
+        "explica por que a suíte de testes precisa existir antes de refatorar"
+      ],
+      "checagem": "O que exatamente muda e o que não muda em um refactoring, e por que testes automatizados tornam isso seguro?",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_39",
+      "nome": "Code smells",
+      "tipo": "CONCEITUAL",
+      "unidade": "Refactoring e evolução",
+      "descricao": "Code smells são sintomas, não sentenças: método longo, duplicação e classe inchada indicam pontos que merecem análise quando afetam mudança, leitura, teste ou confiabilidade.",
+      "ordem": 39,
+      "evidencia": [
+        "aponta o smell presente em um trecho e a refatoração candidata",
+        "explica por que um smell nem sempre precisa ser corrigido agora"
+      ],
+      "checagem": "Cite um code smell comum, diga qual problema prático ele causa e por que ele é sintoma e não sentença.",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_40",
+      "nome": "Dívida técnica",
+      "tipo": "META",
+      "unidade": "Refactoring e evolução",
+      "descricao": "Dívida técnica é o custo acumulado de decisões que atrapalham a evolução. Ela deve ser priorizada por risco, frequência de mudança e custo de manutenção, não por gosto pessoal.",
+      "ordem": 40,
+      "evidencia": [
+        "ordena itens de dívida por risco e frequência de mudança",
+        "argumenta por que um trecho feio e estável pode ficar como está"
+      ],
+      "checagem": "Quais critérios você usa para decidir qual dívida técnica pagar primeiro?",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_41",
+      "nome": "DevOps",
+      "tipo": "CONCEITUAL",
+      "unidade": "DevOps e operação",
+      "descricao": "DevOps aproxima desenvolvimento e operação por automação, colaboração e feedback. Reduz o atrito entre escrever código, validar, entregar e operar, com a meta de tornar as mudanças menores, rastreáveis e recuperáveis.",
+      "ordem": 41,
+      "evidencia": [
+        "explica o que DevOps busca em termos de tamanho e reversibilidade de mudança",
+        "identifica onde está o atrito entre entregar e operar em um cenário dado"
+      ],
+      "checagem": "O que DevOps busca principalmente, e por que mudanças menores ajudam nisso?",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_42",
+      "nome": "Git e code review",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "DevOps e operação",
+      "descricao": "Histórico, branches, pull requests e code review apoiam rastreabilidade e qualidade coletiva. O versionamento registra o que mudou e por quê, e a revisão distribui conhecimento do código pelo time.",
+      "ordem": 42,
+      "evidencia": [
+        "explica o que um pull request torna rastreável",
+        "diz o que uma revisão de código deve procurar além de erro de sintaxe"
+      ],
+      "checagem": "O que branches, pull requests e code review acrescentam ao trabalho do time?",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": ["Gerenciamento de configuração."],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_43",
+      "nome": "Integração contínua e trunk-based",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "DevOps e operação",
+      "descricao": "Integração contínua integra mudanças com frequência e executa checks automatizados para feedback rápido. O trunk-based development reforça isso favorecendo integrações pequenas e frequentes em vez de branches longas e arriscadas.",
+      "ordem": 43,
+      "evidencia": [
+        "descreve o caminho de commit até build e testes no pipeline",
+        "explica o risco de manter uma branch aberta por semanas"
+      ],
+      "checagem": "O que a integração contínua faz a cada mudança, e por que o trunk-based development reduz risco de integração?",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": ["Gerenciamento de configuração."],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_44",
+      "nome": "Entrega contínua e flags",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "DevOps e operação",
+      "descricao": "Entrega contínua mantém o software sempre em estado publicável, com etapas automatizadas e auditáveis. Feature flags permitem ativar, desativar ou liberar funcionalidades gradualmente, separando o deploy da liberação para o usuário.",
+      "ordem": 44,
+      "evidencia": [
+        "diferencia publicar código de liberar funcionalidade",
+        "usa flag para liberar uma funcionalidade a um grupo pequeno primeiro"
+      ],
+      "checagem": "O que a entrega contínua pressupõe sobre o estado do software, e o que uma feature flag permite fazer sem novo deploy?",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": ["Gerenciamento de configuração."],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    },
+    {
+      "id": "mt_PDSW_45",
+      "nome": "Observabilidade e recuperação",
+      "tipo": "CONCEITUAL",
+      "unidade": "DevOps e operação",
+      "descricao": "Deploy não termina o trabalho: operar exige observar comportamento real, responder incidentes e aprender com dados de produção. Logs, métricas e traces diagnosticam o sistema, e rollbacks, deploys pequenos e alertas claros reduzem o impacto das falhas.",
+      "ordem": 45,
+      "evidencia": [
+        "escolhe log, métrica ou trace conforme a pergunta a investigar",
+        "explica por que rollback rápido vale mais que deploy perfeito"
+      ],
+      "checagem": "Para que serve observabilidade em produção, e por que a possibilidade de rollback é importante?",
+      "avaliacoes": ["AV4"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/processos-desenvolvimento-software/data.ts"
+    }
+  ],
+  "arestas": [
+    {
+      "topicoId": "mt_PDSW_02",
+      "prerequisitoId": "mt_PDSW_01",
+      "forca": "hard",
+      "razao": "As quatro frentes da área são a resposta às dificuldades do software, então sem a natureza do software elas viram lista decorada.",
+      "origem": "texto",
+      "trecho": "Software é abstrato, maleável, invisível e muda continuamente. Essas características tornam requisitos, manutenção e qualidade mais difíceis de controlar do que em produtos físicos."
+    },
+    {
+      "topicoId": "mt_PDSW_03",
+      "prerequisitoId": "mt_PDSW_02",
+      "forca": "hard",
+      "razao": "Processo é uma das frentes da Engenharia de Software, e é definido justamente como a organização do trabalho do time.",
+      "origem": "texto",
+      "trecho": "Como o time organiza descoberta, planejamento, construção, validação, entrega e evolução."
+    },
+    {
+      "topicoId": "mt_PDSW_03",
+      "prerequisitoId": "mt_PDSW_01",
+      "forca": "soft",
+      "razao": "A necessidade de processo aparece porque o software continua mudando depois da entrega.",
+      "origem": "texto",
+      "trecho": "Negócio, legislação, tecnologia e usuários pressionam o software a evoluir mesmo depois da entrega."
+    },
+    {
+      "topicoId": "mt_PDSW_04",
+      "prerequisitoId": "mt_PDSW_03",
+      "forca": "hard",
+      "razao": "A cascata só é avaliável como escolha de processo quando o aluno já sabe o que um processo tenta controlar.",
+      "origem": "texto",
+      "trecho": "Modelos sequenciais favorecem previsibilidade quando escopo e tecnologia são estáveis, mas tendem a sofrer quando feedback real chega tarde."
+    },
+    {
+      "topicoId": "mt_PDSW_05",
+      "prerequisitoId": "mt_PDSW_04",
+      "forca": "hard",
+      "razao": "O ciclo iterativo se define por contraste com o arranjo sequencial e com o custo do aprendizado tardio.",
+      "origem": "texto",
+      "trecho": "Divide o desenvolvimento em ciclos para aprender e corrigir rumo ao longo do projeto."
+    },
+    {
+      "topicoId": "mt_PDSW_06",
+      "prerequisitoId": "mt_PDSW_05",
+      "forca": "hard",
+      "razao": "Agilidade é a radicalização do ciclo curto: sem a ideia de iteração, ciclo curto e inspeção frequente não significam nada.",
+      "origem": "texto",
+      "trecho": "Agilidade não elimina processo. Ela troca planos longos e pouco verificados por ciclos curtos, inspeção frequente e adaptação contínua."
+    },
+    {
+      "topicoId": "mt_PDSW_07",
+      "prerequisitoId": "mt_PDSW_06",
+      "forca": "hard",
+      "razao": "Scrum é apresentado como uma forma concreta de organizar ciclos curtos com inspeção, ou seja, como instância da abordagem ágil.",
+      "origem": "texto",
+      "trecho": "Estrutura o trabalho com backlog, sprint, eventos de inspeção e incremento potencialmente entregável."
+    },
+    {
+      "topicoId": "mt_PDSW_08",
+      "prerequisitoId": "mt_PDSW_06",
+      "forca": "soft",
+      "razao": "O Kanban é ensinado dentro do bloco de métodos ágeis, e limitar trabalho em progresso serve ao mesmo objetivo de fluxo e feedback.",
+      "origem": "texto",
+      "trecho": "Agilidade não elimina processo. Ela troca planos longos e pouco verificados por ciclos curtos, inspeção frequente e adaptação contínua."
+    },
+    {
+      "topicoId": "mt_PDSW_09",
+      "prerequisitoId": "mt_PDSW_02",
+      "forca": "soft",
+      "razao": "Requisito funcional é a frente de produto detalhada, ou seja, o que será entregue e para quais usuários.",
+      "origem": "texto",
+      "trecho": "O que será entregue, quais usuários atende, quais qualidades precisa ter e quais restrições devem ser respeitadas."
+    },
+    {
+      "topicoId": "mt_PDSW_10",
+      "prerequisitoId": "mt_PDSW_09",
+      "forca": "hard",
+      "razao": "Requisito não funcional é definido por contraste: descreve qualidade e não comportamento, então exige o conceito de requisito funcional já formado.",
+      "origem": "texto",
+      "trecho": "Definem qualidades: desempenho, segurança, disponibilidade, usabilidade, acessibilidade e compatibilidade."
+    },
+    {
+      "topicoId": "mt_PDSW_10",
+      "prerequisitoId": "mt_PDSW_02",
+      "forca": "soft",
+      "razao": "Os atributos de qualidade citados na visão geral da área são exatamente o conteúdo dos requisitos não funcionais.",
+      "origem": "texto",
+      "trecho": "Confiabilidade, manutenibilidade, segurança, desempenho e usabilidade precisam ser pensadas desde cedo."
+    },
+    {
+      "topicoId": "mt_PDSW_11",
+      "prerequisitoId": "mt_PDSW_09",
+      "forca": "soft",
+      "razao": "Regra de domínio é um recorte das obrigações do sistema, e só se percebe o recorte quando já se sabe descrever comportamento esperado.",
+      "origem": "texto",
+      "trecho": "Expressam regras específicas do negócio, como políticas, cálculos, restrições legais ou vocabulário próprio."
+    },
+    {
+      "topicoId": "mt_PDSW_12",
+      "prerequisitoId": "mt_PDSW_09",
+      "forca": "hard",
+      "razao": "Não se conduz entrevista ou observação sem saber que tipo de informação se está procurando.",
+      "origem": "texto",
+      "trecho": "Requisitos descrevem comportamentos, restrições, regras e qualidades esperadas. Eles nascem de conversas, observação, análise de domínio e validação contínua."
+    },
+    {
+      "topicoId": "mt_PDSW_13",
+      "prerequisitoId": "mt_PDSW_09",
+      "forca": "hard",
+      "razao": "A história de usuário é uma forma de escrever um requisito funcional a partir de quem precisa dele.",
+      "origem": "texto",
+      "trecho": "Expressam quem precisa de algo, o que deseja fazer e qual benefício espera obter."
+    },
+    {
+      "topicoId": "mt_PDSW_13",
+      "prerequisitoId": "mt_PDSW_12",
+      "forca": "soft",
+      "razao": "O conteúdo da história vem da conversa e da observação feitas na elicitação.",
+      "origem": "texto",
+      "trecho": "Combina entrevistas, workshops, observação, análise de documentos, prototipação e feedback de usuários."
+    },
+    {
+      "topicoId": "mt_PDSW_14",
+      "prerequisitoId": "mt_PDSW_13",
+      "forca": "soft",
+      "razao": "O caso de uso detalha em fluxo e variações a necessidade que a história apenas resume.",
+      "origem": "texto",
+      "trecho": "Detalham interação entre ator e sistema, incluindo fluxo principal, variações e condições."
+    },
+    {
+      "topicoId": "mt_PDSW_14",
+      "prerequisitoId": "mt_PDSW_09",
+      "forca": "hard",
+      "razao": "O fluxo principal do caso de uso é a execução de um comportamento que o sistema deve oferecer.",
+      "origem": "texto",
+      "trecho": "Definem o que o sistema deve fazer: cadastrar, consultar, aprovar, autenticar, comprar ou gerar relatório."
+    },
+    {
+      "topicoId": "mt_PDSW_15",
+      "prerequisitoId": "mt_PDSW_13",
+      "forca": "soft",
+      "razao": "A hipótese de valor que o MVP testa precisa estar escrita como necessidade e benefício de alguém.",
+      "origem": "texto",
+      "trecho": "Entrega mínima para testar uma hipótese de valor com usuários reais e reduzir desperdício."
+    },
+    {
+      "topicoId": "mt_PDSW_15",
+      "prerequisitoId": "mt_PDSW_06",
+      "forca": "soft",
+      "razao": "MVP, protótipo e teste A/B só fazem sentido em um processo que aceita ciclos curtos e correção de rumo.",
+      "origem": "texto",
+      "trecho": "Ajudam a comparar alternativas antes de consolidar investimento em implementação completa."
+    },
+    {
+      "topicoId": "mt_PDSW_16",
+      "prerequisitoId": "mt_PDSW_01",
+      "forca": "soft",
+      "razao": "O material justifica a modelagem pela invisibilidade do software: modelo existe porque a estrutura interna não se vê.",
+      "origem": "texto",
+      "trecho": "Como a estrutura interna não é naturalmente visível, modelos, testes e arquitetura ajudam a raciocinar sobre o produto."
+    },
+    {
+      "topicoId": "mt_PDSW_17",
+      "prerequisitoId": "mt_PDSW_16",
+      "forca": "hard",
+      "razao": "Desenhar classes sem a régua do esboço leva o aluno a tentar representar o sistema todo, que é o erro que o material combate.",
+      "origem": "texto",
+      "trecho": "Modelar é abstrair. Um bom modelo omite detalhes irrelevantes e deixa visível aquilo que precisa ser discutido, validado ou decidido."
+    },
+    {
+      "topicoId": "mt_PDSW_17",
+      "prerequisitoId": "mt_PDSW_11",
+      "forca": "soft",
+      "razao": "As entidades e relacionamentos do diagrama de classes saem do vocabulário e das regras do domínio.",
+      "origem": "texto",
+      "trecho": "Representam entidades, atributos, operações e relacionamentos relevantes para o domínio."
+    },
+    {
+      "topicoId": "mt_PDSW_18",
+      "prerequisitoId": "mt_PDSW_16",
+      "forca": "hard",
+      "razao": "Escolher entre diagrama estrutural e comportamental exige antes saber que o diagrama serve para uma pergunta específica.",
+      "origem": "texto",
+      "trecho": "Diagramas estruturais mostram elementos e relações. Diagramas comportamentais mostram fluxo, colaboração e mudança ao longo do tempo."
+    },
+    {
+      "topicoId": "mt_PDSW_18",
+      "prerequisitoId": "mt_PDSW_14",
+      "forca": "soft",
+      "razao": "O fluxo desenhado no diagrama de sequência normalmente é o fluxo de uso descrito no caso de uso.",
+      "origem": "texto",
+      "trecho": "Mostra mensagens entre participantes em ordem temporal, útil para fluxos de uso e integrações."
+    },
+    {
+      "topicoId": "mt_PDSW_18",
+      "prerequisitoId": "mt_PDSW_17",
+      "forca": "soft",
+      "razao": "As mensagens do diagrama de sequência trafegam entre objetos das classes já identificadas, então sem o modelo estrutural os participantes ficam sem nome.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_PDSW_19",
+      "prerequisitoId": "mt_PDSW_16",
+      "forca": "soft",
+      "razao": "Abstrair em projeto é a mesma operação treinada na modelagem: decidir o que fica visível e o que fica de fora.",
+      "origem": "texto",
+      "trecho": "Modelar é abstrair. Um bom modelo omite detalhes irrelevantes e deixa visível aquilo que precisa ser discutido, validado ou decidido."
+    },
+    {
+      "topicoId": "mt_PDSW_20",
+      "prerequisitoId": "mt_PDSW_19",
+      "forca": "hard",
+      "razao": "Só se esconde detalhe de alguém depois de existirem partes com responsabilidade e clientes definidos.",
+      "origem": "texto",
+      "trecho": "Projetar é dividir o problema em partes que tenham responsabilidades claras e escondam detalhes desnecessários dos clientes."
+    },
+    {
+      "topicoId": "mt_PDSW_21",
+      "prerequisitoId": "mt_PDSW_19",
+      "forca": "hard",
+      "razao": "Coesão e acoplamento são propriedades de módulos, e módulos só existem depois da decomposição.",
+      "origem": "texto",
+      "trecho": "Quebra o sistema em módulos menores para reduzir carga cognitiva e facilitar manutenção."
+    },
+    {
+      "topicoId": "mt_PDSW_21",
+      "prerequisitoId": "mt_PDSW_20",
+      "forca": "soft",
+      "razao": "Esconder detalhe interno é o mecanismo prático que mantém o acoplamento baixo entre módulos.",
+      "origem": "texto",
+      "trecho": "Módulos conhecem pouco uns dos outros, reduzindo impacto de mudanças."
+    },
+    {
+      "topicoId": "mt_PDSW_22",
+      "prerequisitoId": "mt_PDSW_21",
+      "forca": "hard",
+      "razao": "O material apresenta SOLID como guia para conseguir baixo acoplamento e alta coesão, que são o critério de avaliação dos princípios.",
+      "origem": "texto",
+      "trecho": "Baixo acoplamento e alta coesão tornam mudanças mais locais. SOLID, Demeter e composição sobre herança são guias para decisões recorrentes."
+    },
+    {
+      "topicoId": "mt_PDSW_22",
+      "prerequisitoId": "mt_PDSW_20",
+      "forca": "soft",
+      "razao": "Segregação de interfaces e inversão de dependência são aplicações de abstração e ocultamento de informação.",
+      "origem": "texto",
+      "trecho": "Aplicar decomposição, abstração, ocultamento de informação, coesão, acoplamento e princípios de responsabilidade."
+    },
+    {
+      "topicoId": "mt_PDSW_23",
+      "prerequisitoId": "mt_PDSW_21",
+      "forca": "hard",
+      "razao": "Demeter é uma regra prática contra cadeias de dependência, e cadeia de dependência é acoplamento.",
+      "origem": "texto",
+      "trecho": "Reduz cadeias de dependência e exposição excessiva de estrutura interna."
+    },
+    {
+      "topicoId": "mt_PDSW_23",
+      "prerequisitoId": "mt_PDSW_22",
+      "forca": "soft",
+      "razao": "O material agrupa SOLID, Demeter e composição como o mesmo conjunto de guias de decisão recorrente.",
+      "origem": "texto",
+      "trecho": "SOLID, Demeter e composição sobre herança são guias para decisões recorrentes."
+    },
+    {
+      "topicoId": "mt_PDSW_24",
+      "prerequisitoId": "mt_PDSW_22",
+      "forca": "soft",
+      "razao": "Padrão de projeto é a aplicação concreta dos princípios de projeto: sem eles o aluno memoriza nome de padrão sem saber que problema ele resolve.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_PDSW_25",
+      "prerequisitoId": "mt_PDSW_24",
+      "forca": "hard",
+      "razao": "Os padrões criacionais são uma família dentro da ideia de padrão, com intenção e contexto próprios.",
+      "origem": "texto",
+      "trecho": "Padrões criacionais controlam a criação de objetos. Estruturais organizam relações entre classes e objetos para simplificar uso e composição."
+    },
+    {
+      "topicoId": "mt_PDSW_25",
+      "prerequisitoId": "mt_PDSW_21",
+      "forca": "hard",
+      "razao": "O ganho do Factory Method e o risco do Singleton são enunciados em termos de dependência e acoplamento.",
+      "origem": "texto",
+      "trecho": "Controla uma única instância, mas pode aumentar acoplamento global se usado sem critério."
+    },
+    {
+      "topicoId": "mt_PDSW_26",
+      "prerequisitoId": "mt_PDSW_24",
+      "forca": "hard",
+      "razao": "Adapter e Facade são a família estrutural dos padrões, e só se avalia a intenção deles dentro do conceito de padrão.",
+      "origem": "texto",
+      "trecho": "Padrões criacionais controlam a criação de objetos. Estruturais organizam relações entre classes e objetos para simplificar uso e composição."
+    },
+    {
+      "topicoId": "mt_PDSW_26",
+      "prerequisitoId": "mt_PDSW_20",
+      "forca": "soft",
+      "razao": "O Facade é ocultamento de informação aplicado a um subsistema inteiro.",
+      "origem": "texto",
+      "trecho": "Oferece uma entrada simples para um subsistema complexo."
+    },
+    {
+      "topicoId": "mt_PDSW_27",
+      "prerequisitoId": "mt_PDSW_24",
+      "forca": "hard",
+      "razao": "Os padrões comportamentais são a terceira família e trazem o mesmo alerta de tradeoff do conceito geral de padrão.",
+      "origem": "texto",
+      "trecho": "Padrões comportamentais distribuem responsabilidades de comunicação e variação de comportamento. O risco é aplicar padrão onde uma solução simples bastaria."
+    },
+    {
+      "topicoId": "mt_PDSW_27",
+      "prerequisitoId": "mt_PDSW_23",
+      "forca": "soft",
+      "razao": "Escolher entre Strategy e Template Method é escolher entre composição e herança, que é a regra do tópico anterior.",
+      "origem": "texto",
+      "trecho": "Define o esqueleto de um algoritmo e deixa passos específicos para subclasses."
+    },
+    {
+      "topicoId": "mt_PDSW_28",
+      "prerequisitoId": "mt_PDSW_21",
+      "forca": "hard",
+      "razao": "Arquitetura trata de componentes, relações e limites, que é coesão e acoplamento em escala de sistema.",
+      "origem": "texto",
+      "trecho": "Arquitetura define componentes, responsabilidades, relações, comunicação e limites. Ela torna explícitas decisões difíceis de mudar depois."
+    },
+    {
+      "topicoId": "mt_PDSW_28",
+      "prerequisitoId": "mt_PDSW_10",
+      "forca": "soft",
+      "razao": "A escolha de estilo arquitetural é justificada pelos requisitos de qualidade do sistema.",
+      "origem": "texto",
+      "trecho": "Relacionar estilos arquiteturais com requisitos de qualidade e tradeoffs de sistemas reais."
+    },
+    {
+      "topicoId": "mt_PDSW_29",
+      "prerequisitoId": "mt_PDSW_28",
+      "forca": "hard",
+      "razao": "Camadas e MVC são estilos concretos de organizar componentes e dependências, ou seja, casos do conceito de arquitetura.",
+      "origem": "texto",
+      "trecho": "Separam apresentação, aplicação, domínio e infraestrutura para organizar dependências."
+    },
+    {
+      "topicoId": "mt_PDSW_29",
+      "prerequisitoId": "mt_PDSW_21",
+      "forca": "soft",
+      "razao": "A vantagem prometida por camadas e MVC é separar responsabilidades, que é coesão aplicada em blocos grandes.",
+      "origem": "texto",
+      "trecho": "Divide responsabilidades entre Model, View e Controller, reduzindo mistura entre regra e interface."
+    },
+    {
+      "topicoId": "mt_PDSW_30",
+      "prerequisitoId": "mt_PDSW_28",
+      "forca": "hard",
+      "razao": "Microsserviços e mensageria são decisões arquiteturais avaliadas por tradeoff, e o tradeoff precisa do conceito de arquitetura.",
+      "origem": "texto",
+      "trecho": "Favorecem autonomia de deploy, mas aumentam complexidade distribuída."
+    },
+    {
+      "topicoId": "mt_PDSW_30",
+      "prerequisitoId": "mt_PDSW_29",
+      "forca": "soft",
+      "razao": "O custo da distribuição só fica visível na comparação com uma aplicação única organizada em camadas.",
+      "origem": "texto",
+      "trecho": "Sistemas distribuídos exigem pensar em rede, falhas, consistência, contratos e observabilidade. Nem todo problema precisa de distribuição."
+    },
+    {
+      "topicoId": "mt_PDSW_31",
+      "prerequisitoId": "mt_PDSW_30",
+      "forca": "hard",
+      "razao": "Microsserviços prematuros só são reconhecíveis como antipadrão por quem já sabe o que a distribuição cobra.",
+      "origem": "texto",
+      "trecho": "Big Ball of Mud, dependências cíclicas e microsserviços prematuros dificultam evolução."
+    },
+    {
+      "topicoId": "mt_PDSW_31",
+      "prerequisitoId": "mt_PDSW_21",
+      "forca": "hard",
+      "razao": "Dependência cíclica e emaranhado só são identificáveis com o vocabulário de acoplamento e dependência entre módulos.",
+      "origem": "texto",
+      "trecho": "Módulos conhecem pouco uns dos outros, reduzindo impacto de mudanças."
+    },
+    {
+      "topicoId": "mt_PDSW_31",
+      "prerequisitoId": "mt_PDSW_24",
+      "forca": "soft",
+      "razao": "O antipadrão arquitetural é o mesmo erro do excesso de padrão, agora em escala de sistema.",
+      "origem": "texto",
+      "trecho": "Usar padrões sem problema real aumenta complexidade e dificulta leitura."
+    },
+    {
+      "topicoId": "mt_PDSW_32",
+      "prerequisitoId": "mt_PDSW_01",
+      "forca": "soft",
+      "razao": "O material apresenta teste como um dos recursos para raciocinar sobre um produto que não se vê por dentro.",
+      "origem": "texto",
+      "trecho": "Como a estrutura interna não é naturalmente visível, modelos, testes e arquitetura ajudam a raciocinar sobre o produto."
+    },
+    {
+      "topicoId": "mt_PDSW_33",
+      "prerequisitoId": "mt_PDSW_32",
+      "forca": "hard",
+      "razao": "O nível unitário é escolhido pelo equilíbrio de custo, velocidade e isolamento, que é o critério apresentado no papel dos testes.",
+      "origem": "texto",
+      "trecho": "Testes não provam ausência de defeitos, mas aumentam confiança. Cada nível equilibra custo, velocidade, isolamento e fidelidade."
+    },
+    {
+      "topicoId": "mt_PDSW_33",
+      "prerequisitoId": "mt_PDSW_19",
+      "forca": "soft",
+      "razao": "Só existe teste de unidade pequena se o sistema foi decomposto em unidades com responsabilidade clara.",
+      "origem": "texto",
+      "trecho": "Validam unidades pequenas com feedback rápido e baixo custo de execução."
+    },
+    {
+      "topicoId": "mt_PDSW_34",
+      "prerequisitoId": "mt_PDSW_33",
+      "forca": "hard",
+      "razao": "O teste de integração se define pelo que o unitário deixou de fora ao isolar as unidades.",
+      "origem": "texto",
+      "trecho": "Verificam colaboração entre módulos, serviços, banco ou APIs."
+    },
+    {
+      "topicoId": "mt_PDSW_35",
+      "prerequisitoId": "mt_PDSW_34",
+      "forca": "hard",
+      "razao": "Validar o produto integrado pressupõe entender antes o que integrar partes significa e custa.",
+      "origem": "texto",
+      "trecho": "Validam comportamento do produto integrado contra cenários e critérios de negócio."
+    },
+    {
+      "topicoId": "mt_PDSW_35",
+      "prerequisitoId": "mt_PDSW_14",
+      "forca": "soft",
+      "razao": "A jornada automatizada no teste de ponta a ponta é o fluxo já descrito como caso de uso.",
+      "origem": "texto",
+      "trecho": "Automatizam jornadas reais do usuário, úteis para fluxos críticos e regressões de alto impacto."
+    },
+    {
+      "topicoId": "mt_PDSW_36",
+      "prerequisitoId": "mt_PDSW_33",
+      "forca": "hard",
+      "razao": "A pirâmide fala de proporção entre níveis, então exige o nível da base já conhecido.",
+      "origem": "texto",
+      "trecho": "Cada nível equilibra custo, velocidade, isolamento e fidelidade."
+    },
+    {
+      "topicoId": "mt_PDSW_36",
+      "prerequisitoId": "mt_PDSW_35",
+      "forca": "hard",
+      "razao": "Sem conhecer o custo dos testes de ponta a ponta o aluno não entende por que eles ficam no topo e em menor número.",
+      "origem": "texto",
+      "trecho": "Automatizam jornadas reais do usuário, úteis para fluxos críticos e regressões de alto impacto."
+    },
+    {
+      "topicoId": "mt_PDSW_37",
+      "prerequisitoId": "mt_PDSW_33",
+      "forca": "hard",
+      "razao": "Testabilidade e mock são discutidos a partir de escrever teste isolado de uma unidade.",
+      "origem": "texto",
+      "trecho": "Código testável tem dependências explícitas, responsabilidades claras e pontos de observação. Mocks isolam dependências; E2E valida a experiência integrada."
+    },
+    {
+      "topicoId": "mt_PDSW_37",
+      "prerequisitoId": "mt_PDSW_21",
+      "forca": "soft",
+      "razao": "Dependência explícita e responsabilidade clara são consequência direta de coesão alta e acoplamento baixo.",
+      "origem": "texto",
+      "trecho": "Módulos conhecem pouco uns dos outros, reduzindo impacto de mudanças."
+    },
+    {
+      "topicoId": "mt_PDSW_38",
+      "prerequisitoId": "mt_PDSW_33",
+      "forca": "hard",
+      "razao": "Refatorar sem suíte de teste é mudar código sem rede de proteção, e o material amarra as duas coisas.",
+      "origem": "texto",
+      "trecho": "Refactoring: refatorar melhora estrutura interna sem alterar comportamento observável. Code smells como método longo, duplicação e classe inchada orientam melhorias; testes reduzem risco."
+    },
+    {
+      "topicoId": "mt_PDSW_38",
+      "prerequisitoId": "mt_PDSW_21",
+      "forca": "soft",
+      "razao": "Melhorar o design interno exige um critério de melhor, e o critério do material é coesão alta com acoplamento baixo.",
+      "origem": "texto",
+      "trecho": "Baixo acoplamento e alta coesão tornam mudanças mais locais."
+    },
+    {
+      "topicoId": "mt_PDSW_39",
+      "prerequisitoId": "mt_PDSW_38",
+      "forca": "hard",
+      "razao": "Smell é sintoma que indica candidato a refatoração, então sem o que é refatorar o smell fica sem consequência.",
+      "origem": "texto",
+      "trecho": "Code smells são sintomas, não sentenças. Eles indicam pontos que merecem análise quando afetam mudança, leitura, teste ou confiabilidade."
+    },
+    {
+      "topicoId": "mt_PDSW_39",
+      "prerequisitoId": "mt_PDSW_21",
+      "forca": "soft",
+      "razao": "Classe inchada e duplicação são descritas como falhas de responsabilidade, isto é, de coesão.",
+      "origem": "texto",
+      "trecho": "Acumula responsabilidades que deveriam estar separadas."
+    },
+    {
+      "topicoId": "mt_PDSW_40",
+      "prerequisitoId": "mt_PDSW_39",
+      "forca": "hard",
+      "razao": "Priorizar dívida pressupõe conseguir enxergar e nomear os sintomas que compõem essa dívida.",
+      "origem": "texto",
+      "trecho": "Deve ser priorizada por risco, frequência de mudança e custo de manutenção."
+    },
+    {
+      "topicoId": "mt_PDSW_41",
+      "prerequisitoId": "mt_PDSW_03",
+      "forca": "soft",
+      "razao": "DevOps é uma forma de organizar entrega e operação, ou seja, uma extensão do processo do time.",
+      "origem": "texto",
+      "trecho": "DevOps reduz atrito entre escrever código, validar, entregar e operar. A meta é tornar mudanças menores, rastreáveis e recuperáveis."
+    },
+    {
+      "topicoId": "mt_PDSW_41",
+      "prerequisitoId": "mt_PDSW_06",
+      "forca": "soft",
+      "razao": "As práticas técnicas que o DevOps automatiza, como integração contínua e teste automatizado, já aparecem no XP.",
+      "origem": "texto",
+      "trecho": "Enfatiza testes automatizados, integração contínua, programação em pares, design simples e feedback rápido."
+    },
+    {
+      "topicoId": "mt_PDSW_42",
+      "prerequisitoId": "mt_PDSW_41",
+      "forca": "hard",
+      "razao": "Histórico, branch, pull request e revisão são apresentados como os mecanismos que dão rastreabilidade ao fluxo de entrega.",
+      "origem": "texto",
+      "trecho": "Histórico, branches, pull requests e code review apoiam rastreabilidade e qualidade coletiva."
+    },
+    {
+      "topicoId": "mt_PDSW_43",
+      "prerequisitoId": "mt_PDSW_42",
+      "forca": "hard",
+      "razao": "Integrar com frequência e evitar branch longa é impossível de discutir sem branch, commit e pull request.",
+      "origem": "texto",
+      "trecho": "Favorece integrações pequenas e frequentes em vez de branches longas e arriscadas."
+    },
+    {
+      "topicoId": "mt_PDSW_43",
+      "prerequisitoId": "mt_PDSW_33",
+      "forca": "hard",
+      "razao": "O check automatizado que a integração contínua executa a cada mudança é a suíte de testes.",
+      "origem": "texto",
+      "trecho": "Integra mudanças frequentemente e executa checks automatizados para feedback rápido."
+    },
+    {
+      "topicoId": "mt_PDSW_44",
+      "prerequisitoId": "mt_PDSW_43",
+      "forca": "hard",
+      "razao": "Manter o software sempre publicável depende do pipeline automatizado que a integração contínua estabelece.",
+      "origem": "texto",
+      "trecho": "Mantém o software sempre em estado publicável, com etapas automatizadas e auditáveis."
+    },
+    {
+      "topicoId": "mt_PDSW_45",
+      "prerequisitoId": "mt_PDSW_44",
+      "forca": "hard",
+      "razao": "Observar e recuperar são o que vem depois do deploy, então precisam do fluxo de entrega já montado.",
+      "origem": "texto",
+      "trecho": "Deploy não termina o trabalho. Operar exige observar comportamento real, responder incidentes e aprender com dados de produção."
+    },
+    {
+      "topicoId": "mt_PDSW_45",
+      "prerequisitoId": "mt_PDSW_30",
+      "forca": "soft",
+      "razao": "A necessidade de log, métrica e trace é justificada pela complexidade de sistemas distribuídos.",
+      "origem": "texto",
+      "trecho": "Sistemas distribuídos exigem pensar em rede, falhas, consistência, contratos e observabilidade. Nem todo problema precisa de distribuição."
+    }
+  ]
+}

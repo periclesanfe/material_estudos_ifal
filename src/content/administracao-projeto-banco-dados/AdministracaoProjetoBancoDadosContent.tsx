@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import SectionNav from '../../components/layout/SectionNav.tsx';
+import AtalhoTrilha from '../../components/trilha/AtalhoTrilha';
 import AdministracaoProjetoBancoDadosSections from './AdministracaoProjetoBancoDadosSections.tsx';
 import { ADMINISTRACAO_PROJETO_BANCO_DADOS_SECTIONS } from './data.ts';
 
@@ -15,7 +16,7 @@ export default function AdministracaoProjetoBancoDadosContent() {
               className="absolute inset-0"
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(108, 99, 255, 0.13), transparent 38%), linear-gradient(215deg, rgba(78, 205, 196, 0.1), transparent 42%)',
+                  'linear-gradient(135deg, rgba(99, 102, 241, 0.13), transparent 38%), linear-gradient(215deg, rgba(59, 130, 246, 0.1), transparent 42%)',
               }}
             />
           </div>
@@ -31,6 +32,7 @@ export default function AdministracaoProjetoBancoDadosContent() {
           </p>
         </div>
       )}
+      {activeSection === 'intro' && <AtalhoTrilha codigo="APBD" />}
 
       <div className="page-wrap flex">
         <SectionNav

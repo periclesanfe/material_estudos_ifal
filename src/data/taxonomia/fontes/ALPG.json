@@ -1,0 +1,1304 @@
+{
+  "disciplina": { "codigo": "ALPG", "codigoPPC": "ALPG", "nome": "Algoritmos e Logica de Programacao", "periodo": 1 },
+  "topicos": [
+    {
+      "id": "mt_ALPG_01",
+      "nome": "Modelo entrada, processamento e saída",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos de lógica e algoritmo",
+      "descricao": "O computador trabalha a partir de uma lista de instruções, e toda tarefa segue o mesmo desenho: entram dados, algo é feito com eles, sai um resultado. Para somar dois números, a entrada fornece os números, o processamento faz a soma e a saída mostra o total.",
+      "ordem": 1,
+      "evidencia": [
+        "separa um problema qualquer em entrada, processamento e saída",
+        "explica por que um programa que não mostra nada na tela parece não ter funcionado"
+      ],
+      "checagem": "No programa que calcula o salário líquido, o que é entrada, o que é processamento e o que é saída?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Estudo dos conceitos básicos de algoritmos"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_02",
+      "nome": "Lógica: premissas e conclusão",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos de lógica e algoritmo",
+      "descricao": "Lógica é a arte de bem pensar: parte de premissas e chega a uma conclusão, que ainda precisa ser verificada. Lógica de programação é usar esse raciocínio para montar algoritmos em uma linguagem de programação.",
+      "ordem": 2,
+      "evidencia": [
+        "monta um raciocínio no formato premissa, premissa, conclusão",
+        "diz por que uma conclusão precisa ser validada e não aceita só porque parece certa"
+      ],
+      "checagem": "Se todo mamífero é animal e todo cavalo é mamífero, qual é a conclusão, e como você a verificaria?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Lógica de programação"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_03",
+      "nome": "Algoritmo: sequência finita de passos",
+      "tipo": "CONCEITUAL",
+      "unidade": "Fundamentos de lógica e algoritmo",
+      "descricao": "Algoritmo é uma sequência finita de passos lógicos que resolve um problema. Programar é escrever esse algoritmo em uma linguagem que a máquina executa, então a linguagem é só o meio: o algoritmo vem antes.",
+      "ordem": 3,
+      "evidencia": [
+        "define algoritmo sem citar nenhuma linguagem de programação",
+        "escreve os passos para resolver um problema simples antes de abrir o editor"
+      ],
+      "checagem": "Qual a diferença entre um algoritmo e um programa em Python?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Estudo dos conceitos básicos de algoritmos"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_04",
+      "nome": "Representação textual e fluxograma",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Fundamentos de lógica e algoritmo",
+      "descricao": "O mesmo algoritmo pode ser escrito de duas formas: textual, em passo a passo ou pseudocódigo, e gráfica, no fluxograma, com símbolos de início, entrada, decisão, processo e fim.",
+      "ordem": 4,
+      "evidencia": [
+        "escreve um algoritmo em passo a passo e desenha o fluxograma equivalente",
+        "identifica no fluxograma qual símbolo é decisão e qual é processo"
+      ],
+      "checagem": "Desenhe o fluxograma do algoritmo que lê uma média e diz se o aluno foi aprovado.",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Estudo dos conceitos básicos de algoritmos"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_05",
+      "nome": "Teste de mesa",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Fundamentos de lógica e algoritmo",
+      "descricao": "Teste de mesa é rodar o programa no papel: uma tabela em que cada coluna é uma variável e cada linha é uma volta do laço. É como se acha erro de lógica sem computador, e é o que o professor cobra quando pede a saída de um trecho.",
+      "ordem": 5,
+      "evidencia": [
+        "monta a tabela de valores de um contador volta por volta",
+        "prevê a saída de um trecho sem executá-lo e acerta onde o laço para"
+      ],
+      "checagem": "Com contador começando em 0 e a condição contador < 3, quais valores são impressos e por que o 3 não sai?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Resolução de problemas de forma estruturada"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_06",
+      "nome": "Saída com print()",
+      "tipo": "LINGUAGEM",
+      "unidade": "Python: dados e expressões",
+      "descricao": "print() é o comando de saída, e os parênteses são obrigatórios. Texto vai entre aspas, expressões são calculadas antes de aparecer e vários valores separados por vírgula saem com um espaço entre eles.",
+      "ordem": 6,
+      "evidencia": [
+        "imprime texto, o resultado de uma conta e vários valores na mesma linha",
+        "explica por que print(1,000,000) mostra 1 0 0 na tela"
+      ],
+      "checagem": "O que aparece na tela com print(1 + 1) e com print(\"1 + 1\")?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_07",
+      "nome": "Tipos de dados e a função type()",
+      "tipo": "LINGUAGEM",
+      "unidade": "Python: dados e expressões",
+      "descricao": "Os tipos básicos são int (inteiro), float (real), str (texto) e bool (True ou False), e type() mostra o tipo de um valor. A armadilha clássica é achar que \"13\" é número: com aspas, é texto.",
+      "ordem": 7,
+      "evidencia": [
+        "diz o tipo de 2, de 3.2, de \"13\" e de True sem rodar o programa",
+        "usa type() para conferir o tipo de uma variável"
+      ],
+      "checagem": "O que type(\"13\") devolve, e por que não é int?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_08",
+      "nome": "Entrada com input() e casting",
+      "tipo": "LINGUAGEM",
+      "unidade": "Python: dados e expressões",
+      "descricao": "input() lê o que o usuário digita e devolve sempre texto (str). Para fazer conta com esse valor é preciso converter, o casting, com int(input(...)) ou float(input(...)).",
+      "ordem": 8,
+      "evidencia": [
+        "lê uma idade como inteiro e uma altura como real na mesma tela",
+        "explica por que somar dois valores lidos sem casting concatena em vez de somar"
+      ],
+      "checagem": "Por que se escreve int(input(\"Idade: \")) em vez de só input(\"Idade: \")?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_09",
+      "nome": "Operadores aritméticos e relacionais",
+      "tipo": "LINGUAGEM",
+      "unidade": "Python: dados e expressões",
+      "descricao": "Os aritméticos fazem conta: soma, subtração, multiplicação, divisão e ** para potência. Os relacionais comparam valores (==, !=, >, <, >=, <=) e o resultado deles é sempre True ou False.",
+      "ordem": 9,
+      "evidencia": [
+        "calcula um salário líquido com descontos percentuais",
+        "diz o valor de 7 > 3 e de 7 == \"7\" e justifica"
+      ],
+      "checagem": "Qual a diferença entre = e == em Python, e o que cada um devolve?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Lógica de programação"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_10",
+      "nome": "Operadores lógicos and, or e not",
+      "tipo": "LINGUAGEM",
+      "unidade": "Python: dados e expressões",
+      "descricao": "and, or e not combinam ou negam condições. Com and, basta uma parte ficar falsa para tudo ficar falso, e foi assim que o Jogo de Adivinhação limitou as chances: while acertou == False and chances < 4.",
+      "ordem": 10,
+      "evidencia": [
+        "escreve a condição de uma faixa de notas usando and",
+        "prevê quando um laço com and para, mesmo sem a outra condição ter mudado"
+      ],
+      "checagem": "No laço while acertou == False and chances < 4, o que acontece quando chances chega a 4?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Lógica de programação"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_11",
+      "nome": "Nomes de variáveis legíveis",
+      "tipo": "META",
+      "unidade": "Python: dados e expressões",
+      "descricao": "O nome da variável tem que dizer o que ela guarda: valor_hora em vez de vh, salario em vez de s. Sem acento, sem cedilha, e nome composto separado por underscore ou por maiúscula. O professor descontou nota por isso duas vezes no semestre.",
+      "ordem": 11,
+      "evidencia": [
+        "renomeia um trecho com v, vh e sl para nomes descritivos",
+        "diz por que id não serve para guardar idade"
+      ],
+      "checagem": "Qual o melhor nome para a variável que guarda o valor da hora trabalhada, e por quê?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_12",
+      "nome": "Condicional simples e composta",
+      "tipo": "LINGUAGEM",
+      "unidade": "Estruturas condicionais",
+      "descricao": "O if executa um bloco só quando a condição é verdadeira. Com else viram dois caminhos: um quando a condição é verdadeira, outro quando é falsa. O bloco é o código indentado abaixo da linha do if.",
+      "ordem": 12,
+      "evidencia": [
+        "escreve um if que só imprime quando a condição vale",
+        "transforma dois ifs opostos em um if/else"
+      ],
+      "checagem": "Qual a diferença entre escrever dois ifs seguidos e escrever um if com else?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Programação em Blocos"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_13",
+      "nome": "Condicional encadeada com elif",
+      "tipo": "LINGUAGEM",
+      "unidade": "Estruturas condicionais",
+      "descricao": "Quando há várias alternativas, usa-se if, elif e else. O elif quer dizer senão, se, pode repetir quantas vezes for preciso, e o else é opcional. Uma condição pode ainda ser aninhada dentro de outra alternativa.",
+      "ordem": 13,
+      "evidencia": [
+        "escreve o menu de níveis do Jogo da Forca com três elif",
+        "explica por que, chegando ao elif, a condição do if anterior já é garantidamente falsa"
+      ],
+      "checagem": "Que estrutura representa a condicional encadeada, e o que o elif significa em português?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Lógica de programação"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_14",
+      "nome": "Faixas contíguas sem buraco",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Estruturas condicionais",
+      "descricao": "Ao dividir um intervalo em faixas, o limite em que uma termina tem que ser o mesmo em que a próxima começa. Se aprovado é média >= 6.0, recuperação é >= 4.1 e reprovado é < 4.0, uma média de 4.05 não cai em caso nenhum e o programa não imprime nada.",
+      "ordem": 14,
+      "evidencia": [
+        "acha o valor que não cai em nenhuma faixa de uma condicional encadeada",
+        "conserta a faixa descoberta e usa o else como caso que fecha tudo"
+      ],
+      "checagem": "Com if media >= 6.0, elif media >= 4.1 e elif media < 4.0, o que acontece com uma média de 4.05?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Resolução de problemas de forma estruturada"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_15",
+      "nome": "Escopo global e local",
+      "tipo": "CONCEITUAL",
+      "unidade": "Escopo de variáveis",
+      "descricao": "Escopo é onde a variável vale. Uma variável global existe durante toda a execução do programa; uma local só existe dentro do bloco ou da função onde foi criada, e desaparece quando ele termina.",
+      "ordem": 15,
+      "evidencia": [
+        "aponta num código qual variável é global e qual é local",
+        "explica por que uma variável local não pode ser usada fora do lugar onde nasceu"
+      ],
+      "checagem": "O que faz uma variável ser global e o que faz ela ser local?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Estudo de funções, escopo e passagem de parâmetros."],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_16",
+      "nome": "Variável presa dentro do if",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Escopo de variáveis",
+      "descricao": "O erro clássico de escopo: criar a variável dentro de um bloco if e usá-la depois. Se aquele if não executar, a variável nunca foi criada e o programa quebra. A solução é inicializá-la antes do if, com soma = 0, por exemplo.",
+      "ordem": 16,
+      "evidencia": [
+        "reconhece esse erro num código antes de executá-lo",
+        "corrige o código inicializando a variável em um escopo mais amplo"
+      ],
+      "checagem": "Por que print(\"Soma =\", soma) pode quebrar se soma só é criada dentro de um if?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Estudo de funções, escopo e passagem de parâmetros."],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_17",
+      "nome": "Laço while e a variável de controle",
+      "tipo": "LINGUAGEM",
+      "unidade": "Estruturas de repetição",
+      "descricao": "O while repete o bloco enquanto a condição for verdadeira, e é o laço de quando não se sabe quantas voltas serão. A variável de controle tem que ser atualizada dentro do laço: se a condição nunca fica falsa, o programa entra em loop infinito.",
+      "ordem": 17,
+      "evidencia": [
+        "escreve um contador de 0 a 8 com while e diz onde ele para",
+        "aponta a linha que falta para um while não ficar infinito"
+      ],
+      "checagem": "O que provoca um loop infinito em um while, e como se evita?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Programação em Blocos"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_18",
+      "nome": "Laço for e a função range",
+      "tipo": "LINGUAGEM",
+      "unidade": "Estruturas de repetição",
+      "descricao": "O for percorre um conjunto de itens, que pode ser uma lista ou um range. range(stop) vai de 0 até stop menos 1, range(start, stop) começa onde você quiser e range(start, stop, step) anda de passo em passo. No for, o range substitui o contador feito à mão do while.",
+      "ordem": 18,
+      "evidencia": [
+        "gera os pares de 2 a 100 com for e range",
+        "escolhe for ou while conforme saber ou não quantas voltas serão"
+      ],
+      "checagem": "O que range(2, 101, 2) gera, e por que o 101 não aparece?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": ["Programação em Blocos"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_19",
+      "nome": "break e continue",
+      "tipo": "LINGUAGEM",
+      "unidade": "Estruturas de repetição",
+      "descricao": "O break encerra o laço na hora e segue para a linha depois dele; o continue abandona só a volta atual e vai para a próxima. No Jogo da Forca, é o break que termina o jogo quando a palavra é descoberta em vez de obrigar o jogador a gastar as chances restantes.",
+      "ordem": 19,
+      "evidencia": [
+        "usa break para sair do laço quando a resposta já foi encontrada",
+        "diz a diferença entre pular uma volta e encerrar o laço"
+      ],
+      "checagem": "No laço da Forca, o que aconteceria se o break fosse retirado depois da mensagem de vitória?",
+      "avaliacoes": ["AV1"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_20",
+      "nome": "Lista e índice a partir de 0",
+      "tipo": "CONCEITUAL",
+      "unidade": "Listas e tuplas",
+      "descricao": "Lista é uma coleção ordenada de valores criada com colchetes. O índice começa em 0, então frutas[0] é o primeiro item, e o índice negativo conta de trás para frente: frutas[-1] é o último. Os itens podem ser de tipos diferentes.",
+      "ordem": 20,
+      "evidencia": [
+        "acessa o primeiro e o último item de uma lista pelo índice",
+        "diz qual índice tem o terceiro elemento de uma lista de cinco"
+      ],
+      "checagem": "Em frutas = [\"umbu\", \"jaca\"], qual índice tem \"umbu\" e o que devolve frutas[-1]?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_21",
+      "nome": "Pertinência com in e not in",
+      "tipo": "LINGUAGEM",
+      "unidade": "Listas e tuplas",
+      "descricao": "O in pergunta se um item está na lista e o not in pergunta se ainda não está; os dois devolvem True ou False. No Jogo da Forca, a vitória é \"_\" not in letras_descobertas, ou seja, não sobrou nenhum traço.",
+      "ordem": 21,
+      "evidencia": [
+        "detecta um chute repetido com if chute in chutes",
+        "escreve a condição de vitória da Forca com not in"
+      ],
+      "checagem": "Como você verifica, em uma linha, se o jogador já deu aquele chute antes?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_22",
+      "nome": "append, del, len e concatenação",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Listas e tuplas",
+      "descricao": "append(x) adiciona ao final alterando a lista no lugar, del(lista[i]) remove pelo índice e len(lista) diz o tamanho. Já lista + [item] não altera nada: devolve uma lista nova com os itens somados.",
+      "ordem": 22,
+      "evidencia": [
+        "adiciona, remove e conta itens de uma lista",
+        "diz a diferença entre append e concatenação com +"
+      ],
+      "checagem": "Como se adiciona um item ao final de uma lista, e o que muda se você usar lista + [item]?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_23",
+      "nome": "Percorrer lista por item e por índice",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Listas e tuplas",
+      "descricao": "Com for aluno in alunos a variável recebe cada item automaticamente, e é o caminho curto. Com while i < len(frutas) você controla o índice à mão, o que é mais trabalhoso mas necessário quando precisa saber a posição, como na Forca, que compara palavra_secreta[i] e escreve em letras_descobertas[i].",
+      "ordem": 23,
+      "evidencia": [
+        "percorre a mesma lista das duas formas e obtém a saída idêntica",
+        "explica por que a Forca precisa do índice e não só do valor"
+      ],
+      "checagem": "Quando o percurso por índice com while e len é obrigatório, em vez do for por item?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Resolução de problemas de forma estruturada"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_24",
+      "nome": "Listas aninhadas e indexação dupla",
+      "tipo": "CONCEITUAL",
+      "unidade": "Listas e tuplas",
+      "descricao": "Um item de uma lista pode ser outra lista, como notas = [[1, 10], [10, 10], [8.5, 10]]. O primeiro índice escolhe a sublista e o segundo escolhe o item dentro dela, então notas[2][0] é 8.5 e len(notas) é 3.",
+      "ordem": 24,
+      "evidencia": [
+        "guarda pares de notas por bimestre em uma lista de listas",
+        "lê um valor de uma lista aninhada com dois índices"
+      ],
+      "checagem": "Em notas = [[1, 10], [10, 10], [8.5, 10]], o que devolvem notas[0], notas[2][0] e len(notas)?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_25",
+      "nome": "Tupla imutável",
+      "tipo": "CONCEITUAL",
+      "unidade": "Listas e tuplas",
+      "descricao": "A tupla é uma coleção ordenada como a lista, mas criada com parênteses e imutável. Aceita len(), índice e o operador in do mesmo jeito; o que ela não aceita é atribuir a um item, e meses[0] = \"maio\" lança TypeError. Serve para o que é fixo: meses, dias da semana, opções de menu.",
+      "ordem": 25,
+      "evidencia": [
+        "escolhe tupla ou lista conforme a coleção precisar mudar ou não",
+        "diz o que funciona e o que lança erro em uma tupla"
+      ],
+      "checagem": "Qual a diferença entre lista e tupla, e o que acontece ao fazer meses[0] = \"maio\"?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_26",
+      "nome": "Módulo e import",
+      "tipo": "CONCEITUAL",
+      "unidade": "Módulos",
+      "descricao": "Módulo é um arquivo Python com definições que podem ser reaproveitadas. Para usar as funções dele é preciso importá-lo antes, com import modulo, e chamá-las como modulo.funcao. Algumas funções são built-in, como print e input, e não exigem importação.",
+      "ordem": 26,
+      "evidencia": [
+        "importa um módulo e chama uma função dele pelo nome completo",
+        "distingue uma função built-in de uma que precisa de import"
+      ],
+      "checagem": "Por que a linha import math é necessária antes de math.sqrt(x), mas nada é necessário antes de print?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Programação em Blocos"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_27",
+      "nome": "Módulo math e o cuidado com pow",
+      "tipo": "LINGUAGEM",
+      "unidade": "Módulos",
+      "descricao": "O math traz cálculo pronto: sqrt(x), a constante pi, log(x, y), log10(x), floor e ceil. Cuidado com pow: ela é built-in e funciona sem import, devolve int quando recebe inteiros e aceita um terceiro argumento com o resto da divisão, enquanto math.pow sempre devolve float.",
+      "ordem": 27,
+      "evidencia": [
+        "calcula raiz quadrada e usa pi sem decorar fórmula",
+        "diz por que pow(2, 3) é 8 e math.pow(2, 3) é 8.0"
+      ],
+      "checagem": "pow precisa de import math? E o que o terceiro argumento de pow(2, 3, 5) faz?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_28",
+      "nome": "Módulo random",
+      "tipo": "LINGUAGEM",
+      "unidade": "Módulos",
+      "descricao": "O random dá aleatoriedade ao programa: randint(a, b) sorteia inteiro, uniform sorteia fracionado, choice([lista]) escolhe um item, shuffle embaralha a própria lista no lugar e sample devolve uma lista nova com k itens sem mexer na original.",
+      "ordem": 28,
+      "evidencia": [
+        "sorteia o número secreto da Adivinhação e a palavra da Forca",
+        "diz qual função altera a lista original e qual devolve outra"
+      ],
+      "checagem": "Qual função do random escolhe um item de uma lista, e qual delas muda a lista original?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_29",
+      "nome": "Definir com def e chamar",
+      "tipo": "LINGUAGEM",
+      "unidade": "Funções",
+      "descricao": "Função é um grupo de instruções que faz uma tarefa. Define-se com def nome(): e o código indentado abaixo pertence a ela. São dois momentos diferentes: a definição, que só cria, e a chamada, que executa. Sem chamada, nada acontece.",
+      "ordem": 29,
+      "evidencia": [
+        "separa um bloco repetido de código em uma função e a chama",
+        "explica por que um arquivo cheio de def não imprime nada ao rodar"
+      ],
+      "checagem": "Qual palavra-chave cria uma função, e o que acontece se ela nunca for chamada?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Estudo de funções, escopo e passagem de parâmetros."],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_30",
+      "nome": "Parâmetros e return",
+      "tipo": "CONCEITUAL",
+      "unidade": "Funções",
+      "descricao": "Parâmetros levam valores de fora para dentro da função, e são variáveis locais dela. O return devolve um resultado a quem chamou; sem return a função apenas executa, por exemplo imprimindo. É assim que calcular_media devolve a média e verificar_aprovacao a recebe como parâmetro.",
+      "ordem": 30,
+      "evidencia": [
+        "escreve uma função que recebe valores e devolve o resultado com return",
+        "usa o retorno de uma função como parâmetro de outra"
+      ],
+      "checagem": "Qual a diferença entre uma função com return e uma sem return?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Estudo de funções, escopo e passagem de parâmetros."],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_31",
+      "nome": "Variável local não vista por outra função",
+      "tipo": "CONCEITUAL",
+      "unidade": "Funções",
+      "descricao": "Uma variável criada dentro de imprime_nome() não existe dentro de imprime_idade(), mesmo que uma seja chamada logo depois da outra: dá NameError. Para compartilhar o valor há dois caminhos, passar como parâmetro, que é o preferível, ou declarar global.",
+      "ordem": 31,
+      "evidencia": [
+        "prevê o NameError antes de rodar o código das duas funções",
+        "resolve o problema passando o valor como parâmetro"
+      ],
+      "checagem": "Por que print(idade) dentro de imprime_idade() quebra, se idade foi criada em imprime_nome()?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Estudo de funções, escopo e passagem de parâmetros."],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_32",
+      "nome": "Palavra global",
+      "tipo": "LINGUAGEM",
+      "unidade": "Funções",
+      "descricao": "Atribuir a um nome dentro de uma função cria, por padrão, uma variável local. A palavra global avisa que a atribuição deve valer para a variável de fora. Só é necessária para escrever: para apenas ler uma global, não precisa. O Jogo da Forca usa global em palavra_secreta, letras_descobertas e qtd_chances.",
+      "ordem": 32,
+      "evidencia": [
+        "faz uma função alterar de verdade uma variável criada fora dela",
+        "diz por que usar muitas globais é pior do que passar parâmetros"
+      ],
+      "checagem": "Sem a palavra global, o que acontece com qtd_chances quando a função atribui um valor a ela?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Estudo de funções, escopo e passagem de parâmetros."],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_33",
+      "nome": "main() e a guarda if __name__",
+      "tipo": "CONCEITUAL",
+      "unidade": "Funções",
+      "descricao": "A main() é o ponto de entrada: ela não faz nada sozinha, só chama as outras na ordem certa. A guarda if __name__ == '__main__': existe porque importar um módulo executa todo o código solto dele, e foi isso que fez os dois jogos começarem antes do menu aparecer no jogos.py. Com a guarda, o arquivo é programa quando executado e biblioteca quando importado.",
+      "ordem": 33,
+      "evidencia": [
+        "organiza um programa em funções chamadas por uma main()",
+        "explica o que __name__ vale ao executar o arquivo e ao importá-lo"
+      ],
+      "checagem": "Por que os jogos disparavam sozinhos no jogos.py, e como o if __name__ resolve isso?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Programação em Blocos"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_34",
+      "nome": "String imutável",
+      "tipo": "CONCEITUAL",
+      "unidade": "Strings",
+      "descricao": "String é uma sequência de caracteres criada com aspas simples ou duplas, e pode ser lida por índice. Só que ela é imutável: linguagem[0] = \"a\" lança TypeError. Foi por isso que a Forca precisou de uma lista paralela de traços, que pode ser alterada posição a posição.",
+      "ordem": 34,
+      "evidencia": [
+        "prevê o TypeError ao tentar trocar um caractere pelo índice",
+        "explica por que a Forca guarda as letras descobertas em lista e não na string"
+      ],
+      "checagem": "Por que linguagem[0] = \"a\" gera erro em Python?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_35",
+      "nome": "Formatação: +, format e f-string",
+      "tipo": "LINGUAGEM",
+      "unidade": "Strings",
+      "descricao": "O print separa os argumentos com um espaço, e o operador + concatena sem espaço nenhum. Para montar mensagens com valores dentro, usa-se .format(), com {0}, {1}, ou a f-string, escrevendo f\"Programando em {linguagem}\".",
+      "ordem": 35,
+      "evidencia": [
+        "monta a mesma mensagem com +, com format e com f-string",
+        "diz por que print(\"a\", \"b\") e print(\"a\" + \"b\") saem diferentes"
+      ],
+      "checagem": "Como você imprime o valor de uma variável dentro de uma frase usando f-string?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_36",
+      "nome": "Métodos de string",
+      "tipo": "LINGUAGEM",
+      "unidade": "Strings",
+      "descricao": "len, upper, lower, capitalize, strip, lstrip, rstrip, replace, startswith, endswith, count, isalnum e isdigit resolvem a maior parte do trabalho com texto. O find devolve a posição da primeira ocorrência, ou -1 se não achar, e aceita um segundo parâmetro dizendo de onde começar a procurar: \"banana\".find(\"na\") é 2, mas \"banana\".find(\"na\", 3) é 4.",
+      "ordem": 36,
+      "evidencia": [
+        "compara chute e letra da palavra usando upper nos dois lados",
+        "acha a segunda ocorrência de um trecho com o segundo parâmetro do find"
+      ],
+      "checagem": "Qual é o resultado de \"banana\".find(\"na\", 3), e por que não é 2?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_37",
+      "nome": "Exceção e erros comuns",
+      "tipo": "CONCEITUAL",
+      "unidade": "Tratamento de exceções",
+      "descricao": "Exceção é uma situação inesperada, que foge ao fluxo previsto, e quando acontece o programa para e lança o erro. Os três mais comuns na disciplina são ZeroDivisionError (dividir por zero), IndexError (índice que não existe na lista) e TypeError (tipo errado no lugar).",
+      "ordem": 37,
+      "evidencia": [
+        "nomeia a exceção que um trecho vai lançar antes de executá-lo",
+        "diz por que um sistema não pode simplesmente parar quando isso acontece"
+      ],
+      "checagem": "Que exceção o Python lança ao dividir por zero, e qual ele lança ao acessar lista[10] numa lista de 3 itens?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_38",
+      "nome": "Exceção sobe pela pilha de chamadas",
+      "tipo": "CONCEITUAL",
+      "unidade": "Tratamento de exceções",
+      "descricao": "Se main() chama m1(), que chama m2(), e o erro nasce em m2 sem ninguém tratar, a exceção sobe abortando cada função no caminho: nenhum dos três finais é impresso. O traceback é justamente o mapa desse caminho, do erro até o topo.",
+      "ordem": 38,
+      "evidencia": [
+        "prevê exatamente quais linhas saem e quais não saem nesse cenário",
+        "lê um traceback e diz em que função o erro nasceu"
+      ],
+      "checagem": "main chama m1, que chama m2, e o erro ocorre em m2 sem tratamento: o que é impresso depois do erro?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_39",
+      "nome": "try, except e finally",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Tratamento de exceções",
+      "descricao": "O try tenta executar o código e o except captura a exceção, que para de subir ali: a execução continua a partir do nível em que foi capturada. Tratar no fundo, dentro de m2, preserva todo o resto; tratar só na main evita a quebra mas perde o trabalho do meio. O finally executa sempre, com erro ou sem erro.",
+      "ordem": 39,
+      "evidencia": [
+        "escolhe o nível da pilha em que vale a pena colocar o try/except",
+        "protege o int(input(...)) do menu para uma letra digitada não derrubar o programa"
+      ],
+      "checagem": "Movendo o try/except da main para dentro de m2, o que muda na saída do programa?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_40",
+      "nome": "open, modos w, r, a e write",
+      "tipo": "LINGUAGEM",
+      "unidade": "Manipulação de arquivos",
+      "descricao": "O que está em variável desaparece quando o programa termina; para o dado persistir, grava-se em arquivo. O ciclo é abrir com open(nome, modo), usar e fechar com close(). O modo \"w\" cria e apaga o que havia, \"r\" só lê e exige que o arquivo exista, \"a\" acrescenta no final. O write() grava o texto exato e não coloca quebra de linha sozinho: o \"\\n\" é sua responsabilidade.",
+      "ordem": 40,
+      "evidencia": [
+        "grava três linhas em um arquivo e o fecha em seguida",
+        "escolhe entre \"w\" e \"a\" sabendo o que cada um faz com o conteúdo antigo"
+      ],
+      "checagem": "O que acontece com o conteúdo de um arquivo já existente aberto com o modo \"w\"?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_41",
+      "nome": "readlines e strip",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Manipulação de arquivos",
+      "descricao": "readlines() devolve uma lista com todas as linhas do arquivo, e cada item ainda traz o \"\\n\" no fim, por isso passa-se strip() antes de guardar. É esse programa que fecha o ciclo da Forca: as palavras secretas saem do código e passam a vir de um arquivo editável.",
+      "ordem": 41,
+      "evidencia": [
+        "carrega as linhas de um arquivo em uma lista limpa, sem quebra de linha",
+        "diz o que sairia na tela se o strip() fosse esquecido"
+      ],
+      "checagem": "Ao ler um arquivo com readlines(), por que geralmente se usa strip() em cada linha?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_42",
+      "nome": "FileNotFoundError no open",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Manipulação de arquivos",
+      "descricao": "Abrir para leitura um arquivo que não existe lança FileNotFoundError e derruba o programa. Como o arquivo é um recurso externo, que pode ter sido apagado ou renomeado, é aqui que o try/except deixa de ser opcional.",
+      "ordem": 42,
+      "evidencia": [
+        "envolve o open de leitura em try/except e segue com o programa",
+        "diz qual modo cria o arquivo e qual exige que ele já exista"
+      ],
+      "checagem": "O que acontece ao executar open(\"aaa.txt\", \"r\") se o arquivo não existir, e como evitar a quebra?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/data.ts"
+    },
+    {
+      "id": "mt_ALPG_43",
+      "nome": "Esqueleto de menu com laço e funções",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Prática da disciplina",
+      "descricao": "As provas pedem programas inteiros com a mesma anatomia: menu numerado, laço principal que repete até a opção Sair, uma função por operação, try/except em volta da leitura da opção e um else com opção inválida. Sabendo montar esse esqueleto de cabeça, a maior parte de qualquer questão está resolvida.",
+      "ordem": 43,
+      "evidencia": [
+        "escreve do zero um menu com laço, funções por operação e opção inválida",
+        "protege a leitura da opção para que uma letra não derrube o programa"
+      ],
+      "checagem": "Monte o esqueleto de um menu com quatro opções: quais quatro detalhes valem ponto nele?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": ["Resolução de problemas de forma estruturada"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_44",
+      "nome": "Progressão dos dois jogos",
+      "tipo": "META",
+      "unidade": "Prática da disciplina",
+      "descricao": "A turma reescreveu Adivinhação e Forca a cada ferramenta nova, e cada versão resolve uma limitação da anterior: o while porque um chute era pouco, o and porque faltava limite, a lista porque era preciso lembrar, as funções porque o bloco único cresceu, o if __name__ porque os jogos viraram módulos.",
+      "ordem": 44,
+      "evidencia": [
+        "diz qual limitação motivou a entrada de cada estrutura",
+        "escolhe a estrutura certa para um requisito novo em vez de tentar todas"
+      ],
+      "checagem": "Que limitação da versão só com if/elif/else fez o while entrar no Jogo de Adivinhação?",
+      "avaliacoes": ["AV1", "AV2"],
+      "ementaPPC": ["Resolução de problemas de forma estruturada"],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    },
+    {
+      "id": "mt_ALPG_45",
+      "nome": "Projeto em grupo: Git, MVP e backlog",
+      "tipo": "META",
+      "unidade": "Prática da disciplina",
+      "descricao": "Metade da nota vem do projeto: um jogo em grupo em Pygame, com repositório no GitHub, README, MVP definido, estórias de usuário priorizadas no Trello, planning semanal, commits individuais de cada integrante e avaliação 360 entre os membros. O histórico do repositório é instrumento de avaliação: quem programou e não commitou em seu nome não tem como comprovar.",
+      "ordem": 45,
+      "evidencia": [
+        "define o MVP do próprio jogo e escreve estórias de usuário priorizadas",
+        "mantém commits pequenos e frequentes no próprio nome durante o projeto"
+      ],
+      "checagem": "Por que o professor exige commits individuais, e o que é o MVP do projeto?",
+      "avaliacoes": ["AV2"],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/algoritmos-logica-programacao/ALPGSections.tsx"
+    }
+  ],
+  "arestas": [
+    {
+      "topicoId": "mt_ALPG_03",
+      "prerequisitoId": "mt_ALPG_01",
+      "forca": "soft",
+      "razao": "O algoritmo é a sequência de passos que organiza a entrada, o processamento e a saída, então o modelo é a moldura que ele preenche.",
+      "origem": "texto",
+      "trecho": "O computador manipula dados a partir de uma lista de instruções (programas). Toda tarefa segue o modelo Entrada → Processamento → Saída."
+    },
+    {
+      "topicoId": "mt_ALPG_03",
+      "prerequisitoId": "mt_ALPG_02",
+      "forca": "soft",
+      "razao": "Algoritmo é uma sequência lógica, e a ideia de raciocínio válido vem da lógica apresentada antes.",
+      "origem": "texto",
+      "trecho": "Lógica de programação é a técnica de desenvolver algoritmos usando uma linguagem de programação."
+    },
+    {
+      "topicoId": "mt_ALPG_04",
+      "prerequisitoId": "mt_ALPG_03",
+      "forca": "hard",
+      "razao": "Não se representa em texto nem em fluxograma algo que ainda não se sabe ser uma sequência finita de passos.",
+      "origem": "texto",
+      "trecho": "Algoritmos podem ser representados de forma textual (passo a passo) ou gráfica (fluxograma)."
+    },
+    {
+      "topicoId": "mt_ALPG_05",
+      "prerequisitoId": "mt_ALPG_03",
+      "forca": "hard",
+      "razao": "O teste de mesa simula a execução de um algoritmo passo a passo, e sem os passos definidos não há nada para rastrear na tabela.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_ALPG_06",
+      "prerequisitoId": "mt_ALPG_01",
+      "forca": "soft",
+      "razao": "O print é o passo de Saída do modelo: é ele que torna visível qualquer resultado do processamento.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_ALPG_07",
+      "prerequisitoId": "mt_ALPG_06",
+      "forca": "soft",
+      "razao": "O tipo de um valor é observado imprimindo type(...) na tela, então o comando de saída vem antes.",
+      "origem": "texto",
+      "trecho": "Tipos de dados: int (inteiro), float (real), str (texto) e bool (True/False); a função type() mostra o tipo."
+    },
+    {
+      "topicoId": "mt_ALPG_08",
+      "prerequisitoId": "mt_ALPG_07",
+      "forca": "hard",
+      "razao": "Sem saber que str e int são coisas diferentes não há como entender por que o valor lido precisa ser convertido.",
+      "origem": "texto",
+      "trecho": "A entrada input() sempre retorna texto (str), por isso usa-se casting: int(input(...)), float(input(...))."
+    },
+    {
+      "topicoId": "mt_ALPG_09",
+      "prerequisitoId": "mt_ALPG_07",
+      "forca": "hard",
+      "razao": "A conta só faz sentido sobre número e a comparação devolve um bool: sem os tipos, o resultado do operador não tem nome.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_ALPG_09",
+      "prerequisitoId": "mt_ALPG_08",
+      "forca": "soft",
+      "razao": "Os exercícios de operador partem de valores lidos do teclado, que só servem para conta depois do casting.",
+      "origem": "texto",
+      "trecho": "A entrada input() sempre retorna texto (str), por isso usa-se casting: int(input(...)), float(input(...))."
+    },
+    {
+      "topicoId": "mt_ALPG_10",
+      "prerequisitoId": "mt_ALPG_09",
+      "forca": "hard",
+      "razao": "and, or e not combinam condições, e as condições são justamente as comparações feitas pelos operadores relacionais.",
+      "origem": "texto",
+      "trecho": "Combinam ou negam condições: and (e), or (ou), not (negação)."
+    },
+    {
+      "topicoId": "mt_ALPG_11",
+      "prerequisitoId": "mt_ALPG_07",
+      "forca": "soft",
+      "razao": "A regra de nomes só tem sentido quando já se guardam valores em variáveis para depois usá-los.",
+      "origem": "texto",
+      "trecho": "Nada de acento ou cedilha no nome: use media (não média), salario (não salário), numero (não número)."
+    },
+    {
+      "topicoId": "mt_ALPG_12",
+      "prerequisitoId": "mt_ALPG_09",
+      "forca": "hard",
+      "razao": "A condição do if é uma comparação que resulta em verdadeiro ou falso, e é o operador relacional que produz esse valor.",
+      "origem": "texto",
+      "trecho": "Comparam valores: == (igual), != (diferente), > (maior), < (menor), >= e <=. Resultam em True ou False."
+    },
+    {
+      "topicoId": "mt_ALPG_13",
+      "prerequisitoId": "mt_ALPG_12",
+      "forca": "hard",
+      "razao": "O elif é o caso do meio entre o if e o else: sem as duas formas anteriores ele não tem onde se encaixar.",
+      "origem": "texto",
+      "trecho": "Permitem executar comandos conforme uma condição (expressão lógica). Simples (só if), composta (if/else) e encadeada (if/elif/else)."
+    },
+    {
+      "topicoId": "mt_ALPG_14",
+      "prerequisitoId": "mt_ALPG_13",
+      "forca": "hard",
+      "razao": "A faixa descoberta é um defeito específico da condicional encadeada: ela só aparece quando vários elif dividem um mesmo intervalo.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_ALPG_14",
+      "prerequisitoId": "mt_ALPG_10",
+      "forca": "soft",
+      "razao": "A faixa do meio nasce escrita com and, media >= 4.1 and media < 6.0, antes de se descobrir que o elif dispensa a segunda metade.",
+      "origem": "texto",
+      "trecho": "Combinando faixas: aprovado se media >= 6.0; recuperação se media >= 4.1 and media < 6.0; reprovado se media < 4.0."
+    },
+    {
+      "topicoId": "mt_ALPG_16",
+      "prerequisitoId": "mt_ALPG_15",
+      "forca": "hard",
+      "razao": "O erro é a variável ter escopo local ao bloco: sem a distinção entre global e local não há como explicar por que ela desaparece.",
+      "origem": "texto",
+      "trecho": "O escopo determina onde uma variável é válida. Global: existe durante toda a execução do programa. Local: só existe dentro do bloco ou função onde foi criada."
+    },
+    {
+      "topicoId": "mt_ALPG_16",
+      "prerequisitoId": "mt_ALPG_12",
+      "forca": "hard",
+      "razao": "O erro só existe porque há um bloco if que pode não executar, e é dentro dele que a variável é criada.",
+      "origem": "texto",
+      "trecho": "Um erro comum é criar uma variável dentro de um bloco if e tentar usá-la fora dele"
+    },
+    {
+      "topicoId": "mt_ALPG_17",
+      "prerequisitoId": "mt_ALPG_09",
+      "forca": "hard",
+      "razao": "O while é controlado por uma condição que precisa ficar falsa em algum momento, e essa condição é uma comparação.",
+      "origem": "texto",
+      "trecho": "O while repete um bloco enquanto uma condição for verdadeira (é preciso atualizar a variável de controle para não cair em loop infinito)."
+    },
+    {
+      "topicoId": "mt_ALPG_17",
+      "prerequisitoId": "mt_ALPG_05",
+      "forca": "soft",
+      "razao": "O teste de mesa é a ferramenta que mostra volta por volta por que o laço para onde para, e é assim que a saída do while é prevista.",
+      "origem": "texto",
+      "trecho": "3 < 3 → FALSO"
+    },
+    {
+      "topicoId": "mt_ALPG_18",
+      "prerequisitoId": "mt_ALPG_17",
+      "forca": "soft",
+      "razao": "O for é apresentado por contraste com o while, e o range é exatamente o que substitui o contador atualizado à mão.",
+      "origem": "texto",
+      "trecho": "O while é para repetição condicional; o for, quando se conhece o conjunto a percorrer."
+    },
+    {
+      "topicoId": "mt_ALPG_19",
+      "prerequisitoId": "mt_ALPG_18",
+      "forca": "hard",
+      "razao": "break e continue só existem dentro de um laço: um encerra o laço, o outro pula para a próxima iteração dele.",
+      "origem": "texto",
+      "trecho": "Encerra o laço na hora e segue para a linha depois dele"
+    },
+    {
+      "topicoId": "mt_ALPG_20",
+      "prerequisitoId": "mt_ALPG_07",
+      "forca": "soft",
+      "razao": "A lista é uma coleção de valores, e é preciso já conhecer os tipos para entender que ela pode misturar textos e números.",
+      "origem": "texto",
+      "trecho": "Uma lista é uma coleção ordenada de valores, com índice iniciando em 0; os elementos podem ter tipos diferentes e a lista pode ser aninhada."
+    },
+    {
+      "topicoId": "mt_ALPG_21",
+      "prerequisitoId": "mt_ALPG_20",
+      "forca": "hard",
+      "razao": "Pertinência é uma pergunta sobre a coleção: sem a lista não há onde procurar o item.",
+      "origem": "texto",
+      "trecho": "Verificam pertinência e devolvem True/False. \"jaca\" in frutas pergunta se o item está lá; \"caju\" not in frutas pergunta se ainda não está."
+    },
+    {
+      "topicoId": "mt_ALPG_21",
+      "prerequisitoId": "mt_ALPG_10",
+      "forca": "soft",
+      "razao": "O not in é a negação da pertinência, e o resultado dele é usado como condição dentro de um if.",
+      "origem": "texto",
+      "trecho": "Combinam ou negam condições: and (e), or (ou), not (negação)."
+    },
+    {
+      "topicoId": "mt_ALPG_22",
+      "prerequisitoId": "mt_ALPG_20",
+      "forca": "hard",
+      "razao": "append, del e len são operações sobre a lista, e del ainda precisa do índice para saber o que remover.",
+      "origem": "texto",
+      "trecho": "verificar pertinência (\"jaca\" in frutas), adicionar (frutas.append(\"x\")), remover (del(frutas[1])) e medir tamanho (len(frutas))"
+    },
+    {
+      "topicoId": "mt_ALPG_23",
+      "prerequisitoId": "mt_ALPG_20",
+      "forca": "hard",
+      "razao": "Percorrer é visitar os itens da lista um a um, seja pelo valor, seja pelo índice que começa em 0.",
+      "origem": "texto",
+      "trecho": "Uma lista é uma coleção ordenada de valores, com índice iniciando em 0"
+    },
+    {
+      "topicoId": "mt_ALPG_23",
+      "prerequisitoId": "mt_ALPG_18",
+      "forca": "hard",
+      "razao": "O percurso mais direto é o for, que recebe cada item do conjunto automaticamente.",
+      "origem": "texto",
+      "trecho": "O for itera sobre um conjunto de itens (uma lista ou a função range)."
+    },
+    {
+      "topicoId": "mt_ALPG_23",
+      "prerequisitoId": "mt_ALPG_17",
+      "forca": "hard",
+      "razao": "O percurso por índice é um while com contador criado e atualizado à mão, com a condição i menor que o tamanho da lista.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_ALPG_23",
+      "prerequisitoId": "mt_ALPG_22",
+      "forca": "hard",
+      "razao": "O laço por índice precisa de len para saber onde parar, senão passa do fim da lista.",
+      "origem": "texto",
+      "trecho": "verificar pertinência (\"jaca\" in frutas), adicionar (frutas.append(\"x\")), remover (del(frutas[1])) e medir tamanho (len(frutas))"
+    },
+    {
+      "topicoId": "mt_ALPG_24",
+      "prerequisitoId": "mt_ALPG_20",
+      "forca": "hard",
+      "razao": "A lista aninhada é uma lista cujos itens são listas, e a indexação dupla é a indexação simples aplicada duas vezes.",
+      "origem": "texto",
+      "trecho": "Em lista aninhada, o primeiro índice escolhe a sublista e o segundo escolhe o item dentro dela: notas[2][0] é a primeira nota do terceiro bimestre."
+    },
+    {
+      "topicoId": "mt_ALPG_25",
+      "prerequisitoId": "mt_ALPG_20",
+      "forca": "hard",
+      "razao": "A tupla é definida por comparação com a lista: mesma coleção ordenada, mas com parênteses e sem poder mudar.",
+      "origem": "texto",
+      "trecho": "Uma tupla é uma coleção ordenada como a lista, mas criada com parênteses e IMUTÁVEL"
+    },
+    {
+      "topicoId": "mt_ALPG_25",
+      "prerequisitoId": "mt_ALPG_22",
+      "forca": "soft",
+      "razao": "O que caracteriza a tupla é o que ela proíbe, e as operações proibidas são justamente append, del e a atribuição a um item.",
+      "origem": "texto",
+      "trecho": "Não é possível: o tamanho é fixo"
+    },
+    {
+      "topicoId": "mt_ALPG_27",
+      "prerequisitoId": "mt_ALPG_26",
+      "forca": "hard",
+      "razao": "math.sqrt e math.pi só existem depois do import math e da chamada no formato modulo.funcao.",
+      "origem": "texto",
+      "trecho": "Um módulo é um arquivo Python com definições reutilizáveis; para usar suas funções é preciso importá-lo antes (import modulo) e chamá-las como modulo.funcao."
+    },
+    {
+      "topicoId": "mt_ALPG_27",
+      "prerequisitoId": "mt_ALPG_09",
+      "forca": "soft",
+      "razao": "O cuidado com pow só se enxerga quem já usa o operador ** para potência e percebe que o resultado pode vir int ou float.",
+      "origem": "texto",
+      "trecho": "print(2 ** 3)           # 8   -> mesmo resultado, com operador"
+    },
+    {
+      "topicoId": "mt_ALPG_28",
+      "prerequisitoId": "mt_ALPG_26",
+      "forca": "hard",
+      "razao": "randint e choice são funções do módulo random e não funcionam sem o import correspondente.",
+      "origem": "texto",
+      "trecho": "O módulo random dá aleatoriedade: randint(a,b) para inteiros, uniform para fracionados, choice([lista]) para escolher um item"
+    },
+    {
+      "topicoId": "mt_ALPG_28",
+      "prerequisitoId": "mt_ALPG_20",
+      "forca": "hard",
+      "razao": "choice, shuffle e sample recebem uma lista como argumento, então a lista precisa vir antes.",
+      "origem": "texto",
+      "trecho": "Escolhe um item aleatório de uma lista (de tipos variados)."
+    },
+    {
+      "topicoId": "mt_ALPG_29",
+      "prerequisitoId": "mt_ALPG_12",
+      "forca": "soft",
+      "razao": "A função delimita seu corpo por indentação, e a noção de bloco indentado aparece primeiro no if.",
+      "origem": "texto",
+      "trecho": "Define-se com def nome(): e o código indentado pertence a ela."
+    },
+    {
+      "topicoId": "mt_ALPG_30",
+      "prerequisitoId": "mt_ALPG_29",
+      "forca": "hard",
+      "razao": "Parâmetro e return são partes da assinatura e do corpo de uma função já definida com def e chamada em algum lugar.",
+      "origem": "texto",
+      "trecho": "Parâmetros passam valores para a função; return devolve um resultado (sem return, a função apenas executa/imprime)."
+    },
+    {
+      "topicoId": "mt_ALPG_31",
+      "prerequisitoId": "mt_ALPG_29",
+      "forca": "hard",
+      "razao": "O erro só aparece com duas funções, uma criando a variável e a outra tentando usá-la.",
+      "origem": "texto",
+      "trecho": "print(idade)         # ERRO: idade nao existe aqui"
+    },
+    {
+      "topicoId": "mt_ALPG_31",
+      "prerequisitoId": "mt_ALPG_15",
+      "forca": "hard",
+      "razao": "A variável morre no fim da função porque é local, e é essa a definição de escopo local já vista.",
+      "origem": "texto",
+      "trecho": "Local: só existe dentro do bloco ou função onde foi criada."
+    },
+    {
+      "topicoId": "mt_ALPG_32",
+      "prerequisitoId": "mt_ALPG_31",
+      "forca": "hard",
+      "razao": "A palavra global é a resposta ao problema de a atribuição dentro da função criar uma variável local nova.",
+      "origem": "texto",
+      "trecho": "Porque, sem global, atribuir a qtd_chances criaria uma variável local e a de fora não mudaria"
+    },
+    {
+      "topicoId": "mt_ALPG_32",
+      "prerequisitoId": "mt_ALPG_15",
+      "forca": "hard",
+      "razao": "global significa escopo maior, e sem a distinção global e local a palavra não quer dizer nada.",
+      "origem": "texto",
+      "trecho": "A palavra global indica variáveis de escopo maior."
+    },
+    {
+      "topicoId": "mt_ALPG_32",
+      "prerequisitoId": "mt_ALPG_30",
+      "forca": "soft",
+      "razao": "A alternativa madura ao global é cada função receber parâmetro e devolver com return, e a comparação exige conhecer as duas.",
+      "origem": "texto",
+      "trecho": "Parâmetros passam valores para a função; return devolve um resultado (sem return, a função apenas executa/imprime)."
+    },
+    {
+      "topicoId": "mt_ALPG_33",
+      "prerequisitoId": "mt_ALPG_29",
+      "forca": "hard",
+      "razao": "A main é uma função como as outras, e seu papel é chamar as demais na ordem certa.",
+      "origem": "texto",
+      "trecho": "Não faz nada sozinha: apenas chama as outras três na ordem certa. É o roteiro do programa, e o que o if __name__ protege."
+    },
+    {
+      "topicoId": "mt_ALPG_33",
+      "prerequisitoId": "mt_ALPG_26",
+      "forca": "hard",
+      "razao": "A guarda existe para resolver um problema do import: o código solto do módulo executa no momento em que ele é importado.",
+      "origem": "texto",
+      "trecho": "Porque, ao importar os jogos no jogos.py, o código solto de cada arquivo executava sozinho"
+    },
+    {
+      "topicoId": "mt_ALPG_34",
+      "prerequisitoId": "mt_ALPG_07",
+      "forca": "hard",
+      "razao": "A imutabilidade é uma propriedade do tipo str, que já tem que estar conhecido como tipo de dado.",
+      "origem": "texto",
+      "trecho": "Uma string (str) é uma sequência de caracteres, criada com aspas simples ou duplas. A string é imutável: não se pode alterar um caractere pelo índice (gera TypeError)."
+    },
+    {
+      "topicoId": "mt_ALPG_34",
+      "prerequisitoId": "mt_ALPG_20",
+      "forca": "soft",
+      "razao": "A imutabilidade fica clara por contraste com a lista, que pode ser alterada posição a posição, e é isso que justifica a lista de traços da Forca.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_ALPG_35",
+      "prerequisitoId": "mt_ALPG_06",
+      "forca": "hard",
+      "razao": "A formatação existe para montar o texto que vai ao print, e a diferença entre vírgula e + só se vê na saída.",
+      "origem": "texto",
+      "trecho": "Formatação: print concatena com espaço, o operador + concatena sem espaço, e há .format({0}) e f-strings (f\"{variavel}\")."
+    },
+    {
+      "topicoId": "mt_ALPG_36",
+      "prerequisitoId": "mt_ALPG_34",
+      "forca": "soft",
+      "razao": "Os métodos devolvem uma string nova em vez de alterar a original, e isso só faz sentido sabendo que a string é imutável.",
+      "origem": "texto",
+      "trecho": "Métodos úteis: len, find, capitalize, upper, lower, strip/lstrip/rstrip, replace, startswith, endswith, count, isalnum e isdigit."
+    },
+    {
+      "topicoId": "mt_ALPG_37",
+      "prerequisitoId": "mt_ALPG_20",
+      "forca": "hard",
+      "razao": "O IndexError é definido como acessar um índice que não existe na lista, então a indexação precisa vir antes.",
+      "origem": "texto",
+      "trecho": "Acessar um índice que não existe em uma lista."
+    },
+    {
+      "topicoId": "mt_ALPG_37",
+      "prerequisitoId": "mt_ALPG_09",
+      "forca": "soft",
+      "razao": "O ZeroDivisionError vem da divisão, e o TypeError de usar um tipo onde outro é esperado em uma expressão.",
+      "origem": "texto",
+      "trecho": "Tentar dividir um número por zero."
+    },
+    {
+      "topicoId": "mt_ALPG_38",
+      "prerequisitoId": "mt_ALPG_37",
+      "forca": "hard",
+      "razao": "Para ver a exceção subir é preciso uma exceção concreta, e o exemplo da disciplina usa o IndexError de uma lista de três itens.",
+      "origem": "texto",
+      "trecho": "A exceção sobe até o topo e encerra o programa. Nenhum \"fim\" é impresso e o usuário vê um traceback."
+    },
+    {
+      "topicoId": "mt_ALPG_38",
+      "prerequisitoId": "mt_ALPG_33",
+      "forca": "hard",
+      "razao": "A pilha de chamadas só existe com funções chamando funções: main chama m1, que chama m2.",
+      "origem": "texto",
+      "trecho": "Uma exceção não tratada sobe pela pilha de chamadas: se main() chama m1(), que chama m2(), e o erro acontece em m2(), ele interrompe m2, depois m1, depois main"
+    },
+    {
+      "topicoId": "mt_ALPG_39",
+      "prerequisitoId": "mt_ALPG_38",
+      "forca": "hard",
+      "razao": "O que o except faz é interromper a subida da exceção, então é preciso primeiro entender que ela sobe pela pilha.",
+      "origem": "texto",
+      "trecho": "Tratar com try/except em qualquer nível dessa pilha faz a execução continuar a partir dali. O try tenta executar o código e o except captura a exceção."
+    },
+    {
+      "topicoId": "mt_ALPG_40",
+      "prerequisitoId": "mt_ALPG_06",
+      "forca": "soft",
+      "razao": "Escrever em arquivo é o mesmo texto do print com outro destino, e a quebra de linha que o print dava de graça passa a ser sua responsabilidade.",
+      "origem": "texto",
+      "trecho": "write(texto) grava (não coloca quebra de linha sozinho: usa-se \"\\n\")"
+    },
+    {
+      "topicoId": "mt_ALPG_41",
+      "prerequisitoId": "mt_ALPG_40",
+      "forca": "hard",
+      "razao": "Só se lê com readlines um arquivo que já foi aberto no modo de leitura, e ele precisa ser fechado depois.",
+      "origem": "texto",
+      "trecho": "readlines() devolve uma lista com todas as linhas (cada uma ainda com o \"\\n\" no fim, removido com strip())"
+    },
+    {
+      "topicoId": "mt_ALPG_41",
+      "prerequisitoId": "mt_ALPG_22",
+      "forca": "hard",
+      "razao": "readlines devolve uma lista e o padrão do material é percorrê-la acrescentando cada linha limpa com append em outra lista.",
+      "origem": "texto",
+      "trecho": "listaFrutas.append(fruta.strip())   # tira o \"\\n\" do fim"
+    },
+    {
+      "topicoId": "mt_ALPG_41",
+      "prerequisitoId": "mt_ALPG_36",
+      "forca": "hard",
+      "razao": "O strip é um método de string, e é ele que remove o \"\\n\" do fim de cada linha lida.",
+      "origem": "texto",
+      "trecho": "Remove espaços em branco do início e/ou do fim."
+    },
+    {
+      "topicoId": "mt_ALPG_42",
+      "prerequisitoId": "mt_ALPG_40",
+      "forca": "hard",
+      "razao": "O erro é próprio do modo de leitura: o \"r\" exige que o arquivo exista, enquanto o \"w\" cria.",
+      "origem": "texto",
+      "trecho": "Abre só para ler. O arquivo precisa existir: se não existir, lança FileNotFoundError."
+    },
+    {
+      "topicoId": "mt_ALPG_42",
+      "prerequisitoId": "mt_ALPG_39",
+      "forca": "hard",
+      "razao": "A única forma de o programa continuar depois de um arquivo inexistente é o try/except em volta do open.",
+      "origem": "texto",
+      "trecho": "Abrir para leitura um arquivo que não existe lança FileNotFoundError, por isso arquivos e try/except andam juntos."
+    },
+    {
+      "topicoId": "mt_ALPG_43",
+      "prerequisitoId": "mt_ALPG_13",
+      "forca": "hard",
+      "razao": "O menu numerado é uma condicional encadeada: um elif por opção e um else para a opção inválida.",
+      "origem": "texto",
+      "trecho": "Menu com 5 opções (Celsius/Fahrenheit/Kelvin nos dois sentidos e Sair). Uma função por conversão, recebendo a temperatura como parâmetro"
+    },
+    {
+      "topicoId": "mt_ALPG_43",
+      "prerequisitoId": "mt_ALPG_17",
+      "forca": "hard",
+      "razao": "O laço principal que devolve o usuário ao menu depois de cada operação é um while controlado pela opção escolhida.",
+      "origem": "texto",
+      "trecho": "while opcao != 4:                # laco principal ate \"Sair\""
+    },
+    {
+      "topicoId": "mt_ALPG_43",
+      "prerequisitoId": "mt_ALPG_30",
+      "forca": "hard",
+      "razao": "O enunciado exige uma função por operação, recebendo o dado como parâmetro, e não tudo dentro do menu.",
+      "origem": "texto",
+      "trecho": "Uma função por conversão, recebendo a temperatura como parâmetro"
+    },
+    {
+      "topicoId": "mt_ALPG_43",
+      "prerequisitoId": "mt_ALPG_39",
+      "forca": "hard",
+      "razao": "Sem try/except em volta do int(input(...)) da opção, uma letra digitada derruba o programa inteiro, e isso é cobrado explicitamente.",
+      "origem": "texto",
+      "trecho": "print(\"Erro na opcao do menu.\")   # letra no lugar de numero"
+    },
+    {
+      "topicoId": "mt_ALPG_43",
+      "prerequisitoId": "mt_ALPG_33",
+      "forca": "soft",
+      "razao": "O molde termina com a main chamando o menu dentro da guarda if __name__.",
+      "origem": "texto",
+      "trecho": "Não faz nada sozinha: apenas chama as outras três na ordem certa. É o roteiro do programa, e o que o if __name__ protege."
+    },
+    {
+      "topicoId": "mt_ALPG_44",
+      "prerequisitoId": "mt_ALPG_13",
+      "forca": "soft",
+      "razao": "A progressão começa na versão que só compara, com if, elif e else, e termina depois de um único chute.",
+      "origem": "texto",
+      "trecho": "Um chute e o programa acaba (if/elif/else)"
+    },
+    {
+      "topicoId": "mt_ALPG_44",
+      "prerequisitoId": "mt_ALPG_17",
+      "forca": "soft",
+      "razao": "A segunda etapa da Adivinhação existe porque o while permite chutar até acertar, o que a condicional sozinha não fazia.",
+      "origem": "texto",
+      "trecho": "while acertou == False: chuta até acertar"
+    },
+    {
+      "topicoId": "mt_ALPG_44",
+      "prerequisitoId": "mt_ALPG_21",
+      "forca": "soft",
+      "razao": "A etapa da lista só se justifica com a pertinência: é o in que detecta o chute repetido no histórico.",
+      "origem": "texto",
+      "trecho": "Guarda os chutes dados e detecta repetição com in"
+    },
+    {
+      "topicoId": "mt_ALPG_44",
+      "prerequisitoId": "mt_ALPG_32",
+      "forca": "soft",
+      "razao": "A última versão da Forca é entendida pelas cinco funções, pelo global compartilhando o estado e pela guarda if __name__.",
+      "origem": "texto",
+      "trecho": "Cinco funções + main, com global e if __name__"
+    },
+    {
+      "topicoId": "mt_ALPG_44",
+      "prerequisitoId": "mt_ALPG_41",
+      "forca": "soft",
+      "razao": "O fim da progressão é a Forca lendo as palavras de um arquivo, com readlines e strip, em vez de uma lista fixa no código.",
+      "origem": "texto",
+      "trecho": "As palavras passam a vir de frutas.txt (readlines + strip)"
+    },
+    {
+      "topicoId": "mt_ALPG_45",
+      "prerequisitoId": "mt_ALPG_17",
+      "forca": "soft",
+      "razao": "O jogo em Pygame roda dentro de um laço principal que executa a cada quadro, e esse laço é o mesmo while da AV1.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_ALPG_45",
+      "prerequisitoId": "mt_ALPG_43",
+      "forca": "soft",
+      "razao": "O jogo entregue no projeto reaproveita o mesmo esqueleto de menu, laço principal e uma função por operação cobrado nas provas.",
+      "origem": "inferido",
+      "trecho": ""
+    }
+  ],
+  "observacoes": "Ementa sem cobertura no material, e o próprio guia declara a lacuna, então não geraram tópico: estrutura condicional de múltipla escolha, vetores, matrizes e arrays multidimensionais, passagem de parâmetro por valor e por referência, recursividade e tipos abstratos de dados. Programação em Blocos foi lida como bloco indentado (if, laço, def) e módulos, que é o que o material cobre. break e continue não têm deck próprio: entraram pelo código real da Forca. O teste de mesa aparece na seção de Conceitos usando um while ensinado só depois. PRECISA-DE-FORA: mt_ALPG_02 depende de lógica formal e tabela-verdade (provável LMMD); mt_ALPG_45 depende de backlog, estórias e planning (provável AGIL) e de versionamento com Git (provável GCMS ou PDSW); Pygame não é objeto de disciplina do PPC."
+}

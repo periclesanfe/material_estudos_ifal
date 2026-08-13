@@ -1,40 +1,73 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
 import { SITE_LAST_UPDATED_LABEL } from '../../data/siteMetadata';
+import { useMovimentoReduzido } from '../../hooks/useMovimentoReduzido';
+import { cascata, item, revela } from '../../lib/movimento';
 
 interface SubjectHeroProps {
   eyebrow: string;
   title: ReactNode;
   description: string;
-  background: string;
-  /** Ações da matéria (ex.: exportar), abaixo da descrição. Opcional. */
+  /** Ações da matéria (ex.: exportar em md e PDF), abaixo da descrição. */
   actions?: ReactNode;
+  /**
+   * Fundo decorativo herdado das matérias antigas. Mantido no contrato para não
+   * quebrar os dez componentes de conteúdo que o passam, mas não é mais
+   * desenhado: o gradiente atrás do título competia com a leitura e era o
+   * elemento que mais datava o visual.
+   */
+  background?: string;
 }
 
-/** Capa da matéria, exibida apenas na seção de introdução. */
-export default function SubjectHero({ eyebrow, title, description, background, actions }: SubjectHeroProps) {
-  return (
-    <div className="relative min-h-[38vh] md:min-h-[42vh] flex flex-col items-center justify-center text-center px-6 py-12 md:py-14 overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none opacity-60">
-        <div className="absolute inset-0" style={{ background }} />
-      </div>
+/**
+ * Abertura da matéria, exibida apenas na seção de introdução.
+ *
+ * Era um bloco centralizado de 42vh com gradiente atrás, o que empurrava o
+ * conteúdo para baixo da dobra e não dizia nada. Agora é cabeçalho de documento
+ * técnico: alinhado à esquerda, metadado em mono acima do título, régua fechando
+ * o bloco, e a descrição em medida de leitura.
+ */
+export default function SubjectHero({ eyebrow, title, description, actions }: SubjectHeroProps) {
+  const reduzido = useMovimentoReduzido();
 
-      <p className="text-text-muted text-[11px] font-semibold tracking-[0.2em] uppercase relative z-10 mb-4">
-        {eyebrow}
-      </p>
-      <h1 className="font-display font-black text-4xl md:text-5xl lg:text-6xl text-text relative z-10 mb-3 leading-[1.06] tracking-tight">
-        {title}
-      </h1>
-      <p className="text-text-muted text-sm md:text-base relative z-10 max-w-2xl">
-        {description}
-      </p>
-      {actions}
-      <Link
-        to="/atualizacoes"
-        className="text-text-muted/80 hover:text-text text-xs relative z-10 mt-4 underline underline-offset-2 transition-colors"
+  return (
+    <motion.header
+      variants={cascata}
+      initial={reduzido ? false : 'inicio'}
+      animate="visivel"
+      className="page-wrap border-b border-rule pb-7 pt-10 md:pb-9 md:pt-14"
+    >
+      <motion.p
+        variants={item}
+        className="mb-3 font-mono text-meta uppercase tracking-[0.18em] text-text-muted"
       >
-        Atualizado em {SITE_LAST_UPDATED_LABEL}
-      </Link>
-    </div>
+        {eyebrow}
+      </motion.p>
+
+      {/* o título é revelado por máscara vertical, como texto sendo composto */}
+      <motion.h1
+        variants={reduzido ? item : revela}
+        className="font-display text-[clamp(2rem,4.4vw,3.25rem)] font-extrabold leading-[1.04] tracking-[-0.03em] text-text text-balance"
+      >
+        {title}
+      </motion.h1>
+
+      <motion.p variants={item} className="reading-measure mt-4 text-lead leading-relaxed text-text-muted">
+        {description}
+      </motion.p>
+
+      {actions && (
+        <motion.div variants={item} className="mt-5">
+          {actions}
+        </motion.div>
+      )}
+
+      <motion.p variants={item} className="mt-5 font-mono text-micro text-text-muted/80">
+        <Link to="/atualizacoes" className="underline decoration-dotted underline-offset-4 hover:text-text">
+          atualizado em {SITE_LAST_UPDATED_LABEL}
+        </Link>
+      </motion.p>
+    </motion.header>
   );
 }

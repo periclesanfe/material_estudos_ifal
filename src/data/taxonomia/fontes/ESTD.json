@@ -1,0 +1,2000 @@
+{
+  "disciplina": {
+    "codigo": "ESTD",
+    "codigoPPC": "ESTD",
+    "nome": "Estrutura de Dados",
+    "periodo": 3
+  },
+  "topicos": [
+    {
+      "id": "mt_ESTD_01",
+      "nome": "Tipos primitivos e tipagem dinâmica",
+      "tipo": "LINGUAGEM",
+      "unidade": "Base de Python",
+      "descricao": "Python infere o tipo em tempo de execução e trabalha com int, float, bool e str, sem declaração prévia. input() devolve sempre string, então é obrigatório converter com int() ou float() antes de calcular.",
+      "ordem": 1,
+      "evidencia": [
+        "você domina se consegue dizer o tipo de uma variável que nunca foi declarada",
+        "você domina se consegue explicar por que somar o retorno de input() com um número dá TypeError"
+      ],
+      "checagem": "Python é de tipagem estática ou dinâmica, e que tipo input() devolve quando o usuário digita 42?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/PythonSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_02",
+      "nome": "Operadores //, % e **",
+      "tipo": "LINGUAGEM",
+      "unidade": "Base de Python",
+      "descricao": "// faz divisão inteira e descarta a parte decimal, % devolve o resto da divisão e ** eleva à potência. O resto é o operador que faz um índice dar a volta em um array, e a divisão inteira é a que acha o meio de uma lista.",
+      "ordem": 2,
+      "evidencia": [
+        "você domina se consegue calcular 7 // 2, 7 % 2 e 2 ** 10 de cabeça",
+        "você domina se consegue explicar por que (i + 1) % N nunca passa do fim do array"
+      ],
+      "checagem": "Quanto valem 7 // 2 e 7 % 2, e para que serve o resto quando o índice chega ao fim do array?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/PythonSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_03",
+      "nome": "String imutável, indexação e fatiamento",
+      "tipo": "CONCEITUAL",
+      "unidade": "Base de Python",
+      "descricao": "String é uma sequência imutável indexada a partir de 0: trocar uma letra pelo índice dá erro e todo método (upper, lower, strip, split) devolve uma nova string. O fatiamento s[i:j] entrega um pedaço novo, ou seja, copia elementos.",
+      "ordem": 3,
+      "evidencia": [
+        "você domina se consegue prever o resultado de s[1:] e de s[-1]",
+        "você domina se consegue explicar por que upper() não muda a string original"
+      ],
+      "checagem": "O que acontece ao tentar fazer s[0] = 'X' em uma string, e o que s[1:] devolve?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/StringsListasSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_04",
+      "nome": "Listas mutáveis, aliasing e clonagem",
+      "tipo": "LINGUAGEM",
+      "unidade": "Base de Python",
+      "descricao": "Lista é sequência mutável, com append, insert, remove, pop, sort e reverse, e aceita elementos de tipos mistos e listas aninhadas. b = a cria dois nomes para o mesmo objeto (aliasing) e b = a[:] cria cópia independente; funções modificadoras alteram no lugar e devolvem None.",
+      "ordem": 4,
+      "evidencia": [
+        "você domina se consegue dizer o que acontece com a depois de b = a e b.append(9)",
+        "você domina se consegue apontar quais métodos de lista devolvem None"
+      ],
+      "checagem": "Qual a diferença entre b = a e b = a[:] quando você depois modifica b?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/StringsListasSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_05",
+      "nome": "Caso base e redução ao caso base",
+      "tipo": "CONCEITUAL",
+      "unidade": "Recursividade",
+      "descricao": "Uma função é recursiva quando chama a si mesma. Ela precisa de dois ingredientes: um caso base, que retorna sem chamada recursiva, e a garantia de que cada chamada aproxima o problema desse caso base.",
+      "ordem": 5,
+      "evidencia": [
+        "você domina se consegue apontar o caso base e o passo de redução em qualquer função recursiva",
+        "você domina se consegue escrever a recorrência de um problema com subestrutura recursiva"
+      ],
+      "checagem": "Quais são os dois ingredientes obrigatórios de uma função recursiva e o que cada um faz?",
+      "avaliacoes": [
+        "AV1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Algoritmos Recursivos"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/RecursividadeSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_06",
+      "nome": "Pilha de chamadas e recursão infinita",
+      "tipo": "CONCEITUAL",
+      "unidade": "Recursividade",
+      "descricao": "Cada chamada recursiva empilha um frame na pilha de chamadas do sistema, com variáveis locais e endereço de retorno, e os frames são desempilhados na ordem inversa. Sem caso base adequado a pilha cresce até estourar (StackOverflow).",
+      "ordem": 6,
+      "evidencia": [
+        "você domina se consegue dizer quantos frames uma chamada gera antes do primeiro retorno",
+        "você domina se consegue explicar por que a falta de caso base derruba o programa"
+      ],
+      "checagem": "O que a pilha de chamadas guarda em cada chamada recursiva e o que acontece se o caso base nunca é atingido?",
+      "avaliacoes": [
+        "AV1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Algoritmos Recursivos"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/blocks.ts"
+    },
+    {
+      "id": "mt_ESTD_07",
+      "nome": "Recorrência sobre números",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Recursividade",
+      "descricao": "Escrever a definição recursiva de problemas numéricos: contagem regressiva, soma de 1 a n, fatorial duplo (que reduz de 2 em 2) e o MDC pelo algoritmo de Euclides, em que MDC(a, b) vira MDC(b, a % b) com caso base b == 0.",
+      "ordem": 7,
+      "evidencia": [
+        "você domina se consegue converter um while em chamada recursiva equivalente",
+        "você domina se consegue escolher o passo de redução certo (menos 1, menos 2, resto da divisão)"
+      ],
+      "checagem": "Como fica o MDC de Euclides escrito de forma recursiva e qual é o caso base?",
+      "avaliacoes": [
+        "AV1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Algoritmos Recursivos"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/blocks.ts"
+    },
+    {
+      "id": "mt_ESTD_08",
+      "nome": "Recursão sobre strings",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Recursividade",
+      "descricao": "Aplicar recursão em texto: inverter uma palavra com inverte(s) = inverte(s[1:]) + s[0] e verificar palíndromo comparando as duas pontas e recorrendo ao miolo, o que exige dois casos base (string vazia e string de um caractere).",
+      "ordem": 8,
+      "evidencia": [
+        "você domina se consegue justificar por que o palíndromo precisa de dois casos base",
+        "você domina se consegue escrever a inversão de string sem laço"
+      ],
+      "checagem": "Por que a verificação recursiva de palíndromo precisa de dois casos base em vez de um?",
+      "avaliacoes": [
+        "AV1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Algoritmos Recursivos"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/blocks.ts"
+    },
+    {
+      "id": "mt_ESTD_09",
+      "nome": "O que a notação Big O mede",
+      "tipo": "CONCEITUAL",
+      "unidade": "Análise de desempenho (Big O)",
+      "descricao": "Big O descreve como o custo de um algoritmo cresce conforme a entrada n aumenta. Ela não mede segundos: conta operações relevantes, como comparações, trocas e acessos.",
+      "ordem": 9,
+      "evidencia": [
+        "você domina se consegue dizer o que é contado em uma análise de complexidade",
+        "você domina se consegue explicar por que o mesmo algoritmo em máquina mais rápida tem a mesma classe"
+      ],
+      "checagem": "A notação Big O mede tempo em segundos ou quantidade de operações? Por quê?",
+      "avaliacoes": [
+        "AV1",
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/BigOSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_10",
+      "nome": "Melhor caso, pior caso e caso médio",
+      "tipo": "CONCEITUAL",
+      "unidade": "Análise de desempenho (Big O)",
+      "descricao": "O mesmo algoritmo custa diferente conforme a entrada. Na busca sequencial por item presente são 1 comparação no melhor caso, n no pior e n/2 em média; para item ausente em lista não ordenada são n comparações sempre. Big O costuma descrever o pior caso.",
+      "ordem": 10,
+      "evidencia": [
+        "você domina se consegue montar a tabela de melhor, pior e caso médio de uma busca",
+        "você domina se consegue dizer qual caso a notação Big O costuma reportar"
+      ],
+      "checagem": "Na busca sequencial, quantas comparações ocorrem no melhor caso, no pior e em média?",
+      "avaliacoes": [
+        "AV1",
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/blocks.ts"
+    },
+    {
+      "id": "mt_ESTD_11",
+      "nome": "Descarte de constantes e termo dominante",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Análise de desempenho (Big O)",
+      "descricao": "Ao fechar a análise, some as operações e guarde só o termo que domina quando n cresce, jogando fora constantes e termos de menor grau. A contagem do bubble sort tem termo em n ao quadrado e termo em n, e o resultado escrito é O(n²).",
+      "ordem": 11,
+      "evidencia": [
+        "você domina se consegue simplificar uma contagem de comparações até a classe final",
+        "você domina se consegue justificar o descarte pelo crescimento assintótico"
+      ],
+      "checagem": "Por que uma contagem com termo em n ao quadrado e termo em n é escrita simplesmente como O(n²)?",
+      "avaliacoes": [
+        "AV1",
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/blocks.ts"
+    },
+    {
+      "id": "mt_ESTD_12",
+      "nome": "Classes de crescimento e composição de custos",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Análise de desempenho (Big O)",
+      "descricao": "As classes que aparecem na disciplina, da mais barata para a mais cara: O(1), O(log n), O(n), O(n log n), O(n elevado a 3/2) e O(n²). Custos aninhados se multiplicam: um laço de n iterações com uma busca binária dentro dá O(n log n).",
+      "ordem": 12,
+      "evidencia": [
+        "você domina se consegue ordenar as classes da mais eficiente para a menos eficiente",
+        "você domina se consegue dar um exemplo da disciplina para cada classe",
+        "você domina se consegue multiplicar o custo de um laço pelo custo do que está dentro dele"
+      ],
+      "checagem": "Coloque O(1), O(log n), O(n), O(n log n) e O(n²) em ordem de eficiência e dê um exemplo de cada uma na disciplina.",
+      "avaliacoes": [
+        "AV1",
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/BigOSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_13",
+      "nome": "TAD: valores e operações",
+      "tipo": "CONCEITUAL",
+      "unidade": "Tipos abstratos de dados",
+      "descricao": "Um Tipo Abstrato de Dados é um conjunto de valores mais um conjunto de operações sobre esses valores, descrito de forma matemática e independente de implementação. Tipos primitivos são atômicos e indivisíveis; tipos complexos são compostos de partes menores, como uma Data feita de dia, mês e ano.",
+      "ordem": 13,
+      "evidencia": [
+        "você domina se consegue definir TAD sem citar código",
+        "você domina se consegue classificar um tipo como primitivo ou complexo e justificar"
+      ],
+      "checagem": "O que exatamente compõe um TAD, e por que int é primitivo e Data é complexo?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Tipos abstratos de dados"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/TADSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_14",
+      "nome": "Interface versus implementação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Tipos abstratos de dados",
+      "descricao": "A interface diz o que pode ser feito com o tipo; a implementação diz como armazenar e como executar cada operação. Quem usa o TAD não precisa saber da implementação, e é por isso que cada estrutura da disciplina é apresentada primeiro pela interface.",
+      "ordem": 14,
+      "evidencia": [
+        "você domina se consegue separar, em uma classe, o que é interface e o que é implementação",
+        "você domina se consegue trocar a implementação de um TAD sem mudar quem o usa"
+      ],
+      "checagem": "Se uma pilha passa a ser implementada com lista encadeada em vez de array, o que muda para quem usa a pilha?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Tipos abstratos de dados"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/TADSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_15",
+      "nome": "TAD Lista sequencial: interface e complexidade",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Listas sequenciais",
+      "descricao": "A lista como TAD tem adicionar(e), adicionar_em(pos,e), recuperar(pos), remover(pos), pertence(e) e tamanho(). Implementada com array (a list do Python), o acesso por índice é O(1), inserir no fim é O(1) amortizado porque o array dobra de capacidade quando enche, e inserir ou remover no meio é O(n) por causa do deslocamento.",
+      "ordem": 15,
+      "evidencia": [
+        "você domina se consegue dizer o custo de cada operação da lista sequencial",
+        "você domina se consegue explicar o que significa O(1) amortizado no append"
+      ],
+      "checagem": "Por que acessar por índice é O(1) mas inserir no meio da lista sequencial é O(n)?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Visão geral das estruturas de dados"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ListasSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_16",
+      "nome": "Pilha (LIFO): push, pop e top",
+      "tipo": "CONCEITUAL",
+      "unidade": "Pilhas",
+      "descricao": "A pilha segue o princípio LIFO: o último a entrar é o primeiro a sair. A interface tem push(e) no topo, pop() que remove e devolve o topo, top() que só consulta, is_empty() e len(). Implementada com lista Python, todas as operações são O(1) amortizado.",
+      "ordem": 16,
+      "evidencia": [
+        "você domina se consegue simular uma sequência de push e pop e dizer o que sai em cada pop",
+        "você domina se consegue diferenciar pop() de top()",
+        "você domina se consegue dizer o que acontece ao chamar pop() em pilha vazia"
+      ],
+      "checagem": "Depois de push(5), push(3), pop(), push(2), o que está no topo e qual foi o valor devolvido pelo pop?",
+      "avaliacoes": [
+        "AV1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Pilhas"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/PilhasSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_17",
+      "nome": "Parênteses balanceados com pilha",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Pilhas",
+      "descricao": "O algoritmo is_matched percorre a expressão: símbolo que abre vai para o topo com push; símbolo que fecha exige que a pilha não esteja vazia e que o topo seja o par correspondente. No fim, a pilha precisa estar vazia para a expressão ser válida.",
+      "ordem": 17,
+      "evidencia": [
+        "você domina se consegue rodar o algoritmo à mão e apontar onde uma expressão inválida falha",
+        "você domina se consegue dizer por que a pilha é a estrutura certa para esse problema"
+      ],
+      "checagem": "Como a pilha detecta que a expressão ([)] está inválida?",
+      "avaliacoes": [
+        "AV1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Pilhas"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/PilhasSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_18",
+      "nome": "Pilha para voltar atrás",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Pilhas",
+      "descricao": "Onde a pilha aparece na prática: histórico do navegador (cada página nova vai ao topo, voltar faz pop), conversão de decimal para binário empilhando os restos da divisão por 2, avaliação de expressões pós-fixas e o labirinto do miniprojeto, em que se marca a casa visitada e se volta pela pilha ao entrar num caminho sem saída.",
+      "ordem": 18,
+      "evidencia": [
+        "você domina se consegue escolher a pilha quando o problema exige desfazer ou voltar",
+        "você domina se consegue converter um número para binário usando pilha",
+        "você domina se consegue explicar por que o labirinto precisa marcar casas visitadas"
+      ],
+      "checagem": "Por que a pilha é a estrutura natural para voltar atrás em um labirinto sem saída?",
+      "avaliacoes": [
+        "AV1",
+        "final",
+        "projeto"
+      ],
+      "ementaPPC": [
+        "Pilhas"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/blocks.ts"
+    },
+    {
+      "id": "mt_ESTD_19",
+      "nome": "Fila (FIFO): enqueue, dequeue e first",
+      "tipo": "CONCEITUAL",
+      "unidade": "Filas",
+      "descricao": "A fila segue o princípio FIFO: o primeiro a entrar é o primeiro a sair. A interface tem enqueue(e) no final, dequeue() que remove do início, first() que só consulta, is_empty() e len().",
+      "ordem": 19,
+      "evidencia": [
+        "você domina se consegue prever a saída de uma sequência de enqueue e dequeue",
+        "você domina se consegue diferenciar dequeue() de first()"
+      ],
+      "checagem": "Inserindo A, B, C em uma fila e removendo dois elementos, quem sai e nessa ordem por quê?",
+      "avaliacoes": [
+        "AV1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Filas"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/FilasSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_20",
+      "nome": "Fila com array circular",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Filas",
+      "descricao": "Em array simples, o dequeue exigiria deslocar todos os elementos e custaria O(n). Guardando os ponteiros ini e fim e avançando com ini = (ini + 1) % N, o ponteiro dá a volta no array, o espaço é reaproveitado e enqueue e dequeue ficam O(1).",
+      "ordem": 20,
+      "evidencia": [
+        "você domina se consegue escrever a fórmula do avanço circular e explicar o papel do módulo",
+        "você domina se consegue dizer por que sem array circular o dequeue seria O(n)"
+      ],
+      "checagem": "Qual é a fórmula que avança o início da fila circular depois de um dequeue e por que ela usa o resto da divisão?",
+      "avaliacoes": [
+        "AV1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Filas"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/FilasSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_21",
+      "nome": "Pilha versus fila",
+      "tipo": "CONCEITUAL",
+      "unidade": "Filas",
+      "descricao": "A mesma sequência de entrada produz saídas opostas: inserindo A, B, C, D, a fila devolve A, B, C (FIFO) e a pilha devolve D, C, B (LIFO). A fila serve a atendimento e busca em largura; a pilha serve a desfazer, call stack e busca em profundidade.",
+      "ordem": 21,
+      "evidencia": [
+        "você domina se consegue dizer o que resta na estrutura depois de três remoções em cada uma",
+        "você domina se consegue escolher entre pilha e fila a partir do enunciado do problema"
+      ],
+      "checagem": "Inserindo A, B, C, D e removendo três elementos, o que sai da fila e o que sai da pilha?",
+      "avaliacoes": [
+        "AV1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Filas"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/FilasSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_22",
+      "nome": "Coloração de regiões com fila",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Filas",
+      "descricao": "A imagem é uma matriz em que cada célula guarda a cor do pixel, e uma região é o conjunto de pontos conectados de mesma cor, considerando apenas os quatro vizinhos (as diagonais não contam). O algoritmo coloca o ponto inicial na fila e, enquanto ela não esvazia, remove um ponto, enfileira os vizinhos que ainda têm a cor original e repinta o ponto removido, o que impede o laço infinito.",
+      "ordem": 22,
+      "evidencia": [
+        "você domina se consegue listar os vizinhos conectados de um ponto (x, y)",
+        "você domina se consegue explicar por que repintar ao sair da fila evita laço infinito",
+        "você domina se consegue dizer o que muda ao trocar a fila por uma pilha"
+      ],
+      "checagem": "No algoritmo de coloração de regiões, quais pontos entram na fila e por que o algoritmo não entra em laço infinito?",
+      "avaliacoes": [
+        "AV1",
+        "final"
+      ],
+      "ementaPPC": [
+        "Filas"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/FilasSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_23",
+      "nome": "Deque: duas pontas em O(1)",
+      "tipo": "CONCEITUAL",
+      "unidade": "Deque",
+      "descricao": "O deque (double-ended queue) é a fila de dupla entrada: add_first, add_last, delete_first e delete_last, todas O(1), o que permite simular tanto pilha quanto fila. Em Python, collections.deque oferece appendleft e popleft para o início, append e pop para o fim, além de rotate(k) e maxlen; o acesso ao meio continua O(n).",
+      "ordem": 23,
+      "evidencia": [
+        "você domina se consegue mapear add_first e delete_first para os métodos do collections.deque",
+        "você domina se consegue usar o deque para verificar palíndromo",
+        "você domina se consegue dizer qual operação do deque não é O(1)"
+      ],
+      "checagem": "Quais quatro operações definem o deque e qual método do collections.deque corresponde a cada uma?",
+      "avaliacoes": [
+        "AV1"
+      ],
+      "ementaPPC": [
+        "Filas"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/DequeSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_24",
+      "nome": "Nó, head e inserção na cabeça",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Listas encadeadas",
+      "descricao": "Na lista encadeada os nós ficam espalhados na memória e são ligados por referências: cada nó guarda o dado e o _proximo, que é None no último. O head aponta para o primeiro nó e toda travessia começa nele; add(e) cria o nó, aponta seu _proximo para head e atualiza head, custando O(1).",
+      "ordem": 24,
+      "evidencia": [
+        "você domina se consegue desenhar a lista depois de três chamadas de add",
+        "você domina se consegue explicar por que a inserção na cabeça não percorre nada",
+        "você domina se consegue dizer como se representa a lista vazia"
+      ],
+      "checagem": "O que a classe Nó guarda e por que add() na cabeça é O(1)?",
+      "avaliacoes": [
+        "AV2",
+        "projeto"
+      ],
+      "ementaPPC": [
+        "Listas Encadeadas"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ListasEncadeadasSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_25",
+      "nome": "search e remove com o nó anterior",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Listas encadeadas",
+      "descricao": "Sem índice, size(), search(e) e remove(e) percorrem a lista nó a nó e custam O(n). A remoção precisa guardar a referência ao nó anterior para fazer anterior._proximo = no._proximo, e remover o head é caso especial: basta atualizar head.",
+      "ordem": 25,
+      "evidencia": [
+        "você domina se consegue implementar remove mantendo a referência ao anterior",
+        "você domina se consegue tratar a remoção do primeiro nó sem quebrar a lista"
+      ],
+      "checagem": "Por que a remoção em lista encadeada precisa da referência ao nó anterior, e o que muda ao remover o head?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Listas Encadeadas"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ListasEncadeadasSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_26",
+      "nome": "Lista encadeada versus lista sequencial",
+      "tipo": "CONCEITUAL",
+      "unidade": "Listas encadeadas",
+      "descricao": "O array dá acesso por índice em O(1) mas paga O(n) para inserir ou remover no início por causa do deslocamento; a lista encadeada faz o oposto, insere e remove no início em O(1) mas não tem acesso por índice, e gasta memória extra com a referência de cada nó.",
+      "ordem": 26,
+      "evidencia": [
+        "você domina se consegue escolher entre as duas a partir do padrão de acesso do problema",
+        "você domina se consegue justificar o custo de memória extra do nó"
+      ],
+      "checagem": "Em que situação a lista encadeada ganha do array, e em que situação perde?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Listas Encadeadas"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ListasEncadeadasSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_27",
+      "nome": "Lista encadeada ordenada",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Listas encadeadas",
+      "descricao": "Mantendo os elementos em ordem crescente, o add deixa de ser O(1): percorre guardando o anterior até achar o primeiro nó com dado maior que o novo e reencadeia anterior, novo e atual. O ganho está na busca malsucedida, que pode parar assim que aparece um valor maior, cortando as comparações pela metade em média. Os casos de borda são o item menor que todos (vira o novo head) e maior que todos (insere depois do último).",
+      "ordem": 27,
+      "evidencia": [
+        "você domina se consegue implementar a inserção ordenada tratando os dois casos de borda",
+        "você domina se consegue dizer o que melhora e o que não melhora ao ordenar a lista encadeada"
+      ],
+      "checagem": "O que a ordenação da lista encadeada melhora na busca, e por que a inserção fica mais cara?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Listas Encadeadas"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/blocks.ts"
+    },
+    {
+      "id": "mt_ESTD_28",
+      "nome": "Busca sequencial e contagem de comparações",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Pesquisa e busca",
+      "descricao": "A busca sequencial percorre elemento por elemento até achar o alvo ou chegar ao fim, e funciona em qualquer lista. Item presente custa 1 comparação no melhor caso, n no pior e n/2 em média; item ausente custa n sempre em lista não ordenada, mas cai para n/2 em média em lista ordenada, porque a busca para ao achar um valor maior. A técnica continua O(n) nos dois casos.",
+      "ordem": 28,
+      "evidencia": [
+        "você domina se consegue preencher a tabela de comparações para item presente e ausente",
+        "você domina se consegue explicar por que a lista ordenada muda a constante e não a classe"
+      ],
+      "checagem": "Quantas comparações em média a busca sequencial faz por um item ausente em lista ordenada, e por que difere da não ordenada?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/PesquisaSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_29",
+      "nome": "Busca binária em lista ordenada",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Pesquisa e busca",
+      "descricao": "A busca binária exige lista ordenada: compara o elemento do meio, calculado com (low + high) // 2, e descarta metade da lista a cada passo, seguindo a estratégia de dividir e conquistar. A versão iterativa mantém os índices low e high e termina quando low passa high.",
+      "ordem": 29,
+      "evidencia": [
+        "você domina se consegue rodar a busca binária à mão em uma lista de dez elementos",
+        "você domina se consegue dizer por que ela não funciona em lista desordenada"
+      ],
+      "checagem": "Qual é o pré-requisito da busca binária e o que ela faz depois de comparar o elemento do meio?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/PesquisaSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_30",
+      "nome": "Por que a busca binária é O(log n)",
+      "tipo": "CONCEITUAL",
+      "unidade": "Pesquisa e busca",
+      "descricao": "Se são necessárias i comparações até restar um único item, então n dividido por 2 elevado a i é igual a 1, ou seja 2 elevado a i é n e i é log n. Com um milhão de elementos, isso dá cerca de 20 comparações contra até um milhão da busca sequencial.",
+      "ordem": 30,
+      "evidencia": [
+        "você domina se consegue deduzir o log n a partir da divisão pela metade",
+        "você domina se consegue estimar as comparações necessárias para n = 1.000.000"
+      ],
+      "checagem": "Deduza por que dividir a lista pela metade a cada passo leva a O(log n) comparações.",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/PesquisaSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_31",
+      "nome": "Busca binária recursiva e o custo do slice",
+      "tipo": "META",
+      "unidade": "Pesquisa e busca",
+      "descricao": "A versão recursiva parece O(log n) em número de chamadas, mas se cada chamada passar uma fatia da lista, o slice copia elementos e custa O(k), e a análise deixa de valer. Passar os índices início e fim em vez de fatias preserva o O(log n).",
+      "ordem": 31,
+      "evidencia": [
+        "você domina se consegue apontar por que a versão com fatiamento não é O(log n)",
+        "você domina se consegue reescrever a recursão passando índices"
+      ],
+      "checagem": "Por que a busca binária recursiva escrita com lista[:meio] não é realmente O(log n)?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/PesquisaSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_32",
+      "nome": "Sequencial ou binária: quando cada uma serve",
+      "tipo": "META",
+      "unidade": "Pesquisa e busca",
+      "descricao": "A busca binária exige duas condições: lista ordenada e acesso por índice em O(1) para pegar o meio. A sequencial dispensa as duas, e por isso é a única opção em lista não ordenada e em lista encadeada, onde chegar ao meio já exigiria percorrer metade dos nós. O preço é continuar O(n).",
+      "ordem": 32,
+      "evidencia": [
+        "você domina se consegue justificar a escolha da busca a partir da estrutura de dados disponível",
+        "você domina se consegue explicar por que ordenar uma lista encadeada não habilita a busca binária"
+      ],
+      "checagem": "Diante de uma lista encadeada ordenada, qual busca você aplica e por quê?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/blocks.ts"
+    },
+    {
+      "id": "mt_ESTD_33",
+      "nome": "Função hash, slot e funções aritméticas",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Hashing",
+      "descricao": "A função hash mapeia uma chave para uma posição (slot) da tabela, com o objetivo de inserir e buscar em O(1). Uma boa função é rápida de calcular e distribui bem. As da aula: método do módulo (item % tamanho, de preferência primo), folding (quebra o item em pedaços iguais e soma) e mid-square (eleva ao quadrado e pega os dígitos do meio).",
+      "ordem": 33,
+      "evidencia": [
+        "você domina se consegue calcular o slot de um item pelos três métodos",
+        "você domina se consegue dizer por que a função hash perfeita não é construível para uma coleção qualquer"
+      ],
+      "checagem": "Calcule o slot de 44 em uma tabela de 11 posições pelo método do módulo e pelo mid-square.",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/HashingSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_34",
+      "nome": "Hash de string e colisão de anagramas",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Hashing",
+      "descricao": "Somar apenas os ord() dos caracteres faz todos os anagramas caírem no mesmo slot, porque a soma não depende da ordem. Ponderar cada caractere pela sua posição resolve, dando hashes diferentes para palavras com as mesmas letras.",
+      "ordem": 34,
+      "evidencia": [
+        "você domina se consegue mostrar numericamente que dois anagramas colidem na soma simples",
+        "você domina se consegue escrever a versão ponderada pela posição"
+      ],
+      "checagem": "Por que somar os ord() dos caracteres é uma função hash ruim para strings, e como corrigir?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/HashingSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_35",
+      "nome": "Colisão e fator de carga",
+      "tipo": "CONCEITUAL",
+      "unidade": "Hashing",
+      "descricao": "Colisão é quando dois itens diferentes vão para o mesmo slot, o que é inevitável quando há mais itens que posições. O fator de carga FC é itens dividido por tamanho da tabela: quanto maior o FC, mais colisão. O custo é O(1) sem colisão e cerca de O(1 + FC/2) com linear probing, degradando para O(n) no pior caso.",
+      "ordem": 35,
+      "evidencia": [
+        "você domina se consegue calcular o FC de uma tabela e interpretar o número",
+        "você domina se consegue ligar o FC ao custo esperado da busca"
+      ],
+      "checagem": "O que é o fator de carga de uma tabela hash com 8 itens em 11 slots e o que ele diz sobre o custo da busca?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/HashingSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_36",
+      "nome": "Resolução de colisões: probing e chaining",
+      "tipo": "CONCEITUAL",
+      "unidade": "Hashing",
+      "descricao": "No endereçamento aberto, o linear probing tenta (pos + 1) % tamanho até achar slot livre, mas sofre clustering; o quadratic probing usa incrementos 1, 4, 9, 16 para espalhar mais, ao custo de não garantir a visita a todos os slots. No chaining, cada slot referencia uma coleção de itens, sem limite de fator de carga, gastando memória extra.",
+      "ordem": 36,
+      "evidencia": [
+        "você domina se consegue simular a inserção de itens que colidem em cada método",
+        "você domina se consegue explicar o que é clustering e por que ele piora a busca"
+      ],
+      "checagem": "Dois itens caíram no slot 5: o que acontece com linear probing, com quadratic probing e com chaining?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/HashingSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_37",
+      "nome": "TAD Map e a HashTable da aula",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Hashing",
+      "descricao": "O TAD Map tem put(key, val), get(key), del, len() e o operador in: guarda pares chave e valor sem ordem definida. A HashTable da aula nasce com tamanho 11 e mantém duas listas paralelas, _slots com as chaves e _valores com os valores; put que encontra a mesma chave substitui o valor em vez de inserir de novo.",
+      "ordem": 37,
+      "evidencia": [
+        "você domina se consegue implementar put e get sobre as duas listas paralelas",
+        "você domina se consegue dizer o que a tabela hash não oferece que uma árvore de busca oferece"
+      ],
+      "checagem": "Quais operações formam o TAD Map e como a HashTable da aula guarda chave e valor?",
+      "avaliacoes": [
+        "AV2",
+        "projeto"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/HashingSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_38",
+      "nome": "Redimensionamento e rehashing",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Hashing",
+      "descricao": "Quando o fator de carga chega à faixa de 0,7 a 0,8, a tabela precisa crescer para um número primo próximo ao dobro do tamanho atual, e todos os itens precisam ser reinseridos com o hash recalculado, porque o slot depende do tamanho da tabela.",
+      "ordem": 38,
+      "evidencia": [
+        "você domina se consegue decidir, a partir do FC, se a tabela deve crescer",
+        "você domina se consegue explicar por que não basta copiar os itens para a tabela nova"
+      ],
+      "checagem": "Com 8 itens em uma tabela de 11 slots, é hora de redimensionar? E o que precisa ser feito com os itens já inseridos?",
+      "avaliacoes": [
+        "AV2",
+        "projeto"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/HashingSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_39",
+      "nome": "Bubble sort e a otimização com flag",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Ordenação",
+      "descricao": "O bubble sort compara pares adjacentes e troca quando estão fora de ordem; ao fim da primeira varredura o maior elemento já está na última posição. São da ordem de n² comparações, e a versão otimizada (shortBubbleSort) para quando uma varredura não faz nenhuma troca, chegando a O(n) na lista já ordenada.",
+      "ordem": 39,
+      "evidencia": [
+        "você domina se consegue dizer o conteúdo da lista após k varreduras",
+        "você domina se consegue explicar de onde vem o melhor caso O(n) da versão com flag"
+      ],
+      "checagem": "Depois de três varreduras do bubble sort, quais elementos já estão em posição definitiva e por quê?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/OrdenacaoSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_40",
+      "nome": "Selection sort",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Ordenação",
+      "descricao": "O selection sort faz uma única troca por varredura: procura o elemento extremo da parte não ordenada (na versão da aula, o maior) e o coloca na posição final. Como sempre faz o mesmo número de comparações do bubble, é O(n²) em qualquer entrada, sem melhor caso.",
+      "ordem": 40,
+      "evidencia": [
+        "você domina se consegue mostrar a lista após k varreduras na versão que busca o maior",
+        "você domina se consegue justificar por que não existe melhor caso O(n) aqui"
+      ],
+      "checagem": "Por que o selection sort é O(n²) mesmo quando a lista já está ordenada?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/OrdenacaoSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_41",
+      "nome": "Insertion sort",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Ordenação",
+      "descricao": "O insertion sort mantém a parte esquerda ordenada e insere cada novo elemento no lugar certo, deslocando os maiores para a direita, como quem organiza cartas na mão. É O(n²) no pior caso e O(n) quando a lista está quase ordenada.",
+      "ordem": 41,
+      "evidencia": [
+        "você domina se consegue reconhecer o insertion pela descrição do deslocamento",
+        "você domina se consegue dizer em que entrada ele é imbatível"
+      ],
+      "checagem": "Como o insertion sort coloca o novo elemento no lugar e em que entrada ele chega a O(n)?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/OrdenacaoSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_42",
+      "nome": "Shell sort",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Ordenação",
+      "descricao": "O shell sort quebra a lista em sublistas intercaladas a cada gap posições e ordena cada uma por inserção, diminuindo o gap até 1, quando vira um insertion tradicional sobre uma lista quase ordenada. Fica entre O(n) e O(n²), chegando a O(n elevado a 3/2) com incrementos 2 elevado a k menos 1.",
+      "ordem": 42,
+      "evidencia": [
+        "você domina se consegue montar as sublistas de um gap dado e ordená-las",
+        "você domina se consegue explicar por que o gap final 1 é obrigatório"
+      ],
+      "checagem": "Com gap 3 em uma lista de dez elementos, quais são as sublistas ordenadas e por que a lista ainda não fica ordenada?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/OrdenacaoSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_43",
+      "nome": "Merge sort",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Ordenação",
+      "descricao": "O merge sort divide a lista ao meio recursivamente até sobrarem listas de 0 ou 1 item e depois intercala as metades já ordenadas. É O(n log n) em qualquer entrada e estável, mas usa O(n) de espaço extra na intercalação.",
+      "ordem": 43,
+      "evidencia": [
+        "você domina se consegue desenhar a árvore de divisões e a intercalação de volta",
+        "você domina se consegue justificar o O(n log n) garantido e o custo de memória"
+      ],
+      "checagem": "Por que o merge sort é O(n log n) até no pior caso, e qual é o preço que ele paga por isso?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/OrdenacaoSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_44",
+      "nome": "Quick sort e mediana de três",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Ordenação",
+      "descricao": "O quick sort também divide e conquista, mas sem memória extra: com o pivô no primeiro elemento, leftmark avança até achar valor maior que o pivô e rightmark recua até achar valor menor, trocando os itens do lado errado até as marcas se cruzarem; a posição de rightmark é o split point, onde o pivô é colocado. É O(n log n) no caso médio e O(n²) quando o split point cai muito na ponta, risco que a mediana de três (primeiro, último e do meio) reduz.",
+      "ordem": 44,
+      "evidencia": [
+        "você domina se consegue executar um particionamento e apontar o split point",
+        "você domina se consegue explicar quando o quick sort degrada para O(n²)",
+        "você domina se consegue dizer o que a mediana de três resolve"
+      ],
+      "checagem": "O que é o split point no quick sort e por que a escolha do pivô muda a complexidade?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/OrdenacaoSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_45",
+      "nome": "Estabilidade e complexidade comparada",
+      "tipo": "META",
+      "unidade": "Ordenação",
+      "descricao": "Comparar os algoritmos por três eixos: tempo (bubble, selection e insertion em O(n²); shell entre O(n) e O(n²); merge sempre O(n log n); quick O(n log n) médio e O(n²) pior), espaço (só o merge usa O(n) extra) e estabilidade, que é preservar a ordem relativa de chaves iguais (bubble, insertion e merge são estáveis; selection e quick não). Python usa Timsort, híbrido de merge e insertion.",
+      "ordem": 45,
+      "evidencia": [
+        "você domina se consegue escolher o algoritmo certo dado o tamanho e o estado da entrada",
+        "você domina se consegue dizer quais algoritmos garantem O(n log n) no pior caso",
+        "você domina se consegue definir estabilidade e dar um exemplo de algoritmo instável"
+      ],
+      "checagem": "Quais algoritmos da disciplina garantem O(n log n) no pior caso, e qual deles é instável?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/sections/OrdenacaoSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_46",
+      "nome": "Limite inferior da ordenação por comparação",
+      "tipo": "CONCEITUAL",
+      "unidade": "Ordenação",
+      "descricao": "Com n números há n fatorial ordens possíveis e cada comparação divide as possibilidades em duas, então k comparações distinguem no máximo 2 elevado a k casos. Para 6 números, 2 elevado a 8 é 256, menor que 720, logo 8 comparações não bastam: o mínimo é 10.",
+      "ordem": 46,
+      "evidencia": [
+        "você domina se consegue calcular o mínimo de comparações para n elementos",
+        "você domina se consegue refutar a promessa de ordenar em menos comparações que o limite"
+      ],
+      "checagem": "Alguém diz que ordena 6 números com 8 comparações: como você prova que é impossível?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [],
+      "fonte": "ifal/src/content/estrutura-dados/data.ts"
+    },
+    {
+      "id": "mt_ESTD_47",
+      "nome": "Vocabulário da árvore e árvore binária",
+      "tipo": "CONCEITUAL",
+      "unidade": "Árvores: conceitos e representações",
+      "descricao": "A árvore é um tipo não linear e hierárquico, desenhado com a raiz no topo. O nó (ou vértice) tem uma chave e opcionalmente um payload; a aresta liga dois nós; a raiz é o único nó sem aresta de entrada; filhos, pai e irmãos vêm dessas ligações; folha é o nó sem filhos; caminho é a lista ordenada de nós ligados por arestas; nível é o número de arestas da raiz até o nó e altura é o maior nível da árvore. Grau é o número de filhos, e quando nenhum nó passa de dois a árvore é binária.",
+      "ordem": 47,
+      "evidencia": [
+        "você domina se consegue apontar raiz, folhas, nível de um nó e altura em um desenho",
+        "você domina se consegue dizer se uma árvore é binária a partir do grau dos nós"
+      ],
+      "checagem": "Em uma árvore desenhada, como você calcula o nível de um nó e a altura da árvore?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Árvores"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_48",
+      "nome": "Representações: lista de listas e nós com referências",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Árvores: conceitos e representações",
+      "descricao": "Uma árvore binária pode ser guardada como lista de listas, no formato [raiz, subárvore esquerda, subárvore direita], em que insertLeft empurra o filho antigo um nível para baixo; ou com nós e referências, uma classe com key, leftChild e rightChild em que cada filho é outra instância da mesma classe. A árvore binária completa também cabe em uma lista única, com os filhos do nó p em 2p e 2p+1 e o pai do nó n em n//2.",
+      "ordem": 48,
+      "evidencia": [
+        "você domina se consegue escrever a mesma árvore nas duas representações",
+        "você domina se consegue prever o efeito de insertLeft quando já existe filho à esquerda"
+      ],
+      "checagem": "Escreva a árvore de raiz a com filho esquerdo b nas duas representações vistas em aula.",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Árvores"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_49",
+      "nome": "Travessias pré, em e pós-ordem",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Árvores: conceitos e representações",
+      "descricao": "As três travessias recursivas: pré-ordem visita raiz, esquerda e direita; em-ordem visita esquerda, raiz e direita; pós-ordem visita esquerda, direita e raiz. Percorrer a árvore inteira é O(n), e a em-ordem em uma árvore de busca devolve as chaves em ordem crescente.",
+      "ordem": 49,
+      "evidencia": [
+        "você domina se consegue listar a saída das três travessias em uma árvore dada",
+        "você domina se consegue escolher a travessia certa para copiar, ordenar ou apagar a árvore"
+      ],
+      "checagem": "Qual das três travessias devolve as chaves de uma árvore de busca em ordem crescente e por quê?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Árvores"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_50",
+      "nome": "Parse tree: construção com pilha",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Árvores: conceitos e representações",
+      "descricao": "A árvore de análise representa uma expressão parentizada com operadores nos nós internos e operandos nas folhas. Lendo os tokens: abre parêntese cria filho esquerdo e desce; operador grava no nó atual, cria filho direito e desce; número grava no nó atual e volta ao pai; fecha parêntese volta ao pai. Como a interface só tem getLeftChild e getRightChild, é uma pilha que guarda os pais para permitir subir.",
+      "ordem": 50,
+      "evidencia": [
+        "você domina se consegue construir a árvore de (3+(4*5)) token por token",
+        "você domina se consegue explicar por que a construção precisa de uma pilha"
+      ],
+      "checagem": "Por que construir a árvore de análise exige uma pilha se a árvore já tem os ponteiros para os filhos?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Árvores"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_51",
+      "nome": "Parse tree: avaliação recursiva",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Árvores: conceitos e representações",
+      "descricao": "A avaliação é recursiva: se o nó tem os dois filhos, aplica o operador da raiz aos resultados da esquerda e da direita; se não tem, o nó é folha e o resultado é o próprio valor. A travessia em-ordem, colocando parênteses em torno de cada subárvore, devolve a expressão original.",
+      "ordem": 51,
+      "evidencia": [
+        "você domina se consegue avaliar uma árvore de expressão de baixo para cima",
+        "você domina se consegue reconstruir a expressão a partir da árvore"
+      ],
+      "checagem": "Como uma função recursiva avalia a árvore de ((7+3)*(5-2)) e onde está o caso base?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Árvores"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_52",
+      "nome": "Propriedade da BST",
+      "tipo": "CONCEITUAL",
+      "unidade": "Árvores de busca e heap",
+      "descricao": "Na árvore binária de busca, para cada nó toda chave menor fica na subárvore esquerda e toda chave maior fica na direita. É essa propriedade que permite descartar metade da árvore a cada comparação na descida.",
+      "ordem": 52,
+      "evidencia": [
+        "você domina se consegue dizer se uma árvore dada respeita a propriedade da BST",
+        "você domina se consegue inserir uma sequência de chaves e desenhar a árvore resultante"
+      ],
+      "checagem": "Qual é a propriedade que define uma árvore binária de busca e o que ela permite fazer na busca?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Árvores"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresBuscaSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_53",
+      "nome": "put, get e a sintaxe de dicionário",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Árvores de busca e heap",
+      "descricao": "put desce comparando a chave nova com a do nó atual até achar posição livre e cria o TreeNode com referência ao pai; get faz a mesma descida e devolve o payload, custando O(h). Os métodos especiais dão sintaxe de dicionário: __setitem__ chama put, __getitem__ chama get, __contains__ implementa o operador in e __iter__ percorre a árvore em-ordem com yield.",
+      "ordem": 53,
+      "evidencia": [
+        "você domina se consegue rastrear a descida do put para uma chave nova",
+        "você domina se consegue explicar qual método especial responde por arvore['chave'] = valor"
+      ],
+      "checagem": "Como o put decide para que lado descer, e qual método especial faz a árvore aceitar a sintaxe de dicionário?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Árvores"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresBuscaSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_54",
+      "nome": "Armadilha da chave duplicada",
+      "tipo": "META",
+      "unidade": "Árvores de busca e heap",
+      "descricao": "O algoritmo da aula manda a chave igual para o ramo direito e soma 1 ao tamanho, mas a busca para no primeiro nó que casa: o nó novo nunca seria encontrado e o len() passa a mentir. A saída é comparar a chave no put e substituir o valor antigo em vez de criar outro nó.",
+      "ordem": 54,
+      "evidencia": [
+        "você domina se consegue apontar o defeito do put quando a chave já existe",
+        "você domina se consegue propor a correção que preserva o comportamento de Map"
+      ],
+      "checagem": "O que acontece na BST da aula quando você insere duas vezes a mesma chave, e como corrigir?",
+      "avaliacoes": [
+        "AV2"
+      ],
+      "ementaPPC": [
+        "Árvores"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresBuscaSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_55",
+      "nome": "Remoção na BST e o sucessor",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Árvores de busca e heap",
+      "descricao": "A remoção tem três casos: nó folha, basta apagar a referência no pai; nó com um filho, promove-se o filho reencadeando pai e filho (ou usa-se replaceNodeData se for a raiz); nó com dois filhos, nenhum filho pode subir, então busca-se o sucessor, o nó com a próxima maior chave, que tem garantia de não ter mais de um filho, retira-se com spliceOut e coloca-se no lugar. O sucessor é a menor chave da subárvore direita (findMin descendo sempre à esquerda) ou, se não há filho direito e o nó é filho esquerdo, o próprio pai.",
+      "ordem": 55,
+      "evidencia": [
+        "você domina se consegue classificar um nó nos três casos antes de remover",
+        "você domina se consegue achar o sucessor de um nó em uma árvore desenhada",
+        "você domina se consegue explicar por que o sucessor nunca tem dois filhos"
+      ],
+      "checagem": "Como se remove um nó com dois filhos de uma BST e por que o sucessor é o substituto seguro?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Árvores"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresBuscaSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_56",
+      "nome": "Complexidade O(h) e BST degenerada",
+      "tipo": "CONCEITUAL",
+      "unidade": "Árvores de busca e heap",
+      "descricao": "Busca, inserção e remoção na BST custam O(h), onde h é a altura. Em árvore balanceada h fica próximo de log n; inserindo chaves em ordem crescente a árvore vira uma linha, h passa a ser n e as operações degradam para O(n).",
+      "ordem": 56,
+      "evidencia": [
+        "você domina se consegue prever a altura da árvore a partir da ordem de inserção",
+        "você domina se consegue dizer quando a BST perde para a tabela hash e quando ganha"
+      ],
+      "checagem": "Por que a busca em BST é O(log n) em um caso e O(n) em outro, se o algoritmo é o mesmo?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Árvores"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresBuscaSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_57",
+      "nome": "Fila de prioridade com binary heap",
+      "tipo": "CONCEITUAL",
+      "unidade": "Árvores de busca e heap",
+      "descricao": "Na fila de prioridade o dequeue continua saindo pela frente, mas a ordem interna é dada pela prioridade, não pela chegada. Implementada com lista, inserir custaria O(n) e manter ordenado O(n log n); com binary heap, enqueue e dequeue ficam O(log n). Há heap mínimo (menor chave na frente) e heap máximo.",
+      "ordem": 57,
+      "evidencia": [
+        "você domina se consegue diferenciar fila comum de fila de prioridade",
+        "você domina se consegue justificar por que a lista ordenada é uma implementação ruim"
+      ],
+      "checagem": "O que muda entre uma fila e uma fila de prioridade, e por que o heap é melhor que a lista aqui?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Filas"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresBuscaSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_58",
+      "nome": "Heap: propriedades e representação em lista",
+      "tipo": "REPRESENTACIONAL",
+      "unidade": "Árvores de busca e heap",
+      "descricao": "O heap tem duas propriedades. A estrutural: é árvore binária completa, equilibrada à esquerda e à direita exceto no último nível, e é isso que permite guardá-lo em uma lista única, com filhos do nó p em 2p e 2p+1 e pai do nó n em n//2. A de ordem: no heap mínimo, a chave do pai é menor ou igual à do filho, então o menor valor está sempre na raiz.",
+      "ordem": 58,
+      "evidencia": [
+        "você domina se consegue achar pai e filhos de uma posição sem desenhar a árvore",
+        "você domina se consegue dizer se uma lista dada é um heap válido"
+      ],
+      "checagem": "Em um heap guardado em lista, onde ficam os filhos do nó da posição p e onde fica o pai do nó n?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Árvores"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresBuscaSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_59",
+      "nome": "percUp e percDown",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Árvores de busca e heap",
+      "descricao": "Toda operação do heap primeiro preserva a estrutura e depois restaura a ordem. insert anexa a chave ao fim da lista e percUp compara com o pai em i//2, trocando enquanto for menor. delMin devolve a raiz, move o último item para a raiz e percDown desce trocando com o menor filho, obtido por minChild(i). Cada uma percorre no máximo log n níveis.",
+      "ordem": 59,
+      "evidencia": [
+        "você domina se consegue executar insert e delMin passo a passo sobre a lista",
+        "você domina se consegue dizer por que o percUp aparece no insert e o percDown no delMin"
+      ],
+      "checagem": "Qual é a sequência de passos ao inserir uma chave em um binary heap?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Árvores"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresBuscaSection.tsx"
+    },
+    {
+      "id": "mt_ESTD_60",
+      "nome": "buildHeap e heap sort",
+      "tipo": "PROCEDIMENTAL",
+      "unidade": "Árvores de busca e heap",
+      "descricao": "buildHeap monta o heap a partir da lista inteira aplicando percDown de trás para frente desde len(lista)//2, o que é melhor que inserir uma chave por vez. Construir o heap e extrair repetidamente o mínimo com delMin devolve os elementos em ordem crescente: é o heap sort, O(n log n) mesmo no pior caso, ao lado do merge sort.",
+      "ordem": 60,
+      "evidencia": [
+        "você domina se consegue montar um heap a partir de uma lista qualquer",
+        "você domina se consegue explicar por que o heap sort garante O(n log n) no pior caso"
+      ],
+      "checagem": "Como o binary heap é usado para ordenar uma lista e qual é a complexidade resultante?",
+      "avaliacoes": [
+        "AV2",
+        "final"
+      ],
+      "ementaPPC": [
+        "Árvores"
+      ],
+      "fonte": "ifal/src/content/estrutura-dados/sections/ArvoresBuscaSection.tsx"
+    }
+  ],
+  "arestas": [
+    {
+      "topicoId": "mt_ESTD_03",
+      "prerequisitoId": "mt_ESTD_01",
+      "forca": "soft",
+      "razao": "A string é um dos tipos primitivos apresentados, e é lá que aparece a ideia de sequência imutável.",
+      "origem": "texto",
+      "trecho": "Sequência imutável de caracteres Unicode. Pode usar aspas simples ou duplas."
+    },
+    {
+      "topicoId": "mt_ESTD_04",
+      "prerequisitoId": "mt_ESTD_03",
+      "forca": "soft",
+      "razao": "A lista reaproveita a indexação e o fatiamento já vistos na string, e contrasta com ela ponto por ponto: o que muda é a mutabilidade.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_ESTD_06",
+      "prerequisitoId": "mt_ESTD_05",
+      "forca": "hard",
+      "razao": "A pilha de chamadas só faz sentido depois de ver que cada chamada recursiva é uma nova execução, e o estouro de pilha é exatamente a falta de caso base.",
+      "origem": "texto",
+      "trecho": "Sem caso base adequado → recursão infinita → StackOverflow."
+    },
+    {
+      "topicoId": "mt_ESTD_07",
+      "prerequisitoId": "mt_ESTD_05",
+      "forca": "hard",
+      "razao": "Escrever a recorrência de um problema numérico é aplicar caso base mais redução; sem os dois ingredientes não há o que escrever.",
+      "origem": "texto",
+      "trecho": "Soma de 1 a n: soma_ateh(n) = n + soma_ateh(n-1), com caso base soma_ateh(0)=0."
+    },
+    {
+      "topicoId": "mt_ESTD_07",
+      "prerequisitoId": "mt_ESTD_02",
+      "forca": "soft",
+      "razao": "O algoritmo de Euclides é escrito com o operador de resto, então quem não domina % não acompanha a redução do problema.",
+      "origem": "texto",
+      "trecho": "A versão iterativa com while vira MDC(a, b) = MDC(b, a % b), com caso base b == 0 devolvendo a."
+    },
+    {
+      "topicoId": "mt_ESTD_08",
+      "prerequisitoId": "mt_ESTD_05",
+      "forca": "hard",
+      "razao": "O palíndromo recursivo é justamente o caso em que a redução consome duas pontas e obriga a ter dois casos base.",
+      "origem": "texto",
+      "trecho": "Precisa de DOIS casos base: string vazia (comprimento par) e de um caractere (ímpar)"
+    },
+    {
+      "topicoId": "mt_ESTD_08",
+      "prerequisitoId": "mt_ESTD_03",
+      "forca": "hard",
+      "razao": "A recursão em string é escrita com fatiamento: sem s[1:] não há como reduzir o problema.",
+      "origem": "texto",
+      "trecho": "inverte(s) = inverte(s[1:]) + s[0]. Caso base: string de 0 ou 1 caractere, que já é o próprio resultado."
+    },
+    {
+      "topicoId": "mt_ESTD_10",
+      "prerequisitoId": "mt_ESTD_09",
+      "forca": "hard",
+      "razao": "Falar de melhor, pior e caso médio pressupõe saber que a análise conta operações em função de n.",
+      "origem": "texto",
+      "trecho": "Descreve como o custo de um algoritmo cresce conforme a entrada n aumenta. Não mede segundos: mede a quantidade de operações relevantes (comparações, trocas, acessos)."
+    },
+    {
+      "topicoId": "mt_ESTD_11",
+      "prerequisitoId": "mt_ESTD_09",
+      "forca": "hard",
+      "razao": "Só se descarta constante depois de entender que o interesse é o crescimento com n, não o número exato de operações.",
+      "origem": "texto",
+      "trecho": "Big O descreve o crescimento assintótico: quando n aumenta, o termo de maior grau domina."
+    },
+    {
+      "topicoId": "mt_ESTD_12",
+      "prerequisitoId": "mt_ESTD_11",
+      "forca": "hard",
+      "razao": "As classes são o resultado do descarte de constantes: sem simplificar a contagem não se chega a O(n²) nem a O(n log n).",
+      "origem": "texto",
+      "trecho": "para n grande, o termo n² domina e os fatores constantes deixam de importar."
+    },
+    {
+      "topicoId": "mt_ESTD_13",
+      "prerequisitoId": "mt_ESTD_01",
+      "forca": "soft",
+      "razao": "A definição de tipo primitivo como algo atômico usa exatamente os tipos já vistos em Python.",
+      "origem": "texto",
+      "trecho": "Tipos primitivos (int, float, bool, char) são atômicos, não decomponíveis."
+    },
+    {
+      "topicoId": "mt_ESTD_14",
+      "prerequisitoId": "mt_ESTD_13",
+      "forca": "hard",
+      "razao": "A separação entre interface e implementação é uma propriedade do TAD: sem a definição de TAD não há o que separar.",
+      "origem": "texto",
+      "trecho": "TAD separa interface (o que pode ser feito) da implementação (como é feito)."
+    },
+    {
+      "topicoId": "mt_ESTD_15",
+      "prerequisitoId": "mt_ESTD_13",
+      "forca": "hard",
+      "razao": "A lista é apresentada como TAD, pela interface, antes de qualquer código.",
+      "origem": "texto",
+      "trecho": "Interface da lista como TAD: adicionar(e), adicionar_em(pos,e), recuperar(pos), remover(pos), pertence(e), tamanho()."
+    },
+    {
+      "topicoId": "mt_ESTD_15",
+      "prerequisitoId": "mt_ESTD_04",
+      "forca": "hard",
+      "razao": "A implementação da lista sequencial é a própria list do Python, inclusive o crescimento que gera o custo amortizado.",
+      "origem": "texto",
+      "trecho": "Alocação dinâmica em Python: a list cresce automaticamente quando necessário, dobrando a capacidade"
+    },
+    {
+      "topicoId": "mt_ESTD_15",
+      "prerequisitoId": "mt_ESTD_12",
+      "forca": "hard",
+      "razao": "A tabela de custos da lista só é legível para quem já sabe ler O(1) e O(n).",
+      "origem": "texto",
+      "trecho": "Inserção em posição i: O(n) por deslocamento dos elementos."
+    },
+    {
+      "topicoId": "mt_ESTD_16",
+      "prerequisitoId": "mt_ESTD_14",
+      "forca": "soft",
+      "razao": "A pilha é ensinada primeiro pela interface e só depois pela implementação, seguindo o método do TAD.",
+      "origem": "texto",
+      "trecho": "Cada estrutura é apresentada como TAD: primeiro a interface, depois a implementação."
+    },
+    {
+      "topicoId": "mt_ESTD_16",
+      "prerequisitoId": "mt_ESTD_04",
+      "forca": "soft",
+      "razao": "A implementação da aula guarda os elementos em uma lista Python, então o custo O(1) amortizado vem do append.",
+      "origem": "texto",
+      "trecho": "Classe PilhaArray usa lista Python internamente."
+    },
+    {
+      "topicoId": "mt_ESTD_17",
+      "prerequisitoId": "mt_ESTD_16",
+      "forca": "hard",
+      "razao": "O algoritmo de balanceamento é escrito em cima de push, pop e top: sem a pilha não existe algoritmo.",
+      "origem": "texto",
+      "trecho": "Algoritmo is_matched(): percorre a expressão; abre colchete → push; fecha colchete → se vazia ou top não corresponde → false."
+    },
+    {
+      "topicoId": "mt_ESTD_18",
+      "prerequisitoId": "mt_ESTD_16",
+      "forca": "hard",
+      "razao": "Todas essas aplicações são leituras do comportamento LIFO, que precisa estar dominado antes.",
+      "origem": "texto",
+      "trecho": "Browser usa pilha para o botão Voltar. Cada página nova vai para o topo; voltar faz pop."
+    },
+    {
+      "topicoId": "mt_ESTD_18",
+      "prerequisitoId": "mt_ESTD_06",
+      "forca": "soft",
+      "razao": "A pilha de chamadas vista na recursividade é o exemplo pronto de aplicação da pilha, e o labirinto usa o mesmo retorno.",
+      "origem": "texto",
+      "trecho": "Cada chamada recursiva abre um frame na pilha de chamadas do SO. O retorno desempilha na ordem inversa."
+    },
+    {
+      "topicoId": "mt_ESTD_18",
+      "prerequisitoId": "mt_ESTD_02",
+      "forca": "soft",
+      "razao": "A conversão para binário empilha os restos das divisões sucessivas por 2, então depende do operador de resto.",
+      "origem": "texto",
+      "trecho": "Divide o número por 2 repetidamente e empilha os restos."
+    },
+    {
+      "topicoId": "mt_ESTD_19",
+      "prerequisitoId": "mt_ESTD_14",
+      "forca": "soft",
+      "razao": "A fila também é apresentada como TAD, pela interface das operações, antes da implementação.",
+      "origem": "texto",
+      "trecho": "Interface: enqueue(e) insere no final, dequeue() remove do início, first() consulta sem remover"
+    },
+    {
+      "topicoId": "mt_ESTD_20",
+      "prerequisitoId": "mt_ESTD_19",
+      "forca": "hard",
+      "razao": "O array circular é a implementação da fila: só faz sentido depois de saber o que enqueue e dequeue devem fazer.",
+      "origem": "texto",
+      "trecho": "Implementação com array circular (FilaArray) evita o O(n) de deslocar elementos: mantém ponteiros ini e fim."
+    },
+    {
+      "topicoId": "mt_ESTD_20",
+      "prerequisitoId": "mt_ESTD_02",
+      "forca": "hard",
+      "razao": "A fórmula do avanço circular é aritmética de resto: sem entender % o aluno não entende por que o ponteiro dá a volta.",
+      "origem": "texto",
+      "trecho": "Fórmula: ini = (ini + 1) % N (avança de forma circular)"
+    },
+    {
+      "topicoId": "mt_ESTD_21",
+      "prerequisitoId": "mt_ESTD_16",
+      "forca": "hard",
+      "razao": "A comparação é entre as duas estruturas, então exige a pilha já dominada.",
+      "origem": "texto",
+      "trecho": "A fila é FIFO: sai quem chegou primeiro (A, B, C), restando D. A pilha é LIFO: sai o topo (D, C, B), restando A."
+    },
+    {
+      "topicoId": "mt_ESTD_21",
+      "prerequisitoId": "mt_ESTD_19",
+      "forca": "hard",
+      "razao": "A comparação é entre as duas estruturas, então exige a fila já dominada.",
+      "origem": "texto",
+      "trecho": "Princípio FIFO - First In, First Out (primeiro a entrar, primeiro a sair)"
+    },
+    {
+      "topicoId": "mt_ESTD_22",
+      "prerequisitoId": "mt_ESTD_19",
+      "forca": "hard",
+      "razao": "O algoritmo de coloração é escrito em cima de uma fila: o ponto inicial entra nela e o laço roda até ela esvaziar.",
+      "origem": "texto",
+      "trecho": "colocar P0 numa fila F vazia; enquanto F não esvaziar, remover um ponto P, inserir em F todos os pontos conectados a P cuja cor seja C0 e alterar a cor de P para C1"
+    },
+    {
+      "topicoId": "mt_ESTD_22",
+      "prerequisitoId": "mt_ESTD_21",
+      "forca": "soft",
+      "razao": "Entender que trocar a fila por pilha muda a ordem de visita, e não o resultado, exige o contraste FIFO contra LIFO já feito.",
+      "origem": "texto",
+      "trecho": "Com pilha o efeito seria de busca em profundidade: o resultado final é o mesmo, mas a ordem de visita muda."
+    },
+    {
+      "topicoId": "mt_ESTD_23",
+      "prerequisitoId": "mt_ESTD_19",
+      "forca": "hard",
+      "razao": "O deque é definido como generalização da fila: sem FIFO não se entende o que significa liberar as duas pontas.",
+      "origem": "texto",
+      "trecho": "DEQUE (Double-Ended Queue): Fila de dupla entrada - inserção e remoção nas duas extremidades."
+    },
+    {
+      "topicoId": "mt_ESTD_23",
+      "prerequisitoId": "mt_ESTD_16",
+      "forca": "soft",
+      "razao": "O deque é apresentado como estrutura que simula pilha e fila, então o valor dele aparece contra as duas.",
+      "origem": "texto",
+      "trecho": "Pode simular tanto pilha quanto fila."
+    },
+    {
+      "topicoId": "mt_ESTD_24",
+      "prerequisitoId": "mt_ESTD_04",
+      "forca": "soft",
+      "razao": "O nó aponta para outro nó por referência, que é a mesma ideia de dois nomes para o mesmo objeto vista no aliasing.",
+      "origem": "texto",
+      "trecho": "Nós distribuídos na memória, ligados por referências (ponteiros)."
+    },
+    {
+      "topicoId": "mt_ESTD_24",
+      "prerequisitoId": "mt_ESTD_12",
+      "forca": "soft",
+      "razao": "O ganho da inserção na cabeça é enunciado em Big O, então o aluno precisa saber ler O(1).",
+      "origem": "texto",
+      "trecho": "add(e): cria novo nó, aponta seu _proximo para head, atualiza head para o novo nó → O(1)"
+    },
+    {
+      "topicoId": "mt_ESTD_25",
+      "prerequisitoId": "mt_ESTD_24",
+      "forca": "hard",
+      "razao": "Percorrer e reencadear exige saber o que é o nó, o campo _proximo e o head.",
+      "origem": "texto",
+      "trecho": "remove(e): percorre mantendo referência ao nó anterior para reencadear após remover → O(n)"
+    },
+    {
+      "topicoId": "mt_ESTD_26",
+      "prerequisitoId": "mt_ESTD_24",
+      "forca": "hard",
+      "razao": "A comparação parte de como a lista encadeada guarda os dados, sem contiguidade e sem índice.",
+      "origem": "texto",
+      "trecho": "Nós distribuídos na memória, ligados por referências (ponteiros)."
+    },
+    {
+      "topicoId": "mt_ESTD_26",
+      "prerequisitoId": "mt_ESTD_15",
+      "forca": "hard",
+      "razao": "O outro lado da comparação é a lista sequencial e seus custos, que precisam estar sabidos.",
+      "origem": "texto",
+      "trecho": "Implementação com array (lista Python): acesso por índice O(1)."
+    },
+    {
+      "topicoId": "mt_ESTD_27",
+      "prerequisitoId": "mt_ESTD_25",
+      "forca": "hard",
+      "razao": "A inserção ordenada é a mesma técnica do remove, percorrer guardando o nó anterior, agora usada para reencadear no meio.",
+      "origem": "texto",
+      "trecho": "O add() deixa de ser O(1): percorre guardando referência ao nó anterior até achar o primeiro nó com dado MAIOR que o novo"
+    },
+    {
+      "topicoId": "mt_ESTD_28",
+      "prerequisitoId": "mt_ESTD_10",
+      "forca": "hard",
+      "razao": "A tabela de comparações da busca sequencial é o exercício de melhor, pior e caso médio.",
+      "origem": "texto",
+      "trecho": "Na busca sequencial: 1 comparação no melhor caso, n no pior, n/2 em média."
+    },
+    {
+      "topicoId": "mt_ESTD_28",
+      "prerequisitoId": "mt_ESTD_15",
+      "forca": "soft",
+      "razao": "A busca sequencial é a implementação da operação pertence(e) da lista já estudada.",
+      "origem": "texto",
+      "trecho": "Verifica se e está na lista. O(n) - busca sequencial."
+    },
+    {
+      "topicoId": "mt_ESTD_29",
+      "prerequisitoId": "mt_ESTD_03",
+      "forca": "hard",
+      "razao": "A busca binária depende de pegar o elemento do meio por índice, o que pressupõe indexação de sequência.",
+      "origem": "texto",
+      "trecho": "Calcula mid = (low + high) // 2"
+    },
+    {
+      "topicoId": "mt_ESTD_29",
+      "prerequisitoId": "mt_ESTD_28",
+      "forca": "soft",
+      "razao": "A binária é ensinada em contraste com a sequencial, mostrando o que se ganha ao exigir lista ordenada.",
+      "origem": "texto",
+      "trecho": "Compara o elemento do meio. Se menor, descarta metade direita; se maior, descarta metade esquerda. O(log n). Exige lista ordenada."
+    },
+    {
+      "topicoId": "mt_ESTD_30",
+      "prerequisitoId": "mt_ESTD_29",
+      "forca": "hard",
+      "razao": "A dedução do log n é sobre o próprio mecanismo de dividir a lista pela metade a cada comparação.",
+      "origem": "texto",
+      "trecho": "Se são necessárias i comparações até restar um único item, então n/2ⁱ = 1, ou seja, 2ⁱ = n e i = log n."
+    },
+    {
+      "topicoId": "mt_ESTD_30",
+      "prerequisitoId": "mt_ESTD_12",
+      "forca": "hard",
+      "razao": "Sem a classe logarítmica no repertório, o resultado da dedução não significa nada para o aluno.",
+      "origem": "texto",
+      "trecho": "A cada passo o problema cai pela metade. Busca binária e as operações de uma BST balanceada."
+    },
+    {
+      "topicoId": "mt_ESTD_31",
+      "prerequisitoId": "mt_ESTD_29",
+      "forca": "hard",
+      "razao": "A armadilha é sobre a implementação recursiva da própria busca binária.",
+      "origem": "texto",
+      "trecho": "se a recursão passar uma fatia (lista[:meio]) em vez de índices, cada chamada copia elementos e custa O(k)"
+    },
+    {
+      "topicoId": "mt_ESTD_31",
+      "prerequisitoId": "mt_ESTD_03",
+      "forca": "hard",
+      "razao": "O erro está no custo do fatiamento: quem acha que slice é gratuito não vê o problema.",
+      "origem": "texto",
+      "trecho": "O problema é o operador de fatiamento: lista[:meio] não é O(1), e sim O(k), porque copia elementos."
+    },
+    {
+      "topicoId": "mt_ESTD_31",
+      "prerequisitoId": "mt_ESTD_05",
+      "forca": "soft",
+      "razao": "A discussão só existe na versão recursiva do algoritmo, escrita com caso base e redução.",
+      "origem": "texto",
+      "trecho": "Compara o elemento do meio e chama recursivamente na metade relevante: O(log n) em número de chamadas."
+    },
+    {
+      "topicoId": "mt_ESTD_32",
+      "prerequisitoId": "mt_ESTD_29",
+      "forca": "hard",
+      "razao": "A decisão compara as duas técnicas, então exige conhecer as condições que a binária impõe.",
+      "origem": "texto",
+      "trecho": "A busca binária exige lista ordenada E acesso por índice em O(1) para pegar o meio. A sequencial dispensa as duas condições"
+    },
+    {
+      "topicoId": "mt_ESTD_32",
+      "prerequisitoId": "mt_ESTD_27",
+      "forca": "hard",
+      "razao": "O caso decisivo da escolha é a lista encadeada ordenada, em que a ordem existe mas o acesso por índice não.",
+      "origem": "texto",
+      "trecho": "A busca continua O(n). Não dá para aplicar busca binária numa lista encadeada, porque não existe acesso por índice em O(1)"
+    },
+    {
+      "topicoId": "mt_ESTD_32",
+      "prerequisitoId": "mt_ESTD_28",
+      "forca": "soft",
+      "razao": "O outro lado da escolha é a busca sequencial e o preço que ela cobra, o O(n).",
+      "origem": "texto",
+      "trecho": "As vantagens são não exigir ordenação prévia e funcionar onde não há acesso por índice, como na lista encadeada."
+    },
+    {
+      "topicoId": "mt_ESTD_33",
+      "prerequisitoId": "mt_ESTD_02",
+      "forca": "hard",
+      "razao": "A função hash mais usada é o resto da divisão pelo tamanho da tabela.",
+      "origem": "texto",
+      "trecho": "hash(item) = item % tamanho_tabela. Simples e eficiente. Ex: 44 % 11 = 0. Prefira tamanho primo."
+    },
+    {
+      "topicoId": "mt_ESTD_33",
+      "prerequisitoId": "mt_ESTD_12",
+      "forca": "soft",
+      "razao": "O hashing é apresentado como o caminho para o O(1), então o objetivo só se entende com as classes na mão.",
+      "origem": "texto",
+      "trecho": "HASHING: Objetivo: busca e inserção em O(1)."
+    },
+    {
+      "topicoId": "mt_ESTD_34",
+      "prerequisitoId": "mt_ESTD_33",
+      "forca": "hard",
+      "razao": "O hash de string é um caso particular de função hash, e o problema aparece ao mapear para slots.",
+      "origem": "texto",
+      "trecho": "Hash para strings: somar apenas os ord() faz anagramas colidirem"
+    },
+    {
+      "topicoId": "mt_ESTD_35",
+      "prerequisitoId": "mt_ESTD_33",
+      "forca": "hard",
+      "razao": "Colisão é o que acontece quando a função hash manda dois itens para o mesmo slot, e o fator de carga mede a pressão sobre a tabela.",
+      "origem": "texto",
+      "trecho": "Fator de carga FC = itens/tamanho_tabela (0 ≤ FC ≤ 1). Colisão: dois itens mapeados para o mesmo slot."
+    },
+    {
+      "topicoId": "mt_ESTD_36",
+      "prerequisitoId": "mt_ESTD_35",
+      "forca": "hard",
+      "razao": "Só se resolve colisão depois de saber o que ela é e por que o fator de carga a torna inevitável.",
+      "origem": "texto",
+      "trecho": "Resolução de colisões: linear probing com rehash(pos) = (pos+1)%tamanho (sofre clustering), quadratic probing (incrementos 1, 4, 9, 16), chaining"
+    },
+    {
+      "topicoId": "mt_ESTD_36",
+      "prerequisitoId": "mt_ESTD_24",
+      "forca": "hard",
+      "razao": "No chaining cada slot guarda uma lista encadeada, então a estrutura precisa estar dominada antes.",
+      "origem": "texto",
+      "trecho": "Cada slot é uma lista encadeada. Sem limite de FC."
+    },
+    {
+      "topicoId": "mt_ESTD_37",
+      "prerequisitoId": "mt_ESTD_13",
+      "forca": "hard",
+      "razao": "Map é apresentado como TAD, com um conjunto de operações independente da tabela hash que o implementa.",
+      "origem": "texto",
+      "trecho": "TAD Map: put(key,val), get(key), del key, len(), in"
+    },
+    {
+      "topicoId": "mt_ESTD_37",
+      "prerequisitoId": "mt_ESTD_33",
+      "forca": "hard",
+      "razao": "A HashTable é a implementação do Map, e put e get são a função hash aplicada às listas paralelas.",
+      "origem": "texto",
+      "trecho": "a classe HashTable da aula nasce com _tamanho = 11 e mantém as listas paralelas _slots e _valores"
+    },
+    {
+      "topicoId": "mt_ESTD_38",
+      "prerequisitoId": "mt_ESTD_35",
+      "forca": "hard",
+      "razao": "O gatilho do redimensionamento é o valor do fator de carga.",
+      "origem": "texto",
+      "trecho": "o professor pede redimensionamento quando o FC fica entre 0,7 e 0,8, aumentando a tabela para um primo próximo ao dobro e refazendo o hash de todos os itens"
+    },
+    {
+      "topicoId": "mt_ESTD_38",
+      "prerequisitoId": "mt_ESTD_37",
+      "forca": "soft",
+      "razao": "O rehashing é feito sobre a tabela do miniprojeto, que é a HashTable implementada pelo aluno.",
+      "origem": "texto",
+      "trecho": "exige redimensionamento quando o FC fica entre 0,7 e 0,8, para um primo próximo ao dobro do tamanho, com rehashing de todos os itens; não é permitido usar dicionário do Python"
+    },
+    {
+      "topicoId": "mt_ESTD_39",
+      "prerequisitoId": "mt_ESTD_04",
+      "forca": "hard",
+      "razao": "Todos os algoritmos de ordenação da disciplina trocam elementos na própria lista Python, por índice.",
+      "origem": "texto",
+      "trecho": "Listas podem ser modificadas no lugar. lista[0] = 99 funciona normalmente."
+    },
+    {
+      "topicoId": "mt_ESTD_39",
+      "prerequisitoId": "mt_ESTD_11",
+      "forca": "soft",
+      "razao": "Fechar que o bubble é O(n²) exige somar as comparações e descartar constantes e termo de menor grau.",
+      "origem": "inferido",
+      "trecho": ""
+    },
+    {
+      "topicoId": "mt_ESTD_40",
+      "prerequisitoId": "mt_ESTD_39",
+      "forca": "soft",
+      "razao": "O selection é apresentado como melhoria do bubble: uma troca por varredura em vez de várias.",
+      "origem": "texto",
+      "trecho": "Selection sort: melhora o bubble fazendo uma única troca por varredura"
+    },
+    {
+      "topicoId": "mt_ESTD_41",
+      "prerequisitoId": "mt_ESTD_04",
+      "forca": "hard",
+      "razao": "O insertion insere deslocando os maiores para a direita dentro da própria lista, o que só é possível porque a lista é mutável e indexada.",
+      "origem": "texto",
+      "trecho": "Listas podem ser modificadas no lugar. lista[0] = 99 funciona normalmente."
+    },
+    {
+      "topicoId": "mt_ESTD_42",
+      "prerequisitoId": "mt_ESTD_41",
+      "forca": "hard",
+      "razao": "O shell é literalmente o insertion aplicado a sublistas intercaladas, e termina com um insertion sobre lista quase ordenada.",
+      "origem": "texto",
+      "trecho": "Shell sort: melhora o insertion quebrando a lista em sublistas intercaladas a cada 'gap' posições, com o gap diminuindo até 1"
+    },
+    {
+      "topicoId": "mt_ESTD_43",
+      "prerequisitoId": "mt_ESTD_05",
+      "forca": "hard",
+      "razao": "O merge sort é definido por recursão: divide ao meio até o caso base de 0 ou 1 item.",
+      "origem": "texto",
+      "trecho": "Merge sort: divide ao meio recursivamente até listas de 0 ou 1 item e depois intercala as metades ordenadas"
+    },
+    {
+      "topicoId": "mt_ESTD_43",
+      "prerequisitoId": "mt_ESTD_12",
+      "forca": "soft",
+      "razao": "O argumento a favor do merge é a classe O(n log n) garantida, que precisa estar no repertório.",
+      "origem": "texto",
+      "trecho": "Padrão dos algoritmos de ordenação eficientes: merge sort (sempre) e quick sort (caso médio)."
+    },
+    {
+      "topicoId": "mt_ESTD_44",
+      "prerequisitoId": "mt_ESTD_05",
+      "forca": "hard",
+      "razao": "O quick sort também é recursivo: particiona e chama a si mesmo nos dois lados do split point.",
+      "origem": "texto",
+      "trecho": "Quick sort: também divide e conquista, mas sem armazenamento adicional"
+    },
+    {
+      "topicoId": "mt_ESTD_44",
+      "prerequisitoId": "mt_ESTD_43",
+      "forca": "soft",
+      "razao": "O quick é apresentado como o outro divide e conquista, o que dispensa o espaço extra do merge.",
+      "origem": "texto",
+      "trecho": "Quick sort: também divide e conquista, mas sem armazenamento adicional"
+    },
+    {
+      "topicoId": "mt_ESTD_45",
+      "prerequisitoId": "mt_ESTD_12",
+      "forca": "hard",
+      "razao": "A comparação entre algoritmos é feita na linguagem das classes de crescimento.",
+      "origem": "texto",
+      "trecho": "Laço dentro de laço. Bubble, selection e insertion sort."
+    },
+    {
+      "topicoId": "mt_ESTD_45",
+      "prerequisitoId": "mt_ESTD_43",
+      "forca": "soft",
+      "razao": "O merge é a referência de O(n log n) garantido na tabela comparativa.",
+      "origem": "texto",
+      "trecho": "Merge sort é O(n log n) em todos os casos. Bubble sort é O(n²) no pior/médio caso"
+    },
+    {
+      "topicoId": "mt_ESTD_45",
+      "prerequisitoId": "mt_ESTD_44",
+      "forca": "soft",
+      "razao": "O quick é a pegadinha da tabela: médio contra pior caso.",
+      "origem": "texto",
+      "trecho": "A pegadinha é o quick sort: ele é O(n log n) no caso médio, mas O(n²) no pior."
+    },
+    {
+      "topicoId": "mt_ESTD_46",
+      "prerequisitoId": "mt_ESTD_45",
+      "forca": "soft",
+      "razao": "O limite inferior vale para ordenação por comparação, categoria que só faz sentido depois de ver os algoritmos comparativos.",
+      "origem": "texto",
+      "trecho": "São 6! = 720 ordens possíveis e cada comparação separa os casos em dois, então são necessárias pelo menos 10 comparações"
+    },
+    {
+      "topicoId": "mt_ESTD_47",
+      "prerequisitoId": "mt_ESTD_24",
+      "forca": "soft",
+      "razao": "O aluno já viu nó ligado por referência na lista encadeada; a árvore reaproveita a ideia e acrescenta hierarquia.",
+      "origem": "texto",
+      "trecho": "nó (node) é a parte fundamental, tem um nome chamado chave e opcionalmente um conteúdo (payload), também é chamado vértice"
+    },
+    {
+      "topicoId": "mt_ESTD_48",
+      "prerequisitoId": "mt_ESTD_47",
+      "forca": "hard",
+      "razao": "As representações são formas de guardar raiz, filhos e subárvores, termos definidos no vocabulário.",
+      "origem": "texto",
+      "trecho": "Representação com nós e referências: classe com key, leftChild e rightChild, em que os filhos são outras instâncias da própria classe."
+    },
+    {
+      "topicoId": "mt_ESTD_48",
+      "prerequisitoId": "mt_ESTD_04",
+      "forca": "hard",
+      "razao": "A representação em lista de listas depende de saber que lista Python aceita listas dentro de listas.",
+      "origem": "texto",
+      "trecho": "Listas podem conter tipos mistos e ser aninhadas."
+    },
+    {
+      "topicoId": "mt_ESTD_49",
+      "prerequisitoId": "mt_ESTD_48",
+      "forca": "hard",
+      "razao": "A travessia percorre leftChild e rightChild, ou seja, opera sobre a representação escolhida.",
+      "origem": "texto",
+      "trecho": "Travessias recursivas: pré-ordem (raiz→esq→dir), em-ordem (esq→raiz→dir), pós-ordem (esq→dir→raiz)"
+    },
+    {
+      "topicoId": "mt_ESTD_49",
+      "prerequisitoId": "mt_ESTD_05",
+      "forca": "hard",
+      "razao": "As três travessias são definidas recursivamente, com a subárvore vazia como caso base.",
+      "origem": "texto",
+      "trecho": "As três travessias de árvore, a avaliação da árvore de análise, o merge sort e o quick sort são todos definidos recursivamente, e todos caem na AV2."
+    },
+    {
+      "topicoId": "mt_ESTD_50",
+      "prerequisitoId": "mt_ESTD_48",
+      "forca": "hard",
+      "razao": "A construção manipula a árvore por getLeftChild e getRightChild, a interface da representação com nós e referências.",
+      "origem": "texto",
+      "trecho": "Como a interface só tem getLeftChild e getRightChild, usa-se uma PILHA para guardar os pais durante a construção."
+    },
+    {
+      "topicoId": "mt_ESTD_50",
+      "prerequisitoId": "mt_ESTD_16",
+      "forca": "hard",
+      "razao": "É a pilha que guarda os pais para permitir subir na árvore, já que não há ponteiro para o pai.",
+      "origem": "texto",
+      "trecho": "A interface da árvore tem getLeftChild e getRightChild, mas não tem ponteiro para o pai. A solução do professor é empilhar o nó atual antes de descer e desempilhar para subir."
+    },
+    {
+      "topicoId": "mt_ESTD_51",
+      "prerequisitoId": "mt_ESTD_50",
+      "forca": "hard",
+      "razao": "Só se avalia a expressão depois de ter a árvore montada a partir dos tokens.",
+      "origem": "texto",
+      "trecho": "A expressão é avaliada por recursão: se o nó tem os dois filhos, aplica o operador da raiz aos resultados de esquerda e direita"
+    },
+    {
+      "topicoId": "mt_ESTD_51",
+      "prerequisitoId": "mt_ESTD_49",
+      "forca": "soft",
+      "razao": "Recuperar a expressão original é a travessia em-ordem com parênteses.",
+      "origem": "texto",
+      "trecho": "A travessia em-ordem com parênteses recupera a expressão original."
+    },
+    {
+      "topicoId": "mt_ESTD_52",
+      "prerequisitoId": "mt_ESTD_47",
+      "forca": "hard",
+      "razao": "A propriedade é enunciada em termos de pai, chave e subárvore esquerda e direita.",
+      "origem": "texto",
+      "trecho": "Propriedade: cada chave menor que a do pai fica na subárvore esquerda e cada chave maior fica na direita."
+    },
+    {
+      "topicoId": "mt_ESTD_52",
+      "prerequisitoId": "mt_ESTD_48",
+      "forca": "hard",
+      "razao": "A BST da aula é construída com nós e referências, incluindo a referência ao pai.",
+      "origem": "texto",
+      "trecho": "Classes BinarySearchTree (root, size) e TreeNode (key, payload, leftChild, rightChild, parent)"
+    },
+    {
+      "topicoId": "mt_ESTD_53",
+      "prerequisitoId": "mt_ESTD_52",
+      "forca": "hard",
+      "razao": "put e get descem usando a propriedade de ordem da BST para decidir o lado.",
+      "origem": "texto",
+      "trecho": "put desce comparando até achar posição livre e cria o TreeNode com referência ao pai"
+    },
+    {
+      "topicoId": "mt_ESTD_53",
+      "prerequisitoId": "mt_ESTD_37",
+      "forca": "hard",
+      "razao": "A BST é apresentada como outra implementação do mesmo TAD Map da tabela hash.",
+      "origem": "texto",
+      "trecho": "ÁRVORE BINÁRIA DE BUSCA (BST) COMO MAP: Implementa Map(), put(key,val), get(key), del, len() e in."
+    },
+    {
+      "topicoId": "mt_ESTD_53",
+      "prerequisitoId": "mt_ESTD_49",
+      "forca": "soft",
+      "razao": "O __iter__ que dá o for na árvore é a travessia em-ordem com yield.",
+      "origem": "texto",
+      "trecho": "__iter__ percorre a árvore em-ordem com yield"
+    },
+    {
+      "topicoId": "mt_ESTD_54",
+      "prerequisitoId": "mt_ESTD_53",
+      "forca": "hard",
+      "razao": "A armadilha está dentro do algoritmo do put e do get: sem eles não há defeito a enxergar.",
+      "origem": "texto",
+      "trecho": "um problema conhecido do algoritmo é que chaves duplicadas não são tratadas"
+    },
+    {
+      "topicoId": "mt_ESTD_55",
+      "prerequisitoId": "mt_ESTD_52",
+      "forca": "hard",
+      "razao": "A remoção precisa preservar a propriedade da BST, e é por isso que o substituto tem que ser o sucessor.",
+      "origem": "texto",
+      "trecho": "O nó não tem filhos. Basta apagar a referência no pai"
+    },
+    {
+      "topicoId": "mt_ESTD_55",
+      "prerequisitoId": "mt_ESTD_53",
+      "forca": "soft",
+      "razao": "A remoção reusa a descida do put e do get para localizar o nó e mexe nas mesmas referências de pai e filho.",
+      "origem": "texto",
+      "trecho": "nenhum dos filhos pode simplesmente subir. Procura-se o sucessor"
+    },
+    {
+      "topicoId": "mt_ESTD_56",
+      "prerequisitoId": "mt_ESTD_12",
+      "forca": "hard",
+      "razao": "Dizer que a operação é O(h) e que h fica entre log n e n só significa algo com as classes de crescimento dominadas.",
+      "origem": "texto",
+      "trecho": "Complexidade: O(h), sendo h ≈ log n na árvore balanceada e h = n na degenerada."
+    },
+    {
+      "topicoId": "mt_ESTD_56",
+      "prerequisitoId": "mt_ESTD_53",
+      "forca": "hard",
+      "razao": "O custo O(h) é o custo da descida feita por put e get.",
+      "origem": "texto",
+      "trecho": "É a mesma descida da inserção, e por isso custa O(h)."
+    },
+    {
+      "topicoId": "mt_ESTD_57",
+      "prerequisitoId": "mt_ESTD_19",
+      "forca": "hard",
+      "razao": "A fila de prioridade é definida como variação da fila: o dequeue continua na frente, muda o critério de ordem.",
+      "origem": "texto",
+      "trecho": "A fila de prioridade é uma variação da fila em que o dequeue continua saindo pela frente, mas a ordem interna é dada pela prioridade"
+    },
+    {
+      "topicoId": "mt_ESTD_57",
+      "prerequisitoId": "mt_ESTD_12",
+      "forca": "soft",
+      "razao": "O argumento para trocar a lista pelo heap é de complexidade: O(n) e O(n log n) contra O(log n).",
+      "origem": "texto",
+      "trecho": "Implementando com lista, inserir custaria O(n) e manter ordenado custaria O(n log n). Com binary heap, enqueue e dequeue ficam O(log n)."
+    },
+    {
+      "topicoId": "mt_ESTD_58",
+      "prerequisitoId": "mt_ESTD_57",
+      "forca": "hard",
+      "razao": "O heap é apresentado como a implementação eficiente da fila de prioridade.",
+      "origem": "texto",
+      "trecho": "Propriedade estrutural: árvore balanceada, com o mesmo número de nós à esquerda e à direita exceto no último nível"
+    },
+    {
+      "topicoId": "mt_ESTD_58",
+      "prerequisitoId": "mt_ESTD_48",
+      "forca": "hard",
+      "razao": "Guardar a árvore em lista única é uma das representações estudadas, com filhos em 2p e 2p+1.",
+      "origem": "texto",
+      "trecho": "Uma árvore binária completa cabe em uma só lista: os filhos do nó na posição p ficam em 2p e 2p+1, e o pai do nó n fica em n//2."
+    },
+    {
+      "topicoId": "mt_ESTD_58",
+      "prerequisitoId": "mt_ESTD_02",
+      "forca": "soft",
+      "razao": "Achar o pai exige divisão inteira, e é ela que sustenta a aritmética de posições do heap.",
+      "origem": "texto",
+      "trecho": "o pai do nó n fica em n//2"
+    },
+    {
+      "topicoId": "mt_ESTD_59",
+      "prerequisitoId": "mt_ESTD_58",
+      "forca": "hard",
+      "razao": "percUp e percDown são movimentos sobre a lista do heap, comparando com pai e filhos calculados por índice.",
+      "origem": "texto",
+      "trecho": "insert anexa a chave ao fim da lista (preservando a estrutura) e percUp compara com o pai em i//2 trocando enquanto for menor"
+    },
+    {
+      "topicoId": "mt_ESTD_60",
+      "prerequisitoId": "mt_ESTD_59",
+      "forca": "hard",
+      "razao": "buildHeap é percDown aplicado de trás para frente, e o heap sort é delMin repetido.",
+      "origem": "texto",
+      "trecho": "buildHeap parte da lista inteira e aplica percDown de trás para frente a partir de len(lista)//2"
+    },
+    {
+      "topicoId": "mt_ESTD_60",
+      "prerequisitoId": "mt_ESTD_43",
+      "forca": "soft",
+      "razao": "O heap sort é posicionado ao lado do merge sort como garantia de O(n log n) no pior caso.",
+      "origem": "texto",
+      "trecho": "é O(n log n) mesmo no pior caso, ao lado do merge sort, enquanto o quick sort só garante O(n log n) no caso médio"
+    }
+  ]
+}

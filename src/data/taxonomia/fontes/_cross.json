@@ -1,0 +1,284 @@
+{
+  "arestas": [
+    {
+      "topicoId": "mt_ESTD_01",
+      "prerequisitoId": "mt_LPGM_13",
+      "forca": "hard",
+      "razao": "Estrutura de Dados abre afirmando que Python decide o tipo em tempo de execução, e essa frase só significa algo para quem já viu a diferença entre tipagem estática e dinâmica.",
+      "origem": "ppc",
+      "trecho": "Identificadores, valores, tipos de dados"
+    },
+    {
+      "topicoId": "mt_ESTD_02",
+      "prerequisitoId": "mt_LPGM_16",
+      "forca": "hard",
+      "razao": "A fila circular e o cálculo do meio da lista usam % e // como ferramenta pronta, e o próprio material lista esses operadores como assunto anterior à disciplina.",
+      "origem": "texto",
+      "trecho": "Python básico (tipos primitivos, tipagem dinâmica, operadores //, %, **, input/print, if/elif/else, for/while, range, funções)"
+    },
+    {
+      "topicoId": "mt_ESTD_03",
+      "prerequisitoId": "mt_LPGM_45",
+      "forca": "hard",
+      "razao": "Sem a string como sequência indexada a partir de zero não há como discutir imutabilidade nem por que todo método devolve uma nova string.",
+      "origem": "texto",
+      "trecho": "Também são cobrados os assuntos que os antecedem na sequência didática: Python básico, strings e listas, TAD e listas sequenciais."
+    },
+    {
+      "topicoId": "mt_ESTD_31",
+      "prerequisitoId": "mt_LPGM_47",
+      "forca": "hard",
+      "razao": "O alerta de que a busca binária recursiva perde o O(log n) só é compreensível para quem sabe que o fatiamento cria uma nova sequência copiando elementos.",
+      "origem": "texto",
+      "trecho": "Fatiamento em Python: palavra[0:4] pega do índice 0 ao 3 (o fim não entra), palavra[:4] do início, palavra[4:] até o fim, palavra[-3:] os três últimos."
+    },
+    {
+      "topicoId": "mt_ESTD_04",
+      "prerequisitoId": "mt_LPGM_29",
+      "forca": "hard",
+      "razao": "Pilha, fila e lista sequencial são construídas em cima de append, insert, remove e pop, tratados como vocabulário já dominado.",
+      "origem": "texto",
+      "trecho": "Métodos de lista em Python: append, insert, remove, count, extend, reverse, len e fatiamento."
+    },
+    {
+      "topicoId": "mt_ESTD_04",
+      "prerequisitoId": "mt_LPGM_44",
+      "forca": "soft",
+      "razao": "Aliasing e clonagem com a[:] ficam muito mais claros para quem já viu que mexer no objeto recebido é diferente de apontar o nome para outro objeto.",
+      "origem": "texto",
+      "trecho": "alterar o conteúdo de uma lista dentro da função afeta o original, enquanto reatribuir o parâmetro a um novo objeto não afeta"
+    },
+    {
+      "topicoId": "mt_ESTD_05",
+      "prerequisitoId": "mt_LPGM_34",
+      "forca": "hard",
+      "razao": "Recursão é uma função que chama a si mesma: sem definir função, passar parâmetro e retornar valor não se escreve caso base nem redução ao caso base.",
+      "origem": "ppc",
+      "trecho": "Modularização"
+    },
+    {
+      "topicoId": "mt_ESTD_06",
+      "prerequisitoId": "mt_LPGM_39",
+      "forca": "hard",
+      "razao": "O frame da pilha de chamadas guarda as variáveis locais daquela chamada; sem escopo local e tempo de vida, empilhar e desempilhar frames não quer dizer nada.",
+      "origem": "ppc",
+      "trecho": "Escopo de nomes e tempo de vida de variáveis"
+    },
+    {
+      "topicoId": "mt_ESTD_13",
+      "prerequisitoId": "mt_LPGM_50",
+      "forca": "hard",
+      "razao": "O TAD nasce da mesma pergunta de Linguagem de Programação: agrupar campos sob um nome só, como a Data feita de dia, mês e ano, antes de falar em operações.",
+      "origem": "ppc",
+      "trecho": "Tipos de dados definidos pelo usuário"
+    },
+    {
+      "topicoId": "mt_ESTD_15",
+      "prerequisitoId": "mt_LPGM_28",
+      "forca": "hard",
+      "razao": "A lista sequencial é a list de Python vista por dentro: sem o acesso por índice não há como comparar o O(1) da leitura com o O(n) do deslocamento.",
+      "origem": "texto",
+      "trecho": "Listas/arrays guardam vários valores em ordem, acessados por índice (começa em 0), mutáveis."
+    },
+    {
+      "topicoId": "mt_ESTD_24",
+      "prerequisitoId": "mt_LPGM_52",
+      "forca": "hard",
+      "razao": "O nó é um tipo definido pelo aluno com dois campos, o dado e a referência para o próximo, exatamente o agrupamento ensinado como struct e depois como classe.",
+      "origem": "ppc",
+      "trecho": "Tipos de dados definidos pelo usuário"
+    },
+    {
+      "topicoId": "mt_ESTD_24",
+      "prerequisitoId": "mt_LPGM_43",
+      "forca": "soft",
+      "razao": "Quem já viu endereço e ponteiro entende de imediato por que atualizar o head custa O(1) e por que perder a referência perde a lista, mas o tópico se sustenta com referências de Python.",
+      "origem": "texto",
+      "trecho": "LISTAS ENCADEADAS: Nós distribuídos na memória, ligados por referências (ponteiros)."
+    },
+    {
+      "topicoId": "mt_ESTD_37",
+      "prerequisitoId": "mt_LPGM_33",
+      "forca": "hard",
+      "razao": "O TAD Map é o dicionário visto por dentro: sem saber que o acesso é pela chave única e não pela posição, put e get não têm significado.",
+      "origem": "texto",
+      "trecho": "Dicionários/mapas guardam pares chave→valor, acessados pela chave (única), não pela posição."
+    },
+    {
+      "topicoId": "mt_ESTD_53",
+      "prerequisitoId": "mt_LPGM_52",
+      "forca": "soft",
+      "razao": "Os métodos especiais que dão sintaxe de dicionário à árvore exigem a noção de classe com comportamento, apresentada como a ponte da struct para a classe.",
+      "origem": "texto",
+      "trecho": "É a ponte para Programação Orientada a Objetos: a classe é este agrupamento acrescido de comportamento."
+    },
+    {
+      "topicoId": "mt_APBD_52",
+      "prerequisitoId": "mt_LPGM_22",
+      "forca": "hard",
+      "razao": "PL/SQL não ensina o que é decidir, apenas dá a grafia Oracle disso: IF e CASE são os mesmos condicionais vistos em Linguagem de Programação.",
+      "origem": "texto",
+      "trecho": "IF, CASE, LOOP, FOR e WHILE permitem decidir e repetir ações ao redor de comandos SQL."
+    },
+    {
+      "topicoId": "mt_APBD_52",
+      "prerequisitoId": "mt_LPGM_24",
+      "forca": "hard",
+      "razao": "LOOP, WHILE, FOR e EXIT são o laço condicional com sintaxe nova, inclusive o risco de nunca terminar quando a condição não muda.",
+      "origem": "texto",
+      "trecho": "Controle de fluxo usa IF, CASE, LOOP, WHILE, FOR, EXIT e labels."
+    },
+    {
+      "topicoId": "mt_APBD_58",
+      "prerequisitoId": "mt_LPGM_34",
+      "forca": "hard",
+      "razao": "A distinção entre executar ação e devolver valor com RETURN só é distinção para quem já sabe o que é função com parâmetros e retorno.",
+      "origem": "texto",
+      "trecho": "Sempre retorna um valor com RETURN e pode ser chamada dentro de uma expressão SQL, conforme a regra do caso."
+    },
+    {
+      "topicoId": "mt_APBD_58",
+      "prerequisitoId": "mt_LPGM_42",
+      "forca": "soft",
+      "razao": "Os modos IN, OUT e IN OUT são a versão Oracle da passagem por valor e por referência; quem viu a diferença entre receber cópia e receber o próprio dado escolhe o modo sem decorar.",
+      "origem": "texto",
+      "trecho": "Pode receber parâmetros IN, OUT e IN OUT, mas não retorna valor obrigatório pelo cabeçalho."
+    },
+    {
+      "topicoId": "mt_APBD_50",
+      "prerequisitoId": "mt_LPGM_39",
+      "forca": "hard",
+      "razao": "A regra de visibilidade entre bloco interno e externo do PL/SQL é a regra de escopo de nomes já ensinada em Linguagem de Programação.",
+      "origem": "texto",
+      "trecho": "blocos aninhados: o bloco interno enxerga o externo, mas o inverso não acontece."
+    },
+    {
+      "topicoId": "mt_APBD_55",
+      "prerequisitoId": "mt_LPGM_51",
+      "forca": "hard",
+      "razao": "O RECORD é a struct do PL/SQL: agrupar os campos de uma linha sob um nome só é o tipo definido pelo usuário ensinado com typedef struct.",
+      "origem": "texto",
+      "trecho": "Variaveis, constantes, records, arrays associativos e cursores devem ser declarados antes do uso; %TYPE e %ROWTYPE reaproveitam tipos ja existentes para reduzir inconsistencias."
+    },
+    {
+      "topicoId": "mt_APBD_13",
+      "prerequisitoId": "mt_ESTD_52",
+      "forca": "soft",
+      "razao": "A B-tree é uma árvore de busca em disco: quem já viu a propriedade da árvore binária de busca entende por que ela serve a filtro seletivo e por que a altura é o que importa.",
+      "origem": "texto",
+      "trecho": "B-tree e comum em buscas seletivas e ambientes transacionais; bitmap e melhor para baixa cardinalidade e analise com muitos filtros, mas e menos adequado a muitas atualizacoes."
+    },
+    {
+      "topicoId": "mt_APBD_12",
+      "prerequisitoId": "mt_ESTD_28",
+      "forca": "soft",
+      "razao": "O ganho do índice é medido contra a varredura completa da tabela, que é a busca sequencial O(n) já analisada em Estrutura de Dados.",
+      "origem": "texto",
+      "trecho": "Indices aceleram consultas ao oferecer caminhos de acesso alternativos, mas ocupam espaco e geram custo de manutencao em escritas."
+    },
+    {
+      "topicoId": "mt_APBD_10",
+      "prerequisitoId": "mt_ESTD_14",
+      "forca": "soft",
+      "razao": "A visão esconde a organização real das tabelas atrás de um nome único, que é a separação entre interface e implementação ensinada com TAD.",
+      "origem": "texto",
+      "trecho": "Visoes sao consultas salvas para filtrar, simplificar, proteger ou reorganizar acesso aos dados; mudancas costumam usar CREATE OR REPLACE."
+    },
+    {
+      "topicoId": "mt_APBD_15",
+      "prerequisitoId": "mt_ESTD_33",
+      "forca": "soft",
+      "razao": "Particionar por hash é a mesma ideia de função que espalha chaves uniformemente entre posições, estudada em hashing.",
+      "origem": "texto",
+      "trecho": "Particionamento divide tabelas grandes por faixa, lista ou hash; a aplicacao continua vendo uma tabela unica, enquanto o banco administra partes menores."
+    },
+    {
+      "topicoId": "mt_TABD_09",
+      "prerequisitoId": "mt_APBD_07",
+      "forca": "hard",
+      "razao": "A chave primária da tabela fato é a composição das chaves estrangeiras das dimensões: sem PK e FK o grão da fato não se declara nem se protege.",
+      "origem": "ppc",
+      "trecho": "Desenvolvimento de projeto de banco de dados utilizando a linguagem SQL."
+    },
+    {
+      "topicoId": "mt_TABD_07",
+      "prerequisitoId": "mt_APBD_08",
+      "forca": "soft",
+      "razao": "A entrega do projeto é o script que cria a estrela, e escrever CREATE TABLE com tipos e constraints nomeadas é conteúdo da disciplina anterior.",
+      "origem": "ppc",
+      "trecho": "Comandos DDL, DML, DCL e comandos de controle de transações."
+    },
+    {
+      "topicoId": "mt_TABD_13",
+      "prerequisitoId": "mt_APBD_11",
+      "forca": "hard",
+      "razao": "A surrogate key é uma chave artificial gerada pelo próprio DW, e o mecanismo que a gera é a sequence com NEXTVAL vista na disciplina anterior.",
+      "origem": "ppc",
+      "trecho": "Comandos DDL, DML, DCL e comandos de controle de transações."
+    },
+    {
+      "topicoId": "mt_PDSW_13",
+      "prerequisitoId": "mt_METC_25",
+      "forca": "soft",
+      "razao": "Entrevista, observação e análise de documentos são instrumentos de coleta ensinados em Metodologia Científica; quem os viu lá aplica com roteiro e critério de amostra.",
+      "origem": "texto",
+      "trecho": "Combina entrevistas, workshops, observação, análise de documentos, prototipação e feedback de usuários."
+    },
+    {
+      "topicoId": "mt_PDSW_16",
+      "prerequisitoId": "mt_METC_23",
+      "forca": "soft",
+      "razao": "O teste A/B é um experimento com grupos de comparação e hipótese declarada antes da coleta, que é o desenho experimental de Metodologia Científica.",
+      "origem": "texto",
+      "trecho": "Histórias, casos de uso, protótipos, MVPs e testes A/B validam valor."
+    },
+    {
+      "topicoId": "mt_PDSW_18",
+      "prerequisitoId": "mt_LPGM_52",
+      "forca": "soft",
+      "razao": "O diagrama de classes mostra atributos e operações de uma entidade, e sem a ideia de classe como dados mais comportamento o desenho fica sem referente.",
+      "origem": "texto",
+      "trecho": "É a ponte para Programação Orientada a Objetos: a classe é este agrupamento acrescido de comportamento."
+    },
+    {
+      "topicoId": "mt_CORG_02",
+      "prerequisitoId": "mt_METC_03",
+      "forca": "soft",
+      "razao": "Trocar achismo por estudo sistemático só é tese forte para quem já viu por que o senso comum é assistemático, acrítico e falível.",
+      "origem": "texto",
+      "trecho": "O material diferencia a gestão baseada em evidências científicas, relações de causa e efeito e estudo sistemático de decisões guiadas por intuição, pressentimento ou achismo."
+    },
+    {
+      "topicoId": "mt_CORG_11",
+      "prerequisitoId": "mt_METC_18",
+      "forca": "soft",
+      "razao": "Somar facetas para compor uma pontuação geral é construção de escala e medição numérica, conteúdo da abordagem quantitativa em Metodologia Científica.",
+      "origem": "texto",
+      "trecho": "a classificação única global, com uma pergunta geral sobre satisfação, e a soma de facetas, que avalia natureza do trabalho, supervisão, remuneração, promoções e relação com colegas"
+    },
+    {
+      "topicoId": "mt_MKCE_20",
+      "prerequisitoId": "mt_METC_25",
+      "forca": "soft",
+      "razao": "O questionário de pesquisa de marketing é o instrumento do levantamento: quem já viu survey sabe por que a pergunta precisa ser estruturada antes de comparar respostas.",
+      "origem": "texto",
+      "trecho": "Instrumento mais usado para dados primários. Permite comparar respostas de muitas pessoas, desde que as perguntas sejam claras e bem estruturadas."
+    },
+    {
+      "topicoId": "mt_MKCE_20",
+      "prerequisitoId": "mt_METC_19",
+      "forca": "soft",
+      "razao": "A pesquisa qualitativa de marketing usa entrevista e grupo focal para explicar o porquê do comportamento, que é a abordagem qualitativa de Metodologia Científica.",
+      "origem": "texto",
+      "trecho": "Explora percepções, sentimentos e motivações. É útil para entender o “porquê” por trás de comportamentos, especialmente por entrevistas e grupos focais."
+    },
+    {
+      "topicoId": "mt_MKCE_09",
+      "prerequisitoId": "mt_CORG_20",
+      "forca": "soft",
+      "razao": "A pirâmide de Maslow é a mesma hierarquia de necessidades usada em Comportamento Organizacional para motivar equipe, aqui lida do lado do consumidor.",
+      "origem": "texto",
+      "trecho": "Necessidades fisiológicas, segurança, sociais, estima e autorrealização. Motivar exige entender o nível atual da pessoa."
+    }
+  ]
+}

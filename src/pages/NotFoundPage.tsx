@@ -6,7 +6,7 @@ export default function NotFoundPage() {
       <section className="w-full overflow-hidden">
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 lg:gap-12 items-center">
           <div className="relative min-h-[15rem] flex items-center justify-center border-y border-border">
-            <div className="absolute inset-0 pointer-events-none opacity-80 bg-[linear-gradient(135deg,transparent_0_20%,rgba(108,99,255,0.18)_20%_21%,transparent_21%_44%,rgba(78,205,196,0.16)_44%_45%,transparent_45%_100%)]" />
+            <div className="absolute inset-0 pointer-events-none opacity-80 bg-[linear-gradient(135deg,transparent_0_20%,rgba(99,102,241,0.18)_20%_21%,transparent_21%_44%,rgba(59,130,246,0.16)_44%_45%,transparent_45%_100%)]" />
             <p className="relative font-display font-black text-[7rem] sm:text-[9rem] md:text-[11rem] leading-none text-text tracking-normal">
               404
             </p>

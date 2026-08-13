@@ -3,22 +3,12 @@ import { Link, useParams } from 'react-router-dom';
 import { getSubjectBySlug } from '../data/curriculum';
 import { SITE_LAST_UPDATED_LABEL } from '../data/siteMetadata';
 import NotFoundPage from './NotFoundPage';
+import { importadoresConteudo } from '../content/registro';
 
-const contentRegistry: Record<string, ComponentType> = {
-  'administracao-projeto-banco-dados': lazy(() => import('../content/administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosContent')),
-  'comportamento-organizacional': lazy(() => import('../content/comportamento-organizacional/ComportamentoOrganizacionalContent')),
-  'marketing-comercio-eletronico': lazy(() => import('../content/marketing-comercio-eletronico/MarketingContent')),
-  'metodologia-cientifica': lazy(() => import('../content/metodologia-cientifica/MetodologiaCientificaContent')),
-  'estrutura-dados': lazy(() => import('../content/estrutura-dados/EstruturaDadosContent')),
-  'fundamentos-si': lazy(() => import('../content/fundamentos-si/FundamentosSIContent')),
-  'processos-desenvolvimento-software': lazy(() => import('../content/processos-desenvolvimento-software/ProcessosDesenvolvimentoSoftwareContent')),
-  'algoritmos-logica-programacao': lazy(() => import('../content/algoritmos-logica-programacao/ALPGContent')),
-  'topicos-avancados-banco-dados': lazy(() => import('../content/topicos-avancados-banco-dados/TABDContent')),
-  'linguagem-programacao': lazy(() => import('../content/linguagem-programacao/LPGMContent')),
-  'logica-matematica-discreta': lazy(() => import('../content/logica-matematica-discreta/LmmdContent')),
-  'introducao-tecnologias-web': lazy(() => import('../content/introducao-tecnologias-web/IntwContent')),
-  'empreendedorismo-digital': lazy(() => import('../content/empreendedorismo-digital/EmpdContent')),
-};
+/** Construído a partir dos importadores compartilhados: ver src/content/registro.ts. */
+const contentRegistry: Record<string, ComponentType> = Object.fromEntries(
+  Object.entries(importadoresConteudo).map(([slug, importar]) => [slug, lazy(importar)]),
+);
 
 function SubjectContentFallback() {
   return (
@@ -48,7 +38,7 @@ export default function SubjectPage() {
           <div className="absolute inset-0 pointer-events-none opacity-45">
             <div
               className="absolute inset-0"
-              style={{ background: 'radial-gradient(circle at 50% 35%, rgba(108,99,255,0.18) 0%, transparent 50%)' }}
+              style={{ background: 'radial-gradient(circle at 50% 35%, rgba(99, 102, 241,0.18) 0%, transparent 50%)' }}
             />
           </div>
 
