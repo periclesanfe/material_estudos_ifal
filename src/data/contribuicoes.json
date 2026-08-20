@@ -1,7 +1,7 @@
 {
   "$schema": "./contribuicoes.schema.json",
   "versao": 1,
-  "atualizadoEm": "2026-08-12T00:00:00-03:00",
+  "atualizadoEm": "2026-08-20",
   "contribuintes": [
     {
       "id": "isaque-braga",
@@ -406,6 +406,34 @@
         "conteudo",
         "quiz",
         "unit-economics"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-20-conteudo-poob",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-20",
+        "registradoEm": "2026-08-20T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "programacao-orientada-objetos",
+        "materiaCodigo": "POOB",
+        "arquivo": "src/content/programacao-orientada-objetos/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Programação Orientada a Objetos, com 16 seções na sequência das aulas e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma PROO BSI 2023.2 do Prof. Fernando Kenji Kamei (10 decks de slides, ementa oficial, lista de exercícios, proposta de projeto e ~60 códigos de aula em Java, incluindo os pacotes de camadas VO/BO/DAO/View, JDBC e testes JUnit). As avaliações seguem as da turma (Parte 01 de fundamentos, AV1 de Padrões de Projeto e Projeto Final com peso 2), e o quiz ancora nas pegadinhas reais dos slides e nos bugs didáticos dos códigos. Erratas do material original (versão do Java, limite do long, condição malformada no slide 8 da aula 11) foram corrigidas com sinalização.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "programacao-orientada-objetos",
+        "conteudo",
+        "quiz",
+        "java"
       ]
     }
   ]
