@@ -23,6 +23,7 @@ Fonte estruturada: [`src/data/contribuicoes.json`](../../src/data/contribuicoes.
 | 2026-06-21 | Administração e Projeto de Banco de Dados (APBD) | conteudo_materia | maria-luisa-alaquoke | src/content/administracao-projeto-banco-dados/data.ts | Responsável pelo conteúdo da matéria | — | incorporado |
 | 2026-08-12 | Empreendedorismo Digital (EMPD) | conteudo_materia | marina-medeiros | src/content/empreendedorismo-digital/ | Cria o conteúdo com 14 seções, avaliações por atividade e 32 questões conferidas por execução | #47 | incorporado |
 | 2026-08-20 | Fundamentos de Banco de Dados (FDBD) | conteudo_materia | pericles-feitoza | src/content/fundamentos-banco-dados/ | Cria o conteúdo com 14 seções a partir do material completo da turma 2023.1 (com gabaritos oficiais) e 38 questões de quiz | — | incorporado |
+| 2026-08-20 | Programação Orientada a Objetos (POOB) | conteudo_materia | pericles-feitoza | src/content/programacao-orientada-objetos/ | Cria o conteúdo com 16 seções a partir do material completo da turma 2023.2 e 38 questões de quiz | — | incorporado |
 
 ## Contribuicoes Do Projeto
 

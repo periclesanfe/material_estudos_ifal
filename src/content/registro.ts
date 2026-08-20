@@ -29,6 +29,7 @@ export const importadoresConteudo: Record<string, ImportadorConteudo> = {
   'metodologia-cientifica': () => import('./metodologia-cientifica/MetodologiaCientificaContent'),
   'processos-desenvolvimento-software': () =>
     import('./processos-desenvolvimento-software/ProcessosDesenvolvimentoSoftwareContent'),
+  'programacao-orientada-objetos': () => import('./programacao-orientada-objetos/PoobContent'),
   'topicos-avancados-banco-dados': () => import('./topicos-avancados-banco-dados/TABDContent'),
 };
 
