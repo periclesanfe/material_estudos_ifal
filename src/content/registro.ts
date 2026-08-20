@@ -19,6 +19,7 @@ export const importadoresConteudo: Record<string, ImportadorConteudo> = {
   'algoritmos-logica-programacao': () => import('./algoritmos-logica-programacao/ALPGContent'),
   'comportamento-organizacional': () => import('./comportamento-organizacional/ComportamentoOrganizacionalContent'),
   'empreendedorismo-digital': () => import('./empreendedorismo-digital/EmpdContent'),
+  'fundamentos-banco-dados': () => import('./fundamentos-banco-dados/FdbdContent'),
   'estrutura-dados': () => import('./estrutura-dados/EstruturaDadosContent'),
   'fundamentos-si': () => import('./fundamentos-si/FundamentosSIContent'),
   'introducao-tecnologias-web': () => import('./introducao-tecnologias-web/IntwContent'),
