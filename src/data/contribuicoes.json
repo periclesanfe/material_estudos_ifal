@@ -410,16 +410,23 @@
     },
     {
       "id": "contrib-2026-08-20-conteudo-fdbd",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-20",
+        "registradoEm": "2026-08-20T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
       "onde": {
         "escopo": "materia",
         "materiaSlug": "fundamentos-banco-dados",
         "materiaCodigo": "FDBD",
-        "arquivo": "src/content/fundamentos-banco-dados/"
+        "arquivo": "src/content/fundamentos-banco-dados/",
+        "pullRequest": "#50"
       },
       "tipo": "conteudo_materia",
       "como": {
-        "resumo": "Cria o conteúdo da matéria Programação Orientada a Objetos, com 16 seções na sequência das aulas e 38 questões de quiz.",
-        "detalhes": "Escrito a partir da leitura integral do material da turma PROO BSI 2023.2 do Prof. Fernando Kenji Kamei (10 decks de slides, ementa oficial, lista de exercícios, proposta de projeto e ~60 códigos de aula em Java, incluindo os pacotes de camadas VO/BO/DAO/View, JDBC e testes JUnit). As avaliações seguem as da turma (Parte 01 de fundamentos, AV1 de Padrões de Projeto e Projeto Final com peso 2), e o quiz ancora nas pegadinhas reais dos slides e nos bugs didáticos dos códigos. Erratas do material original (versão do Java, limite do long, condição malformada no slide 8 da aula 11) foram corrigidas com sinalização.",
+        "resumo": "Cria o conteúdo da matéria Fundamentos de Banco de Dados, com 14 seções na trilha da turma 2023.1 e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral dos 45 arquivos raspados da turma FNBD 2023.1 da Profa. Wladia Bessa (capítulos dos livros Rob & Coronel e Elmasri & Navathe, slides de SQL, anotações do quadro da aula de JOIN, listas com gabaritos oficiais e o gabarito da 2ª prova). As avaliações espelham as três provas da turma; os exemplos resolvidos usam os gabaritos oficiais (modelo bancário EER, conversão do jogo educacional, atividade de DDL) e os erros reais dos gabaritos viraram questões 'ache o erro' sinalizadas. Divergências terminológicas entre os dois livros-base (independência lógica/física) são apresentadas com a versão Elmasri como canônica.",
         "origem": "material_professor"
       },
       "status": "incorporado",
@@ -438,17 +445,22 @@
         "registradoEm": "2026-08-20T00:00:00-03:00",
         "timezone": "America/Maceio"
       },
-      "tipo": "conteudo_materia",
-      "como": {
-        "resumo": "Cria o conteúdo da matéria Fundamentos de Banco de Dados, com 14 seções na trilha da turma 2023.1 e 38 questões de quiz.",
-        "detalhes": "Escrito a partir da leitura integral dos 45 arquivos raspados da turma FNBD 2023.1 da Profa. Wladia Bessa (capítulos dos livros Rob & Coronel e Elmasri & Navathe, slides de SQL, anotações do quadro da aula de JOIN, listas com gabaritos oficiais e o gabarito da 2ª prova). As avaliações espelham as três provas da turma; os exemplos resolvidos usam os gabaritos oficiais (modelo bancário EER, conversão do jogo educacional, atividade de DDL) e os erros reais dos gabaritos viraram questões 'ache o erro' sinalizadas. Divergências terminológicas entre os dois livros-base (independência lógica/física) são apresentadas com a versão Elmasri como canônica.",
+      "onde": {
+        "escopo": "materia",
         "materiaSlug": "programacao-orientada-objetos",
         "materiaCodigo": "POOB",
-        "arquivo": "src/content/programacao-orientada-objetos/"
+        "arquivo": "src/content/programacao-orientada-objetos/",
+        "pullRequest": "#49"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Programação Orientada a Objetos, com 16 seções na sequência das aulas e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma PROO BSI 2023.2 do Prof. Fernando Kenji Kamei (10 decks de slides, ementa oficial, lista de exercícios, proposta de projeto e ~60 códigos de aula em Java, incluindo os pacotes de camadas VO/BO/DAO/View, JDBC e testes JUnit). As avaliações seguem as da turma (Parte 01 de fundamentos, AV1 de Padrões de Projeto e Projeto Final com peso 2), e o quiz ancora nas pegadinhas reais dos slides e nos bugs didáticos dos códigos. Erratas do material original (versão do Java, limite do long, condição malformada no slide 8 da aula 11) foram corrigidas com sinalização.",
+        "origem": "material_professor"
       },
       "status": "incorporado",
       "tags": [
-         "programacao-orientada-objetos",
+        "programacao-orientada-objetos",
         "conteudo",
         "quiz",
         "java"
