@@ -24,6 +24,7 @@ Fonte estruturada: [`src/data/contribuicoes.json`](../../src/data/contribuicoes.
 | 2026-08-12 | Empreendedorismo Digital (EMPD) | conteudo_materia | marina-medeiros | src/content/empreendedorismo-digital/ | Cria o conteúdo com 14 seções, avaliações por atividade e 32 questões conferidas por execução | #47 | incorporado |
 | 2026-08-20 | Fundamentos de Banco de Dados (FDBD) | conteudo_materia | pericles-feitoza | src/content/fundamentos-banco-dados/ | Cria o conteúdo com 14 seções a partir do material completo da turma 2023.1 (com gabaritos oficiais) e 38 questões de quiz | — | incorporado |
 | 2026-08-20 | Programação Orientada a Objetos (POOB) | conteudo_materia | pericles-feitoza | src/content/programacao-orientada-objetos/ | Cria o conteúdo com 16 seções a partir do material completo da turma 2023.2 e 38 questões de quiz | — | incorporado |
+| 2026-08-21 | DevOps (DEVO) | conteudo_materia | pericles-feitoza | src/content/devops/ | Cria o conteúdo com 15 seções a partir do material da turma 2025.1, cobrindo cultura, Linux, Docker, Kubernetes/GitOps e estratégias de implantação, e 40 questões de quiz | — | incorporado |
 
 ## Contribuicoes Do Projeto
 
