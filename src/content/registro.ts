@@ -27,6 +27,7 @@ export const importadoresConteudo: Record<string, ImportadorConteudo> = {
   'logica-matematica-discreta': () => import('./logica-matematica-discreta/LmmdContent'),
   'marketing-comercio-eletronico': () => import('./marketing-comercio-eletronico/MarketingContent'),
   'metodologia-cientifica': () => import('./metodologia-cientifica/MetodologiaCientificaContent'),
+  'sistemas-apoio-decisao': () => import('./sistemas-apoio-decisao/SadeContent'),
   'processos-desenvolvimento-software': () =>
     import('./processos-desenvolvimento-software/ProcessosDesenvolvimentoSoftwareContent'),
   'programacao-orientada-objetos': () => import('./programacao-orientada-objetos/PoobContent'),

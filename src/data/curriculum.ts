@@ -70,7 +70,7 @@ const subjects: Subject[] = [
   // ═══════ 8º PERÍODO ═══════
   { id: 'psif', name: 'Pesquisa em Sistemas de Informação', slug: 'pesquisa-si', code: 'PSIF', period: 8, axis: 'FB', hours: 40, prerequisites: ['ppap'], hasContent: false },
   { id: 'tsas', name: 'Tecnologias Sociais e Assistivas', slug: 'tecnologias-sociais-assistivas', code: 'TSAS', period: 8, axis: 'EXT', hours: 40, hasContent: false },
-  { id: 'sade', name: 'Sistemas de Apoio à Decisão', slug: 'sistemas-apoio-decisao', code: 'SADE', period: 8, axis: 'FPG', hours: 80, hasContent: false },
+  { id: 'sade', name: 'Sistemas de Apoio à Decisão', slug: 'sistemas-apoio-decisao', code: 'SADE', period: 8, axis: 'FPG', hours: 80, hasContent: true },
 
   // ═══════ OPTATIVAS — DESENVOLVIMENTO DE SOFTWARE ═══════
   { id: 'fabs', name: 'Fábrica de Software', slug: 'fabrica-software', code: 'FABS', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'desenvolvimento', hasContent: false },
