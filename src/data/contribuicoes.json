@@ -1,7 +1,7 @@
 {
   "$schema": "./contribuicoes.schema.json",
   "versao": 1,
-  "atualizadoEm": "2026-08-20",
+  "atualizadoEm": "2026-08-21",
   "contribuintes": [
     {
       "id": "isaque-braga",
@@ -410,6 +410,12 @@
     },
     {
       "id": "contrib-2026-08-20-conteudo-fdbd",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-20",
+        "registradoEm": "2026-08-20T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
       "onde": {
         "escopo": "materia",
         "materiaSlug": "fundamentos-banco-dados",
@@ -418,9 +424,8 @@
       },
       "tipo": "conteudo_materia",
       "como": {
-        "resumo": "Cria o conteúdo da matéria Programação Orientada a Objetos, com 16 seções na sequência das aulas e 38 questões de quiz.",
-        "detalhes": "Escrito a partir da leitura integral do material da turma PROO BSI 2023.2 do Prof. Fernando Kenji Kamei (10 decks de slides, ementa oficial, lista de exercícios, proposta de projeto e ~60 códigos de aula em Java, incluindo os pacotes de camadas VO/BO/DAO/View, JDBC e testes JUnit). As avaliações seguem as da turma (Parte 01 de fundamentos, AV1 de Padrões de Projeto e Projeto Final com peso 2), e o quiz ancora nas pegadinhas reais dos slides e nos bugs didáticos dos códigos. Erratas do material original (versão do Java, limite do long, condição malformada no slide 8 da aula 11) foram corrigidas com sinalização.",
-        "origem": "material_professor"
+        "resumo": "Cria o conteúdo da matéria Fundamentos de Banco de Dados, com 14 seções na trilha da turma 2023.1 e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral dos 45 arquivos raspados da turma FNBD 2023.1 da Profa. Wladia Bessa (capítulos dos livros Rob & Coronel e Elmasri & Navathe, slides de SQL, anotações do quadro da aula de JOIN, listas com gabaritos oficiais e o gabarito da 2ª prova). As avaliações espelham as três provas da turma; os exemplos resolvidos usam os gabaritos oficiais (modelo bancário EER, conversão do jogo educacional, atividade de DDL) e os erros reais dos gabaritos viraram questões 'ache o erro' sinalizadas. Divergências terminológicas entre os dois livros-base (independência lógica/física) são apresentadas com a versão Elmasri como canônica."
       },
       "status": "incorporado",
       "tags": [
@@ -438,20 +443,54 @@
         "registradoEm": "2026-08-20T00:00:00-03:00",
         "timezone": "America/Maceio"
       },
-      "tipo": "conteudo_materia",
-      "como": {
-        "resumo": "Cria o conteúdo da matéria Fundamentos de Banco de Dados, com 14 seções na trilha da turma 2023.1 e 38 questões de quiz.",
-        "detalhes": "Escrito a partir da leitura integral dos 45 arquivos raspados da turma FNBD 2023.1 da Profa. Wladia Bessa (capítulos dos livros Rob & Coronel e Elmasri & Navathe, slides de SQL, anotações do quadro da aula de JOIN, listas com gabaritos oficiais e o gabarito da 2ª prova). As avaliações espelham as três provas da turma; os exemplos resolvidos usam os gabaritos oficiais (modelo bancário EER, conversão do jogo educacional, atividade de DDL) e os erros reais dos gabaritos viraram questões 'ache o erro' sinalizadas. Divergências terminológicas entre os dois livros-base (independência lógica/física) são apresentadas com a versão Elmasri como canônica.",
+      "onde": {
+        "escopo": "materia",
         "materiaSlug": "programacao-orientada-objetos",
         "materiaCodigo": "POOB",
         "arquivo": "src/content/programacao-orientada-objetos/"
       },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Programação Orientada a Objetos, com 16 seções na sequência das aulas e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma PROO BSI 2023.2 do Prof. Fernando Kenji Kamei (10 decks de slides, ementa oficial, lista de exercícios, proposta de projeto e ~60 códigos de aula em Java, incluindo os pacotes de camadas VO/BO/DAO/View, JDBC e testes JUnit). As avaliações seguem as da turma (Parte 01 de fundamentos, AV1 de Padrões de Projeto e Projeto Final com peso 2), e o quiz ancora nas pegadinhas reais dos slides e nos bugs didáticos dos códigos. Erratas do material original (versão do Java, limite do long, condição malformada no slide 8 da aula 11) foram corrigidas com sinalização.",
+        "origem": "material_professor"
+      },
       "status": "incorporado",
       "tags": [
-         "programacao-orientada-objetos",
+        "programacao-orientada-objetos",
         "conteudo",
         "quiz",
         "java"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-21-conteudo-gpjt",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-21",
+        "registradoEm": "2026-08-21T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "gerencia-projeto",
+        "materiaCodigo": "GPJT",
+        "arquivo": "src/content/gerencia-projeto/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Gerência de Projeto, com 16 seções que vão da definição de projeto ao encerramento, e 42 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma 2024: apostila de fundamentos com a comparação entre PMBOK 6 e 7, os três módulos e o material de controle da ENAP, os slides autorais do professor sobre iniciação e planejamento, as aulas de novembro e os modelos de Termo de Abertura, Requisitos e Declaração de Escopo. A atividade do caminho crítico foi resolvida a partir do diagrama original — passagem para frente e para trás, tabela de folgas e os quatro caminhos possíveis —, corrigindo uma leitura delegada que havia concluído 22 dias em vez dos 25 corretos. As fórmulas de valor agregado foram conferidas página a página no PDF, e o exemplo da formação de multiplicadores aparece resolvido, incluindo a inconsistência da fonte (os marcos somam R$ 45,5K contra um pacote orçado em R$ 50K). O modelo de TAP distribuído em aula é um documento real preenchido, com nomes e contatos de docentes e alunos: reproduz-se apenas a estrutura, despersonalizada.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "gerencia-projeto",
+        "conteudo",
+        "quiz",
+        "pmbok",
+        "eap",
+        "caminho-critico"
       ]
     }
   ]
