@@ -22,6 +22,7 @@ Fonte estruturada: [`src/data/contribuicoes.json`](../../src/data/contribuicoes.
 | 2026-06-17 | Processos de Desenvolvimento de Software (PDSW) | conteudo_materia | marina-medeiros | src/content/processos-desenvolvimento-software/data.ts | Responsável pelo conteúdo da matéria, por capítulos com leitor do livro base | #21 | incorporado |
 | 2026-06-21 | Administração e Projeto de Banco de Dados (APBD) | conteudo_materia | maria-luisa-alaquoke | src/content/administracao-projeto-banco-dados/data.ts | Responsável pelo conteúdo da matéria | — | incorporado |
 | 2026-08-12 | Empreendedorismo Digital (EMPD) | conteudo_materia | marina-medeiros | src/content/empreendedorismo-digital/ | Cria o conteúdo com 14 seções, avaliações por atividade e 32 questões conferidas por execução | #47 | incorporado |
+| 2026-08-20 | Análise e Projeto de Sistemas de Informação (APSI) | conteudo_materia | pericles-feitoza | src/content/analise-projeto-si/ | Cria o conteúdo com 15 seções a partir do material completo da turma 2024.1 e 40 questões de quiz | — | incorporado |
 
 ## Contribuicoes Do Projeto
 

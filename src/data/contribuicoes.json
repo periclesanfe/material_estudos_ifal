@@ -1,7 +1,7 @@
 {
   "$schema": "./contribuicoes.schema.json",
   "versao": 1,
-  "atualizadoEm": "2026-08-12T00:00:00-03:00",
+  "atualizadoEm": "2026-08-20",
   "contribuintes": [
     {
       "id": "isaque-braga",
@@ -406,6 +406,34 @@
         "conteudo",
         "quiz",
         "unit-economics"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-20-conteudo-apsi",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-20",
+        "registradoEm": "2026-08-20T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "analise-projeto-si",
+        "materiaCodigo": "APSI",
+        "arquivo": "src/content/analise-projeto-si/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Análise e Projeto de Sistemas de Informação, com 15 seções e 40 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma APSI 2024.1 do Prof. Augusto César: 20 decks de slides (engenharia de software, RUP, requisitos, casos de uso, UML completa, arquitetura, SOLID e design patterns), a planilha de levantamento de requisitos, os documentos-modelo do RUP com exemplos preenchidos (Visão do Sistema de Registro em Curso, SRS do SCA, MERCI e SICC), o exercício de modelagem do leilão e o exemplo em PlantUML apresentado no VSCode. As avaliações espelham AV1 (quizzes 40% + documentos 60%) e AV2 (especificação + projeto). A seção final liga diagrama de classes, diagrama de sequência e código JavaScript do mesmo caso de uso.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "analise-projeto-si",
+        "conteudo",
+        "quiz",
+        "uml"
       ]
     }
   ]

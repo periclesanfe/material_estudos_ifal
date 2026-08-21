@@ -17,6 +17,7 @@ export const importadoresConteudo: Record<string, ImportadorConteudo> = {
   'administracao-projeto-banco-dados': () =>
     import('./administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosContent'),
   'algoritmos-logica-programacao': () => import('./algoritmos-logica-programacao/ALPGContent'),
+  'analise-projeto-si': () => import('./analise-projeto-si/ApsiContent'),
   'comportamento-organizacional': () => import('./comportamento-organizacional/ComportamentoOrganizacionalContent'),
   'empreendedorismo-digital': () => import('./empreendedorismo-digital/EmpdContent'),
   'estrutura-dados': () => import('./estrutura-dados/EstruturaDadosContent'),
