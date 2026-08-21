@@ -1,7 +1,7 @@
 {
   "$schema": "./contribuicoes.schema.json",
   "versao": 1,
-  "atualizadoEm": "2026-08-20",
+  "atualizadoEm": "2026-08-21",
   "contribuintes": [
     {
       "id": "isaque-braga",
@@ -410,6 +410,12 @@
     },
     {
       "id": "contrib-2026-08-20-conteudo-fdbd",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-20",
+        "registradoEm": "2026-08-20T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
       "onde": {
         "escopo": "materia",
         "materiaSlug": "fundamentos-banco-dados",
@@ -418,9 +424,8 @@
       },
       "tipo": "conteudo_materia",
       "como": {
-        "resumo": "Cria o conteúdo da matéria Programação Orientada a Objetos, com 16 seções na sequência das aulas e 38 questões de quiz.",
-        "detalhes": "Escrito a partir da leitura integral do material da turma PROO BSI 2023.2 do Prof. Fernando Kenji Kamei (10 decks de slides, ementa oficial, lista de exercícios, proposta de projeto e ~60 códigos de aula em Java, incluindo os pacotes de camadas VO/BO/DAO/View, JDBC e testes JUnit). As avaliações seguem as da turma (Parte 01 de fundamentos, AV1 de Padrões de Projeto e Projeto Final com peso 2), e o quiz ancora nas pegadinhas reais dos slides e nos bugs didáticos dos códigos. Erratas do material original (versão do Java, limite do long, condição malformada no slide 8 da aula 11) foram corrigidas com sinalização.",
-        "origem": "material_professor"
+        "resumo": "Cria o conteúdo da matéria Fundamentos de Banco de Dados, com 14 seções na trilha da turma 2023.1 e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral dos 45 arquivos raspados da turma FNBD 2023.1 da Profa. Wladia Bessa (capítulos dos livros Rob & Coronel e Elmasri & Navathe, slides de SQL, anotações do quadro da aula de JOIN, listas com gabaritos oficiais e o gabarito da 2ª prova). As avaliações espelham as três provas da turma; os exemplos resolvidos usam os gabaritos oficiais (modelo bancário EER, conversão do jogo educacional, atividade de DDL) e os erros reais dos gabaritos viraram questões 'ache o erro' sinalizadas. Divergências terminológicas entre os dois livros-base (independência lógica/física) são apresentadas com a versão Elmasri como canônica."
       },
       "status": "incorporado",
       "tags": [
@@ -438,20 +443,54 @@
         "registradoEm": "2026-08-20T00:00:00-03:00",
         "timezone": "America/Maceio"
       },
-      "tipo": "conteudo_materia",
-      "como": {
-        "resumo": "Cria o conteúdo da matéria Fundamentos de Banco de Dados, com 14 seções na trilha da turma 2023.1 e 38 questões de quiz.",
-        "detalhes": "Escrito a partir da leitura integral dos 45 arquivos raspados da turma FNBD 2023.1 da Profa. Wladia Bessa (capítulos dos livros Rob & Coronel e Elmasri & Navathe, slides de SQL, anotações do quadro da aula de JOIN, listas com gabaritos oficiais e o gabarito da 2ª prova). As avaliações espelham as três provas da turma; os exemplos resolvidos usam os gabaritos oficiais (modelo bancário EER, conversão do jogo educacional, atividade de DDL) e os erros reais dos gabaritos viraram questões 'ache o erro' sinalizadas. Divergências terminológicas entre os dois livros-base (independência lógica/física) são apresentadas com a versão Elmasri como canônica.",
+      "onde": {
+        "escopo": "materia",
         "materiaSlug": "programacao-orientada-objetos",
         "materiaCodigo": "POOB",
         "arquivo": "src/content/programacao-orientada-objetos/"
       },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Programação Orientada a Objetos, com 16 seções na sequência das aulas e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma PROO BSI 2023.2 do Prof. Fernando Kenji Kamei (10 decks de slides, ementa oficial, lista de exercícios, proposta de projeto e ~60 códigos de aula em Java, incluindo os pacotes de camadas VO/BO/DAO/View, JDBC e testes JUnit). As avaliações seguem as da turma (Parte 01 de fundamentos, AV1 de Padrões de Projeto e Projeto Final com peso 2), e o quiz ancora nas pegadinhas reais dos slides e nos bugs didáticos dos códigos. Erratas do material original (versão do Java, limite do long, condição malformada no slide 8 da aula 11) foram corrigidas com sinalização.",
+        "origem": "material_professor"
+      },
       "status": "incorporado",
       "tags": [
-         "programacao-orientada-objetos",
+        "programacao-orientada-objetos",
         "conteudo",
         "quiz",
         "java"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-21-conteudo-devo",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-21",
+        "registradoEm": "2026-08-21T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "devops",
+        "materiaCodigo": "DEVO",
+        "arquivo": "src/content/devops/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria DevOps, com 15 seções que vão da cultura e do muro da confusão até BlueGreen e Canary, e 40 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma DevOps 2025.1 do Prof. Ivo Calado: ementa e plano de ensino, slides da aula inaugural e de introdução ao DevOps, os sete decks de Linux, os slides de Docker na prática, o roadmap de estudo e os enunciados das três etapas do projeto — estes lidos diretamente dos PDFs, porque a leitura delegada havia produzido uma descrição genérica que omitia quase todos os requisitos reais (12-factor, multi-stage, devcontainer, Helm com values por ambiente, sync waves, ghcr sem tag latest, repositório argocd-gitops e operador de banco). As avaliações espelham as três etapas do projeto, que é a única forma de avaliação da disciplina. Uma seção é dedicada ao caso real documentado pelo professor de um manifesto YAML cuja indentação parecia correta no vim e era inválida no VS Code.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "devops",
+        "conteudo",
+        "quiz",
+        "docker",
+        "kubernetes",
+        "linux"
       ]
     }
   ]

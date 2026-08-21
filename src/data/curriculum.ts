@@ -98,7 +98,7 @@ const subjects: Subject[] = [
   { id: 'lsop', name: 'Laboratório de Sistemas Operacionais', slug: 'laboratorio-sistemas-operacionais', code: 'LSOP', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
   { id: 'infr', name: 'Projeto de Infraestrutura', slug: 'projeto-infraestrutura', code: 'INFR', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
   { id: 'segr', name: 'Segurança de Redes', slug: 'seguranca-redes', code: 'SEGR', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
-  { id: 'devo', name: 'DevOps', slug: 'devops', code: 'DEVO', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
+  { id: 'devo', name: 'DevOps', slug: 'devops', code: 'DEVO', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: true },
 
   // ═══════ OPTATIVAS — HUMANÍSTICAS / SUPLEMENTARES ═══════
   { id: 'prtint', name: 'Propriedade Intelectual', slug: 'propriedade-intelectual', code: 'PINT', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: false },
