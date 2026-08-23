@@ -695,6 +695,34 @@
         "mips",
         "assembly"
       ]
+    },
+    {
+      "id": "contrib-2026-08-20-conteudo-sade",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-20",
+        "registradoEm": "2026-08-20T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "sistemas-apoio-decisao",
+        "materiaCodigo": "SADE",
+        "arquivo": "src/content/sistemas-apoio-decisao/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Sistemas de Apoio à Decisão, com 13 seções e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma SAD 2026.1 do Prof. Edison Camilo: slides de conceitos, data warehouse, pandas/ETL, regras de associação, agrupamento, árvores de decisão, regressão, redes neurais e AHP, mais os enunciados dos nove exercícios e o projeto final com microdados da RAIS. Traz os exemplos numéricos resolvidos do próprio material — o lift de 1,25 do caso cebola/ovos, o cotovelo do dataset Iris, o treino do perceptron para a porta AND e o AHP completo da escolha de emprego, em que o salário maior perde para a oportunidade profissional.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "sistemas-apoio-decisao",
+        "conteudo",
+        "quiz",
+        "mineracao-de-dados"
+      ]
     }
   ]
 }
