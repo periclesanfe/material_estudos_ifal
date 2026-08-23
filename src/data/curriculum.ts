@@ -28,7 +28,7 @@ const subjects: Subject[] = [
   { id: 'filo', name: 'Filosofia', slug: 'filosofia', code: 'FILO', period: 1, axis: 'FHS', hours: 80, hasContent: false },
 
   // ═══════ 2º PERÍODO ═══════
-  { id: 'mtsi', name: 'Matemática para Sistemas de Informação', slug: 'matematica-si', code: 'MTSI', period: 2, axis: 'FB', hours: 80, hasContent: false },
+  { id: 'mtsi', name: 'Matemática para Sistemas de Informação', slug: 'matematica-si', code: 'MTSI', period: 2, axis: 'FB', hours: 80, hasContent: true },
   { id: 'fgeo', name: 'Fundamentos da Gestão Organizacional', slug: 'fundamentos-gestao-organizacional', code: 'FGEO', period: 2, axis: 'FB', hours: 80, hasContent: false },
   { id: 'aocp', name: 'Arquitetura e Organização de Computadores', slug: 'arquitetura-organizacao-computadores', code: 'AOCP', period: 2, axis: 'FPG', hours: 80, hasContent: true },
   { id: 'lpgm', name: 'Linguagem de Programação', slug: 'linguagem-programacao', code: 'LPGM', period: 2, axis: 'FPG', hours: 80, prerequisites: ['alpg'], hasContent: true },
