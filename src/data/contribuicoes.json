@@ -1,7 +1,7 @@
 {
   "$schema": "./contribuicoes.schema.json",
   "versao": 1,
-  "atualizadoEm": "2026-08-20",
+  "atualizadoEm": "2026-08-22",
   "contribuintes": [
     {
       "id": "isaque-braga",
@@ -464,6 +464,34 @@
         "conteudo",
         "quiz",
         "java"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-22-conteudo-infr",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-22",
+        "registradoEm": "2026-08-22T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "projeto-infraestrutura",
+        "materiaCodigo": "INFR",
+        "arquivo": "src/content/projeto-infraestrutura/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Projeto de Infraestrutura, com 16 seções e 40 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral dos 5 PDFs da turma 2026.1 do Prof. Wellington Pereira (61 páginas): os dois decks de aula e os três enunciados de atividade. As três avaliações seguem os blocos do material — normas e mídias, processo de projeto e estudos de caso. Os números foram conferidos página a página: os limites da TIA-568 (90 m de cabo horizontal, 10 m de patch cords, 100 m de canal), as frequências e alcances por categoria (Cat6 a 250 MHz com 10 Gbps só até 55 m, Cat6a a 500 MHz até 100 m, Cat8 a 2000 MHz até 30 m), as sequências completas de T568A e T568B, as densidades do projeto do IFAL (4 pontos por sala, 40 por laboratório) e os dados dos quatro estudos de caso da V2, incluindo o log de erros FCS do switch e o orçamento de R$ 65 mil. Lacunas declaradas no próprio conteúdo: os arquivos 'Aula Gravada 01' e 'Aula 02' falharam no download (403) e não foram lidos; o 'Gabarito Técnico' das 50 questões é mencionado no enunciado mas não consta no arquivo, então as questões aparecem como mapa de estudo e não com respostas atribuídas ao professor; e o material diverge internamente sobre a frequência do Cat5e (100 MHz em um slide, 125 MHz em outro), divergência registrada em vez de arbitrada.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "projeto-infraestrutura",
+        "conteudo",
+        "quiz",
+        "redes"
       ]
     }
   ]
