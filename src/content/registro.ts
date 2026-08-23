@@ -35,6 +35,7 @@ export const importadoresConteudo: Record<string, ImportadorConteudo> = {
   'linguagem-programacao': () => import('./linguagem-programacao/LPGMContent'),
   'logica-matematica-discreta': () => import('./logica-matematica-discreta/LmmdContent'),
   'marketing-comercio-eletronico': () => import('./marketing-comercio-eletronico/MarketingContent'),
+  'matematica-si': () => import('./matematica-si/MtsiContent'),
   'metodologia-cientifica': () => import('./metodologia-cientifica/MetodologiaCientificaContent'),
   'processos-desenvolvimento-software': () =>
     import('./processos-desenvolvimento-software/ProcessosDesenvolvimentoSoftwareContent'),
