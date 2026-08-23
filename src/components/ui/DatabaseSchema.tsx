@@ -66,6 +66,7 @@ export default function DatabaseSchema({
     esquema.associativas.size > 0
       ? `${esquema.associativas.size} associativa${esquema.associativas.size > 1 ? 's' : ''}`
       : null,
+    esquema.fatos.size > 0 ? `${esquema.fatos.size} fato` : null,
   ].filter(Boolean).join(' · ');
 
   return (

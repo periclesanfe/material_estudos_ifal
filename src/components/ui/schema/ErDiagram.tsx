@@ -74,11 +74,16 @@ export default function ErDiagram({ esquema }: Props) {
     })),
     ...relSimples.map(l => ({
       // O nome do losango sai da coluna FK sem o ruído de chave: `cod_disc`,
-      // `disc_id` e `id_disc` devem todos ler "disc".
-      nome:
-        l.deColuna
+      // `disc_id` e `id_disc` devem todos ler "disc". Quando a coluna não tem
+      // afixo de chave para tirar (`numeroreg`, `codisciplina`), o nome dela não
+      // descreve o relacionamento — aí o nome da tabela referenciada informa
+      // mais, e é ele que vai para o losango.
+      nome: (() => {
+        const limpo = l.deColuna
           .replace(/^(id|cod(igo)?|fk)_/i, '')
-          .replace(/_(id|cod(igo)?|fk)$/i, '') || l.para,
+          .replace(/_(id|cod(igo)?|fk)$/i, '');
+        return limpo && limpo.toLowerCase() !== l.deColuna.toLowerCase() ? limpo : l.para;
+      })(),
       tipo: l.cardinalidade,
       pontas: [l.para, l.de],
       extras: [] as string[],

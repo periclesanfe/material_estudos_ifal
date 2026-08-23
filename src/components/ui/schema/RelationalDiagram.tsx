@@ -33,10 +33,22 @@ export default function RelationalDiagram({ esquema, destaque, onDestaque }: Pro
 
   // Ordena para que as tabelas referenciadas venham antes das que referenciam:
   // com as "donas" à esquerda, as curvas de FK cruzam bem menos.
+  //
+  // Star schema é a exceção: a fato tem o maior grau e cairia no fim da lista,
+  // deixando as dimensões todas acima dela — uma coluna, não uma estrela. Como
+  // é justamente a forma que a disciplina ensina, a fato vai para o MEIO, com
+  // dimensões antes e depois.
   const ordenadas = useMemo(() => {
     const grau = new Map(esquema.tabelas.map(t => [t.nome, 0]));
     for (const l of esquema.ligacoes) grau.set(l.de, (grau.get(l.de) ?? 0) + 1);
-    return [...esquema.tabelas].sort((a, b) => (grau.get(a.nome)! - grau.get(b.nome)!));
+    const porGrau = [...esquema.tabelas].sort((a, b) => grau.get(a.nome)! - grau.get(b.nome)!);
+
+    if (esquema.fatos.size === 0) return porGrau;
+
+    const fatos = porGrau.filter(t => esquema.fatos.has(t.nome));
+    const resto = porGrau.filter(t => !esquema.fatos.has(t.nome));
+    const meio = Math.ceil(resto.length / 2);
+    return [...resto.slice(0, meio), ...fatos, ...resto.slice(meio)];
   }, [esquema]);
 
   useLayoutEffect(() => {
@@ -122,13 +134,20 @@ export default function RelationalDiagram({ esquema, destaque, onDestaque }: Pro
         {ordenadas.map(tabela => (
           <figure
             key={tabela.nome}
-            className={`db-tabela${esquema.associativas.has(tabela.nome) ? ' db-tabela--assoc' : ''}`}
+            className={`db-tabela${esquema.associativas.has(tabela.nome) ? ' db-tabela--assoc' : ''}${
+              esquema.fatos.has(tabela.nome) ? ' db-tabela--fato' : ''
+            }`}
           >
             <figcaption className="db-tabela__nome">
               {tabela.nome}
               {esquema.associativas.has(tabela.nome) && (
                 <span className="db-tabela__selo" title="Tabela associativa: resolve um relacionamento N:M">
                   N:M
+                </span>
+              )}
+              {esquema.fatos.has(tabela.nome) && (
+                <span className="db-tabela__selo db-tabela__selo--fato" title="Tabela fato: o centro do esquema estrela">
+                  FATO
                 </span>
               )}
             </figcaption>

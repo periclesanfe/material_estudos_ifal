@@ -41,6 +41,8 @@ export interface Esquema {
   ligacoes: Ligacao[];
   /** Tabelas que só existem para resolver um N:M. */
   associativas: Set<string>;
+  /** Tabelas fato de star schema — centro da estrela, não ponte de N:M. */
+  fatos: Set<string>;
 }
 
 /** Remove comentários de bloco e guarda os de linha por número de linha. */
@@ -224,16 +226,64 @@ export function parseDdl(sql: string): Esquema {
     tabelas.push({ nome: nomeTabela, colunas });
   }
 
+  // ---- ALTER TABLE: chaves declaradas depois da criação ----
+  // Estilo comum no Oracle (e no material da turma): cria-se a tabela e só
+  // então se promovem PK e FK. Sem ler isto, a fato do star schema apareceria
+  // sem PK e sem nenhuma ligação — errado, e silenciosamente.
+  const acharTabela = (nome: string) =>
+    tabelas.find(t => t.nome.toLowerCase() === limparIdent(nome).toLowerCase());
+
+  const reAlterPk = new RegExp(
+    String.raw`ALTER\s+TABLE\s+(?:${IDENT}\s*\.\s*)?(["\`[]?${IDENT}["\`\]]?)\s+ADD\s+(?:CONSTRAINT\s+\S+\s+)?PRIMARY\s+KEY\s*\(([^)]*)\)`,
+    'gi',
+  );
+  let mAlter: RegExpExecArray | null;
+  while ((mAlter = reAlterPk.exec(limpo)) !== null) {
+    const t = acharTabela(mAlter[1]);
+    if (!t) continue;
+    for (const bruto of mAlter[2].split(',')) {
+      const col = t.colunas.find(c => c.nome.toLowerCase() === limparIdent(bruto).toLowerCase());
+      if (col) col.pk = true;
+    }
+  }
+
+  const reAlterFk = new RegExp(
+    String.raw`ALTER\s+TABLE\s+(?:${IDENT}\s*\.\s*)?(["\`[]?${IDENT}["\`\]]?)\s+ADD\s+(?:CONSTRAINT\s+\S+\s+)?FOREIGN\s+KEY\s*\(([^)]*)\)\s*REFERENCES\s+(?:${IDENT}\s*\.\s*)?(["\`[]?${IDENT}["\`\]]?)\s*(?:\(([^)]*)\))?`,
+    'gi',
+  );
+  while ((mAlter = reAlterFk.exec(limpo)) !== null) {
+    const alvoNome = mAlter[3];
+    const t = acharTabela(mAlter[1]);
+    if (!t) continue;
+    const cols = mAlter[2].split(',').map(limparIdent);
+    const refs = mAlter[4] ? mAlter[4].split(',').map(limparIdent) : [];
+    cols.forEach((nomeCol, i) => {
+      const col = t.colunas.find(c => c.nome.toLowerCase() === nomeCol.toLowerCase());
+      if (col) col.fk = { tabela: limparIdent(alvoNome), coluna: refs[i] ?? refs[0] ?? 'id' };
+    });
+  }
+
   // ---- Ligações e detecção de tabela associativa ----
   const associativas = new Set<string>();
+  const fatos = new Set<string>();
   const nomeReal = new Map(tabelas.map(t => [t.nome.toLowerCase(), t.nome]));
 
   for (const t of tabelas) {
     const pks = t.colunas.filter(c => c.pk);
     // Associativa: a PK é composta E toda parte dela é FK. É o desenho canônico
     // de resolução de N:M, então merece leitura própria no diagrama.
-    const eAssociativa = pks.length >= 2 && pks.every(c => c.fk);
+    const chaveTodaFk = pks.length >= 2 && pks.every(c => c.fk);
+  // Fato × associativa: as duas têm PK composta de FKs, então a estrutura
+  // sozinha não separa. O que separa é o PROPÓSITO, e o sinal confiável é o
+  // NÚMERO DE PONTAS: ponte de N:M liga exatamente duas tabelas; fato de star
+  // schema liga três ou mais dimensões — é isso que faz a estrela ter pontas.
+  // Sem a distinção, f_vendas seria rotulada "N:M", errado em modelagem
+  // dimensional; com um critério frouxo (contar atributos), ITEM_DO_PEDIDO da
+  // normalização viraria "fato", igualmente errado. O grau é o que separa.
+  const ehFato = pks.length >= 3;
+    const eAssociativa = chaveTodaFk && !ehFato;
     if (eAssociativa) associativas.add(t.nome);
+    if (chaveTodaFk && ehFato) fatos.add(t.nome);
 
     for (const col of t.colunas) {
       if (!col.fk) continue;
@@ -244,10 +294,10 @@ export function parseDdl(sql: string): Esquema {
         deColuna: col.nome,
         para: alvo,
         paraColuna: col.fk.coluna,
-        cardinalidade: eAssociativa ? 'N:M' : col.unique || col.pk ? '1:1' : '1:N',
+        cardinalidade: eAssociativa ? 'N:M' : col.unique || (col.pk && !ehFato) ? '1:1' : '1:N',
       });
     }
   }
 
-  return { tabelas, ligacoes, associativas };
+  return { tabelas, ligacoes, associativas, fatos };
 }
