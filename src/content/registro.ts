@@ -25,6 +25,7 @@ export const importadoresConteudo: Record<string, ImportadorConteudo> = {
   'fundamentos-banco-dados': () => import('./fundamentos-banco-dados/FdbdContent'),
   'fundamentos-redes-computadores': () => import('./fundamentos-redes-computadores/FrdcContent'),
   'fundamentos-si': () => import('./fundamentos-si/FundamentosSIContent'),
+  'gestao-pessoas-ti': () => import('./gestao-pessoas-ti/GptiContent'),
   'introducao-tecnologias-web': () => import('./introducao-tecnologias-web/IntwContent'),
   'linguagem-programacao': () => import('./linguagem-programacao/LPGMContent'),
   'logica-matematica-discreta': () => import('./logica-matematica-discreta/LmmdContent'),

@@ -577,6 +577,35 @@
         "quiz",
         "etica"
       ]
+    },
+    {
+      "id": "contrib-2026-08-21-conteudo-gpti",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-21",
+        "registradoEm": "2026-08-21T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "gestao-pessoas-ti",
+        "materiaCodigo": "GPTI",
+        "arquivo": "src/content/gestao-pessoas-ti/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Gestão de Pessoas em TI, com 16 seções cobrindo os onze módulos da turma 2023.2, e 38 questões de quiz.",
+        "detalhes": "Dez dos onze módulos foram distribuídos como apresentações .ppt antigas cujo conteúdo eram digitalizações do livro do Chiavenato coladas como imagem — não havia texto a extrair, e não há LibreOffice disponível para converter. As 42 páginas escaneadas foram recuperadas varrendo os bytes dos arquivos entre os marcadores JPEG e lidas visualmente uma a uma. Uma delas saiu corrompida por falso positivo do marcador dentro de dados comprimidos; a extração foi refeita validando o cabeçalho e o SOF. Onde a cobertura do material é rasa — o módulo de rotatividade tem uma única imagem e as fórmulas de índice de rotatividade e absenteísmo não constam da raspagem —, o conteúdo declara a lacuna em vez de preenchê-la. A bibliografia do cronograma inclui três títulos de finanças sem relação com a disciplina, provável resquício de cópia de outro plano: ficam registrados como curiosidade documental, com Chiavenato e Barbieri citados como referências efetivas.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "gestao-pessoas-ti",
+        "conteudo",
+        "quiz",
+        "chiavenato",
+        "rh"
+      ]
     }
   ]
 }
