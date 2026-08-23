@@ -762,12 +762,14 @@
       },
       "onde": {
         "escopo": "projeto",
-        "arquivo": "src/components/ui/FormulaBlock.tsx"
+        "arquivo": "src/components/ui/FormulaBlock.tsx",
+        "pullRequest": "#64"
       },
       "tipo": "melhoria",
       "como": {
         "resumo": "Cria o componente FormulaBlock para notação matemática, com os helpers Frac, Pow, Sub, Root e InlineFormula.",
-        "detalhes": "Fórmula não é código: é lida como figura, com frações e expoentes ocupando espaço vertical, e não linha a linha como no CodeBlock. O componente traz tratamento tipográfico próprio (serifa com variáveis em itálico, números e operadores em romano) e um prop 'where' que documenta os símbolos junto da fórmula. Os helpers compõem entre si — uma raiz dentro de uma fração, por exemplo. Usa os tokens de cor do projeto, funcionando nos temas claro e escuro."
+        "detalhes": "Fórmula não é código: é lida como figura, com frações e expoentes ocupando espaço vertical, e não linha a linha como no CodeBlock. O componente traz tratamento tipográfico próprio (serifa com variáveis em itálico, números e operadores em romano) e um prop 'where' que documenta os símbolos junto da fórmula. Os helpers compõem entre si — uma raiz dentro de uma fração, por exemplo. Usa os tokens de cor do projeto, funcionando nos temas claro e escuro.",
+        "origem": "pull_request"
       },
       "status": "incorporado",
       "tags": [
@@ -814,12 +816,14 @@
       },
       "onde": {
         "escopo": "projeto",
-        "arquivo": "src/components/ui/CodeBlock.tsx"
+        "arquivo": "src/components/ui/CodeBlock.tsx",
+        "pullRequest": "#65"
       },
       "tipo": "melhoria",
       "como": {
         "resumo": "Acrescenta as linguagens http, bash, json e text ao CodeBlock.",
-        "detalhes": "Programação Web 2 precisa exibir mensagens HTTP cruas (linha de requisição, cabeçalhos), comandos de terminal, trechos de package.json e diagramas em ASCII — nenhum cabia nas linguagens já suportadas. O 'text' não realça nada de propósito: em diagrama ASCII e saída de terminal, colorir palavras soltas atrapalha a leitura."
+        "detalhes": "Programação Web 2 precisa exibir mensagens HTTP cruas (linha de requisição, cabeçalhos), comandos de terminal, trechos de package.json e diagramas em ASCII — nenhum cabia nas linguagens já suportadas. O 'text' não realça nada de propósito: em diagrama ASCII e saída de terminal, colorir palavras soltas atrapalha a leitura.",
+        "origem": "pull_request"
       },
       "status": "incorporado",
       "tags": [

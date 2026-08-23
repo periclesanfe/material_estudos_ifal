@@ -6,6 +6,10 @@
   "additionalProperties": false,
   "required": ["versao", "contribuintes", "contribuicoes"],
   "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Caminho do schema, para validacao e autocompletar no editor."
+    },
     "versao": {
       "type": "integer",
       "minimum": 1
