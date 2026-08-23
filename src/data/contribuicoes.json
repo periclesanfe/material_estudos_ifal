@@ -1,7 +1,7 @@
 {
   "$schema": "./contribuicoes.schema.json",
   "versao": 1,
-  "atualizadoEm": "2026-08-20",
+  "atualizadoEm": "2026-08-22",
   "contribuintes": [
     {
       "id": "isaque-braga",
@@ -406,6 +406,322 @@
         "conteudo",
         "quiz",
         "unit-economics"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-20-conteudo-fdbd",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-20",
+        "registradoEm": "2026-08-20T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "fundamentos-banco-dados",
+        "materiaCodigo": "FDBD",
+        "arquivo": "src/content/fundamentos-banco-dados/",
+        "pullRequest": "#50"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Fundamentos de Banco de Dados, com 14 seções na trilha da turma 2023.1 e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral dos 45 arquivos raspados da turma FNBD 2023.1 da Profa. Wladia Bessa (capítulos dos livros Rob & Coronel e Elmasri & Navathe, slides de SQL, anotações do quadro da aula de JOIN, listas com gabaritos oficiais e o gabarito da 2ª prova). As avaliações espelham as três provas da turma; os exemplos resolvidos usam os gabaritos oficiais (modelo bancário EER, conversão do jogo educacional, atividade de DDL) e os erros reais dos gabaritos viraram questões 'ache o erro' sinalizadas. Divergências terminológicas entre os dois livros-base (independência lógica/física) são apresentadas com a versão Elmasri como canônica.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "fundamentos-banco-dados",
+        "conteudo",
+        "quiz",
+        "sql"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-20-conteudo-poob",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-20",
+        "registradoEm": "2026-08-20T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "programacao-orientada-objetos",
+        "materiaCodigo": "POOB",
+        "arquivo": "src/content/programacao-orientada-objetos/",
+        "pullRequest": "#49"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Programação Orientada a Objetos, com 16 seções na sequência das aulas e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma PROO BSI 2023.2 do Prof. Fernando Kenji Kamei (10 decks de slides, ementa oficial, lista de exercícios, proposta de projeto e ~60 códigos de aula em Java, incluindo os pacotes de camadas VO/BO/DAO/View, JDBC e testes JUnit). As avaliações seguem as da turma (Parte 01 de fundamentos, AV1 de Padrões de Projeto e Projeto Final com peso 2), e o quiz ancora nas pegadinhas reais dos slides e nos bugs didáticos dos códigos. Erratas do material original (versão do Java, limite do long, condição malformada no slide 8 da aula 11) foram corrigidas com sinalização.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "programacao-orientada-objetos",
+        "conteudo",
+        "quiz",
+        "java"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-22-conteudo-edfi",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-22",
+        "registradoEm": "2026-08-22T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "educacao-financeira",
+        "materiaCodigo": "EDFI",
+        "arquivo": "src/content/educacao-financeira/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Educação Financeira, com 14 seções na sequência das aulas e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma Educação Financeira BSI 2024.2: as cartilhas da Febraban / Meu Bolso em Dia (planejamento financeiro familiar, guia do cartão de crédito, guia do cheque especial, os dez passos para sair das dívidas e \"Quem sonha poupa\"), o Glossário Simplificado de Termos Financeiros do Banco Central (114 verbetes, nov/2013), o trecho de Gustavo Cerbasi com os quatro indicadores patrimoniais e a apresentação sobre Tesouro Direto. As três avaliações seguem os grupos de atividades da turma. Os números do bloco de Tesouro Direto (custódia de 0,20% a.a., IR regressivo de 22,5% a 15%, IOF de 96% no 1º dia zerando no 30º, 240 parcelas do Renda+ e 60 amortizações do Educa+) foram conferidos página a página no material original. Lacunas declaradas no próprio conteúdo: o Manual do Pequeno Investidor em Ações (280 páginas) não foi verificado, e FGC/CDB/LCI/LCA, Relatório Focus e indicadores macroeconômicos foram trabalhados em vídeo, sem material textual. A planilha de notas da turma não foi utilizada.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "educacao-financeira",
+        "conteudo",
+        "quiz",
+        "financas"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-22-conteudo-infr",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-22",
+        "registradoEm": "2026-08-22T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "projeto-infraestrutura",
+        "materiaCodigo": "INFR",
+        "arquivo": "src/content/projeto-infraestrutura/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Projeto de Infraestrutura, com 16 seções e 40 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral dos 5 PDFs da turma 2026.1 do Prof. Wellington Pereira (61 páginas): os dois decks de aula e os três enunciados de atividade. As três avaliações seguem os blocos do material — normas e mídias, processo de projeto e estudos de caso. Os números foram conferidos página a página: os limites da TIA-568 (90 m de cabo horizontal, 10 m de patch cords, 100 m de canal), as frequências e alcances por categoria (Cat6 a 250 MHz com 10 Gbps só até 55 m, Cat6a a 500 MHz até 100 m, Cat8 a 2000 MHz até 30 m), as sequências completas de T568A e T568B, as densidades do projeto do IFAL (4 pontos por sala, 40 por laboratório) e os dados dos quatro estudos de caso da V2, incluindo o log de erros FCS do switch e o orçamento de R$ 65 mil. Lacunas declaradas no próprio conteúdo: os arquivos 'Aula Gravada 01' e 'Aula 02' falharam no download (403) e não foram lidos; o 'Gabarito Técnico' das 50 questões é mencionado no enunciado mas não consta no arquivo, então as questões aparecem como mapa de estudo e não com respostas atribuídas ao professor; e o material diverge internamente sobre a frequência do Cat5e (100 MHz em um slide, 125 MHz em outro), divergência registrada em vez de arbitrada.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "projeto-infraestrutura",
+        "conteudo",
+        "quiz",
+        "redes"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-22-conteudo-frdc",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-22",
+        "registradoEm": "2026-08-22T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "fundamentos-redes-computadores",
+        "materiaCodigo": "FRDC",
+        "arquivo": "src/content/fundamentos-redes-computadores/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Fundamentos de Redes de Computadores, com 17 seções e 46 questões de quiz.",
+        "detalhes": "Diferente das demais matérias do site: o material distribuído na turma NÃO é de autoria do professor — os slides são o pacote oficial da editora que acompanha o livro do Kurose (marcados '© 2014 Pearson') e os PDFs anexos são os livros completos de Kurose e Tanenbaum, obras protegidas. Por isso este conteúdo não resume nem transcreve esse material. O que ele registra é a ESTRUTURA da disciplina, que é decisão do professor (a divisão em quatro módulos seguindo os capítulos 1 a 4, o desenho das avaliações Av1/Av2/Av3, o projeto de sockets com propostas do codingchallenges.fyi e o desafio do load balancer, as ferramentas de diagnóstico escolhidas), apoiada na ementa oficial do PPC — documento institucional — e escrita com os conceitos padrão de redes, que são conhecimento técnico de domínio comum. Lacunas declaradas no conteúdo: os quatro quizzes são Google Forms e não foram capturados; os enunciados de Av1, Av2 e Av3 não têm anexo no mural, então conhece-se o escopo mas não o formato nem os critérios; e a turma cobriu apenas os capítulos 1 a 4, sem camada de enlace e física, porque o semestre foi comprimido por uma greve de professores e por uma suspensão de aulas.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "fundamentos-redes-computadores",
+        "conteudo",
+        "quiz",
+        "redes"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-22-conteudo-etso",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-22",
+        "registradoEm": "2026-08-22T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "etica-sociedade",
+        "materiaCodigo": "ETSO",
+        "arquivo": "src/content/etica-sociedade/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Ética, Tecnologia e Sociedade, com 17 seções e 48 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma 2023.2: os quatro decks autorais da professora e os documentos de referência. As páginas somente-imagem dos decks 3 e 4 foram renderizadas e lidas, o que recuperou o texto integral dos doze artigos do Código de Ética do Profissional de Informática da SBC (15/07/2013), do Código de Conduta para Publicações e dos parágrafos da CMSI reproduzidos nos slides (§56-59 da Declaração de Princípios, §25 da Linha C10 do Plano de Ação de Genebra e §§39-48 de Túnis). As duas avaliações seguem as da turma: AV1 fracionada em três atividades de fixação e AV2 como ciclo de seminários. Registrada uma inconsistência do próprio documento da SBC, que menciona 'Conselho de Ética' no Art. 4º e 'Comitê de Ética' nos Arts. 7º e 9º — anotada em vez de uniformizada. PRIVACIDADE: os avisos do mural citam nomes de estudantes e do secretário regional da SBC em Alagoas; nenhum nome de pessoa foi reproduzido no conteúdo, e os seminários aparecem apenas por título, já que as apresentações são trabalho autoral das equipes.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "etica-sociedade",
+        "conteudo",
+        "quiz",
+        "etica"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-21-conteudo-gpti",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-21",
+        "registradoEm": "2026-08-21T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "gestao-pessoas-ti",
+        "materiaCodigo": "GPTI",
+        "arquivo": "src/content/gestao-pessoas-ti/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Gestão de Pessoas em TI, com 16 seções cobrindo os onze módulos da turma 2023.2, e 38 questões de quiz.",
+        "detalhes": "Dez dos onze módulos foram distribuídos como apresentações .ppt antigas cujo conteúdo eram digitalizações do livro do Chiavenato coladas como imagem — não havia texto a extrair, e não há LibreOffice disponível para converter. As 42 páginas escaneadas foram recuperadas varrendo os bytes dos arquivos entre os marcadores JPEG e lidas visualmente uma a uma. Uma delas saiu corrompida por falso positivo do marcador dentro de dados comprimidos; a extração foi refeita validando o cabeçalho e o SOF. Onde a cobertura do material é rasa — o módulo de rotatividade tem uma única imagem e as fórmulas de índice de rotatividade e absenteísmo não constam da raspagem —, o conteúdo declara a lacuna em vez de preenchê-la. A bibliografia do cronograma inclui três títulos de finanças sem relação com a disciplina, provável resquício de cópia de outro plano: ficam registrados como curiosidade documental, com Chiavenato e Barbieri citados como referências efetivas.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "gestao-pessoas-ti",
+        "conteudo",
+        "quiz",
+        "chiavenato",
+        "rh"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-21-conteudo-gpjt",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-21",
+        "registradoEm": "2026-08-21T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "gerencia-projeto",
+        "materiaCodigo": "GPJT",
+        "arquivo": "src/content/gerencia-projeto/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Gerência de Projeto, com 16 seções que vão da definição de projeto ao encerramento, e 42 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma 2024: apostila de fundamentos com a comparação entre PMBOK 6 e 7, os três módulos e o material de controle da ENAP, os slides autorais do professor sobre iniciação e planejamento, as aulas de novembro e os modelos de Termo de Abertura, Requisitos e Declaração de Escopo. A atividade do caminho crítico foi resolvida a partir do diagrama original — passagem para frente e para trás, tabela de folgas e os quatro caminhos possíveis —, corrigindo uma leitura delegada que havia concluído 22 dias em vez dos 25 corretos. As fórmulas de valor agregado foram conferidas página a página no PDF, e o exemplo da formação de multiplicadores aparece resolvido, incluindo a inconsistência da fonte (os marcos somam R$ 45,5K contra um pacote orçado em R$ 50K). O modelo de TAP distribuído em aula é um documento real preenchido, com nomes e contatos de docentes e alunos: reproduz-se apenas a estrutura, despersonalizada.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "gerencia-projeto",
+        "conteudo",
+        "quiz",
+        "pmbok",
+        "eap",
+        "caminho-critico"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-21-conteudo-devo",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-21",
+        "registradoEm": "2026-08-21T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "devops",
+        "materiaCodigo": "DEVO",
+        "arquivo": "src/content/devops/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria DevOps, com 15 seções que vão da cultura e do muro da confusão até BlueGreen e Canary, e 40 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma DevOps 2025.1 do Prof. Ivo Calado: ementa e plano de ensino, slides da aula inaugural e de introdução ao DevOps, os sete decks de Linux, os slides de Docker na prática, o roadmap de estudo e os enunciados das três etapas do projeto — estes lidos diretamente dos PDFs, porque a leitura delegada havia produzido uma descrição genérica que omitia quase todos os requisitos reais (12-factor, multi-stage, devcontainer, Helm com values por ambiente, sync waves, ghcr sem tag latest, repositório argocd-gitops e operador de banco). As avaliações espelham as três etapas do projeto, que é a única forma de avaliação da disciplina. Uma seção é dedicada ao caso real documentado pelo professor de um manifesto YAML cuja indentação parecia correta no vim e era inválida no VS Code.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "devops",
+        "conteudo",
+        "quiz",
+        "docker",
+        "kubernetes",
+        "linux"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-20-conteudo-aocp",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-20",
+        "registradoEm": "2026-08-20T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "arquitetura-organizacao-computadores",
+        "materiaCodigo": "AOCP",
+        "arquivo": "src/content/arquitetura-organizacao-computadores/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Arquitetura e Organização de Computadores, com 15 seções que vão das máquinas de níveis ao caminho de dados, e 40 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma ARQC 2022.2: ementa, slides dos capítulos 1 a 3 de Tanenbaum, aula de revisão de lógica digital, as aulas de assembly e arquitetura MIPS, a coleção de quinze exemplos comentados em assembly e o enunciado do trabalho prático. As avaliações espelham a 1ª prova (unidades 1 e 2), a 2ª prova e o trabalho MIPS. Os três exercícios numéricos de análise de desempenho aparecem resolvidos passo a passo — incluindo o caso em que o computador de CPI maior é 1,2 vez mais rápido, porque seu ciclo de clock é menor. Os exemplos de assembly preservam a marca didática do professor, trazendo o código equivalente em C ou Python ao lado. Acrescenta a linguagem \"mips\" ao CodeBlock para destacar registradores, diretivas e instruções.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "arquitetura-organizacao-computadores",
+        "conteudo",
+        "quiz",
+        "mips",
+        "assembly"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-20-conteudo-sade",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-20",
+        "registradoEm": "2026-08-20T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "sistemas-apoio-decisao",
+        "materiaCodigo": "SADE",
+        "arquivo": "src/content/sistemas-apoio-decisao/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Sistemas de Apoio à Decisão, com 13 seções e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma SAD 2026.1 do Prof. Edison Camilo: slides de conceitos, data warehouse, pandas/ETL, regras de associação, agrupamento, árvores de decisão, regressão, redes neurais e AHP, mais os enunciados dos nove exercícios e o projeto final com microdados da RAIS. Traz os exemplos numéricos resolvidos do próprio material — o lift de 1,25 do caso cebola/ovos, o cotovelo do dataset Iris, o treino do perceptron para a porta AND e o AHP completo da escolha de emprego, em que o salário maior perde para a oportunidade profissional.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "sistemas-apoio-decisao",
+        "conteudo",
+        "quiz",
+        "mineracao-de-dados"
       ]
     },
     {

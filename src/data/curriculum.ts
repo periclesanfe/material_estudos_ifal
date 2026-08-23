@@ -30,13 +30,13 @@ const subjects: Subject[] = [
   // ═══════ 2º PERÍODO ═══════
   { id: 'mtsi', name: 'Matemática para Sistemas de Informação', slug: 'matematica-si', code: 'MTSI', period: 2, axis: 'FB', hours: 80, hasContent: false },
   { id: 'fgeo', name: 'Fundamentos da Gestão Organizacional', slug: 'fundamentos-gestao-organizacional', code: 'FGEO', period: 2, axis: 'FB', hours: 80, hasContent: false },
-  { id: 'aocp', name: 'Arquitetura e Organização de Computadores', slug: 'arquitetura-organizacao-computadores', code: 'AOCP', period: 2, axis: 'FPG', hours: 80, hasContent: false },
+  { id: 'aocp', name: 'Arquitetura e Organização de Computadores', slug: 'arquitetura-organizacao-computadores', code: 'AOCP', period: 2, axis: 'FPG', hours: 80, hasContent: true },
   { id: 'lpgm', name: 'Linguagem de Programação', slug: 'linguagem-programacao', code: 'LPGM', period: 2, axis: 'FPG', hours: 80, prerequisites: ['alpg'], hasContent: true },
   { id: 'sorg', name: 'Sociologia das Organizações', slug: 'sociologia-organizacoes', code: 'SORG', period: 2, axis: 'FHS', hours: 80, hasContent: false },
 
   // ═══════ 3º PERÍODO ═══════
   { id: 'etap', name: 'Estatística Aplicada', slug: 'estatistica-aplicada', code: 'ETAP', period: 3, axis: 'FB', hours: 80, hasContent: false },
-  { id: 'fdbd', name: 'Fundamentos de Banco de Dados', slug: 'fundamentos-banco-dados', code: 'FDBD', period: 3, axis: 'FPG', hours: 80, hasContent: false },
+  { id: 'fdbd', name: 'Fundamentos de Banco de Dados', slug: 'fundamentos-banco-dados', code: 'FDBD', period: 3, axis: 'FPG', hours: 80, hasContent: true },
   { id: 'sope', name: 'Sistemas Operacionais', slug: 'sistemas-operacionais', code: 'SOPE', period: 3, axis: 'FPG', hours: 80, hasContent: false },
   { id: 'estd', name: 'Estrutura de Dados', slug: 'estrutura-dados', code: 'ESTD', period: 3, axis: 'FPG', hours: 80, prerequisites: ['lpgm'], hasContent: true },
   { id: 'metc', name: 'Metodologia Científica', slug: 'metodologia-cientifica', code: 'METC', period: 3, axis: 'FB', hours: 80, hasContent: true },
@@ -44,9 +44,9 @@ const subjects: Subject[] = [
   // ═══════ 4º PERÍODO ═══════
   { id: 'ihcc', name: 'Interação Humano-Computador', slug: 'interacao-humano-computador', code: 'IHCC', period: 4, axis: 'FPG', hours: 80, hasContent: false },
   { id: 'apbd', name: 'Administração e Projeto de Banco de Dados', slug: 'administracao-projeto-banco-dados', code: 'APBD', period: 4, axis: 'FPG', hours: 80, prerequisites: ['fdbd'], hasContent: true },
-  { id: 'frdc', name: 'Fundamentos de Redes de Computadores', slug: 'fundamentos-redes-computadores', code: 'FRDC', period: 4, axis: 'FPG', hours: 80, hasContent: false },
-  { id: 'poob', name: 'Programação Orientada a Objetos', slug: 'programacao-orientada-objetos', code: 'POOB', period: 4, axis: 'FPG', hours: 80, hasContent: false },
-  { id: 'gpti', name: 'Gestão de Pessoas em TI', slug: 'gestao-pessoas-ti', code: 'GPTI', period: 4, axis: 'FB', hours: 40, hasContent: false },
+  { id: 'frdc', name: 'Fundamentos de Redes de Computadores', slug: 'fundamentos-redes-computadores', code: 'FRDC', period: 4, axis: 'FPG', hours: 80, hasContent: true },
+  { id: 'poob', name: 'Programação Orientada a Objetos', slug: 'programacao-orientada-objetos', code: 'POOB', period: 4, axis: 'FPG', hours: 80, hasContent: true },
+  { id: 'gpti', name: 'Gestão de Pessoas em TI', slug: 'gestao-pessoas-ti', code: 'GPTI', period: 4, axis: 'FB', hours: 40, hasContent: true },
 
   // ═══════ 5º PERÍODO ═══════
   { id: 'gvti', name: 'Governança em Tecnologia da Informação', slug: 'governanca-ti', code: 'GVTI', period: 5, axis: 'FPG', hours: 80, hasContent: false },
@@ -54,7 +54,7 @@ const subjects: Subject[] = [
   { id: 'pint', name: 'Projeto Integrador', slug: 'projeto-integrador', code: 'PINT', period: 5, axis: 'EXT', hours: 40, hasContent: false },
   { id: 'pgwb', name: 'Programação Web', slug: 'programacao-web', code: 'PGWB', period: 5, axis: 'FPG', hours: 80, hasContent: false },
   { id: 'apsi', name: 'Análise e Projeto de Sistemas de Informação', slug: 'analise-projeto-si', code: 'APSI', period: 5, axis: 'FPG', hours: 80, hasContent: true },
-  { id: 'gpjt', name: 'Gerência de Projeto', slug: 'gerencia-projeto', code: 'GPJT', period: 5, axis: 'FPG', hours: 80, hasContent: false },
+  { id: 'gpjt', name: 'Gerência de Projeto', slug: 'gerencia-projeto', code: 'GPJT', period: 5, axis: 'FPG', hours: 80, hasContent: true },
 
   // ═══════ 6º PERÍODO ═══════
   { id: 'empd', name: 'Empreendedorismo Digital', slug: 'empreendedorismo-digital', code: 'EMPD', period: 6, axis: 'FB', hours: 80, hasContent: true },
@@ -70,7 +70,7 @@ const subjects: Subject[] = [
   // ═══════ 8º PERÍODO ═══════
   { id: 'psif', name: 'Pesquisa em Sistemas de Informação', slug: 'pesquisa-si', code: 'PSIF', period: 8, axis: 'FB', hours: 40, prerequisites: ['ppap'], hasContent: false },
   { id: 'tsas', name: 'Tecnologias Sociais e Assistivas', slug: 'tecnologias-sociais-assistivas', code: 'TSAS', period: 8, axis: 'EXT', hours: 40, hasContent: false },
-  { id: 'sade', name: 'Sistemas de Apoio à Decisão', slug: 'sistemas-apoio-decisao', code: 'SADE', period: 8, axis: 'FPG', hours: 80, hasContent: false },
+  { id: 'sade', name: 'Sistemas de Apoio à Decisão', slug: 'sistemas-apoio-decisao', code: 'SADE', period: 8, axis: 'FPG', hours: 80, hasContent: true },
 
   // ═══════ OPTATIVAS — DESENVOLVIMENTO DE SOFTWARE ═══════
   { id: 'fabs', name: 'Fábrica de Software', slug: 'fabrica-software', code: 'FABS', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'desenvolvimento', hasContent: false },
@@ -96,17 +96,17 @@ const subjects: Subject[] = [
   { id: 'gcpt', name: 'Gerência de Redes de Computadores', slug: 'gerencia-redes-computadores', code: 'GCPT', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
   { id: 'idco', name: 'Internet das Coisas', slug: 'internet-das-coisas', code: 'IDCO', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
   { id: 'lsop', name: 'Laboratório de Sistemas Operacionais', slug: 'laboratorio-sistemas-operacionais', code: 'LSOP', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
-  { id: 'infr', name: 'Projeto de Infraestrutura', slug: 'projeto-infraestrutura', code: 'INFR', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
+  { id: 'infr', name: 'Projeto de Infraestrutura', slug: 'projeto-infraestrutura', code: 'INFR', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: true },
   { id: 'segr', name: 'Segurança de Redes', slug: 'seguranca-redes', code: 'SEGR', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
-  { id: 'devo', name: 'DevOps', slug: 'devops', code: 'DEVO', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
+  { id: 'devo', name: 'DevOps', slug: 'devops', code: 'DEVO', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: true },
 
   // ═══════ OPTATIVAS — HUMANÍSTICAS / SUPLEMENTARES ═══════
   { id: 'prtint', name: 'Propriedade Intelectual', slug: 'propriedade-intelectual', code: 'PINT', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: false },
   { id: 'negs', name: 'Negócios Sociais', slug: 'negocios-sociais', code: 'NEGS', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: false },
-  { id: 'edfi', name: 'Educação Financeira', slug: 'educacao-financeira', code: 'EDFI', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: false },
+  { id: 'edfi', name: 'Educação Financeira', slug: 'educacao-financeira', code: 'EDFI', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: true },
   { id: 'dird', name: 'Direito Digital', slug: 'direito-digital', code: 'DIRD', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: false },
   { id: 'libr', name: 'Libras', slug: 'libras', code: 'LIBR', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: false },
-  { id: 'etso', name: 'Ética e Sociedade', slug: 'etica-sociedade', code: 'ETSO', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: false },
+  { id: 'etso', name: 'Ética e Sociedade', slug: 'etica-sociedade', code: 'ETSO', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: true },
 ];
 
 /**
