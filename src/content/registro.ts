@@ -17,6 +17,7 @@ export const importadoresConteudo: Record<string, ImportadorConteudo> = {
   'administracao-projeto-banco-dados': () =>
     import('./administracao-projeto-banco-dados/AdministracaoProjetoBancoDadosContent'),
   'algoritmos-logica-programacao': () => import('./algoritmos-logica-programacao/ALPGContent'),
+  'analise-projeto-si': () => import('./analise-projeto-si/ApsiContent'),
   'arquitetura-organizacao-computadores': () =>
     import('./arquitetura-organizacao-computadores/AocpContent'),
   'comportamento-organizacional': () => import('./comportamento-organizacional/ComportamentoOrganizacionalContent'),
@@ -35,11 +36,11 @@ export const importadoresConteudo: Record<string, ImportadorConteudo> = {
   'logica-matematica-discreta': () => import('./logica-matematica-discreta/LmmdContent'),
   'marketing-comercio-eletronico': () => import('./marketing-comercio-eletronico/MarketingContent'),
   'metodologia-cientifica': () => import('./metodologia-cientifica/MetodologiaCientificaContent'),
-  'sistemas-apoio-decisao': () => import('./sistemas-apoio-decisao/SadeContent'),
   'processos-desenvolvimento-software': () =>
     import('./processos-desenvolvimento-software/ProcessosDesenvolvimentoSoftwareContent'),
   'programacao-orientada-objetos': () => import('./programacao-orientada-objetos/PoobContent'),
   'projeto-infraestrutura': () => import('./projeto-infraestrutura/InfrContent'),
+  'sistemas-apoio-decisao': () => import('./sistemas-apoio-decisao/SadeContent'),
   'topicos-avancados-banco-dados': () => import('./topicos-avancados-banco-dados/TABDContent'),
 };
 

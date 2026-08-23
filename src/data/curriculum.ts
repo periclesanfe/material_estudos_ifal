@@ -53,7 +53,7 @@ const subjects: Subject[] = [
   { id: 'tabd', name: 'Tópicos Avançados de Banco de Dados', slug: 'topicos-avancados-banco-dados', code: 'TABD', period: 5, axis: 'FPG', hours: 80, prerequisites: ['apbd'], hasContent: true },
   { id: 'pint', name: 'Projeto Integrador', slug: 'projeto-integrador', code: 'PINT', period: 5, axis: 'EXT', hours: 40, hasContent: false },
   { id: 'pgwb', name: 'Programação Web', slug: 'programacao-web', code: 'PGWB', period: 5, axis: 'FPG', hours: 80, hasContent: false },
-  { id: 'apsi', name: 'Análise e Projeto de Sistemas de Informação', slug: 'analise-projeto-si', code: 'APSI', period: 5, axis: 'FPG', hours: 80, hasContent: false },
+  { id: 'apsi', name: 'Análise e Projeto de Sistemas de Informação', slug: 'analise-projeto-si', code: 'APSI', period: 5, axis: 'FPG', hours: 80, hasContent: true },
   { id: 'gpjt', name: 'Gerência de Projeto', slug: 'gerencia-projeto', code: 'GPJT', period: 5, axis: 'FPG', hours: 80, hasContent: true },
 
   // ═══════ 6º PERÍODO ═══════
