@@ -859,6 +859,32 @@
         "quiz",
         "web"
       ]
+    },
+    {
+      "id": "contrib-2026-08-23-componente-databaseschema",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-23",
+        "registradoEm": "2026-08-23T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "projeto",
+        "arquivo": "src/components/ui/DatabaseSchema.tsx"
+      },
+      "tipo": "melhoria",
+      "como": {
+        "resumo": "Cria o componente DatabaseSchema, que desenha o diagrama ER e o esquema relacional a partir do proprio codigo SQL.",
+        "detalhes": "Le o DDL com um parser proprio (parseDdl) e apresenta o mesmo CREATE TABLE em tres abas, que sao os tres niveis de abstracao da disciplina: modelo ER em notacao de Chen (conceitual), esquema relacional com PK, FK e ligacoes desenhadas (logico) e o SQL destacado (fisico). Derivar tudo de um texto unico impede o diagrama de discordar do codigo, que e o erro mais comum em material didatico de banco de dados. O parser cobre o subconjunto usado na graduacao: PK e FK em coluna ou em restricao de tabela, chave composta, NOT NULL, UNIQUE, CHECK, nomes citados ou qualificados por esquema, e comentarios de fim de linha que viram glosa da coluna. Detecta tabela associativa (PK composta cujas partes sao todas FK) e a mostra tracejada no relacional e como losango no ER, que e exatamente o passo 6 da transformacao ER-relacional. As ligacoes sao medidas do DOM apos a montagem, e nao a partir de tamanhos fixos, para a seta continuar grudada na linha certa quando muda o tema, a fonte ou o zoom; tabelas empilhadas usam rota vertical para a curva nao sair da area. Sem tabela reconhecida, cai para o CodeBlock. Aplicado na secao de transformacao de Fundamentos de Banco de Dados, onde o gabarito do modelo bancario estava como bloco de comentarios SQL e passou a ser diagrama navegavel.",
+        "origem": "pull_request"
+      },
+      "status": "incorporado",
+      "tags": [
+        "componente",
+        "ui",
+        "banco-de-dados",
+        "diagrama"
+      ]
     }
   ]
 }
