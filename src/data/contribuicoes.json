@@ -467,6 +467,90 @@
       ]
     },
     {
+      "id": "contrib-2026-08-22-conteudo-edfi",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-22",
+        "registradoEm": "2026-08-22T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "educacao-financeira",
+        "materiaCodigo": "EDFI",
+        "arquivo": "src/content/educacao-financeira/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Educação Financeira, com 14 seções na sequência das aulas e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma Educação Financeira BSI 2024.2: as cartilhas da Febraban / Meu Bolso em Dia (planejamento financeiro familiar, guia do cartão de crédito, guia do cheque especial, os dez passos para sair das dívidas e \"Quem sonha poupa\"), o Glossário Simplificado de Termos Financeiros do Banco Central (114 verbetes, nov/2013), o trecho de Gustavo Cerbasi com os quatro indicadores patrimoniais e a apresentação sobre Tesouro Direto. As três avaliações seguem os grupos de atividades da turma. Os números do bloco de Tesouro Direto (custódia de 0,20% a.a., IR regressivo de 22,5% a 15%, IOF de 96% no 1º dia zerando no 30º, 240 parcelas do Renda+ e 60 amortizações do Educa+) foram conferidos página a página no material original. Lacunas declaradas no próprio conteúdo: o Manual do Pequeno Investidor em Ações (280 páginas) não foi verificado, e FGC/CDB/LCI/LCA, Relatório Focus e indicadores macroeconômicos foram trabalhados em vídeo, sem material textual. A planilha de notas da turma não foi utilizada.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "educacao-financeira",
+        "conteudo",
+        "quiz",
+        "financas"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-22-conteudo-infr",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-22",
+        "registradoEm": "2026-08-22T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "projeto-infraestrutura",
+        "materiaCodigo": "INFR",
+        "arquivo": "src/content/projeto-infraestrutura/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Projeto de Infraestrutura, com 16 seções e 40 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral dos 5 PDFs da turma 2026.1 do Prof. Wellington Pereira (61 páginas): os dois decks de aula e os três enunciados de atividade. As três avaliações seguem os blocos do material — normas e mídias, processo de projeto e estudos de caso. Os números foram conferidos página a página: os limites da TIA-568 (90 m de cabo horizontal, 10 m de patch cords, 100 m de canal), as frequências e alcances por categoria (Cat6 a 250 MHz com 10 Gbps só até 55 m, Cat6a a 500 MHz até 100 m, Cat8 a 2000 MHz até 30 m), as sequências completas de T568A e T568B, as densidades do projeto do IFAL (4 pontos por sala, 40 por laboratório) e os dados dos quatro estudos de caso da V2, incluindo o log de erros FCS do switch e o orçamento de R$ 65 mil. Lacunas declaradas no próprio conteúdo: os arquivos 'Aula Gravada 01' e 'Aula 02' falharam no download (403) e não foram lidos; o 'Gabarito Técnico' das 50 questões é mencionado no enunciado mas não consta no arquivo, então as questões aparecem como mapa de estudo e não com respostas atribuídas ao professor; e o material diverge internamente sobre a frequência do Cat5e (100 MHz em um slide, 125 MHz em outro), divergência registrada em vez de arbitrada.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "projeto-infraestrutura",
+        "conteudo",
+        "quiz",
+        "redes"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-22-conteudo-frdc",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-22",
+        "registradoEm": "2026-08-22T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "fundamentos-redes-computadores",
+        "materiaCodigo": "FRDC",
+        "arquivo": "src/content/fundamentos-redes-computadores/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Fundamentos de Redes de Computadores, com 17 seções e 46 questões de quiz.",
+        "detalhes": "Diferente das demais matérias do site: o material distribuído na turma NÃO é de autoria do professor — os slides são o pacote oficial da editora que acompanha o livro do Kurose (marcados '© 2014 Pearson') e os PDFs anexos são os livros completos de Kurose e Tanenbaum, obras protegidas. Por isso este conteúdo não resume nem transcreve esse material. O que ele registra é a ESTRUTURA da disciplina, que é decisão do professor (a divisão em quatro módulos seguindo os capítulos 1 a 4, o desenho das avaliações Av1/Av2/Av3, o projeto de sockets com propostas do codingchallenges.fyi e o desafio do load balancer, as ferramentas de diagnóstico escolhidas), apoiada na ementa oficial do PPC — documento institucional — e escrita com os conceitos padrão de redes, que são conhecimento técnico de domínio comum. Lacunas declaradas no conteúdo: os quatro quizzes são Google Forms e não foram capturados; os enunciados de Av1, Av2 e Av3 não têm anexo no mural, então conhece-se o escopo mas não o formato nem os critérios; e a turma cobriu apenas os capítulos 1 a 4, sem camada de enlace e física, porque o semestre foi comprimido por uma greve de professores e por uma suspensão de aulas.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "fundamentos-redes-computadores",
+        "conteudo",
+        "quiz",
+        "redes"
+      ]
+    },
+    {
       "id": "contrib-2026-08-22-conteudo-etso",
       "contribuinteId": "pericles-feitoza",
       "quando": {
