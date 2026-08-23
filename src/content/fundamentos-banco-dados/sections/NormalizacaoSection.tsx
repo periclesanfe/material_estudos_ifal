@@ -1,4 +1,5 @@
 import CodeBlock from '../../../components/ui/CodeBlock';
+import DatabaseSchema from '../../../components/ui/DatabaseSchema';
 import HighlightBox from '../../../components/ui/HighlightBox';
 import { SectionHeader, Subsection, ConceptGrid, TheoryBlock, ComparisonTable, ExampleBox } from '../../../components/sections';
 
@@ -83,6 +84,51 @@ export default function NormalizacaoSection() {
 -- CLIENTE(codcliente, cliente, endereço, cidade, UF, CGC, inscestadual)
 -- VENDEDOR(codvendedor, nomevendedor)
 -- + ITEM_DO_PEDIDO + PRODUTO           → 5 tabelas na 3FN`}
+        />
+        <DatabaseSchema
+          title="O destino do caminho acima — as 5 tabelas em 3FN"
+          defaultView="relacional"
+          views={['relacional', 'sql']}
+          caption="As cinco tabelas que a 3FN produziu, agora ligadas. ITEM_DO_PEDIDO é a associativa de PK composta que nasceu do grupo repetido na 1FN; CLIENTE e VENDEDOR saíram das dependências transitivas na 3FN. Cada FK aqui é uma dependência que deixou de ser redundância."
+          ddl={`CREATE TABLE VENDEDOR (
+  codvendedor   INT          PRIMARY KEY,
+  nomevendedor  VARCHAR(60)  NOT NULL
+);
+
+CREATE TABLE CLIENTE (                          -- saiu das transitivas (3FN)
+  codcliente    INT          PRIMARY KEY,
+  cliente       VARCHAR(60)  NOT NULL,
+  endereco      VARCHAR(120),
+  cidade        VARCHAR(60),
+  uf            CHAR(2),
+  cgc           VARCHAR(18),
+  inscestadual  VARCHAR(20)
+);
+
+CREATE TABLE PRODUTO (                          -- saiu das parciais (2FN)
+  codprod       INT          PRIMARY KEY,
+  descricao     VARCHAR(80)  NOT NULL,
+  unidade       CHAR(3),
+  valunit       NUMERIC(10,2)
+);
+
+CREATE TABLE PEDIDO (
+  nopedido      INT          PRIMARY KEY,
+  prazoentrega  DATE,
+  valtotalpedido NUMERIC(12,2),
+  codcliente    INT          REFERENCES CLIENTE (codcliente),
+  codvendedor   INT          REFERENCES VENDEDOR (codvendedor)
+);
+
+CREATE TABLE ITEM_DO_PEDIDO (                   -- saiu do grupo repetido (1FN)
+  nopedido      INT,
+  codprod       INT,
+  quant         NUMERIC(10,3),
+  valtotalprod  NUMERIC(12,2),
+  PRIMARY KEY (nopedido, codprod),
+  FOREIGN KEY (nopedido) REFERENCES PEDIDO (nopedido),
+  FOREIGN KEY (codprod)  REFERENCES PRODUTO (codprod)
+);`}
         />
         <ExampleBox title="A questão 1 da 2ª prova (resolvida no gabarito)">
           <p>
