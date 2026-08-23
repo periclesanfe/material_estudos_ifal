@@ -51,6 +51,7 @@ Use esta tabela para melhorias gerais, revisoes, issues, documentacao, infraestr
 | 2026-08-11 | projeto | melhoria | pericles-feitoza | src/components/sections/index.tsx | Quebra o arquivo único de seções de Estrutura de Dados em um componente por seção e cria o componente Subsection, reaproveitável pelas demais matérias | — | incorporado |
 | 2026-08-23 | projeto | melhoria | pericles-feitoza | src/components/ui/FormulaBlock.tsx | Componente FormulaBlock para notação matemática, com helpers de fração, expoente, índice e raiz que compõem entre si | — | incorporado |
 | 2026-08-23 | projeto | melhoria | pericles-feitoza | src/components/ui/CodeBlock.tsx | Acrescenta as linguagens http, bash, json e text ao CodeBlock | #65 | incorporado |
+| 2026-08-23 | projeto | melhoria | pericles-feitoza | src/components/ui/DatabaseSchema.tsx | Componente DatabaseSchema: desenha o modelo ER e o esquema relacional a partir do proprio DDL, com deteccao de chave composta, de tabela associativa e de tabela fato; aplicado em FDBD e TABD | — | incorporado |
 
 ## Checklist Para Novas Entradas
 

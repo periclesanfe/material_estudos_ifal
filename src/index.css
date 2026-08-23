@@ -838,6 +838,302 @@ html[data-theme='light'] .sidebar-brand {
   font-style: normal;
 }
 
+/* ---------------------------------------------------------------------------
+   Esquema de banco de dados (DatabaseSchema)
+
+   Cores vêm sempre dos tokens do projeto, nunca de valores fixos: o componente
+   precisa nascer legível nos dois temas sem uma folha separada para cada um.
+   --------------------------------------------------------------------------- */
+.db-schema {
+  margin: 1.5rem 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--color-accent) 3%, transparent);
+  overflow: hidden;
+}
+
+.db-schema__topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.db-schema__titulo {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.db-schema__resumo {
+  font-size: 0.72rem;
+  opacity: 0.65;
+  margin-top: 0.15rem;
+}
+
+.db-schema__abas {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.2rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+.db-schema__aba {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  color: inherit;
+  opacity: 0.62;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.db-schema__aba:hover { opacity: 0.9; }
+
+.db-schema__aba.is-ativa {
+  opacity: 1;
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  color: var(--color-accent);
+}
+
+.db-schema__painel { padding: 1.15rem; overflow-x: auto; }
+
+.db-schema__legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  padding: 0.6rem 1.1rem 0.85rem;
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.db-schema__legenda span { display: flex; align-items: center; gap: 0.35rem; }
+
+.db-schema__ponto {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent4);
+}
+
+.db-schema__caption {
+  padding: 0 1.1rem 1rem;
+  font-size: 0.8rem;
+  opacity: 0.75;
+  line-height: 1.55;
+}
+
+/* ----- Esquema relacional ----- */
+.db-rel { position: relative; min-width: min-content; }
+
+.db-rel__linhas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+  /* Abaixo das caixas: a curva que passa por trás de uma tabela deve sumir sob
+     ela, não riscar por cima dos nomes das colunas. */
+  z-index: 0;
+}
+
+.db-rel__traco path {
+  fill: none;
+  stroke: color-mix(in srgb, var(--color-accent3) 55%, transparent);
+  stroke-width: 1.5;
+  transition: stroke 0.15s, stroke-width 0.15s;
+}
+
+.db-rel__traco circle {
+  fill: var(--color-bg, #0d1117);
+  stroke: color-mix(in srgb, var(--color-accent3) 55%, transparent);
+  stroke-width: 1.2;
+}
+
+html[data-theme='light'] .db-rel__traco circle { fill: #fff; }
+
+.db-rel__traco text {
+  fill: var(--color-accent3);
+  font-size: 9px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.db-rel__traco.is-ativo path {
+  stroke: var(--color-accent);
+  stroke-width: 2.4;
+}
+
+.db-rel__grade {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.6rem 3.4rem;
+  align-items: flex-start;
+}
+
+.db-tabela {
+  position: relative;
+  z-index: 1;
+  min-width: 190px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface, rgba(255, 255, 255, 0.02));
+  overflow: hidden;
+}
+
+html[data-theme='light'] .db-tabela { background: #fff; }
+
+.db-tabela--assoc { border-style: dashed; border-color: color-mix(in srgb, var(--color-accent4) 55%, transparent); }
+
+.db-tabela__nome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.db-tabela--assoc .db-tabela__nome { background: color-mix(in srgb, var(--color-accent4) 12%, transparent); }
+
+.db-tabela__selo {
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 0.1rem 0.35rem;
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--color-accent4) 22%, transparent);
+  color: var(--color-accent4);
+}
+
+.db-tabela--fato {
+  border-color: color-mix(in srgb, var(--color-accent2) 55%, transparent);
+  border-width: 2px;
+}
+
+.db-tabela--fato .db-tabela__nome { background: color-mix(in srgb, var(--color-accent2) 14%, transparent); }
+
+.db-tabela__selo--fato {
+  background: color-mix(in srgb, var(--color-accent2) 22%, transparent);
+  color: var(--color-accent2);
+}
+
+.db-tabela__colunas { list-style: none; margin: 0; padding: 0; }
+
+.db-col {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-border) 45%, transparent);
+  transition: background 0.15s;
+}
+
+.db-col:first-child { border-top: none; }
+.db-col.is-ativo { background: color-mix(in srgb, var(--color-accent) 10%, transparent); }
+
+.db-col__marcas { display: flex; gap: 0.2rem; min-width: 2.6rem; }
+
+.db-col__pk,
+.db-col__fk {
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 0.08rem 0.24rem;
+  border-radius: 3px;
+  line-height: 1.4;
+}
+
+.db-col__pk { background: color-mix(in srgb, var(--color-accent5) 22%, transparent); color: var(--color-accent5); }
+.db-col__fk { background: color-mix(in srgb, var(--color-accent3) 22%, transparent); color: var(--color-accent3); }
+
+.db-col__nome { flex: 1; }
+.db-col__nome.is-pk { font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+
+.db-col__tipo { font-size: 0.65rem; opacity: 0.5; }
+.db-col__nn { color: var(--color-accent4); font-size: 0.7rem; }
+
+/* ----- Diagrama ER (Chen) ----- */
+.db-er { display: flex; justify-content: center; }
+.db-er__svg { width: 100%; max-width: 780px; height: auto; }
+
+.db-er__entidade rect {
+  fill: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  stroke: var(--color-accent);
+  stroke-width: 1.4;
+}
+
+.db-er__entidade text {
+  fill: currentColor;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.db-er__entidade .db-er__pk {
+  font-size: 9px;
+  font-weight: 500;
+  text-decoration: underline;
+  opacity: 0.7;
+}
+
+.db-er__rel polygon {
+  fill: color-mix(in srgb, var(--color-accent4) 14%, transparent);
+  stroke: var(--color-accent4);
+  stroke-width: 1.4;
+}
+
+.db-er__rel > text {
+  fill: currentColor;
+  font-size: 10px;
+  font-weight: 600;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.db-er__attr ellipse {
+  fill: color-mix(in srgb, var(--color-accent3) 12%, transparent);
+  stroke: var(--color-accent3);
+  stroke-width: 1.1;
+}
+
+.db-er__attr line { stroke: color-mix(in srgb, var(--color-accent3) 55%, transparent); stroke-width: 1; }
+
+.db-er__attr text {
+  fill: currentColor;
+  font-size: 9px;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.db-er__aresta line { stroke: color-mix(in srgb, var(--color-border-hover) 60%, transparent); stroke-width: 1.3; }
+
+.db-er__aresta text {
+  fill: currentColor;
+  font-size: 10px;
+  font-weight: 700;
+  text-anchor: middle;
+  opacity: 0.75;
+}
+
+@media (max-width: 640px) {
+  .db-rel__grade { gap: 1.5rem; }
+  .db-rel__linhas { display: none; }
+}
+
 .flow-item {
   background: var(--color-card);
   border: 1px solid var(--color-accent);

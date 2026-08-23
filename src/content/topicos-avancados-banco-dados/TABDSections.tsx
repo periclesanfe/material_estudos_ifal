@@ -1,6 +1,7 @@
 import AIKahootQuiz from '../../components/ui/AIKahootQuiz';
 import AIQuizGenerator from '../../components/ui/AIQuizGenerator';
 import CodeBlock from '../../components/ui/CodeBlock';
+import DatabaseSchema from '../../components/ui/DatabaseSchema';
 import ExamQuizSelector from '../../components/ui/ExamQuizSelector';
 import FlowDiagram from '../../components/ui/FlowDiagram';
 import HighlightBox from '../../components/ui/HighlightBox';
@@ -252,6 +253,78 @@ function DimensionalSection() {
           No centro fica a <strong>tabela fato</strong>, com as métricas/KPIs a analisar. Ao redor, as <strong>tabelas dimensão</strong> a detalham, respondendo <strong>Onde? Quando? O quê? Quem?</strong> Essa distribuição (fato no centro, dimensões nas pontas) dá o nome de "estrela". O <strong>snowflake</strong> (floco de neve) é a variação em que dimensões grandes são normalizadas em hierarquias — reduz redundância, mas exige mais joins.
         </p>
       </TheoryBlock>
+
+      <DatabaseSchema
+        title="O star schema da aula — Northwind, cinco dimensões em volta de uma fato"
+        defaultView="relacional"
+        caption="A estrela do parágrafo acima, desenhada: f_vendas no centro, marcada como FATO, e as cinco dimensões em volta respondendo O quê? Quem? Quando? Onde? Como? Repare que a PK da fato é composta pelas cinco FKs — é isso que define o grão — e que as únicas colunas fora da chave são as duas métricas. Toda a riqueza descritiva está nas dimensões."
+        ddl={`CREATE TABLE d_produto (
+  cod_produto      NUMBER(9)     NOT NULL,   -- surrogate key
+  nom_produto      VARCHAR2(50),
+  nom_categoria    VARCHAR2(50)              -- hierarquia: categoria > produto
+);
+
+CREATE TABLE d_cliente (
+  cod_cliente      NUMBER(9)     NOT NULL,
+  nom_cliente      VARCHAR2(50),
+  nom_pais         VARCHAR2(50),             -- hierarquia geografica:
+  nom_regiao       VARCHAR2(50),             --   pais > regiao > cidade
+  nom_cidade       VARCHAR2(50),
+  num_versao       NUMBER(3),                -- SCD Tipo 2
+  dat_vigencia_ini DATE,
+  dat_vigencia_fim DATE
+);
+
+CREATE TABLE d_tempo (
+  cod_tempo        NUMBER(9)     NOT NULL,
+  dat_data         DATE,
+  num_mes          NUMBER(2),                -- hierarquia: ano > trimestre > mes
+  num_trimestre    NUMBER(1),
+  num_ano          NUMBER(4)
+);
+
+CREATE TABLE d_funcionario (
+  cod_funcionario  NUMBER(9)     NOT NULL,
+  nom_funcionario  VARCHAR2(50),
+  nom_cargo        VARCHAR2(50)
+);
+
+CREATE TABLE d_transportadora (
+  cod_transportadora NUMBER(9)   NOT NULL,
+  nom_transportadora VARCHAR2(50)
+);
+
+CREATE TABLE f_vendas (
+  cod_produto        NUMBER(9)   NOT NULL,
+  cod_cliente        NUMBER(9)   NOT NULL,
+  cod_tempo          NUMBER(9)   NOT NULL,
+  cod_funcionario    NUMBER(9)   NOT NULL,
+  cod_transportadora NUMBER(9)   NOT NULL,
+  val_venda          NUMBER(12,2),           -- metrica aditiva
+  qtd_vendida        NUMBER(12,3)            -- metrica aditiva
+) TABLESPACE users;
+
+ALTER TABLE d_produto        ADD CONSTRAINT pk_produto        PRIMARY KEY (cod_produto);
+ALTER TABLE d_cliente        ADD CONSTRAINT pk_cliente        PRIMARY KEY (cod_cliente);
+ALTER TABLE d_tempo          ADD CONSTRAINT pk_tempo          PRIMARY KEY (cod_tempo);
+ALTER TABLE d_funcionario    ADD CONSTRAINT pk_funcionario    PRIMARY KEY (cod_funcionario);
+ALTER TABLE d_transportadora ADD CONSTRAINT pk_transportadora PRIMARY KEY (cod_transportadora);
+
+ALTER TABLE f_vendas ADD CONSTRAINT pk_vendas PRIMARY KEY (
+  cod_produto, cod_cliente, cod_tempo, cod_funcionario, cod_transportadora
+);
+
+ALTER TABLE f_vendas ADD CONSTRAINT fk_vendas_produto
+  FOREIGN KEY (cod_produto) REFERENCES d_produto (cod_produto);
+ALTER TABLE f_vendas ADD CONSTRAINT fk_vendas_cliente
+  FOREIGN KEY (cod_cliente) REFERENCES d_cliente (cod_cliente);
+ALTER TABLE f_vendas ADD CONSTRAINT fk_vendas_tempo
+  FOREIGN KEY (cod_tempo) REFERENCES d_tempo (cod_tempo);
+ALTER TABLE f_vendas ADD CONSTRAINT fk_vendas_funcionario
+  FOREIGN KEY (cod_funcionario) REFERENCES d_funcionario (cod_funcionario);
+ALTER TABLE f_vendas ADD CONSTRAINT fk_vendas_transportadora
+  FOREIGN KEY (cod_transportadora) REFERENCES d_transportadora (cod_transportadora);`}
+      />
 
       <ExampleBox title="O star schema da aula, em SQL">
         <p>

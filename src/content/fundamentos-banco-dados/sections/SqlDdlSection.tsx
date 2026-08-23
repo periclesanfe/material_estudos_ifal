@@ -1,4 +1,5 @@
 import CodeBlock from '../../../components/ui/CodeBlock';
+import DatabaseSchema from '../../../components/ui/DatabaseSchema';
 import HighlightBox from '../../../components/ui/HighlightBox';
 import { SectionHeader, Subsection, ConceptGrid, TheoryBlock, ExampleBox } from '../../../components/sections';
 
@@ -75,6 +76,44 @@ ALTER TABLE OFERTA ADD FOREIGN KEY (numeroreg)    REFERENCES PROFESSOR (numerore
 ALTER TABLE OFERTA ADD FOREIGN KEY (codisciplina) REFERENCES DISCIPLINA (codisciplina);
 ALTER TABLE OFERTA DROP COLUMN turno;
 ALTER TABLE OFERTA ADD turno CHAR(1);`}
+        />
+        <DatabaseSchema
+          title="O resultado da atividade — o esquema acadêmico depois de todos os ALTER"
+          defaultView="relacional"
+          views={['er', 'relacional']}
+          caption="Os comandos acima constroem este esquema, mas em pedaços: aqui ele aparece montado. ESCOLHE é a associativa que resolve o N:N entre ALUNO e OFERTA, e OFERTA guarda as duas FKs promovidas por ALTER. Alterne para o ER e a mesma associativa reaparece como losango — é o passo 6 da transformação, lido de trás para frente."
+          ddl={`CREATE TABLE PROFESSOR (
+  numeroreg     INT          PRIMARY KEY,
+  nome          CHAR(40)     NOT NULL
+);
+
+CREATE TABLE DISCIPLINA (
+  codisciplina  INT          PRIMARY KEY,
+  nome          CHAR(40)     NOT NULL,
+  ementa        CHAR(30)     NOT NULL         -- NOT NULL entrou por MODIFY
+);
+
+CREATE TABLE ALUNO (
+  matricula     INT          PRIMARY KEY,
+  nome          CHAR(40)     NOT NULL
+);
+
+CREATE TABLE OFERTA (
+  codoferta     INT          PRIMARY KEY,
+  numeroreg     INT,                          -- FK promovida por ALTER
+  codisciplina  INT,                          -- FK promovida por ALTER
+  turno         CHAR(1),                      -- removida e recriada
+  FOREIGN KEY (numeroreg)    REFERENCES PROFESSOR (numeroreg),
+  FOREIGN KEY (codisciplina) REFERENCES DISCIPLINA (codisciplina)
+);
+
+CREATE TABLE ESCOLHE (                        -- o N:N na prática
+  codoferta     INT,
+  matricula     INT,
+  PRIMARY KEY (codoferta, matricula),
+  FOREIGN KEY (codoferta) REFERENCES OFERTA (codoferta),
+  FOREIGN KEY (matricula) REFERENCES ALUNO (matricula)
+);`}
         />
         <ExampleBox title="A regra que cai em prova">
           <p>
