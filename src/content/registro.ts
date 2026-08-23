@@ -19,10 +19,15 @@ export const importadoresConteudo: Record<string, ImportadorConteudo> = {
   'algoritmos-logica-programacao': () => import('./algoritmos-logica-programacao/ALPGContent'),
   'comportamento-organizacional': () => import('./comportamento-organizacional/ComportamentoOrganizacionalContent'),
   devops: () => import('./devops/DevopsContent'),
+  'educacao-financeira': () => import('./educacao-financeira/EdfiContent'),
   'empreendedorismo-digital': () => import('./empreendedorismo-digital/EmpdContent'),
-  'fundamentos-banco-dados': () => import('./fundamentos-banco-dados/FdbdContent'),
   'estrutura-dados': () => import('./estrutura-dados/EstruturaDadosContent'),
+  'etica-sociedade': () => import('./etica-sociedade/EtsoContent'),
+  'fundamentos-banco-dados': () => import('./fundamentos-banco-dados/FdbdContent'),
+  'fundamentos-redes-computadores': () => import('./fundamentos-redes-computadores/FrdcContent'),
   'fundamentos-si': () => import('./fundamentos-si/FundamentosSIContent'),
+  'gerencia-projeto': () => import('./gerencia-projeto/GpjtContent'),
+  'gestao-pessoas-ti': () => import('./gestao-pessoas-ti/GptiContent'),
   'introducao-tecnologias-web': () => import('./introducao-tecnologias-web/IntwContent'),
   'linguagem-programacao': () => import('./linguagem-programacao/LPGMContent'),
   'logica-matematica-discreta': () => import('./logica-matematica-discreta/LmmdContent'),
@@ -31,6 +36,7 @@ export const importadoresConteudo: Record<string, ImportadorConteudo> = {
   'processos-desenvolvimento-software': () =>
     import('./processos-desenvolvimento-software/ProcessosDesenvolvimentoSoftwareContent'),
   'programacao-orientada-objetos': () => import('./programacao-orientada-objetos/PoobContent'),
+  'projeto-infraestrutura': () => import('./projeto-infraestrutura/InfrContent'),
   'topicos-avancados-banco-dados': () => import('./topicos-avancados-banco-dados/TABDContent'),
 };
 
