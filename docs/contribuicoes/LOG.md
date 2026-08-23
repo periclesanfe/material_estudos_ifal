@@ -21,7 +21,10 @@ Fonte estruturada: [`src/data/contribuicoes.json`](../../src/data/contribuicoes.
 | 2026-06-11 | Estrutura de Dados (ESTD) | conteudo_materia | isaque-braga | src/content/estrutura-dados/data.ts | Adiciona conteúdo completo com exemplos usando CodeBlock | #19 | incorporado |
 | 2026-06-17 | Processos de Desenvolvimento de Software (PDSW) | conteudo_materia | marina-medeiros | src/content/processos-desenvolvimento-software/data.ts | Responsável pelo conteúdo da matéria, por capítulos com leitor do livro base | #21 | incorporado |
 | 2026-06-21 | Administração e Projeto de Banco de Dados (APBD) | conteudo_materia | maria-luisa-alaquoke | src/content/administracao-projeto-banco-dados/data.ts | Responsável pelo conteúdo da matéria | — | incorporado |
+| 2026-08-11 | Estrutura de Dados (ESTD) | conteudo_materia | pericles-feitoza | src/content/estrutura-dados/ | Enriquece com seção própria de Notação Big O, desdobramento de árvores em conceitos e BST/heap, aplicação de filas na coloração de regiões e 25 novas questões de quiz | — | incorporado |
 | 2026-08-12 | Empreendedorismo Digital (EMPD) | conteudo_materia | marina-medeiros | src/content/empreendedorismo-digital/ | Cria o conteúdo com 14 seções, avaliações por atividade e 32 questões conferidas por execução | #47 | incorporado |
+| 2026-08-12 | Processos de Desenvolvimento de Software (PDSW) | conteudo_materia | pericles-feitoza | src/content/processos-desenvolvimento-software/ | Enriquece com uma seção de Exercícios de Padrões, subseção de estimativa ágil (Planning Poker) no capítulo de Requisitos e novas questões de quiz | — | incorporado |
+| 2026-08-12 | Metodologia Científica (METC) | conteudo_materia | pericles-feitoza | src/content/metodologia-cientifica/ | Adiciona a seção Escrita Científica, com estrutura do artigo, formato IMRD, boas práticas de redação e novas questões de quiz | — | incorporado |
 | 2026-08-20 | Análise e Projeto de Sistemas de Informação (APSI) | conteudo_materia | pericles-feitoza | src/content/analise-projeto-si/ | Cria o conteúdo com 15 seções a partir do material completo da turma 2024.1 e 40 questões de quiz | — | incorporado |
 | 2026-08-20 | Fundamentos de Banco de Dados (FDBD) | conteudo_materia | pericles-feitoza | src/content/fundamentos-banco-dados/ | Cria o conteúdo com 14 seções a partir do material completo da turma 2023.1 (com gabaritos oficiais) e 38 questões de quiz | — | incorporado |
 | 2026-08-20 | Sistemas de Apoio à Decisão (SADE) | conteudo_materia | pericles-feitoza | src/content/sistemas-apoio-decisao/ | Cria o conteúdo com 13 seções a partir do material da turma 2026.1 e 38 questões com os exemplos numéricos resolvidos | — | incorporado |
@@ -43,6 +46,7 @@ Use esta tabela para melhorias gerais, revisoes, issues, documentacao, infraestr
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2026-05-31 | projeto | codigo | isaque-braga | src/components/quiz/ExamQuizSelector.tsx | Refatoração do filtro de provas para número dinâmico via useMemo | #17 | incorporado |
 | 2026-06-11 | projeto | codigo | isaque-braga | src/components/ui/CodeBlock.tsx | Componente CodeBlock com syntax highlighting para 8 linguagens | #19 | incorporado |
+| 2026-08-11 | projeto | melhoria | pericles-feitoza | src/components/sections/index.tsx | Quebra o arquivo único de seções de Estrutura de Dados em um componente por seção e cria o componente Subsection, reaproveitável pelas demais matérias | — | incorporado |
 
 ## Checklist Para Novas Entradas
 
