@@ -467,6 +467,34 @@
       ]
     },
     {
+      "id": "contrib-2026-08-22-conteudo-edfi",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-22",
+        "registradoEm": "2026-08-22T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "educacao-financeira",
+        "materiaCodigo": "EDFI",
+        "arquivo": "src/content/educacao-financeira/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Educação Financeira, com 14 seções na sequência das aulas e 38 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma Educação Financeira BSI 2024.2: as cartilhas da Febraban / Meu Bolso em Dia (planejamento financeiro familiar, guia do cartão de crédito, guia do cheque especial, os dez passos para sair das dívidas e \"Quem sonha poupa\"), o Glossário Simplificado de Termos Financeiros do Banco Central (114 verbetes, nov/2013), o trecho de Gustavo Cerbasi com os quatro indicadores patrimoniais e a apresentação sobre Tesouro Direto. As três avaliações seguem os grupos de atividades da turma. Os números do bloco de Tesouro Direto (custódia de 0,20% a.a., IR regressivo de 22,5% a 15%, IOF de 96% no 1º dia zerando no 30º, 240 parcelas do Renda+ e 60 amortizações do Educa+) foram conferidos página a página no material original. Lacunas declaradas no próprio conteúdo: o Manual do Pequeno Investidor em Ações (280 páginas) não foi verificado, e FGC/CDB/LCI/LCA, Relatório Focus e indicadores macroeconômicos foram trabalhados em vídeo, sem material textual. A planilha de notas da turma não foi utilizada.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "educacao-financeira",
+        "conteudo",
+        "quiz",
+        "financas"
+      ]
+    },
+    {
       "id": "contrib-2026-08-22-conteudo-infr",
       "contribuinteId": "pericles-feitoza",
       "quando": {

@@ -103,7 +103,7 @@ const subjects: Subject[] = [
   // ═══════ OPTATIVAS — HUMANÍSTICAS / SUPLEMENTARES ═══════
   { id: 'prtint', name: 'Propriedade Intelectual', slug: 'propriedade-intelectual', code: 'PINT', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: false },
   { id: 'negs', name: 'Negócios Sociais', slug: 'negocios-sociais', code: 'NEGS', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: false },
-  { id: 'edfi', name: 'Educação Financeira', slug: 'educacao-financeira', code: 'EDFI', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: false },
+  { id: 'edfi', name: 'Educação Financeira', slug: 'educacao-financeira', code: 'EDFI', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: true },
   { id: 'dird', name: 'Direito Digital', slug: 'direito-digital', code: 'DIRD', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: false },
   { id: 'libr', name: 'Libras', slug: 'libras', code: 'LIBR', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: false },
   { id: 'etso', name: 'Ética e Sociedade', slug: 'etica-sociedade', code: 'ETSO', period: 'optativa', axis: 'FHS', hours: 40, optativeCategory: 'humanistica', hasContent: false },
