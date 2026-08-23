@@ -1,4 +1,4 @@
-import CodeBlock from '../../../components/ui/CodeBlock';
+import DatabaseSchema from '../../../components/ui/DatabaseSchema';
 import HighlightBox from '../../../components/ui/HighlightBox';
 import { SectionHeader, Subsection, PanelList, TheoryBlock, ExampleBox } from '../../../components/sections';
 
@@ -38,21 +38,54 @@ export default function TransformacaoSection() {
       </Subsection>
 
       <Subsection title="Exemplo resolvido oficial: o modelo bancário (gabarito da professora)" accentClass="text-accent3">
-        <CodeBlock
-          language="sql"
-          title="Resolução do EER 2 — conceitual → relacional (sublinhado vira comentário PK)"
-          code={`-- BANCO   (codigo PK, nome, endereço)
--- AGENCIA (codigo (f.k) + num_agencia = PK composta, endereço)      ← entidade FRACA
--- CONTAS  (num_conta PK, saldo, codigo (f.k), num_agencia (f.k))
---   especialização "T, O" (Total, com sObreposição):
--- CONTA_CORRENTE (num_conta PK/FK, taxa_mensal)
--- CONTA_POUPANÇA (num_conta PK/FK, valor_juros, percentual)
--- TRANSAÇÃO  (num_conta (f.k) + num_transacao = PK, valor, hora, data)   ← fraca
--- CLIENTE    (cpf PK, nome, telefone, endereço)
--- EMPRESTIMO (num_emprestimo PK, valor, juros, qt_parcelas, datas)
--- PAGAMENTOS (num_emprestimo (f.k) + num_pagamento = PK, valor, data, hora) ← fraca
--- TEM (cpf (f.k), num_conta (f.k))        ← relacionamento M:N Cliente–Conta
--- FAZ (cpf (f.k), num_emprestimo (f.k))   ← relacionamento M:N Cliente–Empréstimo`}
+        <DatabaseSchema
+          title="Resolução do EER 2 — modelo bancário, do conceitual ao físico"
+          defaultView="relacional"
+          caption="O mesmo gabarito nas três leituras: alterne as abas para ver o conceitual (ER), o lógico (tabelas com PK/FK) e o SQL que cria tudo. Repare em AGENCIA (fraca, PK composta), nas duas subclasses com PK = FK e em TEM, tracejada, que resolve o M:N cliente–conta. O recorte mostra 7 das 11 tabelas do gabarito; transação, empréstimo, pagamentos e FAZ seguem exatamente os mesmos padrões — fraca, fraca, fraca e associativa."
+          ddl={`CREATE TABLE banco (
+  codigo        INTEGER      PRIMARY KEY,
+  nome          VARCHAR(80)  NOT NULL,
+  endereco      VARCHAR(120)
+);
+
+CREATE TABLE agencia (                                  -- entidade FRACA
+  codigo        INTEGER      REFERENCES banco(codigo),
+  num_agencia   INTEGER,
+  endereco      VARCHAR(120),
+  PRIMARY KEY (codigo, num_agencia)
+);
+
+CREATE TABLE contas (
+  num_conta     INTEGER      PRIMARY KEY,
+  saldo         NUMERIC(12,2) NOT NULL,
+  codigo        INTEGER,
+  num_agencia   INTEGER,
+  FOREIGN KEY (codigo, num_agencia) REFERENCES agencia(codigo, num_agencia)
+);
+
+CREATE TABLE conta_corrente (                           -- especialização T,O
+  num_conta     INTEGER      PRIMARY KEY REFERENCES contas(num_conta),
+  taxa_mensal   NUMERIC(6,2)
+);
+
+CREATE TABLE conta_poupanca (
+  num_conta     INTEGER      PRIMARY KEY REFERENCES contas(num_conta),
+  valor_juros   NUMERIC(10,2),
+  percentual    NUMERIC(5,2)
+);
+
+CREATE TABLE cliente (
+  cpf           CHAR(11)     PRIMARY KEY,
+  nome          VARCHAR(80)  NOT NULL,
+  telefone      VARCHAR(20),
+  endereco      VARCHAR(120)
+);
+
+CREATE TABLE tem (                                      -- M:N cliente–conta
+  cpf           CHAR(11)     REFERENCES cliente(cpf),
+  num_conta     INTEGER      REFERENCES contas(num_conta),
+  PRIMARY KEY (cpf, num_conta)
+);`}
         />
         <p className="text-text-muted text-sm leading-relaxed mt-3">
           O exemplo condensa quase tudo: <strong>três entidades fracas</strong> (agência, transação, pagamento) com
