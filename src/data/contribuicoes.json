@@ -1,7 +1,7 @@
 {
   "$schema": "./contribuicoes.schema.json",
   "versao": 1,
-  "atualizadoEm": "2026-08-20",
+  "atualizadoEm": "2026-08-22",
   "contribuintes": [
     {
       "id": "isaque-braga",
@@ -464,6 +464,34 @@
         "conteudo",
         "quiz",
         "java"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-22-conteudo-etso",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-22",
+        "registradoEm": "2026-08-22T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "etica-sociedade",
+        "materiaCodigo": "ETSO",
+        "arquivo": "src/content/etica-sociedade/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Ética, Tecnologia e Sociedade, com 17 seções e 48 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma 2023.2: os quatro decks autorais da professora e os documentos de referência. As páginas somente-imagem dos decks 3 e 4 foram renderizadas e lidas, o que recuperou o texto integral dos doze artigos do Código de Ética do Profissional de Informática da SBC (15/07/2013), do Código de Conduta para Publicações e dos parágrafos da CMSI reproduzidos nos slides (§56-59 da Declaração de Princípios, §25 da Linha C10 do Plano de Ação de Genebra e §§39-48 de Túnis). As duas avaliações seguem as da turma: AV1 fracionada em três atividades de fixação e AV2 como ciclo de seminários. Registrada uma inconsistência do próprio documento da SBC, que menciona 'Conselho de Ética' no Art. 4º e 'Comitê de Ética' nos Arts. 7º e 9º — anotada em vez de uniformizada. PRIVACIDADE: os avisos do mural citam nomes de estudantes e do secretário regional da SBC em Alagoas; nenhum nome de pessoa foi reproduzido no conteúdo, e os seminários aparecem apenas por título, já que as apresentações são trabalho autoral das equipes.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "etica-sociedade",
+        "conteudo",
+        "quiz",
+        "etica"
       ]
     }
   ]
