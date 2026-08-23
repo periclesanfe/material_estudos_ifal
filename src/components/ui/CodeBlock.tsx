@@ -13,6 +13,7 @@ export type Language =
   | 'rust'
   | 'php'
   | 'sql'
+  | 'mips'
   | 'dax'
   | 'mdx'
   | 'html'
@@ -34,6 +35,38 @@ interface LangConfig {
 type WordLanguage = Exclude<Language, 'html' | 'css'>;
 
 const LANG_CONFIGS: Record<WordLanguage, LangConfig> = {
+  mips: {
+    label: 'MIPS Assembly',
+    keywords: new Set([
+      // instruções aritméticas e lógicas
+      'add', 'addi', 'addu', 'addiu', 'sub', 'subu', 'mul', 'mult', 'div',
+      'and', 'andi', 'or', 'ori', 'xor', 'xori', 'nor', 'not', 'neg',
+      'sll', 'srl', 'sra', 'sllv', 'srlv',
+      // memória e movimentação
+      'lw', 'lh', 'lb', 'lhu', 'lbu', 'sw', 'sh', 'sb', 'li', 'la', 'lui', 'move',
+      // comparação e desvio
+      'slt', 'slti', 'sltu', 'sltiu', 'beq', 'bne', 'bgt', 'blt', 'bge', 'ble',
+      'beqz', 'bnez', 'j', 'jal', 'jr', 'jalr',
+      // ponto flutuante
+      'l.s', 'mov.s', 'mul.s', 'div.s', 'add.s', 'sub.s',
+      // sistema
+      'syscall', 'nop',
+    ]),
+    builtins: new Set([
+      // registradores
+      '$zero', '$at', '$v0', '$v1', '$a0', '$a1', '$a2', '$a3',
+      '$t0', '$t1', '$t2', '$t3', '$t4', '$t5', '$t6', '$t7', '$t8', '$t9',
+      '$s0', '$s1', '$s2', '$s3', '$s4', '$s5', '$s6', '$s7',
+      '$k0', '$k1', '$gp', '$sp', '$fp', '$ra',
+      '$f0', '$f1', '$f2', '$f3', '$f12', '$f31',
+      // diretivas (sem o ponto: o tokenizador quebra a palavra no '.')
+      'data', 'text', 'globl', 'word', 'half', 'byte', 'float', 'double',
+      'ascii', 'asciiz', 'space', 'align',
+    ]),
+    lineComment: '#',
+    hasBlockComment: false,
+    hasTemplateLiteral: false,
+  },
   python: {
     label: 'Python',
     keywords: new Set([

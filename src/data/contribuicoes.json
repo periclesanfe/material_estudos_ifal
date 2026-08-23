@@ -666,6 +666,35 @@
         "kubernetes",
         "linux"
       ]
+    },
+    {
+      "id": "contrib-2026-08-20-conteudo-aocp",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-20",
+        "registradoEm": "2026-08-20T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "arquitetura-organizacao-computadores",
+        "materiaCodigo": "AOCP",
+        "arquivo": "src/content/arquitetura-organizacao-computadores/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Arquitetura e Organização de Computadores, com 15 seções que vão das máquinas de níveis ao caminho de dados, e 40 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma ARQC 2022.2: ementa, slides dos capítulos 1 a 3 de Tanenbaum, aula de revisão de lógica digital, as aulas de assembly e arquitetura MIPS, a coleção de quinze exemplos comentados em assembly e o enunciado do trabalho prático. As avaliações espelham a 1ª prova (unidades 1 e 2), a 2ª prova e o trabalho MIPS. Os três exercícios numéricos de análise de desempenho aparecem resolvidos passo a passo — incluindo o caso em que o computador de CPI maior é 1,2 vez mais rápido, porque seu ciclo de clock é menor. Os exemplos de assembly preservam a marca didática do professor, trazendo o código equivalente em C ou Python ao lado. Acrescenta a linguagem \"mips\" ao CodeBlock para destacar registradores, diretivas e instruções.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "arquitetura-organizacao-computadores",
+        "conteudo",
+        "quiz",
+        "mips",
+        "assembly"
+      ]
     }
   ]
 }
