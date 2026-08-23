@@ -1,7 +1,7 @@
 {
   "$schema": "./contribuicoes.schema.json",
   "versao": 1,
-  "atualizadoEm": "2026-08-20",
+  "atualizadoEm": "2026-08-22",
   "contribuintes": [
     {
       "id": "isaque-braga",
@@ -464,6 +464,34 @@
         "conteudo",
         "quiz",
         "java"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-22-conteudo-frdc",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-22",
+        "registradoEm": "2026-08-22T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "fundamentos-redes-computadores",
+        "materiaCodigo": "FRDC",
+        "arquivo": "src/content/fundamentos-redes-computadores/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Fundamentos de Redes de Computadores, com 17 seções e 46 questões de quiz.",
+        "detalhes": "Diferente das demais matérias do site: o material distribuído na turma NÃO é de autoria do professor — os slides são o pacote oficial da editora que acompanha o livro do Kurose (marcados '© 2014 Pearson') e os PDFs anexos são os livros completos de Kurose e Tanenbaum, obras protegidas. Por isso este conteúdo não resume nem transcreve esse material. O que ele registra é a ESTRUTURA da disciplina, que é decisão do professor (a divisão em quatro módulos seguindo os capítulos 1 a 4, o desenho das avaliações Av1/Av2/Av3, o projeto de sockets com propostas do codingchallenges.fyi e o desafio do load balancer, as ferramentas de diagnóstico escolhidas), apoiada na ementa oficial do PPC — documento institucional — e escrita com os conceitos padrão de redes, que são conhecimento técnico de domínio comum. Lacunas declaradas no conteúdo: os quatro quizzes são Google Forms e não foram capturados; os enunciados de Av1, Av2 e Av3 não têm anexo no mural, então conhece-se o escopo mas não o formato nem os critérios; e a turma cobriu apenas os capítulos 1 a 4, sem camada de enlace e física, porque o semestre foi comprimido por uma greve de professores e por uma suspensão de aulas.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "fundamentos-redes-computadores",
+        "conteudo",
+        "quiz",
+        "redes"
       ]
     }
   ]
