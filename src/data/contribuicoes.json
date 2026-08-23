@@ -1,7 +1,7 @@
 {
   "$schema": "./contribuicoes.schema.json",
   "versao": 1,
-  "atualizadoEm": "2026-08-22",
+  "atualizadoEm": "2026-08-23",
   "contribuintes": [
     {
       "id": "isaque-braga",
@@ -750,6 +750,58 @@
         "conteudo",
         "quiz",
         "uml"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-23-componente-formulablock",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-23",
+        "registradoEm": "2026-08-23T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "projeto",
+        "arquivo": "src/components/ui/FormulaBlock.tsx"
+      },
+      "tipo": "melhoria",
+      "como": {
+        "resumo": "Cria o componente FormulaBlock para notação matemática, com os helpers Frac, Pow, Sub, Root e InlineFormula.",
+        "detalhes": "Fórmula não é código: é lida como figura, com frações e expoentes ocupando espaço vertical, e não linha a linha como no CodeBlock. O componente traz tratamento tipográfico próprio (serifa com variáveis em itálico, números e operadores em romano) e um prop 'where' que documenta os símbolos junto da fórmula. Os helpers compõem entre si — uma raiz dentro de uma fração, por exemplo. Usa os tokens de cor do projeto, funcionando nos temas claro e escuro."
+      },
+      "status": "incorporado",
+      "tags": [
+        "componente",
+        "ui",
+        "matematica"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-23-conteudo-mtsi",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-23",
+        "registradoEm": "2026-08-23T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "matematica-si",
+        "materiaCodigo": "MTSI",
+        "arquivo": "src/content/matematica-si/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Matemática para Sistemas de Informação, com 15 seções e 44 questões de quiz.",
+        "detalhes": "Caso distinto das demais matérias: a turma raspada foi arquivada servindo apenas como repositório de bibliografia — cinco materiais, nenhum aviso, nenhuma atividade — e os 20 anexos são obras comerciais de terceiros (coleções Iezzi, Dante e Telaris, mais um livro da UFSC/UAB), sem qualquer camada autoral do professor. Além disso, essa bibliografia é de matemática do ensino médio e quase não intersecta a ementa oficial. Por isso o conteúdo foi escrito a partir da EMENTA OFICIAL DO PPC (Sistemas Lineares, Matrizes, Transformações Lineares, Relações, Funções, Recursão e Grafos) e dos conceitos padrão de álgebra linear e matemática discreta, que são conhecimento de domínio comum — sem resumir ou reproduzir os livros. A introdução declara isso ao leitor. As duas avaliações são um agrupamento temático dos blocos da ementa, não provas de uma turma, já que não há registro delas. Estreia o componente FormulaBlock, usado em 20 blocos de fórmula e 42 expressões em linha.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "matematica-si",
+        "conteudo",
+        "quiz",
+        "matematica"
       ]
     }
   ]

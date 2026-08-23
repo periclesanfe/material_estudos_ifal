@@ -37,6 +37,7 @@ Fonte estruturada: [`src/data/contribuicoes.json`](../../src/data/contribuicoes.
 | 2026-08-22 | Projeto de Infraestrutura (INFR) | conteudo_materia | pericles-feitoza | src/content/projeto-infraestrutura/ | Cria o conteúdo com 16 seções a partir dos 5 PDFs da turma 2026.1, com as normas de cabeamento e os quatro estudos de caso conferidos página a página, e 40 questões de quiz | #59 | incorporado |
 | 2026-08-22 | Fundamentos de Redes de Computadores (FRDC) | conteudo_materia | pericles-feitoza | src/content/fundamentos-redes-computadores/ | Cria o conteúdo com 17 seções a partir da estrutura da disciplina e da ementa do PPC — o material da turma é o pacote da editora e os livros de Kurose e Tanenbaum, que não foram transcritos —, e 46 questões de quiz | #60 | incorporado |
 | 2026-08-22 | Ética, Tecnologia e Sociedade (ETSO) | conteudo_materia | pericles-feitoza | src/content/etica-sociedade/ | Cria o conteúdo com 17 seções a partir dos decks da turma 2023.2, com os códigos da SBC e os documentos da CMSI recuperados das páginas em imagem, e 48 questões de quiz | #61 | incorporado |
+| 2026-08-23 | Matemática para Sistemas de Informação (MTSI) | conteudo_materia | pericles-feitoza | src/content/matematica-si/ | Cria o conteúdo com 15 seções escritas a partir da ementa oficial do PPC — o material da turma são livros comerciais de terceiros, que não foram reproduzidos —, e 44 questões de quiz | — | incorporado |
 
 ## Contribuicoes Do Projeto
 
@@ -47,6 +48,7 @@ Use esta tabela para melhorias gerais, revisoes, issues, documentacao, infraestr
 | 2026-05-31 | projeto | codigo | isaque-braga | src/components/quiz/ExamQuizSelector.tsx | Refatoração do filtro de provas para número dinâmico via useMemo | #17 | incorporado |
 | 2026-06-11 | projeto | codigo | isaque-braga | src/components/ui/CodeBlock.tsx | Componente CodeBlock com syntax highlighting para 8 linguagens | #19 | incorporado |
 | 2026-08-11 | projeto | melhoria | pericles-feitoza | src/components/sections/index.tsx | Quebra o arquivo único de seções de Estrutura de Dados em um componente por seção e cria o componente Subsection, reaproveitável pelas demais matérias | — | incorporado |
+| 2026-08-23 | projeto | melhoria | pericles-feitoza | src/components/ui/FormulaBlock.tsx | Componente FormulaBlock para notação matemática, com helpers de fração, expoente, índice e raiz que compõem entre si | — | incorporado |
 
 ## Checklist Para Novas Entradas
 
