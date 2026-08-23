@@ -606,6 +606,36 @@
         "chiavenato",
         "rh"
       ]
+    },
+    {
+      "id": "contrib-2026-08-21-conteudo-gpjt",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-21",
+        "registradoEm": "2026-08-21T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "gerencia-projeto",
+        "materiaCodigo": "GPJT",
+        "arquivo": "src/content/gerencia-projeto/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Gerência de Projeto, com 16 seções que vão da definição de projeto ao encerramento, e 42 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma 2024: apostila de fundamentos com a comparação entre PMBOK 6 e 7, os três módulos e o material de controle da ENAP, os slides autorais do professor sobre iniciação e planejamento, as aulas de novembro e os modelos de Termo de Abertura, Requisitos e Declaração de Escopo. A atividade do caminho crítico foi resolvida a partir do diagrama original — passagem para frente e para trás, tabela de folgas e os quatro caminhos possíveis —, corrigindo uma leitura delegada que havia concluído 22 dias em vez dos 25 corretos. As fórmulas de valor agregado foram conferidas página a página no PDF, e o exemplo da formação de multiplicadores aparece resolvido, incluindo a inconsistência da fonte (os marcos somam R$ 45,5K contra um pacote orçado em R$ 50K). O modelo de TAP distribuído em aula é um documento real preenchido, com nomes e contatos de docentes e alunos: reproduz-se apenas a estrutura, despersonalizada.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "gerencia-projeto",
+        "conteudo",
+        "quiz",
+        "pmbok",
+        "eap",
+        "caminho-critico"
+      ]
     }
   ]
 }
