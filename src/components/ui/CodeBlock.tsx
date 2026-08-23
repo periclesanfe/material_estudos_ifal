@@ -14,6 +14,10 @@ export type Language =
   | 'php'
   | 'sql'
   | 'mips'
+  | 'http'
+  | 'bash'
+  | 'json'
+  | 'text'
   | 'dax'
   | 'mdx'
   | 'html'
@@ -210,6 +214,58 @@ const LANG_CONFIGS: Record<WordLanguage, LangConfig> = {
   // SQL, DAX e MDX não têm palavras reservadas sensíveis a maiúsculas, mas o
   // tokenizador compara o texto exato — por isso os conjuntos abaixo usam
   // MAIÚSCULAS, que é a convenção do material da disciplina (e do DWAULA.ddl).
+  json: {
+    label: 'JSON',
+    // JSON não tem palavras-chave além dos três literais.
+    keywords: new Set(['true', 'false', 'null']),
+    builtins: new Set([]),
+    lineComment: '\u0000',
+    hasBlockComment: false,
+    hasTemplateLiteral: false,
+  },
+  text: {
+    label: 'Texto',
+    // Sem realce: para diagramas em ASCII e saídas de terminal, em que colorir
+    // palavras soltas atrapalharia mais do que ajuda.
+    keywords: new Set([]),
+    builtins: new Set([]),
+    lineComment: '\u0000',
+    hasBlockComment: false,
+    hasTemplateLiteral: false,
+  },
+  http: {
+    label: 'HTTP',
+    // Métodos e versões do protocolo — o que abre a linha de requisição/status.
+    keywords: new Set([
+      'GET', 'POST', 'PUT', 'DELETE', 'HEAD', 'PATCH', 'OPTIONS', 'TRACE', 'CONNECT',
+      'HTTP/1.0', 'HTTP/1.1', 'HTTP/2', 'HTTP/3',
+    ]),
+    // Cabeçalhos comuns. Sem os dois-pontos: o tokenizador separa nesse caractere.
+    builtins: new Set([
+      'Host', 'User-Agent', 'Accept', 'Accept-Encoding', 'Accept-Language',
+      'Content-Type', 'Content-Length', 'Cache-Control', 'Authorization',
+      'Cookie', 'Set-Cookie', 'Location', 'Connection', 'Referer', 'Origin',
+      'ETag', 'Server', 'Date', 'Expires', 'Last-Modified',
+    ]),
+    lineComment: '#',
+    hasBlockComment: false,
+    hasTemplateLiteral: false,
+  },
+  bash: {
+    label: 'Shell',
+    keywords: new Set([
+      'cd', 'ls', 'mkdir', 'rm', 'cp', 'mv', 'cat', 'echo', 'export', 'source',
+      'if', 'then', 'else', 'fi', 'for', 'do', 'done', 'while', 'case', 'esac',
+      'function', 'return', 'exit', 'sudo',
+    ]),
+    builtins: new Set([
+      'npm', 'npx', 'node', 'yarn', 'pnpm', 'git', 'curl', 'wget', 'docker',
+      'install', 'init', 'run', 'start', 'test', 'build', 'i',
+    ]),
+    lineComment: '#',
+    hasBlockComment: false,
+    hasTemplateLiteral: false,
+  },
   sql: {
     label: 'SQL',
     keywords: new Set([
