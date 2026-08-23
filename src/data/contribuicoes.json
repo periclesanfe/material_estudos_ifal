@@ -803,6 +803,58 @@
         "quiz",
         "matematica"
       ]
+    },
+    {
+      "id": "contrib-2026-08-23-codeblock-http-bash-json",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-23",
+        "registradoEm": "2026-08-23T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "projeto",
+        "arquivo": "src/components/ui/CodeBlock.tsx"
+      },
+      "tipo": "melhoria",
+      "como": {
+        "resumo": "Acrescenta as linguagens http, bash, json e text ao CodeBlock.",
+        "detalhes": "Programação Web 2 precisa exibir mensagens HTTP cruas (linha de requisição, cabeçalhos), comandos de terminal, trechos de package.json e diagramas em ASCII — nenhum cabia nas linguagens já suportadas. O 'text' não realça nada de propósito: em diagrama ASCII e saída de terminal, colorir palavras soltas atrapalha a leitura."
+      },
+      "status": "incorporado",
+      "tags": [
+        "componente",
+        "ui",
+        "codeblock"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-23-conteudo-pgwb",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-23",
+        "registradoEm": "2026-08-23T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "programacao-web",
+        "materiaCodigo": "PGWB",
+        "arquivo": "src/content/programacao-web/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria Programação Web 2, com 17 seções e 46 questões de quiz.",
+        "detalhes": "Escrito a partir do material autoral da turma 2024.1: o plano de curso, as notas de aula 01 (A Web, 34 slides) e 02 (Usando APIs Web, 19 slides), o deck de comunicação cliente-servidor com cookies e sessões, o guia passo a passo de 107 páginas e os enunciados das atividades. O guia é o material central — oito seções, de A a H, construindo a mesma aplicação em complexidade crescente, do npm init à arquitetura em quatro camadas com Ports & Adapters, testes com Jest e Supertest, e ORM com Sequelize. Registra um fato do semestre: houve TROCA DE PROFESSOR em outubro de 2024, quando o primeiro se afastou para pós-doutorado, o que explica a convivência de EJS+SQLite na primeira metade com Handlebars+MySQL+Sequelize na segunda. Lacunas declaradas: o livro da disciplina, escrito pelo professor e indicado como bibliografia básica, ficou numa pasta do Drive não capturada pela raspagem; e os percentuais da nota estão em branco no plano de curso. PRIVACIDADE: a planilha de equipes anexada ao mural pode conter nomes de estudantes e não foi aberta nem utilizada.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "programacao-web",
+        "conteudo",
+        "quiz",
+        "web"
+      ]
     }
   ]
 }

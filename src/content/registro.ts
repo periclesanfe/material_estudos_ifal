@@ -40,6 +40,7 @@ export const importadoresConteudo: Record<string, ImportadorConteudo> = {
   'processos-desenvolvimento-software': () =>
     import('./processos-desenvolvimento-software/ProcessosDesenvolvimentoSoftwareContent'),
   'programacao-orientada-objetos': () => import('./programacao-orientada-objetos/PoobContent'),
+  'programacao-web': () => import('./programacao-web/PgwbContent'),
   'projeto-infraestrutura': () => import('./projeto-infraestrutura/InfrContent'),
   'sistemas-apoio-decisao': () => import('./sistemas-apoio-decisao/SadeContent'),
   'topicos-avancados-banco-dados': () => import('./topicos-avancados-banco-dados/TABDContent'),
