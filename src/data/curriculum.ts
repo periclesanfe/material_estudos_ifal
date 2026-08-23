@@ -96,7 +96,7 @@ const subjects: Subject[] = [
   { id: 'gcpt', name: 'Gerência de Redes de Computadores', slug: 'gerencia-redes-computadores', code: 'GCPT', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
   { id: 'idco', name: 'Internet das Coisas', slug: 'internet-das-coisas', code: 'IDCO', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
   { id: 'lsop', name: 'Laboratório de Sistemas Operacionais', slug: 'laboratorio-sistemas-operacionais', code: 'LSOP', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
-  { id: 'infr', name: 'Projeto de Infraestrutura', slug: 'projeto-infraestrutura', code: 'INFR', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
+  { id: 'infr', name: 'Projeto de Infraestrutura', slug: 'projeto-infraestrutura', code: 'INFR', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: true },
   { id: 'segr', name: 'Segurança de Redes', slug: 'seguranca-redes', code: 'SEGR', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
   { id: 'devo', name: 'DevOps', slug: 'devops', code: 'DEVO', period: 'optativa', axis: 'FPF', hours: 80, optativeCategory: 'infraestrutura', hasContent: false },
 

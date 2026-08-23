@@ -31,6 +31,7 @@ export const importadoresConteudo: Record<string, ImportadorConteudo> = {
   'processos-desenvolvimento-software': () =>
     import('./processos-desenvolvimento-software/ProcessosDesenvolvimentoSoftwareContent'),
   'programacao-orientada-objetos': () => import('./programacao-orientada-objetos/PoobContent'),
+  'projeto-infraestrutura': () => import('./projeto-infraestrutura/InfrContent'),
   'topicos-avancados-banco-dados': () => import('./topicos-avancados-banco-dados/TABDContent'),
 };
 
