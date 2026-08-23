@@ -636,6 +636,36 @@
         "eap",
         "caminho-critico"
       ]
+    },
+    {
+      "id": "contrib-2026-08-21-conteudo-devo",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-21",
+        "registradoEm": "2026-08-21T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "devops",
+        "materiaCodigo": "DEVO",
+        "arquivo": "src/content/devops/"
+      },
+      "tipo": "conteudo_materia",
+      "como": {
+        "resumo": "Cria o conteúdo da matéria DevOps, com 15 seções que vão da cultura e do muro da confusão até BlueGreen e Canary, e 40 questões de quiz.",
+        "detalhes": "Escrito a partir da leitura integral do material da turma DevOps 2025.1 do Prof. Ivo Calado: ementa e plano de ensino, slides da aula inaugural e de introdução ao DevOps, os sete decks de Linux, os slides de Docker na prática, o roadmap de estudo e os enunciados das três etapas do projeto — estes lidos diretamente dos PDFs, porque a leitura delegada havia produzido uma descrição genérica que omitia quase todos os requisitos reais (12-factor, multi-stage, devcontainer, Helm com values por ambiente, sync waves, ghcr sem tag latest, repositório argocd-gitops e operador de banco). As avaliações espelham as três etapas do projeto, que é a única forma de avaliação da disciplina. Uma seção é dedicada ao caso real documentado pelo professor de um manifesto YAML cuja indentação parecia correta no vim e era inválida no VS Code.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "devops",
+        "conteudo",
+        "quiz",
+        "docker",
+        "kubernetes",
+        "linux"
+      ]
     }
   ]
 }
