@@ -84,6 +84,20 @@ export default function ContextosSection() {
         </p>
       </HighlightBox>
 
+      <HighlightBox title="Atenção ao ano do relatório" accent="var(--color-accent4)">
+        <p>
+          Os números abaixo são do <strong>GEM 2024</strong>, a edição usada no material da disciplina. Uma das
+          provas discursivas, porém, pede duas informações do <strong>GEM 2019</strong> — edição anterior, com
+          outros valores e outro contexto (pré-pandemia). Os <em>mecanismos</em> que o relatório mede são os
+          mesmos e continuam valendo como base de argumentação: taxa de empreendedorismo inicial (TEA), peso da
+          motivação por necessidade frente à oportunidade, faixas etárias e uso de tecnologias digitais.
+        </p>
+        <p>
+          Se a sua prova citar 2019, confirme os percentuais daquela edição antes de repeti-los — trocar o ano do
+          dado é o erro mais fácil de cometer e o mais fácil de o professor identificar.
+        </p>
+      </HighlightBox>
+
       <Subsection title="GEM 2024: os números" accentClass="text-accent3">
         <StatStrip items={gemHeadlineStats} />
       </Subsection>

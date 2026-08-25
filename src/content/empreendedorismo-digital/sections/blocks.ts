@@ -92,6 +92,39 @@ export const tripleHelix: PanelItem[] = [
     { title: 'Governo', description: 'Cria regras, infraestrutura e políticas. No setor público também é comprador — o que muda ciclo de venda, exigência e risco.' },
 ];
 
+/**
+ * Interesses de cada agente afetado pela ação empreendedora.
+ *
+ * Existe porque a prova discursiva pede exatamente esse recorte — argumentar o
+ * que empregados, fornecedores, clientes, investidores, comunidade e governo
+ * percebem no mesmo empreendimento. É também o antídoto à leitura de que
+ * empreender só diz respeito a quem empreende.
+ */
+export const stakeholderInterests: PanelItem[] = [
+    { title: 'Empregados', description: 'Emprego e renda, mas também aprendizado, qualificação e perspectiva de carreira. Em empresas jovens, a troca frequente é menos estabilidade por mais responsabilidade e crescimento acelerado.' },
+    { title: 'Fornecedores', description: 'Demanda nova e previsível, que permite planejar produção e diluir custos. Um cliente em crescimento amplia o próprio negócio do fornecedor; daí o interesse em que o empreendimento prospere.' },
+    { title: 'Clientes', description: 'Solução para um problema, mais opções e melhor relação entre preço e valor. A entrada de um concorrente inovador pressiona os incumbentes a melhorar — o benefício alcança até quem não compra.' },
+    { title: 'Investidores', description: 'Retorno proporcional ao risco assumido. Interessam-se por escalabilidade, tamanho de mercado e capacidade de execução da equipe, porque é disso que depende a valorização da participação.' },
+    { title: 'Comunidade', description: 'Renda circulando na região, oportunidades locais e, quando o negócio nasce de um problema do território, solução para uma carência concreta. Também pode arcar com externalidades negativas — trânsito, pressão sobre serviços.' },
+    { title: 'Governo', description: 'Arrecadação, formalização do trabalho e desenvolvimento econômico, que reduzem demanda por assistência. É também comprador e regulador, papéis que mudam o ciclo de venda e as exigências sobre o empreendimento.' },
+];
+
+/**
+ * Efeitos da prática empreendedora sobre a economia.
+ *
+ * Complementa o recorte acima: o primeiro olha para os agentes, este para os
+ * mecanismos agregados que a prova pede quando manda "comentar as contribuições
+ * à economia".
+ */
+export const economicContributions: PanelItem[] = [
+    { title: 'Geração de emprego e renda', description: 'Novos empreendimentos respondem por parcela expressiva da criação de postos de trabalho, sobretudo em pequenos negócios, que absorvem mão de obra em faixas variadas de qualificação.' },
+    { title: 'Inovação e ganho de produtividade', description: 'Novas combinações de produto, processo e modelo elevam a produtividade agregada. É a destruição criativa de Schumpeter: arranjos mais eficientes deslocam os anteriores.' },
+    { title: 'Concorrência e eficiência de mercado', description: 'Entrantes pressionam preços, qualidade e atendimento. Na leitura de Kirzner, o empreendedor corrige desequilíbrios ao perceber e explorar ineficiências que outros não viram.' },
+    { title: 'Arrecadação e formalização', description: 'Empreendimentos formais geram tributos que sustentam serviços públicos e trazem para o sistema formal trabalho que antes circulava à margem dele.' },
+    { title: 'Diversificação da estrutura produtiva', description: 'Ao criar setores e nichos, reduz a dependência de poucas atividades — o que torna a economia local menos vulnerável a choques concentrados.' },
+    { title: 'Desenvolvimento regional', description: 'Negócios que nascem de problemas do próprio território retêm renda e talento onde antes havia evasão, como mostram os casos alagoanos citados adiante.' },
+];
+
 // ------------------------------------------------------------------- Startups
 
 export const startupDefinition: ConceptItem[] = [
