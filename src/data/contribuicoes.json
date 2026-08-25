@@ -1,7 +1,7 @@
 {
   "$schema": "./contribuicoes.schema.json",
   "versao": 1,
-  "atualizadoEm": "2026-08-23",
+  "atualizadoEm": "2026-08-24",
   "contribuintes": [
     {
       "id": "isaque-braga",
@@ -884,6 +884,34 @@
         "ui",
         "banco-de-dados",
         "diagrama"
+      ]
+    },
+    {
+      "id": "contrib-2026-08-24-empd-segmentacao-provas",
+      "contribuinteId": "pericles-feitoza",
+      "quando": {
+        "data": "2026-08-24",
+        "registradoEm": "2026-08-24T00:00:00-03:00",
+        "timezone": "America/Maceio"
+      },
+      "onde": {
+        "escopo": "materia",
+        "materiaSlug": "empreendedorismo-digital",
+        "materiaCodigo": "EMPD",
+        "arquivo": "src/content/empreendedorismo-digital/"
+      },
+      "tipo": "melhoria",
+      "como": {
+        "resumo": "Segmenta o conteudo de Empreendedorismo Digital pelas avaliacoes reais da disciplina e cobre as lacunas que elas revelaram.",
+        "detalhes": "A materia so tinha segmentacao por ATIVIDADE (Canvas, Customer Development, Pitch). Passa a declarar tambem os instrumentos realmente aplicados, em dois formatos distintos: as provas DISCURSIVAS (1a Prova, 2a Prova e Proficiencia), cujos enunciados vieram dos PDFs fornecidos pelo aluno, e as objetivas de V ou F (AV1 e AV2), lidas das fotos das provas corrigidas. Sao instrumentos diferentes e cobram coisas diferentes, entao ficaram como segmentos separados. As 14 secoes foram mapeadas aos novos segmentos e as 32 questoes existentes ganharam as etiquetas correspondentes; foram escritas 22 questoes novas para os topicos sem cobertura, totalizando 54. Comparar as provas com o conteudo revelou duas lacunas reais: a 1a Prova pede argumentacao sobre os INTERESSES DOS AGENTES afetados pela acao empreendedora (empregados, fornecedores, clientes, investidores, comunidade e governo) e sobre as CONTRIBUICOES A ECONOMIA, temas que o material nao tratava — ambos foram escritos na secao de Fundamentos. A segunda lacuna e de ANO: a prova cita o relatorio GEM 2019 e o material traz o GEM 2024. Como os numeros de 2019 nao estavam disponiveis nas fontes em maos, nenhum dado foi inventado: a secao passou a advertir sobre a diferenca de edicao, indicar quais mecanismos seguem validos como base de argumentacao e orientar a conferencia dos percentuais antes de repeti-los.",
+        "origem": "material_professor"
+      },
+      "status": "incorporado",
+      "tags": [
+        "empreendedorismo-digital",
+        "quiz",
+        "avaliacoes",
+        "conteudo"
       ]
     }
   ]
