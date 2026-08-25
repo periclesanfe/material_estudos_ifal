@@ -83,6 +83,41 @@ export const EMPD_TOPICS: QuizTopicOption[] = [
  * marcação (ver `ExamMode`).
  */
 export const EMPD_EXAMS: ExamDefinition[] = [
+    // As avaliações realmente aplicadas pela Coordenadoria de Informática.
+    // Convivem dois formatos: as provas DISCURSIVAS (conceitue, explique,
+    // argumente) e as objetivas de V ou F. Os ids separam os instrumentos
+    // porque o que cada um cobra é diferente — e estudar para "escrever sobre"
+    // não é o mesmo que estudar para "julgar afirmativas".
+    {
+        id: 'p1',
+        label: '1ª Prova',
+        description:
+            'Discursiva: conceito de empreendedorismo e efeitos na economia, os interesses dos agentes envolvidos (empregados, fornecedores, clientes, investidores, comunidade e governo), traços de comportamento do empreendedor, o relatório GEM e empreendedorismo social.',
+    },
+    {
+        id: 'p2',
+        label: '2ª Prova',
+        description:
+            'Discursiva: benefícios do e-business, conceito de startup, negócios escaláveis com exemplos, modelo de negócio e os princípios de Customer Development de Steve Blank.',
+    },
+    {
+        id: 'proficiencia',
+        label: 'Proficiência',
+        description:
+            'Discursiva: startup frente à empresa tradicional, modelo de negócio, uso do PMV para validar hipóteses, negócios repetíveis e escaláveis, pivotar versus persistir, e a descrição de um negócio inovador nos nove blocos do Canvas.',
+    },
+    {
+        id: 'av1',
+        label: 'AV1 (V ou F)',
+        description:
+            'Objetiva de V ou F: conceito e evolução histórica do empreendedorismo, o papel central da inovação, intraempreendedorismo e empreendedorismo social, mentalidade e perfil empreendedor, e as múltiplas abordagens de análise do fenômeno.',
+    },
+    {
+        id: 'av2',
+        label: 'AV2 (V ou F)',
+        description:
+            'Objetiva de V ou F: startup versus pequena empresa, Lean Startup e o ciclo Construir-Medir-Aprender, Customer Development, Problem-Solution Fit e Proposta de Valor Única, modelos de negócio digitais e economia da recorrência, e o ecossistema de startups.',
+    },
     {
         id: 'canvas',
         label: 'Canvas',
@@ -117,18 +152,18 @@ export const EMPD_EXAMS: ExamDefinition[] = [
 
 export const EMPD_SECTIONS = [
     { id: 'intro', title: 'A jornada de uma startup', shortTitle: 'Introdução' },
-    { id: 'fundamentos', title: 'Fundamentos, Escolas e o Empreendedor de SI', shortTitle: 'Fundamentos' },
-    { id: 'startups', title: 'Startups e Ecossistema Digital', shortTitle: 'Startups', exams: ['canvas', 'caso-startup'] },
-    { id: 'oportunidades', title: 'Identificação e Validação de Oportunidades', shortTitle: 'Oportunidades', exams: ['canvas', 'custdev'] },
-    { id: 'canvas', title: 'Business Model Canvas', shortTitle: 'Canvas', exams: ['canvas'] },
-    { id: 'customer-development', title: 'Customer Development', shortTitle: 'Cust. Dev.', exams: ['custdev'] },
-    { id: 'lean-mvp', title: 'Lean Startup, Experimentação e MVP', shortTitle: 'Lean e MVP', exams: ['lean', 'caso-startup'] },
-    { id: 'arquiteturas', title: 'Arquiteturas Digitais e Comércio Eletrônico', shortTitle: 'Arquiteturas', exams: ['caso-startup', 'pitch'] },
+    { id: 'fundamentos', title: 'Fundamentos, Escolas e o Empreendedor de SI', shortTitle: 'Fundamentos', exams: ['p1', 'av1'] },
+    { id: 'startups', title: 'Startups e Ecossistema Digital', shortTitle: 'Startups', exams: ['p2', 'proficiencia', 'av2', 'canvas', 'caso-startup'] },
+    { id: 'oportunidades', title: 'Identificação e Validação de Oportunidades', shortTitle: 'Oportunidades', exams: ['proficiencia', 'av2', 'canvas', 'custdev'] },
+    { id: 'canvas', title: 'Business Model Canvas', shortTitle: 'Canvas', exams: ['p2', 'proficiencia', 'av2', 'canvas'] },
+    { id: 'customer-development', title: 'Customer Development', shortTitle: 'Cust. Dev.', exams: ['p2', 'av2', 'custdev'] },
+    { id: 'lean-mvp', title: 'Lean Startup, Experimentação e MVP', shortTitle: 'Lean e MVP', exams: ['proficiencia', 'av2', 'lean', 'caso-startup'] },
+    { id: 'arquiteturas', title: 'Arquiteturas Digitais e Comércio Eletrônico', shortTitle: 'Arquiteturas', exams: ['p2', 'av2', 'caso-startup', 'pitch'] },
     { id: 'unit-economics', title: 'Aquisição, Retenção e Unit Economics', shortTitle: 'Unit Economics', exams: ['pitch'] },
     { id: 'financiamento', title: 'Financiamento de Startups', shortTitle: 'Financiamento', exams: ['financiamento'] },
     { id: 'plano-pitch', title: 'Plano de Negócio e Pitch Deck', shortTitle: 'Plano e Pitch', exams: ['pitch'] },
-    { id: 'contextos', title: 'Intraempreendedorismo, Impacto Social e GEM 2024', shortTitle: 'Contextos' },
-    { id: 'casos', title: 'Estudos de Caso: FilaZero, Twitch e TechNova', shortTitle: 'Casos', exams: ['caso-startup', 'pitch'] },
+    { id: 'contextos', title: 'Intraempreendedorismo, Impacto Social e GEM', shortTitle: 'Contextos', exams: ['p1', 'av1'] },
+    { id: 'casos', title: 'Estudos de Caso: FilaZero, Twitch e TechNova', shortTitle: 'Casos', exams: ['proficiencia', 'caso-startup', 'pitch'] },
     { id: 'quiz', title: 'Quiz de Revisão', shortTitle: 'Quiz' },
 ] as const;
 
@@ -139,6 +174,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     // ------------------------------------------------------- Fundamentos
     {
         id: 'q1',
+        exams: ['p1', 'av1'],
         question: 'Qual alternativa distingue corretamente risco de incerteza, na formulação de Frank Knight?',
         options: [
             'Risco se refere a perdas financeiras; incerteza se refere a perdas de reputação',
@@ -152,6 +188,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     },
     {
         id: 'q2',
+        exams: ['p1', 'av1'],
         question: 'A perspectiva de Israel Kirzner é especialmente útil para explicar que tipo de oportunidade?',
         options: [
             'As que dependem de uma inovação tecnológica radical ainda inexistente',
@@ -165,6 +202,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     },
     {
         id: 'q3',
+        exams: ['p1', 'av1'],
         question: 'Segundo a Teoria do Comportamento Planejado, de Ajzen, a intenção de empreender depende de quais três fatores?',
         options: [
             'Capital disponível, formação técnica e rede de contatos',
@@ -179,7 +217,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     // ---------------------------------------------------------- Startups
     {
         id: 'q4',
-        exams: ['canvas', 'caso-startup'],
+        exams: ['p2', 'proficiencia', 'av2', 'canvas', 'caso-startup'],
         question: 'Qual é o melhor exemplo de negócio digital que NÃO se enquadra na definição de startup, e por quê?',
         options: [
             'Uma fábrica de software sob encomenda lucrativa, porque cada projeto exige trabalho proporcional à receita',
@@ -193,7 +231,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     },
     {
         id: 'q5',
-        exams: ['canvas', 'caso-startup'],
+        exams: ['av2', 'canvas', 'caso-startup'],
         question: 'Por que investir pesadamente em aquisição antes do product-market fit é considerado perigoso?',
         options: [
             'Porque a legislação impede a compra de mídia antes da constituição formal da empresa',
@@ -246,7 +284,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     },
     {
         id: 'q9',
-        exams: ['canvas'],
+        exams: ['proficiencia', 'av2', 'canvas'],
         question: 'Qual das opções abaixo é uma proposta de valor, e não uma lista de funcionalidades?',
         options: [
             'Agendamento online, senha digital e notificação por SMS',
@@ -275,7 +313,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     // ----------------------------------------------- Customer Development
     {
         id: 'q11',
-        exams: ['custdev'],
+        exams: ['av2', 'custdev'],
         question: 'Quais fases do Customer Development pertencem à BUSCA de um modelo de negócio?',
         options: [
             'Customer Discovery e Customer Validation',
@@ -289,7 +327,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     },
     {
         id: 'q12',
-        exams: ['custdev'],
+        exams: ['av2', 'custdev'],
         question: 'Para uma solução vendida a prefeituras, qual das evidências abaixo é a mais forte na fase de Customer Validation?',
         options: [
             'Um secretário municipal elogiar a demonstração e dizer que a solução é necessária',
@@ -304,7 +342,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     // -------------------------------------------------------- Lean e MVP
     {
         id: 'q13',
-        exams: ['lean', 'caso-startup'],
+        exams: ['av2', 'lean', 'caso-startup'],
         question: 'Qual das métricas abaixo é acionável, e não uma métrica de vaidade?',
         options: [
             'Total acumulado de cadastros desde o lançamento',
@@ -318,7 +356,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     },
     {
         id: 'q14',
-        exams: ['lean', 'caso-startup'],
+        exams: ['av2', 'lean', 'caso-startup'],
         question: 'Uma equipe quer testar se as pessoas estão dispostas a PAGAR pela solução. Qual experimento é o mais adequado?',
         options: [
             'Protótipo navegável, medindo se os usuários concluem a tarefa sem ajuda',
@@ -332,7 +370,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     },
     {
         id: 'q15',
-        exams: ['lean', 'caso-startup'],
+        exams: ['av2', 'lean', 'caso-startup'],
         question: 'A TechNova percebeu que a descoberta social gerava mais valor que o fluxo completo de compra e reorganizou o produto em torno dela. Que tipo de pivot é esse?',
         options: [
             'Zoom-out, porque o produto passou a fazer parte de uma solução maior',
@@ -347,7 +385,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     // ------------------------------------------------------ Arquiteturas
     {
         id: 'q16',
-        exams: ['caso-startup', 'pitch'],
+        exams: ['av2', 'caso-startup', 'pitch'],
         question: 'O que diferencia essencialmente uma plataforma de um pipeline?',
         options: [
             'A plataforma opera na nuvem e o pipeline opera em servidores próprios',
@@ -361,7 +399,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     },
     {
         id: 'q17',
-        exams: ['caso-startup', 'pitch'],
+        exams: ['av2', 'caso-startup', 'pitch'],
         question: 'O que significa liquidez em um marketplace?',
         options: [
             'A quantidade de caixa disponível para a plataforma honrar repasses aos vendedores',
@@ -518,6 +556,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     // --------------------------------------------------------- Contextos
     {
         id: 'q29',
+        exams: ['p1', 'av1'],
         question: 'Segundo o GEM 2024, 96,2% dos empreendedores iniciais usavam tecnologias digitais ou aplicativos para vender. O que esse número permite — e não permite — concluir?',
         options: [
             'Permite concluir que o empreendedorismo brasileiro se tornou altamente inovador',
@@ -531,6 +570,7 @@ export const QUIZ_DATA: QuizQuestionData[] = [
     },
     {
         id: 'q30',
+        exams: ['p1', 'av1'],
         question: 'Na avaliação de impacto de uma solução como o FilaZero, o que distingue output, outcome e impacto?',
         options: [
             'Output é o lucro do período; outcome é a receita recorrente; impacto é o valuation da empresa',
@@ -570,5 +610,316 @@ export const QUIZ_DATA: QuizQuestionData[] = [
         correctIndex: 2,
         feedbackCorrect: 'Isso. Cliques medem exposição e sobem só por a funcionalidade existir. A conversão em transações concluídas é o comportamento que o negócio precisa — e é comparável entre os dois grupos, que é o que torna o teste A/B conclusivo.',
         feedbackWrong: 'A conversão em transações concluídas. Cliques e tempo de permanência são métricas intermediárias que podem subir sem que nenhuma venda a mais aconteça, e o total acumulado de cadastros é métrica de vaidade: nunca desce.',
+    },
+    // ------------------------------- AV1: inovação, perfil e perspectivas
+    {
+        id: 'q33',
+        exams: ['av1'],
+        question: 'Uma empresa de software lança atualizações anuais com pequenas melhorias de interface, sem alterar a funcionalidade principal nem o modelo de negócio. Como classificar essa prática?',
+        options: [
+            'Inovação disruptiva, pois há lançamento contínuo de novidades ao mercado',
+            'Inovação incremental, pois aprimora o que já existe sem mudar a proposta de valor',
+            'Destruição criativa, pois cada versão substitui a anterior',
+            'Não é inovação de espécie alguma, por não envolver tecnologia nova',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Isso. Melhoria de interface sem mudança de funcionalidade ou de modelo é inovação incremental — legítima e frequentemente lucrativa, mas o oposto de disruptiva. Disrupção redefine o mercado, normalmente entrando por um segmento menos exigente e subindo.',
+        feedbackWrong: 'É inovação incremental. Chamar isso de disruptiva esvazia o termo: disrupção altera a base da competição e desloca os incumbentes, e não é o caso de um refinamento anual de interface.',
+    },
+    {
+        id: 'q34',
+        exams: ['av1'],
+        question: 'Uma startup desenvolve uma plataforma de telemedicina usando tecnologias já existentes, mas combinando-as de forma inédita para atender a um nicho negligenciado. Isso é empreendedorismo inovador?',
+        options: [
+            'Não, porque a inovação exige criar uma tecnologia que ainda não existe',
+            'Não, porque atender a nicho é estratégia de pequena empresa, não de startup',
+            'Sim, pois a novidade está na combinação e no mercado criado, não no ineditismo técnico',
+            'Sim, mas apenas se a empresa registrar patente sobre a combinação',
+        ],
+        correctIndex: 2,
+        feedbackCorrect: 'Exato. É a definição de Schumpeter: inovar é introduzir NOVAS COMBINAÇÕES, e uma delas é justamente abrir um novo mercado. A tecnologia pode ser toda conhecida — o que não existia era o arranjo e o atendimento àquele nicho.',
+        feedbackWrong: 'É sim. Inovação não se reduz a invenção técnica: recombinar o existente para servir um mercado ainda não atendido é uma das novas combinações de Schumpeter, e não depende de patente.',
+    },
+    {
+        id: 'q35',
+        exams: ['av1'],
+        question: 'Sobre a relação entre risco e inovação numa iniciativa empreendedora, qual afirmação se sustenta?',
+        options: [
+            'A ausência de risco financeiro descaracteriza a iniciativa como empreendedora, pois assumir risco é mais importante que inovar',
+            'Risco e inovação são independentes: uma iniciativa pode ser empreendedora sem envolver nenhum dos dois',
+            'A incerteza é inerente ao empreender, mas o risco financeiro pessoal não é o critério que define a iniciativa',
+            'Só há empreendedorismo quando o empreendedor arrisca patrimônio próprio',
+        ],
+        correctIndex: 2,
+        feedbackCorrect: 'Isso. Atuar sob incerteza é inerente ao empreender, mas o critério não é o risco financeiro PESSOAL: o intraempreendedor usa recursos da organização e nem por isso deixa de empreender. Elevar o risco a pré-requisito acima da inovação inverte a hierarquia dos conceitos.',
+        feedbackWrong: 'A terceira. A incerteza acompanha o empreender, mas exigir risco financeiro pessoal excluiria o intraempreendedorismo — e colocar a assunção de risco ACIMA da inovação contraria a tradição que vai de Schumpeter a Drucker.',
+    },
+    {
+        id: 'q36',
+        exams: ['av1'],
+        question: 'Sobre a mentalidade empreendedora e os programas de educação em empreendedorismo, o que é correto afirmar?',
+        options: [
+            'A mentalidade é inata, e por isso programas de formação têm pouca eficácia',
+            'A mentalidade pode ser desenvolvida, e a intenção de empreender é influenciada por atitude, normas sociais e controle percebido',
+            'A mentalidade depende exclusivamente do contexto econômico, não do indivíduo',
+            'Perfis empreendedores tendem a se realizar mais em estruturas rígidas e hierárquicas',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Exato. É o que sustenta a Teoria do Comportamento Planejado de Ajzen e a própria existência do campo como disciplina: se a intenção depende de atitude, normas subjetivas e controle percebido, então formação, referências e experiência a deslocam.',
+        feedbackWrong: 'A segunda. Tratar a mentalidade como inata tornaria o ensino de empreendedorismo inútil — e contraria Ajzen, para quem a intenção responde a fatores que a educação e o ambiente modificam.',
+    },
+    {
+        id: 'q37',
+        exams: ['av1'],
+        question: 'As diferentes teorias sobre empreendedorismo — a que foca na inovação (Schumpeter) e a que foca no estado de alerta (Kirzner), entre outras — devem ser tratadas como:',
+        options: [
+            'Excludentes: aceitar uma implica rejeitar as demais',
+            'Complementares: cada uma ilumina um aspecto do mesmo fenômeno',
+            'Hierárquicas: a abordagem econômica é a única realmente relevante',
+            'Sucessivas: cada uma torna a anterior obsoleta',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Isso. Schumpeter explica o empreendedor que cria a ruptura; Kirzner explica o que percebe a ineficiência e a corrige. São lentes distintas sobre o mesmo fenômeno — e há ainda as perspectivas sociológica, comportamental, cultural, gerencial e educacional.',
+        feedbackWrong: 'São complementares. Reduzir o empreendedorismo à abordagem econômica ignora que rede de contatos, capital social, contexto cultural e traços de personalidade demonstravelmente influenciam o resultado.',
+    },
+    {
+        id: 'q38',
+        exams: ['av1'],
+        question: 'Qual é a principal barreira ao intraempreendedorismo dentro de uma organização?',
+        options: [
+            'A falta de ideias inovadoras por parte dos colaboradores',
+            'A cultura de punição ao erro, que desestimula a experimentação',
+            'A escassez de problemas relevantes a resolver',
+            'O excesso de autonomia concedido às equipes',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Exato. Ideias raramente faltam; o que falta é ambiente onde propô-las não custe caro. Onde o fracasso de um projeto interno vira motivo de punição, a experimentação desaparece — e com ela o intraempreendedorismo.',
+        feedbackWrong: 'A cultura de punição ao erro. Supor que faltem ideias, ou que faltem problemas sociais a resolver, inverte o diagnóstico: o gargalo está no ambiente que recebe as ideias, não na oferta delas.',
+    },
+    {
+        id: 'q39',
+        exams: ['av1'],
+        question: 'Sobre o papel do lucro em um empreendimento social, qual afirmação é correta?',
+        options: [
+            'O lucro é irrelevante ou indesejável, pois o sucesso se mede exclusivamente pelo impacto',
+            'O lucro é o único critério de sucesso, como em qualquer empresa',
+            'O impacto é a missão, e a sustentabilidade financeira é o que permite mantê-lo ao longo do tempo',
+            'Empreendimentos sociais são impedidos por lei de gerar excedente financeiro',
+        ],
+        correctIndex: 2,
+        feedbackCorrect: 'Isso. O impacto é a razão de existir, mas iniciativa que não se sustenta financeiramente deixa de gerar impacto quando o financiamento acaba. Por isso o excedente costuma ser reinvestido na missão — o que é diferente de ser indesejável.',
+        feedbackWrong: 'A terceira. Tratar o lucro como indesejável confunde FIM com MEIO: a missão é o impacto, e a sustentabilidade financeira é a condição para que ele continue existindo depois do primeiro edital.',
+    },
+    // ------------------------------- AV2: startup, PSF/UVP e modelos digitais
+    {
+        id: 'q40',
+        exams: ['p2', 'proficiencia', 'av2'],
+        question: 'Qual é a diferença crucial entre uma startup e uma pequena empresa, como um restaurante local?',
+        options: [
+            'A startup usa tecnologia e a pequena empresa não',
+            'A startup busca um modelo de negócio repetível e escalável ainda desconhecido; a pequena empresa executa um modelo já conhecido',
+            'A startup tem menos funcionários que a pequena empresa',
+            'A startup visa lucro e a pequena empresa visa subsistência',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Exato. A pequena empresa opera sob um modelo validado — o desafio dela é execução e lucratividade local. A startup ainda está PROCURANDO o modelo, sob extrema incerteza, e é essa busca que define a categoria. Tecnologia é frequente, mas não é o critério.',
+        feedbackWrong: 'A segunda. Um restaurante pode usar muita tecnologia e ter muitos funcionários sem ser startup: o que separa é operar um modelo conhecido versus buscar um modelo repetível e escalável ainda não descoberto.',
+    },
+    {
+        id: 'q41',
+        exams: ['p2', 'proficiencia', 'av2'],
+        question: 'O que caracteriza a escalabilidade exponencial de uma startup?',
+        options: [
+            'A receita cresce enquanto os custos crescem na mesma proporção',
+            'A receita cresce de forma controlada e os custos crescem exponencialmente',
+            'A receita pode crescer muito sem que os custos cresçam na mesma proporção',
+            'Tanto receita quanto custos permanecem constantes após a validação',
+        ],
+        correctIndex: 2,
+        feedbackCorrect: 'Isso. É a assimetria entre receita e custo que define escalar: atender o milésimo cliente custa muito menos que atender o primeiro. Custos que crescem junto com a receita descrevem um negócio de serviço tradicional, não uma startup escalável.',
+        feedbackWrong: 'A terceira. Se o custo acompanha a receita na mesma proporção, não há escala — há apenas um negócio maior. A escalabilidade está justamente em desacoplar as duas curvas.',
+    },
+    {
+        id: 'q42',
+        exams: ['proficiencia', 'av2'],
+        question: 'Sobre o Produto Mínimo Viável (MVP) no Lean Startup, qual afirmação é correta?',
+        options: [
+            'Deve conter todas as funcionalidades necessárias para ser perfeito, evitando má impressão',
+            'É a menor versão capaz de gerar aprendizado validado sobre uma hipótese',
+            'É um protótipo descartável que nunca é mostrado a clientes reais',
+            'É a versão final do produto, lançada após a fase de pesquisa',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Exato. O adjetivo que importa é VIÁVEL para aprender, não completo. Um MVP existe para testar uma hipótese com o mínimo de esforço — exigir que seja perfeito destrói a razão de ele existir, que é encurtar o ciclo Construir-Medir-Aprender.',
+        feedbackWrong: 'A segunda. Um MVP com todas as funcionalidades não é mínimo: é o produto inteiro construído antes de saber se alguém o quer, exatamente o desperdício que o Lean Startup busca evitar.',
+    },
+    {
+        id: 'q43',
+        exams: ['proficiencia', 'av2'],
+        question: 'Uma startup decide mudar de direção após os aprendizados com o MVP. O que caracteriza corretamente esse pivot?',
+        options: [
+            'O abandono total dos aprendizados anteriores e o recomeço do zero',
+            'Uma mudança de rumo que PRESERVA e aproveita o que foi aprendido até ali',
+            'A troca da equipe fundadora por profissionais mais experientes',
+            'O encerramento da empresa e a abertura de outra',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Isso. Pivotar é mudar de hipótese mantendo o conhecimento adquirido — sobre o cliente, o problema ou o canal. Descartar tudo e recomeçar não é pivot: é começar outra startup, e desperdiça o aprendizado que custou tempo e dinheiro.',
+        feedbackWrong: 'A segunda. O pivot é uma correção de rota FUNDAMENTADA no que o MVP ensinou; se os aprendizados fossem abandonados, o ciclo Construir-Medir-Aprender não teria produzido valor algum.',
+    },
+    {
+        id: 'q44',
+        exams: ['av2'],
+        question: 'No Problem-Solution Fit (PSF), como deve ser a definição do problema?',
+        options: [
+            'Inespecífica e genérica, para ampliar o mercado potencial da solução',
+            'Clara e específica, focada em um público-alvo determinado',
+            'Definida apenas após a construção da solução técnica',
+            'Irrelevante, desde que a solução seja tecnicamente avançada',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Exato. Uma "dor" genérica não permite validar nada: não se sabe a quem perguntar nem o que contaria como evidência. O PSF valida que um problema REAL, de um público DETERMINADO, é resolvido de forma desejável e viável.',
+        feedbackWrong: 'A segunda. Problema vago parece ampliar o mercado, mas na prática impede a validação — e leva a construir uma solução que não atende bem a ninguém em particular.',
+    },
+    {
+        id: 'q45',
+        exams: ['av2'],
+        question: 'O que distingue os modelos D2C (Direct-to-Consumer) e Marketplace?',
+        options: [
+            'No D2C a marca vende diretamente ao consumidor; no Marketplace a plataforma intermedeia compradores e vendedores',
+            'O D2C só funciona com produtos físicos e o Marketplace só com serviços',
+            'No D2C a plataforma cobra comissão dos vendedores; no Marketplace não há cobrança',
+            'São sinônimos, com nomenclatura distinta apenas por região',
+        ],
+        correctIndex: 0,
+        feedbackCorrect: 'Isso. O D2C elimina o intermediário e melhora a margem, ao custo de assumir aquisição e logística. O Marketplace É o intermediário: seu desafio é liquidez dos dois lados, além de logística e segurança das transações.',
+        feedbackWrong: 'A primeira. A diferença está em QUEM vende: no D2C a própria marca; no Marketplace, terceiros dentro de uma plataforma que conecta oferta e demanda e normalmente cobra comissão.',
+    },
+    {
+        id: 'q46',
+        exams: ['av2'],
+        question: 'Na Economia da Recorrência, qual é a principal vantagem do modelo de assinatura para a empresa?',
+        options: [
+            'Elimina a necessidade de investir em retenção de clientes',
+            'Gera receita previsível (MRR), o que facilita planejamento e avaliação',
+            'Dispensa a apuração do custo de aquisição de clientes',
+            'Garante margens maiores que qualquer modelo de venda avulsa',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Exato. A previsibilidade do MRR é o que muda o jogo: permite planejar caixa, projetar crescimento e sustentar avaliação. Em compensação, torna a RETENÇÃO crítica — no modelo recorrente, churn corrói a base todo mês.',
+        feedbackWrong: 'A segunda. A recorrência não dispensa retenção nem CAC — ao contrário, aumenta a importância dos dois, já que o valor do cliente se realiza ao longo do tempo e depende de ele permanecer.',
+    },
+    {
+        id: 'q47',
+        exams: ['av2'],
+        question: 'Qual é a diferença de foco entre uma incubadora e uma aceleradora?',
+        options: [
+            'A incubadora foca em crescimento rápido; a aceleradora, na validação inicial da ideia',
+            'A incubadora apoia a validação da ideia e do modelo em prazo mais longo; a aceleradora impulsiona o crescimento em programa curto e intenso',
+            'Ambas exigem sempre participação acionária em troca de capital',
+            'A incubadora é pública e a aceleradora é sempre privada',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Isso. A incubadora acompanha os estágios iniciais por período longo, frequentemente sem tomar participação. A aceleradora entra depois, com programa curto e intenso, capital e mentoria — geralmente em troca de equity. São complementares, não concorrentes.',
+        feedbackWrong: 'A segunda. Os papéis estão invertidos nas demais: quem valida a ideia em prazo longo é a incubadora; quem acelera o crescimento em programa curto, com equity, é a aceleradora.',
+    },
+    // ------------------------- Provas discursivas (P1, P2 e Proficiência)
+    {
+        id: 'q48',
+        exams: ['p1'],
+        question: 'Ao argumentar sobre os interesses dos agentes afetados pela ação empreendedora, qual leitura sobre os FORNECEDORES se sustenta?',
+        options: [
+            'Não têm interesse próprio no sucesso do empreendimento, pois já recebem pelo que entregam',
+            'Ganham demanda nova e previsível, o que permite planejar produção e diluir custos',
+            'São prejudicados por empresas jovens, que negociam prazos mais curtos',
+            'Só se interessam por empreendimentos de grande porte',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Isso. Um cliente em crescimento amplia o próprio negócio do fornecedor — por isso ele tem interesse direto na prosperidade do empreendimento, e não apenas na cobrança da fatura.',
+        feedbackWrong: 'A segunda. O fornecedor não é parte neutra: demanda nova e previsível permite planejar produção e diluir custo fixo, então o sucesso do cliente é também o seu.',
+    },
+    {
+        id: 'q49',
+        exams: ['p1'],
+        question: 'Entre as contribuições do empreendedorismo à economia, qual descreve o mecanismo da destruição criativa?',
+        options: [
+            'A arrecadação de tributos que sustenta serviços públicos',
+            'A absorção de mão de obra em faixas variadas de qualificação',
+            'Arranjos mais produtivos deslocando os anteriores, elevando a produtividade agregada',
+            'A redução da dependência de poucas atividades econômicas',
+        ],
+        correctIndex: 2,
+        feedbackCorrect: 'Exato. A destruição criativa de Schumpeter é isso: a novidade não apenas se soma ao que existia — ela torna arranjos anteriores menos relevantes, e o ganho de produtividade vem justamente dessa substituição.',
+        feedbackWrong: 'A terceira. As demais são contribuições reais, mas descrevem arrecadação, emprego e diversificação; a destruição criativa é especificamente o deslocamento de arranjos antigos por outros mais produtivos.',
+    },
+    {
+        id: 'q50',
+        exams: ['p2'],
+        question: 'Ao descrever benefícios característicos de empresas que atuam em e-business, qual alternativa aponta uma vantagem estrutural do modelo?',
+        options: [
+            'A eliminação da necessidade de logística e de atendimento ao cliente',
+            'Alcance geográfico ampliado e operação contínua, sem a restrição de horário e de praça do ponto físico',
+            'A dispensa de investimento em aquisição de clientes',
+            'A garantia de margens maiores que qualquer negócio tradicional',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Isso. O e-business desacopla a operação do ponto físico: o alcance deixa de ser limitado pela praça e o funcionamento deixa de ser limitado pelo horário. Some-se a isso a coleta de dados de comportamento, que permite personalizar e medir.',
+        feedbackWrong: 'A segunda. E-business não elimina logística nem atendimento — frequentemente os torna mais críticos — e tampouco dispensa investimento em aquisição, que costuma ser o maior custo do modelo.',
+    },
+    {
+        id: 'q51',
+        exams: ['p2', 'proficiencia'],
+        question: 'Ao conceituar modelo de negócio, qual definição é a mais precisa?',
+        options: [
+            'O documento formal com projeções financeiras e análise de viabilidade do empreendimento',
+            'A lógica de como a organização cria, entrega e captura valor',
+            'O conjunto de tecnologias empregadas na operação da empresa',
+            'A estrutura jurídica e o regime tributário escolhidos pelos sócios',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Exato. É a definição de Osterwalder, e as três palavras importam: CRIAR (a proposta de valor), ENTREGAR (canais e relacionamento) e CAPTURAR (as fontes de receita frente à estrutura de custos). O Canvas é o mapa dessa lógica.',
+        feedbackWrong: 'A segunda. O documento com projeções é o PLANO de negócio, que é outra coisa: o modelo é a lógica de criação, entrega e captura de valor, e cabe num quadro de nove blocos.',
+    },
+    {
+        id: 'q52',
+        exams: ['p2', 'proficiencia'],
+        question: 'Um negócio é chamado de REPETÍVEL quando:',
+        options: [
+            'Consegue entregar o mesmo produto ou serviço muitas vezes sem reinventar o processo a cada entrega',
+            'Repete anualmente o mesmo faturamento, sem variação',
+            'Copia um modelo de negócio já validado por outra empresa',
+            'Depende de customização específica para cada cliente atendido',
+        ],
+        correctIndex: 0,
+        feedbackCorrect: 'Isso. Repetível é sobre o PROCESSO: entregar em padrão sem recomeçar do zero a cada cliente. É condição para escalar — sem repetibilidade, cada novo cliente custa como se fosse o primeiro.',
+        feedbackWrong: 'A primeira. Repetível não é faturar igual nem copiar terceiros: é conseguir entregar em padrão, muitas vezes, sem que cada entrega exija reconstruir o processo.',
+    },
+    {
+        id: 'q53',
+        exams: ['proficiencia'],
+        question: 'No contexto de uma startup, o que distingue PIVOTAR de PERSISTIR?',
+        options: [
+            'Pivotar é encerrar a empresa; persistir é mantê-la aberta a qualquer custo',
+            'Pivotar é trocar de equipe; persistir é manter os fundadores originais',
+            'Pivotar é mudar de rumo quando a evidência refuta a hipótese; persistir é manter o curso quando ela a sustenta',
+            'Pivotar é reduzir custos; persistir é ampliar investimento',
+        ],
+        correctIndex: 2,
+        feedbackCorrect: 'Exato. A decisão é orientada pela EVIDÊNCIA colhida no ciclo Construir-Medir-Aprender, não por intuição ou cansaço. Persistir sem evidência é teimosia; pivotar a cada dificuldade impede que qualquer hipótese seja testada até o fim.',
+        feedbackWrong: 'A terceira. As duas são decisões sobre a HIPÓTESE à luz do que o experimento mostrou — não sobre encerrar a empresa, trocar pessoas ou ajustar orçamento.',
+    },
+    {
+        id: 'q54',
+        exams: ['proficiencia', 'p2'],
+        question: 'Segundo os princípios de Customer Development de Steve Blank, por que as métricas de uma startup diferem das de uma grande empresa?',
+        options: [
+            'Porque a startup não precisa medir nada até atingir lucratividade',
+            'Porque a grande empresa executa um modelo conhecido e mede desempenho, enquanto a startup busca um modelo e mede aprendizado sobre hipóteses',
+            'Porque startups usam apenas métricas financeiras e grandes empresas apenas operacionais',
+            'Porque as métricas da startup são estimadas e as da grande empresa são exatas',
+        ],
+        correctIndex: 1,
+        feedbackCorrect: 'Isso. A grande empresa acompanha receita, participação e margem porque o modelo já é conhecido. A startup ainda procura o modelo — então o que importa é se a hipótese foi validada ou refutada, e é por isso que métricas de vaidade enganam tanto nesse estágio.',
+        feedbackWrong: 'A segunda. Startup mede muito — só que outra coisa: aprendizado validado sobre hipóteses, e não desempenho de um modelo que ainda não existe.',
     },
 ];

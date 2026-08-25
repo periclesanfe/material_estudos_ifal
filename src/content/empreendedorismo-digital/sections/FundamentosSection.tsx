@@ -1,6 +1,6 @@
 import HighlightBox from '../../../components/ui/HighlightBox';
 import { SectionHeader, Subsection, ConceptGrid, PanelList, ComparisonTable } from '../../../components/sections';
-import { entrepreneurshipViews, keyAuthors, classicVsContemporary, siCompetencies, hardVsSoftSkills, tripleHelix } from './blocks';
+import { entrepreneurshipViews, keyAuthors, classicVsContemporary, siCompetencies, hardVsSoftSkills, tripleHelix, stakeholderInterests, economicContributions } from './blocks';
 
 export default function FundamentosSection() {
   return (
@@ -87,6 +87,19 @@ export default function FundamentosSection() {
           o que construir.
         </p>
       </HighlightBox>
+
+      <Subsection title="O que a prática empreendedora traz para a economia" accentClass="text-accent4">
+        <PanelList items={economicContributions} columns="md:grid-cols-2" />
+      </Subsection>
+
+      <Subsection title="Os agentes afetados e o que cada um enxerga" accentClass="text-accent5">
+        <p className="text-text-muted text-sm leading-relaxed mb-4 reading-measure">
+          A ação empreendedora não interessa apenas a quem empreende. O mesmo empreendimento é lido de forma
+          diferente por cada agente que ele toca — e reconhecer esses interesses é o que permite negociar
+          parcerias, atrair investimento e sustentar licença social para operar.
+        </p>
+        <PanelList items={stakeholderInterests} columns="md:grid-cols-2" />
+      </Subsection>
 
       <Subsection title="Hélice tríplice e ecossistema local" accentClass="text-accent2">
         <PanelList items={tripleHelix} columns="md:grid-cols-3" />
