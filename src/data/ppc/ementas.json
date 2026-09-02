@@ -1219,7 +1219,9 @@
       "bibliografiaBasica": [
         {
           "texto": "WEILL, Peter; ROSS, Jeanne. Governança de TI: Tecnologia da Informação. Editora M. Books.",
-          "chave": "weillpeterrossjeannegovernancadetitecnologiadainformacaombooks"
+          "chave": "weillpeterrossjeannegovernancadetitecnologiadainformacaombooks",
+          "url": "https://cisr.mit.edu/publication/MIT_CISRwp349_ITGovOnOnePage",
+          "tipoLink": "livre"
         },
         {
           "texto": "Aguinaldo Aragon Fernandes. Vladimir Ferraz de Abreu. Implantando a Governança de TI - da Estratégia à Gestão dos Processos e Serviços. Editora Brasport.",
@@ -2800,7 +2802,9 @@
       "bibliografiaComplementar": [
         {
           "texto": "WEILL, Peter; ROSS, Jeanne. Governança de TI: Tecnologia da Informação. Editora: M.Book.",
-          "chave": "weillpeterrossjeannegovernancadetitecnologiadainformacaombook"
+          "chave": "weillpeterrossjeannegovernancadetitecnologiadainformacaombook",
+          "url": "https://cisr.mit.edu/publication/MIT_CISRwp349_ITGovOnOnePage",
+          "tipoLink": "livre"
         },
         {
           "texto": "Fernandes, Aguinaldo Aragon; Abreu, Vladimir Ferraz. Implantando a Governança de TI - da Estratégia à Gestão dos Processos e Serviços. Editora Braspot.",

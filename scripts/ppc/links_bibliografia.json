@@ -420,6 +420,18 @@
       "nota": "Pagina do proprio autor, professor da UFSC, na secao de livros do site institucional dele. Fonte primaria; a Elsevier/Campus nao mantem pagina viva dessas edicoes",
       "conferidoEm": "2026-09-02"
     },
+    "weillpeterrossjeannegovernancadetitecnologiadainformacaombook": {
+      "url": "https://cisr.mit.edu/publication/MIT_CISRwp349_ITGovOnOnePage",
+      "tipo": "livre",
+      "nota": "Os autores dirigem o MIT CISR, que publica os working papers deles em acesso aberto (login gratuito). Este e 'IT Governance on One Page' (wp349), que condensa o framework do livro a partir das mesmas 300 empresas em 23 paises — nao e o livro, e o artigo dos autores que apresenta o modelo. O livro em si nao tem versao livre (segunda grafia no PPC)",
+      "conferidoEm": "2026-09-02"
+    },
+    "weillpeterrossjeannegovernancadetitecnologiadainformacaombooks": {
+      "url": "https://cisr.mit.edu/publication/MIT_CISRwp349_ITGovOnOnePage",
+      "tipo": "livre",
+      "nota": "Os autores dirigem o MIT CISR, que publica os working papers deles em acesso aberto (login gratuito). Este e 'IT Governance on One Page' (wp349), que condensa o framework do livro a partir das mesmas 300 empresas em 23 paises — nao e o livro, e o artigo dos autores que apresenta o modelo. O livro em si nao tem versao livre",
+      "conferidoEm": "2026-09-02"
+    },
     "williamstallingssnmpsnmpv2snmpv3andrmon1andrmon1999addisonwesley": {
       "url": "http://williamstallings.com/StudentSupport.html",
       "tipo": "livre",
