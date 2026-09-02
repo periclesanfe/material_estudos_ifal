@@ -10,6 +10,7 @@ export default function IntwContent() {
     <SubjectContentLayout
       sections={INTW_SECTIONS}
       exams={INTW_EXAMS}
+      codigo="INTW"
       eyebrow="1º período · 40h · INTW"
       title={(
         <>

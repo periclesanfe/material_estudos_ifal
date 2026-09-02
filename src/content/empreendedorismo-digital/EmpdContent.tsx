@@ -10,6 +10,7 @@ export default function EmpdContent() {
     <SubjectContentLayout
       sections={EMPD_SECTIONS}
       exams={EMPD_EXAMS}
+      codigo="EMPD"
       eyebrow="6º período · 80h · EMPD"
       title={(
         <>

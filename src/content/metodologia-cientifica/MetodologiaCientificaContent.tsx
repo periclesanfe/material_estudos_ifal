@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import SectionNav from '../../components/layout/SectionNav';
+import EmentaPPC from '../../components/ui/EmentaPPC';
 import AtalhoTrilha from '../../components/trilha/AtalhoTrilha';
 import MetodologiaCientificaSections from './MetodologiaCientificaSections';
 import { METODOLOGIA_CIENTIFICA_SECTIONS } from './data';
@@ -35,6 +36,7 @@ export default function MetodologiaCientificaContent() {
                     </p>
                 </div>
             )}
+            {activeSection === 'intro' && <EmentaPPC codigo="METC" />}
             {activeSection === 'intro' && <AtalhoTrilha codigo="METC" />}
 
             <div className="page-wrap flex">

@@ -10,6 +10,7 @@ export default function LmmdContent() {
     <SubjectContentLayout
       sections={LMMD_SECTIONS}
       exams={LMMD_EXAMS}
+      codigo="LMMD"
       eyebrow="1º período · 80h · LMMD"
       title={(
         <>
