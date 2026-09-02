@@ -12,10 +12,10 @@
     }
   },
   "links": {
-    "eiatia942telecomunicationsinfrastructurestandartsfordatacenters": {
-      "url": "https://www.ieee802.org/3/hssg/public/nov06/diminico_01_1106.pdf",
-      "tipo": "livre",
-      "nota": "URL publicada na própria ficha do PPC; conferida, responde 200",
+    "angelottielsinisimonibancodedados": {
+      "url": null,
+      "tipo": null,
+      "nota": "Referência incompleta no PPC: sem editora, ano nem subtítulo, e o nome da autora aparece grafado 'Elsini' (o registrado é Elzimar/Elsini Simoni Angelotti, do material do Grupo Uninter). Sem dados para identificar a edição com segurança, qualquer link seria chute",
       "conferidoEm": "2026-09-02"
     },
     "berschrintroducaoatecnologiaassistivaportoalegrecedi": {
@@ -24,10 +24,16 @@
       "nota": "URL publicada na própria ficha do PPC; conferida, responde 200",
       "conferidoEm": "2026-09-02"
     },
-    "sonzaapacessibilidadeetecnologiaassistivapensandoainclusaosociodigitaldepnes2013": {
-      "url": null,
-      "tipo": null,
-      "nota": "SEM LINK: a URL da ficha (bengalalegal.com/blog/?p=2526) devolve HTTP 500, e o domínio tem certificado TLS inválido — o navegador barraria o aluno. Não achei o texto em fonte legítima estável.",
+    "bezerraeduardoprincicipiosdeanaliseeprojetodesistemascomumlelsevier": {
+      "url": "https://eic.cefet-rj.br/papsuml3ed/",
+      "tipo": "livre",
+      "nota": "O autor é professor do CEFET/RJ e mantém ali a página oficial da 3a ed, com material de apoio aberto (o 'caderno zero' em PDF, slides e exercícios). Fonte legítima e melhor que o catálogo da editora. A ficha do PPC grafa 'Princícipios', erro do documento",
+      "conferidoEm": "2026-09-02"
+    },
+    "bragaapaplfdecarvalhotbludermirlivroredesneuraisartificiaisteoriaeaplicacoes2altc": {
+      "url": "https://www.grupogen.com.br/redes-neurais-artificiais-teoria-e-aplicacoes",
+      "tipo": "compra",
+      "nota": "LTC é selo do Grupo GEN: página oficial da obra. 2a ed 2007, ISBN 9788521615644",
       "conferidoEm": "2026-09-02"
     },
     "brasilsubsecretarianacionaldepromocaodosdireitosdapessoacomdeficienciacomitedeajudastecnicastecnologiaassistivabrasiliacorde2009": {
@@ -36,10 +42,58 @@
       "nota": "A URL da ficha morreu (pessoacomdeficiencia.gov.br redireciona para 404 no gov.br/mdh). Este é o mesmo livro do CAT/CORDE 2009, publicado pelo autor Teófilo Galvão Filho, que integrou o comitê; PDF de 1,7 MB, responde 200",
       "conferidoEm": "2026-09-02"
     },
-    "portalnacionaldetecnologiaassistiva": {
-      "url": null,
-      "tipo": null,
-      "nota": "SEM LINK DE PROPÓSITO: o domínio da ficha (assistiva.org.br) expirou e hoje redireciona para um site pessoal sem relação com o assunto. Mandar o aluno para lá é pior que não linkar.",
+    "creswelljwprojetodepesquisametodosquantitativosqualitativosemistosartmed": {
+      "url": "https://loja.grupoa.com.br/projeto-de-pesquisa-metodos-qualitativo-5ed9786581334185-p1016926",
+      "tipo": "compra",
+      "nota": "Artmed, Bookman e Penso são selos do Grupo A, o que explica as duas editoras diferentes que o PPC dá para a mesma obra. Página da 5a ed (2021) na loja oficial",
+      "conferidoEm": "2026-09-02"
+    },
+    "creswelljwprojetodepesquisametodosquantitativosqualitativosemistosportoalegrebookman": {
+      "url": "https://loja.grupoa.com.br/projeto-de-pesquisa-metodos-qualitativo-5ed9786581334185-p1016926",
+      "tipo": "compra",
+      "nota": "Mesma obra, citada com o selo Bookman noutra ficha. Página da 5a ed na loja do Grupo A",
+      "conferidoEm": "2026-09-02"
+    },
+    "dascencaoluizcarlosmorganizacaosistemasemetodosanaliseredesenhoeinformatizacaodeprocessosadministrativosatlas": {
+      "url": "https://books.google.com/books/about/Organiza%C3%A7%C3%A3o_Sistemas_E_M%C3%A9todos_An%C3%A1li.html?id=vGOGPgAACAAJ",
+      "tipo": "catalogo",
+      "nota": "Mesma obra em caixa alta noutra ficha do PPC",
+      "conferidoEm": "2026-09-02"
+    },
+    "dreschadesignscienceresearchmetododepesquisaparaavancodacienciaetecnologiaportoalegrebookman": {
+      "url": "https://loja.grupoa.com.br/design-science-research-p991484",
+      "tipo": "compra",
+      "nota": "Bookman e selo do Grupo A: pagina oficial da obra (2015). Tambem na Minha Biblioteca, acervo do Grupo A",
+      "conferidoEm": "2026-09-02"
+    },
+    "eiatia942telecomunicationsinfrastructurestandartsfordatacenters": {
+      "url": "https://www.ieee802.org/3/hssg/public/nov06/diminico_01_1106.pdf",
+      "tipo": "livre",
+      "nota": "URL publicada na própria ficha do PPC; conferida, responde 200",
+      "conferidoEm": "2026-09-02"
+    },
+    "elmasriramezenavatheshamkantsistemasdebancodedadospearsonseducation": {
+      "url": "https://www.bvirtual.com.br/NossoAcervo/Publicacao/168492",
+      "tipo": "institucional",
+      "nota": "Título Pearson, disponível na Biblioteca Virtual que o IFAL assina (login SIGAA). 7a ed, ISBN 9788543025001. Conferido no navegador (bvirtual bloqueia curl com HTTP 500; a pagina abre normalmente)",
+      "conferidoEm": "2026-09-02"
+    },
+    "farrerharryprogramacaoestruturadaeestruturasdedadoscampus": {
+      "url": "https://books.google.com/books?vid=ISBN9788521611806",
+      "tipo": "catalogo",
+      "nota": "O titulo real e 'Programacao Estruturada de Computadores: Algoritmos Estruturados' (Farrer e outros, equipe da UFMG), pela LTC/GEN e nao pela Campus como diz a ficha. Sem pagina viva na editora (a do GEN redireciona para outro livro, de Piva Jr.); busca do Google Books pelo ISBN 9788521611806, que e URL estavel",
+      "conferidoEm": "2026-09-02"
+    },
+    "guiadeelaboracaodepdtidosispversao10ministeriodoplanejamentoorcamentoegestaosecretariadelogisticaetecnologiadainformacaobrasiliampslti2012": {
+      "url": "https://www.unirio.br/ctic/documentos/sisp/guia-de-elaboracao-de-pdti-v1.0/view",
+      "tipo": "livre",
+      "nota": "A ficha só cita o domínio sisp.gov.br, que hoje devolve 404. Esta é a v1.0 exata pedida pela ementa, espelhada pela UNIRIO. O guia vigente é a v2.1 em gov.br/governodigital",
+      "conferidoEm": "2026-09-02"
+    },
+    "heusercarlosalbertoprojetodebancodedadosbookman": {
+      "url": "https://projbd.heuser.pro.br/",
+      "tipo": "livre",
+      "nota": "Site oficial que o proprio autor mantem para a 7a ed, com material de apoio aberto. Preferido ao catalogo da Bookman: e a fonte primaria e tem conteudo utilizavel. Citado por FNBD e APBD",
       "conferidoEm": "2026-09-02"
     },
     "institutodetecnologiasocialtecnologiasocialexperienciasinovadorasemextensaouniversitariasaopauloitsbrasilmctisecis2012": {
@@ -48,16 +102,10 @@
       "nota": "A URL da ficha está corrompida pela extração do PDF (hífen de quebra de linha comido: 'inovadoras-emextensao') e o portal itsbrasil.org.br não responde no caminho indicado. Não achei substituto estável.",
       "conferidoEm": "2026-09-02"
     },
-    "tecnologiassociaisexperienciasexemplaressaopauloitsbrasilmctisecis2012": {
-      "url": null,
-      "tipo": null,
-      "nota": "Mesma situação da anterior: URL truncada na extração ('exemplares-i') e sem substituto conferido.",
-      "conferidoEm": "2026-09-02"
-    },
-    "sartorettomaralberschritaoqueetecnologiaassistiva": {
-      "url": "https://www.assistiva.com.br/tassistiva.html",
+    "manzanojoseaugustongalgoritmoslogicaparadesenvolvimentodeprogramacaodecomputadoreserica": {
+      "url": "https://github.com/J-AugustoManzano/livro_Algoritmos_Logica",
       "tipo": "livre",
-      "nota": "A ficha imprime o endereço com espaços injetados pelo PDF ('http://www. assistiva. com. br') e o sufixo '[Links]'; esta é a URL limpa, responde 200",
+      "nota": "O próprio autor mantém no GitHub o conteúdo adicional e complementar do livro — código dos exemplos e material de apoio, liberado por ele. Não é o texto integral, mas é a fonte legítima mais útil: os PDFs completos que aparecem na busca são cópias não autorizadas",
       "conferidoEm": "2026-09-02"
     },
     "pengrogerdematsuielizabeththeartofdatscienceaguideforanyonewhoworkswithdata2017": {
@@ -66,10 +114,100 @@
       "nota": "URL da ficha, conferida. Leanpub, com preço mínimo definido pelos autores",
       "conferidoEm": "2026-09-02"
     },
-    "guiadeelaboracaodepdtidosispversao10ministeriodoplanejamentoorcamentoegestaosecretariadelogisticaetecnologiadainformacaobrasiliampslti2012": {
-      "url": "https://www.unirio.br/ctic/documentos/sisp/guia-de-elaboracao-de-pdti-v1.0/view",
+    "phillipsjosephgerenciadeprojetosdetecnologiadainformacaocampus": {
+      "url": "https://books.google.com/books/about/Ger%C3%AAncia_de_Projetos_de_Tecnologia_Da_I.html?id=XygqxZ7FG6wC",
+      "tipo": "catalogo",
+      "nota": "Campus/Elsevier 2003, ISBN 9788535211832. Fora de catálogo na editora e sem edição digital; a ficha do Google Books dá autor, edição e ISBN para procurar na biblioteca do campus. Citada por 7 matérias, é a obra mais reaproveitada da bibliografia",
+      "conferidoEm": "2026-09-02"
+    },
+    "pinheiropatriciapeckdireitodigitalsaopaulosaraiva2013": {
+      "url": "https://www.livrariadedireito.com.br/direito-civil/direito-digital-patricia-peck-pinheiro",
+      "tipo": "compra",
+      "nota": "A ficha cita a edicao de 2013 (4a); a obra esta na 8a ed (2026, ISBN 9786553625020), sempre pela Saraiva. Link do varejo juridico especializado, com a edicao corrente",
+      "conferidoEm": "2026-09-02"
+    },
+    "portalnacionaldetecnologiaassistiva": {
+      "url": null,
+      "tipo": null,
+      "nota": "SEM LINK DE PROPÓSITO: o domínio da ficha (assistiva.org.br) expirou e hoje redireciona para um site pessoal sem relação com o assunto. Mandar o aluno para lá é pior que não linkar.",
+      "conferidoEm": "2026-09-02"
+    },
+    "pressmanrogerengenhariadesoftwaremcgrawhill2006": {
+      "url": "https://books.google.com/books/about/Engenharia_de_Software_8%C2%AA_Edi%C3%A7%C3%A3o.html?hl=pt-BR&id=wexzCwAAQBAJ",
+      "tipo": "catalogo",
+      "nota": "A ficha diz McGraw-Hill 2006, mas a tradução brasileira vigente é da AMGH/Grupo A (8a ed, 2016, ISBN 9788580555332) — o original em inglês é que é McGraw-Hill. Ficha do Google Books da 8a ed; o título completo é 'Engenharia de Software: Uma Abordagem Profissional'",
+      "conferidoEm": "2026-09-02"
+    },
+    "pressmanrsengenhariadesoftwarepearsoneducation": {
+      "url": "https://books.google.com/books/about/Engenharia_de_Software_8%C2%AA_Edi%C3%A7%C3%A3o.html?hl=pt-BR&id=wexzCwAAQBAJ",
+      "tipo": "catalogo",
+      "nota": "Mesma obra da entrada anterior, citada com editora diferente noutra ficha do PPC (aqui Pearson, ali McGraw-Hill) — nenhuma das duas é a editora da tradução atual, que é AMGH/Grupo A. Mantidas as duas chaves porque o PPC as imprime separadamente",
+      "conferidoEm": "2026-09-02"
+    },
+    "sampierirhmetodologiadepesquisasaopaulopenso": {
+      "url": "https://minhabiblioteca.com.br/catalogo/livro/74756/metodologia-de-pesquisa/",
+      "tipo": "catalogo",
+      "nota": "Penso/Grupo A (não Pearson), então fora do acervo bvirtual: a ficha é a da Minha Biblioteca, o acervo do Grupo A. 5a ed 2013",
+      "conferidoEm": "2026-09-02"
+    },
+    "sartorettomaralberschritaoqueetecnologiaassistiva": {
+      "url": "https://www.assistiva.com.br/tassistiva.html",
       "tipo": "livre",
-      "nota": "A ficha só cita o domínio sisp.gov.br, que hoje devolve 404. Esta é a v1.0 exata pedida pela ementa, espelhada pela UNIRIO. O guia vigente é a v2.1 em gov.br/governodigital",
+      "nota": "A ficha imprime o endereço com espaços injetados pelo PDF ('http://www. assistiva. com. br') e o sufixo '[Links]'; esta é a URL limpa, responde 200",
+      "conferidoEm": "2026-09-02"
+    },
+    "sebestarobertwconceitosdelinguagensdeprogramacaobookman": {
+      "url": "https://loja.grupoa.com.br/conceitos-de-linguagens-de-programacao-ebook-p992648",
+      "tipo": "compra",
+      "nota": "Mesma obra, terceira grafia no PPC",
+      "conferidoEm": "2026-09-02"
+    },
+    "sommervilleianengenhariadesoftwarepearson": {
+      "url": "https://www.bvirtual.com.br/NossoAcervo/Publicacao/168127",
+      "tipo": "institucional",
+      "nota": "Título Pearson, disponível na Biblioteca Virtual que o IFAL assina (login SIGAA). 10a ed, ISBN 9788543024974. Conferido no navegador (bvirtual bloqueia curl com HTTP 500; a pagina abre normalmente)",
+      "conferidoEm": "2026-09-02"
+    },
+    "sommervilleianengenhariadesoftwarepearsonaddisonwesley": {
+      "url": "https://www.bvirtual.com.br/NossoAcervo/Publicacao/168127",
+      "tipo": "institucional",
+      "nota": "Terceira grafia da mesma obra no PPC. Biblioteca Virtual do IFAL. Conferido no navegador (bvirtual bloqueia curl com HTTP 500; a pagina abre normalmente)",
+      "conferidoEm": "2026-09-02"
+    },
+    "sommervilleiengenhariadesoftwareaddisonwesley": {
+      "url": "https://www.bvirtual.com.br/NossoAcervo/Publicacao/168127",
+      "tipo": "institucional",
+      "nota": "Mesma obra do Sommerville citada noutra ficha como Pearson (a Addison-Wesley foi incorporada à Pearson). Disponível na Biblioteca Virtual que o IFAL assina. Conferido no navegador (bvirtual bloqueia curl com HTTP 500; a pagina abre normalmente)",
+      "conferidoEm": "2026-09-02"
+    },
+    "sonzaapacessibilidadeetecnologiaassistivapensandoainclusaosociodigitaldepnes2013": {
+      "url": null,
+      "tipo": null,
+      "nota": "SEM LINK: a URL da ficha (bengalalegal.com/blog/?p=2526) devolve HTTP 500, e o domínio tem certificado TLS inválido — o navegador barraria o aluno. Não achei o texto em fonte legítima estável.",
+      "conferidoEm": "2026-09-02"
+    },
+    "tecnologiassociaisexperienciasexemplaressaopauloitsbrasilmctisecis2012": {
+      "url": null,
+      "tipo": null,
+      "nota": "Mesma situação da anterior: URL truncada na extração ('exemplares-i') e sem substituto conferido.",
+      "conferidoEm": "2026-09-02"
+    },
+    "tonpongningintroducaoaodataminingmineracaodedadoscienciamoderna": {
+      "url": "https://www.cienciamoderna.com.br/introducao-ao-data-mining--mineracao-de-dados-/p",
+      "tipo": "compra",
+      "nota": "Mesma obra em caixa alta noutra ficha do PPC. Autor correto: TAN, Pang-Ning",
+      "conferidoEm": "2026-09-02"
+    },
+    "tonsingsengenhariadesoftwarefutura": {
+      "url": "https://www.travessa.com.br/engenharia-de-software-analise-e-projeto-de-sistema/artigo/e38da380-2a55-43cd-8273-364c704e3e94",
+      "tipo": "compra",
+      "nota": "Identificada: o PPC grafa 'TONSING' e a editora 'FUTURA', que casam com TONSIG, Sergio Luiz — 'Engenharia de Software: Análise e Projeto de Sistemas', cuja 1a ed saiu pela Futura em 2003 (a 2a, de 2008, é da Ciencia Moderna, ISBN 9788573936537). Link de varejo porque a 1a ed nao tem pagina viva na editora",
+      "conferidoEm": "2026-09-02"
+    },
+    "tuckerallenbnoonanrobertelinguagensdeprogramacaoprincipioseparadigmasmcgrawhill": {
+      "url": "https://books.google.com/books/about/Programming_Languages.html?id=xIMhAQAAIAAJ",
+      "tipo": "catalogo",
+      "nota": "Tradução brasileira pela AMGH/Grupo A (2010, 2a ed) do original McGraw-Hill 2007, fora de catálogo na loja do Grupo A; ficha do original no Google Books. Esta chave atende as duas grafias do PPC (ALPG e LNPG), que diferem só por um ponto antes da editora",
       "conferidoEm": "2026-09-02"
     },
     "tutoriassobresegurancaemredesdecomputadores": {
