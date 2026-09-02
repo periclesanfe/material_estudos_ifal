@@ -1,0 +1,82 @@
+{
+  "versao": "v1",
+  "sobre": "Links por obra da bibliografia do PPC. EDITÁVEL À MÃO — é a única parte da pipeline que não é gerada. A chave é a `chave` que scripts/ppc/montar-ementas.mjs deriva da referência (ver `chaveDaObra`); rode `npm run ppc:links` para listar as obras ainda sem link.",
+  "politica": {
+    "aceito": "Página da editora, do autor, repositório institucional, órgão oficial, norma, domínio público, ou catálogo (Google Books, Open Library). Onde não houver acesso livre legítimo, vale link de compra ou de catálogo.",
+    "recusado": "Cópia de livro de editora hospedada sem autorização (PDF em blog, drive, repositório de terceiros). O material é público e institucional: não indexa pirataria. Nesses casos usa-se catálogo ou compra.",
+    "tipos": {
+      "livre": "texto completo acessível sem pagar nem autenticar",
+      "institucional": "acesso pela biblioteca do IFAL (login SIGAA)",
+      "catalogo": "ficha da obra, sem texto completo",
+      "compra": "onde adquirir"
+    }
+  },
+  "links": {
+    "eiatia942telecomunicationsinfrastructurestandartsfordatacenters": {
+      "url": "https://www.ieee802.org/3/hssg/public/nov06/diminico_01_1106.pdf",
+      "tipo": "livre",
+      "nota": "URL publicada na própria ficha do PPC; conferida, responde 200",
+      "conferidoEm": "2026-09-02"
+    },
+    "berschrintroducaoatecnologiaassistivaportoalegrecedi": {
+      "url": "http://soplaar.com/material_individual/pdf/144S832O4P507L538A401R111.pdf",
+      "tipo": "livre",
+      "nota": "URL publicada na própria ficha do PPC; conferida, responde 200",
+      "conferidoEm": "2026-09-02"
+    },
+    "sonzaapacessibilidadeetecnologiaassistivapensandoainclusaosociodigitaldepnes2013": {
+      "url": null,
+      "tipo": null,
+      "nota": "SEM LINK: a URL da ficha (bengalalegal.com/blog/?p=2526) devolve HTTP 500, e o domínio tem certificado TLS inválido — o navegador barraria o aluno. Não achei o texto em fonte legítima estável.",
+      "conferidoEm": "2026-09-02"
+    },
+    "brasilsubsecretarianacionaldepromocaodosdireitosdapessoacomdeficienciacomitedeajudastecnicastecnologiaassistivabrasiliacorde2009": {
+      "url": "http://www.galvaofilho.net/livro-tecnologia-assistiva_CAT.pdf",
+      "tipo": "livre",
+      "nota": "A URL da ficha morreu (pessoacomdeficiencia.gov.br redireciona para 404 no gov.br/mdh). Este é o mesmo livro do CAT/CORDE 2009, publicado pelo autor Teófilo Galvão Filho, que integrou o comitê; PDF de 1,7 MB, responde 200",
+      "conferidoEm": "2026-09-02"
+    },
+    "portalnacionaldetecnologiaassistiva": {
+      "url": null,
+      "tipo": null,
+      "nota": "SEM LINK DE PROPÓSITO: o domínio da ficha (assistiva.org.br) expirou e hoje redireciona para um site pessoal sem relação com o assunto. Mandar o aluno para lá é pior que não linkar.",
+      "conferidoEm": "2026-09-02"
+    },
+    "institutodetecnologiasocialtecnologiasocialexperienciasinovadorasemextensaouniversitariasaopauloitsbrasilmctisecis2012": {
+      "url": null,
+      "tipo": null,
+      "nota": "A URL da ficha está corrompida pela extração do PDF (hífen de quebra de linha comido: 'inovadoras-emextensao') e o portal itsbrasil.org.br não responde no caminho indicado. Não achei substituto estável.",
+      "conferidoEm": "2026-09-02"
+    },
+    "tecnologiassociaisexperienciasexemplaressaopauloitsbrasilmctisecis2012": {
+      "url": null,
+      "tipo": null,
+      "nota": "Mesma situação da anterior: URL truncada na extração ('exemplares-i') e sem substituto conferido.",
+      "conferidoEm": "2026-09-02"
+    },
+    "sartorettomaralberschritaoqueetecnologiaassistiva": {
+      "url": "https://www.assistiva.com.br/tassistiva.html",
+      "tipo": "livre",
+      "nota": "A ficha imprime o endereço com espaços injetados pelo PDF ('http://www. assistiva. com. br') e o sufixo '[Links]'; esta é a URL limpa, responde 200",
+      "conferidoEm": "2026-09-02"
+    },
+    "pengrogerdematsuielizabeththeartofdatscienceaguideforanyonewhoworkswithdata2017": {
+      "url": "https://leanpub.com/artofdatascience",
+      "tipo": "compra",
+      "nota": "URL da ficha, conferida. Leanpub, com preço mínimo definido pelos autores",
+      "conferidoEm": "2026-09-02"
+    },
+    "guiadeelaboracaodepdtidosispversao10ministeriodoplanejamentoorcamentoegestaosecretariadelogisticaetecnologiadainformacaobrasiliampslti2012": {
+      "url": "https://www.unirio.br/ctic/documentos/sisp/guia-de-elaboracao-de-pdti-v1.0/view",
+      "tipo": "livre",
+      "nota": "A ficha só cita o domínio sisp.gov.br, que hoje devolve 404. Esta é a v1.0 exata pedida pela ementa, espelhada pela UNIRIO. O guia vigente é a v2.1 em gov.br/governodigital",
+      "conferidoEm": "2026-09-02"
+    },
+    "tutoriassobresegurancaemredesdecomputadores": {
+      "url": "https://www.sei.cmu.edu/divisions/cert/",
+      "tipo": "livre",
+      "nota": "cert.org redireciona para a divisão CERT no SEI/Carnegie Mellon",
+      "conferidoEm": "2026-09-02"
+    }
+  }
+}

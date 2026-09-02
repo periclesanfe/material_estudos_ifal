@@ -12,6 +12,7 @@
  * Entradas
  *   scripts/taxonomia/ppc_fichas.json   ementas extraídas do PPC
  *   scripts/ppc/ppc_bibliografia.json   bibliografia das fichas (npm run ppc:bibliografia)
+ *   scripts/ppc/links_bibliografia.json links por obra, curados à mão
  *   src/data/curriculum.ts              código local, nome, período e carga de cada matéria
  *
  * Saída
@@ -27,6 +28,8 @@
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+import { chaveDaObra } from './chave-obra.mjs';
 
 const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const SAIDA = resolve(RAIZ, 'src', 'data', 'ppc');
@@ -119,6 +122,17 @@ const bibliografia = (() => {
   }
 })();
 
+// ─────────────────────────────────────────────── links por obra, curados à mão
+const links = (() => {
+  try {
+    const arq = JSON.parse(readFileSync(resolve(RAIZ, 'scripts', 'ppc', 'links_bibliografia.json'), 'utf8'));
+    return arq.links ?? {};
+  } catch {
+    return {};
+  }
+})();
+
+
 /**
  * Quebra a ementa nas unidades que o PPC enumera.
  *
@@ -166,6 +180,30 @@ function unidades(ficha) {
 // ─────────────────────────────────────────────── casamento
 const ementas = {};
 const semFicha = [];
+/** chave -> quantas referências a usam. Alimenta o relatório do fim. */
+const obrasVistas = new Map();
+
+/**
+ * Converte a referência em texto no registro que a interface consome.
+ *
+ * A URL impressa na própria ficha fica no texto (é assim que o PPC a publica),
+ * mas NÃO vira o link do item: várias vêm corrompidas pela extração do PDF —
+ * hífen de quebra de linha comido, espaços injetados no meio do endereço,
+ * sufixo "[Links]" — e três dos domínios morreram ou foram parar em outro site.
+ * O link do item sai sempre de links_bibliografia.json, onde cada URL foi
+ * conferida à mão.
+ */
+function registroDeReferencia(texto) {
+  const chave = chaveDaObra(texto);
+  obrasVistas.set(chave, (obrasVistas.get(chave) ?? 0) + 1);
+
+  const link = links[chave];
+  return {
+    texto,
+    chave,
+    ...(link?.url ? { url: link.url, tipoLink: link.tipo ?? 'catalogo' } : {}),
+  };
+}
 
 for (const c of curriculo) {
   const codigoPPC = c.id in POR_ID ? POR_ID[c.id] : (CODIGO_PPC[c.codigo] ?? c.codigo);
@@ -173,8 +211,8 @@ for (const c of curriculo) {
   const bib = codigoPPC ? bibliografia.get(codigoPPC) : undefined;
 
   const texto = String(ficha?.ementa || '').trim();
-  const basica = bib?.bibliografiaBasica ?? [];
-  const complementar = bib?.bibliografiaComplementar ?? [];
+  const basica = (bib?.bibliografiaBasica ?? []).map(registroDeReferencia);
+  const complementar = (bib?.bibliografiaComplementar ?? []).map(registroDeReferencia);
 
   // Entra quem tem ementa OU bibliografia: a ficha do DevOps (p.116) tem as
   // referências mas a ementa saiu vazia da extração, e ainda assim vale
@@ -222,4 +260,27 @@ console.log(`ementas.json: ${Object.keys(ementas).length} de ${curriculo.length}
 if (semFicha.length) {
   console.log(`\nsem ementa (${semFicha.length}):`);
   for (const s of semFicha) console.log(`  - ${s}`);
+}
+
+// ─────────────────────────────────────────────── cobertura de links
+const todasAsRefs = Object.values(ementas).flatMap(e => [...e.bibliografiaBasica, ...e.bibliografiaComplementar]);
+const comLink = todasAsRefs.filter(r => r.url).length;
+const obrasComLink = new Set(todasAsRefs.filter(r => r.url).map(r => r.chave));
+const semLinkDeProposito = Object.entries(links).filter(([, v]) => !v.url).length;
+
+console.log(
+  `\nlinks: ${comLink} de ${todasAsRefs.length} referências ` +
+    `(${obrasComLink.size} de ${obrasVistas.size} obras únicas)`,
+);
+if (semLinkDeProposito) {
+  console.log(`  ${semLinkDeProposito} obra(s) marcada(s) sem link de propósito em links_bibliografia.json`);
+}
+
+// Chave curada que não casou com nenhuma referência: erro de digitação no
+// arquivo de links, ou a referência mudou. Avisa alto, senão o link se perde
+// em silêncio e ninguém nota.
+const orfas = Object.keys(links).filter(k => !obrasVistas.has(k));
+if (orfas.length) {
+  console.log(`\nATENÇÃO — ${orfas.length} chave(s) em links_bibliografia.json sem referência correspondente:`);
+  for (const k of orfas) console.log(`  ! ${k}`);
 }

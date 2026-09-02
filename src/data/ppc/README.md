@@ -4,8 +4,45 @@
 
 ```bash
 npm run ppc:bibliografia   # extrai a bibliografia do PDF (precisa do pdftotext)
-npm run ppc:montar         # casa fichas + grade e escreve ementas.json
+npm run ppc:links          # fila de obras que ainda não têm link
+npm run ppc:montar         # casa fichas + grade + links e escreve ementas.json
 ```
+
+## Os links da bibliografia
+
+Cada referência pode carregar um `url` e um `tipoLink`, e a interface mostra o
+tipo como etiqueta ("texto livre", "biblioteca IFAL", "catálogo", "onde
+comprar") — porque as quatro coisas são diferentes para quem clica, e sem dizer
+qual é todo link parece prometer o texto completo.
+
+Os links vivem em `scripts/ppc/links_bibliografia.json`, que é a **única parte
+da pipeline editada à mão**. A chave é a `chaveDaObra` (ver
+`scripts/ppc/chave-obra.mjs`), derivada do texto da referência e estável contra
+as variações de caixa, acento e pontuação que o PPC introduz na mesma obra
+entre fichas.
+
+Duas regras que o arquivo registra e o gerador respeita:
+
+- **`url: null` é decisão, não pendência.** Significa "pesquisei e não há
+  destino legítimo para esta" — a obra sai da fila do `ppc:links` e a `nota`
+  explica o porquê. Quatro entradas estão assim hoje, todas de URL que o
+  próprio PPC publica e que morreu.
+- **Não se indexa pirataria.** Cópia de livro de editora hospedada sem
+  autorização (PDF em blog, drive, repositório de terceiros) não entra, mesmo
+  quando é o primeiro resultado da busca. Onde não há acesso livre legítimo,
+  vale catálogo ou compra. O material é público e institucional.
+
+### Por que a URL dentro do texto não é clicável
+
+Onze referências trazem o endereço impresso na própria ficha, e ele **fica no
+texto sem virar link**. A extração do PDF corrompeu vários: hífen de quebra de
+linha comido (`inovadoras-emextensao`), espaços injetados no meio do endereço
+(`http://www. assistiva. com. br`), sufixo `[Links]`. E dos que estão íntegros,
+conferindo um por um: `bengalalegal.com` devolve 500 com certificado TLS
+inválido, `sisp.gov.br` e `pessoacomdeficiencia.gov.br` devolvem 404, e
+`assistiva.org.br` expirou e hoje redireciona para um site pessoal sem relação
+com o assunto — esse último é pior que link morto. O link confiável é sempre o
+da etiqueta, conferido à mão.
 
 O consumo é pelo `index.ts`: `getEmentaPPC('FDBD')`. A chave é o código **local**
 da matéria, o mesmo de `curriculum.ts` e o mesmo que as páginas de matéria já
@@ -20,6 +57,7 @@ registro, em `codigoPPC`, porque em 17 matérias os dois divergem — ver
 | `ementa`, `unidades`, `preRequisito` | ficha do ementário (seção 18 do PPC) | é o texto normativo |
 | `nome`, `periodo`, `cargaHoraria` | `src/data/curriculum.ts` | as fichas trazem nome truncado pela quebra de linha do PDF ("Fundamentos de Sistemas de") e três vêm vazias; a grade foi conferida contra o Quadro 2, que fecha os subtotais |
 | `bibliografiaBasica`, `bibliografiaComplementar` | ficha, extraída do PDF | a extração antiga só pegou a ementa |
+| `url`, `tipoLink` de cada referência | `scripts/ppc/links_bibliografia.json`, curado à mão | ver a seção dos links |
 
 ## Cobertura
 
