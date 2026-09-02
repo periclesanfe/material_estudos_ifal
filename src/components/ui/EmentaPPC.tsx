@@ -9,6 +9,54 @@ const ROTULO_PERIODO = (periodo: number | 'optativa') =>
   periodo === 'optativa' ? 'Optativa' : `${periodo}º período`;
 
 /**
+ * Quebra a referência para transformar as URLs em link.
+ *
+ * Várias fichas (TSAS, GETI) trazem "Disponível em http://…", e um endereço em
+ * texto puro obriga o aluno a copiar e colar. O regex para no que não pode
+ * fechar uma URL: a pontuação final da frase. Referências sem URL, que são a
+ * maioria, saem inteiras num único pedaço.
+ */
+function comLinks(referencia: string) {
+  return referencia.split(/(https?:\/\/[^\s]*[^\s.,;:)\]])/g).map((pedaco, i) =>
+    /^https?:\/\//.test(pedaco) ? (
+      <a
+        // o índice é estável: a referência não muda depois de renderizada
+        key={i}
+        href={pedaco}
+        target="_blank"
+        rel="noreferrer noopener"
+        className="break-all text-accent underline decoration-dotted underline-offset-2 hover:text-text"
+      >
+        {pedaco}
+      </a>
+    ) : (
+      pedaco
+    ),
+  );
+}
+
+/** Uma das duas listas de bibliografia da ficha. Some quando está vazia. */
+function ListaReferencias({ titulo, referencias }: { titulo: string; referencias: string[] }) {
+  if (!referencias.length) return null;
+
+  return (
+    <div className="mt-3 first:mt-0">
+      <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted/80">{titulo}</p>
+      <ul className="space-y-1.5">
+        {referencias.map(referencia => (
+          <li
+            key={referencia}
+            className="border-l border-rule pl-3 text-[12.5px] leading-relaxed text-text-muted"
+          >
+            {comLinks(referencia)}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/**
  * Ementa oficial do PPC, na abertura da matéria.
  *
  * Recolhido por padrão: é referência normativa, não a leitura principal. Uma
@@ -28,10 +76,22 @@ export default function EmentaPPC({ codigo }: Props) {
   const ementa = getEmentaPPC(codigo);
   if (!ementa) return null;
 
-  const { codigoPPC, periodo, cargaHoraria, preRequisito, unidades } = ementa;
+  const {
+    codigoPPC,
+    periodo,
+    cargaHoraria,
+    preRequisito,
+    unidades,
+    bibliografiaBasica,
+    bibliografiaComplementar,
+    bibliografiaSemRotulo,
+  } = ementa;
+
   // Uma unidade só significa que a ementa é uma frase corrida (PJSI, TOSI):
   // enumerá-la como lista de um item sugeriria uma estrutura que o PPC não tem.
   const unidadeUnica = unidades.length <= 1;
+  const temEmenta = unidades.length > 0 || Boolean(ementa.ementa);
+  const totalRefs = bibliografiaBasica.length + bibliografiaComplementar.length;
 
   return (
     <aside className="page-wrap pt-4">
@@ -45,6 +105,12 @@ export default function EmentaPPC({ codigo }: Props) {
               <>
                 {' · '}
                 <span className="tabular-nums">{unidades.length}</span> unidades
+              </>
+            )}
+            {totalRefs > 0 && (
+              <>
+                {' · '}
+                <span className="tabular-nums">{totalRefs}</span> {totalRefs === 1 ? 'referência' : 'referências'}
               </>
             )}
           </span>
@@ -68,19 +134,31 @@ export default function EmentaPPC({ codigo }: Props) {
             </p>
           )}
 
-          {unidadeUnica ? (
-            <p className="reading-measure text-[13px] leading-relaxed text-text-muted">{ementa.ementa}</p>
-          ) : (
-            <ol className="space-y-2">
-              {unidades.map((unidade, i) => (
-                <li key={unidade} className="flex gap-3 text-[13px] leading-relaxed text-text-muted">
-                  <span className="shrink-0 pt-px font-mono text-[11px] tabular-nums text-accent">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <span>{unidade}</span>
-                </li>
-              ))}
-            </ol>
+          {/* DEVO é a única matéria cuja ficha traz a bibliografia mas não a ementa */}
+          {temEmenta &&
+            (unidadeUnica ? (
+              <p className="reading-measure text-[13px] leading-relaxed text-text-muted">{ementa.ementa}</p>
+            ) : (
+              <ol className="space-y-2">
+                {unidades.map((unidade, i) => (
+                  <li key={unidade} className="flex gap-3 text-[13px] leading-relaxed text-text-muted">
+                    <span className="shrink-0 pt-px font-mono text-[11px] tabular-nums text-accent">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span>{unidade}</span>
+                  </li>
+                ))}
+              </ol>
+            ))}
+
+          {totalRefs > 0 && (
+            <div className={temEmenta ? 'mt-5 border-t border-rule pt-4' : ''}>
+              <ListaReferencias
+                titulo={bibliografiaSemRotulo ? 'Bibliografia' : 'Bibliografia básica'}
+                referencias={bibliografiaBasica}
+              />
+              <ListaReferencias titulo="Bibliografia complementar" referencias={bibliografiaComplementar} />
+            </div>
           )}
 
           <p className="mt-4 border-t border-rule pt-3 font-mono text-[10px] leading-relaxed text-text-muted/80">

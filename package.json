@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "ppc:bibliografia": "node scripts/ppc/extrair-bibliografia.mjs",
     "ppc:montar": "node scripts/ppc/montar-ementas.mjs",
     "taxonomia:montar": "node scripts/taxonomia/montar.mjs",
     "taxonomia:validar": "node scripts/taxonomia/validar.mjs"

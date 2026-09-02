@@ -23,10 +23,20 @@ export interface EmentaPPC {
   cargaHoraria: number;
   /** Pré-requisito declarado na ficha, ou null quando não há. */
   preRequisito: string | null;
-  /** Texto corrido da ementa, como está no PPC. */
+  /** Texto corrido da ementa, como está no PPC. Vazio em DEVO, cuja ficha não a traz. */
   ementa: string;
   /** A ementa quebrada nas unidades que ela enumera. */
   unidades: string[];
+  /** Bibliografia básica declarada na ficha, em ordem. */
+  bibliografiaBasica: string[];
+  /** Bibliografia complementar declarada na ficha, em ordem. */
+  bibliografiaComplementar: string[];
+  /**
+   * A ficha não separa básica de complementar (só DEVO, p.116): tudo o que ela
+   * lista entrou em `bibliografiaBasica`, e a interface não deve prometer a
+   * distinção que o documento não faz.
+   */
+  bibliografiaSemRotulo?: boolean;
 }
 
 interface ArquivoEmentas {

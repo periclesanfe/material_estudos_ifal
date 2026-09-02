@@ -11,6 +11,7 @@
  *
  * Entradas
  *   scripts/taxonomia/ppc_fichas.json   ementas extraídas do PPC
+ *   scripts/ppc/ppc_bibliografia.json   bibliografia das fichas (npm run ppc:bibliografia)
  *   src/data/curriculum.ts              código local, nome, período e carga de cada matéria
  *
  * Saída
@@ -105,6 +106,19 @@ if (!curriculo.length) {
 const fichas = JSON.parse(readFileSync(resolve(RAIZ, 'scripts', 'taxonomia', 'ppc_fichas.json'), 'utf8'));
 const porCodigoPPC = new Map(fichas.map(f => [f.codigo_ppc, f]));
 
+// ─────────────────────────────────────────────── bibliografia das fichas
+// Opcional: se o arquivo não existe, as ementas saem sem bibliografia em vez de
+// falhar, porque a extração depende do pdftotext estar instalado.
+const bibliografia = (() => {
+  try {
+    const arq = JSON.parse(readFileSync(resolve(RAIZ, 'scripts', 'ppc', 'ppc_bibliografia.json'), 'utf8'));
+    return new Map(arq.fichas.map(f => [f.codigo_ppc, f]));
+  } catch {
+    console.warn('aviso: ppc_bibliografia.json não encontrado — rode `npm run ppc:bibliografia` primeiro.');
+    return new Map();
+  }
+})();
+
 /**
  * Quebra a ementa nas unidades que o PPC enumera.
  *
@@ -156,9 +170,17 @@ const semFicha = [];
 for (const c of curriculo) {
   const codigoPPC = c.id in POR_ID ? POR_ID[c.id] : (CODIGO_PPC[c.codigo] ?? c.codigo);
   const ficha = codigoPPC ? porCodigoPPC.get(codigoPPC) : undefined;
+  const bib = codigoPPC ? bibliografia.get(codigoPPC) : undefined;
 
-  if (!ficha || !String(ficha.ementa || '').trim()) {
-    semFicha.push(`${c.codigo} (${c.nome})${ficha ? ' — ficha existe mas a ementa está vazia' : ''}`);
+  const texto = String(ficha?.ementa || '').trim();
+  const basica = bib?.bibliografiaBasica ?? [];
+  const complementar = bib?.bibliografiaComplementar ?? [];
+
+  // Entra quem tem ementa OU bibliografia: a ficha do DevOps (p.116) tem as
+  // referências mas a ementa saiu vazia da extração, e ainda assim vale
+  // mostrar os livros da disciplina.
+  if (!texto && !basica.length && !complementar.length) {
+    semFicha.push(`${c.codigo} (${c.nome})${ficha ? ' — ficha existe mas está vazia' : ' — sem ficha no ementário'}`);
     continue;
   }
 
@@ -170,9 +192,13 @@ for (const c of curriculo) {
     periodo: c.periodo,
     cargaHoraria: c.horas,
     // a ficha é a única fonte do pré-requisito declarado no ementário
-    preRequisito: String(ficha.preRequisito || '').trim() || null,
-    ementa: String(ficha.ementa).trim(),
-    unidades: unidades(ficha),
+    preRequisito: String(ficha?.preRequisito || '').trim() || null,
+    ementa: texto,
+    unidades: ficha ? unidades(ficha) : [],
+    bibliografiaBasica: basica,
+    bibliografiaComplementar: complementar,
+    // a ficha não separa básica de complementar (só DEVO)
+    ...(bib?.bibliografiaSemRotulo ? { bibliografiaSemRotulo: true } : {}),
   };
 }
 
