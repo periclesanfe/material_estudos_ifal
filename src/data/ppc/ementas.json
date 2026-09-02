@@ -58,7 +58,9 @@
         },
         {
           "texto": "ALBUQUERQUE, Jader Cristiano Magalhães de. Sistemas de Informacao e Comunicacao no Setor Público. Editora UFSC.",
-          "chave": "albuquerquejadercristianomagalhaesdesistemasdeinformacaoecomunicacaonosetorpublicoufsc"
+          "chave": "albuquerquejadercristianomagalhaesdesistemasdeinformacaoecomunicacaonosetorpublicoufsc",
+          "url": "https://educapes.capes.gov.br/handle/capes/643258",
+          "tipoLink": "livre"
         }
       ]
     },
@@ -321,7 +323,9 @@
         },
         {
           "texto": "DESCARTES, Rene. Discurso do Método. Editora Martins Fontes",
-          "chave": "descartesrenediscursodometodomartinsfontes"
+          "chave": "descartesrenediscursodometodomartinsfontes",
+          "url": "https://www.gutenberg.org/ebooks/59",
+          "tipoLink": "livre"
         }
       ]
     },
@@ -452,11 +456,15 @@
       "bibliografiaBasica": [
         {
           "texto": "STALLINGS, W. Arquitetura e Organização de Computadores. Prentice Hall.",
-          "chave": "stallingswarquiteturaeorganizacaodecomputadoresprenticehall"
+          "chave": "stallingswarquiteturaeorganizacaodecomputadoresprenticehall",
+          "url": "http://williamstallings.com/ComputerOrganization/",
+          "tipoLink": "livre"
         },
         {
           "texto": "TANENBAUM, A. S. Organização Estruturada de Computadores. Prentice Hall.",
-          "chave": "tanenbaumasorganizacaoestruturadadecomputadoresprenticehall"
+          "chave": "tanenbaumasorganizacaoestruturadadecomputadoresprenticehall",
+          "url": "https://www.cs.vu.nl/~ast/",
+          "tipoLink": "livre"
         },
         {
           "texto": "PATTERSON, D. A., HENNESSY, J. L, Arquitetura de Computadores: Uma Abordagem Quantitativa, Editora Campus.",
@@ -515,7 +523,9 @@
         },
         {
           "texto": "DEITEL, Havey. C ++ – Como Programar. Pearson Education.",
-          "chave": "deitelhaveyccomoprogramarpearsoneducation"
+          "chave": "deitelhaveyccomoprogramarpearsoneducation",
+          "url": "https://deitel.com/books/",
+          "tipoLink": "livre"
         },
         {
           "texto": "TUCKER, Allen B; NOONAN, Robert E. Linguagens de programação: princípios e paradigmas. McGraw-Hill.",
@@ -527,7 +537,9 @@
       "bibliografiaComplementar": [
         {
           "texto": "DEITELL, Harvey. Java Como Programar. Pearson Education.",
-          "chave": "deitellharveyjavacomoprogramarpearsoneducation"
+          "chave": "deitellharveyjavacomoprogramarpearsoneducation",
+          "url": "https://deitel.com/books/",
+          "tipoLink": "livre"
         },
         {
           "texto": "LAGES, Newton A. de Castilho. ALGORITMOS E ESTRUTURAS DE DADOS. Editora LTC.",
@@ -567,7 +579,9 @@
       "bibliografiaBasica": [
         {
           "texto": "LESSA, Sérgio; TONET, Ivo. Proletariado e Sujeito Revolucionário. Instituto Lukács.",
-          "chave": "lessasergiotonetivoproletariadoesujeitorevolucionarioinstitutolukacs"
+          "chave": "lessasergiotonetivoproletariadoesujeitorevolucionarioinstitutolukacs",
+          "url": "https://sergiolessa.org/wp-content/uploads/2025/07/ProletariadoSujeitoRevolucionario_2012.pdf",
+          "tipoLink": "livre"
         },
         {
           "texto": "PAULA, Ana Paula Paes de. Teoria Crítica nas Organizações. Cengage CTP.",
@@ -593,7 +607,9 @@
         },
         {
           "texto": "NOVAES, Henrique Tahan; DAGNINO, Renato. O Fetiche da Tecnologia. Revista Organizações & Democracia, Marília, v. 5, n. 2, p. 189-210, dez. 2004.",
-          "chave": "novaeshenriquetahandagninorenatoofetichedatecnologiarevistaorganizacoesdemocraciamariliav5n2p189210dez2004"
+          "chave": "novaeshenriquetahandagninorenatoofetichedatecnologiarevistaorganizacoesdemocraciamariliav5n2p189210dez2004",
+          "url": "https://revistas.marilia.unesp.br/index.php/orgdemo/article/view/411",
+          "tipoLink": "livre"
         },
         {
           "texto": "WOLFF, Simone. Informatização do trabalho e reificação: uma análise à luz dos Programas de Qualidade Total. Campinas: Edunicamp/Eduel, 1998.",
@@ -729,15 +745,21 @@
       "bibliografiaBasica": [
         {
           "texto": "SILBERSCHATZ, A; GALVIN, P. Baer; GAGNE, G. Fundamentos de Sistemas Operacionais. Editora LTC.",
-          "chave": "silberschatzagalvinpbaergagnegfundamentosdesistemasoperacionaisltc"
+          "chave": "silberschatzagalvinpbaergagnegfundamentosdesistemasoperacionaisltc",
+          "url": "https://www.os-book.com/OS10/",
+          "tipoLink": "livre"
         },
         {
           "texto": "TANENBAUM, A.S. Sistemas Operacionais Modernos. Editora Prentice Hall.",
-          "chave": "tanenbaumassistemasoperacionaismodernosprenticehall"
+          "chave": "tanenbaumassistemasoperacionaismodernosprenticehall",
+          "url": "https://www.cs.vu.nl/~ast/",
+          "tipoLink": "livre"
         },
         {
           "texto": "STALLINGS, W. Operating Systems: internals and design principles. Editora Prentice Hall.",
-          "chave": "stallingswoperatingsystemsinternalsanddesignprinciplesprenticehall"
+          "chave": "stallingswoperatingsystemsinternalsanddesignprinciplesprenticehall",
+          "url": "http://williamstallings.com/OperatingSystems/",
+          "tipoLink": "livre"
         },
         {
           "texto": "MACHADO, Francis B.; MAIA, Luiz P. Arquitetura de Sistemas Operacionais. LTC Editora.",
@@ -747,7 +769,9 @@
       "bibliografiaComplementar": [
         {
           "texto": "SILBERSCHATZ, A; GALVIN, P. Baer; GAGNE, G. Sistemas Operacionais com Java. Elsevier.",
-          "chave": "silberschatzagalvinpbaergagnegsistemasoperacionaiscomjavaelsevier"
+          "chave": "silberschatzagalvinpbaergagnegsistemasoperacionaiscomjavaelsevier",
+          "url": "https://www.os-book.com/OS10/",
+          "tipoLink": "livre"
         },
         {
           "texto": "TANEMBAUM, A. S. Sistemas Operacionais: projeto e implementação. Bookman.",
@@ -854,7 +878,9 @@
         },
         {
           "texto": "WAZLAWICK, R. S. Metodologia da Pesquisa Científica em Computação. Editora Elsevier.",
-          "chave": "wazlawickrsmetodologiadapesquisacientificaemcomputacaoelsevier"
+          "chave": "wazlawickrsmetodologiadapesquisacientificaemcomputacaoelsevier",
+          "url": "https://raulwazlawick.paginas.ufsc.br/livros/",
+          "tipoLink": "livre"
         },
         {
           "texto": "SAMPIERI, R.H. Metodologia de Pesquisa. São Paulo: Penso.",
@@ -1022,7 +1048,9 @@
       "bibliografiaBasica": [
         {
           "texto": "KUROSE, James F.; ROSS, Keith W. Redes de Computadores e a Internet – Uma Abordagem Top-Down, Editora Pearson.",
-          "chave": "kurosejamesfrosskeithwredesdecomputadoreseainternetumaabordagemtopdownpearson"
+          "chave": "kurosejamesfrosskeithwredesdecomputadoreseainternetumaabordagemtopdownpearson",
+          "url": "https://gaia.cs.umass.edu/kurose_ross/index.php",
+          "tipoLink": "livre"
         },
         {
           "texto": "SOARES, Luís Fernando et al, Das LANs, MANs, WANs às Redes ATM, Editora Campus.",
@@ -1030,7 +1058,9 @@
         },
         {
           "texto": "TANENBAUM, Andrew S.; WETHERALL, David. Redes de Computadores. Editora Pearson.",
-          "chave": "tanenbaumandrewswetheralldavidredesdecomputadorespearson"
+          "chave": "tanenbaumandrewswetheralldavidredesdecomputadorespearson",
+          "url": "https://www.cs.vu.nl/~ast/",
+          "tipoLink": "livre"
         }
       ],
       "bibliografiaComplementar": [
@@ -1081,7 +1111,9 @@
       "bibliografiaBasica": [
         {
           "texto": "DEITEL,H., DEITEL, P.. Java - Como programar. Prentice Hall.",
-          "chave": "deitelhdeitelpjavacomoprogramarprenticehall"
+          "chave": "deitelhdeitelpjavacomoprogramarprenticehall",
+          "url": "https://deitel.com/books/",
+          "tipoLink": "livre"
         },
         {
           "texto": "HORSTMANN, Cay S. Core Java Volume I - Fundamentos. Prentice Hall.",
@@ -1167,7 +1199,9 @@
         },
         {
           "texto": "OLIVEIRA, José Arimatés de; MEDEIROS, Maria da Penha Machado de. GESTÃO DE PESSOAS NO SETOR PÚBLICO. EDITORA UFSC",
-          "chave": "oliveirajosearimatesdemedeirosmariadapenhamachadodegestaodepessoasnosetorpublicoufsc"
+          "chave": "oliveirajosearimatesdemedeirosmariadapenhamachadodegestaodepessoasnosetorpublicoufsc",
+          "url": "https://educapes.capes.gov.br/handle/capes/719659",
+          "tipoLink": "livre"
         }
       ]
     },
@@ -1215,7 +1249,9 @@
         },
         {
           "texto": "CEPIK, M.; CANABARRO, D. R. Governança de TI - Transformando a Administração Pública no Brasil. CEGOV.",
-          "chave": "cepikmcanabarrodrgovernancadetitransformandoaadministracaopublicanobrasilcegov"
+          "chave": "cepikmcanabarrodrgovernancadetitransformandoaadministracaopublicanobrasilcegov",
+          "url": "https://lume.ufrgs.br/handle/10183/78940",
+          "tipoLink": "livre"
         }
       ]
     },
@@ -1373,7 +1409,9 @@
         },
         {
           "texto": "SWEBOK. Software Engineering Book of Knowledge. IEEE Computer Society.",
-          "chave": "sweboksoftwareengineeringbookofknowledgeieeecomputersociety"
+          "chave": "sweboksoftwareengineeringbookofknowledgeieeecomputersociety",
+          "url": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
+          "tipoLink": "livre"
         },
         {
           "texto": "DENNIS, A.; WIXON, B. H.. Análise e Projeto de Sistemas. LTC.",
@@ -1381,7 +1419,9 @@
         },
         {
           "texto": "WAZLAWICK, Raul Sidnei. Análise e Projeto de Sistemas de Informação Orientados a Objetos. ELSEVIER.",
-          "chave": "wazlawickraulsidneianaliseeprojetodesistemasdeinformacaoorientadosaobjetoselsevier"
+          "chave": "wazlawickraulsidneianaliseeprojetodesistemasdeinformacaoorientadosaobjetoselsevier",
+          "url": "https://raulwazlawick.paginas.ufsc.br/livros/",
+          "tipoLink": "livre"
         }
       ]
     },
@@ -1418,7 +1458,9 @@
         },
         {
           "texto": "PMBOK - Project Management Institute. PMI.",
-          "chave": "pmbokprojectmanagementinstitutepmi"
+          "chave": "pmbokprojectmanagementinstitutepmi",
+          "url": "https://www.pmi.org/standards/pmbok",
+          "tipoLink": "institucional"
         }
       ],
       "bibliografiaComplementar": [
@@ -1616,7 +1658,9 @@
         },
         {
           "texto": "WAZLAWICK, Raul Sidnei. Análise e Projetos de Sistemas de Informação Orientados a Objetos. Campus.",
-          "chave": "wazlawickraulsidneianaliseeprojetosdesistemasdeinformacaoorientadosaobjetoscampus"
+          "chave": "wazlawickraulsidneianaliseeprojetosdesistemasdeinformacaoorientadosaobjetoscampus",
+          "url": "https://raulwazlawick.paginas.ufsc.br/livros/",
+          "tipoLink": "livre"
         },
         {
           "texto": "HUMBLE, J. farley, d. Entrega Contínua. Como Entregar Software de Forma Rápida e Confiável. Bookman.",
@@ -1667,7 +1711,9 @@
         },
         {
           "texto": "STALLINGS, William. Criptografia e Segurança de Redes: Princípios e Práticas. Editora Prentice-Hall.",
-          "chave": "stallingswilliamcriptografiaesegurancaderedesprincipiosepraticasprenticehall"
+          "chave": "stallingswilliamcriptografiaesegurancaderedesprincipiosepraticasprenticehall",
+          "url": "http://williamstallings.com/Cryptography/",
+          "tipoLink": "livre"
         },
         {
           "texto": "SILVA, Gilson Marques da. SEGURANCA DA INFORMACAO PARA LEIGOS: COMO PROTEGER SEUS DADOS, MICRO E FAMILIARES NA INTERNET. Editora CIENCIA MODERNA. 2011",
@@ -1703,7 +1749,9 @@
         },
         {
           "texto": "WAZLAWICK, R. S. Metodologia da Pesquisa Científica em Computação. Rio de Janeiro: Elsevier.",
-          "chave": "wazlawickrsmetodologiadapesquisacientificaemcomputacaoriodejaneiroelsevier"
+          "chave": "wazlawickrsmetodologiadapesquisacientificaemcomputacaoriodejaneiroelsevier",
+          "url": "https://raulwazlawick.paginas.ufsc.br/livros/",
+          "tipoLink": "livre"
         },
         {
           "texto": "SAMPIERI, R.H. Metodologia de Pesquisa. São Paulo: Penso.",
@@ -1844,7 +1892,9 @@
         },
         {
           "texto": "WAZLAWICK, R. S. Metodologia da Pesquisa Científica em Computação. Rio de Janeiro: Elsevier.",
-          "chave": "wazlawickrsmetodologiadapesquisacientificaemcomputacaoriodejaneiroelsevier"
+          "chave": "wazlawickrsmetodologiadapesquisacientificaemcomputacaoriodejaneiroelsevier",
+          "url": "https://raulwazlawick.paginas.ufsc.br/livros/",
+          "tipoLink": "livre"
         },
         {
           "texto": "SAMPIERI, R.H. Metodologia de Pesquisa. São Paulo: Penso.",
@@ -2134,7 +2184,9 @@
         },
         {
           "texto": "RUSSEL, Stuart NORVIG, Peter. INTELIGENCIA ARTIFICIAL. Editora ELSEVIER.",
-          "chave": "russelstuartnorvigpeterinteligenciaartificialelsevier"
+          "chave": "russelstuartnorvigpeterinteligenciaartificialelsevier",
+          "url": "https://github.com/aimacode",
+          "tipoLink": "livre"
         },
         {
           "texto": "LUGER, George F.. ARTIFICIAL INTELLIGENCE: STRUCTURES AND STRATEGIES FOR COMPLEX PROBLEM SOLVING. Editora PEARSON ADDISON WESLEY.",
@@ -2182,7 +2234,9 @@
         },
         {
           "texto": "MARTINS, Fernando Augusto Silva. Introdução à Pesquisa Operacional. São Paulo: Cultura Acadêmica.",
-          "chave": "martinsfernandoaugustosilvaintroducaoapesquisaoperacionalsaopauloculturaacademica"
+          "chave": "martinsfernandoaugustosilvaintroducaoapesquisaoperacionalsaopauloculturaacademica",
+          "url": "https://www.culturaacademica.com.br/catalogo/introducao-a-pesquisa-operacional/",
+          "tipoLink": "livre"
         },
         {
           "texto": "Nelson Kagan, Hernán Prieto Schmidt, Carlos César Barioni de Oliveira, Henrique Kagan. Métodos de Otimização Aplicados a Sistemas Elétricos de Potência. Editora Blucher.",
@@ -2217,7 +2271,9 @@
         },
         {
           "texto": "DEITEL, H. M. & DEITEL, P. J. C - Como Programar. Editora Pearson.",
-          "chave": "deitelhmdeitelpjccomoprogramarpearson"
+          "chave": "deitelhmdeitelpjccomoprogramarpearson",
+          "url": "https://deitel.com/books/chtp8/",
+          "tipoLink": "livre"
         }
       ],
       "bibliografiaComplementar": [
@@ -2298,7 +2354,9 @@
         },
         {
           "texto": "WAZLAWICK, Raul Sidnei. ANALISE E PROJETO DE SISTEMAS DE INFORMACAO ORIENTADOS A OBJETOS. Editora ELSEVIER; CAMPUS: RIO DE JANEIRO.",
-          "chave": "wazlawickraulsidneianaliseeprojetodesistemasdeinformacaoorientadosaobjetoselseviercampusriodejaneiro"
+          "chave": "wazlawickraulsidneianaliseeprojetodesistemasdeinformacaoorientadosaobjetoselseviercampusriodejaneiro",
+          "url": "https://raulwazlawick.paginas.ufsc.br/livros/",
+          "tipoLink": "livre"
         }
       ]
     },
@@ -2393,7 +2451,9 @@
         },
         {
           "texto": "RUSSEL, S., Norvig, Peter; \"Inteligência Artificial\", Ed. Campus-Elsevier.",
-          "chave": "russelsnorvigpeterinteligenciaartificialcampuselsevier"
+          "chave": "russelsnorvigpeterinteligenciaartificialcampuselsevier",
+          "url": "https://github.com/aimacode",
+          "tipoLink": "livre"
         }
       ],
       "bibliografiaComplementar": [
@@ -2728,7 +2788,9 @@
         },
         {
           "texto": "Barros, FábioGomes. Elaboração de PDTI. Rio de Janeiro. Rede Nacional de Pesquisa / Escola Superior de Redes, 2014.",
-          "chave": "barrosfabiogomeselaboracaodepdtiriodejaneiroredenacionaldepesquisaescolasuperiorderedes2014"
+          "chave": "barrosfabiogomeselaboracaodepdtiriodejaneiroredenacionaldepesquisaescolasuperiorderedes2014",
+          "url": "https://esr.rnp.br/curso/elaboracao-de-pdti-ead-gti39/",
+          "tipoLink": "institucional"
         },
         {
           "texto": "Webster, Ian Lawrence. Planejamento e Gestão Estratégica de TI. Rio de Janeiro. Rede Nacional de Pesquisa / Escola Superior de Redes, 2012.",
@@ -2886,7 +2948,9 @@
       "bibliografiaBasica": [
         {
           "texto": "William Stallings, SNMP, SNMPv2, SNMPv3 and RMON1 and RMON. 1999 Addison- Wesley.",
-          "chave": "williamstallingssnmpsnmpv2snmpv3andrmon1andrmon1999addisonwesley"
+          "chave": "williamstallingssnmpsnmpv2snmpv3andrmon1andrmon1999addisonwesley",
+          "url": "http://williamstallings.com/StudentSupport.html",
+          "tipoLink": "livre"
         },
         {
           "texto": "LOPES, Raquel V., NICOLLETTI, Pedro S. & SAUVE, Jacques P. Melhores práticas para gerência de redes de computadores. Rio de Janeiro: Campus, 2003",
@@ -3004,7 +3068,9 @@
         },
         {
           "texto": "VALLE O.T.Administração de Redes com Linux. Fundamentos e Práticas. Florianópolis: Publicação do IFSC, 2010.",
-          "chave": "valleotadministracaoderedescomlinuxfundamentosepraticasflorianopolispublicacaodoifsc2010"
+          "chave": "valleotadministracaoderedescomlinuxfundamentosepraticasflorianopolispublicacaodoifsc2010",
+          "url": "https://www.ifsc.edu.br/documents/30701/523474/miolo_linux_digital.pdf/50fbadfa-32b6-50d3-dbf0-45f4c88ebe13",
+          "tipoLink": "livre"
         }
       ]
     },
@@ -3074,11 +3140,15 @@
       "bibliografiaBasica": [
         {
           "texto": "TANENBAUM, Andrew S. Redes de Computadores. 4ª edição. Rio de Janeiro. Editora Campus, 2003.",
-          "chave": "tanenbaumandrewsredesdecomputadores4edicaoriodejaneirocampus2003"
+          "chave": "tanenbaumandrewsredesdecomputadores4edicaoriodejaneirocampus2003",
+          "url": "https://www.cs.vu.nl/~ast/",
+          "tipoLink": "livre"
         },
         {
           "texto": "KUROSE, James F. Redes de Computadores e a Internet: Uma abordagem top-down. 5 a edição. São Paulo. Editora Addison Wesley, 2010.",
-          "chave": "kurosejamesfredesdecomputadoreseainternetumaabordagemtopdown5aedicaosaopauloaddisonwesley2010"
+          "chave": "kurosejamesfredesdecomputadoreseainternetumaabordagemtopdown5aedicaosaopauloaddisonwesley2010",
+          "url": "https://gaia.cs.umass.edu/kurose_ross/index.php",
+          "tipoLink": "livre"
         },
         {
           "texto": "SCAMBRAY, Joel; McCLURE, Stuart; KURTZ, George. Hackers Expostos: Segredos e Soluções para a Segurança de Redes. 4ª edição. Editora Campus.",

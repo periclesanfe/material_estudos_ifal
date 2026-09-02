@@ -12,10 +12,28 @@
     }
   },
   "links": {
+    "albuquerquejadercristianomagalhaesdesistemasdeinformacaoecomunicacaonosetorpublicoufsc": {
+      "url": "https://educapes.capes.gov.br/handle/capes/643258",
+      "tipo": "livre",
+      "nota": "Livro do programa PNAP/UAB, publicado pelo Dept. de Ciencias da Administracao da UFSC com a CAPES; PDF completo aberto no eduCAPES, o repositorio oficial do MEC. 3a ed 2015, ISBN 978-85-7988-273-9",
+      "conferidoEm": "2026-09-02"
+    },
     "angelottielsinisimonibancodedados": {
       "url": null,
       "tipo": null,
       "nota": "Referência incompleta no PPC: sem editora, ano nem subtítulo, e o nome da autora aparece grafado 'Elsini' (o registrado é Elzimar/Elsini Simoni Angelotti, do material do Grupo Uninter). Sem dados para identificar a edição com segurança, qualquer link seria chute",
+      "conferidoEm": "2026-09-02"
+    },
+    "associacaobrasileiradenormastecnicasnbrisoiec177992005tecnologiadainformacaotecnicasdesegurancacodigodepraticaparaagestaodasegurancadainformacao": {
+      "url": null,
+      "tipo": null,
+      "nota": "Norma ABNT e sempre paga e nao pode ser redistribuida; a NBR ISO/IEC 17799:2005 foi ainda substituida pela ABNT NBR ISO/IEC 27002. Nao existe destino de acesso livre legitimo, e a loja da ABNT nao tem URL estavel por norma",
+      "conferidoEm": "2026-09-02"
+    },
+    "barrosfabiogomeselaboracaodepdtiriodejaneiroredenacionaldepesquisaescolasuperiorderedes2014": {
+      "url": "https://esr.rnp.br/curso/elaboracao-de-pdti-ead-gti39/",
+      "tipo": "institucional",
+      "nota": "Pagina do curso na Escola Superior de Redes da RNP, que publicou o livro como material didatico. A ESR permite leitura online do acervo mas nao download aberto deste titulo, por isso institucional e nao livre",
       "conferidoEm": "2026-09-02"
     },
     "berschrintroducaoatecnologiaassistivaportoalegrecedi": {
@@ -42,6 +60,12 @@
       "nota": "A URL da ficha morreu (pessoacomdeficiencia.gov.br redireciona para 404 no gov.br/mdh). Este é o mesmo livro do CAT/CORDE 2009, publicado pelo autor Teófilo Galvão Filho, que integrou o comitê; PDF de 1,7 MB, responde 200",
       "conferidoEm": "2026-09-02"
     },
+    "cepikmcanabarrodrgovernancadetitransformandoaadministracaopublicanobrasilcegov": {
+      "url": "https://lume.ufrgs.br/handle/10183/78940",
+      "tipo": "livre",
+      "nota": "Livro do CEGOV/UFRGS, resultado de pesquisa com a SLTI do Ministerio do Planejamento; texto completo aberto no LUME, o repositorio digital da UFRGS",
+      "conferidoEm": "2026-09-02"
+    },
     "creswelljwprojetodepesquisametodosquantitativosqualitativosemistosartmed": {
       "url": "https://loja.grupoa.com.br/projeto-de-pesquisa-metodos-qualitativo-5ed9786581334185-p1016926",
       "tipo": "compra",
@@ -58,6 +82,36 @@
       "url": "https://books.google.com/books/about/Organiza%C3%A7%C3%A3o_Sistemas_E_M%C3%A9todos_An%C3%A1li.html?id=vGOGPgAACAAJ",
       "tipo": "catalogo",
       "nota": "Mesma obra em caixa alta noutra ficha do PPC",
+      "conferidoEm": "2026-09-02"
+    },
+    "deitelhaveyccomoprogramarpearsoneducation": {
+      "url": "https://deitel.com/books/",
+      "tipo": "livre",
+      "nota": "Site oficial dos autores, que distribuem gratuitamente o codigo-fonte de todos os exemplos do livro, mais videos explicativos. O texto em si e pago; o codigo, que e o que o aluno usa para acompanhar, e aberto. O PPC grafa o prenome como 'Havey'; e Harvey",
+      "conferidoEm": "2026-09-02"
+    },
+    "deitelhdeitelpjavacomoprogramarprenticehall": {
+      "url": "https://deitel.com/books/",
+      "tipo": "livre",
+      "nota": "Site oficial dos autores, que distribuem gratuitamente o codigo-fonte de todos os exemplos do livro, mais videos explicativos. O texto em si e pago; o codigo, que e o que o aluno usa para acompanhar, e aberto",
+      "conferidoEm": "2026-09-02"
+    },
+    "deitelhmdeitelpjccomoprogramarpearson": {
+      "url": "https://deitel.com/books/chtp8/",
+      "tipo": "livre",
+      "nota": "Site oficial dos autores, que distribuem gratuitamente o codigo-fonte de todos os exemplos do livro, mais videos explicativos. O texto em si e pago; o codigo, que e o que o aluno usa para acompanhar, e aberto",
+      "conferidoEm": "2026-09-02"
+    },
+    "deitellharveyjavacomoprogramarpearsoneducation": {
+      "url": "https://deitel.com/books/",
+      "tipo": "livre",
+      "nota": "Site oficial dos autores, que distribuem gratuitamente o codigo-fonte de todos os exemplos do livro, mais videos explicativos. O texto em si e pago; o codigo, que e o que o aluno usa para acompanhar, e aberto. O PPC grafa o sobrenome como 'DEITELL'",
+      "conferidoEm": "2026-09-02"
+    },
+    "descartesrenediscursodometodomartinsfontes": {
+      "url": "https://www.gutenberg.org/ebooks/59",
+      "tipo": "livre",
+      "nota": "Obra em dominio publico (1637). O Project Gutenberg tem o texto integral, mas em ingles ('Discourse on the Method'); nao localizei traducao em portugues em fonte estavel e legitima (o Portal Dominio Publico tem a obra, mas bloqueia acesso automatizado e nao pude confirmar o registro)",
       "conferidoEm": "2026-09-02"
     },
     "dreschadesignscienceresearchmetododepesquisaparaavancodacienciaetecnologiaportoalegrebookman": {
@@ -102,10 +156,46 @@
       "nota": "A URL da ficha está corrompida pela extração do PDF (hífen de quebra de linha comido: 'inovadoras-emextensao') e o portal itsbrasil.org.br não responde no caminho indicado. Não achei substituto estável.",
       "conferidoEm": "2026-09-02"
     },
+    "kurosejamesfredesdecomputadoreseainternetumaabordagemtopdown5aedicaosaopauloaddisonwesley2010": {
+      "url": "https://gaia.cs.umass.edu/kurose_ross/index.php",
+      "tipo": "livre",
+      "nota": "Site oficial dos autores na UMass, com material aberto substancial: videos por capitulo, animacoes interativas, aulas online e os labs de Wireshark. Nao e o texto do livro, mas e o material de apoio que os autores liberam e cobre o mesmo programa",
+      "conferidoEm": "2026-09-02"
+    },
+    "kurosejamesfrosskeithwredesdecomputadoreseainternetumaabordagemtopdownpearson": {
+      "url": "https://gaia.cs.umass.edu/kurose_ross/index.php",
+      "tipo": "livre",
+      "nota": "Mesma obra, outra grafia no PPC. Site oficial dos autores com videos, animacoes e labs de Wireshark",
+      "conferidoEm": "2026-09-02"
+    },
+    "lessasergiotonetivoproletariadoesujeitorevolucionarioinstitutolukacs": {
+      "url": "https://sergiolessa.org/wp-content/uploads/2025/07/ProletariadoSujeitoRevolucionario_2012.pdf",
+      "tipo": "livre",
+      "nota": "PDF completo no site do proprio autor, sob licenca Creative Commons BY-NC-ND 3.0. Instituto Lukacs, 2012",
+      "conferidoEm": "2026-09-02"
+    },
     "manzanojoseaugustongalgoritmoslogicaparadesenvolvimentodeprogramacaodecomputadoreserica": {
       "url": "https://github.com/J-AugustoManzano/livro_Algoritmos_Logica",
       "tipo": "livre",
       "nota": "O próprio autor mantém no GitHub o conteúdo adicional e complementar do livro — código dos exemplos e material de apoio, liberado por ele. Não é o texto integral, mas é a fonte legítima mais útil: os PDFs completos que aparecem na busca são cópias não autorizadas",
+      "conferidoEm": "2026-09-02"
+    },
+    "martinsfernandoaugustosilvaintroducaoapesquisaoperacionalsaopauloculturaacademica": {
+      "url": "https://www.culturaacademica.com.br/catalogo/introducao-a-pesquisa-operacional/",
+      "tipo": "livre",
+      "nota": "Cultura Academica e a editora de acesso aberto da UNESP: a pagina oferece 'Download do PDF' do livro completo. O PPC grafa o sobrenome como 'MARTINS'; o correto e MARINS, Fernando Augusto Silva. Responde 403 a curl, abre no navegador",
+      "conferidoEm": "2026-09-02"
+    },
+    "novaeshenriquetahandagninorenatoofetichedatecnologiarevistaorganizacoesdemocraciamariliav5n2p189210dez2004": {
+      "url": "https://revistas.marilia.unesp.br/index.php/orgdemo/article/view/411",
+      "tipo": "livre",
+      "nota": "Artigo em revista de acesso aberto da UNESP Marilia (ORG & DEMO), com PDF livre na propria pagina. DOI 10.36311/1519-0110.2004.v5n2.411",
+      "conferidoEm": "2026-09-02"
+    },
+    "oliveirajosearimatesdemedeirosmariadapenhamachadodegestaodepessoasnosetorpublicoufsc": {
+      "url": "https://educapes.capes.gov.br/handle/capes/719659",
+      "tipo": "livre",
+      "nota": "Livro do programa PNAP/UAB (Dept. de Ciencias da Administracao da UFSC com CAPES), PDF completo aberto no eduCAPES, repositorio oficial do MEC. ISBN 978-85-7988-278-4",
       "conferidoEm": "2026-09-02"
     },
     "pengrogerdematsuielizabeththeartofdatscienceaguideforanyonewhoworkswithdata2017": {
@@ -126,6 +216,12 @@
       "nota": "A ficha cita a edicao de 2013 (4a); a obra esta na 8a ed (2026, ISBN 9786553625020), sempre pela Saraiva. Link do varejo juridico especializado, com a edicao corrente",
       "conferidoEm": "2026-09-02"
     },
+    "pmbokprojectmanagementinstitutepmi": {
+      "url": "https://www.pmi.org/standards/pmbok",
+      "tipo": "institucional",
+      "nota": "Pagina oficial do PMI. O guia e liberado para membros do instituto, nao para o publico geral, por isso institucional e nao livre. Responde 403 a curl (bloqueio de bot), abre no navegador",
+      "conferidoEm": "2026-09-02"
+    },
     "portalnacionaldetecnologiaassistiva": {
       "url": null,
       "tipo": null,
@@ -144,6 +240,18 @@
       "nota": "Mesma obra da entrada anterior, citada com editora diferente noutra ficha do PPC (aqui Pearson, ali McGraw-Hill) — nenhuma das duas é a editora da tradução atual, que é AMGH/Grupo A. Mantidas as duas chaves porque o PPC as imprime separadamente",
       "conferidoEm": "2026-09-02"
     },
+    "russelsnorvigpeterinteligenciaartificialcampuselsevier": {
+      "url": "https://github.com/aimacode",
+      "tipo": "livre",
+      "nota": "Repositorio oficial dos autores (organizacao aimacode no GitHub) com a implementacao aberta de todos os algoritmos do livro, em Python, Java, JavaScript, Lisp e C#. O site aima.cs.berkeley.edu, que era o oficial, esta fora do ar",
+      "conferidoEm": "2026-09-02"
+    },
+    "russelstuartnorvigpeterinteligenciaartificialelsevier": {
+      "url": "https://github.com/aimacode",
+      "tipo": "livre",
+      "nota": "Repositorio oficial dos autores (organizacao aimacode no GitHub) com a implementacao aberta de todos os algoritmos do livro, em Python, Java, JavaScript, Lisp e C#. O site aima.cs.berkeley.edu, que era o oficial, esta fora do ar (segunda grafia no PPC; o sobrenome correto e Russell, com dois L)",
+      "conferidoEm": "2026-09-02"
+    },
     "sampierirhmetodologiadepesquisasaopaulopenso": {
       "url": "https://minhabiblioteca.com.br/catalogo/livro/74756/metodologia-de-pesquisa/",
       "tipo": "catalogo",
@@ -160,6 +268,18 @@
       "url": "https://loja.grupoa.com.br/conceitos-de-linguagens-de-programacao-ebook-p992648",
       "tipo": "compra",
       "nota": "Mesma obra, terceira grafia no PPC",
+      "conferidoEm": "2026-09-02"
+    },
+    "silberschatzagalvinpbaergagnegfundamentosdesistemasoperacionaisltc": {
+      "url": "https://www.os-book.com/OS10/",
+      "tipo": "livre",
+      "nota": "Site oficial dos autores para a 10a ed, com slides, codigo em C e Java, exercicios com solucoes, maquina virtual Linux e errata — tudo aberto. Responde erro a curl (reset), abre no navegador",
+      "conferidoEm": "2026-09-02"
+    },
+    "silberschatzagalvinpbaergagnegsistemasoperacionaiscomjavaelsevier": {
+      "url": "https://www.os-book.com/OS10/",
+      "tipo": "livre",
+      "nota": "Mesma familia de obra (a edicao 'com Java' foi descontinuada e incorporada ao texto principal); site oficial dos autores, que mantem o codigo Java entre os materiais",
       "conferidoEm": "2026-09-02"
     },
     "sommervilleianengenhariadesoftwarepearson": {
@@ -184,6 +304,54 @@
       "url": null,
       "tipo": null,
       "nota": "SEM LINK: a URL da ficha (bengalalegal.com/blog/?p=2526) devolve HTTP 500, e o domínio tem certificado TLS inválido — o navegador barraria o aluno. Não achei o texto em fonte legítima estável.",
+      "conferidoEm": "2026-09-02"
+    },
+    "stallingswarquiteturaeorganizacaodecomputadoresprenticehall": {
+      "url": "http://williamstallings.com/ComputerOrganization/",
+      "tipo": "livre",
+      "nota": "Pagina que o proprio autor mantem para o livro, com links por capitulo, errata e material de apoio ao aluno",
+      "conferidoEm": "2026-09-02"
+    },
+    "stallingswilliamcriptografiaesegurancaderedesprincipiosepraticasprenticehall": {
+      "url": "http://williamstallings.com/Cryptography/",
+      "tipo": "livre",
+      "nota": "Pagina que o proprio autor mantem para o livro, com links por capitulo, errata e material de apoio ao aluno",
+      "conferidoEm": "2026-09-02"
+    },
+    "stallingswoperatingsystemsinternalsanddesignprinciplesprenticehall": {
+      "url": "http://williamstallings.com/OperatingSystems/",
+      "tipo": "livre",
+      "nota": "Pagina que o proprio autor mantem para o livro, com links por capitulo, errata e material de apoio ao aluno",
+      "conferidoEm": "2026-09-02"
+    },
+    "sweboksoftwareengineeringbookofknowledgeieeecomputersociety": {
+      "url": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
+      "tipo": "livre",
+      "nota": "Pagina oficial do IEEE Computer Society, de onde o guia pode ser baixado sem custo para uso pessoal e academico (v4.0 desde out/2024). O dominio swebok.org que aparece nas referencias nao responde mais",
+      "conferidoEm": "2026-09-02"
+    },
+    "tanenbaumandrewsredesdecomputadores4edicaoriodejaneirocampus2003": {
+      "url": "https://www.cs.vu.nl/~ast/",
+      "tipo": "livre",
+      "nota": "Pagina oficial do autor na VU Amsterdam, com as publicacoes e o material dos livros",
+      "conferidoEm": "2026-09-02"
+    },
+    "tanenbaumandrewswetheralldavidredesdecomputadorespearson": {
+      "url": "https://www.cs.vu.nl/~ast/",
+      "tipo": "livre",
+      "nota": "Mesma obra com o coautor da 5a ed; pagina oficial do autor na VU Amsterdam",
+      "conferidoEm": "2026-09-02"
+    },
+    "tanenbaumasorganizacaoestruturadadecomputadoresprenticehall": {
+      "url": "https://www.cs.vu.nl/~ast/",
+      "tipo": "livre",
+      "nota": "Pagina oficial do autor na Vrije Universiteit Amsterdam, com publicacoes, material dos livros e o MINIX (codigo aberto, criado por ele para ensino de SO)",
+      "conferidoEm": "2026-09-02"
+    },
+    "tanenbaumassistemasoperacionaismodernosprenticehall": {
+      "url": "https://www.cs.vu.nl/~ast/",
+      "tipo": "livre",
+      "nota": "Pagina oficial do autor na VU Amsterdam. Para esta obra em particular vale o MINIX, o SO didatico que ele escreveu e distribui com todo o codigo",
       "conferidoEm": "2026-09-02"
     },
     "tecnologiassociaisexperienciasexemplaressaopauloitsbrasilmctisecis2012": {
@@ -214,6 +382,48 @@
       "url": "https://www.sei.cmu.edu/divisions/cert/",
       "tipo": "livre",
       "nota": "cert.org redireciona para a divisão CERT no SEI/Carnegie Mellon",
+      "conferidoEm": "2026-09-02"
+    },
+    "valleotadministracaoderedescomlinuxfundamentosepraticasflorianopolispublicacaodoifsc2010": {
+      "url": "https://www.ifsc.edu.br/documents/30701/523474/miolo_linux_digital.pdf/50fbadfa-32b6-50d3-dbf0-45f4c88ebe13",
+      "tipo": "livre",
+      "nota": "Livro completo em PDF no site do proprio IFSC, que o publicou. Instituto federal irmao, publicacao institucional aberta",
+      "conferidoEm": "2026-09-02"
+    },
+    "wazlawickraulsidneianaliseeprojetodesistemasdeinformacaoorientadosaobjetoselsevier": {
+      "url": "https://raulwazlawick.paginas.ufsc.br/livros/",
+      "tipo": "livre",
+      "nota": "Pagina do proprio autor, professor da UFSC, na secao de livros do site institucional dele. Fonte primaria; a Elsevier/Campus nao mantem pagina viva dessas edicoes (segunda grafia no PPC)",
+      "conferidoEm": "2026-09-02"
+    },
+    "wazlawickraulsidneianaliseeprojetodesistemasdeinformacaoorientadosaobjetoselseviercampusriodejaneiro": {
+      "url": "https://raulwazlawick.paginas.ufsc.br/livros/",
+      "tipo": "livre",
+      "nota": "Pagina do proprio autor, professor da UFSC, na secao de livros do site institucional dele. Fonte primaria; a Elsevier/Campus nao mantem pagina viva dessas edicoes",
+      "conferidoEm": "2026-09-02"
+    },
+    "wazlawickraulsidneianaliseeprojetosdesistemasdeinformacaoorientadosaobjetoscampus": {
+      "url": "https://raulwazlawick.paginas.ufsc.br/livros/",
+      "tipo": "livre",
+      "nota": "Pagina do proprio autor, professor da UFSC, na secao de livros do site institucional dele. Fonte primaria; a Elsevier/Campus nao mantem pagina viva dessas edicoes (terceira grafia no PPC)",
+      "conferidoEm": "2026-09-02"
+    },
+    "wazlawickrsmetodologiadapesquisacientificaemcomputacaoelsevier": {
+      "url": "https://raulwazlawick.paginas.ufsc.br/livros/",
+      "tipo": "livre",
+      "nota": "Pagina do proprio autor, professor da UFSC, na secao de livros do site institucional dele. Fonte primaria; a Elsevier/Campus nao mantem pagina viva dessas edicoes (segunda grafia no PPC)",
+      "conferidoEm": "2026-09-02"
+    },
+    "wazlawickrsmetodologiadapesquisacientificaemcomputacaoriodejaneiroelsevier": {
+      "url": "https://raulwazlawick.paginas.ufsc.br/livros/",
+      "tipo": "livre",
+      "nota": "Pagina do proprio autor, professor da UFSC, na secao de livros do site institucional dele. Fonte primaria; a Elsevier/Campus nao mantem pagina viva dessas edicoes",
+      "conferidoEm": "2026-09-02"
+    },
+    "williamstallingssnmpsnmpv2snmpv3andrmon1andrmon1999addisonwesley": {
+      "url": "http://williamstallings.com/StudentSupport.html",
+      "tipo": "livre",
+      "nota": "Pagina de apoio ao aluno mantida pelo autor. Esta obra especifica e antiga (1999) e nao tem pagina propria no site dele",
       "conferidoEm": "2026-09-02"
     }
   }
