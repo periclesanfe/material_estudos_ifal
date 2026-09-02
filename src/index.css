@@ -641,6 +641,24 @@ html[data-theme='light'] .sidebar-brand {
   padding: clamp(1.1rem, 1.7vw, 1.4rem);
 }
 
+/* ── Ementa oficial do PPC ────────────────────────────────────────────────
+   Bloco <details> na abertura da matéria. Só o que o utilitário não resolve:
+   esconder o triângulo nativo do summary (que aparece em dobro ao lado do
+   nosso indicador) e dar alvo de foco visível ao cabeçalho, que é o controle
+   de teclado do bloco. */
+
+.ementa-ppc > summary::-webkit-details-marker,
+.ementa-ppc > summary::marker {
+  display: none;
+  content: '';
+}
+
+.ementa-ppc > summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+  border-radius: var(--radius-md);
+}
+
 /* ── Fórmulas matemáticas ─────────────────────────────────────────────────
    Fórmula não é código: é lida como figura, com frações e expoentes ocupando
    espaço vertical. Daí a serifa, o itálico nas variáveis e o espaçamento

@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { FINAL_EXAM_ID, type ExamDefinition } from '../../lib/exams';
 import { useMovimentoReduzido } from '../../hooks/useMovimentoReduzido';
 import { troca } from '../../lib/movimento';
+import EmentaPPC from '../ui/EmentaPPC';
 import AtalhoTrilha from '../trilha/AtalhoTrilha';
 import ExamMode from './ExamMode';
 import SectionNav, { type SectionNavItem } from './SectionNav';
@@ -124,6 +125,7 @@ export default function SubjectContentLayout({
       {activeSection === 'intro' && (
         <>
           <SubjectHero eyebrow={eyebrow} title={title} description={description} background={heroBackground} actions={heroActions} />
+          {codigo && <EmentaPPC codigo={codigo} />}
           {codigo && <AtalhoTrilha codigo={codigo} />}
         </>
       )}

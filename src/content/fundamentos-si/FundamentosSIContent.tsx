@@ -10,6 +10,7 @@ export default function FundamentosSIContent() {
     <SubjectContentLayout
       sections={FUNDAMENTOS_SI_SECTIONS}
       exams={FUNDAMENTOS_SI_EXAMS}
+      codigo="FUSI"
       eyebrow="1º período · 80h · FUSI"
       title={(
         <>

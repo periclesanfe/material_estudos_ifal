@@ -52,6 +52,7 @@ Use esta tabela para melhorias gerais, revisoes, issues, documentacao, infraestr
 | 2026-08-23 | projeto | melhoria | pericles-feitoza | src/components/ui/FormulaBlock.tsx | Componente FormulaBlock para notação matemática, com helpers de fração, expoente, índice e raiz que compõem entre si | — | incorporado |
 | 2026-08-23 | projeto | melhoria | pericles-feitoza | src/components/ui/CodeBlock.tsx | Acrescenta as linguagens http, bash, json e text ao CodeBlock | #65 | incorporado |
 | 2026-08-23 | projeto | melhoria | pericles-feitoza | src/components/ui/DatabaseSchema.tsx | Componente DatabaseSchema: desenha o modelo ER e o esquema relacional a partir do proprio DDL, com deteccao de chave composta, de tabela associativa e de tabela fato; aplicado em FDBD e TABD | — | incorporado |
+| 2026-09-02 | projeto | melhoria | pericles-feitoza | src/components/ui/EmentaPPC.tsx | Componente EmentaPPC: leva a ementa oficial do ementario do PPC para a abertura de cada materia, em bloco recolhivel com as unidades numeradas, o codigo oficial e o pre-requisito da ficha; alimentado por um modulo gerado que casa as 67 fichas com a grade e cobre 26 das 27 paginas publicadas | — | incorporado |
 
 ## Checklist Para Novas Entradas
 
