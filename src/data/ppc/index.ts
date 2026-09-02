@@ -14,6 +14,27 @@
 
 import ementasJson from './ementas.json';
 
+/** De onde o link leva, e o que o aluno encontra ao chegar. */
+export type TipoLink = 'livre' | 'institucional' | 'catalogo' | 'compra';
+
+export interface ReferenciaPPC {
+  /** A referência como o PPC a imprime. */
+  texto: string;
+  /** Identificador da obra, estável entre as fichas que a citam. */
+  chave: string;
+  /**
+   * Endereço conferido à mão em `scripts/ppc/links_bibliografia.json`. Ausente
+   * quando a obra ainda não foi pesquisada, ou quando foi e não há destino
+   * legítimo — a nota no arquivo de links diz qual dos dois casos é.
+   *
+   * Não confundir com a URL que às vezes aparece dentro de `texto`: várias
+   * das que o PPC imprime vêm corrompidas pela extração do PDF ou apontam
+   * para domínios que morreram.
+   */
+  url?: string;
+  tipoLink?: TipoLink;
+}
+
 export interface EmentaPPC {
   /** Código impresso na ficha do ementário do PPC. */
   codigoPPC: string;
@@ -28,9 +49,9 @@ export interface EmentaPPC {
   /** A ementa quebrada nas unidades que ela enumera. */
   unidades: string[];
   /** Bibliografia básica declarada na ficha, em ordem. */
-  bibliografiaBasica: string[];
+  bibliografiaBasica: ReferenciaPPC[];
   /** Bibliografia complementar declarada na ficha, em ordem. */
-  bibliografiaComplementar: string[];
+  bibliografiaComplementar: ReferenciaPPC[];
   /**
    * A ficha não separa básica de complementar (só DEVO, p.116): tudo o que ela
    * lista entrou em `bibliografiaBasica`, e a interface não deve prometer a

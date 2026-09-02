@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "ppc:bibliografia": "node scripts/ppc/extrair-bibliografia.mjs",
+    "ppc:links": "node scripts/ppc/obras-sem-link.mjs",
     "ppc:montar": "node scripts/ppc/montar-ementas.mjs",
     "taxonomia:montar": "node scripts/taxonomia/montar.mjs",
     "taxonomia:validar": "node scripts/taxonomia/validar.mjs"

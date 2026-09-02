@@ -26,16 +26,40 @@
         "Conversão Numérica"
       ],
       "bibliografiaBasica": [
-        "BALTZAN, Paige; PHILLIPS, Amy. Sistemas de Informação. Tradução: Rodrigo Dubal. AMGH.",
-        "STAIR, Ralph M.; REYNOLDS, George. Princípios de Sistemas de Informação. Cengage Learning.",
-        "O’BRIEN, James A. Sistemas de Informação e as Decisões Gerenciais na Era da Internet. Editora Saraiva."
+        {
+          "texto": "BALTZAN, Paige; PHILLIPS, Amy. Sistemas de Informação. Tradução: Rodrigo Dubal. AMGH.",
+          "chave": "baltzanpaigephillipsamysistemasdeinformacaotraducaorodrigodubalamgh"
+        },
+        {
+          "texto": "STAIR, Ralph M.; REYNOLDS, George. Princípios de Sistemas de Informação. Cengage Learning.",
+          "chave": "stairralphmreynoldsgeorgeprincipiosdesistemasdeinformacaocengagelearning"
+        },
+        {
+          "texto": "O’BRIEN, James A. Sistemas de Informação e as Decisões Gerenciais na Era da Internet. Editora Saraiva.",
+          "chave": "obrienjamesasistemasdeinformacaoeasdecisoesgerenciaisnaeradainternetsaraiva"
+        }
       ],
       "bibliografiaComplementar": [
-        "CORTES, Pedro Luiz. Administração de Sistemas de Informação. Editora Saraiva.",
-        "GORDON, Steven R.; GORDON, Judith. Sistemas de Informação: uma abordagem gerencial. Editora LTC.",
-        "SHITUKA, DORLIVETE M. Sistemas de Informação: um enfoque computacional. Editora Ciência Moderna.",
-        "LAUDON, Kenneth C. LAUDON, Jane P.. Sistemas de Informacao: com Internet. Editora LTC.",
-        "ALBUQUERQUE, Jader Cristiano Magalhães de. Sistemas de Informacao e Comunicacao no Setor Público. Editora UFSC."
+        {
+          "texto": "CORTES, Pedro Luiz. Administração de Sistemas de Informação. Editora Saraiva.",
+          "chave": "cortespedroluizadministracaodesistemasdeinformacaosaraiva"
+        },
+        {
+          "texto": "GORDON, Steven R.; GORDON, Judith. Sistemas de Informação: uma abordagem gerencial. Editora LTC.",
+          "chave": "gordonstevenrgordonjudithsistemasdeinformacaoumaabordagemgerencialltc"
+        },
+        {
+          "texto": "SHITUKA, DORLIVETE M. Sistemas de Informação: um enfoque computacional. Editora Ciência Moderna.",
+          "chave": "shitukadorlivetemsistemasdeinformacaoumenfoquecomputacionalcienciamoderna"
+        },
+        {
+          "texto": "LAUDON, Kenneth C. LAUDON, Jane P.. Sistemas de Informacao: com Internet. Editora LTC.",
+          "chave": "laudonkennethclaudonjanepsistemasdeinformacaocominternetltc"
+        },
+        {
+          "texto": "ALBUQUERQUE, Jader Cristiano Magalhães de. Sistemas de Informacao e Comunicacao no Setor Público. Editora UFSC.",
+          "chave": "albuquerquejadercristianomagalhaesdesistemasdeinformacaoecomunicacaonosetorpublicoufsc"
+        }
       ]
     },
     "ALPG": {
@@ -53,16 +77,40 @@
         "Estudo de funções, escopo e passagem de parâmetros"
       ],
       "bibliografiaBasica": [
-        "SEBESTA, Robert W. Conceitos de Linguagens de Programação . Editora Bookman.",
-        "VILLAS, M. et. al. Estrutura de Dados – Conceitos e Técnicas de Implementação. Editora Campus.",
-        "MANZANO, Jose Augusto N. G.. Algoritmos: Logica para Desenvolvimento de Programação de Computadores. Editora Erica."
+        {
+          "texto": "SEBESTA, Robert W. Conceitos de Linguagens de Programação . Editora Bookman.",
+          "chave": "sebestarobertwconceitosdelinguagensdeprogramacaobookman"
+        },
+        {
+          "texto": "VILLAS, M. et. al. Estrutura de Dados – Conceitos e Técnicas de Implementação. Editora Campus.",
+          "chave": "villasmetalestruturadedadosconceitosetecnicasdeimplementacaocampus"
+        },
+        {
+          "texto": "MANZANO, Jose Augusto N. G.. Algoritmos: Logica para Desenvolvimento de Programação de Computadores. Editora Erica.",
+          "chave": "manzanojoseaugustongalgoritmoslogicaparadesenvolvimentodeprogramacaodecomputadoreserica"
+        }
       ],
       "bibliografiaComplementar": [
-        "TUCKER, Allen B; NOONAN, Robert E. Linguagens de programação: princípios e paradigmas McGraw-Hill.",
-        "FARRER, Harry. Programação Estruturada e Estruturas de Dados. Editora Campus.",
-        "LAGES, Newton A. de Castilho. Algoritmos e Estruturas se Dados. Editora LTC.",
-        "ZIVIANI, Nivio. PROJETO DE ALGORITMOS. Editora Pioneira.",
-        "SOUZA, Marco Antônio Furlan de. Algoritmos e Logica de Programacao: Um Texto Introdutorio para Engenharia. Editora Cengage Learning."
+        {
+          "texto": "TUCKER, Allen B; NOONAN, Robert E. Linguagens de programação: princípios e paradigmas McGraw-Hill.",
+          "chave": "tuckerallenbnoonanrobertelinguagensdeprogramacaoprincipioseparadigmasmcgrawhill"
+        },
+        {
+          "texto": "FARRER, Harry. Programação Estruturada e Estruturas de Dados. Editora Campus.",
+          "chave": "farrerharryprogramacaoestruturadaeestruturasdedadoscampus"
+        },
+        {
+          "texto": "LAGES, Newton A. de Castilho. Algoritmos e Estruturas se Dados. Editora LTC.",
+          "chave": "lagesnewtonadecastilhoalgoritmoseestruturassedadosltc"
+        },
+        {
+          "texto": "ZIVIANI, Nivio. PROJETO DE ALGORITMOS. Editora Pioneira.",
+          "chave": "zivianinivioprojetodealgoritmospioneira"
+        },
+        {
+          "texto": "SOUZA, Marco Antônio Furlan de. Algoritmos e Logica de Programacao: Um Texto Introdutorio para Engenharia. Editora Cengage Learning.",
+          "chave": "souzamarcoantoniofurlandealgoritmoselogicadeprogramacaoumtextointrodutorioparaengenhariacengagelearning"
+        }
       ]
     },
     "INTW": {
@@ -78,15 +126,36 @@
         "Documentos HTML, Folhas de Estilos e Client-Side Script"
       ],
       "bibliografiaBasica": [
-        "SILVA, Mauricio Samy. Construindo Sites com CSS e (X)Html: Sites Controlados por Folhas De Estilo Cascata. Editora NOVATEC.",
-        "GOODMAN, Danny. JAVA SCRIPT: A BIBLIA. Editora CAMPUS.",
-        "MORRISON, Michael. Use a Cabeça! Java Script. Editora ALTA BOOKS."
+        {
+          "texto": "SILVA, Mauricio Samy. Construindo Sites com CSS e (X)Html: Sites Controlados por Folhas De Estilo Cascata. Editora NOVATEC.",
+          "chave": "silvamauriciosamyconstruindositescomcssexhtmlsitescontroladosporfolhasdeestilocascatanovatec"
+        },
+        {
+          "texto": "GOODMAN, Danny. JAVA SCRIPT: A BIBLIA. Editora CAMPUS.",
+          "chave": "goodmandannyjavascriptabibliacampus"
+        },
+        {
+          "texto": "MORRISON, Michael. Use a Cabeça! Java Script. Editora ALTA BOOKS.",
+          "chave": "morrisonmichaeluseacabecajavascriptaltabooks"
+        }
       ],
       "bibliografiaComplementar": [
-        "SILVA, Mauricio Samy. CRIANDO SITES COM HTML: SITES DE ALTA QUALIDADE COM HTML E CCS. Editora NOVATEC.",
-        "RUAS, Nilson da Silva. CRIANDO SITES WEB COM FOLHAS DE ESTILOS. Editora VISUAL BOOKS.",
-        "TEAGUE, Jason Cranford. DHTML E CSS PARA WORLD WIDE WEB. Editora CAMPUS.",
-        "LIBERTY, Jesse KRALEY, Mike. APRENDENDO A DESENVOLVER DOCUMENTOS XML PARA A WEB. Editora MAKRON BOOKS."
+        {
+          "texto": "SILVA, Mauricio Samy. CRIANDO SITES COM HTML: SITES DE ALTA QUALIDADE COM HTML E CCS. Editora NOVATEC.",
+          "chave": "silvamauriciosamycriandositescomhtmlsitesdealtaqualidadecomhtmleccsnovatec"
+        },
+        {
+          "texto": "RUAS, Nilson da Silva. CRIANDO SITES WEB COM FOLHAS DE ESTILOS. Editora VISUAL BOOKS.",
+          "chave": "ruasnilsondasilvacriandositeswebcomfolhasdeestilosvisualbooks"
+        },
+        {
+          "texto": "TEAGUE, Jason Cranford. DHTML E CSS PARA WORLD WIDE WEB. Editora CAMPUS.",
+          "chave": "teaguejasoncranforddhtmlecssparaworldwidewebcampus"
+        },
+        {
+          "texto": "LIBERTY, Jesse KRALEY, Mike. APRENDENDO A DESENVOLVER DOCUMENTOS XML PARA A WEB. Editora MAKRON BOOKS.",
+          "chave": "libertyjessekraleymikeaprendendoadesenvolverdocumentosxmlparaawebmakronbooks"
+        }
       ]
     },
     "LMMD": {
@@ -106,16 +175,40 @@
         "Prova e Indução Matemática"
       ],
       "bibliografiaBasica": [
-        "FAVARO, Silvio. KMETEUK FILHO, Osmir. Noções Básicas de Matemática. Editora Ciência Moderna.",
-        "BORBA, Marcelo de Carvalho; PENTEADO, Miriam Godoy. Iniciação a Lógica Matemática. Editora Nobel.",
-        "BESPO, Carlos Alberto Ferreira. INTRODUCAO A LOGICA DA MATEMATICA. Editora CENGAGE LEARNING."
+        {
+          "texto": "FAVARO, Silvio. KMETEUK FILHO, Osmir. Noções Básicas de Matemática. Editora Ciência Moderna.",
+          "chave": "favarosilviokmeteukfilhoosmirnocoesbasicasdematematicacienciamoderna"
+        },
+        {
+          "texto": "BORBA, Marcelo de Carvalho; PENTEADO, Miriam Godoy. Iniciação a Lógica Matemática. Editora Nobel.",
+          "chave": "borbamarcelodecarvalhopenteadomiriamgodoyiniciacaoalogicamatematicanobel"
+        },
+        {
+          "texto": "BESPO, Carlos Alberto Ferreira. INTRODUCAO A LOGICA DA MATEMATICA. Editora CENGAGE LEARNING.",
+          "chave": "bespocarlosalbertoferreiraintroducaoalogicadamatematicacengagelearning"
+        }
       ],
       "bibliografiaComplementar": [
-        "CARNIELLI, W., EPSTEIN, R. L. Computabilidade, Funções Computáveis, Lógica e os Fundamentos da Matemática. Unesp/Fapesp.",
-        "BARWISE J., ETCHEMENDY J. Language, Proof and Logic. CSLI Publications.",
-        "ROSEN, K. H. Discrete Mathematics and Its Applications. McGraw-Hill.",
-        "IEZZI, Gelson. FUNDAMENTOS DA MATEMATICA ELEMENTAR.ATUAL.",
-        "MURAKAMI, Carlos. MURAKAMI, Carlos. FUNDAMENTOS DE MATEMATICA ELEMENTAR. Conjuntos e Funções. Editora Atual."
+        {
+          "texto": "CARNIELLI, W., EPSTEIN, R. L. Computabilidade, Funções Computáveis, Lógica e os Fundamentos da Matemática. Unesp/Fapesp.",
+          "chave": "carnielliwepsteinrlcomputabilidadefuncoescomputaveislogicaeosfundamentosdamatematicaunespfapesp"
+        },
+        {
+          "texto": "BARWISE J., ETCHEMENDY J. Language, Proof and Logic. CSLI Publications.",
+          "chave": "barwisejetchemendyjlanguageproofandlogiccslipublications"
+        },
+        {
+          "texto": "ROSEN, K. H. Discrete Mathematics and Its Applications. McGraw-Hill.",
+          "chave": "rosenkhdiscretemathematicsanditsapplicationsmcgrawhill"
+        },
+        {
+          "texto": "IEZZI, Gelson. FUNDAMENTOS DA MATEMATICA ELEMENTAR.ATUAL.",
+          "chave": "iezzigelsonfundamentosdamatematicaelementaratual"
+        },
+        {
+          "texto": "MURAKAMI, Carlos. MURAKAMI, Carlos. FUNDAMENTOS DE MATEMATICA ELEMENTAR. Conjuntos e Funções. Editora Atual.",
+          "chave": "murakamicarlosmurakamicarlosfundamentosdematematicaelementarconjuntosefuncoesatual"
+        }
       ]
     },
     "INGT": {
@@ -132,16 +225,40 @@
         "Desenvolvimento da criticidade do discente em relação aos temas discutidos"
       ],
       "bibliografiaBasica": [
-        "CRUZ, Décio Torres. Inglês Instrumental para Informática. São Paulo: Editora Disal.",
-        "GAMA, Ângela Nunes Martins [et al.]. Introdução à leitura em inglês. Rio de Janeiro: Editora Gama Filho.",
-        "OLIVEIRA, Nádia Alves de. Para ler em inglês. Desenvolvimento da habilidade de leitura. Belo Horizonte: Editora O Lutador."
+        {
+          "texto": "CRUZ, Décio Torres. Inglês Instrumental para Informática. São Paulo: Editora Disal.",
+          "chave": "cruzdeciotorresinglesinstrumentalparainformaticasaopaulodisal"
+        },
+        {
+          "texto": "GAMA, Ângela Nunes Martins [et al.]. Introdução à leitura em inglês. Rio de Janeiro: Editora Gama Filho.",
+          "chave": "gamaangelanunesmartinsetalintroducaoaleituraeminglesriodejaneirogamafilho"
+        },
+        {
+          "texto": "OLIVEIRA, Nádia Alves de. Para ler em inglês. Desenvolvimento da habilidade de leitura. Belo Horizonte: Editora O Lutador.",
+          "chave": "oliveiranadiaalvesdeparalereminglesdesenvolvimentodahabilidadedeleiturabelohorizonteolutador"
+        }
       ],
       "bibliografiaComplementar": [
-        "PINTO, Dilce. Compreensão Inteligente de Textos. Grasping the Meaning. Vol 1 e 2. LTC.",
-        "DUBIN, F. Reading by All Means. Addison-Wesley.",
-        "EDIGER, A. Reading for Meaning. Longman.",
-        "MICHAELIS. Dicionário Inglês-Português. São Paulo: Melhoramentos.",
-        "MARTINEZ. Ron. Como Escrever Tudo em Inglês. Elsevier."
+        {
+          "texto": "PINTO, Dilce. Compreensão Inteligente de Textos. Grasping the Meaning. Vol 1 e 2. LTC.",
+          "chave": "pintodilcecompreensaointeligentedetextosgraspingthemeaningvol1e2ltc"
+        },
+        {
+          "texto": "DUBIN, F. Reading by All Means. Addison-Wesley.",
+          "chave": "dubinfreadingbyallmeansaddisonwesley"
+        },
+        {
+          "texto": "EDIGER, A. Reading for Meaning. Longman.",
+          "chave": "edigerareadingformeaninglongman"
+        },
+        {
+          "texto": "MICHAELIS. Dicionário Inglês-Português. São Paulo: Melhoramentos.",
+          "chave": "michaelisdicionarioinglesportuguessaopaulomelhoramentos"
+        },
+        {
+          "texto": "MARTINEZ. Ron. Como Escrever Tudo em Inglês. Elsevier.",
+          "chave": "martinezroncomoescrevertudoemingleselsevier"
+        }
       ]
     },
     "FILO": {
@@ -164,16 +281,40 @@
         "A busca da verdade e das certezas em uma sociedade em transformação"
       ],
       "bibliografiaBasica": [
-        "HENSSEN, J. Teoria do Conhecimento. Editora Martins Fortes.",
-        "GEACH, P. T. Razão e argumentação. Editora Penso.",
-        "RUSS, J. Filosofia – Os Autores, As Obras. Editora Vozes."
+        {
+          "texto": "HENSSEN, J. Teoria do Conhecimento. Editora Martins Fortes.",
+          "chave": "henssenjteoriadoconhecimentomartinsfortes"
+        },
+        {
+          "texto": "GEACH, P. T. Razão e argumentação. Editora Penso.",
+          "chave": "geachptrazaoeargumentacaopenso"
+        },
+        {
+          "texto": "RUSS, J. Filosofia – Os Autores, As Obras. Editora Vozes.",
+          "chave": "russjfilosofiaosautoresasobrasvozes"
+        }
       ],
       "bibliografiaComplementar": [
-        "BAUMAN, Z. Modernidade Líquida. Editora Zahar.",
-        "DEMO, Pedro. Certeza da incerteza. Editora Plano.",
-        "RUBI, G. Filosofia a Arte de Pensar. Editora Madras.",
-        "REZENDE, Antonio. Curso de Filosofia. Editora: JORGE ZAHAR",
-        "DESCARTES, Rene. Discurso do Método. Editora Martins Fontes"
+        {
+          "texto": "BAUMAN, Z. Modernidade Líquida. Editora Zahar.",
+          "chave": "baumanzmodernidadeliquidazahar"
+        },
+        {
+          "texto": "DEMO, Pedro. Certeza da incerteza. Editora Plano.",
+          "chave": "demopedrocertezadaincertezaplano"
+        },
+        {
+          "texto": "RUBI, G. Filosofia a Arte de Pensar. Editora Madras.",
+          "chave": "rubigfilosofiaaartedepensarmadras"
+        },
+        {
+          "texto": "REZENDE, Antonio. Curso de Filosofia. Editora: JORGE ZAHAR",
+          "chave": "rezendeantoniocursodefilosofiajorgezahar"
+        },
+        {
+          "texto": "DESCARTES, Rene. Discurso do Método. Editora Martins Fontes",
+          "chave": "descartesrenediscursodometodomartinsfontes"
+        }
       ]
     },
     "MTSI": {
@@ -193,16 +334,40 @@
         "Grafos"
       ],
       "bibliografiaBasica": [
-        "IEZZI, Gelson. Fundamentos da Matemática Elementar. Editora Atual.",
-        "MURAKAMI, Carlos. MURAKAMI, Carlos. Fundamentos de Matemática Elementar. Conjuntos e Funções. Editora Atual.",
-        "MURAKAMI, Carlos. Fundamentos de Matemática Elementar. Sequências, Matrizes, Determinantes, Sistemas Lineares. Editora Atual."
+        {
+          "texto": "IEZZI, Gelson. Fundamentos da Matemática Elementar. Editora Atual.",
+          "chave": "iezzigelsonfundamentosdamatematicaelementaratual"
+        },
+        {
+          "texto": "MURAKAMI, Carlos. MURAKAMI, Carlos. Fundamentos de Matemática Elementar. Conjuntos e Funções. Editora Atual.",
+          "chave": "murakamicarlosmurakamicarlosfundamentosdematematicaelementarconjuntosefuncoesatual"
+        },
+        {
+          "texto": "MURAKAMI, Carlos. Fundamentos de Matemática Elementar. Sequências, Matrizes, Determinantes, Sistemas Lineares. Editora Atual.",
+          "chave": "murakamicarlosfundamentosdematematicaelementarsequenciasmatrizesdeterminantessistemaslinearesatual"
+        }
       ],
       "bibliografiaComplementar": [
-        "CARNIELLI, W., EPSTEIN, R. L. Computabilidade, Funções Computáveis, Lógica e os Fundamentos da Matemática. Unesp/Fapesp.",
-        "ROSEN, Keneth H. Discrete Mathematics and Its Applications. McGraw-Hill.",
-        "BARWISE J., ETCHEMENDY J. Language, Proof and Logic. CSLI Publications.",
-        "IEZZI, Gelson. Fundamentos da Matematica Elementar. Editora Atual.",
-        "MURAKAMI, Carlos. MURAKAMI, Carlos. Fundamentos de Matemática Elementar. Conjuntos e Funções. Editora Atual."
+        {
+          "texto": "CARNIELLI, W., EPSTEIN, R. L. Computabilidade, Funções Computáveis, Lógica e os Fundamentos da Matemática. Unesp/Fapesp.",
+          "chave": "carnielliwepsteinrlcomputabilidadefuncoescomputaveislogicaeosfundamentosdamatematicaunespfapesp"
+        },
+        {
+          "texto": "ROSEN, Keneth H. Discrete Mathematics and Its Applications. McGraw-Hill.",
+          "chave": "rosenkenethhdiscretemathematicsanditsapplicationsmcgrawhill"
+        },
+        {
+          "texto": "BARWISE J., ETCHEMENDY J. Language, Proof and Logic. CSLI Publications.",
+          "chave": "barwisejetchemendyjlanguageproofandlogiccslipublications"
+        },
+        {
+          "texto": "IEZZI, Gelson. Fundamentos da Matematica Elementar. Editora Atual.",
+          "chave": "iezzigelsonfundamentosdamatematicaelementaratual"
+        },
+        {
+          "texto": "MURAKAMI, Carlos. MURAKAMI, Carlos. Fundamentos de Matemática Elementar. Conjuntos e Funções. Editora Atual.",
+          "chave": "murakamicarlosmurakamicarlosfundamentosdematematicaelementarconjuntosefuncoesatual"
+        }
       ]
     },
     "FGEO": {
@@ -221,16 +386,40 @@
         "Processo decisório e sistemas de informação"
       ],
       "bibliografiaBasica": [
-        "MAXIMIANO, Antonio Cesar Amaru. Fundamentos de Administração - Manual Compacto para componentes curriculares TGA e Introdução à Administração. Editora Atlas.",
-        "MAXIMIANO, Antonio Cesar Amaru. Teoria Geral da Administração - Da revolução urbana à revolução digital. Editora Atlas.",
-        "CHIAVENATO, Idalberto. Introdução à Teoria Geral da Administração. Editora Manole."
+        {
+          "texto": "MAXIMIANO, Antonio Cesar Amaru. Fundamentos de Administração - Manual Compacto para componentes curriculares TGA e Introdução à Administração. Editora Atlas.",
+          "chave": "maximianoantoniocesaramarufundamentosdeadministracaomanualcompactoparacomponentescurricularestgaeintroducaoaadministracaoatlas"
+        },
+        {
+          "texto": "MAXIMIANO, Antonio Cesar Amaru. Teoria Geral da Administração - Da revolução urbana à revolução digital. Editora Atlas.",
+          "chave": "maximianoantoniocesaramaruteoriageraldaadministracaodarevolucaourbanaarevolucaodigitalatlas"
+        },
+        {
+          "texto": "CHIAVENATO, Idalberto. Introdução à Teoria Geral da Administração. Editora Manole.",
+          "chave": "chiavenatoidalbertointroducaoateoriageraldaadministracaomanole"
+        }
       ],
       "bibliografiaComplementar": [
-        "PRADO, Edmir. Fundamentos de Sistemas de Informação. Editora Elsevier.",
-        "OLIVEIRA, Djalma de Pinho Rebouças de. Planejamento Estratégico - Conceitos, Metodologia e Práticas. Editora Atlas.",
-        "HALL, Richard H. Organizações: Estruturas, processos e resultados. Editora Pearson.",
-        "D'ASCENÇÃO, Luiz Carlos M. Organização, Sistemas e Métodos: Análise, Redesenho e Informatização de Processos Administrativos. Editora Atlas.",
-        "RESENDE, Denis Alcides. Sistemas e Informações Organizacionais: Guia Prático Para Projetos."
+        {
+          "texto": "PRADO, Edmir. Fundamentos de Sistemas de Informação. Editora Elsevier.",
+          "chave": "pradoedmirfundamentosdesistemasdeinformacaoelsevier"
+        },
+        {
+          "texto": "OLIVEIRA, Djalma de Pinho Rebouças de. Planejamento Estratégico - Conceitos, Metodologia e Práticas. Editora Atlas.",
+          "chave": "oliveiradjalmadepinhoreboucasdeplanejamentoestrategicoconceitosmetodologiaepraticasatlas"
+        },
+        {
+          "texto": "HALL, Richard H. Organizações: Estruturas, processos e resultados. Editora Pearson.",
+          "chave": "hallrichardhorganizacoesestruturasprocessoseresultadospearson"
+        },
+        {
+          "texto": "D'ASCENÇÃO, Luiz Carlos M. Organização, Sistemas e Métodos: Análise, Redesenho e Informatização de Processos Administrativos. Editora Atlas.",
+          "chave": "dascencaoluizcarlosmorganizacaosistemasemetodosanaliseredesenhoeinformatizacaodeprocessosadministrativosatlas"
+        },
+        {
+          "texto": "RESENDE, Denis Alcides. Sistemas e Informações Organizacionais: Guia Prático Para Projetos.",
+          "chave": "resendedenisalcidessistemaseinformacoesorganizacionaisguiapraticoparaprojetos"
+        }
       ]
     },
     "AOCP": {
@@ -251,16 +440,40 @@
         "Introdução a arquiteturas paralelas"
       ],
       "bibliografiaBasica": [
-        "STALLINGS, W. Arquitetura e Organização de Computadores. Prentice Hall.",
-        "TANENBAUM, A. S. Organização Estruturada de Computadores. Prentice Hall.",
-        "PATTERSON, D. A., HENNESSY, J. L, Arquitetura de Computadores: Uma Abordagem Quantitativa, Editora Campus."
+        {
+          "texto": "STALLINGS, W. Arquitetura e Organização de Computadores. Prentice Hall.",
+          "chave": "stallingswarquiteturaeorganizacaodecomputadoresprenticehall"
+        },
+        {
+          "texto": "TANENBAUM, A. S. Organização Estruturada de Computadores. Prentice Hall.",
+          "chave": "tanenbaumasorganizacaoestruturadadecomputadoresprenticehall"
+        },
+        {
+          "texto": "PATTERSON, D. A., HENNESSY, J. L, Arquitetura de Computadores: Uma Abordagem Quantitativa, Editora Campus.",
+          "chave": "pattersondahennessyjlarquiteturadecomputadoresumaabordagemquantitativacampus"
+        }
       ],
       "bibliografiaComplementar": [
-        "NULL, L., LOBUR, J., Princípios Básicos de Arquitetura e Organização de Computadores. Bookman.",
-        "Veras, Manoel. DATACENTER : Componente Central da Infraestrutura de TI. Brasport.",
-        "Veras, Manoel. VIRTUALIZAÇÃO: Componente Central do Datacenter. Brasport.",
-        "PAIXÃO, Renato Rodrigues. ARQUITETURA DE COMPUTADORES - PCs. Editora ERICA.",
-        "MAIA, Luiz Paulo MACHADO, Francis Berenger. ARQUITETURA DE SISTEMAS OPERACIONAIS. Editora LTC."
+        {
+          "texto": "NULL, L., LOBUR, J., Princípios Básicos de Arquitetura e Organização de Computadores. Bookman.",
+          "chave": "nulllloburjprincipiosbasicosdearquiteturaeorganizacaodecomputadoresbookman"
+        },
+        {
+          "texto": "Veras, Manoel. DATACENTER : Componente Central da Infraestrutura de TI. Brasport.",
+          "chave": "verasmanoeldatacentercomponentecentraldainfraestruturadetibrasport"
+        },
+        {
+          "texto": "Veras, Manoel. VIRTUALIZAÇÃO: Componente Central do Datacenter. Brasport.",
+          "chave": "verasmanoelvirtualizacaocomponentecentraldodatacenterbrasport"
+        },
+        {
+          "texto": "PAIXÃO, Renato Rodrigues. ARQUITETURA DE COMPUTADORES - PCs. Editora ERICA.",
+          "chave": "paixaorenatorodriguesarquiteturadecomputadorespcserica"
+        },
+        {
+          "texto": "MAIA, Luiz Paulo MACHADO, Francis Berenger. ARQUITETURA DE SISTEMAS OPERACIONAIS. Editora LTC.",
+          "chave": "maialuizpaulomachadofrancisberengerarquiteturadesistemasoperacionaisltc"
+        }
       ]
     },
     "LPGM": {
@@ -284,16 +497,40 @@
         "Entrada e saída de dados"
       ],
       "bibliografiaBasica": [
-        "SEBESTA, Robert W. Conceitos de linguagens de programação. Bookman.",
-        "DEITEL, Havey. C ++ – Como Programar. Pearson Education.",
-        "TUCKER, Allen B; NOONAN, Robert E. Linguagens de programação: princípios e paradigmas. McGraw-Hill."
+        {
+          "texto": "SEBESTA, Robert W. Conceitos de linguagens de programação. Bookman.",
+          "chave": "sebestarobertwconceitosdelinguagensdeprogramacaobookman"
+        },
+        {
+          "texto": "DEITEL, Havey. C ++ – Como Programar. Pearson Education.",
+          "chave": "deitelhaveyccomoprogramarpearsoneducation"
+        },
+        {
+          "texto": "TUCKER, Allen B; NOONAN, Robert E. Linguagens de programação: princípios e paradigmas. McGraw-Hill.",
+          "chave": "tuckerallenbnoonanrobertelinguagensdeprogramacaoprincipioseparadigmasmcgrawhill"
+        }
       ],
       "bibliografiaComplementar": [
-        "DEITELL, Harvey. Java Como Programar. Pearson Education.",
-        "LAGES, Newton A. de Castilho. ALGORITMOS E ESTRUTURAS DE DADOS. Editora LTC.",
-        "SEBESTA, Robert W. Conceitos de Linguagens de Programação. Bookman.",
-        "MANZANO, Jose Augusto N. G.. ALGORITMOS: LOGICA PARA DESENVOLVIMENTO DE PROGRAMACAO DE COMPUTADORES. Editora ERICA.",
-        "SOUZA, Marco Antônio Furlan de. ALGORITMOS E LOGICA DE PROGRAMACAO: UM TEXTO INTRODUTORIO PARA ENGENHARIA."
+        {
+          "texto": "DEITELL, Harvey. Java Como Programar. Pearson Education.",
+          "chave": "deitellharveyjavacomoprogramarpearsoneducation"
+        },
+        {
+          "texto": "LAGES, Newton A. de Castilho. ALGORITMOS E ESTRUTURAS DE DADOS. Editora LTC.",
+          "chave": "lagesnewtonadecastilhoalgoritmoseestruturasdedadosltc"
+        },
+        {
+          "texto": "SEBESTA, Robert W. Conceitos de Linguagens de Programação. Bookman.",
+          "chave": "sebestarobertwconceitosdelinguagensdeprogramacaobookman"
+        },
+        {
+          "texto": "MANZANO, Jose Augusto N. G.. ALGORITMOS: LOGICA PARA DESENVOLVIMENTO DE PROGRAMACAO DE COMPUTADORES. Editora ERICA.",
+          "chave": "manzanojoseaugustongalgoritmoslogicaparadesenvolvimentodeprogramacaodecomputadoreserica"
+        },
+        {
+          "texto": "SOUZA, Marco Antônio Furlan de. ALGORITMOS E LOGICA DE PROGRAMACAO: UM TEXTO INTRODUTORIO PARA ENGENHARIA.",
+          "chave": "souzamarcoantoniofurlandealgoritmoselogicadeprogramacaoumtextointrodutorioparaengenharia"
+        }
       ]
     },
     "SORG": {
@@ -310,16 +547,40 @@
         "Reestruturação produtiva, Modelos de Gestão e Cultura das Organizações (taylorismo, fordismo e toyotismo; organizações, cultura organizacional e a responsabilidade socioambiental)"
       ],
       "bibliografiaBasica": [
-        "LESSA, Sérgio; TONET, Ivo. Proletariado e Sujeito Revolucionário. Instituto Lukács.",
-        "PAULA, Ana Paula Paes de. Teoria Crítica nas Organizações. Cengage CTP.",
-        "TRAGTENBERG, Maurício. Burocracia e Ideologia. UNESP."
+        {
+          "texto": "LESSA, Sérgio; TONET, Ivo. Proletariado e Sujeito Revolucionário. Instituto Lukács.",
+          "chave": "lessasergiotonetivoproletariadoesujeitorevolucionarioinstitutolukacs"
+        },
+        {
+          "texto": "PAULA, Ana Paula Paes de. Teoria Crítica nas Organizações. Cengage CTP.",
+          "chave": "paulaanapaulapaesdeteoriacriticanasorganizacoescengagectp"
+        },
+        {
+          "texto": "TRAGTENBERG, Maurício. Burocracia e Ideologia. UNESP.",
+          "chave": "tragtenbergmauricioburocraciaeideologiaunesp"
+        }
       ],
       "bibliografiaComplementar": [
-        "DIAS, Reinaldo. Sociologia das Organizações. Editora Atlas.",
-        "FLEURY, Maria. Cultura e Poder nas Organizações. Editora Atlas.",
-        "SILVA, Golias. Sociologia Organizacional. UFSC.",
-        "NOVAES, Henrique Tahan; DAGNINO, Renato. O Fetiche da Tecnologia. Revista Organizações & Democracia, Marília, v. 5, n. 2, p. 189-210, dez. 2004.",
-        "WOLFF, Simone. Informatização do trabalho e reificação: uma análise à luz dos Programas de Qualidade Total. Campinas: Edunicamp/Eduel, 1998."
+        {
+          "texto": "DIAS, Reinaldo. Sociologia das Organizações. Editora Atlas.",
+          "chave": "diasreinaldosociologiadasorganizacoesatlas"
+        },
+        {
+          "texto": "FLEURY, Maria. Cultura e Poder nas Organizações. Editora Atlas.",
+          "chave": "fleurymariaculturaepodernasorganizacoesatlas"
+        },
+        {
+          "texto": "SILVA, Golias. Sociologia Organizacional. UFSC.",
+          "chave": "silvagoliassociologiaorganizacionalufsc"
+        },
+        {
+          "texto": "NOVAES, Henrique Tahan; DAGNINO, Renato. O Fetiche da Tecnologia. Revista Organizações & Democracia, Marília, v. 5, n. 2, p. 189-210, dez. 2004.",
+          "chave": "novaeshenriquetahandagninorenatoofetichedatecnologiarevistaorganizacoesdemocraciamariliav5n2p189210dez2004"
+        },
+        {
+          "texto": "WOLFF, Simone. Informatização do trabalho e reificação: uma análise à luz dos Programas de Qualidade Total. Campinas: Edunicamp/Eduel, 1998.",
+          "chave": "wolffsimoneinformatizacaodotrabalhoereificacaoumaanalisealuzdosprogramasdequalidadetotalcampinasedunicampeduel1998"
+        }
       ]
     },
     "ETAP": {
@@ -338,16 +599,40 @@
         "Correlação e Regressão Linear e Probabilidades"
       ],
       "bibliografiaBasica": [
-        "CASELLA, George. INFERÊNCIA ESTATÍSTICA. CENGAGE LEARNING. 2014",
-        "BOLFARINE, Helena. SANDOVAL, Mônica Carneiro. INTRODUÇÃO À INFERÊNCIA ESTATÍSTICA. Editora SBM.",
-        "JAMES, Barry R. PROBABILIDADE - UM CURSO EM NÍVEL INTERMEDIÁRIO; IMPA; 2013."
+        {
+          "texto": "CASELLA, George. INFERÊNCIA ESTATÍSTICA. CENGAGE LEARNING. 2014",
+          "chave": "casellageorgeinferenciaestatisticacengagelearning2014"
+        },
+        {
+          "texto": "BOLFARINE, Helena. SANDOVAL, Mônica Carneiro. INTRODUÇÃO À INFERÊNCIA ESTATÍSTICA. Editora SBM.",
+          "chave": "bolfarinehelenasandovalmonicacarneirointroducaoainferenciaestatisticasbm"
+        },
+        {
+          "texto": "JAMES, Barry R. PROBABILIDADE - UM CURSO EM NÍVEL INTERMEDIÁRIO; IMPA; 2013.",
+          "chave": "jamesbarryrprobabilidadeumcursoemnivelintermediarioimpa2013"
+        }
       ],
       "bibliografiaComplementar": [
-        "LIPSCHUTZ, S. Probabilidade. São Paulo. Ed. MaGraw-Hill do Brasil.",
-        "MENDENHALL, W. Probabilidade e Estatística. Rio de Janeiro. Ed. Campus Vol. I e II.",
-        "MEYER, P.L. Probabilidade - Aplicações à Estatística. Rio de Janeiro. Ed. LTC.",
-        "BOLFARINE, Helena. SANDOVAL, Mônica Carneiro. Introducao a Inferência Estatística.",
-        "JAMES, Barry R. Probabilidade - Um Curso em Nível Intermediário. IMPA."
+        {
+          "texto": "LIPSCHUTZ, S. Probabilidade. São Paulo. Ed. MaGraw-Hill do Brasil.",
+          "chave": "lipschutzsprobabilidadesaopaulomagrawhilldobrasil"
+        },
+        {
+          "texto": "MENDENHALL, W. Probabilidade e Estatística. Rio de Janeiro. Ed. Campus Vol. I e II.",
+          "chave": "mendenhallwprobabilidadeeestatisticariodejaneirocampusvolieii"
+        },
+        {
+          "texto": "MEYER, P.L. Probabilidade - Aplicações à Estatística. Rio de Janeiro. Ed. LTC.",
+          "chave": "meyerplprobabilidadeaplicacoesaestatisticariodejaneiroltc"
+        },
+        {
+          "texto": "BOLFARINE, Helena. SANDOVAL, Mônica Carneiro. Introducao a Inferência Estatística.",
+          "chave": "bolfarinehelenasandovalmonicacarneirointroducaoainferenciaestatistica"
+        },
+        {
+          "texto": "JAMES, Barry R. Probabilidade - Um Curso em Nível Intermediário. IMPA.",
+          "chave": "jamesbarryrprobabilidadeumcursoemnivelintermediarioimpa"
+        }
       ]
     },
     "FDBD": {
@@ -367,16 +652,40 @@
         "Linguagem SQL"
       ],
       "bibliografiaBasica": [
-        "ELMASRI, Ramez; NAVATHE, Shamkant. Sistemas de Banco de Dados. Pearson Addison Wesley.",
-        "ROB, Peter; CORONEL, Carlos. Sistemas de Banco de Dados: projeto, implementação e administração. Cengage Learning.",
-        "DATE, C. J. Introdução a Sistemas de Banco de Dados. Elsevier."
+        {
+          "texto": "ELMASRI, Ramez; NAVATHE, Shamkant. Sistemas de Banco de Dados. Pearson Addison Wesley.",
+          "chave": "elmasrirameznavatheshamkantsistemasdebancodedadospearsonaddisonwesley"
+        },
+        {
+          "texto": "ROB, Peter; CORONEL, Carlos. Sistemas de Banco de Dados: projeto, implementação e administração. Cengage Learning.",
+          "chave": "robpetercoronelcarlossistemasdebancodedadosprojetoimplementacaoeadministracaocengagelearning"
+        },
+        {
+          "texto": "DATE, C. J. Introdução a Sistemas de Banco de Dados. Elsevier.",
+          "chave": "datecjintroducaoasistemasdebancodedadoselsevier"
+        }
       ],
       "bibliografiaComplementar": [
-        "HEUSER, Carlos Alberto. Projeto de Banco de Dados. Bookman.",
-        "CARVALHO, Vinicius. MYSQL. Casa do Código.",
-        "LYNN, Beighley. Use a Cabeça SQL. O’Reilly.",
-        "KORTH, Henry F. SILBERCHATZ, Abraham SUDARSHAN, S. SISTEMA DE BANCO DE DADOS.",
-        "ANGELOTTI, Elsini Simoni. BANCO DE DADOS."
+        {
+          "texto": "HEUSER, Carlos Alberto. Projeto de Banco de Dados. Bookman.",
+          "chave": "heusercarlosalbertoprojetodebancodedadosbookman"
+        },
+        {
+          "texto": "CARVALHO, Vinicius. MYSQL. Casa do Código.",
+          "chave": "carvalhoviniciusmysqlcasadocodigo"
+        },
+        {
+          "texto": "LYNN, Beighley. Use a Cabeça SQL. O’Reilly.",
+          "chave": "lynnbeighleyuseacabecasqloreilly"
+        },
+        {
+          "texto": "KORTH, Henry F. SILBERCHATZ, Abraham SUDARSHAN, S. SISTEMA DE BANCO DE DADOS.",
+          "chave": "korthhenryfsilberchatzabrahamsudarshanssistemadebancodedados"
+        },
+        {
+          "texto": "ANGELOTTI, Elsini Simoni. BANCO DE DADOS.",
+          "chave": "angelottielsinisimonibancodedados"
+        }
       ]
     },
     "SOPE": {
@@ -398,17 +707,44 @@
         "Estudo de casos de sistemas operacionais"
       ],
       "bibliografiaBasica": [
-        "SILBERSCHATZ, A; GALVIN, P. Baer; GAGNE, G. Fundamentos de Sistemas Operacionais. Editora LTC.",
-        "TANENBAUM, A.S. Sistemas Operacionais Modernos. Editora Prentice Hall.",
-        "STALLINGS, W. Operating Systems: internals and design principles. Editora Prentice Hall.",
-        "MACHADO, Francis B.; MAIA, Luiz P. Arquitetura de Sistemas Operacionais. LTC Editora."
+        {
+          "texto": "SILBERSCHATZ, A; GALVIN, P. Baer; GAGNE, G. Fundamentos de Sistemas Operacionais. Editora LTC.",
+          "chave": "silberschatzagalvinpbaergagnegfundamentosdesistemasoperacionaisltc"
+        },
+        {
+          "texto": "TANENBAUM, A.S. Sistemas Operacionais Modernos. Editora Prentice Hall.",
+          "chave": "tanenbaumassistemasoperacionaismodernosprenticehall"
+        },
+        {
+          "texto": "STALLINGS, W. Operating Systems: internals and design principles. Editora Prentice Hall.",
+          "chave": "stallingswoperatingsystemsinternalsanddesignprinciplesprenticehall"
+        },
+        {
+          "texto": "MACHADO, Francis B.; MAIA, Luiz P. Arquitetura de Sistemas Operacionais. LTC Editora.",
+          "chave": "machadofrancisbmaialuizparquiteturadesistemasoperacionaisltc"
+        }
       ],
       "bibliografiaComplementar": [
-        "SILBERSCHATZ, A; GALVIN, P. Baer; GAGNE, G. Sistemas Operacionais com Java. Elsevier.",
-        "TANEMBAUM, A. S. Sistemas Operacionais: projeto e implementação. Bookman.",
-        "FILHO, João Eriberto Mota. Descobrindo o Linux. Novatec Editora.",
-        "STANEK, William R.. WINDOWS SERVER 2008: GUIA COMPLETO. BOOKMAN: Porto alegre.",
-        "WARD, Brian. Como o Linux Funciona: O que todo Superusuário deveria saber. Editora NOVATEC."
+        {
+          "texto": "SILBERSCHATZ, A; GALVIN, P. Baer; GAGNE, G. Sistemas Operacionais com Java. Elsevier.",
+          "chave": "silberschatzagalvinpbaergagnegsistemasoperacionaiscomjavaelsevier"
+        },
+        {
+          "texto": "TANEMBAUM, A. S. Sistemas Operacionais: projeto e implementação. Bookman.",
+          "chave": "tanembaumassistemasoperacionaisprojetoeimplementacaobookman"
+        },
+        {
+          "texto": "FILHO, João Eriberto Mota. Descobrindo o Linux. Novatec Editora.",
+          "chave": "filhojoaoeribertomotadescobrindoolinuxnovatec"
+        },
+        {
+          "texto": "STANEK, William R.. WINDOWS SERVER 2008: GUIA COMPLETO. BOOKMAN: Porto alegre.",
+          "chave": "stanekwilliamrwindowsserver2008guiacompletobookmanportoalegre"
+        },
+        {
+          "texto": "WARD, Brian. Como o Linux Funciona: O que todo Superusuário deveria saber. Editora NOVATEC.",
+          "chave": "wardbriancomoolinuxfuncionaoquetodosuperusuariodeveriasabernovatec"
+        }
       ]
     },
     "ESTD": {
@@ -428,16 +764,40 @@
         "Algoritmos Recursivos"
       ],
       "bibliografiaBasica": [
-        "VILLAS, M. et. al. Estrutura de Dados - Conceitos e Técnicas de Implementação. Editora Campus.",
-        "VELOSO, P. et al. Estruturas de Dados. Editora Campus.",
-        "FARRER, Harry. Programação Estruturada e Estruturas de Dados. Editora Campus."
+        {
+          "texto": "VILLAS, M. et. al. Estrutura de Dados - Conceitos e Técnicas de Implementação. Editora Campus.",
+          "chave": "villasmetalestruturadedadosconceitosetecnicasdeimplementacaocampus"
+        },
+        {
+          "texto": "VELOSO, P. et al. Estruturas de Dados. Editora Campus.",
+          "chave": "velosopetalestruturasdedadoscampus"
+        },
+        {
+          "texto": "FARRER, Harry. Programação Estruturada e Estruturas de Dados. Editora Campus.",
+          "chave": "farrerharryprogramacaoestruturadaeestruturasdedadoscampus"
+        }
       ],
       "bibliografiaComplementar": [
-        "SEBESTA, Robert W. Conceitos de linguagens de programação. Editora Bookman",
-        "LAGES, Newton A. de Castilho. Algoritmos e Estruturas de Dados. LTC.",
-        "TUCKER, Allen B; NOONAN, Robert E. Linguagens de programação: princípios e paradigmas. McGraw-Hill.",
-        "BARRY, Paul. Use a Cabeça Programação. ALTA BOOKS.",
-        "MANZANO, Jose Augusto N. G.. Algoritmos: Logica para Desenvolvimento de Programacao de Computadores. ERICA."
+        {
+          "texto": "SEBESTA, Robert W. Conceitos de linguagens de programação. Editora Bookman",
+          "chave": "sebestarobertwconceitosdelinguagensdeprogramacaobookman"
+        },
+        {
+          "texto": "LAGES, Newton A. de Castilho. Algoritmos e Estruturas de Dados. LTC.",
+          "chave": "lagesnewtonadecastilhoalgoritmoseestruturasdedadosltc"
+        },
+        {
+          "texto": "TUCKER, Allen B; NOONAN, Robert E. Linguagens de programação: princípios e paradigmas. McGraw-Hill.",
+          "chave": "tuckerallenbnoonanrobertelinguagensdeprogramacaoprincipioseparadigmasmcgrawhill"
+        },
+        {
+          "texto": "BARRY, Paul. Use a Cabeça Programação. ALTA BOOKS.",
+          "chave": "barrypauluseacabecaprogramacaoaltabooks"
+        },
+        {
+          "texto": "MANZANO, Jose Augusto N. G.. Algoritmos: Logica para Desenvolvimento de Programacao de Computadores. ERICA.",
+          "chave": "manzanojoseaugustongalgoritmoslogicaparadesenvolvimentodeprogramacaodecomputadoreserica"
+        }
       ]
     },
     "METC": {
@@ -460,16 +820,40 @@
         "Normas da ABNT"
       ],
       "bibliografiaBasica": [
-        "MARCONI, M. A.; LAKATOS, E. M. Metodologia Científica. Editora Atlas.",
-        "WAZLAWICK, R. S. Metodologia da Pesquisa Científica em Computação. Editora Elsevier.",
-        "SAMPIERI, R.H. Metodologia de Pesquisa. São Paulo: Penso."
+        {
+          "texto": "MARCONI, M. A.; LAKATOS, E. M. Metodologia Científica. Editora Atlas.",
+          "chave": "marconimalakatosemmetodologiacientificaatlas"
+        },
+        {
+          "texto": "WAZLAWICK, R. S. Metodologia da Pesquisa Científica em Computação. Editora Elsevier.",
+          "chave": "wazlawickrsmetodologiadapesquisacientificaemcomputacaoelsevier"
+        },
+        {
+          "texto": "SAMPIERI, R.H. Metodologia de Pesquisa. São Paulo: Penso.",
+          "chave": "sampierirhmetodologiadepesquisasaopaulopenso"
+        }
       ],
       "bibliografiaComplementar": [
-        "CRESWELL, J. W. Projeto de Pesquisa: Métodos Quantitativos, Qualitativos e Mistos. Editora Artmed.",
-        "CERVO, A. L. Metodologia Científica. Editora Pearson.",
-        "COLLIS, J.; HUSSEY, R. Pesquisa em Administração. Editora Bookman.",
-        "RICHARDSON, R. J. Pesquisa Social: Métodos e Técnicas. Editora Atlas.",
-        "YIN, R. Estudo de Caso. Bookman."
+        {
+          "texto": "CRESWELL, J. W. Projeto de Pesquisa: Métodos Quantitativos, Qualitativos e Mistos. Editora Artmed.",
+          "chave": "creswelljwprojetodepesquisametodosquantitativosqualitativosemistosartmed"
+        },
+        {
+          "texto": "CERVO, A. L. Metodologia Científica. Editora Pearson.",
+          "chave": "cervoalmetodologiacientificapearson"
+        },
+        {
+          "texto": "COLLIS, J.; HUSSEY, R. Pesquisa em Administração. Editora Bookman.",
+          "chave": "collisjhusseyrpesquisaemadministracaobookman"
+        },
+        {
+          "texto": "RICHARDSON, R. J. Pesquisa Social: Métodos e Técnicas. Editora Atlas.",
+          "chave": "richardsonrjpesquisasocialmetodosetecnicasatlas"
+        },
+        {
+          "texto": "YIN, R. Estudo de Caso. Bookman.",
+          "chave": "yinrestudodecasobookman"
+        }
       ]
     },
     "IHCC": {
@@ -492,16 +876,40 @@
         "Storyboarding e Prototipação"
       ],
       "bibliografiaBasica": [
-        "BARBOSA, Simone D. J.; DA SILVA, Bruno S. Interação Humano-Computador. Editora Campus-Elsevier.",
-        "BENYON, David . Interação Humano Computador. PEARSON / PRENTICE HALL.",
-        "PREECE, J.; ROGERS, I.; SHARP, H. Design de Interação: Além da Interação Humano- Computador; Editora Bookman."
+        {
+          "texto": "BARBOSA, Simone D. J.; DA SILVA, Bruno S. Interação Humano-Computador. Editora Campus-Elsevier.",
+          "chave": "barbosasimonedjdasilvabrunosinteracaohumanocomputadorcampuselsevier"
+        },
+        {
+          "texto": "BENYON, David . Interação Humano Computador. PEARSON / PRENTICE HALL.",
+          "chave": "benyondavidinteracaohumanocomputadorpearsonprenticehall"
+        },
+        {
+          "texto": "PREECE, J.; ROGERS, I.; SHARP, H. Design de Interação: Além da Interação Humano- Computador; Editora Bookman.",
+          "chave": "preecejrogersisharphdesigndeinteracaoalemdainteracaohumanocomputadorbookman"
+        }
       ],
       "bibliografiaComplementar": [
-        "DA ROCHA, H. V.; BARANAUSKAS, M.C.C. Design e Avaliação de Interfaces Humano- Computador. Escola de Computação.",
-        "HARTSON, Rex. The UX Book: Process and Guidelines for Ensuring a Quality User Experience. Morgan Kaufmann.",
-        "SHNEIDERMAN, Ben. Designing the User Interface: strategies for effective human- computer interaction. Addison Wesley Longman.",
-        "SILVA, Mauricio Samy. Web Design Responsivo: Aprenda a Criar Sites que se Adaptam Automaticamente a Qualquer Dispositivo.",
-        "GALITZ, Wilbert O.. The Essential Guide to User Interface Design: An Introduction to GUI Design Principles and Techniques."
+        {
+          "texto": "DA ROCHA, H. V.; BARANAUSKAS, M.C.C. Design e Avaliação de Interfaces Humano- Computador. Escola de Computação.",
+          "chave": "darochahvbaranauskasmccdesigneavaliacaodeinterfaceshumanocomputadorescoladecomputacao"
+        },
+        {
+          "texto": "HARTSON, Rex. The UX Book: Process and Guidelines for Ensuring a Quality User Experience. Morgan Kaufmann.",
+          "chave": "hartsonrextheuxbookprocessandguidelinesforensuringaqualityuserexperiencemorgankaufmann"
+        },
+        {
+          "texto": "SHNEIDERMAN, Ben. Designing the User Interface: strategies for effective human- computer interaction. Addison Wesley Longman.",
+          "chave": "shneidermanbendesigningtheuserinterfacestrategiesforeffectivehumancomputerinteractionaddisonwesleylongman"
+        },
+        {
+          "texto": "SILVA, Mauricio Samy. Web Design Responsivo: Aprenda a Criar Sites que se Adaptam Automaticamente a Qualquer Dispositivo.",
+          "chave": "silvamauriciosamywebdesignresponsivoaprendaacriarsitesqueseadaptamautomaticamenteaqualquerdispositivo"
+        },
+        {
+          "texto": "GALITZ, Wilbert O.. The Essential Guide to User Interface Design: An Introduction to GUI Design Principles and Techniques.",
+          "chave": "galitzwilbertotheessentialguidetouserinterfacedesignanintroductiontoguidesignprinciplesandtechniques"
+        }
       ]
     },
     "APBD": {
@@ -518,16 +926,40 @@
         "Atividades do Administrador de Banco de Dados"
       ],
       "bibliografiaBasica": [
-        "ELMASRI, RAMEZ e NAVATHE, SHAMKANT. Sistemas de Banco de Dados; Pearsons Education.",
-        "HEUSER, Carlos Alberto. Projeto de Banco de Dados. Bookman.",
-        "ANGELOTTI, Elsini Simoni. Banco de Dados."
+        {
+          "texto": "ELMASRI, RAMEZ e NAVATHE, SHAMKANT. Sistemas de Banco de Dados; Pearsons Education.",
+          "chave": "elmasriramezenavatheshamkantsistemasdebancodedadospearsonseducation"
+        },
+        {
+          "texto": "HEUSER, Carlos Alberto. Projeto de Banco de Dados. Bookman.",
+          "chave": "heusercarlosalbertoprojetodebancodedadosbookman"
+        },
+        {
+          "texto": "ANGELOTTI, Elsini Simoni. Banco de Dados.",
+          "chave": "angelottielsinisimonibancodedados"
+        }
       ],
       "bibliografiaComplementar": [
-        "LYNN, Beighley. Use a Cabeça SQL. O’Reilly.",
-        "DATE, C.J. Introdução a Sistemas de Banco de Dados. Editora Campus.",
-        "CARVALHO, Vinicius. MYSQL. Casa do Código.",
-        "KORTH, Henry F. SILBERCHATZ, Abraham SUDARSHAN, S. Sistema de Banco de Dados.",
-        "FANDERUFF, Damaris. Dominando o Oracle 9i – Modelagem de Desenvolvimento; Pearsons Education."
+        {
+          "texto": "LYNN, Beighley. Use a Cabeça SQL. O’Reilly.",
+          "chave": "lynnbeighleyuseacabecasqloreilly"
+        },
+        {
+          "texto": "DATE, C.J. Introdução a Sistemas de Banco de Dados. Editora Campus.",
+          "chave": "datecjintroducaoasistemasdebancodedadoscampus"
+        },
+        {
+          "texto": "CARVALHO, Vinicius. MYSQL. Casa do Código.",
+          "chave": "carvalhoviniciusmysqlcasadocodigo"
+        },
+        {
+          "texto": "KORTH, Henry F. SILBERCHATZ, Abraham SUDARSHAN, S. Sistema de Banco de Dados.",
+          "chave": "korthhenryfsilberchatzabrahamsudarshanssistemadebancodedados"
+        },
+        {
+          "texto": "FANDERUFF, Damaris. Dominando o Oracle 9i – Modelagem de Desenvolvimento; Pearsons Education.",
+          "chave": "fanderuffdamarisdominandoooracle9imodelagemdedesenvolvimentopearsonseducation"
+        }
       ]
     },
     "FRDC": {
@@ -552,16 +984,42 @@
         "Projeto de redes"
       ],
       "bibliografiaBasica": [
-        "KUROSE, James F.; ROSS, Keith W. Redes de Computadores e a Internet – Uma Abordagem Top-Down, Editora Pearson.",
-        "SOARES, Luís Fernando et al, Das LANs, MANs, WANs às Redes ATM, Editora Campus.",
-        "TANENBAUM, Andrew S.; WETHERALL, David. Redes de Computadores. Editora Pearson."
+        {
+          "texto": "KUROSE, James F.; ROSS, Keith W. Redes de Computadores e a Internet – Uma Abordagem Top-Down, Editora Pearson.",
+          "chave": "kurosejamesfrosskeithwredesdecomputadoreseainternetumaabordagemtopdownpearson"
+        },
+        {
+          "texto": "SOARES, Luís Fernando et al, Das LANs, MANs, WANs às Redes ATM, Editora Campus.",
+          "chave": "soaresluisfernandoetaldaslansmanswansasredesatmcampus"
+        },
+        {
+          "texto": "TANENBAUM, Andrew S.; WETHERALL, David. Redes de Computadores. Editora Pearson.",
+          "chave": "tanenbaumandrewswetheralldavidredesdecomputadorespearson"
+        }
       ],
       "bibliografiaComplementar": [
-        "GASPARINI, A. F. L. et al. Redes Metropolitanas e de Longa Distância. Editora Erica.",
-        "CHIOZOTTO, M. et al. TCP/IP – Tecnologia e Implementação. Editora Erica.",
-        "EIA/TIA 942 - Telecomunications Infrastructure Standarts for Datacenters. Disponível em http://www.ieee802.org/3/hssg/public/nov06/diminico_01_1106.pdf.",
-        "MOTA FILHO, João Eriberto. Analise de Tráfego em Redes TCP/IP: Utilize Tcdump na Análise de Tráfegos em Qualquer Sistema Operacional.",
-        "FOROUZAN, Behrouz A. MOSHARRAF, Firouz. Redes de Computadores: Uma Abordagem Top-Down."
+        {
+          "texto": "GASPARINI, A. F. L. et al. Redes Metropolitanas e de Longa Distância. Editora Erica.",
+          "chave": "gaspariniafletalredesmetropolitanasedelongadistanciaerica"
+        },
+        {
+          "texto": "CHIOZOTTO, M. et al. TCP/IP – Tecnologia e Implementação. Editora Erica.",
+          "chave": "chiozottometaltcpiptecnologiaeimplementacaoerica"
+        },
+        {
+          "texto": "EIA/TIA 942 - Telecomunications Infrastructure Standarts for Datacenters. Disponível em http://www.ieee802.org/3/hssg/public/nov06/diminico_01_1106.pdf.",
+          "chave": "eiatia942telecomunicationsinfrastructurestandartsfordatacenters",
+          "url": "https://www.ieee802.org/3/hssg/public/nov06/diminico_01_1106.pdf",
+          "tipoLink": "livre"
+        },
+        {
+          "texto": "MOTA FILHO, João Eriberto. Analise de Tráfego em Redes TCP/IP: Utilize Tcdump na Análise de Tráfegos em Qualquer Sistema Operacional.",
+          "chave": "motafilhojoaoeribertoanalisedetrafegoemredestcpiputilizetcdumpnaanalisedetrafegosemqualquersistemaoperacional"
+        },
+        {
+          "texto": "FOROUZAN, Behrouz A. MOSHARRAF, Firouz. Redes de Computadores: Uma Abordagem Top-Down.",
+          "chave": "forouzanbehrouzamosharraffirouzredesdecomputadoresumaabordagemtopdown"
+        }
       ]
     },
     "POOB": {
@@ -585,17 +1043,44 @@
         "Tratamento de Exceções"
       ],
       "bibliografiaBasica": [
-        "DEITEL,H., DEITEL, P.. Java - Como programar. Prentice Hall.",
-        "HORSTMANN, Cay S. Core Java Volume I - Fundamentos. Prentice Hall.",
-        "TURINI, Rodrigo. Desbravando Java e Orientação a Objetos: Um guia para o iniciante da linguagem. Casa do Código.",
-        "SIERRA, Kathy. Use a cabeça Java. Alta Books."
+        {
+          "texto": "DEITEL,H., DEITEL, P.. Java - Como programar. Prentice Hall.",
+          "chave": "deitelhdeitelpjavacomoprogramarprenticehall"
+        },
+        {
+          "texto": "HORSTMANN, Cay S. Core Java Volume I - Fundamentos. Prentice Hall.",
+          "chave": "horstmanncayscorejavavolumeifundamentosprenticehall"
+        },
+        {
+          "texto": "TURINI, Rodrigo. Desbravando Java e Orientação a Objetos: Um guia para o iniciante da linguagem. Casa do Código.",
+          "chave": "turinirodrigodesbravandojavaeorientacaoaobjetosumguiaparaoiniciantedalinguagemcasadocodigo"
+        },
+        {
+          "texto": "SIERRA, Kathy. Use a cabeça Java. Alta Books.",
+          "chave": "sierrakathyuseacabecajavaaltabooks"
+        }
       ],
       "bibliografiaComplementar": [
-        "LAGES, Newton A. de Castilho. ALGORITMOS E ESTRUTURAS DE DADOS",
-        "HORSTMANN, Cay S. Core Java, Volume II - Advanced Feature. Prentice Hall.",
-        "Horstmann, Cay S.. Core Java for the Impatient. 1. Addison-Wesley Professional.",
-        "REIS, Anthony J. dos. COMPILER CONSTRUCTION USING JAVA, JAVA CC, AND YARC.",
-        "SEBESTA, Robert W.. CONCEITOS DE LINGUAGEM DE PROGRAMACAO."
+        {
+          "texto": "LAGES, Newton A. de Castilho. ALGORITMOS E ESTRUTURAS DE DADOS",
+          "chave": "lagesnewtonadecastilhoalgoritmoseestruturasdedados"
+        },
+        {
+          "texto": "HORSTMANN, Cay S. Core Java, Volume II - Advanced Feature. Prentice Hall.",
+          "chave": "horstmanncayscorejavavolumeiiadvancedfeatureprenticehall"
+        },
+        {
+          "texto": "Horstmann, Cay S.. Core Java for the Impatient. 1. Addison-Wesley Professional.",
+          "chave": "horstmanncayscorejavafortheimpatient1addisonwesleyprofessional"
+        },
+        {
+          "texto": "REIS, Anthony J. dos. COMPILER CONSTRUCTION USING JAVA, JAVA CC, AND YARC.",
+          "chave": "reisanthonyjdoscompilerconstructionusingjavajavaccandyarc"
+        },
+        {
+          "texto": "SEBESTA, Robert W.. CONCEITOS DE LINGUAGEM DE PROGRAMACAO.",
+          "chave": "sebestarobertwconceitosdelinguagemdeprogramacao"
+        }
       ]
     },
     "GPTI": {
@@ -614,16 +1099,40 @@
         "Avaliação do desempenho"
       ],
       "bibliografiaBasica": [
-        "WALLER, G; HALLENBECK, G; RUBENSTRUCK, K. Excelência em Liderança para TI. M Books.",
-        "Barbieri, Ugo Franco. GESTÃO DE PESSOAS NAS ORGANIZAÇÕES: O Talento Humano na Sociedade da Informação. Editora Atlas.",
-        "Chiavenato, Idalberto. Gestão de Pessoas. Editora Manole."
+        {
+          "texto": "WALLER, G; HALLENBECK, G; RUBENSTRUCK, K. Excelência em Liderança para TI. M Books.",
+          "chave": "wallerghallenbeckgrubenstruckkexcelenciaemliderancaparatimbooks"
+        },
+        {
+          "texto": "Barbieri, Ugo Franco. GESTÃO DE PESSOAS NAS ORGANIZAÇÕES: O Talento Humano na Sociedade da Informação. Editora Atlas.",
+          "chave": "barbieriugofrancogestaodepessoasnasorganizacoesotalentohumanonasociedadedainformacaoatlas"
+        },
+        {
+          "texto": "Chiavenato, Idalberto. Gestão de Pessoas. Editora Manole.",
+          "chave": "chiavenatoidalbertogestaodepessoasmanole"
+        }
       ],
       "bibliografiaComplementar": [
-        "ELLIOT, Jay. Steve Jobs – O estilo de liderança para uma geração. Editora Lafonte.",
-        "POSNER, Barry; KOUZES, James M. O Desafio Da Liderança. Editora Elsevier.",
-        "TEJADA, José. Motivação e Liderança como fatores estratégicos de sucesso. Editora Educs.",
-        "CHIAVENATO, Idalberto. GESTÃO DE PESSOAS: O NOVO PAPEL DOS RECURSOS HUMANOS NAS ORGANIZAÇÕES. EDITORA ELSEVIER.",
-        "OLIVEIRA, José Arimatés de; MEDEIROS, Maria da Penha Machado de. GESTÃO DE PESSOAS NO SETOR PÚBLICO. EDITORA UFSC"
+        {
+          "texto": "ELLIOT, Jay. Steve Jobs – O estilo de liderança para uma geração. Editora Lafonte.",
+          "chave": "elliotjaystevejobsoestilodeliderancaparaumageracaolafonte"
+        },
+        {
+          "texto": "POSNER, Barry; KOUZES, James M. O Desafio Da Liderança. Editora Elsevier.",
+          "chave": "posnerbarrykouzesjamesmodesafiodaliderancaelsevier"
+        },
+        {
+          "texto": "TEJADA, José. Motivação e Liderança como fatores estratégicos de sucesso. Editora Educs.",
+          "chave": "tejadajosemotivacaoeliderancacomofatoresestrategicosdesucessoeducs"
+        },
+        {
+          "texto": "CHIAVENATO, Idalberto. GESTÃO DE PESSOAS: O NOVO PAPEL DOS RECURSOS HUMANOS NAS ORGANIZAÇÕES. EDITORA ELSEVIER.",
+          "chave": "chiavenatoidalbertogestaodepessoasonovopapeldosrecursoshumanosnasorganizacoeselsevier"
+        },
+        {
+          "texto": "OLIVEIRA, José Arimatés de; MEDEIROS, Maria da Penha Machado de. GESTÃO DE PESSOAS NO SETOR PÚBLICO. EDITORA UFSC",
+          "chave": "oliveirajosearimatesdemedeirosmariadapenhamachadodegestaodepessoasnosetorpublicoufsc"
+        }
       ]
     },
     "GVTI": {
@@ -638,16 +1147,40 @@
         "Relação entre Governança de TI e Governança Corporativa, Visão geral da implantação de Governança de TI com COBIT e ITIL, Ferramentas de implantação da Governança de TI"
       ],
       "bibliografiaBasica": [
-        "WEILL, Peter; ROSS, Jeanne. Governança de TI: Tecnologia da Informação. Editora M. Books.",
-        "Aguinaldo Aragon Fernandes. Vladimir Ferraz de Abreu. Implantando a Governança de TI - da Estratégia à Gestão dos Processos e Serviços. Editora Brasport.",
-        "RICARDO MANSUR. Governança Avançada de TI na Prática. Editora: Brasport."
+        {
+          "texto": "WEILL, Peter; ROSS, Jeanne. Governança de TI: Tecnologia da Informação. Editora M. Books.",
+          "chave": "weillpeterrossjeannegovernancadetitecnologiadainformacaombooks"
+        },
+        {
+          "texto": "Aguinaldo Aragon Fernandes. Vladimir Ferraz de Abreu. Implantando a Governança de TI - da Estratégia à Gestão dos Processos e Serviços. Editora Brasport.",
+          "chave": "aguinaldoaragonfernandesvladimirferrazdeabreuimplantandoagovernancadetidaestrategiaagestaodosprocessoseservicosbrasport"
+        },
+        {
+          "texto": "RICARDO MANSUR. Governança Avançada de TI na Prática. Editora: Brasport.",
+          "chave": "ricardomansurgovernancaavancadadetinapraticabrasport"
+        }
       ],
       "bibliografiaComplementar": [
-        "Alexandre Luna. Implantando Governança Ágil - MAnGve. Editora Brasport.",
-        "WEILL, Peter; ROSS, Jeanne W. Conhecimento em TI. M. Books.",
-        "Adriana Andrade; José Paschoal Rossetti. governança corporativa: fundamentos, desenvolvimento e tendências. Editora Atlas.",
-        "MOLINARO, L. F. R.; RAMOS, K. H. C. Gestão de tecnologia da informação: Governança de TI - Arquitetura e alinhamento entre sistemas de informação e o negócio. LTC.",
-        "CEPIK, M.; CANABARRO, D. R. Governança de TI - Transformando a Administração Pública no Brasil. CEGOV."
+        {
+          "texto": "Alexandre Luna. Implantando Governança Ágil - MAnGve. Editora Brasport.",
+          "chave": "alexandrelunaimplantandogovernancaagilmangvebrasport"
+        },
+        {
+          "texto": "WEILL, Peter; ROSS, Jeanne W. Conhecimento em TI. M. Books.",
+          "chave": "weillpeterrossjeannewconhecimentoemtimbooks"
+        },
+        {
+          "texto": "Adriana Andrade; José Paschoal Rossetti. governança corporativa: fundamentos, desenvolvimento e tendências. Editora Atlas.",
+          "chave": "adrianaandradejosepaschoalrossettigovernancacorporativafundamentosdesenvolvimentoetendenciasatlas"
+        },
+        {
+          "texto": "MOLINARO, L. F. R.; RAMOS, K. H. C. Gestão de tecnologia da informação: Governança de TI - Arquitetura e alinhamento entre sistemas de informação e o negócio. LTC.",
+          "chave": "molinarolfrramoskhcgestaodetecnologiadainformacaogovernancadetiarquiteturaealinhamentoentresistemasdeinformacaoeonegocioltc"
+        },
+        {
+          "texto": "CEPIK, M.; CANABARRO, D. R. Governança de TI - Transformando a Administração Pública no Brasil. CEGOV.",
+          "chave": "cepikmcanabarrodrgovernancadetitransformandoaadministracaopublicanobrasilcegov"
+        }
       ]
     },
     "TABD": {
@@ -665,16 +1198,40 @@
         "Bancos de Dados Emergentes"
       ],
       "bibliografiaBasica": [
-        "ELMASRI, RAMEZ e NAVATHE, SHAMKANT. Sistemas de Banco de Dados. Pearsons Education.",
-        "FANDERUFF, Damaris. Dominando o Oracle 9i – Modelagem de Desenvolvimento. Pearsons Education.",
-        "KIMBALL, Ralph. The Data Warehouse Toolkit – Ed. Makron Books."
+        {
+          "texto": "ELMASRI, RAMEZ e NAVATHE, SHAMKANT. Sistemas de Banco de Dados. Pearsons Education.",
+          "chave": "elmasriramezenavatheshamkantsistemasdebancodedadospearsonseducation"
+        },
+        {
+          "texto": "FANDERUFF, Damaris. Dominando o Oracle 9i – Modelagem de Desenvolvimento. Pearsons Education.",
+          "chave": "fanderuffdamarisdominandoooracle9imodelagemdedesenvolvimentopearsonseducation"
+        },
+        {
+          "texto": "KIMBALL, Ralph. The Data Warehouse Toolkit – Ed. Makron Books.",
+          "chave": "kimballralphthedatawarehousetoolkitmakronbooks"
+        }
       ],
       "bibliografiaComplementar": [
-        "DATE, C. J. Introdução a Sistemas de Banco de Dados. Ed. Campus.",
-        "ABBEY, Michel S.; ABRAMSON, Ian. Oracle 8i Data Warehouse. Ed. Campus.",
-        "MARK, Graves. Projeto de Banco de Dados com XML. Ed. Makron Books.",
-        "BARBIERI, C. BI2 - Business Intelligence: Modelagem & Qualidade. Editora Elsevier.",
-        "TON, Pong-Ning. Introdução ao Datamining: Mineração de Dados. Editora Ciência Moderna."
+        {
+          "texto": "DATE, C. J. Introdução a Sistemas de Banco de Dados. Ed. Campus.",
+          "chave": "datecjintroducaoasistemasdebancodedadoscampus"
+        },
+        {
+          "texto": "ABBEY, Michel S.; ABRAMSON, Ian. Oracle 8i Data Warehouse. Ed. Campus.",
+          "chave": "abbeymichelsabramsonianoracle8idatawarehousecampus"
+        },
+        {
+          "texto": "MARK, Graves. Projeto de Banco de Dados com XML. Ed. Makron Books.",
+          "chave": "markgravesprojetodebancodedadoscomxmlmakronbooks"
+        },
+        {
+          "texto": "BARBIERI, C. BI2 - Business Intelligence: Modelagem & Qualidade. Editora Elsevier.",
+          "chave": "barbiericbi2businessintelligencemodelagemqualidadeelsevier"
+        },
+        {
+          "texto": "TON, Pong-Ning. Introdução ao Datamining: Mineração de Dados. Editora Ciência Moderna.",
+          "chave": "tonpongningintroducaoaodataminingmineracaodedadoscienciamoderna"
+        }
       ]
     },
     "PGWB": {
@@ -692,16 +1249,40 @@
         "Geração de relatórios online"
       ],
       "bibliografiaBasica": [
-        "TURINI, Rodrigo. Desbravando Java e Orientação a Objetos: Um guia para o iniciante da linguagem. Casa do Código.",
-        "CORNELL, Gary; HORSTMANN, Cay S. CORE JAVA 2: Recursos Avançados. Makron Books.",
-        "LUCKOW, D. Programação Java para Web. Novatec."
+        {
+          "texto": "TURINI, Rodrigo. Desbravando Java e Orientação a Objetos: Um guia para o iniciante da linguagem. Casa do Código.",
+          "chave": "turinirodrigodesbravandojavaeorientacaoaobjetosumguiaparaoiniciantedalinguagemcasadocodigo"
+        },
+        {
+          "texto": "CORNELL, Gary; HORSTMANN, Cay S. CORE JAVA 2: Recursos Avançados. Makron Books.",
+          "chave": "cornellgaryhorstmanncayscorejava2recursosavancadosmakronbooks"
+        },
+        {
+          "texto": "LUCKOW, D. Programação Java para Web. Novatec.",
+          "chave": "luckowdprogramacaojavaparawebnovatec"
+        }
       ],
       "bibliografiaComplementar": [
-        "COULOURIS, George; DOLLIMORE, Jean and KINDBERG, Tim. Distributed Systems: Concepts and Design. Addison-Wesley.",
-        "CERLI, Antonio. Desenvolvendo Web Sites Dinâmicos: PHP, ASP e JSP. Campus.",
-        "SOMMERVILLE, Ian. Engenharia de Software. Pearson Addison Wesley.",
-        "SANTOS, R. Introdução a Programação Orientada a Objetos Usando JAVA. ELSEVIER.",
-        "NIEDERAUER, J. PHP Para quem Conhece PHP: Recursos Avançados para a Criação de Websites Dinâmicos. NOVATEC."
+        {
+          "texto": "COULOURIS, George; DOLLIMORE, Jean and KINDBERG, Tim. Distributed Systems: Concepts and Design. Addison-Wesley.",
+          "chave": "coulourisgeorgedollimorejeanandkindbergtimdistributedsystemsconceptsanddesignaddisonwesley"
+        },
+        {
+          "texto": "CERLI, Antonio. Desenvolvendo Web Sites Dinâmicos: PHP, ASP e JSP. Campus.",
+          "chave": "cerliantoniodesenvolvendowebsitesdinamicosphpaspejspcampus"
+        },
+        {
+          "texto": "SOMMERVILLE, Ian. Engenharia de Software. Pearson Addison Wesley.",
+          "chave": "sommervilleianengenhariadesoftwarepearsonaddisonwesley"
+        },
+        {
+          "texto": "SANTOS, R. Introdução a Programação Orientada a Objetos Usando JAVA. ELSEVIER.",
+          "chave": "santosrintroducaoaprogramacaoorientadaaobjetosusandojavaelsevier"
+        },
+        {
+          "texto": "NIEDERAUER, J. PHP Para quem Conhece PHP: Recursos Avançados para a Criação de Websites Dinâmicos. NOVATEC.",
+          "chave": "niederauerjphpparaquemconhecephprecursosavancadosparaacriacaodewebsitesdinamicosnovatec"
+        }
       ]
     },
     "APSI": {
@@ -722,16 +1303,40 @@
         "Desenvolvimento de um Projeto de Software"
       ],
       "bibliografiaBasica": [
-        "BEZERRA, Eduardo. Princípios de Análise e Projeto de Sistemas com UML. Elsevier.",
-        "SOMMERVILLE, Ian. Engenharia de Software. Pearson.",
-        "PROJECT MANAGEMENT INSTITUTE. Project Management Body of Knowledge."
+        {
+          "texto": "BEZERRA, Eduardo. Princípios de Análise e Projeto de Sistemas com UML. Elsevier.",
+          "chave": "bezerraeduardoprincipiosdeanaliseeprojetodesistemascomumlelsevier"
+        },
+        {
+          "texto": "SOMMERVILLE, Ian. Engenharia de Software. Pearson.",
+          "chave": "sommervilleianengenhariadesoftwarepearson"
+        },
+        {
+          "texto": "PROJECT MANAGEMENT INSTITUTE. Project Management Body of Knowledge.",
+          "chave": "projectmanagementinstituteprojectmanagementbodyofknowledge"
+        }
       ],
       "bibliografiaComplementar": [
-        "PRESSMAN, Roger. Engenharia de Software. McGraw-Hill, 2006.",
-        "VALERIANO, Dalton. Moderno Gerenciamento de Projetos. Prentice Hall, São Paulo, 2005.",
-        "SWEBOK. Software Engineering Book of Knowledge. IEEE Computer Society.",
-        "DENNIS, A.; WIXON, B. H.. Análise e Projeto de Sistemas. LTC.",
-        "WAZLAWICK, Raul Sidnei. Análise e Projeto de Sistemas de Informação Orientados a Objetos. ELSEVIER."
+        {
+          "texto": "PRESSMAN, Roger. Engenharia de Software. McGraw-Hill, 2006.",
+          "chave": "pressmanrogerengenhariadesoftwaremcgrawhill2006"
+        },
+        {
+          "texto": "VALERIANO, Dalton. Moderno Gerenciamento de Projetos. Prentice Hall, São Paulo, 2005.",
+          "chave": "valerianodaltonmodernogerenciamentodeprojetosprenticehallsaopaulo2005"
+        },
+        {
+          "texto": "SWEBOK. Software Engineering Book of Knowledge. IEEE Computer Society.",
+          "chave": "sweboksoftwareengineeringbookofknowledgeieeecomputersociety"
+        },
+        {
+          "texto": "DENNIS, A.; WIXON, B. H.. Análise e Projeto de Sistemas. LTC.",
+          "chave": "dennisawixonbhanaliseeprojetodesistemasltc"
+        },
+        {
+          "texto": "WAZLAWICK, Raul Sidnei. Análise e Projeto de Sistemas de Informação Orientados a Objetos. ELSEVIER.",
+          "chave": "wazlawickraulsidneianaliseeprojetodesistemasdeinformacaoorientadosaobjetoselsevier"
+        }
       ]
     },
     "GPJT": {
@@ -755,16 +1360,40 @@
         "Tendências em gestão de Projetos"
       ],
       "bibliografiaBasica": [
-        "VALERIANO, D. L. Gerenciamento Estratégico e Administração por Projetos. Ed. Pearson",
-        "PHILLIPS, Joseph. Gerência de Projetos de Tecnologia da Informação Ed. Campus.",
-        "PMBOK - Project Management Institute. PMI."
+        {
+          "texto": "VALERIANO, D. L. Gerenciamento Estratégico e Administração por Projetos. Ed. Pearson",
+          "chave": "valerianodlgerenciamentoestrategicoeadministracaoporprojetospearson"
+        },
+        {
+          "texto": "PHILLIPS, Joseph. Gerência de Projetos de Tecnologia da Informação Ed. Campus.",
+          "chave": "phillipsjosephgerenciadeprojetosdetecnologiadainformacaocampus"
+        },
+        {
+          "texto": "PMBOK - Project Management Institute. PMI.",
+          "chave": "pmbokprojectmanagementinstitutepmi"
+        }
       ],
       "bibliografiaComplementar": [
-        "PRESSMAN, R. S. – Engenharia de Software. Pearson Education.",
-        "SOMMERVILLE, I. – Engenharia de Software. Addison-Wesley.",
-        "BRITTO, Gart Capote de. BPM Para Todos - Uma Visão Geral Abrangente, Objetiva e Esclarecedora sobre Gerenciamento de Processos de Negócio. Bookess.",
-        "VIEIRA, Marconi Fábio. GERENCIAMENTO DE PROJETOS DE TECNOLOGIA DA INFORMACÃO. Editora ELSEVIER.",
-        "MARTINS, José Carlos Cordeiro. GERENCIANDO PROJETOS DE DESENVOLVIMENTO DE SOFTWARE COM PMI, RUP E UM. Editora BRASPORT."
+        {
+          "texto": "PRESSMAN, R. S. – Engenharia de Software. Pearson Education.",
+          "chave": "pressmanrsengenhariadesoftwarepearsoneducation"
+        },
+        {
+          "texto": "SOMMERVILLE, I. – Engenharia de Software. Addison-Wesley.",
+          "chave": "sommervilleiengenhariadesoftwareaddisonwesley"
+        },
+        {
+          "texto": "BRITTO, Gart Capote de. BPM Para Todos - Uma Visão Geral Abrangente, Objetiva e Esclarecedora sobre Gerenciamento de Processos de Negócio. Bookess.",
+          "chave": "brittogartcapotedebpmparatodosumavisaogeralabrangenteobjetivaeesclarecedorasobregerenciamentodeprocessosdenegociobookess"
+        },
+        {
+          "texto": "VIEIRA, Marconi Fábio. GERENCIAMENTO DE PROJETOS DE TECNOLOGIA DA INFORMACÃO. Editora ELSEVIER.",
+          "chave": "vieiramarconifabiogerenciamentodeprojetosdetecnologiadainformacaoelsevier"
+        },
+        {
+          "texto": "MARTINS, José Carlos Cordeiro. GERENCIANDO PROJETOS DE DESENVOLVIMENTO DE SOFTWARE COM PMI, RUP E UM. Editora BRASPORT.",
+          "chave": "martinsjosecarloscordeirogerenciandoprojetosdedesenvolvimentodesoftwarecompmirupeumbrasport"
+        }
       ]
     },
     "EMPD": {
@@ -792,16 +1421,40 @@
         "Modelo de negócios"
       ],
       "bibliografiaBasica": [
-        "RIES, Eric. A Startup Enxuta - Como Os Empreendedores Atuais Utilizam a Inovação contínua para criar empresas extremamente bem-sucedidas. Lua de Papel.",
-        "MATOS, Carlos; Telles, André. O Empreendedor Viável. Leya Brasil.",
-        "CHIAVENATO, Idalberto; Empreendedorismo - Dando Asas ao Espírito Empreendedor. Manole"
+        {
+          "texto": "RIES, Eric. A Startup Enxuta - Como Os Empreendedores Atuais Utilizam a Inovação contínua para criar empresas extremamente bem-sucedidas. Lua de Papel.",
+          "chave": "riesericastartupenxutacomoosempreendedoresatuaisutilizamainovacaocontinuaparacriarempresasextremamentebemsucedidasluadepapel"
+        },
+        {
+          "texto": "MATOS, Carlos; Telles, André. O Empreendedor Viável. Leya Brasil.",
+          "chave": "matoscarlostellesandreoempreendedorviavelleyabrasil"
+        },
+        {
+          "texto": "CHIAVENATO, Idalberto; Empreendedorismo - Dando Asas ao Espírito Empreendedor. Manole",
+          "chave": "chiavenatoidalbertoempreendedorismodandoasasaoespiritoempreendedormanole"
+        }
       ],
       "bibliografiaComplementar": [
-        "DOLABELA, Fernando. O Segredo de Luísa. Cultura.",
-        "DEGEN, Ronald. O Empreendedor. McGraw Hill.",
-        "Dornelas, José Carlos Assis. Empreendedorismo – Transformando idéias em negócios. Elsevier.",
-        "DEGEN, Ronald Jean. Empreendedor: Empreender Como Opção de Carreira. PEARSON.",
-        "HISRICH, Robert D.; PETER, Michael P.; SHEPHED, Dean A. Empreendedorismo. MC GRAW- HILL."
+        {
+          "texto": "DOLABELA, Fernando. O Segredo de Luísa. Cultura.",
+          "chave": "dolabelafernandoosegredodeluisacultura"
+        },
+        {
+          "texto": "DEGEN, Ronald. O Empreendedor. McGraw Hill.",
+          "chave": "degenronaldoempreendedormcgrawhill"
+        },
+        {
+          "texto": "Dornelas, José Carlos Assis. Empreendedorismo – Transformando idéias em negócios. Elsevier.",
+          "chave": "dornelasjosecarlosassisempreendedorismotransformandoideiasemnegocioselsevier"
+        },
+        {
+          "texto": "DEGEN, Ronald Jean. Empreendedor: Empreender Como Opção de Carreira. PEARSON.",
+          "chave": "degenronaldjeanempreendedorempreendercomoopcaodecarreirapearson"
+        },
+        {
+          "texto": "HISRICH, Robert D.; PETER, Michael P.; SHEPHED, Dean A. Empreendedorismo. MC GRAW- HILL.",
+          "chave": "hisrichrobertdpetermichaelpshepheddeanaempreendedorismomcgrawhill"
+        }
       ]
     },
     "PISI": {
@@ -815,16 +1468,40 @@
         "Aplicação dos conteúdos programáticos envolvendo todas os componentes curriculares do período na execução de um projeto interdisciplinar"
       ],
       "bibliografiaBasica": [
-        "ELMASRI, R; NAVATHE, S. Sistemas de Banco de Dados. Pearson Education.",
-        "PRESSMAN, R. S. – Engenharia de Software. Pearson Education.",
-        "SOMMERVILLE, I. – Engenharia de Software. Addison-Wesley."
+        {
+          "texto": "ELMASRI, R; NAVATHE, S. Sistemas de Banco de Dados. Pearson Education.",
+          "chave": "elmasrirnavathessistemasdebancodedadospearsoneducation"
+        },
+        {
+          "texto": "PRESSMAN, R. S. – Engenharia de Software. Pearson Education.",
+          "chave": "pressmanrsengenhariadesoftwarepearsoneducation"
+        },
+        {
+          "texto": "SOMMERVILLE, I. – Engenharia de Software. Addison-Wesley.",
+          "chave": "sommervilleiengenhariadesoftwareaddisonwesley"
+        }
       ],
       "bibliografiaComplementar": [
-        "KOSCIANSKI, A. Qualidade de Software: Aprenda as Metodologias e Técnicas Mais Modernas para o Desenvolvimento. NOVATEC.",
-        "TONSING, S. Engenharia de Software, FUTURA.",
-        "PHILLIPS, Joseph. Gerência de Projetos de Tecnologia da Informação. Ed. Campus.",
-        "GIDO, J.; CLEMENTS, J. Gestão de Projetos. Cengage Learning.",
-        "MATTOS, J. R. L. Gestão Tecnologia e Inovação - Uma Abordagem Prática. Saraiva."
+        {
+          "texto": "KOSCIANSKI, A. Qualidade de Software: Aprenda as Metodologias e Técnicas Mais Modernas para o Desenvolvimento. NOVATEC.",
+          "chave": "koscianskiaqualidadedesoftwareaprendaasmetodologiasetecnicasmaismodernasparaodesenvolvimentonovatec"
+        },
+        {
+          "texto": "TONSING, S. Engenharia de Software, FUTURA.",
+          "chave": "tonsingsengenhariadesoftwarefutura"
+        },
+        {
+          "texto": "PHILLIPS, Joseph. Gerência de Projetos de Tecnologia da Informação. Ed. Campus.",
+          "chave": "phillipsjosephgerenciadeprojetosdetecnologiadainformacaocampus"
+        },
+        {
+          "texto": "GIDO, J.; CLEMENTS, J. Gestão de Projetos. Cengage Learning.",
+          "chave": "gidojclementsjgestaodeprojetoscengagelearning"
+        },
+        {
+          "texto": "MATTOS, J. R. L. Gestão Tecnologia e Inovação - Uma Abordagem Prática. Saraiva.",
+          "chave": "mattosjrlgestaotecnologiaeinovacaoumaabordagempraticasaraiva"
+        }
       ]
     },
     "PDSW": {
@@ -845,16 +1522,40 @@
         "Gerenciamento de configuração"
       ],
       "bibliografiaBasica": [
-        "SOMMERVILLE, Ian. Engenharia de Software. Pearson Addison Wesley.",
-        "PRESSMAN, Roger. Engenharia de Software. McGraw-Hill.",
-        "MARTINS, José C.C. GERENCIANDO PROJETOS DE DESENVOLVIMENTO DE SOFTWARE COM PMI, RUP E UML. BRASPORT."
+        {
+          "texto": "SOMMERVILLE, Ian. Engenharia de Software. Pearson Addison Wesley.",
+          "chave": "sommervilleianengenhariadesoftwarepearsonaddisonwesley"
+        },
+        {
+          "texto": "PRESSMAN, Roger. Engenharia de Software. McGraw-Hill.",
+          "chave": "pressmanrogerengenhariadesoftwaremcgrawhill"
+        },
+        {
+          "texto": "MARTINS, José C.C. GERENCIANDO PROJETOS DE DESENVOLVIMENTO DE SOFTWARE COM PMI, RUP E UML. BRASPORT.",
+          "chave": "martinsjoseccgerenciandoprojetosdedesenvolvimentodesoftwarecompmirupeumlbrasport"
+        }
       ],
       "bibliografiaComplementar": [
-        "KOSCIANSKI, Andre; SOARES, Michel dos Santos. Qualidade de Software: Aprenda As Metodologias e Técnicas Mais Modernas Para o Desenvolvimento. NOVATEC.",
-        "TONSING, S. Engenharia de Software. FUTURA.",
-        "PHILLIPS, Joseph. Gerência de Projetos de Tecnologia da Informação. Ed. Campus.",
-        "WAZLAWICK, Raul Sidnei. Análise e Projetos de Sistemas de Informação Orientados a Objetos. Campus.",
-        "HUMBLE, J. farley, d. Entrega Contínua. Como Entregar Software de Forma Rápida e Confiável. Bookman."
+        {
+          "texto": "KOSCIANSKI, Andre; SOARES, Michel dos Santos. Qualidade de Software: Aprenda As Metodologias e Técnicas Mais Modernas Para o Desenvolvimento. NOVATEC.",
+          "chave": "koscianskiandresoaresmicheldossantosqualidadedesoftwareaprendaasmetodologiasetecnicasmaismodernasparaodesenvolvimentonovatec"
+        },
+        {
+          "texto": "TONSING, S. Engenharia de Software. FUTURA.",
+          "chave": "tonsingsengenhariadesoftwarefutura"
+        },
+        {
+          "texto": "PHILLIPS, Joseph. Gerência de Projetos de Tecnologia da Informação. Ed. Campus.",
+          "chave": "phillipsjosephgerenciadeprojetosdetecnologiadainformacaocampus"
+        },
+        {
+          "texto": "WAZLAWICK, Raul Sidnei. Análise e Projetos de Sistemas de Informação Orientados a Objetos. Campus.",
+          "chave": "wazlawickraulsidneianaliseeprojetosdesistemasdeinformacaoorientadosaobjetoscampus"
+        },
+        {
+          "texto": "HUMBLE, J. farley, d. Entrega Contínua. Como Entregar Software de Forma Rápida e Confiável. Bookman.",
+          "chave": "humblejfarleydentregacontinuacomoentregarsoftwaredeformarapidaeconfiavelbookman"
+        }
       ]
     },
     "GSEI": {
@@ -876,16 +1577,40 @@
         "Gestão de Pessoas em Segurança da Informação"
       ],
       "bibliografiaBasica": [
-        "SEMOLA, M. Gestão da Segurança da Informação - Uma visão executiva. Editora Campus.",
-        "COELHO et al. Gestão da Segurança da Informação - NBR 27001 e NBR 27002. Escola Superior de Redes.",
-        "BASTOS, A e CAUBIT, R. Gestão de Segurança da Informação - Uma Visão Executiva. Módulo Education Center."
+        {
+          "texto": "SEMOLA, M. Gestão da Segurança da Informação - Uma visão executiva. Editora Campus.",
+          "chave": "semolamgestaodasegurancadainformacaoumavisaoexecutivacampus"
+        },
+        {
+          "texto": "COELHO et al. Gestão da Segurança da Informação - NBR 27001 e NBR 27002. Escola Superior de Redes.",
+          "chave": "coelhoetalgestaodasegurancadainformacaonbr27001enbr27002escolasuperiorderedes"
+        },
+        {
+          "texto": "BASTOS, A e CAUBIT, R. Gestão de Segurança da Informação - Uma Visão Executiva. Módulo Education Center.",
+          "chave": "bastosaecaubitrgestaodesegurancadainformacaoumavisaoexecutivamoduloeducationcenter"
+        }
       ],
       "bibliografiaComplementar": [
-        "WADLOW, T. Segurança de Redes - Projeto e gerenciamento de redes seguras. Editora Campus.",
-        "Associação Brasileira de Normas Técnicas. NBR ISO/IEC 17799:2005 - Tecnologia da Informação – Técnicas de Segurança – Código de Prática para a Gestão da Segurança da Informação.",
-        "STALLINGS, William. Criptografia e Segurança de Redes: Princípios e Práticas. Editora Prentice-Hall.",
-        "SILVA, Gilson Marques da. SEGURANCA DA INFORMACAO PARA LEIGOS: COMO PROTEGER SEUS DADOS, MICRO E FAMILIARES NA INTERNET. Editora CIENCIA MODERNA. 2011",
-        "COMITE, Gestor da Internet no Brasil. CARTILHA DE SEGURANCA PARA INTERNET. Editora 2AB. 2008"
+        {
+          "texto": "WADLOW, T. Segurança de Redes - Projeto e gerenciamento de redes seguras. Editora Campus.",
+          "chave": "wadlowtsegurancaderedesprojetoegerenciamentoderedessegurascampus"
+        },
+        {
+          "texto": "Associação Brasileira de Normas Técnicas. NBR ISO/IEC 17799:2005 - Tecnologia da Informação – Técnicas de Segurança – Código de Prática para a Gestão da Segurança da Informação.",
+          "chave": "associacaobrasileiradenormastecnicasnbrisoiec177992005tecnologiadainformacaotecnicasdesegurancacodigodepraticaparaagestaodasegurancadainformacao"
+        },
+        {
+          "texto": "STALLINGS, William. Criptografia e Segurança de Redes: Princípios e Práticas. Editora Prentice-Hall.",
+          "chave": "stallingswilliamcriptografiaesegurancaderedesprincipiosepraticasprenticehall"
+        },
+        {
+          "texto": "SILVA, Gilson Marques da. SEGURANCA DA INFORMACAO PARA LEIGOS: COMO PROTEGER SEUS DADOS, MICRO E FAMILIARES NA INTERNET. Editora CIENCIA MODERNA. 2011",
+          "chave": "silvagilsonmarquesdasegurancadainformacaoparaleigoscomoprotegerseusdadosmicroefamiliaresnainternetcienciamoderna2011"
+        },
+        {
+          "texto": "COMITE, Gestor da Internet no Brasil. CARTILHA DE SEGURANCA PARA INTERNET. Editora 2AB. 2008",
+          "chave": "comitegestordainternetnobrasilcartilhadesegurancaparainternet2ab2008"
+        }
       ]
     },
     "PPAP": {
@@ -904,16 +1629,40 @@
         "Valores e ética no processo de pesquisa"
       ],
       "bibliografiaBasica": [
-        "CRESWELL, J. W. Projeto de Pesquisa: Métodos Quantitativos, Qualitativos e Mistos. Porto Alegre: Bookman.",
-        "WAZLAWICK, R. S. Metodologia da Pesquisa Científica em Computação. Rio de Janeiro: Elsevier.",
-        "SAMPIERI, R.H. Metodologia de Pesquisa. São Paulo: Penso."
+        {
+          "texto": "CRESWELL, J. W. Projeto de Pesquisa: Métodos Quantitativos, Qualitativos e Mistos. Porto Alegre: Bookman.",
+          "chave": "creswelljwprojetodepesquisametodosquantitativosqualitativosemistosportoalegrebookman"
+        },
+        {
+          "texto": "WAZLAWICK, R. S. Metodologia da Pesquisa Científica em Computação. Rio de Janeiro: Elsevier.",
+          "chave": "wazlawickrsmetodologiadapesquisacientificaemcomputacaoriodejaneiroelsevier"
+        },
+        {
+          "texto": "SAMPIERI, R.H. Metodologia de Pesquisa. São Paulo: Penso.",
+          "chave": "sampierirhmetodologiadepesquisasaopaulopenso"
+        }
       ],
       "bibliografiaComplementar": [
-        "CERVO, A. L. Metodologia Científica. 6 ed. São Paulo: Pearson.",
-        "GIL, A. C. Como elaborar projetos de pesquisa. Atlas.",
-        "DRESCH, A. Design Science Research – Método de Pesquisa para Avanço da Ciência e Tecnologia. Porto Alegre: Bookman.",
-        "NAKAGAWA, E. Revisão Sistemática de Literatura em Engenharia de Software. Elsevier.",
-        "CRESWELL, J.W.; CLARK, V.P.. Pesquisa de Métodos Mistos, São Paulo: Penso."
+        {
+          "texto": "CERVO, A. L. Metodologia Científica. 6 ed. São Paulo: Pearson.",
+          "chave": "cervoalmetodologiacientifica6saopaulopearson"
+        },
+        {
+          "texto": "GIL, A. C. Como elaborar projetos de pesquisa. Atlas.",
+          "chave": "gilaccomoelaborarprojetosdepesquisaatlas"
+        },
+        {
+          "texto": "DRESCH, A. Design Science Research – Método de Pesquisa para Avanço da Ciência e Tecnologia. Porto Alegre: Bookman.",
+          "chave": "dreschadesignscienceresearchmetododepesquisaparaavancodacienciaetecnologiaportoalegrebookman"
+        },
+        {
+          "texto": "NAKAGAWA, E. Revisão Sistemática de Literatura em Engenharia de Software. Elsevier.",
+          "chave": "nakagawaerevisaosistematicadeliteraturaemengenhariadesoftwareelsevier"
+        },
+        {
+          "texto": "CRESWELL, J.W.; CLARK, V.P.. Pesquisa de Métodos Mistos, São Paulo: Penso.",
+          "chave": "creswelljwclarkvppesquisademetodosmistossaopaulopenso"
+        }
       ]
     },
     "SIGE": {
@@ -928,16 +1677,40 @@
         "Conceitos de Vantagens Competitivas, Papéis Estratégicos para os Sistemas de Informação Gerencial e Metodologia para o desenvolvimento de Sistemas de Informações Gerenciais para dotar a empresa de vantagens competitiva"
       ],
       "bibliografiaBasica": [
-        "O’ BRIEN, James A. Sistemas de Informação e as Decisões Gerenciais na Era da Internet, 2ª. ed. São Paulo: Saraiva, 2010",
-        "REZENDE, Denis Alcides; ABREU, Aline França de. Tecnologia da informação aplicada a sistemas de informação empresariais: o papel estratégico da informação e dos sistemas de informação nas empresas. 6. ed. São Paulo: Atlas,2009",
-        "REBOUÇAS, Djalma de Pinho. Sistemas de informações gerenciais. São Paulo: Atlas, 2002."
+        {
+          "texto": "O’ BRIEN, James A. Sistemas de Informação e as Decisões Gerenciais na Era da Internet, 2ª. ed. São Paulo: Saraiva, 2010",
+          "chave": "obrienjamesasistemasdeinformacaoeasdecisoesgerenciaisnaeradainternet2saopaulosaraiva2010"
+        },
+        {
+          "texto": "REZENDE, Denis Alcides; ABREU, Aline França de. Tecnologia da informação aplicada a sistemas de informação empresariais: o papel estratégico da informação e dos sistemas de informação nas empresas. 6. ed. São Paulo: Atlas,2009",
+          "chave": "rezendedenisalcidesabreualinefrancadetecnologiadainformacaoaplicadaasistemasdeinformacaoempresariaisopapelestrategicodainformacaoedossistemasdeinformacaonasempresas6saopauloatlas2009"
+        },
+        {
+          "texto": "REBOUÇAS, Djalma de Pinho. Sistemas de informações gerenciais. São Paulo: Atlas, 2002.",
+          "chave": "reboucasdjalmadepinhosistemasdeinformacoesgerenciaissaopauloatlas2002"
+        }
       ],
       "bibliografiaComplementar": [
-        "LAUDON, K. C; LAUDON, J. P. Sistemas de Informação com Internet. 4ª. ed. Rio de Janeiro: LTC.",
-        "GORDON, Steven R.; GORDON, Judith. Sistemas de Informação: uma abordagem gerencial. Rio de Janeiro: LTC.",
-        "STAIR, Ralph M. Princípios de Sistemas de Informação: Uma Abordagem Gerencial. 4ª. ed. Rio de Janeiro: LTC.",
-        "LAUDON, Kenneth C. LAUDON, Jane P.. GERENCIAMENTO DE SISTEMAS DE INFORMACAO. Editora LTC.2001",
-        "CRUZ, Tadeu. SISTEMAS DE INFORMACOES GERENCIAIS: TECNOLOGIAS DA INFORMAÇAO E A EMPRESA DO SECULO XXI. Editora ATLAS. 2003"
+        {
+          "texto": "LAUDON, K. C; LAUDON, J. P. Sistemas de Informação com Internet. 4ª. ed. Rio de Janeiro: LTC.",
+          "chave": "laudonkclaudonjpsistemasdeinformacaocominternet4riodejaneiroltc"
+        },
+        {
+          "texto": "GORDON, Steven R.; GORDON, Judith. Sistemas de Informação: uma abordagem gerencial. Rio de Janeiro: LTC.",
+          "chave": "gordonstevenrgordonjudithsistemasdeinformacaoumaabordagemgerencialriodejaneiroltc"
+        },
+        {
+          "texto": "STAIR, Ralph M. Princípios de Sistemas de Informação: Uma Abordagem Gerencial. 4ª. ed. Rio de Janeiro: LTC.",
+          "chave": "stairralphmprincipiosdesistemasdeinformacaoumaabordagemgerencial4riodejaneiroltc"
+        },
+        {
+          "texto": "LAUDON, Kenneth C. LAUDON, Jane P.. GERENCIAMENTO DE SISTEMAS DE INFORMACAO. Editora LTC.2001",
+          "chave": "laudonkennethclaudonjanepgerenciamentodesistemasdeinformacaoltc2001"
+        },
+        {
+          "texto": "CRUZ, Tadeu. SISTEMAS DE INFORMACOES GERENCIAIS: TECNOLOGIAS DA INFORMAÇAO E A EMPRESA DO SECULO XXI. Editora ATLAS. 2003",
+          "chave": "cruztadeusistemasdeinformacoesgerenciaistecnologiasdainformacaoeaempresadoseculoxxiatlas2003"
+        }
       ]
     },
     "TOSI": {
@@ -967,16 +1740,40 @@
         "Comunicação de Resultados"
       ],
       "bibliografiaBasica": [
-        "CRESWELL, J. W. Projeto de Pesquisa: Métodos Quantitativos, Qualitativos e Mistos. Porto Alegre: Bookman.",
-        "DRESCH, A. Design Science Research – Método de Pesquisa para Avanço da Ciência e Tecnologia. Porto Alegre: Bookman.",
-        "NAKAGAWA, E. Revisão Sistemática de Literatura em Engenharia de Software. Elsevier."
+        {
+          "texto": "CRESWELL, J. W. Projeto de Pesquisa: Métodos Quantitativos, Qualitativos e Mistos. Porto Alegre: Bookman.",
+          "chave": "creswelljwprojetodepesquisametodosquantitativosqualitativosemistosportoalegrebookman"
+        },
+        {
+          "texto": "DRESCH, A. Design Science Research – Método de Pesquisa para Avanço da Ciência e Tecnologia. Porto Alegre: Bookman.",
+          "chave": "dreschadesignscienceresearchmetododepesquisaparaavancodacienciaetecnologiaportoalegrebookman"
+        },
+        {
+          "texto": "NAKAGAWA, E. Revisão Sistemática de Literatura em Engenharia de Software. Elsevier.",
+          "chave": "nakagawaerevisaosistematicadeliteraturaemengenhariadesoftwareelsevier"
+        }
       ],
       "bibliografiaComplementar": [
-        "CERVO, A. L. Metodologia Científica. 6 ed. São Paulo: Pearson, 2007.",
-        "COLLIS, J.; HUSSEY, R. Pesquisa em Administração. Porto Alegre: Bookman, 2005.",
-        "FLICK, U.; Introdução à Pesquisa Qualitativa. Bookman.",
-        "WAZLAWICK, R. S. Metodologia da Pesquisa Científica em Computação. Rio de Janeiro: Elsevier.",
-        "SAMPIERI, R.H. Metodologia de Pesquisa. São Paulo: Penso."
+        {
+          "texto": "CERVO, A. L. Metodologia Científica. 6 ed. São Paulo: Pearson, 2007.",
+          "chave": "cervoalmetodologiacientifica6saopaulopearson2007"
+        },
+        {
+          "texto": "COLLIS, J.; HUSSEY, R. Pesquisa em Administração. Porto Alegre: Bookman, 2005.",
+          "chave": "collisjhusseyrpesquisaemadministracaoportoalegrebookman2005"
+        },
+        {
+          "texto": "FLICK, U.; Introdução à Pesquisa Qualitativa. Bookman.",
+          "chave": "flickuintroducaoapesquisaqualitativabookman"
+        },
+        {
+          "texto": "WAZLAWICK, R. S. Metodologia da Pesquisa Científica em Computação. Rio de Janeiro: Elsevier.",
+          "chave": "wazlawickrsmetodologiadapesquisacientificaemcomputacaoriodejaneiroelsevier"
+        },
+        {
+          "texto": "SAMPIERI, R.H. Metodologia de Pesquisa. São Paulo: Penso.",
+          "chave": "sampierirhmetodologiadepesquisasaopaulopenso"
+        }
       ]
     },
     "TSAS": {
@@ -995,18 +1792,54 @@
         "Desenvolvimento de tecnologias sociais no Brasil e análise do impacto das mesmas no âmbito das políticas públicas e do desenvolvimento social e sustentável"
       ],
       "bibliografiaBasica": [
-        "BERSCH, R. Introdução a Tecnologia Assistiva. Porto Alegre, CEDI. Disponível em http://soplaar.com/material_individual/pdf/144S832O4P507L538A401R111.pdf.",
-        "COSTA, A. B. Tecnologia social e políticas públicas. São Paulo: Instituto Pólis; Brasília.",
-        "GARCIA, J. C. D.; GALVÃO FILHO, T. A. Pesquisa Nacional de Tecnologia Assistiva. São Paulo:",
-        "SONZA, A. P. Acessibilidade e tecnologia assistiva: pensando a inclusão sociodigital de PNEs. 2013. Disponível em http://www.bengalalegal.com/blog/?p=2526."
+        {
+          "texto": "BERSCH, R. Introdução a Tecnologia Assistiva. Porto Alegre, CEDI. Disponível em http://soplaar.com/material_individual/pdf/144S832O4P507L538A401R111.pdf.",
+          "chave": "berschrintroducaoatecnologiaassistivaportoalegrecedi",
+          "url": "http://soplaar.com/material_individual/pdf/144S832O4P507L538A401R111.pdf",
+          "tipoLink": "livre"
+        },
+        {
+          "texto": "COSTA, A. B. Tecnologia social e políticas públicas. São Paulo: Instituto Pólis; Brasília.",
+          "chave": "costaabtecnologiasocialepoliticaspublicassaopauloinstitutopolisbrasilia"
+        },
+        {
+          "texto": "GARCIA, J. C. D.; GALVÃO FILHO, T. A. Pesquisa Nacional de Tecnologia Assistiva. São Paulo:",
+          "chave": "garciajcdgalvaofilhotapesquisanacionaldetecnologiaassistivasaopaulo"
+        },
+        {
+          "texto": "SONZA, A. P. Acessibilidade e tecnologia assistiva: pensando a inclusão sociodigital de PNEs. 2013. Disponível em http://www.bengalalegal.com/blog/?p=2526.",
+          "chave": "sonzaapacessibilidadeetecnologiaassistivapensandoainclusaosociodigitaldepnes2013"
+        }
       ],
       "bibliografiaComplementar": [
-        "Brasil. Subsecretaria Nacional de Promoção dos Direitos da Pessoa com Deficiência. Comitê de Ajudas Técnicas. Tecnologia Assistiva. Brasília: CORDE, 2009. Disponível em http://www.pessoacomdeficiencia.gov.br/app/sites/default/files/publicacoes/livro-tecnologiaassistiva.pdf.",
-        "Portal Nacional de Tecnologia Assistiva - http://www.assistiva.org.br/.",
-        "Instituto de Tecnologia Social. Tecnologia Social: experiências inovadoras em extensão universitária. São Paulo: ITS BRASIL/MCTI-SECIS, 2012. Disponível em http://itsbrasil.org.br/publicacoes/%5Bterm-raw%5D/tecnologia-social-experiencias-inovadoras-emextensao-universitaria.",
-        "Tecnologias Sociais: experiências exemplares. São Paulo: ITS BRASIL/MCTI-SECIS, 2012. Disponível em http://itsbrasil.org.br/publicacoes/%5Bterm-raw%5D/tecnologia-social-experienciasexemplares-i",
-        "GALVÃO FILHO, Teófilo Alves. Tecnologia assistiva para uma escola inclusiva: apropriação, demanda e perspectivas. 2009.",
-        "SARTORETTO, Mara L.; BERSCH, Rita. O que é tecnologia assistiva. Recuperado de http://www. assistiva. com. br/tassistiva. html[Links], 2014."
+        {
+          "texto": "Brasil. Subsecretaria Nacional de Promoção dos Direitos da Pessoa com Deficiência. Comitê de Ajudas Técnicas. Tecnologia Assistiva. Brasília: CORDE, 2009. Disponível em http://www.pessoacomdeficiencia.gov.br/app/sites/default/files/publicacoes/livro-tecnologiaassistiva.pdf.",
+          "chave": "brasilsubsecretarianacionaldepromocaodosdireitosdapessoacomdeficienciacomitedeajudastecnicastecnologiaassistivabrasiliacorde2009",
+          "url": "http://www.galvaofilho.net/livro-tecnologia-assistiva_CAT.pdf",
+          "tipoLink": "livre"
+        },
+        {
+          "texto": "Portal Nacional de Tecnologia Assistiva - http://www.assistiva.org.br/.",
+          "chave": "portalnacionaldetecnologiaassistiva"
+        },
+        {
+          "texto": "Instituto de Tecnologia Social. Tecnologia Social: experiências inovadoras em extensão universitária. São Paulo: ITS BRASIL/MCTI-SECIS, 2012. Disponível em http://itsbrasil.org.br/publicacoes/%5Bterm-raw%5D/tecnologia-social-experiencias-inovadoras-emextensao-universitaria.",
+          "chave": "institutodetecnologiasocialtecnologiasocialexperienciasinovadorasemextensaouniversitariasaopauloitsbrasilmctisecis2012"
+        },
+        {
+          "texto": "Tecnologias Sociais: experiências exemplares. São Paulo: ITS BRASIL/MCTI-SECIS, 2012. Disponível em http://itsbrasil.org.br/publicacoes/%5Bterm-raw%5D/tecnologia-social-experienciasexemplares-i",
+          "chave": "tecnologiassociaisexperienciasexemplaressaopauloitsbrasilmctisecis2012"
+        },
+        {
+          "texto": "GALVÃO FILHO, Teófilo Alves. Tecnologia assistiva para uma escola inclusiva: apropriação, demanda e perspectivas. 2009.",
+          "chave": "galvaofilhoteofiloalvestecnologiaassistivaparaumaescolainclusivaapropriacaodemandaeperspectivas2009"
+        },
+        {
+          "texto": "SARTORETTO, Mara L.; BERSCH, Rita. O que é tecnologia assistiva. Recuperado de http://www. assistiva. com. br/tassistiva. html[Links], 2014.",
+          "chave": "sartorettomaralberschritaoqueetecnologiaassistiva",
+          "url": "https://www.assistiva.com.br/tassistiva.html",
+          "tipoLink": "livre"
+        }
       ]
     },
     "SADE": {
@@ -1025,16 +1858,40 @@
         "O processo de KDD: Conceitos Básicos, Etapas do Processo de KDD, Ferramentas de KDD e Exemplos de Aplicações"
       ],
       "bibliografiaBasica": [
-        "GOMES, Luiz Flavio Autran Monteiro. Tomada de Decisão em cenários complexos:,tradutora técnica Marcela Cecilia Gonzalez Araya. - São Paulo: Pioneira Thomson Learning, 2004",
-        "JOHN S. Hammond, Raiffa; tradução de Marcelo Filardi Ferreira. Decisões inteligentes. - Rio de Janeiro,2004",
-        "Marcos Aurélio Cavalcanti Pacheco, Marley Maria B. Rebuzzi Vellasco: Sistemas inteligentes de Apoio à Decisão. - Rio de Janeiro: E. PUC-Rio: ed. interciência,2007."
+        {
+          "texto": "GOMES, Luiz Flavio Autran Monteiro. Tomada de Decisão em cenários complexos:,tradutora técnica Marcela Cecilia Gonzalez Araya. - São Paulo: Pioneira Thomson Learning, 2004",
+          "chave": "gomesluizflavioautranmonteirotomadadedecisaoemcenarioscomplexostradutoratecnicamarcelaceciliagonzalezarayasaopaulopioneirathomsonlearning2004"
+        },
+        {
+          "texto": "JOHN S. Hammond, Raiffa; tradução de Marcelo Filardi Ferreira. Decisões inteligentes. - Rio de Janeiro,2004",
+          "chave": "johnshammondraiffatraducaodemarcelofilardiferreiradecisoesinteligentesriodejaneiro2004"
+        },
+        {
+          "texto": "Marcos Aurélio Cavalcanti Pacheco, Marley Maria B. Rebuzzi Vellasco: Sistemas inteligentes de Apoio à Decisão. - Rio de Janeiro: E. PUC-Rio: ed. interciência,2007.",
+          "chave": "marcosaureliocavalcantipachecomarleymariabrebuzzivellascosistemasinteligentesdeapoioadecisaoriodejaneiroepucriointerciencia2007"
+        }
       ],
       "bibliografiaComplementar": [
-        "SANTOS, Manuel Felipe, Azevedo, Carla Souza: Data mining : descoberta de conhecimento em bases de dado. - FCA Editores.",
-        "Ronaldo GOLDSCHMIDT, & Emmanuel PASSOS: Data Mining: um guia prático. Editora Campus, Rio de Janeiro: Elsevier.",
-        "GORDON, Steven R.; GORDON, Judith. Sistemas de Informação: uma abordagem gerencial. Rio de Janeiro: LTC.",
-        "WEIL, Pierre ROSS, Jeanne W.. IT GOVERNANCE: HOW TOP PERFORMERS MANAGE IT DECISION RIGHTS FOR SUPERIOR RESULTS. Editora HARVARD BUSINESS SCHOLL PRESS Local: BOSTON.",
-        "CASSARRO, Antonio Carlos. SISTEMAS DE INFORMACAO PARA TOMADA DE DECISOES. Editora PIONEIRA THOMSON LEARNING."
+        {
+          "texto": "SANTOS, Manuel Felipe, Azevedo, Carla Souza: Data mining : descoberta de conhecimento em bases de dado. - FCA Editores.",
+          "chave": "santosmanuelfelipeazevedocarlasouzadataminingdescobertadeconhecimentoembasesdedadofcaeditores"
+        },
+        {
+          "texto": "Ronaldo GOLDSCHMIDT, & Emmanuel PASSOS: Data Mining: um guia prático. Editora Campus, Rio de Janeiro: Elsevier.",
+          "chave": "ronaldogoldschmidtemmanuelpassosdataminingumguiapraticocampusriodejaneiroelsevier"
+        },
+        {
+          "texto": "GORDON, Steven R.; GORDON, Judith. Sistemas de Informação: uma abordagem gerencial. Rio de Janeiro: LTC.",
+          "chave": "gordonstevenrgordonjudithsistemasdeinformacaoumaabordagemgerencialriodejaneiroltc"
+        },
+        {
+          "texto": "WEIL, Pierre ROSS, Jeanne W.. IT GOVERNANCE: HOW TOP PERFORMERS MANAGE IT DECISION RIGHTS FOR SUPERIOR RESULTS. Editora HARVARD BUSINESS SCHOLL PRESS Local: BOSTON.",
+          "chave": "weilpierrerossjeannewitgovernancehowtopperformersmanageitdecisionrightsforsuperiorresultsharvardbusinessschollpresslocalboston"
+        },
+        {
+          "texto": "CASSARRO, Antonio Carlos. SISTEMAS DE INFORMACAO PARA TOMADA DE DECISOES. Editora PIONEIRA THOMSON LEARNING.",
+          "chave": "cassarroantoniocarlossistemasdeinformacaoparatomadadedecisoespioneirathomsonlearning"
+        }
       ]
     },
     "FABS": {
@@ -1054,16 +1911,40 @@
         "Ambiente para simulação da implementação de projetos de software"
       ],
       "bibliografiaBasica": [
-        "SOMMERVILLE, Ian. Engenharia de Software. Pearson Addison Wesley, São Paulo, 2006.",
-        "PRESSMAN, Roger. Engenharia de Software. McGraw-Hill, 2006.",
-        "GERENCIANDO PROJETOS DE DESENVOLVIMENTO DE SOFTWARE COM PMI, RUP E UMLMARTINS, José C.C., BRASPORT, 2004"
+        {
+          "texto": "SOMMERVILLE, Ian. Engenharia de Software. Pearson Addison Wesley, São Paulo, 2006.",
+          "chave": "sommervilleianengenhariadesoftwarepearsonaddisonwesleysaopaulo2006"
+        },
+        {
+          "texto": "PRESSMAN, Roger. Engenharia de Software. McGraw-Hill, 2006.",
+          "chave": "pressmanrogerengenhariadesoftwaremcgrawhill2006"
+        },
+        {
+          "texto": "GERENCIANDO PROJETOS DE DESENVOLVIMENTO DE SOFTWARE COM PMI, RUP E UMLMARTINS, José C.C., BRASPORT, 2004",
+          "chave": "gerenciandoprojetosdedesenvolvimentodesoftwarecompmirupeumlmartinsjoseccbrasport2004"
+        }
       ],
       "bibliografiaComplementar": [
-        "QUALIDADE DE SOFTWARE: APRENDA AS METODOLOGIAS E TECNICAS MAIS MODERNAS PARA O DESENVOLVIMENTO, KOSCIANSKI, Andre, SOARES, Michel dos Santos, NOVATEC,",
-        "TONSING, S. ENGENHARIA DE SOFTWARE, FUTURA, 2003",
-        "PHILLIPS, Joseph. Gerência de Projetos de Tecnologia da Informação Ed. Campus.",
-        "LARMAN, Craig. UTILIZANDO UML E PADROES: UMA INTRODUCAO A ANALISE E AO PROJETO ORIENTADOS A OBJETOS E AO DESENVOLVIMENTO. Editora BOOKMAN: Porto alegre.",
-        "QUADROS, Moacir. GERENCIA DE PROJETOS DE SOFTWARE: TECNICAS E FERRAMENTAS. Editora VISUAL BOOKS."
+        {
+          "texto": "QUALIDADE DE SOFTWARE: APRENDA AS METODOLOGIAS E TECNICAS MAIS MODERNAS PARA O DESENVOLVIMENTO, KOSCIANSKI, Andre, SOARES, Michel dos Santos, NOVATEC,",
+          "chave": "qualidadedesoftwareaprendaasmetodologiasetecnicasmaismodernasparaodesenvolvimentokoscianskiandresoaresmicheldossantosnovatec"
+        },
+        {
+          "texto": "TONSING, S. ENGENHARIA DE SOFTWARE, FUTURA, 2003",
+          "chave": "tonsingsengenhariadesoftwarefutura2003"
+        },
+        {
+          "texto": "PHILLIPS, Joseph. Gerência de Projetos de Tecnologia da Informação Ed. Campus.",
+          "chave": "phillipsjosephgerenciadeprojetosdetecnologiadainformacaocampus"
+        },
+        {
+          "texto": "LARMAN, Craig. UTILIZANDO UML E PADROES: UMA INTRODUCAO A ANALISE E AO PROJETO ORIENTADOS A OBJETOS E AO DESENVOLVIMENTO. Editora BOOKMAN: Porto alegre.",
+          "chave": "larmancraigutilizandoumlepadroesumaintroducaoaanaliseeaoprojetoorientadosaobjetoseaodesenvolvimentobookmanportoalegre"
+        },
+        {
+          "texto": "QUADROS, Moacir. GERENCIA DE PROJETOS DE SOFTWARE: TECNICAS E FERRAMENTAS. Editora VISUAL BOOKS.",
+          "chave": "quadrosmoacirgerenciadeprojetosdesoftwaretecnicaseferramentasvisualbooks"
+        }
       ]
     },
     "GCMS": {
@@ -1083,16 +1964,40 @@
         "Princípios de gerência de configuração e relação com atividades de desenvolvimento de software"
       ],
       "bibliografiaBasica": [
-        "SOMMERVILLE, Ian. Engenharia de Software. Pearson Addison Wesley, São Paulo, 2006.",
-        "PRESSMAN, Roger. Engenharia de Software. McGraw-Hill, 2006.",
-        "GERENCIANDO PROJETOS DE DESENVOLVIMENTO DE SOFTWARE COM PMI, RUP E UMLMARTINS, José C.C., BRASPORT, 2004"
+        {
+          "texto": "SOMMERVILLE, Ian. Engenharia de Software. Pearson Addison Wesley, São Paulo, 2006.",
+          "chave": "sommervilleianengenhariadesoftwarepearsonaddisonwesleysaopaulo2006"
+        },
+        {
+          "texto": "PRESSMAN, Roger. Engenharia de Software. McGraw-Hill, 2006.",
+          "chave": "pressmanrogerengenhariadesoftwaremcgrawhill2006"
+        },
+        {
+          "texto": "GERENCIANDO PROJETOS DE DESENVOLVIMENTO DE SOFTWARE COM PMI, RUP E UMLMARTINS, José C.C., BRASPORT, 2004",
+          "chave": "gerenciandoprojetosdedesenvolvimentodesoftwarecompmirupeumlmartinsjoseccbrasport2004"
+        }
       ],
       "bibliografiaComplementar": [
-        "QUALIDADE DE SOFTWARE: APRENDA AS METODOLOGIAS E TECNICAS MAIS MODERNAS PARA O DESENVOLVIMENTO, KOSCIANSKI, Andre, SOARES, Michel dos Santos, NOVATEC, 2007",
-        "TONSING, S. ENGENHARIA DE SOFTWARE, FUTURA, 2003",
-        "PHILLIPS, Joseph. Gerência de Projetos de Tecnologia da Informação Ed. Campus.",
-        "REZENDE, Denis Alcides. ENGENHARIA DE SOFTWARE E SITEMAS DE INFORMACAO. Editora BRASPORT.",
-        "QUADROS, Moacir. GERENCIA DE PROJETOS DE SOFTWARE: TECNICAS E FERRAMENTAS. Editora VISUAL BOOKS."
+        {
+          "texto": "QUALIDADE DE SOFTWARE: APRENDA AS METODOLOGIAS E TECNICAS MAIS MODERNAS PARA O DESENVOLVIMENTO, KOSCIANSKI, Andre, SOARES, Michel dos Santos, NOVATEC, 2007",
+          "chave": "qualidadedesoftwareaprendaasmetodologiasetecnicasmaismodernasparaodesenvolvimentokoscianskiandresoaresmicheldossantosnovatec2007"
+        },
+        {
+          "texto": "TONSING, S. ENGENHARIA DE SOFTWARE, FUTURA, 2003",
+          "chave": "tonsingsengenhariadesoftwarefutura2003"
+        },
+        {
+          "texto": "PHILLIPS, Joseph. Gerência de Projetos de Tecnologia da Informação Ed. Campus.",
+          "chave": "phillipsjosephgerenciadeprojetosdetecnologiadainformacaocampus"
+        },
+        {
+          "texto": "REZENDE, Denis Alcides. ENGENHARIA DE SOFTWARE E SITEMAS DE INFORMACAO. Editora BRASPORT.",
+          "chave": "rezendedenisalcidesengenhariadesoftwareesitemasdeinformacaobrasport"
+        },
+        {
+          "texto": "QUADROS, Moacir. GERENCIA DE PROJETOS DE SOFTWARE: TECNICAS E FERRAMENTAS. Editora VISUAL BOOKS.",
+          "chave": "quadrosmoacirgerenciadeprojetosdesoftwaretecnicaseferramentasvisualbooks"
+        }
       ]
     },
     "INTC": {
@@ -1113,16 +2018,40 @@
         "Treinamento por Backpropagation"
       ],
       "bibliografiaBasica": [
-        "BRAGA, A. P., A. P. L. F. de Carvalho, T. B. Ludermir, Livro Redes Neurais Artificiais: Teoria e Aplicações, (2a. Ed.), LTC.",
-        "EBERHART, Russell C., Computational intelligence: concepts to implementations.",
-        "AGUIAR, Hime, Inteligencia Computacional – Aplicada a Administração, Economia e Engenharia em MatLab. EditoraThomson Pioneira."
+        {
+          "texto": "BRAGA, A. P., A. P. L. F. de Carvalho, T. B. Ludermir, Livro Redes Neurais Artificiais: Teoria e Aplicações, (2a. Ed.), LTC.",
+          "chave": "bragaapaplfdecarvalhotbludermirlivroredesneuraisartificiaisteoriaeaplicacoes2altc"
+        },
+        {
+          "texto": "EBERHART, Russell C., Computational intelligence: concepts to implementations.",
+          "chave": "eberhartrussellccomputationalintelligenceconceptstoimplementations"
+        },
+        {
+          "texto": "AGUIAR, Hime, Inteligencia Computacional – Aplicada a Administração, Economia e Engenharia em MatLab. EditoraThomson Pioneira.",
+          "chave": "aguiarhimeinteligenciacomputacionalaplicadaaadministracaoeconomiaeengenhariaemmatlabeditorathomsonpioneira"
+        }
       ],
       "bibliografiaComplementar": [
-        "CARIGNANO, Claudia.Tomada de Decisões em cenários Complexos: Introdução aos métodos discretos do apoio multicritério à decisão. Editora Thomson Pioneira:2004 – São Paulo;",
-        "ROSINI, Alessandro Marco; Palmisano, Angelo. Administração de Sistemas de Informação e Gestão do Conhecimento. Editora Thomson Pioneira:2003 – São Paulo;",
-        "LINDEN, Ricardo, Algoritmos Geneticos. 2. ed. Editora Brasport:2008.",
-        "RUSSEL, Stuart NORVIG, Peter. INTELIGENCIA ARTIFICIAL. Editora ELSEVIER.",
-        "LUGER, George F.. ARTIFICIAL INTELLIGENCE: STRUCTURES AND STRATEGIES FOR COMPLEX PROBLEM SOLVING. Editora PEARSON ADDISON WESLEY."
+        {
+          "texto": "CARIGNANO, Claudia.Tomada de Decisões em cenários Complexos: Introdução aos métodos discretos do apoio multicritério à decisão. Editora Thomson Pioneira:2004 – São Paulo;",
+          "chave": "carignanoclaudiatomadadedecisoesemcenarioscomplexosintroducaoaosmetodosdiscretosdoapoiomulticriterioadecisaothomsonpioneira2004saopaulo"
+        },
+        {
+          "texto": "ROSINI, Alessandro Marco; Palmisano, Angelo. Administração de Sistemas de Informação e Gestão do Conhecimento. Editora Thomson Pioneira:2003 – São Paulo;",
+          "chave": "rosinialessandromarcopalmisanoangeloadministracaodesistemasdeinformacaoegestaodoconhecimentothomsonpioneira2003saopaulo"
+        },
+        {
+          "texto": "LINDEN, Ricardo, Algoritmos Geneticos. 2. ed. Editora Brasport:2008.",
+          "chave": "lindenricardoalgoritmosgeneticos2brasport2008"
+        },
+        {
+          "texto": "RUSSEL, Stuart NORVIG, Peter. INTELIGENCIA ARTIFICIAL. Editora ELSEVIER.",
+          "chave": "russelstuartnorvigpeterinteligenciaartificialelsevier"
+        },
+        {
+          "texto": "LUGER, George F.. ARTIFICIAL INTELLIGENCE: STRUCTURES AND STRATEGIES FOR COMPLEX PROBLEM SOLVING. Editora PEARSON ADDISON WESLEY.",
+          "chave": "lugergeorgefartificialintelligencestructuresandstrategiesforcomplexproblemsolvingpearsonaddisonwesley"
+        }
       ]
     },
     "PESO": {
@@ -1137,16 +2066,40 @@
         "Otimização de Sistemas de Engenharia"
       ],
       "bibliografiaBasica": [
-        "GOLDBARG, M; LOUREIRO, L; Programação Linear e Fluxo em Redes, Elsevier.",
-        "DARCI, P. Programação Linear. Indg Tecnologia e Serviços",
-        "LINS, M. ; CALÔBA, G. Programação Linear. Editora Inteligência"
+        {
+          "texto": "GOLDBARG, M; LOUREIRO, L; Programação Linear e Fluxo em Redes, Elsevier.",
+          "chave": "goldbargmloureirolprogramacaolinearefluxoemredeselsevier"
+        },
+        {
+          "texto": "DARCI, P. Programação Linear. Indg Tecnologia e Serviços",
+          "chave": "darcipprogramacaolinearindgtecnologiaeservicos"
+        },
+        {
+          "texto": "LINS, M. ; CALÔBA, G. Programação Linear. Editora Inteligência",
+          "chave": "linsmcalobagprogramacaolinearinteligencia"
+        }
       ],
       "bibliografiaComplementar": [
-        "G.B. Dantzig. Linear Programming and Extensions. Princeton University, 1963.",
-        "A. Schrijver. Theory of Linear and Integer Programming. John Wiley and Sons, 1998.",
-        "SILVA, E. M. et al. Pesquisa operacional: programação linear. São Paulo: Atlas, 1999.",
-        "MARTINS, Fernando Augusto Silva. Introdução à Pesquisa Operacional. São Paulo: Cultura Acadêmica.",
-        "Nelson Kagan, Hernán Prieto Schmidt, Carlos César Barioni de Oliveira, Henrique Kagan. Métodos de Otimização Aplicados a Sistemas Elétricos de Potência. Editora Blucher."
+        {
+          "texto": "G.B. Dantzig. Linear Programming and Extensions. Princeton University, 1963.",
+          "chave": "gbdantziglinearprogrammingandextensionsprincetonuniversity1963"
+        },
+        {
+          "texto": "A. Schrijver. Theory of Linear and Integer Programming. John Wiley and Sons, 1998.",
+          "chave": "aschrijvertheoryoflinearandintegerprogrammingjohnwileyandsons1998"
+        },
+        {
+          "texto": "SILVA, E. M. et al. Pesquisa operacional: programação linear. São Paulo: Atlas, 1999.",
+          "chave": "silvaemetalpesquisaoperacionalprogramacaolinearsaopauloatlas1999"
+        },
+        {
+          "texto": "MARTINS, Fernando Augusto Silva. Introdução à Pesquisa Operacional. São Paulo: Cultura Acadêmica.",
+          "chave": "martinsfernandoaugustosilvaintroducaoapesquisaoperacionalsaopauloculturaacademica"
+        },
+        {
+          "texto": "Nelson Kagan, Hernán Prieto Schmidt, Carlos César Barioni de Oliveira, Henrique Kagan. Métodos de Otimização Aplicados a Sistemas Elétricos de Potência. Editora Blucher.",
+          "chave": "nelsonkaganhernanprietoschmidtcarloscesarbarionideoliveirahenriquekaganmetodosdeotimizacaoaplicadosasistemaseletricosdepotenciablucher"
+        }
       ]
     },
     "PGMV": {
@@ -1166,16 +2119,40 @@
         "Prática em desenvolvimento de aplicações móveis"
       ],
       "bibliografiaBasica": [
-        "LEE, V.; SCHENEIDER, H.; SCHELL, R. Aplicações móveis : arquitetura, projeto e desenvolvimento. São Paulo: Pearson Education: Makron Books, 2015.",
-        "MEDINIEKS, Z.; DORNING, Z.; MEIKE G.; NAKAMURA M. PROGRAMANDO O ANDROID, Novatec, 2012.",
-        "DEITEL, H. M. & DEITEL, P. J. C - Como Programar. Editora Pearson."
+        {
+          "texto": "LEE, V.; SCHENEIDER, H.; SCHELL, R. Aplicações móveis : arquitetura, projeto e desenvolvimento. São Paulo: Pearson Education: Makron Books, 2015.",
+          "chave": "leevscheneiderhschellraplicacoesmoveisarquiteturaprojetoedesenvolvimentosaopaulopearsoneducationmakronbooks2015"
+        },
+        {
+          "texto": "MEDINIEKS, Z.; DORNING, Z.; MEIKE G.; NAKAMURA M. PROGRAMANDO O ANDROID, Novatec, 2012.",
+          "chave": "mediniekszdorningzmeikegnakamuramprogramandooandroidnovatec2012"
+        },
+        {
+          "texto": "DEITEL, H. M. & DEITEL, P. J. C - Como Programar. Editora Pearson.",
+          "chave": "deitelhmdeitelpjccomoprogramarpearson"
+        }
       ],
       "bibliografiaComplementar": [
-        "SILVA, M. Fundamentos de HTML5 e CSS3. Novatec.",
-        "CROWTHER R.; LENNON, J.; BLUE A., WANISH G.. HTML5 em Ação. NOVATEC.",
-        "WEYL E. Mobile HTML5. Editora NOVATEC.",
-        "EDGAR BLUCHER. LEE, Wei-Meng. BEGINNING ANDROID 4 APLICATION DEVELOPMENT. Editora JOHN WILEY: INDIANAPOLIS.",
-        "SILVA, Mauricio Samy. FUNDAMENTOS DE HTML5 E CSS3. Editora NOVATEC."
+        {
+          "texto": "SILVA, M. Fundamentos de HTML5 e CSS3. Novatec.",
+          "chave": "silvamfundamentosdehtml5ecss3novatec"
+        },
+        {
+          "texto": "CROWTHER R.; LENNON, J.; BLUE A., WANISH G.. HTML5 em Ação. NOVATEC.",
+          "chave": "crowtherrlennonjblueawanishghtml5emacaonovatec"
+        },
+        {
+          "texto": "WEYL E. Mobile HTML5. Editora NOVATEC.",
+          "chave": "weylemobilehtml5novatec"
+        },
+        {
+          "texto": "EDGAR BLUCHER. LEE, Wei-Meng. BEGINNING ANDROID 4 APLICATION DEVELOPMENT. Editora JOHN WILEY: INDIANAPOLIS.",
+          "chave": "edgarblucherleeweimengbeginningandroid4aplicationdevelopmentjohnwileyindianapolis"
+        },
+        {
+          "texto": "SILVA, Mauricio Samy. FUNDAMENTOS DE HTML5 E CSS3. Editora NOVATEC.",
+          "chave": "silvamauriciosamyfundamentosdehtml5ecss3novatec"
+        }
       ]
     },
     "PASW": {
@@ -1197,15 +2174,36 @@
         "Métricas de projeto"
       ],
       "bibliografiaBasica": [
-        "BEZERRA, Eduardo. Princícipios de Análise e Projeto de Sistemas com UML, Elsevier",
-        "SOMMERVILLE, Ian. Engenharia de Software, Pearson"
+        {
+          "texto": "BEZERRA, Eduardo. Princícipios de Análise e Projeto de Sistemas com UML, Elsevier",
+          "chave": "bezerraeduardoprincicipiosdeanaliseeprojetodesistemascomumlelsevier"
+        },
+        {
+          "texto": "SOMMERVILLE, Ian. Engenharia de Software, Pearson",
+          "chave": "sommervilleianengenhariadesoftwarepearson"
+        }
       ],
       "bibliografiaComplementar": [
-        "PRESSMAN, Roger. Engenharia de Software. McGraw-Hill, 2006.",
-        "VALERIANO, Dalton. Moderno Gerenciamento de Projetos. Prentice Hall, São Paulo, 2005.",
-        "PHILLIPS, Joseph. Gerência de Projetos de Tecnologia da Informação Ed. Campus.",
-        "LARMAN, Craig. UTILIZANDO UML E PADROES: UMA INTRODUCAO A ANALISE E AO PROJETO ORIENTADOS A OBJETOS E AO DESENVO. Editora BOOKMAN: Porto alegre.",
-        "WAZLAWICK, Raul Sidnei. ANALISE E PROJETO DE SISTEMAS DE INFORMACAO ORIENTADOS A OBJETOS. Editora ELSEVIER; CAMPUS: RIO DE JANEIRO."
+        {
+          "texto": "PRESSMAN, Roger. Engenharia de Software. McGraw-Hill, 2006.",
+          "chave": "pressmanrogerengenhariadesoftwaremcgrawhill2006"
+        },
+        {
+          "texto": "VALERIANO, Dalton. Moderno Gerenciamento de Projetos. Prentice Hall, São Paulo, 2005.",
+          "chave": "valerianodaltonmodernogerenciamentodeprojetosprenticehallsaopaulo2005"
+        },
+        {
+          "texto": "PHILLIPS, Joseph. Gerência de Projetos de Tecnologia da Informação Ed. Campus.",
+          "chave": "phillipsjosephgerenciadeprojetosdetecnologiadainformacaocampus"
+        },
+        {
+          "texto": "LARMAN, Craig. UTILIZANDO UML E PADROES: UMA INTRODUCAO A ANALISE E AO PROJETO ORIENTADOS A OBJETOS E AO DESENVO. Editora BOOKMAN: Porto alegre.",
+          "chave": "larmancraigutilizandoumlepadroesumaintroducaoaanaliseeaoprojetoorientadosaobjetoseaodesenvobookmanportoalegre"
+        },
+        {
+          "texto": "WAZLAWICK, Raul Sidnei. ANALISE E PROJETO DE SISTEMAS DE INFORMACAO ORIENTADOS A OBJETOS. Editora ELSEVIER; CAMPUS: RIO DE JANEIRO.",
+          "chave": "wazlawickraulsidneianaliseeprojetodesistemasdeinformacaoorientadosaobjetoselseviercampusriodejaneiro"
+        }
       ]
     },
     "QDSW": {
@@ -1229,16 +2227,40 @@
         "Manutenção de software"
       ],
       "bibliografiaBasica": [
-        "PRESSMAN, Roger S. Engenharia de software. São Paulo: Makron Books Ltda., 1995.",
-        "SOMMERVILLE, Ian. Engenharia de software. 6. ed. São Paulo: Pearson Addison Wesley, 2003. 592 p",
-        "ROCHA, Ana Regina Cavalcanti da; MALDONADO, José Carlos; WEBER, Kival Chaves. Qualidade de software: teoria e prática. São Paulo: Prentice-Hall, 2001. 303 p."
+        {
+          "texto": "PRESSMAN, Roger S. Engenharia de software. São Paulo: Makron Books Ltda., 1995.",
+          "chave": "pressmanrogersengenhariadesoftwaresaopaulomakronbooksltda1995"
+        },
+        {
+          "texto": "SOMMERVILLE, Ian. Engenharia de software. 6. ed. São Paulo: Pearson Addison Wesley, 2003. 592 p",
+          "chave": "sommervilleianengenhariadesoftware6saopaulopearsonaddisonwesley2003592p"
+        },
+        {
+          "texto": "ROCHA, Ana Regina Cavalcanti da; MALDONADO, José Carlos; WEBER, Kival Chaves. Qualidade de software: teoria e prática. São Paulo: Prentice-Hall, 2001. 303 p.",
+          "chave": "rochaanareginacavalcantidamaldonadojosecarlosweberkivalchavesqualidadedesoftwareteoriaepraticasaopauloprenticehall2001303p"
+        }
       ],
       "bibliografiaComplementar": [
-        "JINO, M; MALDONADO, D. Introdução ao Teste de Software, Elsevier",
-        "INTHURN, Candida. Qualidade & teste de software. Florianópolis: Visual Books.",
-        "REZENDE, Denis Alcides. Engenharia de software e sistemas de informação. Rio de Janeiro: Brasport.",
-        "KOSCIANSKI, Andre; SOARES, Michel dos Santos. QUALIDADE DE SOFTWARE: APRENDA AS METODOLOGIAS E TECNICAS MAIS MODERNAS PARA O DESENVOLVIMEN. Editora NOVATEC.",
-        "MOLINARI, Leonardo. TESTES DE SOFTWARE: PRODUZINDO SISTEMAS MELHORES E MAIS CONFIAVEIS. Editora ERICA."
+        {
+          "texto": "JINO, M; MALDONADO, D. Introdução ao Teste de Software, Elsevier",
+          "chave": "jinommaldonadodintroducaoaotestedesoftwareelsevier"
+        },
+        {
+          "texto": "INTHURN, Candida. Qualidade & teste de software. Florianópolis: Visual Books.",
+          "chave": "inthurncandidaqualidadetestedesoftwareflorianopolisvisualbooks"
+        },
+        {
+          "texto": "REZENDE, Denis Alcides. Engenharia de software e sistemas de informação. Rio de Janeiro: Brasport.",
+          "chave": "rezendedenisalcidesengenhariadesoftwareesistemasdeinformacaoriodejaneirobrasport"
+        },
+        {
+          "texto": "KOSCIANSKI, Andre; SOARES, Michel dos Santos. QUALIDADE DE SOFTWARE: APRENDA AS METODOLOGIAS E TECNICAS MAIS MODERNAS PARA O DESENVOLVIMEN. Editora NOVATEC.",
+          "chave": "koscianskiandresoaresmicheldossantosqualidadedesoftwareaprendaasmetodologiasetecnicasmaismodernasparaodesenvolvimennovatec"
+        },
+        {
+          "texto": "MOLINARI, Leonardo. TESTES DE SOFTWARE: PRODUZINDO SISTEMAS MELHORES E MAIS CONFIAVEIS. Editora ERICA.",
+          "chave": "molinarileonardotestesdesoftwareproduzindosistemasmelhoresemaisconfiaveiserica"
+        }
       ]
     },
     "SINT": {
@@ -1265,16 +2287,40 @@
         "Tópicos avançados em IA: Linguagem Natural"
       ],
       "bibliografiaBasica": [
-        "LUGER, George F.; Inteligência Artificial; Artmed Ed. S.A.; P. Alegre.",
-        "BITTENCOURT, G.; “Inteligência Artificial, ferramentas e teorias”; UFSC; Florianópolis, SC.",
-        "RUSSEL, S., Norvig, Peter; \"Inteligência Artificial\", Ed. Campus-Elsevier."
+        {
+          "texto": "LUGER, George F.; Inteligência Artificial; Artmed Ed. S.A.; P. Alegre.",
+          "chave": "lugergeorgefinteligenciaartificialartmedsapalegre"
+        },
+        {
+          "texto": "BITTENCOURT, G.; “Inteligência Artificial, ferramentas e teorias”; UFSC; Florianópolis, SC.",
+          "chave": "bittencourtginteligenciaartificialferramentaseteoriasufscflorianopolissc"
+        },
+        {
+          "texto": "RUSSEL, S., Norvig, Peter; \"Inteligência Artificial\", Ed. Campus-Elsevier.",
+          "chave": "russelsnorvigpeterinteligenciaartificialcampuselsevier"
+        }
       ],
       "bibliografiaComplementar": [
-        "RESENDE, Solange O., Sistemas Inteligentes - Fundamentos e aplicações, Ed. Manole;",
-        "RICH, E.; “Artificial Intelligence”; McGraw-Hill Book Company;",
-        "EBERHART, RUSSEL C., Computational intelligence: concepts to implementations, Elsevier.",
-        "BRAGA, A. P., A. P. L. F. de Carvalho, T. B. Ludermir, Livro Redes Neurais Artificiais: Teoria e Aplicações, (2a. Ed.), LTC.",
-        "LINDEN, Ricardo, Algoritmos Geneticos. 2. ed. Editora Brasport."
+        {
+          "texto": "RESENDE, Solange O., Sistemas Inteligentes - Fundamentos e aplicações, Ed. Manole;",
+          "chave": "resendesolangeosistemasinteligentesfundamentoseaplicacoesmanole"
+        },
+        {
+          "texto": "RICH, E.; “Artificial Intelligence”; McGraw-Hill Book Company;",
+          "chave": "richeartificialintelligencemcgrawhillbookcompany"
+        },
+        {
+          "texto": "EBERHART, RUSSEL C., Computational intelligence: concepts to implementations, Elsevier.",
+          "chave": "eberhartrusselccomputationalintelligenceconceptstoimplementationselsevier"
+        },
+        {
+          "texto": "BRAGA, A. P., A. P. L. F. de Carvalho, T. B. Ludermir, Livro Redes Neurais Artificiais: Teoria e Aplicações, (2a. Ed.), LTC.",
+          "chave": "bragaapaplfdecarvalhotbludermirlivroredesneuraisartificiaisteoriaeaplicacoes2altc"
+        },
+        {
+          "texto": "LINDEN, Ricardo, Algoritmos Geneticos. 2. ed. Editora Brasport.",
+          "chave": "lindenricardoalgoritmosgeneticos2brasport"
+        }
       ]
     },
     "AGIL": {
@@ -1293,16 +2339,40 @@
         "Lean Software Development"
       ],
       "bibliografiaBasica": [
-        "COHN, Mike. Desenvolvimento de Software com SCRUM: aplicando métodos ágeis com sucesso. Porto Alegre: Bookman, 2011.",
-        "PRIKLADNICK, Rafael.; WILLI, Renato.; MILANI, Fabio. Métodos Ágeis para o Desenvolvimento de Software. Porto Alegre: Bookman, 2014.",
-        "WILDT, Daniel.; MOURA, Dionatan.; LACERDA, Guilherme.; HELM, Rafael. eXtreme Programming: Práticas para o dia a dia no desenvolvimento ágil de software. Casa do Código, 2015."
+        {
+          "texto": "COHN, Mike. Desenvolvimento de Software com SCRUM: aplicando métodos ágeis com sucesso. Porto Alegre: Bookman, 2011.",
+          "chave": "cohnmikedesenvolvimentodesoftwarecomscrumaplicandometodosageiscomsucessoportoalegrebookman2011"
+        },
+        {
+          "texto": "PRIKLADNICK, Rafael.; WILLI, Renato.; MILANI, Fabio. Métodos Ágeis para o Desenvolvimento de Software. Porto Alegre: Bookman, 2014.",
+          "chave": "prikladnickrafaelwillirenatomilanifabiometodosageisparaodesenvolvimentodesoftwareportoalegrebookman2014"
+        },
+        {
+          "texto": "WILDT, Daniel.; MOURA, Dionatan.; LACERDA, Guilherme.; HELM, Rafael. eXtreme Programming: Práticas para o dia a dia no desenvolvimento ágil de software. Casa do Código, 2015.",
+          "chave": "wildtdanielmouradionatanlacerdaguilhermehelmrafaelextremeprogrammingpraticasparaodiaadianodesenvolvimentoagildesoftwarecasadocodigo2015"
+        }
       ],
       "bibliografiaComplementar": [
-        "REDDY, Ajay. The Scrum [R]Evolution: Getting the Most out Of Agile, Scrum, and Lean Kanban. Prenctice Hall, 2015.",
-        "COHN, Mike. Agile Estimating and Planning. Prentice Hall, 2005.",
-        "COHN, Mike. Succeeding with Agile Software Development Using Scrum. Addison-Wesley Professional, 2009.",
-        "MOLINARI, Leonardo. TESTES DE SOFTWARE: PRODUZINDO SISTEMAS MELHORES E MAIS CONFIAVEIS. Editora ERICA.",
-        "SOMMERVILLE, Ian. ENGENHARIA DE SOFTWARE. Editora PEARSON."
+        {
+          "texto": "REDDY, Ajay. The Scrum [R]Evolution: Getting the Most out Of Agile, Scrum, and Lean Kanban. Prenctice Hall, 2015.",
+          "chave": "reddyajaythescrumrevolutiongettingthemostoutofagilescrumandleankanbanprencticehall2015"
+        },
+        {
+          "texto": "COHN, Mike. Agile Estimating and Planning. Prentice Hall, 2005.",
+          "chave": "cohnmikeagileestimatingandplanningprenticehall2005"
+        },
+        {
+          "texto": "COHN, Mike. Succeeding with Agile Software Development Using Scrum. Addison-Wesley Professional, 2009.",
+          "chave": "cohnmikesucceedingwithagilesoftwaredevelopmentusingscrumaddisonwesleyprofessional2009"
+        },
+        {
+          "texto": "MOLINARI, Leonardo. TESTES DE SOFTWARE: PRODUZINDO SISTEMAS MELHORES E MAIS CONFIAVEIS. Editora ERICA.",
+          "chave": "molinarileonardotestesdesoftwareproduzindosistemasmelhoresemaisconfiaveiserica"
+        },
+        {
+          "texto": "SOMMERVILLE, Ian. ENGENHARIA DE SOFTWARE. Editora PEARSON.",
+          "chave": "sommervilleianengenhariadesoftwarepearson"
+        }
       ]
     },
     "CDON": {
@@ -1324,15 +2394,38 @@
         "Ciência de Dados e a Estratégia de Negócios"
       ],
       "bibliografiaBasica": [
-        "Peng, Roger D. e Matsui, Elizabeth. The Art of Dat Science: A guide for anyone who works with data. http://leanpub.com/artofdatascience. 2017;",
-        "Barbieri, Carlos. BI2 Business Intelligence: Modelagem e Qualidade. Ed. Elsevier Campus, 2011;",
-        "Provost, F. Data Science for Business: O que Você Precisa Saber Sobre Mineração de Dados e Pensamento Analítico de Dados. O'Reilly Media. 2016."
+        {
+          "texto": "Peng, Roger D. e Matsui, Elizabeth. The Art of Dat Science: A guide for anyone who works with data. http://leanpub.com/artofdatascience. 2017;",
+          "chave": "pengrogerdematsuielizabeththeartofdatscienceaguideforanyonewhoworkswithdata2017",
+          "url": "https://leanpub.com/artofdatascience",
+          "tipoLink": "compra"
+        },
+        {
+          "texto": "Barbieri, Carlos. BI2 Business Intelligence: Modelagem e Qualidade. Ed. Elsevier Campus, 2011;",
+          "chave": "barbiericarlosbi2businessintelligencemodelagemequalidadeelseviercampus2011"
+        },
+        {
+          "texto": "Provost, F. Data Science for Business: O que Você Precisa Saber Sobre Mineração de Dados e Pensamento Analítico de Dados. O'Reilly Media. 2016.",
+          "chave": "provostfdatascienceforbusinessoquevoceprecisasabersobremineracaodedadosepensamentoanaliticodedadosoreillymedia2016"
+        }
       ],
       "bibliografiaComplementar": [
-        "Voulgaris, Z. Data Scientist: The Definitive Guide to Becoming a Data Scientist. Technics. 2014;",
-        "Soligen, R. e Berghout, E. The goal/question/metric method – A pratical guide for quality improvement of software development. McGraw-Hill. 1999.",
-        "AGUIAR, Hime, Inteligencia Computacional – Aplicada a Administração, Economia e Engenharia em MatLab. EditoraThomson Pioneira ISBN 978-8-52210-560-1",
-        "JARED, D. Big Data, Data Mining and Machine Learning – Value Creation for Business Leaders and Practioners. WileyKIMBALL, Ralf. The Data Warehouse Toolkit: Guia Completo para Modelagem Dimensional. CAMPUS."
+        {
+          "texto": "Voulgaris, Z. Data Scientist: The Definitive Guide to Becoming a Data Scientist. Technics. 2014;",
+          "chave": "voulgariszdatascientistthedefinitiveguidetobecomingadatascientisttechnics2014"
+        },
+        {
+          "texto": "Soligen, R. e Berghout, E. The goal/question/metric method – A pratical guide for quality improvement of software development. McGraw-Hill. 1999.",
+          "chave": "soligenreberghoutethegoalquestionmetricmethodapraticalguideforqualityimprovementofsoftwaredevelopmentmcgrawhill1999"
+        },
+        {
+          "texto": "AGUIAR, Hime, Inteligencia Computacional – Aplicada a Administração, Economia e Engenharia em MatLab. EditoraThomson Pioneira ISBN 978-8-52210-560-1",
+          "chave": "aguiarhimeinteligenciacomputacionalaplicadaaadministracaoeconomiaeengenhariaemmatlabeditorathomsonpioneiraisbn9788522105601"
+        },
+        {
+          "texto": "JARED, D. Big Data, Data Mining and Machine Learning – Value Creation for Business Leaders and Practioners. WileyKIMBALL, Ralf. The Data Warehouse Toolkit: Guia Completo para Modelagem Dimensional. CAMPUS.",
+          "chave": "jareddbigdatadataminingandmachinelearningvaluecreationforbusinessleadersandpractionerswileykimballralfthedatawarehousetoolkitguiacompletoparamodelagemdimensionalcampus"
+        }
       ]
     },
     "GPPR": {
@@ -1358,16 +2451,40 @@
         "Montando um Escritório de Processos"
       ],
       "bibliografiaBasica": [
-        "BRITTO, Gart Capote de. BPM Para Todos - Uma Visão Geral Abrangente, Objetiva e Esclarecedora sobre Gerenciamento de Processos de Negócio– 1. ed. – Rio de Janeiro, 2012.",
-        "Sharp, Alec; McDermott, Patrick. Workflow Modeling-Tools for Process Improvement and Application Development. 2nd Edition. Artech House, 2009.",
-        "Dumas et al. Fundamentals of Business Process Management. Springer, 2012."
+        {
+          "texto": "BRITTO, Gart Capote de. BPM Para Todos - Uma Visão Geral Abrangente, Objetiva e Esclarecedora sobre Gerenciamento de Processos de Negócio– 1. ed. – Rio de Janeiro, 2012.",
+          "chave": "brittogartcapotedebpmparatodosumavisaogeralabrangenteobjetivaeesclarecedorasobregerenciamentodeprocessosdenegocio1riodejaneiro2012"
+        },
+        {
+          "texto": "Sharp, Alec; McDermott, Patrick. Workflow Modeling-Tools for Process Improvement and Application Development. 2nd Edition. Artech House, 2009.",
+          "chave": "sharpalecmcdermottpatrickworkflowmodelingtoolsforprocessimprovementandapplicationdevelopment2ndeditionartechhouse2009"
+        },
+        {
+          "texto": "Dumas et al. Fundamentals of Business Process Management. Springer, 2012.",
+          "chave": "dumasetalfundamentalsofbusinessprocessmanagementspringer2012"
+        }
       ],
       "bibliografiaComplementar": [
-        "VALLE, R; OLIVEIRA, S. Análise e Modelagem de Processos de Negócio: Foco na Notação BPMN (Business Process Modeling Notation); São Paulo: Atlas, 2009.",
-        "Maranhão e Macieira. O Processo Nosso de Cada Dia. Qualitymark, 2010.",
-        "HALL, Richard H. Organizações: Estruturas, processos e resultados. São Paulo: Pearson, 2004.",
-        "D'ASCENÇÃO, Luiz Carlos M. ORGANIZAÇÃO, SISTEMAS E METODOS: ANÁLISE, REDESENHO E INFORMATIZAÇÃO DE PROCESSOS ADMINISTRATIVOS. ATLAS",
-        "RESENDE, Denis Alcides. SISTEMAS DE INFORMAÇÕES ORGANIZACIONAIS: GUIA PRÁTICO PARA PROJETOS. |"
+        {
+          "texto": "VALLE, R; OLIVEIRA, S. Análise e Modelagem de Processos de Negócio: Foco na Notação BPMN (Business Process Modeling Notation); São Paulo: Atlas, 2009.",
+          "chave": "valleroliveirasanaliseemodelagemdeprocessosdenegociofoconanotacaobpmnbusinessprocessmodelingnotationsaopauloatlas2009"
+        },
+        {
+          "texto": "Maranhão e Macieira. O Processo Nosso de Cada Dia. Qualitymark, 2010.",
+          "chave": "maranhaoemacieiraoprocessonossodecadadiaqualitymark2010"
+        },
+        {
+          "texto": "HALL, Richard H. Organizações: Estruturas, processos e resultados. São Paulo: Pearson, 2004.",
+          "chave": "hallrichardhorganizacoesestruturasprocessoseresultadossaopaulopearson2004"
+        },
+        {
+          "texto": "D'ASCENÇÃO, Luiz Carlos M. ORGANIZAÇÃO, SISTEMAS E METODOS: ANÁLISE, REDESENHO E INFORMATIZAÇÃO DE PROCESSOS ADMINISTRATIVOS. ATLAS",
+          "chave": "dascencaoluizcarlosmorganizacaosistemasemetodosanaliseredesenhoeinformatizacaodeprocessosadministrativosatlas"
+        },
+        {
+          "texto": "RESENDE, Denis Alcides. SISTEMAS DE INFORMAÇÕES ORGANIZACIONAIS: GUIA PRÁTICO PARA PROJETOS. |",
+          "chave": "resendedenisalcidessistemasdeinformacoesorganizacionaisguiapraticoparaprojetos"
+        }
       ]
     },
     "CORG": {
@@ -1391,16 +2508,40 @@
         "reestruturação do trabalho e inovações no contexto de trabalho"
       ],
       "bibliografiaBasica": [
-        "ROBBINS, Stephen P. Comportamento Organizacional. São Paulo: Pearson, 2011.",
-        "WAGNER III, John A.; HOLLENBECK, John R. Comportamento Organizacional - Criando vantagem competitiva. São Paulo: Saraiva, 2009.",
-        "MAXIMIANO, Antonio Cesar Amaru. Fundamentos de Administração - Manual Compacto para componentes curriculares TGA e Introdução à Administração. Editora Atlas."
+        {
+          "texto": "ROBBINS, Stephen P. Comportamento Organizacional. São Paulo: Pearson, 2011.",
+          "chave": "robbinsstephenpcomportamentoorganizacionalsaopaulopearson2011"
+        },
+        {
+          "texto": "WAGNER III, John A.; HOLLENBECK, John R. Comportamento Organizacional - Criando vantagem competitiva. São Paulo: Saraiva, 2009.",
+          "chave": "wagneriiijohnahollenbeckjohnrcomportamentoorganizacionalcriandovantagemcompetitivasaopaulosaraiva2009"
+        },
+        {
+          "texto": "MAXIMIANO, Antonio Cesar Amaru. Fundamentos de Administração - Manual Compacto para componentes curriculares TGA e Introdução à Administração. Editora Atlas.",
+          "chave": "maximianoantoniocesaramarufundamentosdeadministracaomanualcompactoparacomponentescurricularestgaeintroducaoaadministracaoatlas"
+        }
       ],
       "bibliografiaComplementar": [
-        "PRADO, Edmir. Fundamentos de Sistemas de Informação. Editora Elsevier.",
-        "OLIVEIRA, Djalma de Pinho Rebouças de. Planejamento Estratégico - Conceitos, Metodologia e Práticas. Editora Atlas.",
-        "HALL, Richard H. Organizações: Estruturas, processos e resultados. São Paulo: Pearson.",
-        "D'ASCENÇÃO, Luiz Carlos M. ORGANIZAÇÃO, SISTEMAS E METODOS: ANÁLISE, REDESENHO E INFORMATIZAÇÃO DE PROCESSOS ADMINISTRATIVOS. ATLAS",
-        "RESENDE, Denis Alcides. SISTEMAS DE INFORMAÇÕES ORGANIZACIONAIS: GUIA PRÁTICO PARA PROJETOS."
+        {
+          "texto": "PRADO, Edmir. Fundamentos de Sistemas de Informação. Editora Elsevier.",
+          "chave": "pradoedmirfundamentosdesistemasdeinformacaoelsevier"
+        },
+        {
+          "texto": "OLIVEIRA, Djalma de Pinho Rebouças de. Planejamento Estratégico - Conceitos, Metodologia e Práticas. Editora Atlas.",
+          "chave": "oliveiradjalmadepinhoreboucasdeplanejamentoestrategicoconceitosmetodologiaepraticasatlas"
+        },
+        {
+          "texto": "HALL, Richard H. Organizações: Estruturas, processos e resultados. São Paulo: Pearson.",
+          "chave": "hallrichardhorganizacoesestruturasprocessoseresultadossaopaulopearson"
+        },
+        {
+          "texto": "D'ASCENÇÃO, Luiz Carlos M. ORGANIZAÇÃO, SISTEMAS E METODOS: ANÁLISE, REDESENHO E INFORMATIZAÇÃO DE PROCESSOS ADMINISTRATIVOS. ATLAS",
+          "chave": "dascencaoluizcarlosmorganizacaosistemasemetodosanaliseredesenhoeinformatizacaodeprocessosadministrativosatlas"
+        },
+        {
+          "texto": "RESENDE, Denis Alcides. SISTEMAS DE INFORMAÇÕES ORGANIZACIONAIS: GUIA PRÁTICO PARA PROJETOS.",
+          "chave": "resendedenisalcidessistemasdeinformacoesorganizacionaisguiapraticoparaprojetos"
+        }
       ]
     },
     "MKCE": {
@@ -1423,16 +2564,40 @@
         "Comércio eletrônico: B2B, B2C, C2C, mobile commerce, e-government etc"
       ],
       "bibliografiaBasica": [
-        "REEDY, J; SCHULLO, S. Marketing eletrônico: integrando recursos eletrônicos ao processo de marketing. São Paulo: Thomson Learning, 2007.",
-        "TURBAN, E.; KING, D. Comercio Eletrônico: estratégia e gestão. São Paulo: Pearson, 2004.",
-        "MOHR, J.; SENGUPTA, S.; SLATER, S.; LUCHT, R. Marketing para mercados de alta tecnologia e de inovações. São Paulo: Pearson, 2011."
+        {
+          "texto": "REEDY, J; SCHULLO, S. Marketing eletrônico: integrando recursos eletrônicos ao processo de marketing. São Paulo: Thomson Learning, 2007.",
+          "chave": "reedyjschullosmarketingeletronicointegrandorecursoseletronicosaoprocessodemarketingsaopaulothomsonlearning2007"
+        },
+        {
+          "texto": "TURBAN, E.; KING, D. Comercio Eletrônico: estratégia e gestão. São Paulo: Pearson, 2004.",
+          "chave": "turbanekingdcomercioeletronicoestrategiaegestaosaopaulopearson2004"
+        },
+        {
+          "texto": "MOHR, J.; SENGUPTA, S.; SLATER, S.; LUCHT, R. Marketing para mercados de alta tecnologia e de inovações. São Paulo: Pearson, 2011.",
+          "chave": "mohrjsenguptasslatersluchtrmarketingparamercadosdealtatecnologiaedeinovacoessaopaulopearson2011"
+        }
       ],
       "bibliografiaComplementar": [
-        "GRONROOS, K. D. Marketing: gerenciamento e serviços. Rio de Janeiro: Elsevier, 2003.",
-        "HOFMANN, K. D.; BATESON, J. E. G. Princípios de Marketing de Serviços. São Paulo, Cengage, 2003.",
-        "KOTLER, P. Princípios de Marketing. São Paulo: Pearson, 2011.",
-        "COBRA, Marcos. ADMINISTRACAO DE MARKETING. Editora ATLAS.",
-        "BAKER, Michael J.; MARQUES, Arlete Simille. ADMINISTRACAO E MARKETING. Editora Campus."
+        {
+          "texto": "GRONROOS, K. D. Marketing: gerenciamento e serviços. Rio de Janeiro: Elsevier, 2003.",
+          "chave": "gronrooskdmarketinggerenciamentoeservicosriodejaneiroelsevier2003"
+        },
+        {
+          "texto": "HOFMANN, K. D.; BATESON, J. E. G. Princípios de Marketing de Serviços. São Paulo, Cengage, 2003.",
+          "chave": "hofmannkdbatesonjegprincipiosdemarketingdeservicossaopaulocengage2003"
+        },
+        {
+          "texto": "KOTLER, P. Princípios de Marketing. São Paulo: Pearson, 2011.",
+          "chave": "kotlerpprincipiosdemarketingsaopaulopearson2011"
+        },
+        {
+          "texto": "COBRA, Marcos. ADMINISTRACAO DE MARKETING. Editora ATLAS.",
+          "chave": "cobramarcosadministracaodemarketingatlas"
+        },
+        {
+          "texto": "BAKER, Michael J.; MARQUES, Arlete Simille. ADMINISTRACAO E MARKETING. Editora Campus.",
+          "chave": "bakermichaeljmarquesarletesimilleadministracaoemarketingcampus"
+        }
       ]
     },
     "GETI": {
@@ -1451,16 +2616,42 @@
         "Governança do PDTI"
       ],
       "bibliografiaBasica": [
-        "Guia de elaboração de PDTI do SISP: versão 1.0 / Ministério do Planejamento, Orçamento e Gestão, Secretaria de Logística e Tecnologia da Informação. - Brasília : MP/SLTI, 2012.Disponível em http://www.sisp.gov.br.",
-        "Barros, FábioGomes. Elaboração de PDTI. Rio de Janeiro. Rede Nacional de Pesquisa / Escola Superior de Redes, 2014.",
-        "Webster, Ian Lawrence. Planejamento e Gestão Estratégica de TI. Rio de Janeiro. Rede Nacional de Pesquisa / Escola Superior de Redes, 2012."
+        {
+          "texto": "Guia de elaboração de PDTI do SISP: versão 1.0 / Ministério do Planejamento, Orçamento e Gestão, Secretaria de Logística e Tecnologia da Informação. - Brasília : MP/SLTI, 2012.Disponível em http://www.sisp.gov.br.",
+          "chave": "guiadeelaboracaodepdtidosispversao10ministeriodoplanejamentoorcamentoegestaosecretariadelogisticaetecnologiadainformacaobrasiliampslti2012",
+          "url": "https://www.unirio.br/ctic/documentos/sisp/guia-de-elaboracao-de-pdti-v1.0/view",
+          "tipoLink": "livre"
+        },
+        {
+          "texto": "Barros, FábioGomes. Elaboração de PDTI. Rio de Janeiro. Rede Nacional de Pesquisa / Escola Superior de Redes, 2014.",
+          "chave": "barrosfabiogomeselaboracaodepdtiriodejaneiroredenacionaldepesquisaescolasuperiorderedes2014"
+        },
+        {
+          "texto": "Webster, Ian Lawrence. Planejamento e Gestão Estratégica de TI. Rio de Janeiro. Rede Nacional de Pesquisa / Escola Superior de Redes, 2012.",
+          "chave": "websterianlawrenceplanejamentoegestaoestrategicadetiriodejaneiroredenacionaldepesquisaescolasuperiorderedes2012"
+        }
       ],
       "bibliografiaComplementar": [
-        "WEILL, Peter; ROSS, Jeanne. Governança de TI: Tecnologia da Informação. Editora: M.Book.",
-        "Fernandes, Aguinaldo Aragon; Abreu, Vladimir Ferraz. Implantando a Governança de TI - da Estratégia à Gestão dos Processos e Serviços. Editora Braspot.",
-        "RICARDO MANSUR. Governança Avançada de TI na Prática. Editora: Brasport.",
-        "TON, Pong-Ning. INTRODUCAO AO DATAMINING: MINERACAO DE DADOS. Editora CIENCIA MODERNA.",
-        "AGUIAR, Hime, Inteligencia Computacional – Aplicada a Administração, Economia e Engenharia em MatLab. EditoraThomson Pioneira."
+        {
+          "texto": "WEILL, Peter; ROSS, Jeanne. Governança de TI: Tecnologia da Informação. Editora: M.Book.",
+          "chave": "weillpeterrossjeannegovernancadetitecnologiadainformacaombook"
+        },
+        {
+          "texto": "Fernandes, Aguinaldo Aragon; Abreu, Vladimir Ferraz. Implantando a Governança de TI - da Estratégia à Gestão dos Processos e Serviços. Editora Braspot.",
+          "chave": "fernandesaguinaldoaragonabreuvladimirferrazimplantandoagovernancadetidaestrategiaagestaodosprocessoseservicosbraspot"
+        },
+        {
+          "texto": "RICARDO MANSUR. Governança Avançada de TI na Prática. Editora: Brasport.",
+          "chave": "ricardomansurgovernancaavancadadetinapraticabrasport"
+        },
+        {
+          "texto": "TON, Pong-Ning. INTRODUCAO AO DATAMINING: MINERACAO DE DADOS. Editora CIENCIA MODERNA.",
+          "chave": "tonpongningintroducaoaodataminingmineracaodedadoscienciamoderna"
+        },
+        {
+          "texto": "AGUIAR, Hime, Inteligencia Computacional – Aplicada a Administração, Economia e Engenharia em MatLab. EditoraThomson Pioneira.",
+          "chave": "aguiarhimeinteligenciacomputacionalaplicadaaadministracaoeconomiaeengenhariaemmatlabeditorathomsonpioneira"
+        }
       ]
     },
     "ADER": {
@@ -1481,16 +2672,40 @@
         "Traçando perfis de tráfego"
       ],
       "bibliografiaBasica": [
-        "Stephen S. Lavenberg - Computer Performance Modeling Handbook Academic Press, 1983.",
-        "Charles H. Saver and K. Mani Chandy - Computer Systems Performance Modeling - Prentice Hall, Inc. 1981.",
-        "Fernandes, Stênio. Performance Evaluation for Network Services, Systems and Protocols. Springer, 2017.",
-        "Boudec, Jean.Performance Evaluation of Computer and Communications Systems. 2007."
+        {
+          "texto": "Stephen S. Lavenberg - Computer Performance Modeling Handbook Academic Press, 1983.",
+          "chave": "stephenslavenbergcomputerperformancemodelinghandbookacademicpress1983"
+        },
+        {
+          "texto": "Charles H. Saver and K. Mani Chandy - Computer Systems Performance Modeling - Prentice Hall, Inc. 1981.",
+          "chave": "charleshsaverandkmanichandycomputersystemsperformancemodelingprenticehallinc1981"
+        },
+        {
+          "texto": "Fernandes, Stênio. Performance Evaluation for Network Services, Systems and Protocols. Springer, 2017.",
+          "chave": "fernandesstenioperformanceevaluationfornetworkservicessystemsandprotocolsspringer2017"
+        },
+        {
+          "texto": "Boudec, Jean.Performance Evaluation of Computer and Communications Systems. 2007.",
+          "chave": "boudecjeanperformanceevaluationofcomputerandcommunicationssystems2007"
+        }
       ],
       "bibliografiaComplementar": [
-        "Obaidat, M.; Boudriga, N. Fundamentals of Performance Evaluation of Computer and Telecommunications Systems. John Wiley, 2010.",
-        "Prado, D. S. Teoria das filas e da simulação. Belo Horizonte: DG, 1999.",
-        "Blum, R. Network performance open source toolkit. Hoboken: Wiley Publishing, 2003.",
-        "Chwif, L.; Medina, A. C. Modelagem e simulação de eventos discretos. São Paulo: Simulação, 2007."
+        {
+          "texto": "Obaidat, M.; Boudriga, N. Fundamentals of Performance Evaluation of Computer and Telecommunications Systems. John Wiley, 2010.",
+          "chave": "obaidatmboudriganfundamentalsofperformanceevaluationofcomputerandtelecommunicationssystemsjohnwiley2010"
+        },
+        {
+          "texto": "Prado, D. S. Teoria das filas e da simulação. Belo Horizonte: DG, 1999.",
+          "chave": "pradodsteoriadasfilasedasimulacaobelohorizontedg1999"
+        },
+        {
+          "texto": "Blum, R. Network performance open source toolkit. Hoboken: Wiley Publishing, 2003.",
+          "chave": "blumrnetworkperformanceopensourcetoolkithobokenwiley2003"
+        },
+        {
+          "texto": "Chwif, L.; Medina, A. C. Modelagem e simulação de eventos discretos. São Paulo: Simulação, 2007.",
+          "chave": "chwiflmedinaacmodelagemesimulacaodeeventosdiscretossaopaulosimulacao2007"
+        }
       ]
     },
     "CFOR": {
@@ -1511,16 +2726,40 @@
         "Análise de Dispositivos Móveis e demais artefatos"
       ],
       "bibliografiaBasica": [
-        "IMONIANA, Joshua Onome . Auditoria de Sistemas de Informação. 2ed. São Paulo: Atlas, 2008.",
-        "CASEY, Eoghan; Digital Evidence and Computer Crime: Forensic Science, Computers and The Internet, Ed. Elsevier, 2011.",
-        "FARMER, Dan ; VENEMA, Witse. Perícia forense computacional: teoria e prática aplicada: como investigar e esclarecer ocorrências no mundo cibernético. São Paulo, SP: Pearson Prentice Hall, 2007.",
-        "LYRA, Maurício Rocha. Segurança e auditoria em sistemas de informação. Rio de Janeiro, RJ: Ciência Moderna, 2008."
+        {
+          "texto": "IMONIANA, Joshua Onome . Auditoria de Sistemas de Informação. 2ed. São Paulo: Atlas, 2008.",
+          "chave": "imonianajoshuaonomeauditoriadesistemasdeinformacao2edsaopauloatlas2008"
+        },
+        {
+          "texto": "CASEY, Eoghan; Digital Evidence and Computer Crime: Forensic Science, Computers and The Internet, Ed. Elsevier, 2011.",
+          "chave": "caseyeoghandigitalevidenceandcomputercrimeforensicsciencecomputersandtheinternetelsevier2011"
+        },
+        {
+          "texto": "FARMER, Dan ; VENEMA, Witse. Perícia forense computacional: teoria e prática aplicada: como investigar e esclarecer ocorrências no mundo cibernético. São Paulo, SP: Pearson Prentice Hall, 2007.",
+          "chave": "farmerdanvenemawitsepericiaforensecomputacionalteoriaepraticaaplicadacomoinvestigareesclarecerocorrenciasnomundociberneticosaopaulosppearsonprenticehall2007"
+        },
+        {
+          "texto": "LYRA, Maurício Rocha. Segurança e auditoria em sistemas de informação. Rio de Janeiro, RJ: Ciência Moderna, 2008.",
+          "chave": "lyramauriciorochasegurancaeauditoriaemsistemasdeinformacaoriodejaneirorjcienciamoderna2008"
+        }
       ],
       "bibliografiaComplementar": [
-        "Honeynet Project. Conheça seu inimigo - O projeto Honeynet. São Paulo: Makron Books . Pearson, 2007",
-        "VIEIRA, Daniel; KIM, David; SOLOMON, Michael G. Fundamentos de segurança da informação. Rio de Janeiro, RJ: LTC, 2014.",
-        "MELO, Sandro; Computação Forense com Software Livre, Ed. Alta Books, 2009",
-        "QUEIROZ, Claudemir. VARGAS, Raffael. “Investigação e Perícia Forense Computacional. Certificações, Leis Processuais, Estudos de caso.”. RJ: Brasport, 2010."
+        {
+          "texto": "Honeynet Project. Conheça seu inimigo - O projeto Honeynet. São Paulo: Makron Books . Pearson, 2007",
+          "chave": "honeynetprojectconhecaseuinimigooprojetohoneynetsaopaulomakronbookspearson2007"
+        },
+        {
+          "texto": "VIEIRA, Daniel; KIM, David; SOLOMON, Michael G. Fundamentos de segurança da informação. Rio de Janeiro, RJ: LTC, 2014.",
+          "chave": "vieiradanielkimdavidsolomonmichaelgfundamentosdesegurancadainformacaoriodejaneirorjltc2014"
+        },
+        {
+          "texto": "MELO, Sandro; Computação Forense com Software Livre, Ed. Alta Books, 2009",
+          "chave": "melosandrocomputacaoforensecomsoftwarelivrealtabooks2009"
+        },
+        {
+          "texto": "QUEIROZ, Claudemir. VARGAS, Raffael. “Investigação e Perícia Forense Computacional. Certificações, Leis Processuais, Estudos de caso.”. RJ: Brasport, 2010.",
+          "chave": "queirozclaudemirvargasraffaelinvestigacaoepericiaforensecomputacionalcertificacoesleisprocessuaisestudosdecasorjbrasport2010"
+        }
       ]
     },
     "GCPT": {
@@ -1539,16 +2778,40 @@
         "Avaliação de plataformas de gerência, segurança da gerência de redes"
       ],
       "bibliografiaBasica": [
-        "William Stallings, SNMP, SNMPv2, SNMPv3 and RMON1 and RMON. 1999 Addison- Wesley.",
-        "LOPES, Raquel V., NICOLLETTI, Pedro S. & SAUVE, Jacques P. Melhores práticas para gerência de redes de computadores. Rio de Janeiro: Campus, 2003",
-        "STURN, Rick, SLM - Service Level Management (Fundamentos do gerenciamento de Níveis de Serviços). 2001 Ed. Campus.",
-        "Douglas Mauro, Kevin Schmidt, Essential SNMP. 2001 O'Reilly Media."
+        {
+          "texto": "William Stallings, SNMP, SNMPv2, SNMPv3 and RMON1 and RMON. 1999 Addison- Wesley.",
+          "chave": "williamstallingssnmpsnmpv2snmpv3andrmon1andrmon1999addisonwesley"
+        },
+        {
+          "texto": "LOPES, Raquel V., NICOLLETTI, Pedro S. & SAUVE, Jacques P. Melhores práticas para gerência de redes de computadores. Rio de Janeiro: Campus, 2003",
+          "chave": "lopesraquelvnicollettipedrossauvejacquespmelhorespraticasparagerenciaderedesdecomputadoresriodejaneirocampus2003"
+        },
+        {
+          "texto": "STURN, Rick, SLM - Service Level Management (Fundamentos do gerenciamento de Níveis de Serviços). 2001 Ed. Campus.",
+          "chave": "sturnrickslmservicelevelmanagementfundamentosdogerenciamentodeniveisdeservicos2001campus"
+        },
+        {
+          "texto": "Douglas Mauro, Kevin Schmidt, Essential SNMP. 2001 O'Reilly Media.",
+          "chave": "douglasmaurokevinschmidtessentialsnmp2001oreillymedia"
+        }
       ],
       "bibliografiaComplementar": [
-        "RIGNEY, S. Planejamento e Gerenciamento de Redes. Rio de Janeiro (RJ). Ed. Campus, 1996.",
-        "BLACK, U. Network Management Standards. Ed. McGrawHill, 1992.",
-        "MILLER, M. A. Managing Internetworks with SNMP. New York (NY). Ed. M&T Books, 2nd. edition, 1997.",
-        "HELD, G. Network Management - Techniques, Tools and Systems. West Sussex. Ed. John & Wiley, 1992"
+        {
+          "texto": "RIGNEY, S. Planejamento e Gerenciamento de Redes. Rio de Janeiro (RJ). Ed. Campus, 1996.",
+          "chave": "rigneysplanejamentoegerenciamentoderedesriodejaneirorjcampus1996"
+        },
+        {
+          "texto": "BLACK, U. Network Management Standards. Ed. McGrawHill, 1992.",
+          "chave": "blackunetworkmanagementstandardsmcgrawhill1992"
+        },
+        {
+          "texto": "MILLER, M. A. Managing Internetworks with SNMP. New York (NY). Ed. M&T Books, 2nd. edition, 1997.",
+          "chave": "millermamanaginginternetworkswithsnmpnewyorknymtbooks2ndedition1997"
+        },
+        {
+          "texto": "HELD, G. Network Management - Techniques, Tools and Systems. West Sussex. Ed. John & Wiley, 1992",
+          "chave": "heldgnetworkmanagementtechniquestoolsandsystemswestsussexjohnwiley1992"
+        }
       ]
     },
     "IDCO": {
@@ -1567,14 +2830,32 @@
         "Aspectos de segurança"
       ],
       "bibliografiaBasica": [
-        "COELHO, Pedro. Internet das Coisas - Introdução Prática, Editora FCA, 2017.",
-        "DIAS, Renata R. F. Internet das Coisas Sem Mistérios: Uma nova inteligência para os negócios, Editora NetPress, 2016.",
-        "WAHER, P. Learning Internet of Things. Packt Publishing, 2015."
+        {
+          "texto": "COELHO, Pedro. Internet das Coisas - Introdução Prática, Editora FCA, 2017.",
+          "chave": "coelhopedrointernetdascoisasintroducaopraticafca2017"
+        },
+        {
+          "texto": "DIAS, Renata R. F. Internet das Coisas Sem Mistérios: Uma nova inteligência para os negócios, Editora NetPress, 2016.",
+          "chave": "diasrenatarfinternetdascoisassemmisteriosumanovainteligenciaparaosnegociosnetpress2016"
+        },
+        {
+          "texto": "WAHER, P. Learning Internet of Things. Packt Publishing, 2015.",
+          "chave": "waherplearninginternetofthingspackt2015"
+        }
       ],
       "bibliografiaComplementar": [
-        "PFISTER, C. Getting Started with the Internet of Things: Connecting Sensors and Microcontrollers to the Cloud. Maker Media, 2011.",
-        "ZHENG, J.; JAMALIPOUR, A. Wireless sensor networks: A networking perspective. Wiley,",
-        "JAMTHE, S. IoT Disruptions: The Internet of Things (Innovations & Jobs). Amazon Digital Services LLC, 2015."
+        {
+          "texto": "PFISTER, C. Getting Started with the Internet of Things: Connecting Sensors and Microcontrollers to the Cloud. Maker Media, 2011.",
+          "chave": "pfistercgettingstartedwiththeinternetofthingsconnectingsensorsandmicrocontrollerstothecloudmakermedia2011"
+        },
+        {
+          "texto": "ZHENG, J.; JAMALIPOUR, A. Wireless sensor networks: A networking perspective. Wiley,",
+          "chave": "zhengjjamalipourawirelesssensornetworksanetworkingperspectivewiley"
+        },
+        {
+          "texto": "JAMTHE, S. IoT Disruptions: The Internet of Things (Innovations & Jobs). Amazon Digital Services LLC, 2015.",
+          "chave": "jamthesiotdisruptionstheinternetofthingsinnovationsjobsamazondigitalservicesllc2015"
+        }
       ]
     },
     "LSOP": {
@@ -1593,14 +2874,32 @@
         "Virtualização"
       ],
       "bibliografiaBasica": [
-        "BURGESS, Mark. Princípios de Administração de Redes e Sistemas, 2006, LTC",
-        "BOYLLE, Randall. Corporate Computer Security, 4ª ed, 2014, Prentice Hall",
-        "RAFAELS, Ray J. Cloud Computing: From Beginning to End, 2015, CreateSpace Independent Publishing Platform."
+        {
+          "texto": "BURGESS, Mark. Princípios de Administração de Redes e Sistemas, 2006, LTC",
+          "chave": "burgessmarkprincipiosdeadministracaoderedesesistemas2006ltc"
+        },
+        {
+          "texto": "BOYLLE, Randall. Corporate Computer Security, 4ª ed, 2014, Prentice Hall",
+          "chave": "boyllerandallcorporatecomputersecurity42014prenticehall"
+        },
+        {
+          "texto": "RAFAELS, Ray J. Cloud Computing: From Beginning to End, 2015, CreateSpace Independent Publishing Platform.",
+          "chave": "rafaelsrayjcloudcomputingfrombeginningtoend2015createspaceindependentplatform"
+        }
       ],
       "bibliografiaComplementar": [
-        "MINASI, Mark, et al. Dominando o Windows 2008: Usando em Rede. São Paulo: Alt Books, 2009.",
-        "HUNT, C. Linux: Servidores de Rede. 3 ed. São Paulo: Ciência Moderna, 2004.",
-        "VALLE O.T.Administração de Redes com Linux. Fundamentos e Práticas. Florianópolis: Publicação do IFSC, 2010."
+        {
+          "texto": "MINASI, Mark, et al. Dominando o Windows 2008: Usando em Rede. São Paulo: Alt Books, 2009.",
+          "chave": "minasimarketaldominandoowindows2008usandoemredesaopauloaltbooks2009"
+        },
+        {
+          "texto": "HUNT, C. Linux: Servidores de Rede. 3 ed. São Paulo: Ciência Moderna, 2004.",
+          "chave": "huntclinuxservidoresderede3saopaulocienciamoderna2004"
+        },
+        {
+          "texto": "VALLE O.T.Administração de Redes com Linux. Fundamentos e Práticas. Florianópolis: Publicação do IFSC, 2010.",
+          "chave": "valleotadministracaoderedescomlinuxfundamentosepraticasflorianopolispublicacaodoifsc2010"
+        }
       ]
     },
     "INFR": {
@@ -1617,15 +2916,38 @@
         "Virtualização"
       ],
       "bibliografiaBasica": [
-        "Projeto de redes Top-down – Um enfoque de análise de sistemas para o projeto de redes empresariais, Ed. Campus, 1999, 2a. Edição.",
-        "Veras, Manoel. DATACENTER : Componente Central da Infraestrutura de TI, Brasport, 2009.",
-        "Veras, Manoel. VIRTUALIZAÇÃO: Componente Central do Datacenter, Brasport, 2011."
+        {
+          "texto": "Projeto de redes Top-down – Um enfoque de análise de sistemas para o projeto de redes empresariais, Ed. Campus, 1999, 2a. Edição.",
+          "chave": "projetoderedestopdownumenfoquedeanalisedesistemasparaoprojetoderedesempresariaiscampus19992aedicao"
+        },
+        {
+          "texto": "Veras, Manoel. DATACENTER : Componente Central da Infraestrutura de TI, Brasport, 2009.",
+          "chave": "verasmanoeldatacentercomponentecentraldainfraestruturadetibrasport2009"
+        },
+        {
+          "texto": "Veras, Manoel. VIRTUALIZAÇÃO: Componente Central do Datacenter, Brasport, 2011.",
+          "chave": "verasmanoelvirtualizacaocomponentecentraldodatacenterbrasport2011"
+        }
       ],
       "bibliografiaComplementar": [
-        "EIA/TIA 942 - Telecomunications Infrastructure Standarts for Datacenters;",
-        "ANSI/TIA/EIA 568B Requisitos gerais de Cabeamento Estruturado e especificação dos componentes para cabos e fibras.",
-        "ANSI/TIA/EIA 606 A; Administração dos sistemas de cabeamento.",
-        "Ansi/tia/eia 607 – Instalação do Sistema de Aterramento de Telecomunicações."
+        {
+          "texto": "EIA/TIA 942 - Telecomunications Infrastructure Standarts for Datacenters;",
+          "chave": "eiatia942telecomunicationsinfrastructurestandartsfordatacenters",
+          "url": "https://www.ieee802.org/3/hssg/public/nov06/diminico_01_1106.pdf",
+          "tipoLink": "livre"
+        },
+        {
+          "texto": "ANSI/TIA/EIA 568B Requisitos gerais de Cabeamento Estruturado e especificação dos componentes para cabos e fibras.",
+          "chave": "ansitiaeia568brequisitosgeraisdecabeamentoestruturadoeespecificacaodoscomponentesparacabosefibras"
+        },
+        {
+          "texto": "ANSI/TIA/EIA 606 A; Administração dos sistemas de cabeamento.",
+          "chave": "ansitiaeia606aadministracaodossistemasdecabeamento"
+        },
+        {
+          "texto": "Ansi/tia/eia 607 – Instalação do Sistema de Aterramento de Telecomunicações.",
+          "chave": "ansitiaeia607instalacaodosistemadeaterramentodetelecomunicacoes"
+        }
       ]
     },
     "SEGR": {
@@ -1644,16 +2966,42 @@
         "Aspectos sociais da segurança de redes de computadores"
       ],
       "bibliografiaBasica": [
-        "TANENBAUM, Andrew S. Redes de Computadores. 4ª edição. Rio de Janeiro. Editora Campus, 2003.",
-        "KUROSE, James F. Redes de Computadores e a Internet: Uma abordagem top-down. 5 a edição. São Paulo. Editora Addison Wesley, 2010.",
-        "SCAMBRAY, Joel; McCLURE, Stuart; KURTZ, George. Hackers Expostos: Segredos e Soluções para a Segurança de Redes. 4ª edição. Editora Campus."
+        {
+          "texto": "TANENBAUM, Andrew S. Redes de Computadores. 4ª edição. Rio de Janeiro. Editora Campus, 2003.",
+          "chave": "tanenbaumandrewsredesdecomputadores4edicaoriodejaneirocampus2003"
+        },
+        {
+          "texto": "KUROSE, James F. Redes de Computadores e a Internet: Uma abordagem top-down. 5 a edição. São Paulo. Editora Addison Wesley, 2010.",
+          "chave": "kurosejamesfredesdecomputadoreseainternetumaabordagemtopdown5aedicaosaopauloaddisonwesley2010"
+        },
+        {
+          "texto": "SCAMBRAY, Joel; McCLURE, Stuart; KURTZ, George. Hackers Expostos: Segredos e Soluções para a Segurança de Redes. 4ª edição. Editora Campus.",
+          "chave": "scambrayjoelmcclurestuartkurtzgeorgehackersexpostossegredosesolucoesparaasegurancaderedes4edicaocampus"
+        }
       ],
       "bibliografiaComplementar": [
-        "CHESWICK, William R. Firewalls e Segurança na Internet. 2ª edição. Bookman, 2005.",
-        "FERREIRA, Fernando N. F. Segurança da Informação. Editora Ciência Moderna, 2003.",
-        "RUFINO, Nelson M. de Oliveira. Segurança em Redes sem Fio. Novatec Editora. São Paulo, 2005.",
-        "HATCH, Brian, LEE, James, KURTZ, George. Segurança contra Hackers – Linux, 2ª edição. Editora Futura.",
-        "Tutorias sobre segurança em redes de computadores. Disponíveis em http://www.cert.org"
+        {
+          "texto": "CHESWICK, William R. Firewalls e Segurança na Internet. 2ª edição. Bookman, 2005.",
+          "chave": "cheswickwilliamrfirewallsesegurancanainternet2edicaobookman2005"
+        },
+        {
+          "texto": "FERREIRA, Fernando N. F. Segurança da Informação. Editora Ciência Moderna, 2003.",
+          "chave": "ferreirafernandonfsegurancadainformacaocienciamoderna2003"
+        },
+        {
+          "texto": "RUFINO, Nelson M. de Oliveira. Segurança em Redes sem Fio. Novatec Editora. São Paulo, 2005.",
+          "chave": "rufinonelsonmdeoliveirasegurancaemredessemfionovatecsaopaulo2005"
+        },
+        {
+          "texto": "HATCH, Brian, LEE, James, KURTZ, George. Segurança contra Hackers – Linux, 2ª edição. Editora Futura.",
+          "chave": "hatchbrianleejameskurtzgeorgesegurancacontrahackerslinux2edicaofutura"
+        },
+        {
+          "texto": "Tutorias sobre segurança em redes de computadores. Disponíveis em http://www.cert.org",
+          "chave": "tutoriassobresegurancaemredesdecomputadores",
+          "url": "https://www.sei.cmu.edu/divisions/cert/",
+          "tipoLink": "livre"
+        }
       ]
     },
     "DEVO": {
@@ -1665,11 +3013,26 @@
       "ementa": "",
       "unidades": [],
       "bibliografiaBasica": [
-        "SATO, Danilo. DevOps na prática: entrega de software confiável e automatizada. Editora: Casa do Código.",
-        "AQUILES, Alexandre; FERREIRA, Rodrigo. Controlando versões com Git e GitHub. Editora: Casa do Código.",
-        "BOAGLIO, Fernando. Jenkins: automatize tudo sem complicações. Editora: Casa do Código.",
-        "MORAES, Gleicon. Caixa de Ferramentas DevOps: um guia para construção, administração e arquitetura de sistemas modernos. Editora: Casa do Código.",
-        "ROMERO, Daniel. Containers com Docker: do desenvolvimento à produção. Editora: Casa do Código."
+        {
+          "texto": "SATO, Danilo. DevOps na prática: entrega de software confiável e automatizada. Editora: Casa do Código.",
+          "chave": "satodanilodevopsnapraticaentregadesoftwareconfiaveleautomatizadacasadocodigo"
+        },
+        {
+          "texto": "AQUILES, Alexandre; FERREIRA, Rodrigo. Controlando versões com Git e GitHub. Editora: Casa do Código.",
+          "chave": "aquilesalexandreferreirarodrigocontrolandoversoescomgitegithubcasadocodigo"
+        },
+        {
+          "texto": "BOAGLIO, Fernando. Jenkins: automatize tudo sem complicações. Editora: Casa do Código.",
+          "chave": "boagliofernandojenkinsautomatizetudosemcomplicacoescasadocodigo"
+        },
+        {
+          "texto": "MORAES, Gleicon. Caixa de Ferramentas DevOps: um guia para construção, administração e arquitetura de sistemas modernos. Editora: Casa do Código.",
+          "chave": "moraesgleiconcaixadeferramentasdevopsumguiaparaconstrucaoadministracaoearquiteturadesistemasmodernoscasadocodigo"
+        },
+        {
+          "texto": "ROMERO, Daniel. Containers com Docker: do desenvolvimento à produção. Editora: Casa do Código.",
+          "chave": "romerodanielcontainerscomdockerdodesenvolvimentoaproducaocasadocodigo"
+        }
       ],
       "bibliografiaComplementar": [],
       "bibliografiaSemRotulo": true
@@ -1691,16 +3054,40 @@
         "Marcas e patentes"
       ],
       "bibliografiaBasica": [
-        "PINHEIRO, Patrícia Peck. Direito Digital. São Paulo: Saraiva, 2013.",
-        "WENDT, E. Crimes Cibernéticos: ameaças e procedimentos de investigação. Rio de Janeiro: Brasport, 2013.",
-        "SCHERKERKEWITZ, Iso Chaitz. Direito e Internet: De acordo com a lei 12.965/2014 Marco Civil da Internet. São Paulo: Revista dos Tribunais, 2014."
+        {
+          "texto": "PINHEIRO, Patrícia Peck. Direito Digital. São Paulo: Saraiva, 2013.",
+          "chave": "pinheiropatriciapeckdireitodigitalsaopaulosaraiva2013"
+        },
+        {
+          "texto": "WENDT, E. Crimes Cibernéticos: ameaças e procedimentos de investigação. Rio de Janeiro: Brasport, 2013.",
+          "chave": "wendtecrimesciberneticosameacaseprocedimentosdeinvestigacaoriodejaneirobrasport2013"
+        },
+        {
+          "texto": "SCHERKERKEWITZ, Iso Chaitz. Direito e Internet: De acordo com a lei 12.965/2014 Marco Civil da Internet. São Paulo: Revista dos Tribunais, 2014.",
+          "chave": "scherkerkewitzisochaitzdireitoeinternetdeacordocomalei129652014marcocivildainternetsaopaulorevistadostribunais2014"
+        }
       ],
       "bibliografiaComplementar": [
-        "MAZZONETO, N. Arbitragem e Propriedade Intelectual. Editora Saraiva.",
-        "ARIENTE, E. A Função Social da Propriedade Intelectual. Lumen Juris.",
-        "SCHAAL, F. Propriedade Intelectual e o Marco Civil. Edipro.",
-        "BARBOSA, D. B. Uma Introdução a Propriedade Intelectual. Editora Lumen Juris.",
-        "PAESANI, L.M. Manual de Propriedade Intelectual. Editora Atlas."
+        {
+          "texto": "MAZZONETO, N. Arbitragem e Propriedade Intelectual. Editora Saraiva.",
+          "chave": "mazzonetonarbitragemepropriedadeintelectualsaraiva"
+        },
+        {
+          "texto": "ARIENTE, E. A Função Social da Propriedade Intelectual. Lumen Juris.",
+          "chave": "arienteeafuncaosocialdapropriedadeintelectuallumenjuris"
+        },
+        {
+          "texto": "SCHAAL, F. Propriedade Intelectual e o Marco Civil. Edipro.",
+          "chave": "schaalfpropriedadeintelectualeomarcociviledipro"
+        },
+        {
+          "texto": "BARBOSA, D. B. Uma Introdução a Propriedade Intelectual. Editora Lumen Juris.",
+          "chave": "barbosadbumaintroducaoapropriedadeintelectuallumenjuris"
+        },
+        {
+          "texto": "PAESANI, L.M. Manual de Propriedade Intelectual. Editora Atlas.",
+          "chave": "paesanilmmanualdepropriedadeintelectualatlas"
+        }
       ]
     },
     "NEGS": {
@@ -1716,14 +3103,32 @@
         "Sustentabilidade e negócios"
       ],
       "bibliografiaBasica": [
-        "MUHAMMAD, Y. A Empresa Social, Editora Presença.",
-        "WILLARD, B. Como Fazer a Empresa Lucrar com Sustentabilidade, Editora Saraiva.",
-        "THOMAS, P. O Capital – No Século XXI, Intrínseca."
+        {
+          "texto": "MUHAMMAD, Y. A Empresa Social, Editora Presença.",
+          "chave": "muhammadyaempresasocialpresenca"
+        },
+        {
+          "texto": "WILLARD, B. Como Fazer a Empresa Lucrar com Sustentabilidade, Editora Saraiva.",
+          "chave": "willardbcomofazeraempresalucrarcomsustentabilidadesaraiva"
+        },
+        {
+          "texto": "THOMAS, P. O Capital – No Século XXI, Intrínseca.",
+          "chave": "thomaspocapitalnoseculoxxiintrinseca"
+        }
       ],
       "bibliografiaComplementar": [
-        "BERNARD, P. O Capitalismo é Sustentável? Editora Loyola.",
-        "GARCIA, J. O Negócio Social, Jorge Zahar Editor.",
-        "MUHAMMAD, Y. Banker to the Poor, Perseus Books Group."
+        {
+          "texto": "BERNARD, P. O Capitalismo é Sustentável? Editora Loyola.",
+          "chave": "bernardpocapitalismoesustentavelloyola"
+        },
+        {
+          "texto": "GARCIA, J. O Negócio Social, Jorge Zahar Editor.",
+          "chave": "garciajonegociosocialjorgezahareditor"
+        },
+        {
+          "texto": "MUHAMMAD, Y. Banker to the Poor, Perseus Books Group.",
+          "chave": "muhammadybankertothepoorperseusbooksgroup"
+        }
       ]
     },
     "EDFI": {
@@ -1743,14 +3148,32 @@
         "Investimentos em Renda Variável: Mercado de Ações (análise fundamentalista e análise técnica), Fundos Imobiliários"
       ],
       "bibliografiaBasica": [
-        " Graham, Benjamim. O investidor inteligente. Editora Nova Fronteira.",
-        " Almeida, Fábio. Manual do pequeno investidor em ações. Formato eBook.",
-        " Kiyosaki, Robert T. Pai rico: o poder da educação financeira: lições sobre dinheiro que não se aprendem na escola. Rio de Janeiro : Elsevier."
+        {
+          "texto": " Graham, Benjamim. O investidor inteligente. Editora Nova Fronteira.",
+          "chave": "grahambenjamimoinvestidorinteligentenovafronteira"
+        },
+        {
+          "texto": " Almeida, Fábio. Manual do pequeno investidor em ações. Formato eBook.",
+          "chave": "almeidafabiomanualdopequenoinvestidoremacoesformatoebook"
+        },
+        {
+          "texto": " Kiyosaki, Robert T. Pai rico: o poder da educação financeira: lições sobre dinheiro que não se aprendem na escola. Rio de Janeiro : Elsevier.",
+          "chave": "kiyosakiroberttpairicoopoderdaeducacaofinanceiralicoessobredinheiroquenaoseaprendemnaescolariodejaneiroelsevier"
+        }
       ],
       "bibliografiaComplementar": [
-        " Leopoldino, Cláudio Bezerra. Educação Financeira para Universitários. Formato eBook.",
-        " Elder, Alexander. Aprenda a operar no mercado de ações: Come into my trading room. Rio de Janeiro: Elsevier.",
-        " MASSAKU, H. Administração Financeira na Prática, Atlas."
+        {
+          "texto": " Leopoldino, Cláudio Bezerra. Educação Financeira para Universitários. Formato eBook.",
+          "chave": "leopoldinoclaudiobezerraeducacaofinanceiraparauniversitariosformatoebook"
+        },
+        {
+          "texto": " Elder, Alexander. Aprenda a operar no mercado de ações: Come into my trading room. Rio de Janeiro: Elsevier.",
+          "chave": "elderalexanderaprendaaoperarnomercadodeacoescomeintomytradingroomriodejaneiroelsevier"
+        },
+        {
+          "texto": " MASSAKU, H. Administração Financeira na Prática, Atlas.",
+          "chave": "massakuhadministracaofinanceiranapraticaatlas"
+        }
       ]
     },
     "DIRD": {
@@ -1771,14 +3194,32 @@
         "Crimes digitais"
       ],
       "bibliografiaBasica": [
-        "PINHEIRO, Patrícia Peck. Direito Digital. São Paulo: Saraiva, 2013.",
-        "WENDT, E. Crimes Cibernéticos: ameaças e procedimentos de investigação. Rio de Janeiro: Brasport, 2013.",
-        "SCHERKERKEWITZ, Iso Chaitz. Direito e Internet: De acordo com a lei 12.965/2014 Marco Civil da Internet. São Paulo: Revista dos Tribunais, 2014."
+        {
+          "texto": "PINHEIRO, Patrícia Peck. Direito Digital. São Paulo: Saraiva, 2013.",
+          "chave": "pinheiropatriciapeckdireitodigitalsaopaulosaraiva2013"
+        },
+        {
+          "texto": "WENDT, E. Crimes Cibernéticos: ameaças e procedimentos de investigação. Rio de Janeiro: Brasport, 2013.",
+          "chave": "wendtecrimesciberneticosameacaseprocedimentosdeinvestigacaoriodejaneirobrasport2013"
+        },
+        {
+          "texto": "SCHERKERKEWITZ, Iso Chaitz. Direito e Internet: De acordo com a lei 12.965/2014 Marco Civil da Internet. São Paulo: Revista dos Tribunais, 2014.",
+          "chave": "scherkerkewitzisochaitzdireitoeinternetdeacordocomalei129652014marcocivildainternetsaopaulorevistadostribunais2014"
+        }
       ],
       "bibliografiaComplementar": [
-        "PERCK, P. #DIREITODIGITAL, Editora Saraiva",
-        "FARIAS LIMA, G. Manual de Direito Digital. Fundamentos, Legislação e Jurisprudência. Editora Appris.",
-        "FIORILLO, C.A.P. Crimes no Meio Ambiente Digital e a Sociedade da Informação. Editora Saraiva."
+        {
+          "texto": "PERCK, P. #DIREITODIGITAL, Editora Saraiva",
+          "chave": "perckpdireitodigitalsaraiva"
+        },
+        {
+          "texto": "FARIAS LIMA, G. Manual de Direito Digital. Fundamentos, Legislação e Jurisprudência. Editora Appris.",
+          "chave": "fariaslimagmanualdedireitodigitalfundamentoslegislacaoejurisprudenciaappris"
+        },
+        {
+          "texto": "FIORILLO, C.A.P. Crimes no Meio Ambiente Digital e a Sociedade da Informação. Editora Saraiva.",
+          "chave": "fiorillocapcrimesnomeioambientedigitaleasociedadedainformacaosaraiva"
+        }
       ]
     },
     "LIBR": {
@@ -1795,14 +3236,32 @@
         "Noções básicas de conversação I"
       ],
       "bibliografiaBasica": [
-        "CAPOVILLA, F. C.; RAPHAEL, W. D. Dicionário enciclopédico ilustrado trilíngue da língua de sinais brasileira. São Paulo: EDUSP, 1994.",
-        "GESSER, A. Libras? Que Língua é essa? : Crenças e preconceitos em torno da língua de sinais e da realidade surda. São Paulo: Parábola, 2009.",
-        "PIMENTA, Nelson. Coleção “Aprendendo LSB” volume I Básico, Rio de Janeiro, 2000."
+        {
+          "texto": "CAPOVILLA, F. C.; RAPHAEL, W. D. Dicionário enciclopédico ilustrado trilíngue da língua de sinais brasileira. São Paulo: EDUSP, 1994.",
+          "chave": "capovillafcraphaelwddicionarioenciclopedicoilustradotrilinguedalinguadesinaisbrasileirasaopauloedusp1994"
+        },
+        {
+          "texto": "GESSER, A. Libras? Que Língua é essa? : Crenças e preconceitos em torno da língua de sinais e da realidade surda. São Paulo: Parábola, 2009.",
+          "chave": "gesseralibrasquelinguaeessacrencasepreconceitosemtornodalinguadesinaisedarealidadesurdasaopauloparabola2009"
+        },
+        {
+          "texto": "PIMENTA, Nelson. Coleção “Aprendendo LSB” volume I Básico, Rio de Janeiro, 2000.",
+          "chave": "pimentanelsoncolecaoaprendendolsbvolumeibasicoriodejaneiro2000"
+        }
       ],
       "bibliografiaComplementar": [
-        "QUADROS, R. M. de; KARNOPP, L. B. Língua de sinais brasileira: Estudos linguisticos. Porto Alegre: ARTEMED, 2004.",
-        "SACKS, O. Vendo vozes: uma jornada pelo mundo dos surdos. Rio de Janeiro, Imago, 1990.",
-        "SANTANA, Ana Paula. Surdez e linguagem: aspectos e implicações neurolingüísticas. São Paulo: Plexus, 2007."
+        {
+          "texto": "QUADROS, R. M. de; KARNOPP, L. B. Língua de sinais brasileira: Estudos linguisticos. Porto Alegre: ARTEMED, 2004.",
+          "chave": "quadrosrmdekarnopplblinguadesinaisbrasileiraestudoslinguisticosportoalegreartemed2004"
+        },
+        {
+          "texto": "SACKS, O. Vendo vozes: uma jornada pelo mundo dos surdos. Rio de Janeiro, Imago, 1990.",
+          "chave": "sacksovendovozesumajornadapelomundodossurdosriodejaneiroimago1990"
+        },
+        {
+          "texto": "SANTANA, Ana Paula. Surdez e linguagem: aspectos e implicações neurolingüísticas. São Paulo: Plexus, 2007.",
+          "chave": "santanaanapaulasurdezelinguagemaspectoseimplicacoesneurolinguisticassaopauloplexus2007"
+        }
       ]
     },
     "ETSO": {
@@ -1825,14 +3284,32 @@
         "Ética e responsabilidade socioambiental"
       ],
       "bibliografiaBasica": [
-        "MASIERO, P. C. Ética em computação. Editora da Universidade de São Paulo.",
-        "SÁ, A. L. Ética profissional. Editora Atlas.",
-        "MATOS, F. G. Ética na gestão empresarial. Editora Saraiva."
+        {
+          "texto": "MASIERO, P. C. Ética em computação. Editora da Universidade de São Paulo.",
+          "chave": "masieropceticaemcomputacaodauniversidadedesaopaulo"
+        },
+        {
+          "texto": "SÁ, A. L. Ética profissional. Editora Atlas.",
+          "chave": "saaleticaprofissionalatlas"
+        },
+        {
+          "texto": "MATOS, F. G. Ética na gestão empresarial. Editora Saraiva.",
+          "chave": "matosfgeticanagestaoempresarialsaraiva"
+        }
       ],
       "bibliografiaComplementar": [
-        "MARCONDES, D. Textos básicos da ética: de Platão a Foucalt. Editora Zahar.",
-        "VASQUES, A. S. Ética. Editora Civilização Brasileira.",
-        "NALINI, J. R. Ética geral e profissional. Editora Revista dos Tribunais."
+        {
+          "texto": "MARCONDES, D. Textos básicos da ética: de Platão a Foucalt. Editora Zahar.",
+          "chave": "marcondesdtextosbasicosdaeticadeplataoafoucaltzahar"
+        },
+        {
+          "texto": "VASQUES, A. S. Ética. Editora Civilização Brasileira.",
+          "chave": "vasquesaseticacivilizacaobrasileira"
+        },
+        {
+          "texto": "NALINI, J. R. Ética geral e profissional. Editora Revista dos Tribunais.",
+          "chave": "nalinijreticageraleprofissionalrevistadostribunais"
+        }
       ]
     }
   }

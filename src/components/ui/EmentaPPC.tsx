@@ -1,4 +1,4 @@
-import { getEmentaPPC } from '../../data/ppc';
+import { getEmentaPPC, type ReferenciaPPC, type TipoLink } from '../../data/ppc';
 
 interface Props {
   /** Código da matéria, o mesmo de curriculum.ts. */
@@ -9,26 +9,38 @@ const ROTULO_PERIODO = (periodo: number | 'optativa') =>
   periodo === 'optativa' ? 'Optativa' : `${periodo}º período`;
 
 /**
- * Quebra a referência para transformar as URLs em link.
+ * Como cada tipo de destino se anuncia.
  *
- * Várias fichas (TSAS, GETI) trazem "Disponível em http://…", e um endereço em
- * texto puro obriga o aluno a copiar e colar. O regex para no que não pode
- * fechar uma URL: a pontuação final da frase. Referências sem URL, que são a
- * maioria, saem inteiras num único pedaço.
+ * O rótulo existe porque as quatro coisas são diferentes para quem clica: um
+ * PDF aberto, um livro que só abre com o login do SIGAA, uma ficha de catálogo
+ * sem o texto, e uma página de compra. Sem dizer qual é, todo link parece
+ * prometer o texto completo.
  */
-function comLinks(referencia: string) {
-  return referencia.split(/(https?:\/\/[^\s]*[^\s.,;:)\]])/g).map((pedaco, i) =>
+const TIPOS: Record<TipoLink, { rotulo: string; titulo: string }> = {
+  livre: { rotulo: 'texto livre', titulo: 'Texto completo, acesso aberto' },
+  institucional: {
+    rotulo: 'biblioteca IFAL',
+    titulo: 'Disponível na Biblioteca Virtual do IFAL — exige login do SIGAA',
+  },
+  catalogo: { rotulo: 'catálogo', titulo: 'Ficha da obra; não abre o texto completo' },
+  compra: { rotulo: 'onde comprar', titulo: 'Página de compra da obra' },
+};
+
+/**
+ * Texto da referência com a URL impressa pelo PPC destacada, mas sem virar link.
+ *
+ * A URL que aparece no meio da referência NÃO é clicável de propósito: várias
+ * vêm corrompidas pela extração do PDF (hífen de quebra de linha comido,
+ * espaços injetados, sufixo "[Links]") e três dos domínios morreram ou hoje
+ * redirecionam para outro site. O link confiável é o do rodapé do item, que
+ * saiu de `links_bibliografia.json` e foi conferido um por um.
+ */
+function textoDaReferencia(texto: string) {
+  return texto.split(/(https?:\/\/[^\s]*[^\s.,;:)\]])/g).map((pedaco, i) =>
     /^https?:\/\//.test(pedaco) ? (
-      <a
-        // o índice é estável: a referência não muda depois de renderizada
-        key={i}
-        href={pedaco}
-        target="_blank"
-        rel="noreferrer noopener"
-        className="break-all text-accent underline decoration-dotted underline-offset-2 hover:text-text"
-      >
+      <span key={i} className="break-all font-mono text-[11.5px] text-text-muted/70">
         {pedaco}
-      </a>
+      </span>
     ) : (
       pedaco
     ),
@@ -36,21 +48,43 @@ function comLinks(referencia: string) {
 }
 
 /** Uma das duas listas de bibliografia da ficha. Some quando está vazia. */
-function ListaReferencias({ titulo, referencias }: { titulo: string; referencias: string[] }) {
+function ListaReferencias({ titulo, referencias }: { titulo: string; referencias: ReferenciaPPC[] }) {
   if (!referencias.length) return null;
 
   return (
     <div className="mt-3 first:mt-0">
       <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted/80">{titulo}</p>
       <ul className="space-y-1.5">
-        {referencias.map(referencia => (
-          <li
-            key={referencia}
-            className="border-l border-rule pl-3 text-[12.5px] leading-relaxed text-text-muted"
-          >
-            {comLinks(referencia)}
-          </li>
-        ))}
+        {referencias.map((referencia, i) => {
+          const tipo = referencia.url ? TIPOS[referencia.tipoLink ?? 'catalogo'] : null;
+
+          return (
+            <li
+              // a chave da obra sozinha não serve: o PPC repete a mesma obra
+              // dentro de um bloco em algumas fichas
+              key={`${referencia.chave}-${i}`}
+              className="border-l border-rule pl-3 text-[12.5px] leading-relaxed text-text-muted"
+            >
+              {textoDaReferencia(referencia.texto)}
+              {referencia.url && tipo && (
+                <>
+                  {' '}
+                  <a
+                    href={referencia.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    title={tipo.titulo}
+                    // inline-block com padding para o alvo de toque não ficar
+                    // do tamanho do texto de 11px
+                    className="inline-block whitespace-nowrap py-0.5 font-mono text-[11px] uppercase tracking-[0.12em] text-accent underline decoration-dotted underline-offset-2 hover:text-text"
+                  >
+                    {tipo.rotulo} ↗
+                  </a>
+                </>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
