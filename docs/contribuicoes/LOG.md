@@ -9,7 +9,7 @@ Fonte estruturada: [`src/data/contribuicoes.json`](../../src/data/contribuicoes.
 | isaque-braga | Isaque Braga | 2024001384 | isb15@aluno.ifal.edu.br | Sistemas de Informação | |
 | maria-luisa-alaquoke | Maria Luisa Alaquoke Ferreira dos Santos | 2024001400 | mlafs2@aluno.ifal.edu.br | Sistemas de Informação | |
 | pericles-feitoza | Péricles Feitoza | 2022000806 | paf1@aluno.ifal.edu.br | Sistemas de Informação | Mantenedor |
-| marina-medeiros | Marina Medeiros Correia de Paffer | 13177016402 | mmcp1@aluno.ifal.edu.br | Sistemas de Informação | |
+| marina-medeiros | Marina Medeiros Correia de Paffer | 2023001648 | mmcp1@aluno.ifal.edu.br | Sistemas de Informação | |
 
 ## Contribuicoes Por Materia
 
